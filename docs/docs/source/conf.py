@@ -12,27 +12,43 @@
 #
 import os
 import sys
+import pylons_sphinx_themes
+
 # sys.path.insert(0, os.path.abspath('.'))
 
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
 if not on_rtd:
     import sphinx_rtd_theme
-    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+    #html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
     #html_theme_path = ["_themes", ]
-    html_theme = 'sphinx_rtd_theme'
+    html_theme = 'nature'
+    #html_theme = 'insipid'
+    #html_theme = 'sphinxdoc'
+    #html_theme = 'pylons'
+    #html_theme_path = pylons_sphinx_themes.get_html_themes_path()
+
+# Theme options are theme-specific and customize the look and feel of a theme
+# further.  For a list of options available for each theme, see the
+# documentation.
+#
+#html_theme_options = {
+#    'github_url': 'https://github.com/Pylons/docs-style-guide',
+#    'canonical_url':
+#        'https://docs.pylonsproject.org/projects/docs-style-guide/en/latest',
+#}
 
 # -- Project information -----------------------------------------------------
 
 project = 'AlliGator'
-copyright = '2021, Regents of the University of California'
+copyright = '2023, Regents of the University of California'
 author = 'X. Michalet'
 
 # The short X.Y version.
-version = '0.33'
+version = '0.73'
 
 # The full version, including alpha/beta/rc tags
-release = '0.33'
+release = '0.73.0'
 
 
 # -- General configuration ---------------------------------------------------

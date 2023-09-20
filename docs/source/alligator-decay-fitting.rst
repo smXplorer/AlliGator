@@ -139,34 +139,3 @@ This list includes the fit parameters and derived quantities, such as the mean l
 :math:`f_1 = \frac{{{A_1}{\tau _1}}}{{{A_1}{\tau _1} + {A_2}{\tau _2}}}`
 
 :math:`f_2 = 1 - f_1`
-
-Global fit of selected decays
------------------------------
-
-To constrain multiple decays to use the same fitted parameter(s), a global fit is needed. To achieve this, the different decays to be fitted need to be present in the Decay Graph and selected. Additionally, the common parameters need to be specified in the Fit Parameter Constraints array of the Settings >> Fluorescence Decay >> Fitting panel.
-
-Note that the parameters themselves do not need to be constrained at all (i.e. the Min and Max values can be set to -Inf and Inf respectively). However, they need to be added to the array and the corresponding Global checkbox checked.
-
-To start the global fit, right-click the Decay Graph and choose Global Fit of Selected Decays or use the Analysis >> Global Fit of Selected Decays menu item.
-
-A "busy" icon appears at the bottom of the AlliGator window, as well as an Abort Fit button, as this type of analysis can take a long time for large numbers of decays. The fit status can be checked by opening the Fit Status Window via the Analysis >> Fit Status Window menu item (see below).
-
-While the results of individual fits are exported to the Notebook, it can be convenient to have all parameters exported in a tabulated form at the end of the analysis. Check the Export Tabulated Results checkbox in the Settings>>Fluorescence Decay >> Fitting panel to select this option.
-
-Additionally, as for a time series decay fit analysis (Section 2 above), it is possible to export the series of selected fit parameters as plots in the Lifetime Graph. For this to happen, define which parameters to represent in the Displayed Fit Parameters control.
-
-Fit Status Window
------------------
-
-As a global fit of a large number of decay can take a long time, it can be useful to check its progress with the AlliGator Fit Status Window, accessible via the Analysis menu.
-
-Note that this window also provides information during standard fit operations, but is generally less useful in these cases, as results are obtained relatively rapidly and immediately exported to the Notebook.
-The Fit Status Window is shown below:
-
-<insert figure here>
-
-The update frequency is user-adjustable, but is limited by the actual computational speed (at most one update per iteration can be provided, and such an iteration can be quite long when a global fit with 100's of parameters is performed).
-
-3 types of fits are performed successively (least squares, least absolute residuals, bisquare), the best of 3 (the fit with the largest :math:`R^2`)  being retained as the final result. The ongoing type of fit is indicated by the Method indicator, while # Iterations, # Function Calls, etc., report on current parameters of the ongoing fit. The last computed parameters (Global Parameters and Decay Specific Parameters) are also indicated, the Decay control allowing to select which plot parameters are displayed. Parameter names are indicated to the left and their value to the right.
-
-Once a method is completed, its statistics (Residue, :math:`R^2` and RMSE) are visible on the right, different results being accessible via the Method pull-down list at the top. If a method hasn't been tried yet, the corresponding statistics are NaN (not a number).

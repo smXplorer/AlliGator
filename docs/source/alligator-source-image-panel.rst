@@ -9,7 +9,7 @@ The Source Image is located on the left hand side of AlliGator's main window.
    :width: 100%
    
 Some of the associated tools are highlighted in the snapshot shown above. Their
- description can be found in the following sections.
+description can be found in the following sections.
 
 The Source Image displays different data depending on the value of the 
 *Time Gate Slide*, on the value of the 
@@ -19,14 +19,14 @@ Gate Image Slide
 ----------------
 
 Note: The *Gate Image Slide* is not shown when ``Sum of All Gates`` is selected
- in the *Displayed Image* selector.
+in the *Displayed Image* selector.
 
 Located above the image area, the *Gate Image Slide* allows browsing the 
 individual images comprising the time gated (or binned) dataset. The numeric 
-control on the right shows the number of gates in the dataset. Moving the slide
-r to the left will show early gates, while late gates can be seen by moving the
- slider to the right. Alternatively, type in the desired gate index in the 
- numeric control on the right.
+control on the right shows the number of gates in the dataset. Moving the slider
+to the left will show early gates, while late gates can be seen by moving the
+slider to the right. Alternatively, type in the desired gate index in the 
+numeric control on the right.
 
 When moving the slider, the displayed image's contrast might be inappropriate 
 (overly dark or bright image). In this case, switch to the 
@@ -34,7 +34,7 @@ When moving the slider, the displayed image's contrast might be inappropriate
 
 - The *Use Image Histogram for Contrast* checkbox is checked in the 
   **Settings:Source Image** panel.
- 
+
 - The *Min* and *Max* cursors are visible and encompass most of the histogram
   bins, as shown below:
 
@@ -115,8 +115,8 @@ The cluster of objects on the top-left corner of the image are used to:
 | 6 | .. image:: images/IB5.png |Cycle through Image ROIs.                                   | 
 +---+---------------------------+------------------------------------------------------------+
 
-+ *Delete source image overlay*: Right-click the button to specify the button'
-s action when pressed
++ *Delete source image overlay*: Right-click the button to specify the button's
+action when pressed
 
   + ``All Overlays``: delete all Image Source overlays
   + ``Source Image ROIs``: delete the image ROI contours resulting from 
@@ -126,28 +126,28 @@ s action when pressed
   + ``Phasor Ratio Map Overlay``: delete the Phasor Ratio Map Overlay
   + ``Phasor Plot Color Map Overlay``: delete the Phasor Plot Color Map Overlay
   + ``Decay Fit Parameter Color Map Overlay``: delete the Decay Fit Parameter
-  Color Map Overlay
-  
+    Color Map Overlay
+
 + *Paint ROI points in the Phasor Plot*: highlight phasors in the Phasor Plot
- corresponding to the selected ROI, using the selected *Highlighted ROI Color*
+  corresponding to the selected ROI, using the selected *Highlighted ROI Color*
 + *Highlighted ROI color*: color box used to select the color used to highlight
- phasors in the Phasor Plot as discussed above. choosing a Transparent color 
- (``T``) will result in no overlay being added.
+  phasors in the Phasor Plot as discussed above. choosing a Transparent color 
+  (``T``) will result in no overlay being added.
 + *Use ROI as search area*: see description in the next section
 + *Overlay mode used for the Source Image*: the *Color Overlay Mode* selector 
-allows choosing between 3 different modes of overlay from the *Phasor Plot*:
- ``ROI``, ``Phasor Ratio Color Map`` and ``Phasor Color Map``
+  allows choosing between 3 different modes of overlay from the *Phasor Plot*:
+  ``ROI``, ``Phasor Ratio Color Map`` and ``Phasor Color Map``
 
   + ``ROI``: ROIs defined in the *Phasor Plot* are highlighted in the 
-  *Source Image*.
+    *Source Image*.
   + ``Phasor Ratio Map``: pixels whose phasor is located in the vicinity of the
-  segment connecting the two phasor references defined in the *Phasor Plot* are
-  highlighted in the *Source Image* with a color reflecting their phasor ratio.
-  See the :ref:`phasor-ratio-map` page of the manual for details.
+    segment connecting the two phasor references defined in the *Phasor Plot* are
+    highlighted in the *Source Image* with a color reflecting their phasor ratio.
+    See the :ref:`phasor-ratio-map` page of the manual for details.
   + ``Phasor Color Map``: pixels are colored according to their location in the
-  *Phasor Plot* with respect to multiple vertices defined in the 
-  **Phasor Map Color Picker** window. See the :ref:`phasor-color-map` page of 
-  the manual for details.
+    *Phasor Plot* with respect to multiple vertices defined in the 
+    **Phasor Map Color Picker** window. See the :ref:`phasor-color-map` page of 
+    the manual for details.
 
 
 Use ROI as Search Area
@@ -158,10 +158,10 @@ a special ROI definition mode, described next.
 When selected (green background), the ROI defined by the user is not the one 
 used to compute the Fluorescence Decay and Phasor Data point of the 
 *Phasor Graph*, but instead is used as a search area to define this ROI. The
- final ROI is a disk centered on the brightest pixel (in the sum image) within 
- that search area, and *ROI Diameter* defined in the **Settings:Source Image**
- panel. If there are more than one pixel with the same maximum brightness, the
- first found from the top-left corner of the image is used.
+final ROI is a disk centered on the brightest pixel (in the sum image) within 
+that search area, and *ROI Diameter* defined in the **Settings:Source Image**
+panel. If there are more than one pixel with the same maximum brightness, the
+first found from the top-left corner of the image is used.
 
 Note that each time the Search Area ROI is moved, the button toggles back to 
 its off position.
@@ -184,16 +184,16 @@ types of ROIs are supported (from top to bottom):
 + Oval
 
 + The color box below the Tool Palette defines the overlay color in which the
- ROI is drawn.
+  ROI is drawn.
 
 Note that not all ROIs can be used for all types of analyses.
 
 Special combinations:
 
 + Pressing and holding down the :kbd:`Alt` key while drawing a rectangle ROI 
-will zoom on the circumscribed area (and keep a 1:1 aspect ratio)
+  will zoom on the circumscribed area (and keep a 1:1 aspect ratio)
 + Holding the :kbd:`Shift` key while resizing or dragging a selected ROI will 
-modify the definition of that ROI.
+  modify the definition of that ROI.
 
 Save Image
 ----------
@@ -201,9 +201,9 @@ Save Image
 The *Save Image* checkbox at the bottom right corner of the Source Image is 
 used to automatically save the displayed image (including overlay) each time 
 the overlay is updated. The file is saved in the folder containing the current
- dataset folder, and the file name used is identical to that of the dataset 
- folder, with an extension corresponding to the *Saved image File Format* 
- option selected in the **Settings:Miscellaneous** panel.
+dataset folder, and the file name used is identical to that of the dataset 
+folder, with an extension corresponding to the *Saved image File Format* 
+option selected in the **Settings:Miscellaneous** panel.
 
 If the *Displayed Image* is the ``Sum of All Gates``, the file name with be 
 followed by " Total Intensity".
@@ -230,48 +230,48 @@ The *Source Image* context menu is shown below:
    :align: center
 
 - ``Copy Data``: copies the whole Source Image object bitmap image to the 
-Clipboard for reuse in other software (or in the **Notebook**).
+  Clipboard for reuse in other software (or in the **Notebook**).
 - ``Copy Image Only (with Overlay)``: copies the visible part of the image 
-(with overlay) to the Clipboard for reuse in other software (or in the 
-Notebook).
+  (with overlay) to the Clipboard for reuse in other software (or in the 
+  Notebook).
 - ``Save Image Data as TIFF``: saves the data displayed in the Source Image as 
-a 8- or 16-bit image, following the selected options offered to the user at the
- beginning of the process. The resulting file can be used for external analysis
- . Note that if the Sum of All Gates is shown, that sum is saved, while if a 
- Single Gate is shown, that single gate is saved [#f2]_. To save a complete 
- dataset, check the ``File->Save->Dataset`` submenu.
+  a 8- or 16-bit image, following the selected options offered to the user at the
+  beginning of the process. The resulting file can be used for external analysis.
+  Note that if the Sum of All Gates is shown, that sum is saved, while if a 
+  Single Gate is shown, that single gate is saved [#f2]_. To save a complete 
+  dataset, check the ``File->Save->Dataset`` submenu.
 - ``Save Displayed Image with Overlay``: saves the same image as copied by Copy
- Image Only (with Overlay)
+  Image Only (with Overlay)
 - ``Save Overlay only``: saves the current image overlay as an 8-bit image in 
-which any non-black pixel is assigned the value 255, resulting in an effective
- mask image.
+  which any non-black pixel is assigned the value 255, resulting in an effective
+  mask image.
 - ``Export Phasor Ratio Map as ASCII``: when a phasor ratio analysis has been 
-performed, exports the phasor ratio values at each pixel as a 2-dimensional 
-matrix in an ASCII file (with File Dialog).
+  performed, exports the phasor ratio values at each pixel as a 2-dimensional 
+  matrix in an ASCII file (with File Dialog).
 - ``Export Phase Lifetime Map as ASCII``: when a phasor ratio analysis has been
- performed, exports the average lifetime computed from the phasor ratio at each
- pixel as a 2-dimensional matrix in an ASCII file (with File Dialog).
+  performed, exports the average lifetime computed from the phasor ratio at each
+  pixel as a 2-dimensional matrix in an ASCII file (with File Dialog).
 - ``Palette``: this submenu is described in detail in the 
-:ref:`image-color-palette` manual page.
+  :ref:`image-color-palette` manual page.
 - ``ROIs``: this submenu is described in the :ref:`regions-of-interest` manual 
-page.
+  page.
 - ``Zoom to Fit``: stretches the image so that it fits in the 400 x 400 pixel
- image display are. If the source image is not square, this will result in 
- artificial deformations.
+  image display are. If the source image is not square, this will result in 
+  artificial deformations.
 - ``Zoom to Fit (Keep Aspect Ratio)``: as above, but ensuring that the longest
- dimension of the source image is stretched to 400 pixels.
+  dimension of the source image is stretched to 400 pixels.
 
 .. rubric:: Notes
 -----------------
 
 .. [#f1] The *Low Color* box is visible as a narrow blue rectangle at the
- bottom of the color scale. The *High Color* box is at the top of the color 
- scale, hidden by the green box overlay in the figure at the top of this 
- section. When these colors are chosen differnt than the low and high colors
- of the color scale, pixels in the image whose values are lower or higher than
- the displayed range will be highlighted with the *Low Color* and *High Color* 
- respectively. This can be useful to highlight under-exposed or over-exposed
- pixels, for instance.
+bottom of the color scale. The *High Color* box is at the top of the color 
+scale, hidden by the green box overlay in the figure at the top of this 
+section. When these colors are chosen differnt than the low and high colors
+of the color scale, pixels in the image whose values are lower or higher than
+the displayed range will be highlighted with the *Low Color* and *High Color* 
+respectively. This can be useful to highlight under-exposed or over-exposed
+pixels, for instance.
 
 .. [#f2] The options for image data export to TIFF file can be found in the 
 **Settings:Miscellaneous** panel as *Exported Gate Settings*. See the 

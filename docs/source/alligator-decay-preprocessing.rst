@@ -88,6 +88,7 @@ Warning: Note that when the background file subtraction method is selected, the 
 4. Reverse Gates (*)
 
 When selected it, changes the direction of the plotted decay, so that the tail of the decay comes after the rising part. This option is needed for some SwissSPAD datasets.
+
 5. Normalization
 
 Checking the Normalize Decay checkbox will apply a simple normalization (division by the maximum decay value) to each decay before display.
@@ -95,6 +96,7 @@ Checking the Normalize Decay checkbox will apply a simple normalization (divisio
 6. Decay Smoothing
 
 Occasionally, a decay may be affected by undesirable "spikes". It is sometimes possible to remove those spikes using cubic basic spline smoothing (details can be found at http://zone.ni.com/reference/en-XX/help/371361P-01/gmath/cubic_spline_fit/). The Cubic Spline Fit implementation of LabVIEW is used without weights, and smoothness parameters identically equal to 1 for all points, and balance parameter equal to 1 -10^(-x), where x is the Smoothing Parameter defined in the Settings>>Fluorescence Decay>>Basic Analysis panel. From the Cubic Spline Fit description page linked to above:
+
     If x = 0, the cubic spline fit is equivalent to a linear fit. If x = Inf, the cubic spline fit interpolates between the data points.
     If x < 0, an appropriate value is automatically calculated according to the time axis values.
 

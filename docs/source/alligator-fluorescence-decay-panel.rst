@@ -52,11 +52,11 @@ This section will briefly discuss the highlighted submenus, whose functions are
 described in specific pages.
 
 + ``Process Plot``: this menu, shown below, allows various types of plot
- transformations to be performed. The last category of operations are also
- available as *pre-processing* operations applied to each decay (before plotting
- in the *Decay Graph*, or other computations involving decays such as. phasor
+  transformations to be performed. The last category of operations are also
+  available as *pre-processing* operations applied to each decay (before plotting
+  in the *Decay Graph*, or other computations involving decays such as. phasor
   calculation) and are discussed in the
- :ref:`Decay Preprocessing <alligator-decay-preprocessing>` page.
+  :ref:`Decay Preprocessing <alligator-decay-preprocessing>` page.
 
 The remaining ones are:
 

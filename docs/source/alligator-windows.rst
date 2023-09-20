@@ -23,18 +23,17 @@ Accessory windows
   + :ref:`alligator-phasor-harmonic-manager`
   + :ref:`alligator-image-profile`
   + :ref:`alligator-local-decay-graph`
-  + :ref:`fit-status-window`
   + :ref:`histogram-window`
   + :ref:`plot-editor-window`
   
 AlliGator's main window's functionalities are described in the AlliGator manual
- pages.
+pages.
 The Source Image ROI Manager Window is discussed in 
 :ref:`alligator-source-image-roi-manager` and 
 :ref:`alligator-source-image-panel`.
 The Phasor Plot ROI Manager Window is discussed in 
 :ref:`alligator-phasor-plot-roi-manager` and
- :ref:`alligator-phasor-plot-panel`.
+:ref:`alligator-phasor-plot-panel`.
 The Phasor Harmonic Manager Window is discussed in 
 :ref:`phasor-harmonic-analysis`.
 The other windows' functions are described in their respective manual pages.

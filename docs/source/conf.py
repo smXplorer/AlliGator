@@ -22,11 +22,11 @@ if not on_rtd:
     import sphinx_rtd_theme
     #html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
     #html_theme_path = ["_themes", ]
-    html_theme = 'nature'
+    #html_theme = 'nature'
     #html_theme = 'insipid'
     #html_theme = 'sphinxdoc'
-    #html_theme = 'pylons'
-    #html_theme_path = pylons_sphinx_themes.get_html_themes_path()
+    html_theme = 'pylons'
+    html_theme_path = pylons_sphinx_themes.get_html_themes_path()
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -45,10 +45,10 @@ copyright = '2023, Regents of the University of California'
 author = 'X. Michalet'
 
 # The short X.Y version.
-version = '0.73'
+version = '0.74'
 
 # The full version, including alpha/beta/rc tags
-release = '0.73.0'
+release = '0.74.0'
 
 
 # -- General configuration ---------------------------------------------------

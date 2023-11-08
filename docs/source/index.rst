@@ -24,7 +24,7 @@ Contents
    alligator-installation
    alligator-version-history
    alligator-bibliography
-   alligator-acknowledgments
+   alligator-acknowledgements
    alligator-support
 
 

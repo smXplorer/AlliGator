@@ -9,6 +9,32 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+* 0.74 (2023-11-08)
+    - Bug Fixes
+        + Fixed "Load/Save Reference(s)" menu item in Phasor Plot
+        + Locked panel splitters
+        + Fixed New version check
+        + Fixed SEPL parameter updates in Settings
+        + Fixed missing gate exposure, duration and integration time information in saved HDF5 FLI dataset
+        + Fixed missing Settings>>Data Information>>Gate Separation update
+        + Removed "Interpolate Plot" (not functional)
+
+    - New Features
+        + Added Option in Decay Graph to Export a plot's phasor using the natural frequency 1/D
+        + Added option to ignore differences in phasor frequencies in Phasor Graph >> Phasor Multiplication
+        + Changed Phasor Plot calculation message to optional (only visible when "Verbose Mode" is on)
+        + Set new Default Cursor Style to a more contrasted one
+        + Added "Pair Selected Plots" menu item in Lifetime & Other Parmeters graph to combine the Y axes of two plots into a single Y2 vs Y1 plot
+        + Added option to enforce that the laser period used in fitting is identical to that of the Data Information
+        + Added IRF Deconvolution option to use the IRF tail slope as selection criterion
+        + Replaced outliers by zero in deconvolved IRFs
+        + Simplified Image Histogram Options (default: 256 bins)
+        + Added "Process Single Plot/Selected Plots/All Plots" option in Decay Graph
+        + Implemented Multiple Plot processing for: 1-normalization, [0-1]-normalization, rebin, cumulative function, denoise, extrapolate, fold, shift, smoothen, smoothen tail, straighten
+        + Rearranged/renamed Decay Graph shortcut menu
+        + Implemented calculation of Phasor SDV, Phase & Modulus Lifetime SDV, Phasor Ratio SDV, Amplitude- & Intensity-Averaged Lifetime SDV
+        + Added indicators for the derived quantities in the Phasor Graph panel
+
 * 0.73 (2023-09-18)
     - Bug Fixes
         + Fixed a bug in High Count Image Pixel Rejection which would reject all pixels when the "Reject High Count Puxels" option was selected

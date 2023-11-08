@@ -3,17 +3,22 @@
 AlliGator HDF5 File Format
 ==========================
 
-It is possible to save data loaded in AlliGator (and reload them!) in a file format based on the HDF5 hierarchical format developed and maintained by the HDF Group.
-This page briefly describes the file format used by AlliGator. Note that the latest AlliGator version supports all previous HDF5 file format versions.
+It is possible to save data loaded in AlliGator (and reload them!) in a file 
+format based on the HDF5 hierarchical format developed and maintained by the 
+HDF Group.
+This page briefly describes the file format used by AlliGator. Note that the 
+latest AlliGator version supports all previous HDF5 file format versions.
 
 v 0.7 (2023-09-02)
 ++++++++++++++++++
 
-This version adds adds new information to the *SwissSPAD Detector Information* ``group``. and a new parameter to the 
-*DAQ Parameters* cluster (and renames some of the parameters).
+This version adds new information to the *SwissSPAD Detector Information* 
+``group``. and a new parameter to the *DAQ Parameters* cluster (and renames 
+some of the parameters).
 
-+ The SwissSPAD-detector specific ``group``, *SwissSPAD Detector Information*, is comprised of 8 ``strings`` and three 
-Boolean flags (stored as integers) as shown below:
++ The SwissSPAD-detector specific ``group``, *SwissSPAD Detector Information*,
+  is comprised of 8 ``strings`` and three Boolean flags (stored as integers) as
+  shown below:
 
 +---------------------------+-----------------+--------------------------------------------------------------------------+
 | Parameter Name            | Type            | Parameter Description                                                    |
@@ -92,18 +97,23 @@ Boolean flags (stored as integers) as shown below:
 v 0.6.1 (2022-07-27)
 ++++++++++++++++++++
 
-This minor version adds a new field (*Dataset Timestamp*, a double-precision floating point number) to the *File Information* ``group``.
+This minor version adds a new field (*Dataset Timestamp*, a double-precision 
+floating point number) to the *File Information* ``group``.
 
-This parameter (unit: s) records the start of the recording of the dataset in the file (in a laboratory clock).
+This parameter (unit: s) records the start of the recording of the dataset in 
+the file (in a laboratory clock).
 
 v 0.6 (2022-04-13)
 ++++++++++++++++++
 
-This version supports multiple gate images per gate step (as is necessary for the SwissSPAD3 detector).
+This version supports multiple gate images per gate step (as is necessary for 
+the SwissSPAD3 detector).
 
-One new field (*Gate Names*, a string array) has been added to the *File Information* ``group``, resulting in the following structure:
+One new field (*Gate Names*, a string array) has been added to the 
+*File Information* ``group``, resulting in the following structure:
 
-+ *File Information* ``group`` containing 9 ``strings``, 1 ``string array``, 2 ``integers`` and 1 ``Boolean``:
++ *File Information* ``group`` containing 9 ``strings``, 1 ``string array``, 2
+  ``integers`` and 1 ``Boolean``:
 
 +---------------------------+-----------------+--------------------------------------------------------------------------+
 | Parameter Name            | Type            | Parameter Description                                                    |
@@ -143,7 +153,8 @@ One new field (*Gate Names*, a string array) has been added to the *File Informa
 |                           |                 | from 1 and specifies the order of the dataset in the series              |
 +---------------------------+-----------------+--------------------------------------------------------------------------+
 
-It also adds a SwissSPAD-detector specific ``group``, *SwissSPAD Detector Information*, comprised of 5 ``strings`` as shown below:
+It also adds a SwissSPAD-detector specific ``group``, *SwissSPAD Detector 
+Information*, comprised of 5 ``strings`` as shown below:
 
 + *SwissSPAD Detector Information* ``group`` containing 5 ``strings``:
 
@@ -166,16 +177,26 @@ It also adds a SwissSPAD-detector specific ``group``, *SwissSPAD Detector Inform
 
 + *Metadata* ``string`` is unchanged
 
-+ *Gate Images* ``group`` now contains possibly more than one gate image per gate step. Each is a 2D arrays labeled ``Gate_Name n``, where *n* will typically run from 1 to *# Gates* (the parameter found in the *DAQ Parameters* ``cluster`` described above) and ``Gate_Name`` is one of the strings found in the ``Gate Names`` string array found in the *File Information* group. For instance, if ``Gate Names`` = [``Bottom INT Gate``, ``Bottom G2 Gate``], the gate image names will be of the type: ``Bottom INT Gate 1``, ``Bottom G2 Gate 1``, ``Bottom INT Gate 2``, ``Bottom G2 Gate 2``, etc.
++ *Gate Images* ``group`` now contains possibly more than one gate image per
+  gate step. Each is a 2D arrays labeled ``Gate_Name n``, where *n* will
+  typically run from 1 to *# Gates* (the parameter found in the *DAQ Parameters*
+  ``cluster`` described above) and ``Gate_Name`` is one of the strings found in
+  the ``Gate Names`` string array found in the *File Information* group. For
+  instance, if ``Gate Names`` = [``Bottom INT Gate``, ``Bottom G2 Gate``],
+  the gate image names will be of the type: ``Bottom INT Gate 1``, ``Bottom G2
+  Gate 1``, ``Bottom INT Gate 2``, ``Bottom G2 Gate 2``, etc.
 
 
 v 0.5 (2021-04-27)
 ++++++++++++++++++
 
-Two new fields (*MAC Address* and *Windows Username*) have been added to the *File Information* ``group``, while an additional *SYNC Period* parameter was added to the *DAQ Parameters* ``cluster``.
+Two new fields (*MAC Address* and *Windows Username*) have been added to the 
+*File Information* ``group``, while an additional *SYNC Period* parameter was 
+added to the *DAQ Parameters* ``cluster``.
 The resulting structure is thus:
 
-+ *File Information* ``group`` containing 9 ``strings``, 2 ``integers`` and 1 ``Boolean``:
++ *File Information* ``group`` containing 9 ``strings``, 2 ``integers`` and 1
+  ``Boolean``:
 
 +---------------------------+-----------------+--------------------------------------------------------------------------+
 | Parameter Name            | Type            | Parameter Description                                                    |
@@ -281,16 +302,25 @@ The resulting structure is thus:
 |     Y Bin                       |    I32           |  binning factor in the vertical direction                                               |
 +---------------------------------+------------------+-----------------------------------------------------------------------------------------+
 
-+ *Gate Images* ``group`` containing the gate images in the dataset as a series of 2D arrays labeled ``Gate n``, where *n* will typically run from 1 to *# Gates* (the parameter found in the *DAQ Parameters* ``cluster`` described above).
++ *Gate Images* ``group`` containing the gate images in the dataset as a series
+  of 2D arrays labeled ``Gate n``, where *n* will typically run from 1 to
+  *# Gates* (the parameter found in the *DAQ Parameters* ``cluster`` described
+  above).
 
-+ *Metadata* ``string`` contains any other information that does not fit in any of the previous fields. There is currently no specified formatting.
++ *Metadata* ``string`` contains any other information that does not fit in any
+  of the previous fields. There is currently no specified formatting.
 
 v 0.4 (2021-02-27)
 ++++++++++++++++++
 
-A new field (*Compression*) was added to the *File Information* ``group`` to specify whether compression was used (skipping compression speeds up data saving and loading). In principle, this should have no impact on HDF5 loading, as the HDF5 library is capable of determining this without user input. This field was added for information only.
+A new field (*Compression*) was added to the *File Information* ``group`` to 
+specify whether compression was used (skipping compression speeds up data 
+saving and loading). In principle, this should have no impact on HDF5 loading, 
+as the HDF5 library is capable of determining this without user input. This 
+field was added for information only.
 
-+ *File Information* ``group`` containing 7 ``strings``, 2 ``integers`` and 1 ``Boolean``:
++ *File Information* ``group`` containing 7 ``strings``, 2 ``integers`` and 1
+  ``Boolean``:
 
 +---------------------------+-----------------+--------------------------------------------------------------------------+
 | Parameter Name            | Type            | Parameter Description                                                    |
@@ -322,7 +352,8 @@ A new field (*Compression*) was added to the *File Information* ``group`` to spe
 |                           |                 | from 1 and specifies the order of the dataset in the series              |
 +---------------------------+-----------------+--------------------------------------------------------------------------+
 
-Additional information on the part of the sensor data saved in the file, a new *Image Information* ``group`` has been added as described below.
+Additional information on the part of the sensor data saved in the file, a new 
+*Image Information* ``group`` has been added as described below.
 
 + *Image Information* ``group`` contains 2 clusters:
 
@@ -353,14 +384,24 @@ Additional information on the part of the sensor data saved in the file, a new *
 |     Y Bin                       |    I32           |  binning factor in the vertical direction                                               |
 +---------------------------------+------------------+-----------------------------------------------------------------------------------------+
 
-+ *Gate Images* ``group`` containing the gate images in the dataset as a series of 2D arrays labeled ``Gate n``, where *n* will typically run from 1 to *# Gates* (the parameter found in the *DAQ Parameters* ``cluster`` described above).
++ *Gate Images* ``group`` containing the gate images in the dataset as a series
+  of 2D arrays labeled ``Gate n``, where *n* will typically run from 1 to
+  *# Gates* (the parameter found in the *DAQ Parameters* ``cluster`` described
+  above).
 
-+ *Metadata* ``string`` contains any other information that does not fit in any of the previous fields. There is currently no specified formatting.
++ *Metadata* ``string`` contains any other information that does not fit in any
+  of the previous fields. There is currently no specified formatting.
 
 v 0.3 (2021-01-29)
 ++++++++++++++++++
 
-In order to support asynchronous data saving by third party software, version 0.3 changes the way the individual gate images are saved. Instead of being all clumped into a monolithic 3D array, each gate image is saved as a separate 2D array, as described below. This has the additional advantage that it simplifies accessing individual gates. As in v 0.2, each image gate is compressed, which significantly saves space, without incurring any significant decoding time cost.
+In order to support asynchronous data saving by third party software, version 
+0.3 changes the way the individual gate images are saved. Instead of being all 
+clumped into a monolithic 3D array, each gate image is saved as a separate 2D 
+array, as described below. This has the additional advantage that it simplifies 
+accessing individual gates. As in v 0.2, each image gate is compressed, which 
+significantly saves space, without incurring any significant decoding time 
+cost.
 
 The file is comprised of:
 
@@ -394,7 +435,8 @@ The file is comprised of:
 |                           |                 | from 1 and specifies the order of the dataset in the series              |
 +---------------------------+-----------------+--------------------------------------------------------------------------+
 
-+ *DAQ Parameters* ``cluster`` (saved as a Table): this is unchanged since v 0.1 and is reproduced here for convenience:
++ *DAQ Parameters* ``cluster`` (saved as a Table): this is unchanged since v 0.1
+  and is reproduced here for convenience:
 
 +---------------------------+-------+-------------------------------------------------------------------------+
 | Parameter Name            | Unit  | Parameter Description                                                   |
@@ -433,17 +475,28 @@ The file is comprised of:
 +---------------------------+-------+-------------------------------------------------------------------------+
 
 
-+ *Gate Images* ``group`` containing the gate images in the dataset as a series of 2D arrays labeled ``Gate n``, where *n* will typically run from 1 to *# Gates* (the parameter found in the *DAQ Parameters* ``cluster`` described above).
++ *Gate Images* ``group`` containing the gate images in the dataset as a series
+  of 2D arrays labeled ``Gate n``, where *n* will typically run from 1 to
+  *# Gates* (the parameter found in the *DAQ Parameters* ``cluster`` described
+  above).
 
-Note: there is no requirement that the number of gate images stored in the file matches the number of gates provided by the *# Gates* parameter. For instance, if an acquisition is interrupted before the total number of gates has been acquired, the file will be closed without the full complement of gates.
-There is also no check that the number of gate images remains smaller or equal to that parameter. User beware!
+Note: there is no requirement that the number of gate images stored in the file 
+matches the number of gates provided by the *# Gates* parameter. For instance, 
+if an acquisition is interrupted before the total number of gates has been 
+acquired, the file will be closed without the full complement of gates.
+There is also no check that the number of gate images remains smaller or equal 
+to that parameter. User beware!
 
-+ *Metadata* ``string`` contains any other information that does not fit in any of the previous fields. There is currently no specified formatting.
++ *Metadata* ``string`` contains any other information that does not fit in any
+  of the previous fields. There is currently no specified formatting.
 
 v 0.2
 +++++
 
-HDF5 files saved in this version are identical to v 0.1 files except that the *Gate Images* data is compressed using the *deflate* algorithm, with a level 9 compression and block size equal to 1 x 1 x G where *G* is the number of gates.
+HDF5 files saved in this version are identical to v 0.1 files except that the 
+*Gate Images* data is compressed using the *deflate* algorithm, with a level 
+9 compression and block size equal to 1 x 1 x G where *G* is the number of 
+gates.
 
 v 0.1
 +++++
@@ -498,11 +551,13 @@ The file is comprised of:
 | Laser Period (s)          |   s   | Laser Period used during acquisition                                    |
 +---------------------------+-------+-------------------------------------------------------------------------+
 
-+ *Metadata* ``string`` contains any other information that does not fit in any of the previous fields. There is currently no specified formatting.
++ *Metadata* ``string`` contains any other information that does not fit in any
+  of the previous fields. There is currently no specified formatting.
 
 + *Gate Images*: 3-dimensional array of single precision floating point numbers
 
-A snapshot of a file as viewed with HDFView, the free HDF5 file viewer developed by the HDF Group is shown below:
+A snapshot of a file as viewed with HDFView, the free HDF5 file viewer 
+developed by the HDF Group is shown below:
 
 
 .. image:: images/HDF5-0.1.png

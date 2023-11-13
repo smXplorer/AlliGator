@@ -13,7 +13,7 @@ Note: version numbers followed by an asterisk have not been released.
     Bug Fixes
         Fixed "Load/Save Reference(s)" menu item in Phasor Plot
         Locked panel splitters
-        Fixed New version check
+        Fixed new version check
         Fixed SEPL parameter updates in Settings
         Fixed missing gate exposure, duration and integration time information in saved HDF5 FLI dataset
         Fixed missing Settings>>Data Information>>Gate Separation update

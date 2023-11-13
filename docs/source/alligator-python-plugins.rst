@@ -171,7 +171,7 @@ are typically imported at the beginning of the script. In addition to any
 plugin-specific module import statement, any AlliGator Python Plugin script 
 requires the following additional two import statements:
 
-.. code-block:: [python]
+.. code-block::
 
     import json
     import alligator
@@ -220,13 +220,13 @@ Destination
 To instruct AlliGator to insert a script's functions into a specific menu, the
 following statement needs to be inserted before the different functions:
 
-.. code-block:: [python]
+.. code-block::
 
     ### AlliGatorTarget = AlliGator/Object/Object_Name ###
 
 and/or
 
-.. code-block:: [python]
+.. code-block::
 
     ### AlliGatorTarget = AlliGator/Menu/Object_Name ###
 
@@ -236,7 +236,7 @@ where ``Object_Name`` is the name of the target (e.g. ``Decay Graph``,
 For instance, to insert the plugin functions within a script under the 
 ``Analysis:Decay Graph`` menu, the following statement will be needed:
 
-.. code-block:: [python]
+.. code-block::
 
     ### AlliGatorTarget = AlliGator/Menu/Decay_Graph ###
 
@@ -247,7 +247,7 @@ To tell AlliGator that the function is a Plugin function, the following
 statement needs to be included after the doc string (if a doc string is 
 provided) and before the *Input Parameters Definition* statement:
 
-.. code-block:: [python]
+.. code-block::
 
     ### IsAlliGatorPythonPlugin ###
 
@@ -265,7 +265,7 @@ or AlliGator parameters (e.g. the phasor frequency). Both types of parameters
 are declared at the beginning of the function in a custom comment section with 
 the general structure shown below.
 
-.. code-block:: [python]
+.. code-block::
 
     ### AlliGator Input Parameters Definitions ###
     ### parameter_1:type_1 # description 1
@@ -343,7 +343,7 @@ Type & Destination* comment section are values destined to one of AlliGator's
 displayed objects (Graph and Image). The syntax of this section, which should 
 follow the *Input Parameters Definition* comment section is as follows:
 
-.. code-block:: [python]
+.. code-block::
 
     ### AlliGator Output Value Type & Destination ###
     ### value_type:destination
@@ -381,7 +381,7 @@ The following example illustrates the principles outlined above.
 The same example with additional comments is installed in the Plugins Folder 
 by default.
 
-.. code-block:: [python]
+.. code-block::
 
     # Decay_Graph_Plugin_Example.py
     # Example AlliGator Decay Graph Python Plugin

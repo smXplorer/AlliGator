@@ -9,7 +9,7 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
-* 0.74 (2023-11-08)
+* 0.74 (2023-11-12)
     - Bug Fixes
         + Fixed "Load/Save Reference(s)" menu item in Phasor Plot
         + Locked panel splitters
@@ -34,6 +34,8 @@ Note: version numbers followed by an asterisk have not been released.
         + Rearranged/renamed Decay Graph shortcut menu
         + Implemented calculation of Phasor SDV, Phase & Modulus Lifetime SDV, Phasor Ratio SDV, Amplitude- & Intensity-Averaged Lifetime SDV
         + Added indicators for the derived quantities in the Phasor Graph panel
+        + Added "Convert (All) ROI(s) to Mask Image" menu item to Source Image
+        + Added support for PI Imaging PNG Metadata information
 
 * 0.73 (2023-09-18)
     - Bug Fixes

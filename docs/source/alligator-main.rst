@@ -25,7 +25,7 @@ The following panels are available:
 - :ref:`alligator-phasor-plot-panel`
 - :ref:`alligator-phasor-graph-panel`
 - :ref:`alligator-phasor-ratio-analysis-panel`
-- :ref:`alligator-lifetime-analysis-panel`
+- :ref:`alligator-lifetime-and-other-parameters-analysis-panel`
 - :ref:`alligator-decay-fit-parameter-map-panel`
 
 Each panel's function is discussed in a separate manual page (see the table of 
@@ -34,6 +34,10 @@ content on the left).
 A standard *menu bar* on the top left gives access to different functions, 
 which are sometimes associated with a :ref:`alligator-shortcuts`. The different
 menus are discussed in separate sections of the manual.
+
+The main window can be resized in order to increase the *Source Image* size.
+The right-hand side panels do not resize laterally but expand vertically (their 
+content is not resized).
 
 Analysis Status Indicator LEDs
 ------------------------------
@@ -45,7 +49,8 @@ tip strip to show up.
 
 From left to right, they are:
 
-- Top row
+Top row
++++++++
 
   + Reference/IRF Defined
   + Phasor Calibration Defined
@@ -53,9 +58,11 @@ From left to right, they are:
   + Phasor Calibration Map Defined
   + Phasor Ratio Reference 1 Defined
   + Phasor Ratio Reference 2 Defined
-  + Datase Update Needed
+  + Dataset Update Needed
   
-- Bottom row
+Bottom row
+++++++++++
+
 
   + Individual IRFs Defined
   + Phasor Calibration Used

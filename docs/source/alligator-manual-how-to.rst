@@ -8,7 +8,7 @@ on Google Sites at `https://sites.google.com/a/g.ucla.edu/alligator/ <https://si
 Missing information in this manual can in general be found in that legacy manual.
 
 The manual is (generally) updated as new versions of the software are released. 
-The version  you are looking at (``v0.73``) is indicated in the small 
+The version  you are looking at (``v0.74``) is indicated in the small 
 ``v: X.XX`` drop-down  menu on the bottom right of the Table of Content column 
 in the online manual.
 

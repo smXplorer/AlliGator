@@ -3,11 +3,14 @@
 Source Image Panel
 ==================
 
-The Source Image is located on the left hand side of AlliGator's main window.
+The *Source Image* is located on the left hand side of AlliGator's main window.
 
 .. image:: images/AlliGator-Source-Image-Panel.png
    :width: 100%
    
+   
+The *Source Image* can be resized by expanding the main window.
+
 Some of the associated tools are highlighted in the snapshot shown above. Their
 description can be found in the following sections.
 
@@ -69,9 +72,11 @@ Displayed Image Selector
 ------------------------
 
 The *Displayed Image* selector allows switching from a mode where individual 
-gates are shown (``Single Gate``) or only their sum (``Sum of All Gates``). 
-The latter mode is the default mode. If a ``White Light Image`` or a 
-``ROI Mask Image`` have been loaded, they can also be displayed using the 
+gates are shown (``Single Gate``) or only their sum (``Sum of All Gates``), 
+or the maximum (``Max of All Gates``) or minimum (``Min of All Gates``) at each 
+pixel across all gates. 
+The ``Sum of All Gates`` mode is the default mode. If a ``White Light Image`` 
+or a ``ROI Mask Image`` have been loaded, they can also be displayed using the 
 selector.
 
 .. image:: images/Displayed-Image-Selector.png
@@ -83,8 +88,8 @@ Image Color Ramp
 The color ramp located to the right of the source image indicates the color 
 scale as well as the ``Min`` and ``Max`` values set in the *Image Histogram*.
 
-The ``Min`` value (shown at the bottom of the scale) and ``Max`` value (shown a
-t the top of the scale) define the range of pixel values which are mapped to 
+The ``Min`` value (shown at the bottom of the scale) and ``Max`` value (shown 
+at the top of the scale) define the range of pixel values which are mapped to 
 the color scale. Pixels with value outside this range will be displayed with 
 the ``Low Color`` or ``High Color`` shown at the bottom and top of the color 
 scale, respectively [#f1]_.
@@ -115,39 +120,40 @@ The cluster of objects on the top-left corner of the image are used to:
 | 6 | .. image:: images/IB5.png |Cycle through Image ROIs.                                   | 
 +---+---------------------------+------------------------------------------------------------+
 
-+ *Delete source image overlay*: Right-click the button to specify the button's
-action when pressed
++ *Delete source image overlay*: Right-click the button to specify the button's 
+  action when pressed:
 
-  + ``All Overlays``: delete all Image Source overlays
-  + ``Source Image ROIs``: delete the image ROI contours resulting from 
+  - ``All Overlays``: delete all Image Source overlays
+  - ``Source Image ROIs``: delete the image ROI contours resulting from 
     highlighting those ROIs in the Phasor Plot
-  + ``Phasor Plot ROIs Overlay``: delete the overlay pixels highlighted from 
+  - ``Phasor Plot ROIs Overlay``: delete the overlay pixels highlighted from 
     the Phasor Plot
-  + ``Phasor Ratio Map Overlay``: delete the Phasor Ratio Map Overlay
-  + ``Phasor Plot Color Map Overlay``: delete the Phasor Plot Color Map Overlay
-  + ``Decay Fit Parameter Color Map Overlay``: delete the Decay Fit Parameter
+  - ``Phasor Ratio Map Overlay``: delete the Phasor Ratio Map Overlay
+  - ``Phasor Plot Color Map Overlay``: delete the Phasor Plot Color Map Overlay
+  - ``Decay Fit Parameter Color Map Overlay``: delete the Decay Fit Parameter
     Color Map Overlay
 
-+ *Paint ROI points in the Phasor Plot*: highlight phasors in the Phasor Plot
++ *Paint ROI points in the Phasor Plot*: highlight phasors in the Phasor Plot 
   corresponding to the selected ROI, using the selected *Highlighted ROI Color*
-+ *Highlighted ROI color*: color box used to select the color used to highlight
++ *Highlighted ROI color*: color box used to select the color used to highlight 
   phasors in the Phasor Plot as discussed above. choosing a Transparent color 
   (``T``) will result in no overlay being added.
 + *Use ROI as search area*: see description in the next section
 + *Overlay mode used for the Source Image*: the *Color Overlay Mode* selector 
-  allows choosing between 3 different modes of overlay from the *Phasor Plot*:
-  ``ROI``, ``Phasor Ratio Color Map`` and ``Phasor Color Map``
+  allows choosing between 3 different modes of overlay from the *Phasor Plot*: 
+  ``ROI``, ``Phasor Ratio/Average Lifetime Color Map`` and ``Phasor Color Map``.
 
-  + ``ROI``: ROIs defined in the *Phasor Plot* are highlighted in the 
+  - ``ROI``: ROIs defined in the *Phasor Plot* are highlighted in the 
     *Source Image*.
-  + ``Phasor Ratio Map``: pixels whose phasor is located in the vicinity of the
-    segment connecting the two phasor references defined in the *Phasor Plot* are
-    highlighted in the *Source Image* with a color reflecting their phasor ratio.
-    See the :ref:`phasor-ratio-map` page of the manual for details.
-  + ``Phasor Color Map``: pixels are colored according to their location in the
-    *Phasor Plot* with respect to multiple vertices defined in the 
-    **Phasor Map Color Picker** window. See the :ref:`phasor-color-map` page of 
-    the manual for details.
+  - ``Phasor Ratio/Average Lifetime Map``: pixels whose phasor is located in 
+    the vicinity of the segment connecting the two phasor references defined in 
+    the *Phasor Plot* are highlighted in the *Source Image* with a color 
+    reflecting their phasor ratio or average lifetime depending on the option 
+    selected in the **Settings:Phasor Plot** panel. See the 
+    :ref:`phasor-ratio-map` page of the manual for details.
+  - ``Phasor Color Map``: pixels are colored according 
+    to their location in the *Phasor Plot* with respect to multiple vertices 
+    defined in the **Phasor Map Color Picker** window. See the :ref:`phasor-color-map` page of  the manual for details.
 
 
 Use ROI as Search Area
@@ -206,7 +212,7 @@ folder, with an extension corresponding to the *Saved image File Format*
 option selected in the **Settings:Miscellaneous** panel.
 
 If the *Displayed Image* is the ``Sum of All Gates``, the file name with be 
-followed by " Total Intensity".
+followed by "Total Intensity".
 
 If the *Displayed Image* is a ``Single Gate``, the file name with be followed 
 by " Gate ``n``", where ``n`` is the gate number.
@@ -228,7 +234,8 @@ The *Source Image* context menu is shown below:
 
 .. image:: images/Source-Image-Context-Menu.png
    :align: center
-
+   
+   
 - ``Copy Data``: copies the whole Source Image object bitmap image to the 
   Clipboard for reuse in other software (or in the **Notebook**).
 - ``Copy Image Only (with Overlay)``: copies the visible part of the image 
@@ -239,12 +246,16 @@ The *Source Image* context menu is shown below:
   beginning of the process. The resulting file can be used for external analysis.
   Note that if the Sum of All Gates is shown, that sum is saved, while if a 
   Single Gate is shown, that single gate is saved [#f2]_. To save a complete 
-  dataset, check the ``File->Save->Dataset`` submenu.
+  dataset, check the ``File:Save:Dataset`` submenu.
 - ``Save Displayed Image with Overlay``: saves the same image as copied by Copy
   Image Only (with Overlay)
 - ``Save Overlay only``: saves the current image overlay as an 8-bit image in 
   which any non-black pixel is assigned the value 255, resulting in an effective
   mask image.
+- ``Save Image as Hot Pixel Mask``: saves the current image as a binary image 
+  (where all pixels whose values are above the min cursor are set to 1, while 
+  all others are set to 0) used for hot pixel rejection (see **Settings: 
+  Source Image**).
 - ``Export Phasor Ratio Map as ASCII``: when a phasor ratio analysis has been 
   performed, exports the phasor ratio values at each pixel as a 2-dimensional 
   matrix in an ASCII file (with File Dialog).
@@ -264,15 +275,14 @@ The *Source Image* context menu is shown below:
 .. rubric:: Notes
 -----------------
 
-.. [#f1] The *Low Color* box is visible as a narrow blue rectangle at the
-bottom of the color scale. The *High Color* box is at the top of the color 
-scale, hidden by the green box overlay in the figure at the top of this 
-section. When these colors are chosen differnt than the low and high colors
-of the color scale, pixels in the image whose values are lower or higher than
-the displayed range will be highlighted with the *Low Color* and *High Color* 
-respectively. This can be useful to highlight under-exposed or over-exposed
-pixels, for instance.
+.. [#f1] The *Low Color* box is visible as a narrow blue rectangle at the 
+   bottom of the color scale. The *High Color* box is at the top of the color 
+   section. When these colors are chosen differnt than the low and high colors 
+   of the color scale, pixels in the image whose values are lower or higher than 
+   the displayed range will be highlighted with the *Low Color* and *High Color* 
+   respectively. This can be useful to highlight under-exposed or over-exposed
+   pixels, for instance.
 
 .. [#f2] The options for image data export to TIFF file can be found in the 
-**Settings:Miscellaneous** panel as *Exported Gate Settings*. See the 
-:ref:`alligator-settings-miscellaneous` section of the manual for details.
+   **Settings:Miscellaneous** panel as *Exported Gate Settings*. See the 
+   :ref:`alligator-settings-miscellaneous` section of the manual for details.

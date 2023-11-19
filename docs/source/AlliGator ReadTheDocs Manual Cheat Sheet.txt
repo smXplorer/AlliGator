@@ -1,5 +1,0 @@
-AlliGator ReadTheDocs Documentation Cheat Sheet
-===============================================
-
-- Update alligator-manual-how-to.rst with the most recent software version number
-

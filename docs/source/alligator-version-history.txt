@@ -9,6 +9,17 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+0.75 (2023-11-19)
+
+    Bug Fixes
+        Amplitude- or Intensity-averaged lifetime shown on Phasor Graph now matches that displayed in the Notebook (when the phasor SDV option is not selected, it is the value computed from the actual decay, while when that option is selected, it is the average of all replicas)
+        Fixed a bug in All ROIs NLSF Analysis>>Non-Interactive (Fast, Individual IRF) that resulted in incorrect fit results
+        
+    New Features
+        Output of both amplitude- & intensity-averaged lifetime and phasor ratio in average phasor calculation (Phasor Graph right-click menu)
+        Support for "Polygon" ROI Image Profile (the ROIs created via "Create ROIs with Intensity above Min" are Polygons)
+        Deprecation of "second pass" attempt to improve fit in ll ROIs NLSF Analysis>>Non-Interactive (Fast, Individual IRF)
+
 0.74 (2023-11-12)
     Bug Fixes
         Fixed "Load/Save Reference(s)" menu item in Phasor Plot

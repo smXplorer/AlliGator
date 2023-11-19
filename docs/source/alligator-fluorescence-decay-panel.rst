@@ -62,7 +62,7 @@ The remaining ones are:
 
 .. image:: images/Decay-Graph-Process-Plot-Menu.png
    :align: center
-   
+
   * ``Plot Math``
     - ``y -> f(y) Transform``
     - ``(x,y) -> (f,g)(x,y) Transform``

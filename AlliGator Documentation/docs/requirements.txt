@@ -1,2 +1,0 @@
-# pylons-sphinx-themes
-sphinx_rtd_theme

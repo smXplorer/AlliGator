@@ -4,11 +4,11 @@ How to use this manual
 ======================
 
 The manual is work in progress and is intended to replace the legacy manual hosted
-on Google Sites at `https://sites.google.com/a/g.ucla.edu/alligator/ <https://sites.google.com/a/g.ucla.edu/alligator/>`_.
+on Google Sites at `https://web.archive.org/web/20201028034436/https://sites.google.com/a/g.ucla.edu/alligator/manual <https://web.archive.org/web/20201028034436/https://sites.google.com/a/g.ucla.edu/alligator/manual>`_.
 Missing information in this manual can in general be found in that legacy manual.
 
 The manual is (generally) updated as new versions of the software are released. 
-The version  you are looking at (``v0.74``) is indicated in the small 
+The version  you are looking at (``v0.75``) is indicated in the small 
 ``v: X.XX`` drop-down  menu on the bottom right of the Table of Content column 
 in the online manual.
 

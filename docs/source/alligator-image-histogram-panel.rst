@@ -24,7 +24,7 @@ Any pixel in the original image with value smaller than *Min* (resp. larger than
 
 In this example, the main histogram peak to the left corresponds to background pixels, which can be set to appear green with the chosen position of the *Min* cursor (green) = ``130`` shown below and setting the ``Lowest Color``` to be green (a different color palette -Grayscale- was selected to illustrate the effect of lowest and highest colors distinct from the palette's min and max colors) [#f1]_.
 
-Likewise, moving the *Max* cursor below the max histogram value and chosing the ``highest `` color to be red, highlights the two brightest regions of the sample [#f2]_. 
+Likewise, moving the *Max* cursor below the max histogram value and chosing the ``highest`` color to be red, highlights the two brightest regions of the sample [#f2]_. 
 
 Note that this is only a display feature. Pixels below or above these values are still included in the phasor calculation, unless stated otherwise by the *Reject Low count Pixels* or *Reject High Count Pixels* checkboxes of the **Settings:Source Image** panel (see below).
 
@@ -70,7 +70,6 @@ The rejection criterion uses the maximum of ``A x P``, ``B`` and the value corre
 The rejection criterion uses the minimum of ``K x M``, ``C`` and the value corresponding to the ``HP`` percentile of the histogram.
 
 .. rubric:: Notes
------------------
 
 .. [#f1] The ``Lowest Color`` box doesn't need to be identical to that of the *Min* cursor (and likewise for the ``Highest Color`` and *Max* cursor).
 

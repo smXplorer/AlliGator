@@ -51,57 +51,43 @@ section).
 This section will briefly discuss the highlighted submenus, whose functions are 
 described in specific pages.
 
-+ ``Process Plot``: this menu, shown below, allows various types of plot
++ ``Process Plot(s)``: this menu, shown below, allows various types of plot
   transformations to be performed. The last category of operations are also
-  available as *pre-processing* operations applied to each decay (before plotting
-  in the *Decay Graph*, or other computations involving decays such as. phasor
-  calculation) and are discussed in the
+  available as *pre-processing* operations applied to each decay (before
+  plotting in the *Decay Graph*, or other computations involving decays such as
+  phasor calculation) and are discussed in the
   :ref:`Decay Preprocessing <alligator-decay-preprocessing>` page.
 
-The remaining ones are:
-
-.. image:: images/Decay-Graph-Process-Plot-Menu.png
+.. image:: images/Decay-Graph-Custom-Menu-Process-Plot(s).png
    :align: center
-
-  * ``Plot Math``
-    - ``y -> f(y) Transform``
-    - ``(x,y) -> (f,g)(x,y) Transform``
-    - ``2-Plot Math``
-    - ``Plot Convolution``
-  * ``Rebin Plot``
-  * ``Interpolate Plot``
-  * ``Denoise Plot``
-  * ``Average Selected Plots``
-  * ``Compute Cumulative Function``
-  * ``1-Normalize Plot``
-  * ``[0-1]-Normalize Plot
-  * ``Straighten Plot``
-  * ``Fold Plot``
-  * ``Smoothen Plot``
-  * ``Shift Plot``
-  *  ``Extrapolate Plot``
-    - ``Extrapolate Plot``
-    - ``Create Head & Tail Bounding Cursors``
-    - ``Store Cursor-defined Head & Tail Fractions``
+   
+The remaining ones are:
 
 + ``Fit``:
 
 .. image:: images/Decay-Graph-Fit-Menu.png
    :align: center
    
-+ ``IRF/Reference Decay``:
++ ``IRF/Reference Plot``:
 
 .. image:: images/Decay-Graph-IRF-Reference-Decay-Menu.png
    :align: center
- 
+   
 + ``Export Decay to Phasor Graph``:
 
+.. image:: images/Decay-Graph-Export-Plot-Phasor.png
+   :align: center
+
++ Various Python Plugins:
+
+  Python plugins menu items and submenus will appear at the bottom of the Decay 
+  Graph menu. Their names and content will depend on each installation, but 
+  typically will contain some examples or default functionalities.
 
 .. rubric:: Notes
------------------
 
 .. [#f1] When the user-selected ROI has a name (that is, when it has been stored 
-in the :ref:`alligator-source-image-roi-manager`), this name is appended to the 
-image name, instead of the generic ``Plot`` suffix. A number is autimatically 
-added to the decay name if the same ROI is used several times, or unnamed ROIs 
-are used.
+   in the :ref:`alligator-source-image-roi-manager`), this name is appended to 
+   the image name, instead of the generic ``Plot`` suffix. A number is 
+   autimatically added to the decay name if the same ROI is used several times, 
+   or unnamed ROIs are used.

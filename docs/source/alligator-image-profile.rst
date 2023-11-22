@@ -22,7 +22,7 @@ and opening the **Image Profile** window (``Window:Image Profile``) results in t
 
 Notice that this graph has two visible vertical scales (``Intensity`` on the left and ``Phase Lifetime (ns)`` on the right). In fact, the *Scale Legend* at the bottom shows an additional (hidden) ``Phasor Ratio`` scale. Moreover, the *Plot Legend* on the top right shows a (hidden) ``Offset`` plot.
 
-This is because the **Image Profile* window also shows the values of other parameters along the contour, provided these parameters are available:
+This is because the **Image Profile** window also shows the values of other parameters along the contour, provided these parameters are available:
 
 + Intensity
 + Phase Lifetime

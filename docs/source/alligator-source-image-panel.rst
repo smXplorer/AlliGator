@@ -273,7 +273,6 @@ The *Source Image* context menu is shown below:
   dimension of the source image is stretched to 400 pixels.
 
 .. rubric:: Notes
------------------
 
 .. [#f1] The *Low Color* box is visible as a narrow blue rectangle at the 
    bottom of the color scale. The *High Color* box is at the top of the color 

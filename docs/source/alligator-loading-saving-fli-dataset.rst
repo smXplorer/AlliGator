@@ -36,18 +36,18 @@ A simple open source file format in which to save a variety of different files f
 
 Details about the format itself can be found in the :ref:`alligator-hdf5-file-format` page of this manual.
 
-To load an AlliGator HDF5 file, use ``File->Load->FLI Dataset->HDF5 File`` (:kbd:`Ctrl+O`). The path to the dataset will be displayed in the title bar.
+To load an AlliGator HDF5 file, use ``File:Load:FLI Dataset:HDF5 File`` (:kbd:`Ctrl+O`). The path to the dataset will be displayed in the title bar.
 
-To save a dataset (irrespective of its source), use ``File->Save->Dataset->Save as HDF5 FLI Dataset`` (:kbd:`Ctrl+Shift+S`).
+To save a dataset (irrespective of its source), use ``File:Save:Dataset:Save as HDF5 FLI Dataset`` (:kbd:`Ctrl+Shift+S`).
 
 Folder of Gate Images
 ---------------------
 
-To load a single time point (consisting of `N` gate images), use ``File->Load->FLI Dataset->Gate Image Folder`` (:kbd:`Ctrl+L`). The path to the dataset folder will be displayed in the title bar.
+To load a single time point (consisting of `N` gate images), use ``File:Load:FLI Dataset:Gate Image Folder`` (:kbd:`Ctrl+L`). The path to the dataset folder will be displayed in the title bar.
 
 Supported gate image file formats are: BMP, TIFF, JPEG, JPEG2000, PNG. The files can be 8 or 16 bits gray scale images.
 
-To save a FLI dataset as a series of gate images, use ``File->Save->Dataset->Save as TIFF Gate Image Folder``. This will first open a **Gate Image Naming Dialog** window where the user can define the name (prefix) of individual gate images, as well as define additional parameters:
+To save a FLI dataset as a series of gate images, use ``File:Save:Dataset:Save as TIFF Gate Image Folder``. This will first open a **Gate Image Naming Dialog** window where the user can define the name (prefix) of individual gate images, as well as define additional parameters:
 
 .. image:: images/Gate-Image-Naming-Dialog.png
 
@@ -58,24 +58,24 @@ Note that no additional information is saved, therefore is is recommended to inc
 Becker & Hickl .sdt FLI Dataset
 -------------------------------
 
-To load a .sdt file saved by a Becker & Hickl FLIM setup, use ``File->Load->FLI Dataset->.sdt File``. The path to the dataset will be displayed in the title bar.
+To load a .sdt file saved by a Becker & Hickl FLIM setup, use ``File:Load:FLI Dataset:.sdt File``. The path to the dataset will be displayed in the title bar.
 
 PicoQuant .ptu Dataset
 ----------------------
 
 PicoQuant FLIM setups can save data as individual photon time stamps with spatial information (.ptu files) or as histogrammed data (.bin files).
 
-To load a .ptu file, use ``File->Load->FLI Dataset->.ptu File``. The path to the dataset will be displayed in the title bar. Note that the user needs to specify how to interpret the photon time stamps by providing a number of bins ``N`` in which to sort out the photons via the ``# Gates`` parameter defined in the **Settings:Data Information** panel [*]_.
+To load a .ptu file, use ``File:Load:FLI Dataset:.ptu File``. The path to the dataset will be displayed in the title bar. Note that the user needs to specify how to interpret the photon time stamps by providing a number of bins ``N`` in which to sort out the photons via the ``# Gates`` parameter defined in the **Settings:Data Information** panel [*]_.
 
 PicoQuant .bin Dataset
 ----------------------
 
-To load a .bin file, use ``File->Load->FLI Dataset->.bin File``. The path to the dataset will be displayed in the title bar.
+To load a .bin file, use ``File:Load:FLI Dataset:.bin File``. The path to the dataset will be displayed in the title bar.
 
 Reloading a Dataset
 -------------------
 
-To update a dataset after modifying an option requiring reloading the dataset to take effect (such as for instance the number of gates), use ``File->FLI Dataset->Reload Dataset``(:kbd:`Ctrl+R`)
+To update a dataset after modifying an option requiring reloading the dataset to take effect (such as for instance the number of gates), use ``File:FLI Dataset:Reload Dataset`` (:kbd:`Ctrl+R`)
 
 Loading & Saving FLI Dataset Series
 ===================================
@@ -85,12 +85,12 @@ Folder of HDF5, .sdt or .ptu Datasets
 
 In order to load a time series (or any succession of data sets to be analyzed as a series) consisting of individual FLI datasets of a single kind (.hdf5 or .sdt or .bin or .ptu), make sure that they are grouped in a single folder. This folder can contain other file types, which will be ignored when loading the series.
 
-In order to load a time series (or any succession of data sets to be analyzed as a series) consisting of gate images, use ``File->Load->FLI Dataset Series->xxx File Series``, where ``xxx`` stands for Hdf5 or .sdt or .bin or .ptu. The HDF5 File Series loading option can be invoked with the :kbd:`Ctrl+Shift+O` keyboard shortcut.
+In order to load a time series (or any succession of data sets to be analyzed as a series) consisting of gate images, use ``File:Load:FLI Dataset Series:xxx File Series``, where ``xxx`` stands for Hdf5 or .sdt or .bin or .ptu. The HDF5 File Series loading option can be invoked with the :kbd:`Ctrl+Shift+O` keyboard shortcut.
 
 Folder of Folders of Gate Images
 --------------------------------
 
-In order to load a time series (or any succession of data sets to be analyzed as a series) consisting of gate images, use ``File->Load->FLI Dataset Series->Gate Image Folder Series`` (:kbd:`Ctrl+Shift+L`). In the case of LaVision ICCD data, it is possible to use the time stamp of each dataset saved in the associated .set files. To enable this, check the *Use File Timestamp* chekbox in the **Time Trace** panel of either the **Settings** or **AlliGator** windows, before loading the time series.
+In order to load a time series (or any succession of data sets to be analyzed as a series) consisting of gate images, use ``File:Load:FLI Dataset Series:Gate Image Folder Series`` (:kbd:`Ctrl+Shift+L`). In the case of LaVision ICCD data, it is possible to use the time stamp of each dataset saved in the associated .set files. To enable this, check the *Use File Timestamp* chekbox in the **Time Trace** panel of either the **Settings** or **AlliGator** windows, before loading the time series.
 
 After the folder containing the time series has been selected, the first data set in the series will be loaded and displayed in the Source Image indicator as described earlier.
 

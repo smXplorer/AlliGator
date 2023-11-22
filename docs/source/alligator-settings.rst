@@ -110,7 +110,7 @@ Phasor Graph
 .. image:: images/AlliGator-Settings-Phasor-Gaph.png
    :align: center
 
-.. _alligator-settings-SEPL
+.. _alligator-settings-SEPL:
 
 Single-Exponential Phasor Locus (SEPL)
 --------------------------------------

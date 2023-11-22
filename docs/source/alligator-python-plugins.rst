@@ -77,7 +77,7 @@ Plugins consists of functions saved within Python script files (.py extension).
 
 These script files need to be saved within the ``Python Plugins`` folder
 located in the AlliGator installation folder (generally in 
-``C:Users\User_Name\AppData\Local]AlliGator``, unless specified otherwise during
+``C:Users\User_Name\AppData\Local\AlliGator``, unless specified otherwise during
 installation.
 
 Each file can be saved within a subfolder hierarchy within the 
@@ -137,12 +137,12 @@ Plugin functions appear in their corresponding submenus as they are named in the
 script file, with the following transformations:
 
 + a single underscore at the beginning of the function name is interpreted as 
-meaning that an horizontal separator will precede that function in the menu.
+  meaning that an horizontal separator will precede that function in the menu.
 
-+ double underscores are altertnatively replaced by a left and right parenthesis
++ double underscores are alternatively replaced by a left and right parenthesis
   , respectively preceded and followed by a space.
 
-+ single underscores are replaced by single spaces
++ single underscores are replaced by single spaces.
 
 For instance, a function named ``this_is_a_simple_function(*args, **kparams)``
 will appear as ``this is a simple function`` in the submenu.
@@ -209,11 +209,12 @@ section can be ignored.
 The syntax of these different elements is discussed in the following sections.
 
 **Note**: In addition to these 4 mandatory elements, it is recommended to 
-include a Python doc string to provide a description of that the function is 
+include a Python ``doc string`` to provide a description of what the function is 
 doing, as well as information on whether or not and what user-provided 
-parameters may be required. This doc string will indeed be sent to the 
-**Notebook** window by holding the ``H`` key pressed down while selecting the 
-Python plugin function in the corresponding menu.
+parameters may be required. This ``doc string`` can be sent to the 
+**Notebook** window by holding the ``H`` key down while selecting the 
+Python plugin function in the corresponding menu (the function will not be 
+executed).
 
 Destination
 -----------
@@ -233,7 +234,7 @@ and/or
 where ``Object_Name`` is the name of the target (e.g. ``Decay Graph``, 
 ``Source Image`` or ``FLI Dataset``).
 
-For instance, to insert the plugin functions within a script under the 
+For instance, to insert all plugin functions within a script into the 
 ``Analysis:Decay Graph`` menu, the following statement will be needed:
 
 .. code-block::
@@ -250,6 +251,10 @@ provided) and before the *Input Parameters Definition* statement:
 .. code-block::
 
     ### IsAlliGatorPythonPlugin ###
+    
+If a function does not contain this statement, it will not be included in any 
+AlliGator menu and will therefore be invisible to an AlliGator user. This will 
+typically be the case of helper functions called by the Plugin functions.
 
 Input Parameters Definition
 ---------------------------
@@ -288,10 +293,11 @@ list of supported types (see :ref:`Python Plugins API
 <alligator-python-plugins-API>` for details), including ``AlliGator``, which 
 indicates an internal AlliGator parameter. For a user-provided input parameter, 
 a short *description* is recommended and should be provided as a single 
-commented string (``# description n`` being a **bad** description!). It will 
-appear next to the name and value of the parameter in a dialog box when the 
-plugin is called. An example of such a dialog box (corresponding to the example 
-shown at the bottom of this page) is provided below.
+commented string (``# description n`` being replaced by something more... 
+descriptive!). It will appear next to the name and value of the parameter in a 
+dialog box when the plugin is called. An example of such a dialog box 
+(corresponding to the example shown at the bottom of this page) is provided 
+below.
 
 .. figure:: images/AlliGator-Python-Pugin-Input-Parameters-Dialog.png   
    :align: center
@@ -300,7 +306,8 @@ shown at the bottom of this page) is provided below.
 
 To expose which internal AlliGator parameters can be passed as input parameters, 
 use the *Send* button in the  **Settings:Plugins** panel. This will copy a list 
-of these parameters in the clipboard.
+of these parameters in the clipboard, which can then be pasted in any text 
+editor.
 
 Check the *Parameter Names only* checkbox in the  **Settings:Plugins** panel to 
 get a JSON-formatted list of exposed internal AlliGator parameters without their 
@@ -333,7 +340,8 @@ message).
 
 Output sent to internal AlliGator variables are a way to modify the internal 
 state of AlliGator as a result of executing a Plugin. For instance, a plugin 
-could be change a **Settings** flag, or the *phasor frequency*.
+could be change a **Settings** flag, or the *phasor frequency*. Use with 
+moderation, as this could have unintended consequences if done improperly.
 
 All previous three types of output do not require any special syntax to be added 
 to the plugin.
@@ -370,9 +378,10 @@ If no output needs to be sent to a displayed object, this section can be
 omitted.
 
 To better understand these different syntactic elements and how they fit into a 
-Python function used as a plugin, it is easiest to look at the (not very useful) 
-example installed with AlliGator and appearing as submenu item of 
-``Analysis:Decay Graph`` and as a context menu item of the *Decay Graph".
+Python function used as a plugin, it is easiest to look at the (not very useful 
+as an AlliGator plugin) example installed with AlliGator and appearing as 
+submenu item of ``Analysis:Decay Graph`` and as a context menu item of the 
+*Decay Graph*.
 
 Decay Graph example
 +++++++++++++++++++

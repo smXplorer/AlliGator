@@ -3,7 +3,7 @@
 AlliGator Python Plugins API v 0.1
 ++++++++++++++++++++++++++++++++++
 
-AlliGator versions: 0.63-0.66
+AlliGator versions: 0.63-0.75
 
 parameter types
 ---------------
@@ -31,7 +31,7 @@ use the *Send* button in the  **Settings:Plugins** panel. This will send a copy
 of that list to the Clipboard, together with the current parameter values.
 
 A list of exposed parameters with their default values can be found here
-:ref:`here' <alligator-internal-parameters>`
+:ref:`here <alligator-internal-parameters>`
 
 Check the *Parameter Names only* checkbox in the  **Settings:Plugins** panel to 
 get a list of exposed internal AlliGator parameters without their 

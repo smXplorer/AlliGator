@@ -9,6 +9,17 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+-------------------
+0.75.1 (2023-11-22)
+-------------------
+
+
+    - Bug Fix
+        + Fixed "Use Data Information Laser Period" not updating the laser period used for fitting
+
+    - New Feature
+        + Changed approach to compute offset error estimation: now computed at "optimal" Chi^2 obtained by parabolic estimation, while the actual returned offset parameter is that of the best fit.
+
 -----------------
 0.75 (2023-11-19)
 -----------------
@@ -16,12 +27,12 @@ Note: version numbers followed by an asterisk have not been released.
 
     - Bug Fixes
         + Amplitude- or Intensity-averaged lifetime shown on Phasor Graph now matches that displayed in the Notebook (when the phasor SDV option is not selected, it is the value computed from the actual decay, while when that option is selected, it is the average of all replicas)
-        + Fixed a bug in All ROIs NLSF Analysis>>Non-Interactive (Fast, Individual IRF) that resulted in incorrect fit results
+        + Fixed a bug in "All ROIs NLSF Analysis>>Non-Interactive (Fast, Individual IRF)" that resulted in incorrect fit results
 
     - New Features
         + Output of both amplitude- & intensity-averaged lifetime and phasor ratio in average phasor calculation (Phasor Graph right-click menu)
         + Support for "Polygon" ROI Image Profile (the ROIs created via "Create ROIs with Intensity above Min" are Polygons)
-        + Deprecation of "second pass" attempt to improve fit in ll ROIs NLSF Analysis>>Non-Interactive (Fast, Individual IRF)
+        + Deprecation of "second pass" attempt to improve fit in "All ROIs NLSF Analysis>>Non-Interactive (Fast, Individual IRF)"
 
 -----------------
 0.74 (2023-11-12)
@@ -41,7 +52,7 @@ Note: version numbers followed by an asterisk have not been released.
         + Added option to ignore differences in phasor frequencies in Phasor Graph >> Phasor Multiplication
         + Changed Phasor Plot calculation message to optional (only visible when "Verbose Mode" is on)
         + Set new Default Cursor Style to a more contrasted one
-        + Added "Pair Selected Plots" menu item in Lifetime & Other Parmeters graph to combine the Y axes of two plots into a single Y2 vs Y1 plot
+        + Added "Pair Selected Plots" menu item in Lifetime & Other Parameters graph to combine the Y axes of two plots into a single Y2 vs Y1 plot
         + Added option to enforce that the laser period used in fitting is identical to that of the Data Information
         + Added IRF Deconvolution option to use the IRF tail slope as selection criterion
         + Replaced outliers by zero in deconvolved IRFs
@@ -213,7 +224,7 @@ Note: version numbers followed by an asterisk have not been released.
         + Fixed bug in Image Histogram that would slow down calculation for large images
         + Fixed a bug in ROI to individual pixel ROI conversion (skipped when the ROI is not a closed shape)
         + Fixed a bug preventing output of Settings to the Notebook
-        + Fixed a bug in Phasor Calibration that would compute |g| instead of g
+        + Fixed a bug in Phasor Calibration that would compute abs(g) instead of g
         + Fixed a bug that would erase all overlays each time the Source Image was updated
 
     - New Features

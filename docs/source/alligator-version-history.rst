@@ -10,14 +10,23 @@ AlliGator Version History
 Note: version numbers followed by an asterisk have not been released.
 
 -------------------
+0.75.2 (2023-11-26)
+-------------------
+
+
+    - Bug Fixes
+        + Fixed update of Fit Options:Laser Period when loading a new file and Use Data Information Laser Period = TRUE
+        + Fixed last version detection
+
+-------------------
 0.75.1 (2023-11-22)
 -------------------
 
 
-    - Bug Fix
+    - Bug Fixes
         + Fixed "Use Data Information Laser Period" not updating the laser period used for fitting
 
-    - New Feature
+    - New Features
         + Changed approach to compute offset error estimation: now computed at "optimal" Chi^2 obtained by parabolic estimation, while the actual returned offset parameter is that of the best fit.
 
 -----------------
@@ -181,7 +190,7 @@ Note: version numbers followed by an asterisk have not been released.
         + Fixed mangled Notebook output for IRF Deconvolution
         + Associate correct axes to Parameter Plots in Lifetime & Other Parameters Graph
 
-    - New Feature
+    - New Features
         + Improved Phasor Plot decorations (ticks, labels and references ROI)
         + Added busy icon for additional tasks
         + Added Source Image Overlays as option to the Erase button in Phasor Plot
@@ -224,7 +233,7 @@ Note: version numbers followed by an asterisk have not been released.
         + Fixed bug in Image Histogram that would slow down calculation for large images
         + Fixed a bug in ROI to individual pixel ROI conversion (skipped when the ROI is not a closed shape)
         + Fixed a bug preventing output of Settings to the Notebook
-        + Fixed a bug in Phasor Calibration that would compute abs(g) instead of g
+        + Fixed a bug in Phasor Calibration that would compute |g| instead of g
         + Fixed a bug that would erase all overlays each time the Source Image was updated
 
     - New Features
@@ -273,7 +282,7 @@ Note: version numbers followed by an asterisk have not been released.
 0.66 (2022-12-31)
 -----------------
 
-    - Bug Fix
+    - Bug Fixes
         + Fixed a bug in Python Plugins.zipped archive preventing from updating outdated Plugins
     - New Features
         + Added Compute Average Lifetime to Decay Graph>>Process Plot menu
@@ -289,7 +298,7 @@ Note: version numbers followed by an asterisk have not been released.
 0.65 (2022-12-15)
 -----------------
 
-    - Bug Fix
+    - Bug Fixes
         + Syntax error in Python Plugin doesn't crash Python session anymore (a LabVIEW bug)
     - New Features
         + Improved Error and Warning reporting for Python Plugins
@@ -408,14 +417,14 @@ Note: version numbers followed by an asterisk have not been released.
     - Bug Fixes
         + Fixed display glitches in Multi-ROIs Single-Pixel Analysis dialog window
         + Speed up of Phasor Information Display in Phasor Plot when shift-hovering over the Source Image with the mouse
-    - New Feature
+    - New Features
         + Replaced "Phasor Ratio Calculation" checkbox by "Phasor Ratio Type" radio buttons: Intensity-weighted or Amplitude-weighted
 
 -------------------
 0.60.1 (2022-08-04)
 -------------------
 
-    - Bug Fix
+    - Bug Fixes
         + Fixed bug that would not display the newly added file in the Batch Export Window
 
 -----------------
@@ -450,7 +459,7 @@ Note: version numbers followed by an asterisk have not been released.
 0.58 (2022-07-28)
 -----------------
 
-    - Bug Fix
+    - Bug Fixes
         + Added missing "SYNC Period" in exported HDF5 files
     - New Features
         + Added (optional) Help Balloon in Batch Export Window
@@ -485,14 +494,14 @@ Note: version numbers followed by an asterisk have not been released.
 0.56.3 (2022-06-30)
 -------------------
 
-    - Bug Fix
+    - Bug Fixes
         + Deprecated "Whole Image Phasor Scatter Plot" in Analysis->Phasor Graph, as it is now done by selecting a ROI encompassing the whole image and converting it to single-pixel ROIs, followed by Analysis->Dataset->Multiple ROIs Analysis->All ROIs Phasor Analysis->Non-Interactive (Fast) [Ctrl+Shift+A]
 
 -------------------
 0.56.2 (2022-06-29)
 -------------------
 
-    - Bug Fix
+    - Bug Fixes
         + Fixed a bug preventing updating the SEPL harmonic frequency
     - New Features
         + Added context menu item to SEPL:Harmonic Frequency to set it to the Dataset Phasor Frequency
@@ -502,7 +511,7 @@ Note: version numbers followed by an asterisk have not been released.
 0.56.1 (2022-06-27)
 -------------------
 
-    - Bug Fix
+    - Bug Fixes
         + Fixed a bug which would not properly update the Reference Lifetime Indicators in the Phasor Graph panel
     - New Features
         + Updated "# Gates" parameter description to explain that it is ignored in most cases
@@ -1247,7 +1256,7 @@ Note: version numbers followed by an asterisk have not been released.
     - Bug Fixes
         + Support for rootless file name series (eg. 1.hdf5, 2.hdf5, etc.)
         + Phase Lifetime vs Intensity Scatterplot now rejecting pixels with NaN phase lifetime values
-        + Minor bug fixes
+        - Minor Bug Fixes
         + Some code refactoring
 
     - New Features
@@ -1267,7 +1276,7 @@ Note: version numbers followed by an asterisk have not been released.
         + Fixed bug preventing Histogram calculation in Graphs
         + Fixed a bug where the Phasor Plot analysis functions did not take into account the conditions used to compute the Phasor Plot (e.g. min intensity)
         + Fixed a bug of invisible Lifetime Graph tipstrip introduced in a recent release
-        + Minor bug fixes
+        - Minor Bug Fixes
 
     - New Features
         + Added Phasor Plot ROI resizing with Shift-Click
@@ -1284,7 +1293,7 @@ Note: version numbers followed by an asterisk have not been released.
 
     - Bug Fixes
         + Fixed bug preventing pixel intensity conditions from being used for Phasor Plot calculation
-        + Cosmetic and minor bug fixes
+        - Cosmetic and minor Bug Fixes
 
     - New Features
         + Improves .set and RecSettings.txt decoding (LaVIsion dataset)
@@ -1302,7 +1311,7 @@ Note: version numbers followed by an asterisk have not been released.
     - Bug Fixes
         + Fixed non-functioning Playback and Loop scripts
         + Corrected a bug preventing decoding of LaVision .set metadata files
-        + Minor bug fixes
+        - Minor Bug Fixes
 
     - New Features
         + Support for PicoQuant .ptu FLI datasets
@@ -1495,7 +1504,7 @@ Note: version numbers followed by an asterisk have not been released.
 -------------------
 
 
-    + Bug fix: invalid phasor calculation when no background correction was applied
+    - Bug Fixes: invalid phasor calculation when no background correction was applied
 
 -----------------
 0.18 (2019-06-19)
@@ -1613,7 +1622,7 @@ Note: version numbers followed by an asterisk have not been released.
         + Changed file format for phasor plots and ROIs to JSON (from XML) for speed up and size reduction
         + Added support for background HDF5 Dataset subtraction
 
-    + Bug fixes:
+    - Bug Fixes:
         + Restored compatibility with v1 of Raw Phasor Plot Data file (XML)
         + Added ROI validity check before analysis
         + Corrected a bug resulting in a dialog when reloading HDF5 dataset
@@ -1639,7 +1648,7 @@ Note: version numbers followed by an asterisk have not been released.
     + Changed the icon of the "Clear Overlay" buttons on both Source Image and Phasor Plot (the latter operation now skips Phasor Plot recalculation, which is done using the other "Refresh Phasor Plot"  button
     + Added Sum All Datasets in Series function (with an "Average Dataset Sum" option in Settings>>Source Image)
     + Open/Save HDF5  Dataset functions added
-    + Minor bug fixes and cosmetic changes
+    - Minor Bug Fixes and cosmetic changes
 
 -------------------
 0.15.2 (2019-02-19)
@@ -1659,14 +1668,14 @@ Note: version numbers followed by an asterisk have not been released.
     + Renamed "Decay Points to Skip" to "Gates to Skip"
     + Renamed "Revert Gates" to "Reverse Gates"
     + Added File Path to AlliGator Window Title for all files
-    + Minor cosmetic changes and bug fixes
+    - Minor cosmetic changes and Bug Fixes
 
 -----------------
 0.15 (2019-02-09)
 -----------------
 
 
-    + Minor bug fixes and cosmetic changes
+    - Minor Bug Fixes and cosmetic changes
     + Added option to represent phase lifetime vs total intensity or background-subtracted intensity (Phasor Graph)
     + Settings: Moved "Laser Period" parameter to Fluorescence Decay tab and "Pseudo Phasor Add'l Parameters" to Phasor Graph tab
     + Removed Ctrl+C and Ctrl+Shift+C shortcuts to avoid conflict with the standard usage
@@ -1691,7 +1700,7 @@ Note: version numbers followed by an asterisk have not been released.
     + Added Whole Image Phasor Scatter Plot Calculation
     + Added optional guess fit parameters for decay fitting
     + Added "Integration" mode for decay fitting of data obtained with large gates, in addition to the previous "Convolution" mode
-    + Minor bug fixes and cosmetic changes
+    - Minor Bug Fixes and cosmetic changes
 
 -----------------
 0.12 (2018-03-29)
@@ -1765,14 +1774,14 @@ Note: version numbers followed by an asterisk have not been released.
     + Added choice of individual Fit Algorithm (or Best of All)
     + Output of Global Fit parameters to Lifetime Graph if requested (Displayed parameter list)
     + Added AlliGator Global Fit Status Window
-    + Minor bug fixes and cosmetic improvements
+    - Minor Bug Fixes and cosmetic improvements
 
 ---------------------
 0.9.13 (not released)
 ---------------------
 
 
-    + Minor bug fixes (including one which would not take into account the image threshold settings)
+    - Minor Bug Fixes (including one which would not take into account the image threshold settings)
     + Phasor Ratio/Lifetime Plot now take the name of the source Phasor Plot
     + Added option to only show the last decay plot
     + Decay plot/fit/residuals colors can be set in Settings>>Fluorescence Decay>>Styles
@@ -1852,7 +1861,7 @@ Note: version numbers followed by an asterisk have not been released.
     + Search ROI now returns the barycenter of all the maxima as center
     + Corrected bug in Phasor Ratio plot linear fit
     + Added Reject High Decay Peak Pixel options
-    + Minor bug fixes and cosmetic changes
+    - Minor Bug Fixes and cosmetic changes
 
 ------------------
 0.9.7 (2017-01-13)
@@ -1862,7 +1871,7 @@ Note: version numbers followed by an asterisk have not been released.
     + Decay Smoothing and Shifting
     + Recalibration of multiple phasor plots
     + Saving and Loading of phasor plots
-    + Minor bug fixes and cosmetic changes
+    - Minor Bug Fixes and cosmetic changes
 
 ------------------
 0.9.6 (2017-01-03)
@@ -1890,7 +1899,7 @@ Note: version numbers followed by an asterisk have not been released.
     + Added Source Image ROI handling options
     + Added option to save the Overlay as an 8-bit image
     + Introduced a Phasor Ratio Map Representation
-    + Various bug fixes and cosmetic changes
+    - Various Bug Fixes and cosmetic changes
 
 ---------------------------------------
 0.9.4 (2016-12-01, updated 2016-12-08):
@@ -1902,7 +1911,7 @@ Note: version numbers followed by an asterisk have not been released.
     + Added the ability to load a White Light Image and a ROI Mask Image
     + ROI selection and handling improvements
     + Added Tip strips for Plot Legends
-    + Various bug fixes and cosmetic changed
+    - Various Bug Fixes and cosmetic changed
 
 -------------------
 0.9.3 (2016-10-29):

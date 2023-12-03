@@ -9,6 +9,26 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+-----------------
+0.76 (2023-12-03)
+-----------------
+
+
+    - Bug Fixes
+        + Change to Phasor Calibration Options, Gate Name, Gate Arithmetic, etc. now flags Phasor Plot for update
+        + Fixed Harmonic Frequency context menu in Settings:SEPL panel
+        + Fixed bug in Amplitude Phasor Ratio SDV calculation
+        + Set # processors used during initialization
+
+    - New Features
+        + Local Decay Graph window now displays decay for any kind of ROI (not just single-pixel ROI)
+        + Deprecated Source Image:Average Dataset Sum, Source Image:Use Phasor Plot Binning settings
+        + Shortened list of information sent to the Notebook in verbose mode when a new Phasor Plot is calculated
+        + Added "Parameter 2 vs Parameter 1 Scatter Plot" in Phasor Graph
+        + Removed "Phase Lifetime Trajectory" as being superseded by "Parameter 2 vs Parameter 1 Scatter Plot"
+        + Removed "Phase Lifetime vs Parameter" scatter plot sub-menu as being superseded by "Parameter 2 vs Parameter 1 Scatter Plot"
+        + Added "Use Estimated Average Phasor" checkbox as part of the phasor standard deviation option in Settings:Phasor Graph
+
 -------------------
 0.75.2 (2023-11-26)
 -------------------

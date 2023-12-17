@@ -8,31 +8,31 @@ listed below. Most can be accessed directly from the ``Windows`` menu
 Main windows
 ------------
 
-  + :ref:`alligator-main`
-  + :ref:`alligator-notebook`
-  + :ref:`alligator-settings`
+  + :ref:`alligator-main-window`
+  + :ref:`alligator-notebook-window`
+  + :ref:`alligator-settings-window`
 
 Accessory windows
 -----------------
 
-  + :ref:`alligator-about`
-  + :ref:`alligator-help`
-  + :ref:`alligator-dataset-information`
-  + :ref:`alligator-source-image-roi-manager`
-  + :ref:`alligator-phasor-plot-roi-manager`
-  + :ref:`alligator-phasor-harmonic-manager`
-  + :ref:`alligator-image-profile`
-  + :ref:`alligator-local-decay-graph`
-  + :ref:`histogram-window`
-  + :ref:`plot-editor-window`
+  + :ref:`alligator-about-window`
+  + :ref:`alligator-help-window`
+  + :ref:`alligator-dataset-information-window`
+  + :ref:`alligator-source-image-roi-manager-window`
+  + :ref:`alligator-phasor-plot-roi-manager-window`
+  + :ref:`alligator-phasor-harmonic-manager-window`
+  + :ref:`alligator-image-profile-window`
+  + :ref:`alligator-local-decay-graph-window`
+  + :ref:`alligator-histogram-window`
+  + :ref:`alligator-plot-editor-window`
   
 AlliGator's main window's functionalities are described in the AlliGator manual
 pages.
 The Source Image ROI Manager Window is discussed in 
-:ref:`alligator-source-image-roi-manager` and 
+:ref:`alligator-source-image-roi-manager-window` and 
 :ref:`alligator-source-image-panel`.
 The Phasor Plot ROI Manager Window is discussed in 
-:ref:`alligator-phasor-plot-roi-manager` and
+:ref:`alligator-phasor-plot-roi-manager-window` and
 :ref:`alligator-phasor-plot-panel`.
 The Phasor Harmonic Manager Window is discussed in 
 :ref:`phasor-harmonic-analysis`.

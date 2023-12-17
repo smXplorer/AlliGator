@@ -9,6 +9,24 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+0.77 (2023-12-16)
+
+    Bug Fixes
+        Fixed online version check (no message if installed version is the same as latest release)
+        Fixed bug where deactivating Phasor Calibration Map did not result in a Phasor Plot update
+        Fixed missing shortcut menu items in Source Image ROI Manager
+        Fixed Complementary ROI calculation
+
+    New Features
+        Added "Use Estimated Average Phasor" checkbox as part of the phasor standard deviation option in Settings:Phasor Graph
+        Added "Pixel-to-Pixel" Phasor Map Calibration for significant speed up in cases where the Calibration Map is computed for all pixels in the dataset
+        Implementation of parameter SDVs in "Export Phasor Plot Add'l Data" in Phasor Graph
+        Added support for greyscale RGB images
+        Changed ROI connectivity to 4 in ROI Mask to ROI conversion
+        Support for amplitude- or intensity-averaged lifetime output in FLI Dataset Series>>Series Phasor Analysis
+        Support for Phasor Ratio and Averaged Lifetime SDV in FLI Dataset Series>>Series Phasor Analysis
+        Consolidated "All ROIs NLSF Analysis>>Non-Interactive (Fast, Common IRF)" and "... (Fast, Individual IRF)" menu items, the option being set by the "Settings>>Fluorescence Decay>>Fit Options>>Use Local IRF" parameter
+
 0.76 (2023-12-03)
 
     Bug Fixes
@@ -217,7 +235,7 @@ Note: version numbers followed by an asterisk have not been released.
         Fixed bug in Image Histogram that would slow down calculation for large images
         Fixed a bug in ROI to individual pixel ROI conversion (skipped when the ROI is not a closed shape)
         Fixed a bug preventing output of Settings to the Notebook
-        Fixed a bug in Phasor Calibration that would compute |g| instead of g
+        Fixed a bug in Phasor Calibration that would compute abs(g) instead of g
         Fixed a bug that would erase all overlays each time the Source Image was updated
 
     New Features
@@ -265,7 +283,7 @@ Note: version numbers followed by an asterisk have not been released.
     New Features
         Added Compute Average Lifetime to Decay Graph>>Process Plot menu
         Added Average Lifetime Options to Settings>>Fluorescence Decay>>Advanced Decay Analysis
-        Added Positive constraint on extracted IRF, by replacing negative values Y by a normally distributed values in N(0,|Y|/3)
+        Added Positive constraint on extracted IRF, by replacing negative values Y by a normally distributed values in N(0,abs(Y)/3)
         Added option to use a smoothed metrics for Optimal IRF Extraction
         Added corresponding Savitzky-Golay parameters in Settings (Number of Side Points, Polynomial Order)
         Added "Create Complementary ROI" function in the Source Image>>ROIs context menu
@@ -1334,7 +1352,7 @@ Note: version numbers followed by an asterisk have not been released.
     Renamed "Decay Points to Skip" to "Gates to Skip"
     Renamed "Revert Gates" to "Reverse Gates"
     Added File Path to AlliGator Window Title for all files
-    Minor cosmetic changes and Bug Fixes
+    Minor bug fixes and cosmetic changes
 
 0.15 (2019-02-09)
 

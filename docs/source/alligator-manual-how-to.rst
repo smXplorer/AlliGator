@@ -8,7 +8,7 @@ on Google Sites at `https://web.archive.org/web/20201028034436/https://sites.goo
 Missing information in this manual can in general be found in that legacy manual.
 
 The manual is (generally) updated as new versions of the software are released. 
-The version  you are looking at (``v0.75.1``) is indicated in the small 
+The version  you are looking at is indicated in the small 
 ``v: X.XX`` drop-down  menu on the bottom right of the Table of Content column 
 in the online manual.
 

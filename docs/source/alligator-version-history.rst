@@ -10,6 +10,22 @@ AlliGator Version History
 Note: version numbers followed by an asterisk have not been released.
 
 -----------------
+0.78 (2023-12-22)
+-----------------
+
+
+    - Bug Fixes
+        + Fixed typos in GUI
+        + Fixed bug in Fit Parameters Options which ignored the "Numerically Estimated" option unless the array of Guess Parameters was empty
+        + Fixed bug in pixel-to-pixel phasor map calibration
+        + Fixed bug preventing loading old phasor calibrations and phasor calbration maps
+        + Fixed bug that would prevent reloading of dataset when the background dataset type is different from that of the dataset type (e.g. HDF5 vs Gate Folder)
+
+    - New Features
+        + Added "Move Flattened Series to Folder Series" menu item in File>>Load>>FLI Dataset Series menu (to deal with SPAD512 flattened ouput)
+        + Moved Analysis>>FLI Dataset>>Multiple ROI Analysis>>Multi-ROI Single-Pixel NLSF and Phasor Analysis to Scripts menu
+        + Removed "Pixel-to-Pixel" calibration option (now automatically applied when a full image calibration map is stored)
+-----------------
 0.77 (2023-12-16)
 -----------------
 

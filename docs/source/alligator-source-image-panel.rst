@@ -153,7 +153,8 @@ The cluster of objects on the top-left corner of the image are used to:
     :ref:`phasor-ratio-map` page of the manual for details.
   - ``Phasor Color Map``: pixels are colored according 
     to their location in the *Phasor Plot* with respect to multiple vertices 
-    defined in the **Phasor Map Color Picker** window. See the :ref:`phasor-color-map` page of  the manual for details.
+    defined in the **Phasor Map Color Picker** window. See the 
+    :ref:`phasor-color-map` page of  the manual for details.
 
 
 Use ROI as Search Area
@@ -242,18 +243,18 @@ The *Source Image* context menu is shown below:
   (with overlay) to the Clipboard for reuse in other software (or in the 
   Notebook).
 - ``Save Image Data as TIFF``: saves the data displayed in the Source Image as 
-  a 8- or 16-bit image, following the selected options offered to the user at the
-  beginning of the process. The resulting file can be used for external analysis.
-  Note that if the Sum of All Gates is shown, that sum is saved, while if a 
-  Single Gate is shown, that single gate is saved [#f2]_. To save a complete 
-  dataset, check the ``File:Save:Dataset`` submenu.
+  a 8- or 16-bit image, following the selected options offered to the user at 
+  the beginning of the process. The resulting file can be used for external 
+  analysis. Note that if the Sum of All Gates is shown, that sum is saved, 
+  while if a Single Gate is shown, that single gate is saved [#f2]_. To save a 
+  complete dataset, check the ``File:Save:Dataset`` submenu.
 - ``Save Displayed Image with Overlay``: saves the same image as copied by Copy
   Image Only (with Overlay)
 - ``Save Overlay only``: saves the current image overlay as an 8-bit image in 
   which any non-black pixel is assigned the value 255, resulting in an effective
   mask image.
 - ``Save Image as Hot Pixel Mask``: saves the current image as a binary image 
-  (where all pixels whose values are above the min cursor are set to 1, while 
+  (where all pixels whose values are above the max cursor are set to 1, while 
   all others are set to 0) used for hot pixel rejection (see **Settings: 
   Source Image**).
 - ``Export Phasor Ratio Map as ASCII``: when a phasor ratio analysis has been 
@@ -267,7 +268,7 @@ The *Source Image* context menu is shown below:
 - ``ROIs``: this submenu is described in the :ref:`regions-of-interest` manual 
   page.
 - ``Zoom to Fit``: stretches the image so that it fits in the 400 x 400 pixel
-  image display are. If the source image is not square, this will result in 
+  image display area. If the source image is not square, this will result in 
   artificial deformations.
 - ``Zoom to Fit (Keep Aspect Ratio)``: as above, but ensuring that the longest
   dimension of the source image is stretched to 400 pixels.

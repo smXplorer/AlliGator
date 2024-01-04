@@ -9,6 +9,27 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+0.79 (2024-01-03)
+
+    Bug Fixes
+        Fixed downloading and installing of new version
+        Fixed truncation of Folder Name when dealing with Gate Image folder
+        Fixed bogus message when loading a new file with the same background subtraction parameters as the previous one
+        Fixed sluggish Phasor Plot Reference user-controlled motion
+        Fixed long "Highlight Image ROI in Phasor Plot" step when loading new dataset and a full-frame ROI is drawn
+        Phasor Ratio Color Scale is now updated according to "Color Map Type"
+        Fixed erroneous display of Average Lifetime range in Settings>>Phasor Plot
+        Fixed Phasor Ratio/Average Lifetime overlay responsiveness
+        Fixed missing internal update of Phasor Ratio/Average Lifetime Display Range parameter
+        Fixed long-standing bug in Phasor Graph where the internal state wasn't updated properly when one or more plots were deleted from the graph (clearing the graph was behaving as expected)
+
+    New Features
+        Added "Transpose Plot", "Merge Selected Plots", "Plot Histogram" to Decay Graph
+        Added support for "Date taken" and "Time taken" of SPAD512^2 files
+        Added support for Background Series
+        Added dialog to remind the user that references are needed to compute a phasor ratio or average lifetime overlay
+        Added "Close" sub-menu to the File menu (e.g. Closing a Dataset Series before switching to an individual dataset is recommended to avoid future data confusion)
+
 0.78 (2023-12-22)
 
     Bug Fixes
@@ -19,7 +40,7 @@ Note: version numbers followed by an asterisk have not been released.
         Fixed bug that would prevent reloading of dataset when the background dataset type is different from that of the dataset type (e.g. HDF5 vs Gate Folder)
 
     New Features
-        Added "Move Flattened Series to Folder Series" menu item in File>>Load>>FLI Dataset Series menu (to deal with SPAD512 flattened ouput)
+        Added "Move Flattened Series to Folder Series" menu item in File>>Load>>FLI Dataset Series menu (to deal with SPAD512 flattened output)
         Moved Analysis>>FLI Dataset>>Multiple ROI Analysis>>Multi-ROI Single-Pixel NLSF and Phasor Analysis to Scripts menu
         Removed "Pixel-to-Pixel" calibration option (now automatically applied when a full image calibration map is stored)
 0.77 (2023-12-16)

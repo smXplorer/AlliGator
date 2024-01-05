@@ -10,13 +10,24 @@ AlliGator Version History
 Note: version numbers followed by an asterisk have not been released.
 
 -------------------
+0.79.2 (2024-01-05)
+-------------------
+
+
+    - Bug Fixes
+        + Fixed "forgotten" calibration when refreshing the Phasor Plot
+        + Fixed mix-up between two SDV options in Multiple ROI Phasor Analysis (fast, non-interactive)
+        + Fixed a bug that would return an error when using 1/D as the phasor frequency to use when exporting a decay's phasor to the Phasor Graph
+        + Fixed "Export JSON string to Clipboard" in Settings>> Phasor Frequency controls.
+
+-------------------
 0.79.1 (2024-01-04)
 -------------------
 
 
     - Bug Fixes
-        + Fixed bug in calculation of calibrated phasor when SDV calculation option is on
-        + Fixed bug in calculation of calibrated phasor when Use Estimated Average Phasor option is on 
+        + Fixed bug in calculation of calibrated phasor when SDV calculation option is checked [Analysis>>FLI Dataset>>Multiple ROIs>>Phasor Analysis (fast,non-interactive)]
+        + Fixed bug in calculation of calibrated phasor when Use Estimated Average Phasor option is checked [Analysis>>FLI Dataset>>Multiple ROIs>>Phasor Analysis (fast,non-interactive)]
 
 -----------------
 0.79 (2024-01-04)

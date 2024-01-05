@@ -9,8 +9,17 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+-------------------
+0.79.1 (2024-01-04)
+-------------------
+
+
+    - Bug Fixes
+        + Fixed bug in calculation of calibrated phasor when SDV calculation option is on
+        + Fixed bug in calculation of calibrated phasor when Use Estimated Average Phasor option is on 
+
 -----------------
-0.79 (2024-01-03)
+0.79 (2024-01-04)
 -----------------
 
 

@@ -9,6 +9,27 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+-----------------
+0.80 (2024-01-16)
+-----------------
+
+
+    - Bug Fixes
+        + Fixed bug whereby when opening a child window, clicking into the Image panel would result in a black background
+        + Fixed unresponsive "Check for update" menu item
+        + Fixed plot transposition when computing Parameter 2 vs Parameter 1 in Phasor Graph
+        + Fixed bug in Sum All FLI Datasets in Series preventing some sums to be computed
+        + Fixed Notebook reopening with the default Notebook name even when saved (and sometimes with empty content)
+
+    - New Features
+        + upgraded to v 2.15.0.149 of h5labview2 library (which should in principle dispense from having to install the HDF5 library separately)
+        + AlliGator user event handling refactoring to reduce lag following Mouse Move events
+        + Added Load .bin FLI Dataset & Dataset Series (Piccolo) to File menu
+        + Renaming of File loading menu item for clarification
+        + Changed menu location of Multi-ROI Single-Pixel scripts, now located in the Analysis menu
+        + Added ROI description in Time Series Analysis Notebook output if the ROI is not one of the stored ones
+        + Added progress bar when file loading
+
 -------------------
 0.79.2 (2024-01-05)
 -------------------
@@ -2002,9 +2023,9 @@ Note: version numbers followed by an asterisk have not been released.
     + Introduced a Phasor Ratio Map Representation
     + Various Bug Fixes and cosmetic changes
 
----------------------------------------
-0.9.4 (2016-12-01, updated 2016-12-08):
----------------------------------------
+--------------------------------------
+0.9.4 (2016-12-01, updated 2016-12-08)
+--------------------------------------
 
 
     + Introduced a separate Settings window, as well as saving of settings from one session to the next
@@ -2014,9 +2035,9 @@ Note: version numbers followed by an asterisk have not been released.
     + Added Tip strips for Plot Legends
     + Various Bug Fixes and cosmetic changed
 
--------------------
-0.9.3 (2016-10-29):
--------------------
+------------------
+0.9.3 (2016-10-29)
+------------------
 
 
     + Added Slider in Phasor Graph panel to replay time series one step at a time

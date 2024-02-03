@@ -9,6 +9,18 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+0.81 (2024-02-03)
+
+    Bug Fixes
+        Fixed missing "Slope" metric plot and data in IRF extraction
+        Improved Mouse Move event handling in UI
+
+    New Features
+        Added "Draw Reference Segment" checkbox in Settings>>Phasor Plot
+        Added "Dataset Scaling Factor" to Settings>>Data Information
+        Added workaround to the bit padding implemented in SPAD512 software
+        Skipping "Gate Steps" parameter in PI Imaging PNG metadata, as it is erroneous in version 1.43 and prior
+
 0.80 (2024-01-16)
 
     Bug Fixes

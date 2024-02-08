@@ -10,6 +10,21 @@ AlliGator Version History
 Note: version numbers followed by an asterisk have not been released.
 
 -----------------
+0.82 (2024-02-07)
+-----------------
+
+
+    - Bug Fixes
+        + Fixed a bug with Mouse Move events in Image Display & Phasor Plot introduced in v0.81 which broke a number of UI functionalities
+        + Fixed a bug that could set the wrong frequency for subsequent calculation when manually exporting a plot to the Phasor Graph
+        + Improved responsivity to Image Histogram Cursor Move events
+
+    - New Features
+        + Added "Shot Noise Influence on Average Lifetime" to the Analysis>>Tools menu
+        + Deprecated "Simple Search" algorithm when using the Phasor Calibration Map option
+        + Added Dialog allowing to use the frequency of the calibration phasor (or phasor map/phasor series) if it is different from the  current phasor frequency
+
+-----------------
 0.81 (2024-02-03)
 -----------------
 

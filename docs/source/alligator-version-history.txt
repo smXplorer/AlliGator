@@ -9,6 +9,11 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+0.82.1 (2024-02-14)
+
+    Bug Fix
+        Fixed bug in Gate Image Folder loading which would fail to load non-PI Imaging datasets
+
 0.82 (2024-02-07)
 
     Bug Fixes

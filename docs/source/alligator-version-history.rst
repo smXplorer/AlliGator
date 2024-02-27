@@ -16,7 +16,8 @@ Note: version numbers followed by an asterisk have not been released.
 
     - Bug Fixes
         + Fixed broken Phasor Ratio Map Palette selection menu
-        + Fixed bug that prevented highlighting phasor ROI in Source Image\Fixed broken loading of Image Folder without metadata (which would erase stored settings)
+        + Fixed bug that prevented highlighting phasor ROI in Source Image
+        + Fixed broken loading of Image Folder without metadata (which would erase stored settings)
         + Fixed parsing of version history
         + Fixed bug in Gate Image Folder loading which would fail to load non-PI Imaging datasets
         + Fixed broken loading of Image Folder without metadata (which would erase stored settings)

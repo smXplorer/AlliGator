@@ -9,6 +9,23 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+-----------------
+0.83 (2024-02-27)
+-----------------
+
+
+    - Bug Fixes
+        + Fixed broken Phasor Ratio Map Palette selection menu
+        + Fixed bug that prevented highlighting phasor ROI in Source Image\Fixed broken loading of Image Folder without metadata (which would erase stored settings)
+        + Fixed parsing of version history
+        + Fixed bug in Gate Image Folder loading which would fail to load non-PI Imaging datasets
+        + Fixed broken loading of Image Folder without metadata (which would erase stored settings)
+
+    - New Features
+        + Speed up of Source Image zoom responsiveness when an image overlay is applied
+        + Added options to blend overlay color to background image in Source Image and Phasor Plot Settings panels
+        + Added label style options to the Phasor Plot Settings tab
+
 -------------------
 0.82.1 (2024-02-14)
 -------------------

@@ -10,6 +10,16 @@ AlliGator Version History
 Note: version numbers followed by an asterisk have not been released.
 
 -----------------
+0.84 (2024-03-08)
+-----------------
+
+
+    - Bug Fixes
+        + Fixed behavior of "Use File Timestamp" in Intensity Time Trace panel and Settings
+        + Fixed bug in transcription of date/time information for PI Imaging dataset in the Dataset
+        + Fixed broken loading of .phplot files in Phasor Graph
+
+-----------------
 0.83 (2024-02-27)
 -----------------
 
@@ -17,7 +27,7 @@ Note: version numbers followed by an asterisk have not been released.
     - Bug Fixes
         + Fixed broken Phasor Ratio Map Palette selection menu
         + Fixed bug that prevented highlighting phasor ROI in Source Image
-        + Fixed broken loading of Image Folder without metadata (which would erase stored settings)
+	+ Fixed broken loading of Image Folder without metadata (which would erase stored settings)
         + Fixed parsing of version history
         + Fixed bug in Gate Image Folder loading which would fail to load non-PI Imaging datasets
         + Fixed broken loading of Image Folder without metadata (which would erase stored settings)

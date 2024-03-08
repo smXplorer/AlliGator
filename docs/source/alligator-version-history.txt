@@ -9,6 +9,13 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+0.84 (2024-03-08)
+
+    Bug Fixes
+        Fixed behavior of "Use File Timestamp" in Intensity Time Trace panel and Settings
+        Fixed bug in transcription of date/time information for PI Imaging dataset in the Dataset
+        Fixed broken loading of .phplot files in Phasor Graph
+        
 0.83 (2024-02-27)
 
     Bug Fixes

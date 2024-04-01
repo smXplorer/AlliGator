@@ -8,6 +8,18 @@ AlliGator Version History
 =========================
 
 Note: version numbers followed by an asterisk have not been released.
+0.85 (2024-03-31)
+
+    Bug Fixes
+	Fixed bug in Image Histogram busy icon
+	Fixed non-functional Intensity Time Trace computation when processing a Series
+	Fixed unresponsive "Use File Time Stamp" checkbox in Intensity Time Trace panel
+	Fixed bug that would not load a common background correction in a Series Sum calculation (only the first dataset in the series would be corrected)
+	Fixed bug that required the user to select the gate channel of all SS3 datasets in a series
+	Minor cosmetic fixes
+
+    New Features
+	Added (Rotated) Rectangle Image Profile (aka "thick" line image profile)
 
 0.84 (2024-03-08)
 

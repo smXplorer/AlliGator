@@ -2,7 +2,7 @@
 LabVIEW software for FLI dataset analysis
 
 This repository is currently under construction.
-For the latest AlliGator installer, check the installer folder.
+For the latest AlliGator installer, check the installer/latest folder.
 The latest (but still incomplete) manual can be found at 
 https://alligator-distribution.readthedocs.io
 

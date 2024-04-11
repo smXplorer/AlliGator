@@ -9,6 +9,22 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+0.86 (2024-04-11)
+
+    Bug Fixes
+        Fixed empty phasor added to Phasor Graph (when an invalid decay was generated)
+        Fixed occasional slow ROI Decay Analysis
+        Fixed default folder in "Save Phasor Ratio Reference(s)" dialog
+        Fixed Default Max Percentile in Fit Options to 0
+
+    New Features
+        Refreshed icon
+        Added "Set Reference n to User-entered Lifetime" menu items to Phasor Graph & Phasor Plot
+        Added Delete ROIs based on Statistics option in the Source Image ROIs menu
+        Fixed and updated Image Auto-Contrast option
+        Added Lower and Upper Percentile Targets in the Image Histogram Panel
+        Changed default name of Multiple ROIs file to include the name of the dataset
+
 0.85.1 (2024-04-04)
 
     Bug Fix

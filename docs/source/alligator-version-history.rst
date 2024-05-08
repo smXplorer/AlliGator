@@ -9,6 +9,14 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+-------------------
+0.87.1 (2024-05-08)
+-------------------
+
+
+    - Bug Fix
+        + Fixed bug in Upper and Lower Percentile options in Sliced Mean and SDV calculation
+
 -----------------
 0.87 (2024-05-07)
 -----------------
@@ -36,7 +44,7 @@ Note: version numbers followed by an asterisk have not been released.
         + Added Image Resolution (Pixel Size) parameter in Settings>>Source Image
         + Added Upper and Lower Percentile options in Sliced Mean and SDV calculation (to reject outliers)
         + Added Min number of Elements option in Sliced Mean and SDV calculation (to reject slices with low counts)
-        + Added Number of Elements vs Intensity plot in Slided Mean and SDV calculation
+        + Added Number of Elements vs Intensity plot in Sliced Mean and SDV calculation
 
 -----------------
 0.86 (2024-04-11)

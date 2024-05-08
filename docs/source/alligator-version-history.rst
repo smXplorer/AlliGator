@@ -10,6 +10,35 @@ AlliGator Version History
 Note: version numbers followed by an asterisk have not been released.
 
 -----------------
+0.87 (2024-05-07)
+-----------------
+
+
+    - Bug Fixes
+        + Fixed bug (introduced in 0.83) in Overlay of Decay Parameters Map resulting in a transposition of the overlay
+        + Fixed missing case of identical min and max in image data export to TIFF
+        + Fixed sticky busy icon
+        + Fixed bug preventing from displaying decay fit results for non single-pixel ROIs
+        + Fixed bug failing to update phasor plots in Phasor Graph when adding or removing a single point
+        + Fixed Time Point and Gate slide ticks
+        + Fixed bug in B&H .sdt file header reading
+        + Fixed possible bug in Rebin Histogram dialog
+        + Fixed bug in approximate comparison function that would fail to recognize the approximate identity of two phasor frequencies (e.g. when one is loaded with a calibration file)
+        + Fixed speed of Full Frame ROI Decay Analysis
+
+    - New Features
+        + Added option to Add Single Phasor to Plot in the Phasor Graph, supporting definition by (g,s), (m,phi), single-exponential lifetime, or bi-exponential linear combination
+        + Added "User-Defined Quantity" to the Phasor Ratio and Average Lifetime options for a color map overlay
+        + Added "Export User-Defined Quantity Map to ASCII" in Source Image
+        + Made the "Load Phasor Reference(s)" window a centered dialog box
+        + Added dialog to select which ROI Statistics to export when selecting All ROIs
+        + Added Source Image Scale Bar Overlay Button and Settings Options
+        + Added Image Resolution (Pixel Size) parameter in Settings>>Source Image
+        + Added Upper and Lower Percentile options in Sliced Mean and SDV calculation (to reject outliers)
+        + Added Min number of Elements option in Sliced Mean and SDV calculation (to reject slices with low counts)
+        + Added Number of Elements vs Intensity plot in Slided Mean and SDV calculation
+
+-----------------
 0.86 (2024-04-11)
 -----------------
 

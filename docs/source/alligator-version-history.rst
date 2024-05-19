@@ -20,7 +20,7 @@ Note: version numbers followed by an asterisk have not been released.
 
     - New Features
         + Changed names of derived Decay Fit Parameters to <tau>_a, f1_a, f2_a and <tau>_i, f1_i, f2_i
-        + Added Support for Saving Single ROI and All ROIs NLSF Parameter Map Data (whether the map is a single pixel one or per ROI one)
+        + Added Support for Exporting Single ROI and All ROIs NLSF Parameters Data to ASCII (whether the map is a single pixel one or per ROI one)
         + Changed default Fixed Low Background Threshold to 0 (instead of 2000)
         + Changed default Phasor Ratio Type to Amplitude-weighted (instead of Intensity-weighted)
 

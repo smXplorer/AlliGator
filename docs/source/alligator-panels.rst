@@ -17,7 +17,6 @@ These different panels are described individually in the following pages:
    alligator-intensity-time-trace-panel
    alligator-phasor-plot-panel
    alligator-phasor-graph-panel
-   alligator-lifetime-and-other-parameters-analysis-panel
    alligator-phasor-ratio-analysis-panel
-   alligator-decay-fit-parameter-map-panel
-   
+   alligator-lifetime-and-other-parameters-analysis-panel
+   alligator-decay-fit-parameters-map-panel

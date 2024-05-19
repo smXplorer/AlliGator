@@ -9,6 +9,21 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+-----------------
+0.88 (2024-05-19)
+-----------------
+
+
+    - Bug Fixes
+        + Fixed typo in Settings>>Fluorescence Decay>>Fit Options: Max Decay Percentile context help description
+        + Fixed wrong file name preventing <tau>_1 and <tau>_2 parameter maps from being saved in the Decay Fit Parameters Map
+
+    - New Features
+        + Changed names of derived Decay Fit Parameters to <tau>_a, f1_a, f2_a and <tau>_i, f1_i, f2_i
+        + Added Support for Saving Single ROI and All ROIs NLSF Parameter Map Data (whether the map is a single pixel one or per ROI one)
+        + Changed default Fixed Low Background Threshold to 0 (instead of 2000)
+        + Changed default Phasor Ratio Type to Amplitude-weighted (instead of Intensity-weighted)
+
 -------------------
 0.87.1 (2024-05-08)
 -------------------

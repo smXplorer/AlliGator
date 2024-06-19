@@ -30,8 +30,6 @@ Note: version numbers followed by an asterisk have not been released.
         Implemented MLE fit based on Ted Laurence's modification of the Levenberg-Marquardt algorithm
         Added Fit Method Benchmark Tool to Analysis>>Tools menu
 
-- v0.89-dev-2
-
 0.88 (2024-05-19)
 
     Bug Fixes

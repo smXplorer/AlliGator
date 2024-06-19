@@ -10,6 +10,32 @@ AlliGator Version History
 Note: version numbers followed by an asterisk have not been released.
 
 -----------------
+0.89 (2024-06-19)
+-----------------
+
+
+    - Bug Fixes
+        + Fixed occasionally erroneous Phasor Graph references-connecting segment (and limited it to the actual segment)
+        + Fixed bug in Remove Phasor from Plot in Phasor Graph
+        + Fixed "Save Phasor Calibration (Single/Map/Series)" dialog not opening the last used folder
+        + Fixed discrepancy between calibration phasor frequency and current frequency not being flagged as a problem
+        + Fixed some lagging image contrast update when moving the image histogram cursors
+        + Fixed broken installation process (when checking whether a new version is available online)
+        + Fixed formatting of some complex string outputs
+        + Fixed a bug where the "Rectangle Image Profile" calculation was performed even when the Image Profile Window was not open, slowing down AlliGator when a full-frame ROI  or any large rectangle ROI was drawn
+
+    - New Features
+        + Added option to use background-subtracted intensity in Image Profile Window (Menu->Image Intensity->Background-subtracted). The background value subtracted (per pixel) is that defined in Settings>>Fluorescence Decay>>Decay Pre-Processing>>Constant Background
+        + Added option to use the Current Frequency or one of its harmonics in the "Single-Exponential Phasor Locus (SEPL)>>Phasor" Tab of the Settings window
+        + Now eliminates NaN phasors from Parameter 2 vs Parameter 1 computation in Phasor Graph
+        + Added Fit Termination criteria output to the Notebook
+        + Added Residual Sum of Squares (RSS), Akaike Information Criterion (AIC), Bayesian Information Criterion (BIC) to Notebook output
+        + Implemented MLE fit based on Ted Laurence's modification of the Levenberg-Marquardt algorithm
+        + Added Fit Method Benchmark Tool to Analysis>>Tools menu
+
+- v0.89-dev-2
+
+-----------------
 0.88 (2024-05-19)
 -----------------
 

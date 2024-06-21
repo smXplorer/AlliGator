@@ -9,6 +9,11 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+0.89.1 (2024-06-21)
+    Bug Fix
+        Fixed bug preventing phasor SDV (due to shot noise) to be calculated when one of the decay points is equal to zero
+        Fixed display bug where a nonzero SDV was shown for some phasor-derived quantities even when none was calculated
+
 0.89 (2024-06-19)
 
     Bug Fixes

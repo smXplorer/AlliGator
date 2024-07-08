@@ -9,8 +9,18 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+0.90 (2024-07-08)
+    Bug Fixes
+        Fixed (rotated) rectangle Image Profile bug that would return NaN if a single pixel's value was NaN
+        Fixed missing Settings File path in Save/Load Settings Notebook message
+        Fixed bogus limit to 1 for Settings>>Fluorescence Decay>>Fit Options: Max Decay Percentile (now 100)
+        Fixed missing Image Information in Source Image
+
+    New Features
+        Added Option to split a Box Image Profile into two halves in Image Profile Window (Box Profile type: Full Width / Half Width)
+
 0.89.1 (2024-06-21)
-    Bug Fix
+    Bug Fixes
         Fixed bug preventing phasor SDV (due to shot noise) to be calculated when one of the decay points is equal to zero
         Fixed display bug where a nonzero SDV was shown for some phasor-derived quantities even when none was calculated
 

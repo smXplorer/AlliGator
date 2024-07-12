@@ -10,6 +10,21 @@ AlliGator Version History
 Note: version numbers followed by an asterisk have not been released.
 
 -----------------
+0.91 (2024-07-12)
+-----------------
+
+    - Bug Fixes
+        + Fixed erroneous formatting of fitted offset error, resulting in a shift of all subsequent error values
+        + Fixed interpretation of fraction f1 in Fit Method Benchmark as an exponential component amplitude fraction
+        + Fixed bug in 1D Histogram that resulted in histogram deformation in periodic exponential decay histograms
+
+    - New Features
+        + Added "Select Decay" index in Fit Method Benchmark's Decay, Fit & Residual Plots tab
+        + Implemented no IRF fitting using a pseudo-Dirac IRF (single-bin gate) in AlliGator and Fit Method Benchmark fitting
+        + Changed 0-weight interpolation approach to set a minimum of 1 (could cause problems when long streches of zero-values were encountered in a decay)
+        + Minor Fit Method Benchmark GUI tweaks
+
+-----------------
 0.90 (2024-07-08)
 -----------------
 

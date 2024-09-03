@@ -22,7 +22,7 @@ Dataset Series are discussed in more details in the :ref:`time-series-analysis`
 pages of the manual.
 
 Introduction
-------------
+++++++++++++
 
 AlliGator was initially developed to analyze data from time-gated ICCD cameras. 
 Since this type of data is similar to that of FLI performed with time-correlated 
@@ -34,7 +34,7 @@ Data in time-gated or binned decay analysis generally consists in a sequence of
 
 Each image in the sequence represents a "gate" image. A gate is an image acquired 
 with the image intensifier (or more generally detector) rapidly turned on at a 
-specific time after the laser pulse (gate offset ``t_i``, where ``i`` is the 
+specific time after the laser pulse (or gate offset ``t_i``, where ``i`` is the 
 gate image index in the sequence) and rapidly turned off after a constant 
 duration (gate duration or width ``W``). This processs is repeated over many 
 laser periods and the data accumulated in the gate image. Subsequently, the 
@@ -52,16 +52,151 @@ adjacent bins (of duration ``W`` equal to their separation ``dt``). This data in
 turn can be looked at as a sequence of "binned decay" images, which are similar 
 to the gate images discussed previously in the case of gated acquisition.
 
+In the following, we will use the "time-gated" terminology, but everything will 
+apply to TCSPC data, replacing "gate" by "bin", "gate width" by "bin width", 
+"gate step" by "bin width" and "gate offset" by "bin location".
+
 Although each gate image takes some time to acquire, and a sequence of images 
 takes about ``G`` times this amount, we will refer to such a sequence of images 
 as a "time point".
 
 AlliGator allows the analysis of individual time points, or a series of such 
-time points (i.e. a time series). Loading a single time-point or a time-series 
+time points (*i.e.* a time series). Loading a single time-point or a time-series 
 is done differently as described next.
 
+Data Information
+++++++++++++++++
+
+While many types of analysis will load the whole time-gated dataset, it can be 
+useful to only load part of it. A number of options are available to facilitate 
+such a partial loading. They can be found in the **Data Information** panel of 
+the **Settings** window:
+
+.. image:: images/AlliGator-Settings-Data-Information.png
+   :align: center
+
+Some of these options can be modified after the file has been loaded (for 
+instance the *Gate Width* or *Laser Period* parameters can be corrected if 
+they look incorrect). Some others will only take effect upon (re)loading the 
+file. They are indicated by an asterisk in parenthesis following the parameter 
+name.
+Note that sthe *Natural Frequency* parameter is not nodifiable and is provided 
+as information derived from the other parameters.
+
+Gate Characteristics
+--------------------
+
+1. *Gate Width*: the gate width (or duration) parameter is currently only used 
+to calculate the Single-Exponential Phasor Loci (SEPL) curve for square-gated 
+decays. For TCSPC data it is equal to the bin size.
+
+2. *Gate Separation*: The gate separation specifies the temporal offset 
+between gates. For TCSPC data, it is equal to the bin size.
+
+3. *Gate Step* (*): The default calculation mode is to use all gates to build 
+the decay plot. However, it is possible to use only one every *n* gates, by 
+entering *n* as the value of Gate Step. The effect of choosing to use n = 8 
+(rather than the default n = 1) is shown on the figure below.
+
+.. image:: images/AlliGator-Decay-Step-Effect.png
+   :align: center
+
+4. *Gate Image Exposure*: this parameter is not currently used by AlliGator.
+
+5. *Gate Image Integration*: this parameter is not currently used by AlliGator.
+
+Define Gates to Skip or Keep
+----------------------------
+
+Two different options are available to reject gates: either by defining which 
+gates to *skip* or, on the contrary, which one to *keep*. This is selected via 
+the *Skip/Keep* radio buttons.
+
+Accordingly, either one of the following set of parameters will show up to the 
+right of the radio buttons:
+
+1. *Gates to Skip* (*): Define how many gates to discard at the beginning 
+(*from Start*) and at the end of the gate sequence (*from End*).
+
+For instance, if *from Start* = s,  *from End* = e, and each dataset is 
+comprised of n gates, only gates s+1, s+2, ..., n - e-1, n - e will be retained 
+in the analysis (where the first gate index is 1 and the last gate index is n. 
+This can be useful if decay inspection reveals some unphysical "feature" at the 
+beginning or end of the decay.
+
+2. *Gates to Keep* (*): Define the index of the *First* and *Last* gate to keep, 
+all other gates being ingored.
+
+For instance, if *First* = f,  *Last* = l, and each dataset is 
+comprised of n gates, only gates f, f+1, ..., l -1, l will be retained 
+in the analysis (where the first gate index is 1 and the last gate index is n. 
+This can be useful if decay inspection reveals some unphysical "feature" at the 
+beginning or end of the decay.
+
+Channel Selection
+-----------------
+
+In the case of datasets comprised of multiple channels (such as those from a 
+dual-gate detector such as SwissSPAD 3), it is necessary to specify which 
+channel to *display* (all channels are loaded in memory). This is done by either 
+selecting the *Channel Name* (default: ``Gate``) or one of the few available 
+*Channel Arithmetic* (default: ``None``).
+
+Note that the former can be modified with immediate effect on the displayed gate 
+image shown in the *Source Image* of the main AlliGator window, but the latter 
+requires reloading the dataset to take effect.
+
+Laser & SYNC periods
+--------------------
+
+This information may not always be available in a file (depending on 
+manufacturer) or potentially erroneous (as it often the case when this is not a 
+piece of information acquired from the hardware but user-entered). As it is 
+used in various places in AlliGator, it is important to make sure it is correct.
+
+The *Natural Frequency* is equal to 1/D, where D is the time span of decays in 
+the loaded dataset. This frequency will be larger than 1/T, where T is the 
+laser period, if decays don't span the whole laser period. The reason it is 
+called *Natural Frequency* is because it is the recommended phasor frequency to 
+use to analyze this type of truncated decays (see 
+https://doi.org/10.1016/j.bpj.2020.11.1693 for details).
+
+Data Pile-up Correction (*)
+---------------------------
+
+When the *Pile-up Correction* checkbox is checked, this option uses the pixel 
+well capacity (*Max Value*), which, in SwissSPAD data, corresponds to the 
+number of 1-bit frames accumulated for each gate image. The correction applied 
+takes into account the possibility of pile-up (missed counts) at high count 
+rates, according to:
+
+S = - N log(1 - R/N)
+
+where R is the raw count, N is the pixel well capacity parameter and S the 
+corrected count value.
+
+Scaling Factor
+--------------
+
+The scaling factor multiplies all gate values by a constant factor (default: 1).
+
+Background File Subtraction (*)
+-------------------------------
+
+1. The *Background File Subtraction* checkbox activates subtraction, 
+gate-by-gate, the data from a background dataset file, whose path need to be 
+specified in the *Background Dataset* control.
+
+2. *Background File Pile-up Correction*: like the dataset from which it is 
+subtracted, the background dataset can be coorected for pile-up. This is 
+controlled by the *Pile-up Correction* checkbox and the *Max Value* parameter 
+beneath the *Background Dataset* control
+
+3. The background *Scaling Factor* parameter (default: 1) can be used to 
+adjust the amount of background file correction to apply.
+
 single HDF5 FLI Dataset
------------------------
++++++++++++++++++++++++
 
 A simple open source file format in which to save a variety of different files 
 from different sources was introduced with version 0.16 of AlliGator. It 
@@ -74,18 +209,18 @@ background-subtracted or pile-up corrected datasets will be comprised of
 non-integer pixel values). Finally, the format includes a lot of metadata which 
 helps with traceability and reproducibility.
 
-Details about the format itself can be found in the :ref:`alligator-hdf5-file-format` 
-page of this manual.
+Details about the format itself can be found in the 
+:ref:`alligator-hdf5-file-format` page of this manual.
 
-To load an AlliGator HDF5 file, use ``File:Load:FLI Dataset:HDF5 File`` (:kbd:`Ctrl+O`). 
-The path to the dataset will be displayed in the title bar. Alternatively, drag 
-and drop the file in the Source Image panel.
+To load an AlliGator HDF5 file, use ``File:Load:FLI Dataset:HDF5 File`` 
+(:kbd:`Ctrl+O`). The path to the dataset will be displayed in the title bar. 
+Alternatively, drag and drop the file in the Source Image panel.
 
 To save a dataset (irrespective of its source), use ``File:Save:Dataset:Save as 
 HDF5 FLI Dataset`` (:kbd:`Ctrl+Shift+S`).
 
 Folder of Gate Images
----------------------
++++++++++++++++++++++
 
 To load a single time point (consisting of `G` gate images), use 
 ``File:Load:FLI Dataset:Gate Image Folder`` (:kbd:`Ctrl+L`). The path to the 
@@ -101,6 +236,7 @@ To save a FLI dataset as a series of gate images, use
 of individual gate images, as well as define additional parameters:
 
 .. image:: images/Gate-Image-Naming-Dialog.png
+   :align: center
 
 Next, a file dialog window allows selecting where to save the gate images.
 
@@ -109,14 +245,14 @@ include additional information needed to reload (or at least make sense of)
 these images in an auxiliary readable file.
 
 Becker & Hickl .sdt FLI Dataset
--------------------------------
++++++++++++++++++++++++++++++++
 
 To load an histogrammed .sdt file saved by a Becker & Hickl FLIM electronics, 
 use ``File:Load:FLI Dataset:.sdt File``. The path to the dataset will be 
 displayed in the title bar.
 
 PicoQuant .ptu Dataset
-----------------------
+++++++++++++++++++++++
 
 PicoQuant FLIM electronics can save data as individual photon time stamps with 
 spatial information (.ptu files) or as histogrammed data (.bin files).
@@ -128,13 +264,13 @@ which to sort out the photons via the ``# Gates`` parameter defined in the
 **Settings:Data Information** panel [*]_.
 
 PicoQuant .bin Dataset
-----------------------
+++++++++++++++++++++++
 
 To load a .bin file, use ``File:Load:FLI Dataset:.bin File``. The path to the 
 dataset will be displayed in the title bar.
 
 Reloading a Dataset
--------------------
++++++++++++++++++++
 
 To update a dataset after modifying an option requiring reloading the dataset 
 to take effect (such as for instance the number of gates), use 
@@ -144,7 +280,7 @@ Loading & Saving FLI Dataset Series
 ===================================
 
 Folder of HDF5, .sdt or .ptu Datasets
--------------------------------------
++++++++++++++++++++++++++++++++++++++
 
 In order to load a time series (or any succession of datasets to be analyzed as 
 a series) consisting of individual FLI datasets of a single kind (.hdf5, .sdt, 
@@ -158,7 +294,7 @@ File Series loading option can be invoked with the :kbd:`Ctrl+Shift+O` keyboard
 shortcut.
 
 Folder of Folders of Gate Images
---------------------------------
+++++++++++++++++++++++++++++++++
 
 In order to load a time series (or any succession of datasets to be analyzed as 
 a series) consisting of gate images, use ``File:Load:FLI Dataset Series:Gate 
@@ -237,7 +373,7 @@ An example of image folder is shown below:
 
 
 Notes
------
++++++
 
 .. [*] It is recommended to check that decays computed with the user-specified 
    ``# Gates`` parameter do not suffer from binning artefacts. If that is the 

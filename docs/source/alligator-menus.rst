@@ -99,6 +99,7 @@ Scripts Menu
   for the current ROIs
 + ``Square Gated IRF Characteristics Map``: fits ROI decays with one of the 
   following gate models:
+  
     * ``Square Pulse``
     * ``Logistic Square Pulse``
     * ``Tilted Logistic Square Pulse``

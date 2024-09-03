@@ -36,7 +36,7 @@ Notations
 Throughout this manual, individual objects (`controls`, which the user can 
 interact with, or `indicators`, which only display information to the user) 
 will be referred to by their name (which shows up in the **Context Help** 
-window when opened) higlighted in *italics*.
+window when opened) highlighted in *italics*.
 
 Windows or panels will be indicated by their title indicated in **bold**. 
 For windows with subpanels, the notation **Window:Subpanel** will be used.

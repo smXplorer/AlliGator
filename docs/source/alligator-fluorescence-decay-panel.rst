@@ -58,36 +58,41 @@ described in specific pages.
   phasor calculation) and are discussed in the
   :ref:`Decay Preprocessing <alligator-decay-preprocessing>` page.
 
-.. image:: images/Decay-Graph-Custom-Menu-Process-Plot(s).png
+.. image:: images/Decay-Graph-Custom-Menu-Process-Plots.png
    :align: center
    
 The remaining ones are:
 
-+ ``Fit``:
++ ``Fit``: this menu currently contains a single item, whose functionality is 
+  described in the :ref:`Decay Fitting <alligator-decay-fitting>` page.
 
 .. image:: images/Decay-Graph-Fit-Menu.png
    :align: center
    
-+ ``IRF/Reference Plot``:
++ ``IRF/Reference Plot``: this menu allows defining the reference decay used 
+  either for temporal shifting or reconvolution of fit models when using the 
+  NLSF analysis features of AlliGator.
 
 .. image:: images/Decay-Graph-IRF-Reference-Decay-Menu.png
    :align: center
    
-+ ``Export Decay to Phasor Graph``:
++ ``Export Decay to Phasor Graph``: this menu allows computing the phasor of 
+  a pre-computed decay and export the resulting phasor to the *Phasor Graph*. 
+  This is for instance useful to export a computed or recorded IRF to the 
+  *Phasor Graph* in order to subsequently use it as a calibration phasor.
 
 .. image:: images/Decay-Graph-Export-Plot-Phasor.png
    :align: center
 
-+ Various Python Plugins:
-
-  Python plugins menu items and submenus will appear at the bottom of the Decay 
-  Graph menu. Their names and content will depend on each installation, but 
-  typically will contain some examples or default functionalities.
++ Various Python Plugins: Python plugins menu items and submenus will appear at 
+  the bottom of the *Decay Graph* contextual menu. Their names and content will 
+  depend on each installation, but typically will contain some examples or 
+  default functionalities.
 
 .. rubric:: Notes
 
 .. [#f1] When the user-selected ROI has a name (that is, when it has been stored 
-   in the :ref:`alligator-source-image-roi-manager`), this name is appended to 
-   the image name, instead of the generic ``Plot`` suffix. A number is 
-   autimatically added to the decay name if the same ROI is used several times, 
-   or unnamed ROIs are used.
+   in the :ref:`alligator-source-image-roi-manager-window`), this name is 
+   appended to the image name, instead of the generic ``Plot`` suffix. A number 
+   is autimatically added to the decay name if the same ROI is used several 
+   times, or unnamed ROIs are used.

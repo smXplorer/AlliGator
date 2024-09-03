@@ -9,6 +9,36 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+0.92 (2024-09-03)
+
+    Bug Fixes
+        Fixed error handling in fit output calculations
+        Fixed missing "Export User-Defined Quantity Map as ASCII" in Source Image context menu
+        Fixed missing Phasor Calibration Series calibration of existing phasor plots
+        Fixed a bug where the phasor ratio references were not properly reordered according to the user request
+        Fixed show/Hide UC bug in the Phasor Plot whereby the ticks and labels were not hidden
+        Fixed bug in computation of the phasor ratio plot/average lifetime plot in a Series phasor analysis
+        Fixed behavior of "Compute Phasor Ratio at Mouse Location"
+        Changed default upper percentile of sliced Mean and SDV to 100 (was 0 but interpreted as 100-x, which was confusing)
+        Fixed missing Calibration Lifetime contextual menu in Phasor Graph panel
+        Fixed Min Decay Percentile input range (was [0, 1] instead of [0, 100])
+        
+    New Features
+        Updated fit output to add information on IRF type and offset step (when relevant)
+        Removed "Period" from Decay Simulation Parameters (using the parameter defined in Fit Options)
+        Added warning when the user asks to display simulated decays, fits & residuals in Fit Method Benchmark, if the number of simulations is > 1,000
+        Added Sequential ROIs Dataset Series Phasor and NLSF Analysis scripts
+        Added constraint on the Baseline parameter of Decay Simulation Parameters so that the # Photon Counts is >=0 and Baseline x # Bins is an integer
+        Now simulating background as a random number of counts with Baseline = average background counts/bin. The # Counts parameter in Fit Simulation Parameters is equal to the sum of these background counts and photon counts
+        Added # Bins in Fit Simulation Parameters in Fit Method Benchmark
+        Cosmetic changes to Settings>>Data Information
+        Made Convolution with IRF, Cumulative Function, Rebin Plot functions in Decay Graph multiplot compatible
+        Moved "Define Intensity Corrections" to Analysis>>FLI Dataset Series menu
+        Changed behavior of Calibration Series to use the last calibration in case the calibration series is not long enough
+        Modified function of "Set Reference n to Current Phase Lifetime" (Current Phasor context menu) to actually do what it says rather than doing the same as "Set Reference n to User-defined Lifetime" (Phasor Graph context menu)
+        Added loaded references information to Notebook
+        Now checking that loaded references have been defined with the same phasor frequency as tModified Phasor Ratio calculation (at Mouse Location) to actually perform this task (not using the last computed phasor)
+        
 0.91 (2024-07-12)
     Bug Fixes
         Fixed erroneous formatting of fitted offset error, resulting in a shift of all subsequent error values
@@ -18,7 +48,7 @@ Note: version numbers followed by an asterisk have not been released.
     New Features
         Added "Select Decay" index in Fit Method Benchmark's Decay, Fit & Residual Plots tab
         Implemented no IRF fitting using a pseudo-Dirac IRF (single-bin gate) in AlliGator and Fit Method Benchmark fitting
-        Changed 0-weight interpolation approach to set a minimum of 1 (could cause problems when long streches of zero-values were encountered in a decay)
+        Changed 0-weight interpolation approach to set a minimum of 1 (could cause problems when long stretches of zero-values were encountered in a decay)
         Minor Fit Method Benchmark GUI tweaks
         
 0.90 (2024-07-08)
@@ -250,6 +280,7 @@ Note: version numbers followed by an asterisk have not been released.
         Added "Move Flattened Series to Folder Series" menu item in File>>Load>>FLI Dataset Series menu (to deal with SPAD512 flattened output)
         Moved Analysis>>FLI Dataset>>Multiple ROI Analysis>>Multi-ROI Single-Pixel NLSF and Phasor Analysis to Scripts menu
         Removed "Pixel-to-Pixel" calibration option (now automatically applied when a full image calibration map is stored)
+
 0.77 (2023-12-16)
 
     Bug Fixes

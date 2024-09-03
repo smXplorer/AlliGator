@@ -17,18 +17,18 @@ import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
-html_theme = 'sphinx_rtd_theme'
+#html_theme = 'sphinx_rtd_theme'
 
 if not on_rtd:
     import sphinx_rtd_theme
     #html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
     #html_theme_path = ["_themes", ]
-    #html_theme = 'nature'
+    html_theme = 'nature'
     #html_theme = 'insipid'
     #html_theme = 'sphinxdoc'
     #html_theme = 'pylons'
     #html_theme_path = pylons_sphinx_themes.get_html_themes_path()
-    html_theme = 'sphinx_rtd_theme'
+    #html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -47,10 +47,10 @@ copyright = '2015-2024, Regents of the University of California'
 author = 'X. Michalet'
 
 # The short X.Y version.
-version = '0.91'
+version = '0.92'
 
 # The full version, including alpha/beta/rc tags
-release = '0.91'
+release = '0.92'
 
 
 # -- General configuration ---------------------------------------------------

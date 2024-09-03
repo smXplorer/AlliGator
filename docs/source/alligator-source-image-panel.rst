@@ -16,27 +16,27 @@ description can be found in the following sections.
 
 The Source Image displays different data depending on the value of the 
 *Time Gate Slide*, on the value of the 
-*Time Point Slide* (if it is shown) and the *Displayed Image* selector.
+*Time Series Slide* (if it is shown) and the *Displayed Image* selector.
 
 Gate Image Slide
 ----------------
 
-Note: The *Gate Image Slide* is not shown when ``Sum of All Gates`` is selected
+Note: The *Gate Image Slide* is only shown when ``Single Gate`` is selected
 in the *Displayed Image* selector.
 
 Located above the image area, the *Gate Image Slide* allows browsing the 
 individual images comprising the time gated (or binned) dataset. The numeric 
-control on the right shows the number of gates in the dataset. Moving the slider
-to the left will show early gates, while late gates can be seen by moving the
-slider to the right. Alternatively, type in the desired gate index in the 
-numeric control on the right.
+control on the right shows the currently selected gate and can be used to jump 
+to a specific gate. Moving the slider to the left will show early gates, while 
+late gates can be seen by moving the slider to the right.
 
 When moving the slider, the displayed image's contrast might be inappropriate 
 (overly dark or bright image). In this case, switch to the 
 **Image Histogram** panel and make sure of the following:
 
-- The *Use Image Histogram for Contrast* checkbox is checked in the 
-  **Settings:Source Image** panel.
+- The *Use Image Histogram for Contrast* checkbox is checked (this checkbox is 
+  synchronized with the corresponding checkbox in **Settings:Source Image** 
+  panel).
 
 - The *Min* and *Max* cursors are visible and encompass most of the histogram
   bins, as shown below:
@@ -44,25 +44,26 @@ When moving the slider, the displayed image's contrast might be inappropriate
 .. image:: images/AlliGator-Image-Histogram.png
    :width: 100%
    
-Alternatively, uncheck the *Use Image Histogram for Contrast* checkbox in the 
-**Settings:Source Image** panel. This will automatically adjust the contrast 
-of each gate.
+- Alternatively, check the *Auto-Adjust Contrast* checkbox. This will 
+  automatically adjust the contrast of the displayed image by moving the *Min* 
+  and *Max* cursors to locations corresponding to the *Lower Percentile* and 
+  *Upper Percentile* values indicated on the top right corner.
 
-Time Point Slide
-----------------
+Time Series Slide
+-----------------
 
-Note: The *Time Point Slide* is only visible when a Dataset Series is opened.
+Note: The *Time Series Slide* is only visible when a Dataset Series is opened.
 
 Located to the right of the image area, this slide allows navigating through 
-the different time points in a time series. Move the slider to the bottom to 
-access the early time points, or to the top to access the late time points. 
-Alternatively, type in the desired *Time Point* index in the numeric control at
-the bottom.
+the different datasets in a series. Move the slider to the bottom to 
+access the first datasets, or to the top to access the last ones 
+Alternatively, type in the desired *Time Series* index in the numeric control at
+the bottom of the slide.
 
 The name of the current dataset folder is indicated in the *Current Data* text
 box at the bottom of the panel (in the example shown above, the folder name is
-``M9_H00_19``). If a corresponding .set file is present, the time stamp 
-information for this dataset will be displayed next to its name (``839 s`` in 
+``M9_H00_35``). If a corresponding .set file is present, the time stamp 
+information for this dataset will be displayed next to its name (``1526 s`` in 
 the example shown above).
 
 While the slider is moved, the image is not updated. Image update only occurs
@@ -117,7 +118,7 @@ The cluster of objects on the top-left corner of the image are used to:
 | 5 | .. image:: images/IB4.png |Overlay mode used for the Source Image.                     |
 |   | .. image:: images/IB4b.png|                                                            |
 +---+---------------------------+------------------------------------------------------------+ 
-| 6 | .. image:: images/IB5.png |Cycle through Image ROIs.                                   | 
+| 6 | .. image:: images/IB6.png |Add Scale Bar Overlay                                       | 
 +---+---------------------------+------------------------------------------------------------+
 
 + *Delete source image overlay*: Right-click the button to specify the button's 
@@ -155,7 +156,8 @@ The cluster of objects on the top-left corner of the image are used to:
     to their location in the *Phasor Plot* with respect to multiple vertices 
     defined in the **Phasor Map Color Picker** window. See the 
     :ref:`phasor-color-map` page of  the manual for details.
-
++ *Scale Bar Overlay*: displays a scale bar on the image according to options 
+  defined in **Settings:Source Image:Scale Bar Options**.
 
 Use ROI as Search Area
 ----------------------
@@ -189,9 +191,10 @@ types of ROIs are supported (from top to bottom):
 + Freehand Curve (opened)
 + Freehand Curve (closed)
 + Oval
-
-+ The color box below the Tool Palette defines the overlay color in which the
-  ROI is drawn.
++ The *ROI Color* box below the Color Palette defines the overlay color in 
+  which the ROI is drawn.
++ The ``< >`` pair of buttons below the *ROI Color* box allows cycling through 
+  the stored ROIs (visible in the **Source Image ROI Manager**).
 
 Note that not all ROIs can be used for all types of analyses.
 
@@ -261,6 +264,13 @@ The *Source Image* context menu is shown below:
   performed, exports the phasor ratio values at each pixel as a 2-dimensional 
   matrix in an ASCII file (with File Dialog).
 - ``Export Phase Lifetime Map as ASCII``: when a phasor ratio analysis has been
+  performed, exports the average lifetime computed from the phasor ratio at each
+  pixel as a 2-dimensional matrix in an ASCII file (with File Dialog).
+- ``Export User-Defined Quantity Map as ASCII``: when a user-defined quantity 
+  has been specified in the **Settings:Phasor Plot** panel *Phasor Ratio/ 
+  Average Lifetime Style Options* and computed by overlaysing this quantity on 
+  the *Source Image*, exports the user-defined quantity map as an ASCII file 
+  (with dialog).
   performed, exports the average lifetime computed from the phasor ratio at each
   pixel as a 2-dimensional matrix in an ASCII file (with File Dialog).
 - ``Palette``: this submenu is described in detail in the 

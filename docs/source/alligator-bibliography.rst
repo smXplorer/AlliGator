@@ -3,11 +3,18 @@
 Bibliography
 ============
 
-The following publications have used AlliGator. Please consider citing one of 
-them if you are using AlliGator in your work. Most of them are available for 
+The following publications have used AlliGator or discuss topics of relevance 
+(see article summary to see which category they belong to).
+Please consider citing one of them if you are using AlliGator in your work. 
+Most of them are available for 
 free on `PubMed <https://pubmed.ncbi.nlm.nih.gov/?term=xavier+michalet>`_ or 
 `eScholarship <https://escholarship.org/search?q=xavier%20michalet&searchType=
 eScholarship&searchUnitType=series>`_
+
+.. [Col2012] Ryan A. Colyer, Oswald H.W. Siegmund, Anton S. Tremsin, John V. 
+ Vallerga, Shimon Weiss, Xavier Michalet, "Phasor imaging with a widefield 
+ photon-counting detector, Journal of Biomedical Optics 17 (2012) 016008.
+ `doi:10.1117/1.JBO.17.1.016008 <https://doi.org/doi:10.1117/1.JBO.17.1.016008>`_
 
 .. [Chen2018] Sez‐Jade Chen, Nattawut Sinsuebphon, Alena Rudkouskaya, Margarida
  Barroso, Xavier Intes, Xavier Michalet, "In vitro and in vivo phasor analysis
@@ -15,7 +22,7 @@ eScholarship&searchUnitType=series>`_
  and time‐gated imaging", Journal of Biophotonics 12  (2019) e201800185,
  `doi:10.1002/jbio.201800185 <https://doi.org/10.1002/jbio.201800185>`_
 
-First introduction of AlliGator (developed for this work) and demonstration of 
+First introduction of AlliGator (developed for that work) and demonstration of 
 in vivo FRET analysis of time-gated data acquired with an ICCD camera. The 
 supporting information of this article contains an extensive tutorial on phasor 
 analysis, as well as details on data analysis with AlliGator, which can be 
@@ -93,3 +100,7 @@ This proceedings paper uses AlliGator to analyze data acquires with SwissSPAD3,
 which has shorter gates than the laser period and shows that phasor analysis 
 works equally well for most cases, although the photon budget decreases for 
 short gates.
+
+.. [DR2024] D. Roy, X. Michalet, E. W. Miller, S. Weiss, "Towards optical 
+ measurements of membrane potential values in Bacillus subtilis using 
+ fluorescence lifetime", bioRxiv, `doi: 10.1101/2024.06.13.598880 <https://doi.org/10.1101/2024.06.13.598880>`

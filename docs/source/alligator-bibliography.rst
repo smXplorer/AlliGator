@@ -16,6 +16,9 @@ eScholarship&searchUnitType=series>`_
  photon-counting detector, Journal of Biomedical Optics 17 (2012) 016008.
  `doi:10.1117/1.JBO.17.1.016008 <https://doi.org/doi:10.1117/1.JBO.17.1.016008>`_
 
+Discusses the phasor ratio concept (borrowed from the Gratton lab, where Ryan 
+Colyer came from) as well as some basic phasor properties.
+
 .. [Chen2018] Sez‐Jade Chen, Nattawut Sinsuebphon, Alena Rudkouskaya, Margarida
  Barroso, Xavier Intes, Xavier Michalet, "In vitro and in vivo phasor analysis
  of stoichiometry and pharmacokinetics using short‐lifetime near‐infrared dyes
@@ -103,4 +106,7 @@ short gates.
 
 .. [DR2024] D. Roy, X. Michalet, E. W. Miller, S. Weiss, "Towards optical 
  measurements of membrane potential values in Bacillus subtilis using 
- fluorescence lifetime", bioRxiv, `doi: 10.1101/2024.06.13.598880 <https://doi.org/10.1101/2024.06.13.598880>`
+ fluorescence lifetime", bioRxiv, `doi: 10.1101/2024.06.13.598880 <https://doi.org/10.1101/2024.06.13.598880>`_
+
+Uses AlliGator for FLIM data analysis, focusing on amplitude-averaged lifetime 
+computed from phasor analysis. 

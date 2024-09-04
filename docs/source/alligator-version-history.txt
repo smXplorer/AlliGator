@@ -37,7 +37,8 @@ Note: version numbers followed by an asterisk have not been released.
         Changed behavior of Calibration Series to use the last calibration in case the calibration series is not long enough
         Modified function of "Set Reference n to Current Phase Lifetime" (Current Phasor context menu) to actually do what it says rather than doing the same as "Set Reference n to User-defined Lifetime" (Phasor Graph context menu)
         Added loaded references information to Notebook
-        Now checking that loaded references have been defined with the same phasor frequency as tModified Phasor Ratio calculation (at Mouse Location) to actually perform this task (not using the last computed phasor)
+        Now checking that loaded references have been defined with the same phasor frequency as  the current one. If not, offers to load them corrected for the new phasor fequency.
+        Modified Phasor Ratio calculation (at Mouse Location) to actually perform this task (not using the last computed phasor)
         
 0.91 (2024-07-12)
     Bug Fixes

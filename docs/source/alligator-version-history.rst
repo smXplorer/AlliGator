@@ -10,6 +10,28 @@ AlliGator Version History
 Note: version numbers followed by an asterisk have not been released.
 
 -----------------
+0.93 (2024-10-04)
+-----------------
+
+
+    - Bug Fixes
+        + Fixed erroneous second-half parameter profile output in Image Profile
+        + Fixed bogus Half-Width Profile output when the ROI type is not a rectangle
+        + Fixed missing Legacy Fit output
+        + Fixed handling of weights for normalized decays (0-values are placed by minimum non-zero value)
+        + Fixed refresh button behavior in Image Profile window
+        + Fixed bug in intensity-weighted calculation in Image Profile Window
+
+    - New Features
+        + Added optional slice average abscissa and standard deviation plots to the sliced data analysis
+        + Added optional experimental IRF in Fit Method Benchmark
+        + Changed weighting scheme to better account for pre-fit normalization
+        + Changed Fit Parameter outputs to refer to fit with convolution to a normalized IRF (integral of 1)
+        + Added Options>>Use normalized IRF for convolution menu item in Local Decay Window to account for old Decay Fit Parameter Map data saved with the previous convention (Fit Parameters outputs were referring to the actual IRF, which could have an integral vastly different from 1)
+        + Rescaled Chi^2, RMSE, RSS, AIC and BIC outputs to take into account the internal decay normalization (to an integral of 1 for the new approach, to a peak of 1 for the legacy approach) before fitting
+        + Improved computation of offset error estimation
+
+-----------------
 0.92 (2024-09-03)
 -----------------
 
@@ -40,7 +62,7 @@ Note: version numbers followed by an asterisk have not been released.
         + Changed behavior of Calibration Series to use the last calibration in case the calibration series is not long enough
         + Modified function of "Set Reference n to Current Phase Lifetime" (Current Phasor context menu) to actually do what it says rather than doing the same as "Set Reference n to User-defined Lifetime" (Phasor Graph context menu)
         + Added loaded references information to Notebook
-        + Now checking that loaded references have been defined with the same phasor frequency as  the current one. If not, offers to load them corrected for the new phasor fequency.
+        + Now checking that loaded references have been defined with the same phasor frequency as  the current one. If not, offers to load them corrected for the new phasor frequency.
         + Modified Phasor Ratio calculation (at Mouse Location) to actually perform this task (not using the last computed phasor)
 
 -----------------

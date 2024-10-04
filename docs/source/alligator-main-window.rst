@@ -24,9 +24,9 @@ The following panels are available:
 - :ref:`alligator-intensity-time-trace-panel`
 - :ref:`alligator-phasor-plot-panel`
 - :ref:`alligator-phasor-graph-panel`
-- :ref:`alligator-phasor-ratio-analysis-panel`
-- :ref:`alligator-lifetime-and-other-parameters-analysis-panel`
-- :ref:`alligator-decay-fit-parameter-map-panel`
+- :ref:`alligator-phasor-ratio-panel`
+- :ref:`alligator-lifetime-and-other-parameters-panel`
+- :ref:`alligator-decay-fit-parameters-map-panel`
 
 Each panel's function is discussed in a separate manual page (see the table of 
 content on the left).

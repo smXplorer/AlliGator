@@ -17,7 +17,7 @@ discussed next.
 The main object is the map itself, which represents a color-coded image of the 
 selected parameter (*Decay Fit Parameter* pull-down list at the top right), 
 based on the selected *Decay Fit Parameter Map Color Scale* (next to the map) 
-and the values of the *DEcay Fit Parameter Map Display Range* (to the right of 
+and the values of the *Decay Fit Parameter Map Display Range* (to the right of 
 the color scale).
 
 The *Max Parameter* and *Min Parameter* indicators provide the actual total 

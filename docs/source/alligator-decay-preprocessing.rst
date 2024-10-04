@@ -280,15 +280,15 @@ Other decay processing functions are accessible via the *Decay Graph* context
 menu. Most of the context menu items are self-explanatory. Items are grouped in 
 different categories of functions:
 
-    Edit plot
-    Visibility (and plot style) functions
-    Deletion functions
-    Save functions
-    Load Plot(s)
-    Plot processing
-    Fitting functions
-    IRF-related functions
-    Graph copy/export/visibility functions
+  - Edit plot
+  - Visibility (and plot style) functions
+  - Deletion functions
+  - Save functions
+  - Load Plot(s)
+  - Plot processing
+  - Fitting functions
+  - IRF-related functions
+  - Graph copy/export/visibility functions
 
 As for all graphs in AlliGator, the checkboxes in front of plot names in the 
 graph legend have a dual function. When checked, the plot is visible AND 
@@ -302,7 +302,7 @@ WHOLE graph (including hidden plots), right-click in the graph region.
 Selected plots (or individual plots) can be directly saved in an ASCII file 
 using the ``Save`` functions of the above menu.
 
-- Edit Plot
+  - Edit Plot
 
 This menu item opens the plot on which the user has right-clicked in the 
 **Plot Editor**, where several basic operations can be performed.
@@ -314,125 +314,125 @@ Editor.
 **Plot Editor** functionalities are described in the corresponding page of the 
 manual.
 
-- Process Plot(s) submenu
+  - Process Plot(s) submenu
 
-  .. image:: images/Decay-Graph-Custom-Menu-Process-Plots.png
-     :align: center
+    .. image:: images/Decay-Graph-Custom-Menu-Process-Plots.png
+       :align: center
 
-  + ``Average Selected Plots``: This function does what it says and creates an 
-    additional plot.
+    + ``Average Selected Plots``: This function does what it says and creates an 
+      additional plot.
 
-  + ``Process Single Plot``: This option does not do anything on a plot, but is 
-    used to instruct AlliGator to operate on a single plot. The checkmark in 
-    front of it indicates that this is the current mode of operation for all 
-    the functions in the menu followed by the *(+)* suffix.
+    + ``Process Single Plot``: This option does not do anything on a plot, but is 
+      used to instruct AlliGator to operate on a single plot. The checkmark in 
+      front of it indicates that this is the current mode of operation for all 
+      the functions in the menu followed by the *(+)* suffix.
 
-  + ``Process Selected Plot``: This option does not do anything on any plot, 
-    but is used to instruct AlliGator to operate on all selected plots. The 
-    checkmark in front of it indicates that this is the current mode of 
-    operation for all the functions in the menu followed by the *(+)* suffix.
+    + ``Process Selected Plot``: This option does not do anything on any plot, 
+      but is used to instruct AlliGator to operate on all selected plots. The 
+      checkmark in front of it indicates that this is the current mode of 
+      operation for all the functions in the menu followed by the *(+)* suffix.
 
-  + ``Process All Plots``: This option does not do anything on any plot, but is 
-    used to instruct AlliGator to operate on all plots. The checkmark in 
-    front of it indicates that this is the current mode of operation for all 
-    the functions in the menu followed by the *(+)* suffix.
+    + ``Process All Plots``: This option does not do anything on any plot, but is 
+      used to instruct AlliGator to operate on all plots. The checkmark in 
+      front of it indicates that this is the current mode of operation for all 
+      the functions in the menu followed by the *(+)* suffix.
 
-  + ``1-Normalization``: applies the 1-Normalization operation described in 
-    section 2 above.
+    + ``1-Normalization``: applies the 1-Normalization operation described in 
+      section 2 above.
 
-  + ``[0-1]-Normaliztion``: applies the [0-1]-Normalization operation described 
-    in section 2 above.
+    + ``[0-1]-Normaliztion``: applies the [0-1]-Normalization operation described 
+      in section 2 above.
 
-  + ``Convolution with IRF``: convolves the selected plot(s) with the stored 
-    reference decay.
+    + ``Convolution with IRF``: convolves the selected plot(s) with the stored 
+      reference decay.
 
-  + ``Cumulative Function``: computes the cumulative function of the selected 
-    plot(s).
+    + ``Cumulative Function``: computes the cumulative function of the selected 
+      plot(s).
 
-  + ``Denoising``: processes the selected plot(s) with the Wavelet Analysis 
-    Denoise algorithm (see https://www.ni.com/docs/en-US/bundle/labview-advanced-signal-processing-toolkit-api-ref/page/lvwavelettk/wa_de_noise.html for details) using the *Wavelength Analysis Options* 
-    defined in the **Settings:Fluorescence Decay:Advanced Analysis** panel.
+    + ``Denoising``: processes the selected plot(s) with the Wavelet Analysis 
+      Denoise algorithm (see https://www.ni.com/docs/en-US/bundle/labview-advanced-signal-processing-toolkit-api-ref/page/lvwavelettk/wa_de_noise.html for details) using the *Wavelength Analysis Options* 
+      defined in the **Settings:Fluorescence Decay:Advanced Analysis** panel.
 
-  + ``Extrapolation:Extrapolate Plot``: extrapolates the selected plot(s) as 
-    described in section 8 above.
+    + ``Extrapolation:Extrapolate Plot``: extrapolates the selected plot(s) as 
+      described in section 8 above.
 
-  + ``Folding``: folds the selected plot(s) as described in section 4 above.
+    + ``Folding``: folds the selected plot(s) as described in section 4 above.
 
-  + ``Rebinning``: changes the bin size of the selected plot(s). A dialog 
-    window opens up to define the new (larger) bin size.
+    + ``Rebinning``: changes the bin size of the selected plot(s). A dialog 
+      window opens up to define the new (larger) bin size.
 
-  + ``Shifting``: shifts the selected plot(s) as described in section 7 above.
+    + ``Shifting``: shifts the selected plot(s) as described in section 7 above.
 
-  + ``Smoothing``: smoothes the selected plot(s) using cubic splines as 
-    described in section 6 above.
+    + ``Smoothing``: smoothes the selected plot(s) using cubic splines as 
+      described in section 6 above.
 
-  + ``Straightening``: straightens the selected plot(s) as described in section 
-    3 above.
+    + ``Straightening``: straightens the selected plot(s) as described in section 
+      3 above.
 
-  + ``Tail Smoothing``: smoothes the tail (part of the decay past the maximum) 
-    of the selected plot(s) using cubic splines as described in section 6 above.
+    + ``Tail Smoothing``: smoothes the tail (part of the decay past the maximum) 
+      of the selected plot(s) using cubic splines as described in section 6 above.
 
-  + ``Plot Math``: this sub-menu comprises the following functions:
+    + ``Plot Math``: this sub-menu comprises the following functions:
 
-    * ``y -> f(y) Transform``: selecting this item opens up a dialog window to enter an 
-      algebraic formula:
+      * ``y -> f(y) Transform``: selecting this item opens up a dialog window to enter an 
+        algebraic formula:
 
-      .. image:: images/Simple-Plot-Formula-Dialog.png
-         :align: center
-
-
-     The corresponding amplitude values of the plot (y) will be modified and 
-     replaced by y' as defined by the formula (assuming that the syntax is 
-     correct. For a list of supported functions, please refer to this LabVIEW 
-     help page).
-
-    * ``(x, y) >> (f, g)(x, y) Transform``: selecting this item  opens up a 
-      dialog window to enter an algebraic formula:
-
-      .. image:: images/Complex-Plot-Formula-Dialog.png
-         :align: center
+        .. image:: images/Simple-Plot-Formula-Dialog.png
+           :align: center
 
 
-      The corresponding time (x) and amplitude (y) values of the plot will be 
-      modified and replaced by (x', y') as defined by the formulas (assuming 
-      that the syntax is correct. For a list of supported functions, please 
-      refer to this LabVIEW help page).
+       The corresponding amplitude values of the plot (y) will be modified and 
+       replaced by y' as defined by the formula (assuming that the syntax is 
+       correct. For a list of supported functions, please refer to this LabVIEW 
+       help page).
 
-    * ``Two-Plot Algebra``: selecting this item  opens up a dialog window to 
-      enter an algebraic formula:
+      * ``(x, y) >> (f, g)(x, y) Transform``: selecting this item  opens up a 
+        dialog window to enter an algebraic formula:
 
-      .. image:: images/Multiplot-Math-Dialog.png
-         :align: center
+        .. image:: images/Complex-Plot-Formula-Dialog.png
+           :align: center
 
-      The two plots to be processed can be selected in the *Plot 1* and 
-      *Plot 2* pull-down lists. Only plots with identical abscissa (time axis) 
-      can be processed. The *Same abcissa array* LED turns green when this is 
-      the case.
 
-      The first plot is referred to as ``y1`` and the second plot as ``y2`` in 
-      the *Plot Formula* box below, in which the desired formula can be entered.
+        The corresponding time (x) and amplitude (y) values of the plot will be 
+        modified and replaced by (x', y') as defined by the formulas (assuming 
+        that the syntax is correct. For a list of supported functions, please 
+        refer to this LabVIEW help page).
 
-      Example of valid Plot formula (where y1 represents the value of plot 1 at 
-      a given abscissa  and y2 the value of the second plot at the same abscissa):
+      * ``Two-Plot Algebra``: selecting this item  opens up a dialog window to 
+        enter an algebraic formula:
 
-                     2*y1 - 3*y2/((1.5e(-3))+y2)
+        .. image:: images/Multiplot-Math-Dialog.png
+           :align: center
 
-      The list of supported functions can be found at https://www.ni.com/docs/en-US/bundle/labview/page/lvhowto/formula_node_and_express.html
+        The two plots to be processed can be selected in the *Plot 1* and 
+        *Plot 2* pull-down lists. Only plots with identical abscissa (time axis) 
+        can be processed. The *Same abcissa array* LED turns green when this is 
+        the case.
 
-      The list of supported operators can be found at: https://www.ni.com/docs/en-US/bundle/labview/page/lvhowto/precedence_of_operators_in.html
+        The first plot is referred to as ``y1`` and the second plot as ``y2`` in 
+        the *Plot Formula* box below, in which the desired formula can be entered.
 
-      Note that the exponentiation operator is '**', *i.e.* the square of y is 
-      noted ``y**2``.
+        Example of valid Plot formula (where y1 represents the value of plot 1 at 
+        a given abscissa  and y2 the value of the second plot at the same abscissa):
 
-    * ``Plot Histogram``: selecting this item opens up a dialog window allowing 
-      specifying options to define the way the histogram of the selected decay's 
-      values is computed. The computed histogram is displayed in the separate 
-      **Histogram Window**.
-    
-    * ``Compute Average Lifetime``: computes the average lifetime of the 
-      selected decay using *Average Lifetime Options* defined in the 
-      **Fluorescence Decay:Advanced Analysis** panel of the **Settings** 
-      window.
-      
-      .. image:: images/AlliGator-Average-Lifetime-Options.png
-         :align: center
+                       2*y1 - 3*y2/((1.5e(-3))+y2)
+
+        The list of supported functions can be found at https://www.ni.com/docs/en-US/bundle/labview/page/lvhowto/formula_node_and_express.html
+
+        The list of supported operators can be found at: https://www.ni.com/docs/en-US/bundle/labview/page/lvhowto/precedence_of_operators_in.html
+
+        Note that the exponentiation operator is '**', *i.e.* the square of y is 
+        noted ``y**2``.
+
+      * ``Plot Histogram``: selecting this item opens up a dialog window allowing 
+        specifying options to define the way the histogram of the selected decay's 
+        values is computed. The computed histogram is displayed in the separate 
+        **Histogram Window**.
+
+      * ``Compute Average Lifetime``: computes the average lifetime of the 
+        selected decay using *Average Lifetime Options* defined in the 
+        **Fluorescence Decay:Advanced Analysis** panel of the **Settings** 
+        window.
+
+        .. image:: images/AlliGator-Average-Lifetime-Options.png
+           :align: center

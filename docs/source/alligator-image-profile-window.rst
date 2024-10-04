@@ -31,7 +31,7 @@ This is because the **Image Profile** window also shows the values of other para
 
 If these parameters are not available (for instance because no phasor plot has been calculated, or because no phasor ratio references have been defined, or no decay fit parameter map has been computed), their value will appear as zero.
 
-Note that the decay fit parameter shown last in the *Plot Legend* is that defined in the ::ref:`alligator-decay-fit-parameter-map-panel`. Changing it there will update the corresponding profile plot in the *Image Profile* graph.
+Note that the decay fit parameter shown last in the *Plot Legend* is that defined in the :ref:`alligator-decay-fit-parameters-map-panel`. Changing it there will update the corresponding profile plot in the *Image Profile* graph.
 
 The *Image Profile* graph is updated each time the contour is modified in the image. For instance, it is possible to grab one end of the line shown at the top and observe the corresponding live update of the graph.
 

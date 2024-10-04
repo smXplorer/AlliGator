@@ -2,6 +2,7 @@
 
 Lifetime & Other Parameters Panel
 =================================
+(last updated: 2024-09-09)
 
 Introduction
 ++++++++++++
@@ -89,7 +90,9 @@ described next:
 .. image:: images/AlliGator-Sliced-Mean-SDV-Options-Dialog.png
    :align: center
 
-The slices are defined by:
+.
+
+  The slices are defined by:
 
    + the first and last values of the abscissa considered (``Axis Start`` and 
      ``Axis Stop``), which can be manually entered or automatically set to the 
@@ -100,3 +103,9 @@ The slices are defined by:
    + within the data in each slice, the data ``Lower`` and ``Upper Percentile`` 
      retained in the analysis (allowing to reject outliers).
    + the minimum number of data points in a slice to compute the mean and SDV.
+  
+  If the *Output Abscissa Statistics Plots* checkbox is unchecked, the only 
+  plots created are the *Mean*, *Standard Deviation* and *# Points* plots as a 
+  function of the slice *Start* value. If the checkbox is checked off, two 
+  additional plots are output: the *Mean* and *Standard Deviation* of the 
+  abscissa values in the slice.

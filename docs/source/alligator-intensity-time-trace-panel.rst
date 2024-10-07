@@ -8,7 +8,6 @@ which each new fluorescence decay integral (corrected for background if
 selected in the **Settings:Fluorescence Decay:Decay Pre-Processing** panel) is 
 added as a single point.
 
-
 .. image:: images/AlliGator-Intensity-Time-Trace-Raw.png
    :align: center
 
@@ -33,16 +32,15 @@ The following controls are available:
   box at the bottom of the panel), it is possible to compute and represent a 
   corrected intensity time trace:
 
-
 .. image:: images/AlliGator-Intensity-Time-Trace-Corrected.png
    :align: center
 
 The ``Analysis:FLI Dataset Series:Define Intensity Corrections`` menu item 
 provides a simple user interface to create such an *Intensity Correction File*. 
-See the corresponding manual page for details.
+See the corresponding :ref:`graph-object` manual page for details.
 
 Individual plots can be deleted or the whole graph cleared at once using the 
 graph's right-click context menu. Note that the right-click menu changes 
 depending from which part of the graph it is invoked (plot area, chart legend, 
 plot style, cursor legend, scale legend, etc.), as discussed in the 
-:ref:`graph-object` manual reference page.
+:ref:`intensity-corrections-definition` manual reference page.

@@ -574,6 +574,8 @@ Next, it is possible to use one of the different functions discussed above to
 obtain less subjectives reference locations (*e.g.* ``Use Selected Plots Major 
 Axis/UC Intersection``).
 
+.. _shot-noise-limited-SDV:
+
 Shot Noise-limited Standard Deviations
 ++++++++++++++++++++++++++++++++++++++
 
@@ -602,6 +604,11 @@ Phasor* option, allows chosing between using the experimental phasor (and its
 derived quantities) or the average of the replicas' phasors, when checked off. 
 In practice, there appears to be very little difference between the two in most 
 cases.
+
+For further information, check the :ref:`alligator-shot-noise-influence-average-lifetime` 
+page of the manual.
+
+.. _exporting-additional-phasor-quantities:
 
 Exporting Additional Phasor Quantities
 ++++++++++++++++++++++++++++++++++++++

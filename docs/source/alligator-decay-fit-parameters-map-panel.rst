@@ -70,31 +70,33 @@ The *Decay Fit Parameters Map* context menu is shown below and discussed next.
   as separate ASCII matrices of parameter values.
 + *Export ROI Data as ASCII*: This function exports all parameters for the 
   selected ROI. Note however that there are 3 different use cases:
-    - If the the ROIs used to compute the map are all single-pixels and the 
-      selected ROI is a single-pixel ROI, this will export a single row of 
-      parameters, preceded by the ROI index and pixel coordinates.
-    - If the the ROIs used to compute the map are not all single-pixels and the 
-      selected ROI is one of the original ROIs used for computing the map, 
-      this will export a single row of parameters, preceded by the ROI index 
-      and pixel coordinates.
-    - Possibly more interesting, if the the ROIs used to compute the map are 
-      all single-pixels but the selected ROI is not, this will export multiple 
-      rows of parameters corresponding to the different pixels in that ROI, 
-      preceded by the ROI index and pixel coordinates.
+
+  - If the the ROIs used to compute the map are all single-pixels and the 
+    selected ROI is a single-pixel ROI, this will export a single row of 
+    parameters, preceded by the ROI index and pixel coordinates.
+  - If the the ROIs used to compute the map are not all single-pixels and the 
+    selected ROI is one of the original ROIs used for computing the map, 
+    this will export a single row of parameters, preceded by the ROI index 
+    and pixel coordinates.
+  - Possibly more interesting, if the the ROIs used to compute the map are 
+    all single-pixels but the selected ROI is not, this will export multiple 
+    rows of parameters corresponding to the different pixels in that ROI, 
+    preceded by the ROI index and pixel coordinates.
 + *Export All ROIs Data as ASCII*: Similarly to the previous one, this function 
   exports all parameters for all the ROIs. Again, tthere are 3 different use 
   cases:
-    - If the the ROIs used to compute the map are all single-pixels and the 
-      ROIs are also single-pixel ROIs, this will export multiple rows of 
-      parameters, preceded by the ROI index and pixel coordinates.
-    - If the the ROIs used to compute the map are not all single-pixels and the 
-      ROIs are the original ROIs used for computing the map, this will export 
-      multiple rows of parameters, preceded by the ROI index and pixel 
-      coordinates.
-    - Possibly more interesting, if the the ROIs used to compute the map are 
-      all single-pixels but the ROIs used are not, this will export multiple 
-      rows of parameters corresponding to the different pixels in these ROI, 
-      preceded by the ROI index and pixel coordinates.
+
+  - If the the ROIs used to compute the map are all single-pixels and the 
+    ROIs are also single-pixel ROIs, this will export multiple rows of 
+    parameters, preceded by the ROI index and pixel coordinates.
+  - If the the ROIs used to compute the map are not all single-pixels and the 
+    ROIs are the original ROIs used for computing the map, this will export 
+    multiple rows of parameters, preceded by the ROI index and pixel 
+    coordinates.
+  - Possibly more interesting, if the the ROIs used to compute the map are 
+    all single-pixels but the ROIs used are not, this will export multiple 
+    rows of parameters corresponding to the different pixels in these ROI, 
+    preceded by the ROI index and pixel coordinates.
 + *Save IRFs & Fit Data*: This saves all the data generated during the fit, as 
   well as the IRFs in a HDF5 file. It is the recommended quick way to save the 
   outcome of an analysis and allows revisiting the results with the help of the 

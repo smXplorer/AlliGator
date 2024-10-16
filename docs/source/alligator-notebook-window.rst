@@ -71,9 +71,9 @@ long way in ensuring reproducibility.
 .. rubric:: Notes
 
 .. [#f1] If it the ``C:\Users\Username\AppData\Local\Temp`` folder is 
-invisible, select the *View* tab at the top of any Windows Explorer window 
-and, after selecting any folder, click on *Options* (to the right of the 
-toolbar). This will open a **Folder Options** window. Select the *View* tab and 
-click the ``Show hidden files, folders and drives`` radio button under ``Hidden 
-files and folders``. Click *Apply to Folders* at the top of the tab (to make 
-this option general).
+   invisible, select the *View* tab at the top of any Windows Explorer window 
+   and, after selecting any folder, click on *Options* (to the right of the 
+   toolbar). This will open a **Folder Options** window. Select the *View* tab 
+   and click the ``Show hidden files, folders and drives`` radio button under 
+   ``Hidden files and folders``. Click *Apply to Folders* at the top of the tab 
+   (to make this option general).

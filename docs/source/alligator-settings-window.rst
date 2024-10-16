@@ -4,8 +4,10 @@ Settings Window
 ===============
 
 
-The **Settings** window can be opened via the ``Windows:Show Settings`` menu item (:kbd:`Ctrl+E` shortcut) in the main AlliGator window.
-It is comprised of multiple pages and sub-pages, which can be accessed via the top page selector:
+The **Settings** window can be opened via the ``Windows:Show Settings`` menu 
+item (:kbd:`Ctrl+E` shortcut) in the main AlliGator window.
+It is comprised of multiple pages and sub-pages, which can be accessed via the 
+top page selector:
 
 .. image:: images/AlliGator-Settings-Pages.png
    :align: center
@@ -161,6 +163,14 @@ Lifetime Analysis
 -----------------
 
 .. image:: images/AlliGator-Settings-Lifetime-Analysis.png
+   :align: center
+
+.. _alligator-settings-plugins:
+
+Plugins
+-------
+
+.. image:: images/AlliGator-Settings-Plugins.png
    :align: center
 
 .. _alligator-settings-miscellaneous:

@@ -22,10 +22,7 @@ You can click on links embedded in the manual's pages to jump directly to a
 topic of interest, or select a topic in the Table of Content.
 
 Access the Table of Content by clicking on the  Table of Contents link on the 
-left or on the AlliGator x.xx.x documentation link at the top.
-
-Alternatively, you can simply follow the page hierarchy by clicking on the 
-``Previous`` or ``Next`` buttons at the bottom of  each page.
+left or on the AlliGator link at the top left.
 
 It is of course also possible to use the ``Go back`` or ``Go forward`` buttons 
 of the browser to step through the browsing history.

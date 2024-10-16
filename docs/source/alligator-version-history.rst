@@ -10,6 +10,30 @@ AlliGator Version History
 Note: version numbers followed by an asterisk have not been released.
 
 -----------------
+0.94 (2024-10-15)
+-----------------
+
+
+    - Bug Fixes
+        + Fixed refresh button behavior in Image Profile window
+        + Fixed bug in intensity-weighted calculation in Image Profile Window
+        + Fixed Image Profile ROI median overlay
+        + Fixed Color Picker in Image Profile Window
+        + Fixed graph legend update in Image Profile Window
+        + Fixed Local Decay Window graph caption and plot association to Y scale, broken since the last update to the Image Profile Window
+        + Fixed potential source of infinite loop in Sliced Mean & SDV function
+
+    - New Features
+        + Modified Image Profile window menu and added "Overlay ROI in Source Image" menu item
+        + Added Overlay of selected ROI in Image Profile (including median axis) and indicatin of L x W in the Intensity Plot(s) name(s)
+        + Added SDV of Phase Lifetime, Average lifetime/Phasor Ratio, Fitted Parameter in Image Profile
+        + Added mention of whether or not an IRF is used in Ft Method Benchmark output
+        + Added option to show/hide Python Plugin Examples
+        + Added Phasor Frequency to Load Reference(s) Notebook output
+        + Various UI improvements in the Image Profile window
+        + Minor cosmetic updates
+
+-----------------
 0.93 (2024-10-04)
 -----------------
 

@@ -12,7 +12,7 @@
 #
 import os
 import sys
-#import pylons_sphinx_themes
+import pylons_sphinx_themes
 
 # sys.path.insert(0, os.path.abspath('.'))
 
@@ -47,10 +47,10 @@ copyright = '2015-2024, Regents of the University of California'
 author = 'X. Michalet'
 
 # The short X.Y version.
-version = '0.93'
+version = '0.94'
 
 # The full version, including alpha/beta/rc tags
-release = '0.93'
+release = '0.94'
 
 
 # -- General configuration ---------------------------------------------------

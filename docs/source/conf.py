@@ -12,7 +12,7 @@
 #
 import os
 import sys
-import pylons_sphinx_themes
+#import pylons_sphinx_themes
 
 # sys.path.insert(0, os.path.abspath('.'))
 

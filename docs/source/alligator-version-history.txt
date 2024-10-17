@@ -9,6 +9,12 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+0.94.1 (2024-10-17)
+
+    New Features
+        Added option to Send ROI Description to Notebook in Image Profile window
+        Image Profile window menu updates
+
 0.94 (2024-10-15)
 
     Bug Fixes

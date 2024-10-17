@@ -10,7 +10,7 @@ Contents
 --------
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 4
    
    alligator-manual-how-to
    alligator-overview

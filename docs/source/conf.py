@@ -50,7 +50,7 @@ author = 'X. Michalet'
 version = '0.94'
 
 # The full version, including alpha/beta/rc tags
-release = '0.94'
+release = '0.94.1'
 
 
 # -- General configuration ---------------------------------------------------

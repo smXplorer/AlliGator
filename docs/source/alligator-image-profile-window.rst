@@ -118,12 +118,12 @@ The ``Phase Lifetime`` and ``Offset`` plots have been hidden, leaving the
 dashed line). The standard deviation (SDV) plot shown here is the 
 ``Intensity-weighted`` one, one of two possible choices:
 
-- ``Intensity-weighted``
-- ``Unweighted (classic)``
 
-accessible via the ``Options:Standard Deviation`` menu. The recommended option 
-is the first one, which calculated the SDV of a quantity *f* along each 
-perpendicular segment (containing *W* pixels) according to:
+   .. image:: images/Source-Image-Profile-Window-SDV-Menu.png
+      :align: center
+
+The recommended option is the second one, which calculated the SDV of a quantity 
+*f* along each perpendicular segment (containing *W* pixels) according to:
 
 .. math::
 
@@ -135,3 +135,32 @@ estimate of the dispersion of the quantity of interest for the brightest pixels.
 
 The classic SDV uses the stadard formula, and will generally be larger, as it 
 could mix background pixels (with a different lifetime) with pixels of interest.
+
+Split Profile
++++++++++++++
+
+When using a rectangle ROI, it is possible to divide each perpendicular segment 
+into two equal parts and display the average quantity for each of the two 
+halves in the *Image Profile* graph, by selecting the ``Option:Rectange Profile 
+Type:Half Width`` option (``Ctrl+2``).
+
+.. image:: images/Source-Image-Profile-Window-Rectangle-Profile-Type-Menu.png
+   :align: center
+
+Using the example shown abover, the resulting split profiles look as shown here:
+
+
+.. image:: images/Source-Image-Profile-Averaged-Split-Profile-Example.png
+   :align: center
+
+Current ROI Definition
+++++++++++++++++++++++
+
+In order to keep a record of the ROI whose profile is being displayed, it is 
+possible to export its definition to the Notebook using the ``Actions:Export 
+ROI Description to Notebook`` (Vtrl+N)menu item:
+
+
+.. image:: images/Source-Image-Profile-Actions-Menu.png
+   :align: center
+

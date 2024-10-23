@@ -18,7 +18,7 @@ For example, using a ``Line`` tool on the following image:
    :align: center
 
 and opening the **Image Profile** window (``Window:Image Profile``) results in 
-the following intensity profile:
+the following intensity profiles:
 
 .. image:: images/Source-Image-Profile-Window.png
    :width: 100%
@@ -50,10 +50,9 @@ The *Image Profile* graph is updated each time the contour is modified in the
 image. For instance, it is possible to grab one end of the line shown at the 
 top and observe the corresponding live update of the graph.
 
-It can also be refreshd by clicking on *Refresh Graph* button at the bottom 
-left or using the ``Actions:Refresh Profiles`` (``Ctrl+R``) menu item. Finally, 
-it is updated when one of the display options is modified in the 
-``Options`` menu of the **Image Profile** window.
+It can also be refreshed  using the ``Actions:Refresh Profiles`` (``Ctrl+R``) 
+menu item. Finally, it is updated when one of the display options is modified 
+in the ``Options`` menu of the **Image Profile** window.
 
 The ``Intensity`` shown in the graph corresponds to the image selected in the 
 *Source Image*. In particular, if ``Single Gate`` is selected as the 
@@ -61,14 +60,17 @@ The ``Intensity`` shown in the graph corresponds to the image selected in the
 be represented.
 
 Two alternative options accessible via the ``Options:Image Intensity`` menu of 
-the **Image Profile** window are availabe:
+the **Image Profile** window are available:
 
 .. image:: images/Source-Image-Profile-Window-Image-Intensity-Menu.png
    :align: center
 
-In general, the ``Displayed Image``'s intensity is represented, but it is also 
-possible to select the ``Raw Data`` option in case the displayed image has been 
-clipped due the location of the *Min* and *Max* cursors in  the *Image 
+The last three options are only active when using a closed rectangle contour 
+and are discussed later in this section.
+
+In general, the ``Raw Data``'s intensity is represented, but it is also 
+possible to select the ``Displayed Image`` option in case the displayed image 
+has been clipped due the location of the *Min* and *Max* cursors in  the *Image 
 Histogram* in the corresponding AlliGator panel.
 
 The ``Background-subtracted`` option displays the raw intensity minus *G* x 
@@ -93,15 +95,15 @@ intensities along the perpendicular segment.
 
 As usual, if a pixel has been rejected from analysis, it will be excluded from 
 this averaging. If all pixels along a segment are rejected, that average is not 
-computed and replaceed by *NaN*, which does not appear in the displayed profile.
+computed and replaced by *NaN*, which does not appear in the displayed profile.
 
 An example is shown below:
 
 .. image:: images/Source-Image-Profile-Averaged-Profile-ROI.png
    :align: center
 
-Notice the green and red rectangles and the thick green center line. The red 
-(sometimes bizzarely deformed) rectangle is the one drawn by LabVIEW. The green 
+Notice the green and red rectangles and the thick green center line. The green 
+(sometimes bizzarely deformed) rectangle is the one drawn by LabVIEW. The red 
 rectangle is that overlayed by AlliGator to provide the actual ROI used in the 
 analysis. To show it, use the ``Actions:Overlay ROI in Source Image`` (Ctrl+O) 
 **Source Image Profile** window menu item. The color of that overlayed 
@@ -114,9 +116,9 @@ The  corresponding **Source Image Profile** window is shown below:
       :align: center
 
 The ``Phase Lifetime`` and ``Offset`` plots have been hidden, leaving the 
-``Intensity`` and ``<tau>_a`` plots, as well as the ``<tau>_a SDV`` plot 
-dashed line). The standard deviation (SDV) plot shown here is the 
-``Intensity-weighted`` one, one of two possible choices:
+``Intensity`` and ``<tau>_a`` plots, as well as the ``Intensity SDV`` and 
+``<tau>_a SDV`` plot (dashed line). The ``<tau>_a SDV`` standard deviation 
+plot shown here is the ``Intensity-weighted`` one, one of two possible choices:
 
 
    .. image:: images/Source-Image-Profile-Window-SDV-Menu.png
@@ -135,6 +137,21 @@ estimate of the dispersion of the quantity of interest for the brightest pixels.
 
 The classic SDV uses the stadard formula, and will generally be larger, as it 
 could mix background pixels (with a different lifetime) with pixels of interest.
+
+Average Intensity Profile
++++++++++++++++++++++++++
+
+The intensity data is treated differently than the other quantities, in the 
+sense that in addition to the standard average and intensity-weighted average, 
+the ``Integrated Intensity" can be represented instead. These options can be 
+selected in the ``Option:Image Intensity`` menu shown above:
+
+  - ``Integrated Intensity``: shows the sum of pixel intensities along the 
+    perpendicular segment (red segment in the schematic above). In that case, 
+    the calculated SDV is zero.
+  - ``Average Intensity``: the standard average and dSDV are represented.
+  - ``Intensity-weighted Average Intensity``: the formula above is used with 
+    :math:`f_i = I_i`.
 
 Split Profile
 +++++++++++++

@@ -26,6 +26,13 @@ Accessory windows
   + :ref:`alligator-histogram-window`
   + :ref:`alligator-plot-editor-window`
   
+Analysis Tools windows
+----------------------
+
+  + :ref:`intensity-corrections-definition`
+  + :ref:`alligator-fit-method-benchmark`
+  + :ref:`alligator-shot-noise-influence-average-lifetime`
+  
 AlliGator's main window's functionalities are described in the AlliGator manual
 pages.
 The Source Image ROI Manager Window is discussed in 

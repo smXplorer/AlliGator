@@ -47,10 +47,10 @@ copyright = '2015-2024, Regents of the University of California'
 author = 'X. Michalet'
 
 # The short X.Y version.
-version = '0.94'
+version = '0.95'
 
 # The full version, including alpha/beta/rc tags
-release = '0.94.1'
+release = '0.95'
 
 
 # -- General configuration ---------------------------------------------------

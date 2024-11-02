@@ -68,7 +68,9 @@ The remaining ones are:
 
 .. image:: images/Decay-Graph-Fit-Menu.png
    :align: center
-   
+
+.. _irf-reference-plot:
+
 + ``IRF/Reference Plot``: this menu allows defining the reference decay used 
   either for temporal shifting or reconvolution of fit models when using the 
   NLSF analysis features of AlliGator.

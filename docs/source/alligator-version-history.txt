@@ -9,12 +9,26 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+0.96 (2024-11-01)
+
+    Bug Fixes
+        Fixed longstanding slow shutdown
+        Fixed IRF-less decay fit and multiple ROIs NLSF analysis
+
+    New Features
+        Added loading/Saving Formula Aliases.txt as part of the initialization/shutdown sequences
+        Added Phasor Reference lifetimes (tau_1 and tau_2) to the list of reserved variables in Formula Aliases
+        Added "Clear IRF/Reference Plot" and "Clear Local IRFs" menu items to Decay Graph
+        Added support to no IRF Multiple ROIs NLSF analysis
+        Added support to no IRF Multiple ROIs Average Lifetime analysis
+        In Multiple-ROIs Single-Pixel Analysis scripts, defining a ROI file is no longer necessary if no IRF processing step is used.
+
 0.95 (2024-10-23)
 
     New Features
         Added support for dual-channel datasets in Python plugins
         Added Mask image to AlliGator Python Plugin FLI Data typedef structure
-        Added average instensity (and SDV) options in Image Profile window
+        Added average intensity (and SDV) options in Image Profile window
         Cosmetic changes to Image Profile Window
 
     Bug Fix

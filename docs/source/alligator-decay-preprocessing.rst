@@ -1,8 +1,5 @@
 .. _alligator-decay-preprocessing:
 
-
-.. From AlliGator:Fluorescence Decay
-
 Decay (Pre-) Processing
 =======================
 
@@ -232,6 +229,7 @@ shifts in the *Lifetime & Other Parameters* Graph of the **Lifetime & Other
 Parameters** panel, using the ``Plot Decay Shifts`` context menu item in that 
 graph.
 
+.. _alligator-decay-extrapolation:
 
 Decay Extrapolation
 +++++++++++++++++++

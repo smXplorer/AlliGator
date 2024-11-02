@@ -1,7 +1,5 @@
 .. _alligator-decay-fitting:
 
-.. From AlliGator:Fluorescence Decay Fitting
-
 Fluorescence Decay Fitting
 ==========================
 
@@ -20,6 +18,32 @@ of fluorescence decay fitting:
   individual plots (one plot per parameter, one point per dataset).
 
 These different capabilities are described next.
+
+Instrument Response Function (IRF)
+++++++++++++++++++++++++++++++++++
+
+As discussed in the :ref:`IRF/Reference Plot <irf-reference-plot>` section of 
+the :ref:`alligator-fluorescence-decay-panel` manual page, any decay in the 
+*Decay Graph* of the **Fluorescence Decay Panel** can be used as IRF. However,
+it is best to have an IRF that covers the full laser period.
+
+This can be artifically obtained starting with a *truncated* decay (*i.e.* a 
+decay only partially covering the laser period) using single-exponential 
+extrapolation (see :reF:`Decay Extrapolation <alligator-decay-extrapolation>` 
+section in the :ref:`alligator-decay-preprocessing` manual page).
+
+The fit model convolution with the IRF is compared with an interpolation of the 
+decay at the time points over which the IRF is defined. This means that a 
+fited decay does not need to cover the whole laser period.
+
+In the case of multiple ROIs fits, this single IRF decay can be replaced by 
+multiple ROIs IRFs as discussed below in the corresponding section on multiple 
+ROIs fit.
+
+Finally, it is worth mentioning that an IRF *is not needed* for NLSF analysis. 
+If none is defined (or if none is desired, use the ``IRF/Reference Plot:Clear 
+IRF/Reference Plot`` menu item of the *Decay Graph* to clear it), the 
+convolution step is skipped during fitting.
 
 Single decay fit
 ++++++++++++++++
@@ -169,8 +193,8 @@ Fit Options
   + Min & Max Lambda: Min & Max value of the LM algorithm's scale parameter.
 
 - *Use Local IRF*: When a set of local IRFs has been defined, instructs the 
-  software to use it (rather than a common IRF defined by the user in the Decay 
-  Graph)
+  software to use it (rather than a common IRF defined by the user in the 
+  *Decay Graph*)
 
 - *Offset Resolution*: The (IRF time) offset parameter is treated separately from 
   the other model parameters. All values in the specified constraint range are 
@@ -281,12 +305,65 @@ definitions provided `here <https://www.ni.com/en/shop/labview/overview-of-curve
 If the fit fails, an error message will be displayed instead (and not plot 
 added to the *Decay Graph*).
 
+.. _multiple-rois-decay-fit:
+
+Multiple ROIs decay fit
++++++++++++++++++++++++
+
+It is possible to fit multiple ROI decays in a single action, using one of the 
+options of the ``Analysis:FLI Dataset:Multiple ROIs Analysis`` menu.
+The analysis applies to all ROIs currently defined in the *Source Image*.
+
+.. image:: images/AlliGator-Multiple-ROIs-Analysis-Menu.png
+   :align: center
+
+There are two possible options:
+
+- Use a common IRF for all ROIs: the IRF needs to be defined using the 
+  ``IRF/Reference Plot:Use as IRF/Reference Plot`` menu item of the *Decay Graph*.
+- Use one IRF per ROI: this option is recommended when the IRF is known to 
+  depend on the location in the field of view, as is for instance the case with 
+  wide-field detector.
+  
+Additionally, there are two types of outputs depending on the chosen *mode* 
+(verbose or silent, or equivalently slow or fast), which are described next.
+
+- ``Slow`` mode: In this case, each ROI decay is output to the *Decay Graph*, as 
+  well as the corresponding fit and residuals curves. The fit results are sent 
+  to the Notebook, as would happen in an   interactive approach. While this 
+  provides visual feedback to the user, it is memory and time consuming, and is 
+  not the recommended approach in general.
+
+- ``Fast`` mode: In that case, no decay, fit or residuals curve is output in the 
+  *Decay Graph*, and instead the results are stored internally and optionally 
+  exported as an ASCII file if the *Export Tabulated Results* checkbox in the 
+  **Settings:Fluorescence Decay:Fit Parameters** panel is checked off. The 
+  fit results can be examined using the **Decay Fit Parameter Map** panel, as 
+  discussed in the :ref:`corresponding manual page <alligator-decay-fit-parameters-map-panel>`.
+
+In order to define individual IRFs, use the ``Analysis:FLI Dataset:Multiple ROIS 
+Analysis:All ROIs IRF Extraction`` menu. An IRF dataset file is needed for that 
+purpose, which is usually obtained with a solution of quenched fluorescent dye, 
+laser reflection off of a piece of paper or mirror, or any other method resulting 
+in data reporting on the temporal profile of the setup's response.
+
+There are again two options (slow and fast) to extract these IRFs, the first 
+one outputting the different IRFs to the *Decay Graph*, while the latter stores 
+data internally. One of AlliGator's status LEDs at the bottom right of the 
+window turns on when local IRFs have been defined.
+
+In order to take advantage of these stored IRFs, it is necessary to check off 
+the *Use Local IRF* checkbox in the **Settings:Fluorescence Decay:Fit Options**
+panel.
+
 Series decay fit
 ++++++++++++++++
 
 In the case of a series analysis, decay fits can be performed by choosing 
-``FLI Dataset Series:Series NLSF Analysis:Current ROI`` or :Sequential ROIs`` 
-in the Analysis menu.
+``FLI Dataset Series:Series NLSF Analysis:Current ROI`` or ``Sequential ROIs`` 
+in the ``Analysis:FLI Dataset Series`` menu. The two options work as follows:
+
+- ``Current ROI``: the current 
 
 Each time point decay is fitted separately, following the protocol described 
 previously for single decays. In addition, it is possible to generate one or 

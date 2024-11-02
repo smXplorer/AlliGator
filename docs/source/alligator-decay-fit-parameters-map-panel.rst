@@ -107,7 +107,7 @@ The *Decay Fit Parameters Map* context menu is shown below and discussed next.
 
 The other functions are self-explanatory.
 
-Note that when a series of parameters maps have been calculated, it is possible 
+Note that when a series of parameters maps has been calculated, it is possible 
 to visualize the outcome of the fits in a given ROI by opening the **Local 
 Decay Graph** window. This will display the local decay, fit, residuals and 
 IRF, as well as output the fit parameters in the lower panel of the window.

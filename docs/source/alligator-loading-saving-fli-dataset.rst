@@ -18,9 +18,6 @@ Series, and Other Files.
 The ``Save`` menu only support saving a single dataset in either of two formats: 
 Image series, or HDF5 FLI dataset.
 
-Dataset Series are discussed in more details in the :ref:`time-series-analysis` 
-pages of the manual.
-
 Introduction
 ++++++++++++
 

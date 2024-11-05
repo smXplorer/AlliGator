@@ -9,10 +9,14 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+0.96.1 (2024-11-04)
+
+    Bug Fix
+        Fixed bug in Batch File Conversion script that would throw an error when setting options for File loadging and saving
+
 0.96 (2024-11-01)
 
     Bug Fixes
-        Fixed longstanding slow shutdown
         Fixed IRF-less decay fit and multiple ROIs NLSF analysis
 
     New Features

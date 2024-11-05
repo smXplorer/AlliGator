@@ -3,7 +3,10 @@
 AlliGator Python Plugins API v 0.1
 ++++++++++++++++++++++++++++++++++
 
-AlliGator versions: 0.63-0.75
+AlliGator versions: 0.63-current
+
+.. toctree::
+   alligator-internal-parameters
 
 parameter types
 ---------------
@@ -26,14 +29,14 @@ The following input parameter types are supported:
    AlliGator, Phasor Frequency, any exposed AlliGator parameter (*)
 
 (*) Requested AlliGator parameters are provided automatically to the plugin 
-function. to obtain a list of current exposed internal AlliGator parameters, 
-use the *Send* button in the  **Settings:Plugins** panel. This will send a copy 
+function. To obtain a list of current exposed internal AlliGator parameters, 
+use the *Send* button in the **Settings:Plugins** panel. This will send a copy 
 of that list to the Clipboard, together with the current parameter values.
 
-A list of exposed parameters with their default values can be found here
-:ref:`here <alligator-internal-parameters>`
+A list of exposed parameters with their default values can be found 
+:ref:`here <alligator-internal-parameters>`.
 
-Check the *Parameter Names only* checkbox in the  **Settings:Plugins** panel to 
+Check the *Parameter Names only* checkbox in the **Settings:Plugins** panel to 
 get a list of exposed internal AlliGator parameters without their 
 current value.
 

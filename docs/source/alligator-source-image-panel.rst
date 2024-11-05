@@ -150,12 +150,10 @@ The cluster of objects on the top-left corner of the image are used to:
     the vicinity of the segment connecting the two phasor references defined in 
     the *Phasor Plot* are highlighted in the *Source Image* with a color 
     reflecting their phasor ratio or average lifetime depending on the option 
-    selected in the **Settings:Phasor Plot** panel. See the 
-    :ref:`phasor-ratio-map` page of the manual for details.
+    selected in the **Settings:Phasor Plot** panel.
   - ``Phasor Color Map``: pixels are colored according 
     to their location in the *Phasor Plot* with respect to multiple vertices 
-    defined in the **Phasor Map Color Picker** window. See the 
-    :ref:`phasor-color-map` page of  the manual for details.
+    defined in the **Phasor Map Color Picker** window.
 + *Scale Bar Overlay*: displays a scale bar on the image according to options 
   defined in **Settings:Source Image:Scale Bar Options**.
 

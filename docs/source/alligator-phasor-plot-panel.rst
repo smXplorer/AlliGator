@@ -277,6 +277,10 @@ There are two *Phasor Plot*-specific approaches to define references:
   ``Phasor Ratio References`` menu allows using the line tool of the *Phasor 
   Plot* image to define the location of the two references. In that case, the 
   references are set to the segment's extremities.
+  
+
+.. _alligator-phasor-ratio-map:
+
 
 Representing Phasor Ratio/Average Lifetime/User-defined Quantities as a Color Map in the Source Image
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

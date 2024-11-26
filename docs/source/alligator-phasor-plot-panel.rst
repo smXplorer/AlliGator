@@ -169,10 +169,10 @@ successively and highlighted with different colors (pink and blue):
 .. image:: images/AlliGator-Phasor-Plot-ROI-Highlighting.png
    :align: center
 
-Note 1: The picture above corresponds to an older version of AlliGator.
+.. Note:: The picture above corresponds to an older version of AlliGator.
 
-Note 2: For best contrast, it is recommended to choose a ``Grayscale`` or 
-``Temperature`` palette for the *Source Image*.
+.. Note:: For best contrast, it is recommended to choose a ``Grayscale`` or 
+   ``Temperature`` palette for the *Source Image*.
 
 Pressing the *Refresh Phasor Plot* or the *Clear Phasor Overlay* (eraser icon) 
 buttons clears the overayed ROI(s) in the *Phasor Plot*. The similar buttons in 
@@ -233,8 +233,8 @@ When phasor ratio references are provided *and* the phasor ratio has been
 overlayed on the *Source Image*, the corresponding phasor ratio map can be 
 exported to an ASCII file using the ``Export Phasor Ratio Map`` shortcut menu.
 
-Export Complex Phasor Map
--------------------------
+Export Average Lifetime Map
+---------------------------
 
 When phasor ratio references are provided *and* the average lifetime has been 
 overlayed on the *Source Image*, the corresponding average lifetime map can be 
@@ -286,21 +286,22 @@ Representing Phasor Ratio/Average Lifetime/User-defined Quantities as a Color Ma
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 The phasor ratio can be used to color-code pixels in the *Source Image*, 
-creating a "Phasor Ratio Map". This requires switching the *Overlay Mode* 
-pull-down icon list to ``Phasor Ratio``.
+creating a "Phasor Ratio Map" as described above. This requires switching the 
+*Overlay Mode* pull-down icon list to ``Phasor Ratio``:
 
-Derived quantities such as the average 
-lifetime or even unrelated quantities such as user-defined quantities can also 
-be used instead of the phasor ratio. Which quantity is mapped and how it is 
-mapped is defined in the **Phasor Plot** panel of the Settings window described 
-next.
+.. image:: images/AlliGator-Phasor-Ratio-Map-Button.png
+   :align: center
 
+Derived quantities such as the average lifetime or even unrelated quantities 
+such as user-defined quantities can also be used instead of the phasor ratio.
+Which quantity is mapped and how it is mapped is defined in the **Phasor Plot** 
+panel of the Settings window described next.
 
 To hide the phasor ratio overlay in the *Source Image*, simply refresh the 
 *Source Image*.
 
-Note: Highlighting ROIs defined in the Phasor Plot in the Source Image doesn't 
-work when the Phasor Ratio Map is shown.
+.. Note:: Highlighting ROIs defined in the Phasor Plot in the Source Image 
+   doesn't work when the Phasor Ratio Map is shown.
 
 
 Color Map Style Options
@@ -389,7 +390,9 @@ To **remove** a definition, select it in the *Aliases List* and click in the
 
 To *Save* the *Aliases List* (As an ASCII file), click on the *Save Aliases* 
 (floppy disk) button. To **Load** an aliases list into the *Aliases List* 
-control, click on the *Loas Aliases* (folder) button.
+control, click on the *Loas Aliases* (folder) button. The *Alias List* is 
+automatically saved in the AlliGator installation folder when closing AlliGator, 
+and reloaded when starting it.
 
 The window can be kept opened (or hidden) if needed. It won't prevent from using 
 AlliGator.

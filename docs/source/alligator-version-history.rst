@@ -10,6 +10,21 @@ AlliGator Version History
 Note: version numbers followed by an asterisk have not been released.
 
 -------------------
+0.97.0 (2024-11-25)
+-------------------
+
+
+    - Bug Fixes
+        + Fixed critical bug in selection of user-defined quantity in Settings
+
+    - New Features
+        + Added support for Multi-ROIs Single-Pixel Phasor Analysis without the need to provide an IRF file
+        + Added Compute Multiple Average Phasors & Derived Quantities (Selected Plots) menu item to Phasor Graph
+        + Added skippable Dialog to offer to delete existing ROIs when loading multiple ROIs or a Mask
+        + Added Parameter 2 vs Parameter 1 Scatter Plot (Single Plot, Selected Plots, All Plots) to Phasor Graph menu
+        + Added Compute Average Phasor (Single Plot, Selected Plots, All Plots) to Phasor Graph menu
+
+-------------------
 0.96.1 (2024-11-04)
 -------------------
 

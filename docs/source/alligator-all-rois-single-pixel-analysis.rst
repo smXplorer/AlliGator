@@ -74,6 +74,9 @@ The dialog window used to specify the NLSF analysis steps looks as follows:
   where parameter is the name of the parameter. The histograms will be generated 
   but not saved.
 
+- Step 7: To clear the *Phasor Graph* (in which all the individual ROI 
+  single-pixel phasor plots will be displayed) before analysis, check this box.
+
 To run the script, click on the *Run Script* button. The data corresponding the 
 computed *Decay Fit Parameter Map* will be saved automatically in a HDF5 file 
 named ``Dataset-File-Name IRFs & Fit Data.hdf5``, where ``Dataset-File-Name`` 

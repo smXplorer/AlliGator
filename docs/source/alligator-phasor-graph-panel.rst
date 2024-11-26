@@ -664,7 +664,7 @@ The ``Phasor Math`` contextual menu gives access to two distinct type of
 functions:
 
 - ``Compute Average Phasor (Single Plot)``
-- ``Compute Average Phasor (Selected Plot)``
+- ``Compute Average Phasor (Selected Plots)``
 
 one one hand, and:
 
@@ -743,8 +743,9 @@ The ``Average Phasor Ratio`` function does what its name indicates.
 Parameter 2 vs Parameter 1 Scatterplot
 ++++++++++++++++++++++++++++++++++++++
 
-The ``Parameter 2 vs Parameter 1 Scatterplot`` function applies to individual 
-phasor plots. Selecting it opens up the following window:
+The ``Parameter 2 vs Parameter 1 Scatterplot`` menu functions apply to 
+a single plot, the selected plots or all plots (excluding the UC) depending on 
+which item is selected. Selecting one of them opens up the following window:
 
 .. image:: images/AlliGator-Phasor-Graph-Parameter1-vs-Parameter-Dialog.png
    :align: center
@@ -781,6 +782,28 @@ parameter list is as follows:
   :ref:`phasor-ratio-introduction`
 - ``Amplitude-Averaged Lifetime``: :math:`<\tau>_a`.
 - ``Intensity-Averaged Lifetime``: :math:`<\tau>_i`.
+
+If the ``Selected Plots`` or ``All Plots`` items are selected, there are as many 
+such scatter plots generated as (selected) phasor plots.
+
+Compute Multiple Average Phasors & Derived Quantities
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+This menu's scripts are intented to be used in combination with the ``Multi-ROIs 
+Single-Pixel Phasor Analysis`` script (``Analysis:FLI Dataset:Multi ROIs 
+Single-Pixel Analysis Scripts`` menu). That latter script indeed generates *N* 
+phasor plots (where *N* is the number of ROIs), each comprised of :math:`n_i` 
+phasors each, where :math:`n_i` is the number of pixels in ROI *i*.
+
+The scripts computes the average phasor (g, s) (which is only used internally), 
+amplitude (:math:`a_1`) and intensity (:math:`f_1`) phasor ratios, phase 
+(:math:`\tau_{\phi}`) and modulus (:math:`\tau_{m}`) lifetimes, 
+amplitude-average (:math:`<\tau>_a`) and intensity-averaged (:math:`<\tau>_i`) 
+lifetimes and the standard deviations of all these quantities, which are sent 
+to the *Lifetime & Other Parameters* graph of the **Lifetime & Other 
+Parameters** panel as scatterplots vs the ROI number. This applies to a single 
+plot, the selected plots or all plots (excluding the UC) depending on which 
+item is selected in the menu.
 
 Note on the Phase Lifetime vs Total Intensity/Background-Subtracted Intensity/Background/Fitted Lifetime/Amplitude functions
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

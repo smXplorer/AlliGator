@@ -21,7 +21,7 @@ and the values of the *Decay Fit Parameter Map Display Range* (to the right of
 the color scale).
 
 The *Max Parameter* and *Min Parameter* indicators provide the actual total 
-range of the computer parameters, while the controls immediately aboce and 
+range of the computed parameters, while the controls immediately above and 
 below the slide represent the position of the sliders, which themselves 
 specify what are the selected Min and Max of the displayed parameters.
 
@@ -38,7 +38,7 @@ The *Refresh Parameter Map* forces redrawing the map, while the square color
 selector at the bottom allows defining the color of the ROIs drawn over the map.
 
 Finally, the *Overlay Parameter Map* button at the top left (brush tool) enables 
-overlaying the current *Decay Fit Parameters Map* in the *Source Image*.
+overlaying the current *Decay Fit Parameters Map* on the *Source Image*.
 
 Decay Fit Parameter Map Menu
 ----------------------------
@@ -60,8 +60,7 @@ The *Decay Fit Parameters Map* context menu is shown below and discussed next.
 + *Create Selected vs Intensity Scatterplot*: Sends all parameter values *P_i* 
   in the image as a *(I_i, P_i)* scatterplot in the *Lifetime & Other Parameters 
   Graph* of the *Lifetime & Other Parameters* panel, where *I_i* is the decay 
-  intensity (either *baseline-subtracted* or not, depending on the user's 
-  response to the pop-up dialog.
+  intensity.
 + *Export Map Data as ASCII*: This will export the current map image as an 
   ASCII matrix of parameter values. If only a few of the image pixels have 
   actual parameters associated with them, this will result in a mostly 
@@ -83,7 +82,7 @@ The *Decay Fit Parameters Map* context menu is shown below and discussed next.
     rows of parameters corresponding to the different pixels in that ROI, 
     preceded by the ROI index and pixel coordinates.
 + *Export All ROIs Data as ASCII*: Similarly to the previous one, this function 
-  exports all parameters for all the ROIs. Again, tthere are 3 different use 
+  exports all parameters for all the ROIs. Again, there are 3 different use 
   cases:
 
   - If the the ROIs used to compute the map are all single-pixels and the 
@@ -103,7 +102,7 @@ The *Decay Fit Parameters Map* context menu is shown below and discussed next.
   next function.
 + *Load IRFs & Fit Data*: This allows reloading the output of an analysis and 
   work with it (see next) together with the loaded dataset (the dataset is not 
-  loaded, neither are the ROIs, which needs to be done separately, if needed.
+  loaded, neither are the ROIs, which needs to be done separately, if needed).
 
 The other functions are self-explanatory.
 

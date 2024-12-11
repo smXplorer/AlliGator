@@ -239,9 +239,10 @@ will be offset by an amount that will depend on the final value reached by the
 decay. It is possible to compensate artificially for this truncation by 
 extrapolating the decay with an exponential tail.
 
-Likewise, if the IRF used for NLSF analysis by decay model reconvolution with 
-the IRF, a truncated IRF may potentially affect the quality of the computed 
-convolution product, which IRF extrapolation may improve upon.
+Likewise, if the IRF used for NLSF analysis for reconvolution with the decay 
+model is truncated, the computed convolution product may differ significantly 
+from the true convolution product. IRF extrapolation may help improve the 
+results.
 
 The parameters defining the range of the extrapolation are defined in 
 **Settings:Fluorescence Decay:Decay Pre-Processing** under the *Extrapolate 

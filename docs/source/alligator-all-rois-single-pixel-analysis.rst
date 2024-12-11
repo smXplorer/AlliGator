@@ -26,7 +26,7 @@ NLSF Analysis
 
 The dialog window used to specify the NLSF analysis steps looks as follows:
 
-.. image:: images/AlliGator-Miulti-ROIs-NLSF-Analysis-Dialog.png
+.. image:: images/AlliGator-Multi-ROIs-NLSF-Analysis-Dialog.png
    :align: center
 
 - Step 1: The first parameter, *IRF File* is optional and not visible unless 
@@ -89,7 +89,7 @@ Phasor Analysis
 
 The dialog window used to specify the phasor analysis steps looks as follows:
 
-.. image:: images/AlliGator-Miulti-ROIs-Phasor-Analysis-Dialog.png
+.. image:: images/AlliGator-Multi-ROIs-Phasor-Analysis-Dialog.png
    :align: center
 
 - Step 1: The first parameter, *IRF File* is optional and not visible unless 

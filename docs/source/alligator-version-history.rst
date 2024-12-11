@@ -9,9 +9,35 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
--------------------
-0.97.0 (2024-11-25)
--------------------
+-----------------
+0.98 (2024-12-10)
+-----------------
+
+
+    - Bug Fixes
+        + Fixed bug in palette name decoding
+        + Fixed erroneous header of ASCII file created when exporting Decay Fit Parameter Map parameters
+
+    - CRITICAL BUG FIX
+        + fixed in AlliGator File Loading which would mix up max and sum images when building them one gate image at a time. This bug would affect any function using the Max or Sum image(s) for any processing. In particular, it would affect the displayed "Sum of All Gates" and "Max" images. It would also affect the following operations:
+        + pixel rejection based on pixel intensity (all analysis functions are affected)
+        + intensity-weighted maps
+        + fit parameter vs intensity plot(s)/phase lifetime vs intensity plot(s), etc.
+        + gate arithmetic
+        + Image Profile Window display
+        + Find optimal ROI
+        + ROI creation based on intensity above threshold
+        + In order to allow assessing the effect of this bug on analysis, a "toggle switch" has been added in the form of a "DEBUG" menu item in the "Help" menu. Selecting this menu item will toggle the critical bug from active to inactive. To allow this to take effect, reload the current dataset.
+
+    - New Features
+        + Added support for storage of user-defined color lists (for graphs) in AlliGator saved settings 
+        + Added support for storage of user-defined palettes in AlliGator saved settings
+        + Added Min and Max Histogram Percentile parameters in Analysis:Tools:Shot Noise Influence on Average Lifetime
+        + Changed output of Parameter vs Intensity function in Decay Fit Parameter Map: now returning the total intensity of the ROI (without optional baseline subtraction)
+
+-----------------
+0.97 (2024-11-25)
+-----------------
 
 
     - Bug Fixes

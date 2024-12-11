@@ -9,7 +9,7 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
-0.98 (2024-12-10)
+0.98 (2024-12-11)
 
     Bug Fixes
         Fixed bug in palette name decoding
@@ -31,6 +31,7 @@ Note: version numbers followed by an asterisk have not been released.
         Added support for storage of user-defined palettes in AlliGator saved settings
         Added Min and Max Histogram Percentile parameters in Analysis:Tools:Shot Noise Influence on Average Lifetime
         Changed output of Parameter vs Intensity function in Decay Fit Parameter Map: now returning the total intensity of the ROI (without optional baseline subtraction)
+        Decoupled Decay Fit Parameter Map Color Scale Range slide min and max from the slider positions
 
 0.97 (2024-11-25)
 

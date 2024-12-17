@@ -9,6 +9,14 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+0.98.1 (2024-12-16)
+
+    Bug Fix
+        Removed parallelism in actions requiring ROI decay calculation due to some Vision Development Module memory read issue.
+
+    New Feature
+        Made Load Reference(s) window modal (so as to not to miss it when it is opened)
+
 0.98 (2024-12-11)
 
     Bug Fixes

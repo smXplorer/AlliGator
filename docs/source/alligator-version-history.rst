@@ -9,6 +9,25 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+-----------------
+0.99 (2025-01-07)
+-----------------
+
+
+    - Bug Fixes
+        + Fixed bug that would output all ROI Characteristics to the Notebook, even if only a few were selected
+        + Fixed bug that prevented loading non-SS3 v0.7 AlliGator HDF5 FLI dataset files
+
+    - New Features
+        + Added Random Seed option in Shot Noise Influence on Amplitude-Averaged Lifetime Tool
+        + Added separate Histogram axis for Average Lifetime SDV in that same tool
+        + Added search box in Brewer Palette GUI
+        + Added Long & Short Axis Lengths and Aspect Ratio to ROI Characteristics (formerly call ROI Statistics)
+        + Modified overlay of Decay Fit Parameter Map, Phasor Color Map, Phasor Ratio and Phasor ROI on Source Image to use the Displayed Image's intensity with brightness-scaled and blending options (formerly, the Sum Image was used)
+        + Added "ROI Decay" (Source Image) and "Phasor ROI Decay" (Phasor Plot) buttons
+        + Added calculation of cumulated decay (and phasor) of pixels whose phasors are within the selected Phasor Plot ROI
+        + Minor cosmetic changes
+
 -------------------
 0.98.1 (2024-12-16)
 -------------------

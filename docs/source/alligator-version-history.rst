@@ -10,6 +10,24 @@ AlliGator Version History
 Note: version numbers followed by an asterisk have not been released.
 
 -----------------
+1.00 (2025-02-14)
+-----------------
+
+
+    - Bug Fixes
+        + Fixed bug in Dataset Series Sequential ROI NLSF/Phasor Analysis which did not increment ROI index
+        + Fixed bug in the "Frequency Plot" option of histograms
+        + Fixed Bug in Auto-adjust Contrast that did not use the Upper and Lower Percentile correctly
+
+    - New Features
+        + Added "ROI Decay" (Source Image) and "Phasor ROI Decay" (Phasor Plot) buttons
+        + Added calculation of cumulated decay (and phasor) of pixels whose phasors are within the selected Phasor Plot
+        + Added message in Phasor Plot to clarify that the "Use UC/Segment Intersections as References" requires a line to be drawn on the Phasor Plot (the segment connecting the current references doesn't count)
+        + Added optional "Dead Left Columns Correction" checkbox in Settings>>Source Image>>Image Processing (only shown if the "Show Dead Left Columns Correction" setting in the AlliGator Settings.ini file is set manually to "True")
+        + Implemented Dead Left Columns Correction (only accessible if the "Show Dead Left Columns Correction" entry in the AlliGator Settings.ini file is set to "True")
+        + Added List of Image Pre-Processing Steps in Settings>>Source Image>>Image Processing to enable ordering the different operations (by right-clicking the listbox)
+
+-----------------
 0.99 (2025-01-07)
 -----------------
 

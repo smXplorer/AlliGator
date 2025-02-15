@@ -1,0 +1,50 @@
+2023-10-20 (XM)
+- Improved Search String Dialog behavior
+
+2023-10-17 (XM)
+- Added Find..., Find Next & Find Previous menu items
+
+2023-03-11 (XM)
+- Fixed "Paste Current Date & Time" menu item
+
+2022-11-13 (XM)
+- Icon update
+
+2022-08-25 (XM)
+- Replaced global variables by Notebook Parameter Storage.vi
+
+2022-03-10 (XM)
+- Error Dialog when opening Notebook File fails
+
+2022-03-06 (XM)
+- Fixed issues with backuping Notebook between closing/opening events
+- Changed backup frequency to every 5 min
+
+2022-02-01 (XM)
+- Changed Notebook dialogs to minimze user confusion
+
+2022-01-31 (XM)
+- Adding ProcessID to backup file name to distinguish between processes
+
+2020-04-06 (XM)
+- Added Check Notebook Before Quitting App.vi
+
+2019-05-02 (XM)
+- Fixed an issue with the Notebook "saved" status and file path when closing/reopening the Notebook
+
+2019-01-27 (XM)
+- prevents reloading the backed up content on first call
+
+2019-01-26 (XM)
+- Added file name in title (with (*) if the Notebook is not saved)
+- Better handling of save/saving status
+
+2018-08-07 (XM)
+- separate global variable for "saved?" and "Main VI Name"
+
+2018-07-26 (XM)
+- Made a lvlib
+
+2018-05-05 (XM)
+- removed tool tip for RTB (was getting in the way)
+- warns against overwriting an existing file

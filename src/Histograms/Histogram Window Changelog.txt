@@ -1,0 +1,30 @@
+2023-06-06 (XM)
+- Icon updates
+
+2023-06-04 (XM)
+- Refactoring of Build XY Plot Histogram (Core).vi to use Build Array Histogram.vi
+
+2023-04-07 (XM)
+- Fixed Clear Graph
+
+2022-01-17 (XM)
+- Fixed bug in Clear Graph
+
+2021-06-21 (XM)
+- Further refactoring of Histogram Window with bug fix and logic simplification
+
+2021-06-08 (XM)
+- Finished debugging the refactored Histogram Window
+
+2021-06-07 (XM)
+- Refactorization to use Generic Action Handler
+
+2021-02-17 (XM)
+- Fixed bogus default settings
+
+2020-07-11 (XM)
+- Added Window menu and keyboard shortcuts for easy access to show/hide functions
+
+2019-05-02 (XM)
+- Fixed Show/Hide Tool Panels menu
+- Fixed Set Style of Selected Plots & Delete Selected Plots

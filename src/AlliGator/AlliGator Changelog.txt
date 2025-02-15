@@ -1,0 +1,4248 @@
+2025-02-14 (XM)
+- Fixed Bug in Auto-adjust Contrast that did not use the Upper and Lower Percentile correctly
+- v1.00 release (with source code)
+
+2025-02-13 (XM)
+- Added optional "Dead Left Columns Correction" checkbox in Settings>>Source Image>>Image Processing (only shown if the "Show Dead Left Columns Correction" setting in the AlliGator Settings.ini file is set manually to "True")
+- Implemented Dead Left Columns Correction (only accessible if the "Show Dead Left Columns Correction" entry in the AlliGator Settings.ini file is set to "True")
+- Added List of Image Pre-Processing Steps in Settings>>Source Image>>Image Processing to enable ordering the different operations (by right-clicking the listbox)
+
+2025-02-12 (XM)
+- Fixed Source Distribution
+
+2025-02-02
+- Fixed bug in the "Frequency Plot" option of histograms
+
+2025-01-23
+- Added message in Phasor Plot to clarify that the "Use UC/Segment Intersections as References" requires a line to be drawn on the Phasor Plot (the segment connecting the current references doesn't count)
+
+2025-01-16 (XM)
+- Further refactoring for Source Code distribution
+
+2025-01-15 (XM)
+- Code cleanup for Source Code distribution
+
+2025-01-14 (XM)
+- More VI description added
+
+2025-01-13 (XM)
+- More VI description added
+- Code refactoring
+
+2025-01-10 (XM)
+- fixed bug in Dataset Series Sequential ROI NLSF/Phasor Analysis which did not increment ROI index
+- More VI descriptions added
+
+2025-01-08 (XM)
+- more VI descriptions
+
+2025-01-07 (XM)
+- Added "ROI Decay" (Source Image) and "Phasor ROI Decay" (Phasor Plot) buttons
+- Added calculation of cumulated decay (and phasor) of pixels whose phasors are within the selected Phasor Plot ROI
+- v0.99 release
+- More VI descriptions
+- v0.100-dev
+
+2025-01-04 (XM)
+- More VI descriptions
+
+2025-01-03 (XM)
+- Fixed bug that prevented loading non-SS3 v0.7 AlliGator HDF5 FLI dataset files
+- Implemented and tested Flatfield correction: not good enough for release
+- Changed layout of Settings:Source Image panel
+- More VI descriptions
+
+2025-01-02 (XM)
+- Modified overlay of Decay Fit Parameter Map, Phasor Color Map, Phasor Ratio and Phasor ROI on Source Image to use the Displayed Image's intensity with brightness-scaled and blending options (formerly, the Sum Image was used)
+- Added Long & Short Axis Lengths and Aspect Ratio to ROI Characteristics
+- Fixed bug that would output all ROI Characteristics to the Notebook, even if only a few were selected
+
+2024-12-27/30/31 (XM)
+- Added more VI descriptions
+
+2024-12-25 (XM)
+- Added new basic quantities to enable gate arithmetic calculations
+
+2024-12-23 (XM)
+- Added search box in Brewer Palette GUI
+
+2024-12-17 (XM)
+- Added Random Seed in Shot Noise Influence on Amplitude-Averaged Lifetime Tool
+- Added separate Histogram axis for Average Lifetime SDV in that same tool
+
+2024-12-16 (XM)
+- Made Load Reference(s) window modal (so as to not to miss it when it opens)
+- Removed parallelism in actions requiring ROI decay calculation due to some Vision Development Module memory read issue.
+- v0.98.1 release
+
+2024-12-11 (XM)
+- Decoupled Decay Fit Parameter Map Color Scale Range slide min and max from the slider positions
+- v0.98 release
+
+2024-12-10 (XM)
+- Fixed erroneous header of ASCII file created when exporting Decay Fit Parameter Map parameters
+- Added Min and Max Histogram Percentile parameters in Analysis:Tools:Shot Noise Influence on Average Lifetime
+- Changed output of Parameter vs Intensity function in Decay Fit Parameter Map: now returning the total intensity of the ROI (without optional baseline subtraction)
+- CRITICAL BUG fixed in AlliGator File Loading which would mix up max and sum images when building them one gate image at a time. This bug would affect any function using the Max or Sum image(s) for any processing. In particular, it would affect the displayed "Sum of All Gates" and "Max of All Gates" images. It would also affect the following operations:
+	- pixel rejection based on pixel intensity (all analysis functions are affected)
+	- intensity-weighted maps
+	- fit parameter vs intensity plot(s)/phase lifetime vs intensity plot(s), etc.
+	- gate arithmetic
+	- Image Profile Window display
+	- Find optimal ROI
+	- ROI creation based on intensity above threshold
+In order to allow assessing the effect of this bug on analysis, a "toggle switch" has been added in the form of a "DEBUG" menu item in the "Help" menu. Selecting this menu item will toggle the critical bug from active to inactive. To allow this to take effect, reload the current dataset.
+- v0.98-dev release
+
+2024-12-02 (XM)
+- Created sub-libraries in Decay Analysis
+
+2024-11-27 (XM)
+- Fixed bug in palette name decoding
+
+2024-11-26 (XM)
+- Fixed bug preventing the opening of the Alias Definitions window
+- Fixed bug preventing auto-loading of the Alias Definitions at startup
+- v0.97 release
+- Added support for storage of user-defined color lists (for graphs) in AlliGator saved settings 
+- Added support for storage of user-defined palettes in AlliGator saved settings
+- v0.98-dev
+
+2024-11-23 (XM)
+- Added Compute Average Phasor (All Plots) to Phasor Graph menu
+- Added Parameter 2 vs Parameter 1 Scatter Plot (Single Plot, Selected Plots, All Plots) to Phasor Graph menu
+
+2024-11-19 (XM)
+- Added skippable Dialog to offer to delete existing ROIs when loading multiple ROIs or a Mask
+
+2024-11-18 (XM)
+- Fixed critical bug in selection of user-defined quantity in Settings
+- Fixed Compute Multiple Average Phasors (Selected Plots) script
+
+2024-11-15 (XM)
+- Implemented Compute Multiple Average Phasors & Derived Quantities (Selected Plots)
+
+2024-11-14 (XM)
+- Added Compute Multiple Average Phasors & Derived Quantities (Selected Plots) menu item to Phasor Graph
+
+2024-11-12 (XM)
+- Added support for Multi-ROIs Single-Pixel Phasor Analysis without the need to provide an IRF file
+
+2024-11-11 (XM)
+- Changed internal handling of messages
+- Fixed installation of Third Party Licenses
+
+2024-11-08 (XM)
+- Minor code cleanup
+- v0.97-dev
+
+2024-11-04 (XM)
+- Fixed bug in Batch File Conversion script that would throw an error when setting options for File loadging and saving
+- v0.96.1 release
+
+2024-11-01 (XM)
+- In Multiple-ROIs Single-Pixel Analysis scripts, defining a ROI file is no longer necessary if no IRF processing step is used
+- v0.96 release
+
+2024-10-31 (XM)
+- Added "Clear IRF/Reference Plot" and "Clear Local IRFs" menu items to Decay Graph
+- Added support to no IRF Multiple ROIs NLSF analysis
+- Added support to no IRF Multiple ROIs Average Lifetime analysis
+- Fixed IRF-less decay fit and multiple ROIs NLSF analysis
+
+2024-10-30 (XM)
+- Added loading/Saving Formula Aliases.txt as part of the initialization/shutdown sequences
+- Added Phasor Reference lifetimes (tau_1 and tau_2) to the list of reserved variables in Formula Aliases.
+
+2024-10-29 (XM)
+- Reordered elements in Internal Variables cluster
+- Further library refactoring
+
+2024-10-28 (XM)
+- Added VI descriptions to some of AlliGator libraries
+- Added Licenses file to AlliGator installationW
+
+2024-10-25 (XM)
+- Fixed longstanding slow shutdown (not in released version)
+
+2024-10-24 (XM)
+- AlliGator File Names & Icons updates
+- Migration of VIs to libraries
+- Test of antidoc generation
+
+2024-10-23 (XM)
+- Implemented average intensity (and SDV) options in Image Profile window
+- v0.95 release
+
+2024-10-22 (XM)
+- Added template for average intensity in Image Profile window
+- v0.95-dev2
+
+2024-10-18 (XM)
+- Added support for dual-channel datasets in Python plugins
+- Added Mask image to AlliGator Python Plugin FLI Data typedef structure
+- Tested FLI_Dataset_to_Parameter_Map_Plugin_with_ROI_Mask_Example.py
+- Fixed bug in Convert ROIs to Mask Image where the first ROI ID was 0 (now 1)
+- v0.95-dev release
+
+2024-10-17 (XM)
+- Documentation update
+- Added option to Send ROI Description to Notebook in Image Profile window
+- Image Profile window menu updates
+- v0.94.1 release
+
+2024-10-15 (XM)
+- Added Phasor Frequency to Load Reference(s) Notebook output
+- Cosmetic updates
+- v0.94 release
+
+2024-10-14 (XM)
+- Added option to show/hide Python Plugin Examples
+
+2024-10-10 (XM)
+- Fixed potential source of infinite loop in Sliced Mean & SDV function
+- Improved corresponding Dialog
+
+2024-10-09 (XM)
+- Fixed Local Decay Window graph caption and plot association to Y scale, broken since the last update to the Image Profile Window
+
+2024-10-08 (XM)
+- Completed SDV in Image Profile
+- Various UI improvements in Image Profile
+- v0.94-dev2 pre-release
+
+2024-10-7 (XM)ed M
+- Added mention of whether or not an IRF is used in Ft Method Benchmark output
+- Fixed Image Profile ROI median overlay
+- Fixed Color Picker in Image Profile
+- Fixed graph legend update in Image Profile
+- Added SDV of Phase Lifetime, Average lifetime/Phasor Ratio, Fitted Parameter in Image Profile (to be cont'd)
+
+2024-10-06 (XM)
+- cosmetic updates
+- documentation update: Fit Method Benchmark and Shot Noise Influence on Average Lifetime tools
+
+2024-10-05 (XM)
+- released 0.94-dev version as beta
+
+2024-10-04 (XM)
+- Fixed bug in intensity-weighted calculation in Image Profile Window
+- Re-release of v0.93
+- Added Overlay of selected ROI in Image Profile (including median axis) and indicatin of L x W in the Intensity Plot(s) name(s)
+
+2024-10-01 (XM)
+- Rerelease of v0.93 after repairing the LabVIEW installation
+
+2024-09-20 (XM)
+- Fixed refresh button behavior in Image Profile window
+- Modified Image Profile window menu and added "Overlay ROI in Source Image" menu item (not implemented)
+
+2024-09-18 (XM)
+- Reverted to 4th degree polynomial fit of the chi^2 for offset parameter error estimation
+- release of v0.93
+
+2024-09-17 (XM)
+- Improved computation of offset error estimation
+
+2024-09-16 (XM)
+- Fixed handling of weights for normalized decays (0-values are placed by minimum non-zero value)
+
+2024-09-14 (XM)
+- Rescaled Chi^2, RMSE, RSS, AIC and BIC outputs to take into account the internal decay normalization (to an integral of 1 for the new approach, to a peak of 1 for the legacy approach) before fitting.
+
+2024-09-13 (XM)
+- Changed Fit Parameter outputs to refer to fit with convolution to a normalized IRF (integral of 1)
+- Added Options>>Use normalized IRF for convolution menu item in Local Decay Window to account for old Decay Fit Parameter Map data saved with the previous convention (Fit Parameters outputs were referring to the actual IRF, which could have an integral vastly different from 1).
+
+2024-09-12 (XM)
+- Fixed missing Legacy Fit output
+- Prevented bogus Half-Width Profile output when the ROI type is not a rectangle
+- Fixed erroneous second-half parameter profile output in Image Profile
+
+2024-09-11 (XM)
+- Changed weighting scheme to better account for the pre-fit normalization
+
+2024-09-10 (XM)
+- Added optional experimental IRF in Fit Method Benchmark
+
+2024-09-09 (XM)
+- Added optional slice average abscissa and standard deviation plots to the sliced data analysis
+
+2024-09-05 (XM)
+- Moved VIs to libraries
+- Updated icons and descriptions
+- v0.93-dev
+
+2024-09-03 (XM)
+- Fixed initialization message about missing hot pixel mask
+- v0.92 release
+
+2024-08-28 (XM)
+- Fixed Min Decay Percentile input range (was [0, 1] instead of [0, 100])
+- Fixed missing Calibration Lifetime contextual menu in Phasor Graph panel
+- Refactoring: removed unused XY Graph Generic Events
+- Changed default upper percentile of sliced Mean and SDV to 100 (was 0 but interpreted as 100-x, which was confusing).
+
+2024-08-27 (XM)
+- Fixed behavior of "Compute Phasor Ratio at Mouse Location"
+- Fixed bug in computation of the phasor ratio plot/average lifetime plot in a Series phasor analysis
+
+2024-08-24 (XM)
+- Fixed show/Hide UC bug in the Phasor Plot whereby the ticks and labels were not hidden
+- Fixed a bug where the phasor ratio references were not properly reordered according to the user request
+
+2024-08-23 (XM)
+- Modified Phasor Ratio calculation (at Mouse Location) to actually perform this task (not using the last computed phasor)
+
+2024-08-22 (XM)
+- Now checking that loaded references have been defined with the same phasor frequency as the current one. If not, offers to load them corrected for the new phasor fequency.
+- Added loaded references information to Notebook
+- Modified function of "Set Reference n to Current Phase Lifetime" (Current Phasor context menu) to actually do what it says rather than doing the same as "Set Reference n to User-defined Lifetime" (Phasor Graph context menu).
+
+2024-08-21 (XM)
+- Changed behavior of Calibration Series to use the last calibration in case the calibration series is not long enough
+- Fixed missing Phasor Calibration Series calibration of existing phasor plots
+
+2024-08-20 (XM)
+- Fixed missing "Export User-Defined Quantity Map as ASCII" in Source Image context menu.
+- Moved "Define Intensity Corrections" to Analysis>>FLI Dataset Series menu
+
+2024-08-12 (XM)
+- Made Convolution with IRF, Cumulative Function, Rebin Plot functions in Decay Graph multiplot compatible
+
+2024-08-11 (XM)
+- Made "Define Gate to" radio button control a TypeDef
+- Cosmetic changes to Settings>>Data Information
+
+2024-08-07 (XM)
+- Fixed error handling in fit output calculations
+- Added # Bins in Fit Simulation Parameters in Fit Method Benchmark
+- Now simulating background as a random number of counts with Baseline = average background counts/bin. The # Counts parameter in Fit Simulation Parameters is equal to the sum of these background counts and photon counts.
+- Added constraint on the Baseline parameter of Decay Simulation Parameters so that the # Photon Counts is >=0 and Baseline x # Bins is an integer.
+
+2024-08-02 (XM)
+- Added Sequential ROIs Dataset Series Phasor and NLSF Analysis scripts
+- v0.92-dev release
+
+2024-07-20 (XM)
+- Added warning when the user asks to display simulated decays, fits & residuals in Fit Method Benchmark, if the number of simulations is > 1,000.
+- Removed "Period" from Decay Simulation Parameters (using the parameter defined in Fit Options)
+
+2024-07-18 (XM)
+- updated fit output to add information on IRF type and offset step (when relevant)
+- v0.92-dev
+
+2024-07-12 (XM)
+- Changed 0-weight interpolation approach to set a minimum of 1
+- Minor Fit Method Benchmark GUI tweaks
+- v0.91 release
+
+2024-07-11 (XM)
+- Fixed bug in 1D Histogram that resulted in histogram deformation in periodic exponential decay histograms
+- Fixed interpretation of fraction f1 in Fit Method Benchmark as an exponential component amplitude fraction
+- Fixed erroneous formatting of fitted offset error, resulting in a shift of all subsequent error values
+- Fit Method Benchmark debugged and multiple UI improvements
+
+2024-07-10 (XM)
+- Implemented no IRF fitting
+- Added pseudo-Dirac IRF (single-bin gate) for Fit Method Benchmark fitting
+
+2024-07-09 (XM)
+- Added "Select Decay" index in Fit Method Benchmark's Decay, Fit & Residual Plots tab
+- Starting implementing skipping convolution when no IRF is provided
+
+2024-07-08 (XM)
+- Fixed missing Settings File path in Save/Load Settings Notebook message
+- Fixed bogus limit to 1 for Settings>>Fluorescence Decay>>Fit Options: Max Decay Percentile (now 100)
+- Fixed missing Image Information in Source Image
+- Implemented double profiles in Image Profile Window when Box Profile Type is Half-Width
+- v0.90 release
+
+2024-07-04 (XM)
+- Added Option to split a Box Image Profile into two halves (Image Profile Window)
+- Fixed (rotated) rectangle Image Profile bug that would return NaN if a single pixel's value was NaN
+- v0.90-dev release (unofficial)
+
+2024-06-21 (XM)
+- Fixed display bug where a nonzero SDV was shown for some phasor-derived quantities even when none was calculated
+- v0.89.1 release
+
+2024-06-20 (XM)
+- Fixed bug preventing phasor SDV (due to shot noise) to be calculated when one of the decay points is equal to zero
+- v0.89.1
+
+2024-06-19 (XM)
+- v0.89 release
+
+2024-06-18 (XM)
+- Fixed a bug where the "Rectangle Image Profile" calculation was performed even when the Image Profile Window was not open, slowing down AlliGator when a full-frame ROI  or any large rectangle ROI was drawn
+- Fit Method Benchmark histograms are now replaced (instead of duplicated) when the bins are changed
+
+2024-06-17 (XM)
+- Added "MLE Baseline Offset Type" and "MLE Baseline Offset" to the Fit Options panel of Fluorescence Decay
+
+2024-06-13 (XM)
+- Fixed formatting of variant string
+
+2024-06-06 (XM)
+- Implemented Fit Method Benchmark Tool
+- Added systematic offset to decay when using MLE (subtracted after fit).
+
+2024-06-05 (XM)
+- Developped Fit Method Benchmark.vi
+
+2024-06-04 (XM)
+- Added Residual Sum of Squares (RSS), Akaike Information Criterion (AIC), Bayesian Information Criterion (BIC) to fit output
+- Fixed broken installation process (when checking whether a new version is available online)
+
+2024-06-03 (XM)
+- Fixed (?) some lagging image contrast update when moving the image histogram cursors
+
+2024-05-29 (XM)
+- Added Fit Termination criteria output to the Notebook
+
+2024-05-28 (XM)
+- Added "Convergence Criterion" output to the fit output
+
+2024-05-25 (XM)
+- Made MLE an option in fitting method
+
+2024-05-24 (XM)
+- Implemented MLE fit using Ted's method (as a debug feature).
+
+2024-05-23 (XM)
+- Fixed "Save Phasor Calibration (Single/Map/Series)" dialog not opening the last used folder
+- Fixed discrepancy between calibration phasor frequency and current frequency not being flagged as a problem
+
+2024-05-21 (XM)
+- pre-release of v0.89
+- Added option to use the Current Frequency or one of its harmonics in the "Single-Exponential Phasor Locus (SEPL)>>Phasor" Tab of the Settings window
+- Now eliminates NaN phasors from Parameter 2 vs Parameter 1 computation in Phasor Graph
+- v0.89-dev-2
+
+2024-05-20 (XM)
+- Fixed occasionally erroneous Phasor Graph references-connecting segment (and limited it to the actual segment)
+- Fixed bug in Remove Phasor from Plot in Phasor Graph
+- Added option to use background-subtracted intensity in Image Profile Window (Menu->Image Intensity->Background-subtracted). The background value subtracted (per pixel) is that defined in Settings>>Fluorescence Decay>>Decay Pre-Processing>>Constant Background.				
+
+2024-05-19 (XM)
+- Changed default Fixed Low Background Threshold to 0 (instead of 2000)
+- Changed default Phasor Ratio Type to Amplitude-weighted (instead of Intensity-weighted)
+- v0.88 release
+
+2024-05-18 (XM)
+- Implemented All ROIs All Pixels NLSF Parameter export
+- Updated Loading of Decay Fit Parameters Map & IRFs loading
+
+2024-05-16 (XM)
+- Fixed wrong file name preventing <tau>_1 and <tau>_2 parameter maps from being saved in the Decay Fit Parameters Map
+- Changed names of derived Decay Fit Parameters to <tau>_a, f1_a, f2_a and <tau>_i, f1_i, f2_i
+- Added Support for Saving Single ROI NLSF Parameter Map Data (whether the map is single pixel one or not and for All ROIs when the map is a multi-ROIs one)
+
+2024-05-13 (XM)
+- Fixed typo in Settings>>Fluorescence Decay>>Fit Options: Max Decay Percentile context help description
+
+2024-05-08 (XM)
+- Fixed bug in Upper and Lower Percentile options in Sliced Mean and SDV calculation
+- v0.87.1 release
+
+2024-05-07 (XM)
+- Added Upper and Lower Percentile options in Sliced Mean and SDV calculation (to reject outliers)
+- Added Number of Elements vs Intensity plot in Slided Mean and SDV calculation
+- v0.87 release
+
+2024-05-05 (XM)
+- Added Source Image Scale Bar Overlay Button and Settings Options
+- Added Image Resolution (Pixel Size) parameter in Settings>>Source Image
+
+2024-05-03 (XM)
+- Added dialog to select which ROI Statistics to export when selecting All ROIs
+- Speed up of Full Frame ROI Decay Analysis
+
+2024-05-02 (XM)
+- Modified default values for High Count Pixels Rejection Options to Inf, Inf, 0, which correspond to no rejection. Updated context help description accordingly.
+
+2024-04-30 (XM)
+- Implemented User-Defined Quantity Map overlay in Source Image (and export to ASCII file)
+- Made the "Load Phasor Reference(s)" window a centered dialog box
+
+2024-04-29 (XM)
+- Started implementing User-defined Quantity in Phasor Plot Overlay on Source Image
+
+2024-04-26 (XM)
+- Added "User-defined Quantity" to the Phasor Ratio and Average Lifetime options for a color map overlay (to be implemented)
+
+2024-04-25 (XM)
+- Fixed bug in approximate comparison function that would fail to recognize the approximate identity of two phasor frequencies (e.g. when one is loaded with a calibration file)
+- Fixed possible bug in Rebin Histogram dialog
+
+2024-04-23 (XM)
+- Fixed bug in B&H .sdt file header reading
+
+2024-04-19 (XM)
+- Fixed Time Point and Gate slide ticks
+
+2024-04-18 (XM)
+- Fixed bug failing to update phasor plots in Phasor Graph when adding or removing a single point
+- Added option to Add Single Phasor to Plot in the Phasor Graph, supporting definition by (g,s), (m,phi), single-exponential lifetime, or bi-exponential linear combination
+
+2024-04-17 (XM)
+- Fixed bug preventing from displaying decay fit results for non single-pixel ROIs
+
+2024-04-16 (XM)
+- Fixed sticky busy icon
+- Renaming VIs and updating libraries
+
+2024-04-14 (XM)
+- Fixed missing case of identical min and max in image data export to TIFF
+
+2024-04-12 (XM)
+- Fixed bug (introduced in 0.83) in Overlay of Decay Parameters Map resulting in a transposition of the overlay
+
+2024-04-11 (XM)
+- Changed default name of Multiple ROIs file to include the name of the dataset
+- v0.86 release
+- v0.87.dev
+- Fixed bug in Load Fit Parameters Map hdf5 file
+- Fixed bug in Local Decay Fit Plot
+- Fixed a corner case bug in using the min and max percentile of a decay for NLSF analysis
+- Reverted Default Max Percentile in Fit Options to 1
+- Changed the Max and Min Percentile range to [0, 100] (from [0, 1])
+
+2024-04-10 (XM)
+- Fixed Default Max Percentile in Fit Options to 0
+- code cleanup: removing deprecated code
+
+2024-04-09 (XM)
+- Fixed default folder in "Save Phasor Ratio Reference(s)" dialog
+
+2024-04-08 (XM)
+- Fixed occasional slow ROI Decay Analysis
+
+2024-04-06 (XM)
+- Fixed and updated Image Auto-Contrast option
+- Added Lower and Upper Percentile Targets in the Image Histogram Panel
+- Added Delete ROIs based on Statistics option in the Source Image ROIs menu
+
+2024-04-05 (XM)
+- Fixed empty phasor added to Phasor Graph (when an invalid decay was generated)
+- Added "Set Reference n to User-entered Lifetime" menu items to Phasor Graph & Phasor Plot
+- Added placeholder for "Find Selected ROI" in Source Image	
+- Refreshed icon	
+- v0.86.dev
+
+2024-04-04 (XM)
+- Fixed slow single-pixel ROI to Decay extraction, speeding up related pixel-based analyses
+- v0.85.1 release
+
+2024-03-31 (XM)
+- v0.85 release
+
+2024-03-28 (XM)
+- Added (Rotated) Rectangle Image Profile
+
+2024-03-27 (XM)
+- Fixed bug in Image Histogram busy icon
+- Added template for rectange-averaged Image Profile
+
+2024-03-24 (XM)
+- Minor cosmetic fixes
+
+2024-03-23 (XM)
+- Fixed non-functional Intensity Time Trace computation when processing a Series
+- Fixed unresponsive "Use File Time Stamp" checkbox in Intensity Time Trace panel
+- Fixed bug that would not load a common background correction in a Series Sum calculation (only the first dataset in the series would be corrected)
+- Fixed bug that required the user to select the gate channel of all SS3 datasets in a series
+- v0.85d
+
+2024-03-15 (XM)
+- libraries update
+
+2024-03-13 (XM)
+- libraries update
+
+2024-03-12 (XM)
+- VIs location changed
+
+2024-03-08 (XM)
+- Fixed broken loading of .phplot files in Phasor Graph
+- v0.84 release
+
+2024-03-07 (XM)
+- Fixed bug in transcription of date/time information for PI Imaging dataset in the Dataset Information window
+- Code refactoring in Image contrast to handle mysterious "Missing Image" error
+
+2024-03-04 (XM)
+- Fixed behavior of "Use File Timestamp" in Intensity Time Trace panel and Settings
+- 0.84dev
+
+2024-02-27 (XM)
+- Speed up of Source Image responsiveness when an image overlay is applied
+- v0.83 release
+
+2024-02-26 (XM)
+- Moved VIs around
+
+2024-02-25 (XM)
+- Added options to blend overlay color to background image in Source Image and Phasor Plot
+
+2024-02-24 (XM)
+- Fixed broken Phasor Ratio Map Palette selection menu
+- Fixed timeout bug slowing GUI response
+
+2024-02-23 (XM)
+- Added Overlay scaling to background pixel color when choosing "scale overlay with image intensity"
+- Fixed bug that prevented highlighting phasor ROI in Source Image
+
+2024-02-22 (XM)
+- renaming of VIs
+- Modification of Adjust Pixel Overlay Brightness.vi to support transparency
+
+2024-02-21 (XM)
+- Added style options to the Phasor Plot Settings tab
+
+2024-02-17 (XM)
+- Fixed broken loading of Image Folder without metadata (which would erase stored settings)
+- Fixed parsing of version history
+- v0.83dev
+
+2024-02-14 (XM)
+- Fixed bug in Gate Image Folder loading which would fail to load non-PI Imaging datasets
+- v0.82.1 release
+
+2024-02-07 (XM)
+- Deprecated "Simple Search" algorithm when using the Phasor Calibration Map option
+- Fixed a bug that could set the wrong frequency for subsequent calculation when manually exporting a plot to the Phasor Graph
+- Improved responsivity to Image Histogram Cursor Move events
+- Added Dialog allowing to use the frequency of the calibration phasor (or phasor map/phasor series) if it is different from the current phasor frequency
+-v0.82 release
+
+2024-02-06 (XM)
+- Fixed a bug with Mouse Move events in Image Display & Phasor Plot introduced in v0.81 which broke a number of UI functionalities.
+
+2024-02-05 (XM)
+- Added "Shot Noise Influence on Average Lifetime" to the Analysis>>Tools menu
+- v0.82
+
+2024-02-04 (XM)
+- Added Shot Noise Influence on Average Lifetime analysis tool
+
+2024-02-03 (XM)
+- Simplified running VIs check on shutdown
+- v0.81 release
+- minor edits
+
+2024-02-02 (XM)
+- Added workaround to the bit padding implemented in SPAD512 software (no need to use Dataset scaling, which only applied after pile-up conversion)
+
+2024-02-01 (XM)
+- Edited Threshold Max Image to ROIs.vi and moved it to Image.lvlib
+- Added "Dataset Scaling Factor" to Settings:Data Information (to check out some bogus SPAD512^2 files)
+- Skipping "Gate Steps" parameter in PI Imaging PNG metadata, as it is erroneous for some image bitness
+
+2024-01-29 (XM)
+- re-introduced flags for UI-related mouse move actions
+- fixed missing "Slope" metric plot and data in IRF extraction
+
+2024-01-23 (XM)
+- Moving more VIs to their corresponding libraries
+
+2024-01-22 (XM)
+- Added checkbox "Draw Reference Segment" in Settings>>Phasor Plot
+- v0.81dev
+
+2024-01-17 (XM)
+- Fixed missing hdf5.dll library in standalone version
+- re-release of 0.80
+
+2024-01-16 (XM)
+- Redesigned (again) event filtering
+- Fixed Notebook reopening with the default Notebook name even when saved (and sometimes with empty content)
+- v0.80 release
+
+2024-01-15 (XM)
+- Refactoring: moving VIs in libraries
+- Added progress bar when file loading
+- Redesigned event filtering to actually be able to reject dupicates being detected within 30 ms from one another
+
+2024-01-14 (XM)
+- Added ROI description in Time Series Analysis Notebook output if the ROI is not one of the stored ones
+- Added "Image Histogram Cursor Move", "Decay Fit Parameter Map Display Range Mouse Move", "Phasor Plot Display Range Mouse Move" and "Time Series Slider Move" to the list of event to filter out to avoid consecutive duplicates
+- Rearranged cases related to Image Histogram contrast
+
+2024-01-13 (XM)
+- Changed menu location of Multi-ROI Single-Pixel scripts, now located in the Analysis menu
+- Refactoring by moving many VIs into libraries (and in different folders than originally)
+
+2024-01-12 (XM)
+- Fixed bug in Sum All FLI Datasets in Series
+
+2024-01-11 (XM)
+- Implemented support for Piccolo histogrammed .bin files and series
+
+2024-01-09 (XM)
+- Added Load .bin FLI Dataset & Dataset Series(Piccolo) to File menu
+- Started coding these two functions
+
+2024-01-08 (XM)
+- removed last connection to control references in Event Loop
+- fixed plot transposition when computing Parameter 2 vs Parameter 1 in Phasor Graph
+
+2024-01-07 (XM)
+- AlliGator Event Loop refactoring (cont'd): removed dependency to single control references in Event Loop
+- upgraded to v 2.15.0.149 of h5labview2 library (which should in principle dispense from having to install the HDF5 library separately)
+- updated DLLs included in executable (tested in a mock release of v0.80dev)
+
+2024-01-06 (XM)
+- Added Filtering of non-repeatable consecutive actions
+- Moved Phasor/Image Mouse Move Event handling to Phasor Plot Action Loop
+- Moved Phasor/Image Mouse Up Event handling to Phasor Plot Action Loop
+- Fixed bug whereby when opening a child window, clicking into the Image panel would result in a black background
+- Fixed unresponsive "Check for update" menu item
+- v0.80dev
+
+2024-01-05 (XM)
+- Fixed "forgotten" calibration when refreshing the Phasor Plot
+- Fixed mix-up between two SDV options in Multiple-ROI Phasor calculation
+- Fixed a bug that would return an error when using 1/D as the phasor Frequency to use when exporting a decay's phasor to the Phasor Graph
+- Fixed "Export JSON string to clipboard" in Settings>> Phasor Frequency controls.
+- v0.79.2
+
+2024-01-04 (XM)
+- Fixed bug in calculation of calibrated phasor when SDV calculation option is on
+- Fixed bug in calculation of calibrated phasor when Use Estimated Average Phasor option is on 
+- v0.79.1 released
+
+2024-01-04 (XM)
+- Fixed Remove Selected Plots in Phasor Graph
+- v0.79 release
+
+2024-01-03 (XM)
+- Fixed inexplicable IMAQ Get Pixel Value Error -1074396120 by using an EDVR call?
+- Fixed long-standing bug in Phasor Graph where the internal state wasn't updated properly when one or more plots were deleted from the graph (clearing the graph was behaving as expected)
+
+2024-01-02 (XM)
+- Fixed erroneous display of Average Lifetime range in Settings>>Phasor Plot
+- Fixed missing internal update of Phasor Ratio/Average Lifetime Display Range parameter
+- Fixed Phasor Ratio/Average Lifetime overlay responsiveness
+- Added "Close" sub-menu to the File menu (e.g. Closing a Dataset Series before switching to an individual dataset is recommended to avoid future data confusion).
+
+2024-01-01 (XM)
+- Debugging of Phasor Map calibration (cont'd)
+- Fixed long "Highlight Image ROI in Phasor Plot" step when loading new dataset
+- Phasor Ratio Color Scale is now updated according to "Color Map Type"
+- Fixed sluggish Phasor Plot Reference user-controlled motion
+- Added dialog to remind the user that references are needed to compute a phasor ratio or average lifetime overlay
+
+2023-12-31 (XM)
+- Debugging of Phasor Map calibration
+
+2023-12-30 (XM)
+- Fixed bogus message when loading a new file with the same background subtraction parameters as the previous one
+- Fixed downloading and installing of new version
+- Fixed truncation of Folder Name when dealing with Gate Image folder
+- Changed the way a failure of "Simple Search" calibration algorithm is handled: now return the "Min Distance" calibration.
+
+2023-12-29 (XM)
+- VI Icon update, Renaming & Moving
+- Trying to fix the lack of Phasor update when one of the calibration-related parameters is changed
+
+2023-12-28 (XM)
+- Fixed Background Series support
+- Discovered Bug in Phasor Graph data storage
+- VI Name change and relocation
+
+2023-12-27 (XM)
+- Added "Transpose Plot", "Merge Selected Plots", "Plot Histogram" to Decay Graph
+- Added support for "Date taken" and "Time taken" of SPAD512^2 files
+- Added support for Background Series
+- v0.79
+
+2023-12-24 (XM)
+- Simplified some DVR uses and fixed some DVR issues
+- v0.78.1
+
+2023-12-22 (XM)
+- Fixed bug that would prevent reloading of dataset when the background dataset type is different from that of the dataset type (e.g. HDF5 vs Gate Folder)
+- v0.78 release
+
+2023-12-21 (XM)
+- Removed "Pixel-to-Pixel" calibration option (now automatically applied when a full image calibration map is stored)
+- v0.78
+
+2023-12-20 (XM)
+- Fixed bug in pixel-to-pixel phasor map calibration
+- Fixed bug preventing loading old phasor calibrations and phasor calbration maps
+- Moved Analysis>>FLI Dataset>>Multiple ROI Analysis>>Multi-ROI Single-Pixel NLSF and Phasor Analysis to Scripts menu
+- Code refactoring
+
+2023-12-19 (XM)
+- Fixed typo in Settings window
+- Fixed bug in Fit Parameters Options which ignored the "Numerically Estimated" option unless the array of Guess Parameters was empty
+- Added "Move Flattened Series to Folder Series" menu item in File Menu (to deal with SPAD512 flattened output)
+- v0.77.1
+
+2023-12-16 (XM)
+- Consolidated "All ROIs NLSF Analysis>>Non-Interactive (Fast, Common IRF)" and "... (Fast, Individual IRF)" menu items, the option being set by the "Settings>>Fluorescence Decay>>Fit Options>>Use Local IRF" parameter
+- v0.77 release
+
+2023-12-15 (XM)
+- Support for amplitude- or intensity-averaged lifetime output in FLI Dataset Series>>Series Phasor Analysis
+- Support for Phasor Ratio and Averaged Lifetime SDV in FLI Dataset Series>>Series Phasor Analysis
+
+2023-12-14 (XM)
+- Added support for greyscale RGB images
+- Changed ROI connectivity to 4 in ROI Mask to ROI conversion
+- Fixed Complementary ROI calculation
+- Fixed missing shortcut menu items in Source Image ROI Manager
+
+
+2023-12-13 (XM)
+- Fixed Add'l Parameters output dialog behavior
+
+2023-12-12 (XM)
+- Code cleanup
+- Implementation of parameter SDVs in "Export Phasor Plot Add'l Data" in Phasor Graph
+
+2023-12-11 (XM)
+- Support for pixel-wise phasor calibration map in non-phasor plot operations
+
+2023-12-08 (XM)
+- Renamed "FLI Dataset Modified" to "FLI Dataset Modified since Last Phasor Plot Calculation"
+
+2023-12-07 (XM)
+- Phasor Plot calculation refactoring
+- Added "Pixel-to-Pixel" Phasor Map Calibration for significant speed up in cases where the Calibration Map is computed for all pixels in the dataset
+- v0.77
+
+2023-12-06 (XM)
+- Fixed online version check (no message if installed version is the same as latest release)
+- Fixed bug where deactivating Phasor Calibration Map did not result in a Phasor Plot update
+
+2023-12-05 (XM)
+- Refactored Save FLI Dataset to HDF5 for reuse
+
+2023-12-03 (XM)
+- Added "Use Estimated Average Phasor" checkbox as part of the phasor standard deviation option in Settings:Phasor Graph
+- v0.76 release
+
+2023-12-02 (XM)
+- Removed list of "Phase Lifetime vs Parameter" scatter plot sub-menu as being superseded by "Parameter 2 vs Parameter 1 Scatter Plot"
+- Added "Time Stamp" and "Index" to the list of parameters usable in "Parameter 2 vs Parameter 1 Scatter Plot"
+- Removed "Phase Lifetime Trajectory" as being superseded by "Parameter 2 vs Parameter 1 Scatter Plot"
+- Fixed "Copy Image to Clipboard" resulting in a temporarily intermediate window briefly showing up.
+
+2023-12-01 (XM)
+- Implemented computation (and saving) of array of Parameter 2 vs Parameter 1 scatter plot in Muli-ROI Single-Pixel Phasor Analysis
+- Set # processors used during initialization
+
+2023-11-30 (XM)
+- Added "Parameter 2 vs Parameter 1 Scatter Plot" in Phasor Graph
+- Fixed bug in Amplitude Phasor Ratio SDV calculation
+
+2023-11-29 (XM)
+- Fixed bug with Broken Line ROI and Local Decay Display resulting from this extension to any kind of ROI
+- Fixed Harmonic Frequency context menu in Settings:SEPL panel
+- Shortened list of information sent to the Notebook (in verbose mode) when a new Phasor Plot is calculated
+- Removed Source Image:Average Dataset Sum, Source Image:Use Phasor Plot Binning settings parameter (deprecated)
+- Added Phasor Calibration Options, Gate Name, Gate Arithmetic, etc. as flags for Phasor Plot update
+- Better update of Phasor Plot Color Scale (?)
+- v0.76
+
+2023-11-28 (XM)
+- Updated Local Decay Graph to display decay for any kind of ROI (TBD)
+
+2023-11-27 (XM)
+- Removed "Remove NULL character at the end of path" as the corresponding bug has been fixed
+
+2023-11-26 (XM)
+- v0.75.2
+- Fixed update of Fit Options:Laser Period when loading a new file and Use Data Information Laser Period = TRUE
+- Fixed last version detection
+- v0.75.2 release
+- Fixed loading of metadata in the case of folders of gate image folders (for PI Imaging data)
+- Added support for Gate Integration for PI Imaging data
+
+2023-11-22 (XM)
+- Used optimized Chi^2 location (parabolic estimation) to compute curvature, but return the minimum of all fitted results as best fit offset
+- v0.75.1 release
+
+2023-11-21 (XM)
+- VI names update
+- Fixed "Use Data Information Laser Period" update
+- Found a problem with the Optimized Offset parameter extraction: temporarily disabled
+
+2023-11-20 (XM)
+- Changed "2-Plot Algebra" to "Two-Plot Algebra"
+
+2023-11-19 (XM)
+- Better fix of All ROIs NLSF Analysis>>Non-Interactive (Fast, Individual IRF) bug without removal of parallelism
+- Deprecation of "second pass" attempt to improve fit in that script
+- v0.75 release
+
+2023-11-18 (XM)
+- Fixed a bug in All ROIs NLSF Analysis>>Non-Interactive (Fast, Individual IRF) that resulted in incorrect fit results (fixed at the expense of parallelism, making the process slower)
+
+2023-11-15 (XM)
+- Removed extra pixel in Image Profile for Polygon contours
+- Renamed/changed icons of a few VIS
+
+2023-11-14 (XM)
+- Support for "Polygon" ROI Image Profile (the ROIs created via "Create ROIs with Intensity above Min" are Polygons)
+
+2023-11-13 (XM)
+- v0.75
+- Output of both amplitude- & intensity-averaged lifetime and phasor ratio in average phasor calculation (Phasor Graph right-click menu)
+- Amplitude- or Intensity-averaged lifetime shown on Phasor Graph now matches that displayed in the Notebook (when the phasor SDV option is not selected, it is the value computed from the actual decay, while when that option is selected, it is the average of all replicas) 
+
+2023-11-12 (XM)
+- Does not compute Phasor SDV when the decay is normalized
+- Updated Phasor SDV calculation to handle negative intensity value case
+- Cosmetic changes to Settings Window
+- v0.74 release
+
+2023-11-10 (XM)
+- Added support for PI Imaging PNG Metadata information
+- Fixed Check for Updated version
+
+2023-11-09 (XM)
+- Added "Convert (All) ROI(s) to Mask Image" menu item to Source Image
+ 
+2023-11-08 (XM)
+- v0.74b1 release
+
+2023-11-07 (XM)
+- Implemented Modulus Lifetime SDV
+- Output of phase lifetime, modulus lifetime and when possible, phasor ratio, amplitude-average lifetime and intensity-averaged lifetime (and their SDVs) to the Notebook when plotting a new phasor in the Phasor Graph
+
+2023-11-06 (XM)
+- Implemented calibrated phasor SDV
+- Implemented update of SDVs in Phasor Graph panel when a new phasor is computed
+
+2023-11-03 (XM)
+- Implemented SDV of Amplitude-Averaged Lifetime
+
+2023-11-01 (XM)
+- Implemented SDV of phase lifetime calculation (and added corresponding indicators on Phasor Graph panel)
+
+2023-10-31 (XM)
+- Restored deprecated ctrls for an old tool
+- Implemented calculation of Phasor SDV
+- Added indicators for the derived quantities in the Phasor Graph panel
+- Expanded the Phasor Graph panel to the right as a consequence (and increased size of graphs in other panels)
+
+2023-10-30 (XM)
+- Added Test Spectral Filters in Tools
+
+2023-10-25 (XM)
+- Moved Phasor Explorer project and associated VIs to Phasor folder
+- Moved some non-phasor specific VIs to other folders (e.g. Math, XY Graph)
+
+2023-10-20 (XM)
+- Replaced phasor from decay calculation by sine/cosine with complex number calculation
+- Removed some EDVR with plain by plain array copy
+- Renamed Phasor folder as AlliGator (and fixed resulting conflicts)
+
+2023-10-14 (XM)
+- Rearranged/renamed Decay Graph shortcut menu
+- Removed "Interpolate Plot" (not functional)
+- Implemented Multiple Plot processing for: denoise, extrapolate, fold, shift, smoothen, smoothen tail, straighten
+
+2023-10-13 (XM)
+- Implemented Multiple Plot processing for: 1-normalization, [0-1]-normalization, rebin, cumulative function
+
+2023-10-12 (XM)
+- Added "Process Single Plot/Selected Plots/All Plots" option in Decay Graph
+
+2023-10-01 (XM)
+- Fixed missing Settings>>Data Information>>Gate Separation update
+- Simplified Image Histogram Options (default: 256 bins)
+
+2023-09-30 (XM)
+- Added option to enforce that the laser period used in fitting is identical to that of the Data Information
+- Added IRF Deconvolution option to use the IRF tail slope as selection criterion
+- Replaced outliers by zero in deconvolved IRFs
+
+2023_09_29 (XM)
+- Fixed SEPL parameter updates in Settings
+- Fixed missing gate exposure, duration and integration time information in saved HDF5 FLI dataset
+
+2023-09-28 (XM)
+- Added "Pair Selected Plots" menu item in Lifetime & Other Parmeters graph to combine the Y axes of two plots into a single Y2 vs Y1 plot
+- Fixed New version check
+
+2023-09-25 (XM)
+- Changed Phasor Plot calculation message to optional (only visible when "Verbose Mode" is on)
+- Set new Default Cursor Style to a more contrasted one
+
+2023-09023 (XM)
+- v0.74
+- Fixed "Load/Save Reference(s)" menu item in Phasor Plot
+- Added Option in Decay Graph to Export a plot's phasor using the natural frequency 1/D
+- Added option to ignore differences in phasor frequencies in Phasor Graph >> Phasor Multiplication
+- Locked panel splitters
+
+2023-09-18 (XM)
+- Fixed bug using different source for Laser Period parameter in NLSF fit and fit display
+- Added shortcut menu "Use Data Information >> Laser Period" in Fit Options
+- Fixed Dataset Image update when loading new file
+- v0.73 release
+
+2023-09-17 (XM)
+- Updates Decay Fit Parameters Map when fit is completed
+- Deprecated Fit Status Window (for performance improvements)
+
+2023-09-16 (XM)
+- Implemented "Merge Selected Plots" and "Sliced Mean & SDV Plots" in Lifetime & Other Parameters Graph
+
+2023-09-15 (XM)
+- Added Decay Preprocessing Options & Reference Decay in the data saved with a Fit Parameter Map file
+
+2023-09-14 (XM)
+- Implemented Min of All Gates throughout AlliGator
+
+2023-09-13 (XM)
+- Changed Settings>>Fluorescence Decay>>Fit Parameters>>Guess Parameter Options to drop-down list instead of series of checkboxes
+- Implemented plot of Decay Fit Parameter vs Intensity (Baseline-subtracted)
+
+2023-09-12 (XM)
+- Implemented plot of Decay Fit Parameter vs Intensity
+
+2023-09-11 (XM)
+- Fixed a bug in High Count Image Pixel Rejection which would reject all pixels when the "Reject High Count Puxels" option was selected
+
+2023-09-05 (XM)
+- Added dialog during background subtraction, to allow using files datasets with different properties (e.g. laser period)
+
+2023-09-02 (XM)
+- Now loading SSX Detector Information from HDF5 and adding it to the metadata
+
+2023-08-28 (XM)
+- Added Compute & Plot All ROIs Statistic
+- v0.73a1
+
+2023-08-10 (XM)
+- v0.72 release
+
+2023-08-03 (XM)
+- Changed menu items from "Open" to "Load"
+- Added "Save Mask Image" menu item
+- Prevented multiline input in Settings>>Plugins>>Python Version				
+
+2023-07-30 (XM)
+- Tried to fix random Background Subtraction error by removing image size comparison: not the issue
+
+2023-07-29 (XM)
+- Added Auto-Adjust Contrast to saved Settings
+- Minor updates to Decay Graph context menu
+- Removed useless Channel Arithmetic Combinations and added (1-G2/INT)*<INT>
+
+2023-07-28 (XM)
+- Changed "INT-normalized" Channel Arithmetic to G2/INT*<INT>
+
+2023-07-27 (XM)
+- Dual-Channel Arithmetic code refactoring (to be debugged)
+- Added Dataset Arithmetic Images to Internal Variables
+
+2023-07-26 (XM)
+- Changed "# Bins" Image Histogram single option to full-fledged "Image Histogram Options"
+
+2023-07-24 (XM)
+- Reordered FLI Dataset Series actions
+- Fixed truncated accumulated file name when the folder name contained a period
+
+2023-07-21 (XM)
+- Fixed Hot Pixel Removal options Notebook message
+
+2023-07-18 (XM)
+- Fixed bug in faster Hot Pixel Removal code
+
+2023-07-14 (XM)
+- Fixed bugs in ROI Statistics which would fail when encountering Inf or NaN or Negative values
+
+2023-07-13 (XM)
+- Improved Hot Pixel Mask Image support
+- Processing of border of images when removing hot pixels
+
+2023-07-12 (XM)
+- Fixed bug in histogram option preventing IRF square gate fits to work
+- Added "Save Image as Hot Pixel Mask" to Source Image context menu
+- Added "Use Hot Pixel Mask" and "Hot Pixel Mask Image" to Settings>Source Image Hot Pixel Removal Options
+
+2023-06-26 (XM)
+- Added support for Dataset Channel switch without Dataset Reloading (when Channel Arithmetic = None)
+- v0.71 release
+
+2023-06-25 (XM)
+- Added Save dual-channel FLI Dataset to HDF5
+
+2023-06-24 (XM)
+- Fixed glitch in Gate Selection Dialog which sometimes opened with a "-1" selection
+- Skip Gate Selection Dialog when a single gate type is available
+- Fixed bug improperly applying pile-up correction to Background Dataset
+- Fixed bug that would overwrite Gate Selection when using background correction		
+
+2023-06-23 (XM)
+- Fixed Histogram update when changing Gate Slider position
+- Fixed bug in Histogram calculation when the first array element is NaN or Inf
+- v0.71 beta 3
+
+2023-06-09 (XM)
+- Changed Phasor Plot Destination (in Phasor Algebra tools) to enum (from 3-radio buttons control)
+
+2023-06-07 (XM)
+- v0.71 beta 2 internal release
+
+2023-06-06 (XM)
+- Added "Overlay Analyzed ROI Center" option in Settings->Source Image (Default: False)
+
+2023-06-06 (XM)
+- Added "Auto-Adjust Contrast" option in Image Histogram panel
+- Optimized noise level in Extrapolate Decay (only applies to decays that are not normalized)
+
+2023-06-05 (XM)
+- Typedef icons update
+
+2023-06-02 (XM)
+- Refactoring of ROI to Pixels
+
+2023-06-01 (XM)
+- Fixed cosmetic glitch in Phasor Plot display of local phasor information
+- Added support of Drag & Drop loading of Phasor Ratio References
+- Fixed Image Profile display of Average Lifetime
+- v0.71 beta 1 release
+- Removed duplicate vertices in Freehand Tool ROIs
+- Added "ROI Description Max Characters" to Settings>>Miscellaneous
+- Phasor folder mass compilation
+
+2023-05-31 (XM)
+= Added Average Lifetime Profile to Image Profile Window Plots (when the Average Lifetime is selected as Overlay Type in the Settings>>Phasor Plot panel)
+- v0.71
+
+2023-05-30 (XM)
+- Fixed Local Decay Window not quitting properly when AlliGator closes
+- Changed Default Fit Options Parameters to lower values to improve convergence and fit speed
+- v0.70 release
+
+2023-05-26 (XM)
+- Fixed Fit Display output (and handling of offset parameter in convolution)
+- Added parallelism in some multi-ROI scripts
+- Fixed corner case of invalid Hessian matrix
+
+2023-05-25 (XM)
+- Checking Fit Display output 
+
+2023-05-24 (XM)
+- Changed criterion for selection of "Best of All" Fits to max R^2 instead of min Chi^2 (since the Chi^2 is computed without weights for an unweighted fit)
+- Used parabolic interpolation to estimate best offset
+- Computation of offset uncertainty 
+
+2023-05-23 (XM)
+- Fixed NaN parameter uncertainty when one of the parameter gradients equals 0
+
+2023-05-09 (XM)
+- Implemented new fitted offset approach (v4) for 2-Exp
+
+2023-05-08 (XM)
+- Fixed Local Decay Window display of fit & residuals when using the new fitting approach
+- Implemented new fitted offset approach (v4) for 1-Exp
+
+2023-05-05 (XM)
+- Debugging of 2-Exp fit
+- Fixed round-off error preventing a zero offset to be reached when letting the offset parameter float
+- todo: set offset range to 0 if not in constraint
+	treat offset as a regular parameter
+
+2023-05-04 (XM)
+- continued refactoring Decay Fit to use sqrt(tau) as fitted parameter internally
+2023-05-02 (XM)
+- Switched to fitting the square root of lifetimes to enforce positivity
+
+2023-05-01 (XM)
+- Fixed bug in Settings which used stale values of Decay Shift Parameters
+- Fixed bug in Load Plot(s) dialog which would not show the abscissa options on first call.
+- Added Use Legacy Fitting Approach checkbox to Fit Options
+- Added support of Legacy Fitting Approach in Settings>>Decay Analysis>>Fit Options
+- Implemental Analytical Computation of Partial Derivatives for NLSF Fit
+
+2023-04-27 (XM)
+- Implemented Fixed Parameters Multi-Exponential Decay Fit
+
+2023-04-26 (XM)
+- Implemented Circular Convolution by FFT
+- Modified Sequence of actions in Decay Fit (important change)
+
+2023-04-25 (XM)
+- Trying to shave off some time on convolution product
+
+2023-04-24 (XM)
+- Minor edits to Phasor Math Dialog Window
+
+2023-04-23 (XM)
+- Implementation of Plot Deconvolution
+- Plot Deconvolution debugged
+
+2023-04-22 (XM)
+- Fixed "Load Plot(s)" plot format dialog default separator
+- Added working option to specify a User-Defined separator
+- Clean-up and refactoring of convolution code
+- Added Decay Graph "Plot Convolution" menu item
+
+2023-04-19 (XM)
+- Moved VIs to Image folder
+
+2023-04-18 (XM)
+- Support for Multi-ROIs Single-Pixel NLSF Fits with common IRF (handles parameters map properly although it only contains one IRF)
+
+2023-04-17 (XM)
+- Grayed out Global Fit of Selected Plots in Decay Graph
+- Reverted to old algorithm to define min/max color handling
+- Added display of phasor information when moving reference in Phasor Plot
+- v0.69 release
+
+2023-04=14 (XM)
+- Associate correct axes to Parameter Plots in Lifetime & Other Parameters Graph
+
+2023-04-13 (XM)
+- Check that a ROI is selected before starting a Series analysis
+
+2023-04-12 (XM)
+- Fixed Low/High color thresholding broken by the previous update
+
+2023-04-11 (XM)
+- updates due to changes in IVIS FRET (to be debugged)
+
+2023-04-09 (XM)
+- Optional White Light Image background subtraction
+- Notebook message when single image is processed (Mask or White Light)
+
+2023-04-08 (XM)
+- restored Series Phasor Analysis menu item
+
+2023-04-06 (XM)
+- Added IRF Deconvolution Metrics option in Settings
+- Fixed mangled Notebook output for IRF Deconvolution
+- Fixed Drag & Drop of Plots into the Lifetime & Other Parameters Graph
+
+2023-04-05 (XM)
+- Using a transparent color for Phasor ROI/Image ROI highlight erases the corresponding highlight
+- Skip highlight if not Phasor/Image ROI is defined
+- Added Background Correction & Gate Arithmetic to Dataset Series Sum
+- Fixed AlliGator sluggishness (bug in Source image overlay copy)
+
+2023-04-04 (XM)
+- Removed consecutive elements in AlliGator Queue event loop
+- Fixed a bug preventing Gate Image Series Analysis (Fitting)
+
+2023-04-03 (XM)
+- Added Multiplot Math item in the Plot Math submenu of the Decay Graph
+- Added support for Mask Images comprised of 0 and 255 only
+
+2023-04-02 (XM)
+- Fixed a bug making submenu items inactive in Decay Fit Parameters Map
+
+2023-03-19 (XM)
+- Fixed a bug in Multiplot loading when each plot is comprised of two axes (no common axis)
+- Fixed a bug that prevented loaded Plots from being fitted unless a script had been run.
+
+2023-03-16 (XM)
+- Experiencing sluggishness after a few files: I recommend not upgrading or if so, downgarding to 0.67
+- Replacement of residual Double Historam (G).vi by 1D Histogram (G) v4.vim
+
+2023-03-13 (XM)
+- Modification of Image Contrast handling to a more natura behavior of the "Low Value" color.
+
+2023-03-12 (XM)
+- Modifications to support SwissSPAD Live File version 0.7
+- Corrected bug in 1D Histogram that affected Image Histogram (among other things)
+- v0.69
+
+2023-03-11 (XM)
+- Added Source Image Overlays as option to the Erase button in Phasor Plot
+- Added busy icon for additional tasks
+- Fixed glitches in Erase Source Image Overlay
+- Improved Phasor Plot decorations (ticks, labels and references ROI)
+- v0.68.1 release
+
+2023-03-10 (XM)
+- Added warning message in Multiple ROIs Multi-Pixel script dialog to remind the user to define Settings for the Dataset (and/or IRF)
+- Loading ROIs(s) by drag & drop now returns a Notebook message
+- Speed up of Phasor Plot calibration by Phasor Calibration Map in the Phasor Graph
+- Fixed Send All Settings to Notebook
+
+2023-03-07 (XM)
+- Minor updates & cosmetic changes
+- v0.68.1
+
+2023-03-05 (XM)
+- Cosmetic changes to AlliGator main window
+- Improved Notebook message when loading calibration and after Phasor Plot calculation
+- Added option to not store the Phasor Harmonics computed for each Phasor Plot
+- v0.68 release
+
+2023-03-04 (XM)
+- Added Phasor Plot Calibration Algorithm option: "Simple Search" or "Min Distance"
+- Better support of "Backup Calibration Option" to enable combining "Simple Search" Map Calibration for the calibrated ROI(s) and "Single Calibration" for the remainder of the image
+
+2023-03-03 (XM)
+- Faster Phasor Plot calibration
+- AlliGator Calibration menu checkmark validation at startup
+- Added option to display Phasor Calibration Map ROI Centers on Source Image (Calibration>>Show Phasor Calibration Map ROI Centers)
+- Fixed a bug that would erase all overlays each time the Source Image was updated
+
+2023-03-02 (XM)
+- Minor improvements to calibration map handling
+- Cosmetic change to ROI loading
+- Addition of a 4th Phasor Multiplication/Division operation using a user-input phasor
+- Made all operations in the Phasor Algebra GUI optional
+- Fixed a bug in Phasor Calibration that would compute |g| instead of g
+- Simplified internal computation of calibration
+
+2023-03-01 (XM)
+- Implemented Phasor Graph Algebra GUI and code
+
+2023-02-28 (XM)
+- Fixed a bug in ROI to individual pixel ROI conversion (skipped when the ROI is not a closed shape)
+- Fixed a bug preventing output of Settings to the Notebook
+- Changed Phasor Calibration Type 'No' to 'None'
+- Moved 'Compute Optimal Calibration from Phasor References' Phasor Graph menu item
+
+2023-02-25 (XM)
+- Added Busy Icon Status & Message Storage VI
+
+2023-02-23 (XM)
+- Fixed bug in Image Histogram that would slow down calculation for large images
+- Added Bin Number option in Histogram options (Settings>>Miscellaneous)
+
+2023-02-18 (XM)
+- Corrected typos in Notebook messages
+- Added Phasor Graph output message
+- Fixed bug erasing gate parameters when loading Gate Folder without metadata file
+
+2023-02-17 (XM)
+- Fixed erroneous update of internal variables when a decay is invalid
+- Fixed generation of empty plot, bogus phasor, etc. when a decay is invalid (i.e. empty)
+
+2023-02-02 (XM)
+- Fixed missing progress bar in Multiple ROIs Analysis>>All ROIs Decay Fit Non-Interactive (Fast)
+
+2023-01-30 (XM)
+- Minor Settings code cleanup
+
+2023-01-26 (XM)
+- Fixed error returned if an image folder is missing a metadata file: no returns a warning only
+- v0.68
+
+2023-01-23 (XM)
+- v0.67 release
+
+2023-01-19 (XM)
+- Fixed bug preventing from deleting a Phasor Plot in the Phasor Graph
+- Fixed a bug preventing highlighting Image Source ROIs in the Phasor Plot
+- Added New Decay plot message
+
+2023-01-15 (XM)
+- Fixed Phasor Plot error thrown when no Phasor Ratio References are defined.\
+- Fixed unresponsive "FLI Dataset Series" menu items
+
+2023-01-14 (XM)
+- Basic structure of Image Histogram Panel developed
+
+2023-01-13 (XM)
+- Started developing graph subpanels: Image Histogram
+
+2023-01-08 (XM)
+- Added Abort button and Progress Bar during FLI Dataset saving
+- Improved Notebook message after FLI Dataset saving
+- Made AlliGator window resizeable to allow larger Source Image display
+
+2023-01-05 (XM)
+- Added option to precede a Python Plugin idem menu by a separator, by starting the function's name with an underscore
+- Better error reporting for Python Plugins
+- Added "Process Multiple Plots" submenu to Decay Graph as a Python Script. First function: Linear Combination (Selected Plots).
+
+2023-01-04 (XM)
+- Removed requirement of providing a dummy plot in Decay Graph Python Plugin if no plot is output
+- Correspondingly, removed the requirement of an input parameters and/or output parameters section, if no such parameters is passed (for instance if the function's output is simply a string output to the Notebook, or a file, etc.)
+- Supports sending plots to other graphs than the Decay Graph (except the Phasor Graph)
+- Changed example Python Plugins script file names to XXX_Example.py to make it clear they are only examples
+- v0.67
+
+2022-12-31 (XM)
+- Improved Rise Time determination for Average Lifetime calculation
+- Added "All ROIs Average Lifetimes" to FLI Dataset menu
+- Fixed a bug in Python Plugins.zipped archive preventing from updating outdated Plugins
+- v0.66 release
+
+2022-12-30 (XM)
+- Added "Create Complementary ROI" function in the Source Image>>ROI context menu
+- Added "[0-1]-Normalize Decay" option in Settings>>Fluorescence Decay>>Decay Pre-Processing and as a function in Decay Graph>>Process Plot context menu
+
+2022-12-29 (XM)
+- Added Positive constraint on extracted IRF, by replacing negative values Y by a normally distributed values in N(0,|Y|/3)
+- Added option to use a smoothed metrics for Optimal IRF Extraction
+- Added corresponding Savitzky-Golay parameters in Settings (Number of Side Points, Polynomial Order)
+
+2022-12-28 (XM)
+- Added Average Lifetime Options: Baseline Percentage, Use IRF Offset?, Use Fixed Offset?, Fixed Offset
+- More robust offset finding algorithm
+
+2022-12-27 (XM)
+- Added Compute Average Lifetime to Decay Graph menu
+- Added Average Lifetime Options to Settings
+- Refactoring of some XY Graph VIs
+
+2022-12-20 (XM)
+- Added  'Found?' flag to Python Plugin Get Reference Decay.vi
+- v0.66
+
+2022-12-15 (XM)
+- Does not reset the Plugin Folder after the first run of a new version (allowing the user to remove plugins they are not interested in)
+- v0.65 release
+
+2022-12-14 (XM)
+- Went around a Python Node bug that transforms warnings into errors
+
+2022-12-13 (XM)
+- Fixed cosmetic glitch in Settings Window
+- Added Notebook output when resetting Python session
+- v0.65
+
+2022-12-12 (XM)
+- updated some error codes
+
+2022-12-04 (XM)
+- Removed FLINet_test.py plugin from released version
+- official v0.64 release
+
+2022-12-03 (XM)
+- Unknown error in Python is now followed by an automatic reset of the Python session
+- Fixed issues with passing String or Path parameter to Python Plugin
+- Support for Python Plugin in Analysis>>Decay Graph and Source Image menus
+- Added support for Python plugin user-input parameter description
+- Cleaned-up and renamed plugin examples
+- v0.64 release
+
+2022-12-02 (XM)
+- New installation does not overwrite Python Plugin files if they are newer than the version provided with the installer (kept in the data folder as a zip archive)
+- Need to convert path constants with '\' replaced by '/'
+- Tested FLINet plugin provided by RPI
+- v0.63.2
+
+2022-12-01 (XM)
+- Added 256 characters limit to ROI description output to Notebook (inactive in verbose mode)
+- Removed separate shortcut Ctrl+Shift+R for "Reload FLI Dataset Series" and used it instead to open the Image ROI Manager
+- Fixed bug where Python plugins in subfolders where duplicated
+- Python Plugins now can have identical names as long as they are located in different .py files
+- v0.63.1 release
+
+2022-11-26 (XM)
+- Changed Python plugin syntax to use ### for all lines intended for AlliGator decoding
+- Modified Output section to be similar to the Input section
+- Implemented basic example of output to the Decay Fit Parameter Map
+- Rewrote Image Source plugin example (similar to threshold plugin for dataset)
+- v0.63 release
+
+2022-11-25 (XM)
+- Added support for insertion of plugins in several locations (e.g. window menu and object menu), with one insertion point max per location
+- Added alligator.py type definition file
+- Implemented test_peak_intensity_mask using this approach
+- Started work on Decay Fit Parameter Map example
+
+2022-11-23 (XM)
+- Implemented revised version of test_plot_math__selected_plots__ with named tuple input and output (instead of dictionary as JSON string)
+- Added a few AlliGator Internal Data in the list of exportable plugin data
+- Moved AlliGator Export Plugin Parameters to Clipboard to GUI Actions loop
+- Added support for access to some internal data for plugins
+- Modified the test_plot_math__selected_plots__ to illustrate how to use it
+
+2022-11-22 (XM)
+- Implemented returning additional information in dictionary appended to an empty list of string provided as "dummy" input
+- Support for update of AlliGator parameters
+- Implemented a revised version of test_peak_intensity_mask with FLI Dataset input at a 3D numpy array, and additional parameters as dictionary (as JSON string)
+
+2022-11-20 (XM)
+- Reverted to passing the FLI Dataset as a 3D numpy array
+- Tested processing of mask image from dataset peak above threshold (need to decode output JSON string)
+
+2022-11-19 (XM)
+- Refactoring of Notebook messaging
+- Fixed bug in ROI Manager which showed a warning when the selected ROI ID > 10,000 (should only occur if 'Show All ROIs' is selected)
+- Added FLI Dataset and FLI Dataset Series Actions VIs and moved events across Actions VIs to better reflect which object they apply to
+- Move some Decay Actions to FLI Dataset and FLI Dataset Series Actions
+- Removed Ctrl+V shortcut to paste the Clipboard in Plot Editor
+- Check the Clipboard content before trying to paste it in the Plot Editor
+
+2022-11-18 (XM)
+- Continuing AlliGator refactoring to support Python Plugins for all major objects and Analysis submenus
+
+2022-11-17 (XM)
+- Refactoring of AlliGator to support the new API, where the script's target is defined in the script itself, not by the location of the script in a folder hierarchy (the latter is now ignored to give more freedom to users).
+- TBC
+
+2022-11-16 (XM)
+- Implemented new API for Decay Graph example
+
+2022-11-15 (XM)
+- Further development of Python Node dictionary output decoding
+
+2022-11-14 (XM)
+- Changed installation directory to C:\Users\UserName\AppData\Local in order to not require Administrator rights to install AlliGator or to modify files in the Python Plugins folders
+- Added "Python Plugins" button in Settings>>Plugins to open the Plugins folder
+-
+
+2022-11-13 (XM)
+- reduced number of call to Send Message to Notebook by refactoring of the different action loops
+- Added "# IsAlliGatorPythonPlugin" line to Python function to indicate it is a python plugin function
+- Formatted param_string of Python Plugin function to correct JSON format, so that the json.loads function can be used
+
+2022-11-12 (XM)
+- Implemented modified version of Python plugin interface using named tuples to pass core data in and out of Decay Graph plugins
+- v0.63
+
+2022-11-08 (XM)
+- Improved Background Subtraction File compatibility and better warning dialog
+- v0.62.2 release
+
+2022-11-04 (XM)
+- Edited Optimal IRF results string
+- Fixed Installer bug missing to include the FLI Dataset Python Plugin subfolder
+- v0.62.1 release
+
+2022-11-03 (XM)
+- Changed IRF Optimization range parameter to ns instead of fraction of range center
+- Added IRF Optimization parameters to Notebook output
+- Reverted to Toeplitz Matrix inversion method for deconvolution
+- v0.62.1
+
+2022-11-02 (XM)
+- Finished testing python plugin support for FLI Dataset
+- Changed display of python plugin scripts and functions by replacing all underscore characters by spaces
+- v0.62 release
+
+2022-11-01 (XM)
+- Changed the way a plot is passed to a Python Plugin: instead of 2 1D-arrays, a single 2 x N array is used
+- Added support for FLI Dataset Python Plugin input (in Analysis>>Dataset menu)
+
+2022-10-31 (XM)
+- Started to add support for Python Plugins acting on the whole dataset
+
+2022-10-27 (XM)
+- Fixed bug where Plot Extrapolation failed for a normalized decay
+- Removed Smoothing Parameter and replaced it by automatic selection
+- Removed IRF Extraction method selector and replaced it by Direct
+
+2022-10-26 (XM)
+- Fixed bug in Extrapolate Decay (failed whn large vertical offset was present)
+- Improved Optimal IRF extraction criteria
+
+2022-10-24 (XM)
+- Added different IRF extraction methods (Direct, Topless, Toeplitz)
+- Added Export Plot and Data options in IRF Extraction parameters 
+- Fixed display glitch in Settings >> Gates to Keep
+- v0.62
+
+2022-10-22 (XM)
+- Fixed a glitch in the dialog for Multi-ROI single Pixel analysis scripts
+- v0.61 release
+
+2022-09-26 (XM)
+- Fixed Files->Load menu bug
+- Removed a number of error messages returned when the user cancels a file selection
+- Fixed error returned when a series of HDF5 dataset missing individual timestamps was selected
+
+2022-09-24 (XM)
+- Fixed bug in Optimal IRF Extraction returning the wrong optimum
+- Added Tail Threshold (%) parameter in IRF Optimization Options (to experiment with, the default I used so far being 1% of hte peak value).
+- Fixing a few Notebook output formatting issues
+
+2022-09-23 (XM)
+- Fixed Optimal IRF Extraction tail smoothing origin
+
+2022-09-20 (XM)
+- No Notebook message if plot rebinning cancelled
+- Renamed files with B&H to Becker-Hickl
+- Reverted to Vision Development Module 2019 for compatibility with AMC's license
+
+2022-09-18 (XM)
+- Fixed a bug that added a carriage return in the name of extrapolated decay plots )which prevented saved plots to be properly loaded)
+- Added average lifetime information for 2-Exp fit in Notebook output
+
+2022-09-17 (XM)
+- Edited menus (Decay -> Plot)
+- Added "Rebin Plot" menu item to Decay Graph
+- Added new IRF extraction options
+- Modified algorithm to extract IRF from decay with known lifetime, and added automatic smoothing and removal of outliers at the beginning of the IRF
+- Modified Optimal IRF Extraction cost function
+
+2022-09-16 (XM)
+- Fixed missing Plot name when extracting IRF from Decay
+- Fixed parameter conversion bug in Optimal IRF extraction
+
+2022-09-02 (XM)
+- Fixed bug in percentile definition
+- Moved option to Source Image panel
+
+2022-09-01 (XM)
+- Added option to remove hot pixels when loading datasets
+
+2022-08-25 (XM)
+- Replaced Globals in Notebook.lvlib by Notebook Parameter Storage.vi
+- Modified Load Plot(s).vi to enable better plot names and support for files without abscissa column
+- v0.61
+
+2022-08-18 (XM)
+- Fixed issue with Series Phasor Analysis missing corresponding metadata
+- v0.60.4 release
+
+2022-08-17 (XM)
+- Fixed bug preventing Single Phasor Calibration Load/Save/Clear menu items to work
+- Fixed bug preventing from loading Single Phasor Calibration or Phasor Calibration Series if the frequency was identical to the current one (should be the opposite. Worked fine for Calibration Map)
+
+2022-08-16 (XM)
+- Refactoring to try fixing some speed complaints from Vikas, to no (little) avail
+- Fixed "Save All/Selected Phasor Plots" Phasor Graph menu items
+- v0.60.4
+
+2022-08-15 (XM)
+- Restored "Export Add'l Phasor Plots Data (ASCII)" menu of Phasor Graph
+- Grouped basic phasor plot save functions under "Save Plots (ASCII)" sub-menu
+- Grouped phasor plot save functions under "Save Phasor Plots (.phplot)" sub-menu
+- v0.60.3 released
+
+2022-08-13 (XM)
+- Fixed display glitches in Multi-ROIs Single-Pixel Analysis dialog window
+- Replaced "Phasor Ratio Calculation" checkbox by "Phasor Ratio Type" radio buttons: Intensity-weighted or Amplitude-weighted
+- Speed up of Phasor Information Display in Phasor Plot when shift-hovering over the Source Image with the mouse
+- v0.60.2 released
+
+2022-08-04 (XM)
+- Fixed bug in Batch Convert which would not show the selected file
+- v0.60.1 released
+
+2022-08-02 (XM)
+- Removed "Export Phasor Graph Data" menu items (they were equivalent to "Save Phasor Plot" items, now renamed "Save Phasor Plot Data" to disambiguate them from the standard ASCII plot menu items ("Save Plot").
+- Removed the (bogus) ability to drop an ASCII plot in the Phasor Graph. Only phplot files (Phasor Plot Data) can be imported in the Phasor Graph
+- Removed bogus Lifetime plot created when performing Data Series Phasor Analysis
+- Fixed bug that would erase the last Phase Lifetime plot when performing a new Data Series Phasor analysis
+- Added option to use the current phasor calibrationIRF(s) for Multi-ROI Single-Pixel Phasor or NLSF Analysis script
+- v0.60 released
+
+2022-08-01 (XM)
+- v0.59 release
+- Fixed bug in Image Python Plugin handling of output image
+- Fixed bug in Image Type selection (which would allow selecting a non-existing image)
+
+2022-07-31 (XM)
+- Modified Mask Image to ROIs to allow handling binary images (as up to now) as well as labeled mask images
+- Fixed bug generated when loading single TIFF Images of different size in succession
+
+2022-07-30 (XM)
+- Checked ROI Mask (8-bit) compatibility with the change to support 16-bit Mask Image
+- v0.59 release
+
+2022-07-29 (XM)
+- Added support for 16-bit Mask Image
+- Added "Paste Plot(s) from Clipboard" in Decay Graph and other Graphs
+- Fixed Sticky Help Ballon in Batch Export Window
+- v0.59
+
+2022-07-28 (XM)
+- Final debugging of multiframe batch conversion
+- v0.58 release
+
+2022-07-27 (XM)
+- Changed ptu File loading logic to get multiframe information
+- Added missing "SYNC Period" in exported HDF5 files
+- Implemented Batch Exporting of multiframe ptu datasets
+- Added "Dataset Timestamp" field in AlliGator HDF5 File format v0.6.1
+
+2022-07-26 (XM)
+- Optimization of ROI to Pixel ROIs action
+- Added warning dialog when requesting to "Show All ROIs" when N > 10,000
+- Implementation of Multiframe loading (ptu files): to be debugged
+
+2022-07-25 (XM)
+- Added (optional) Help Balloon in Batch Export Window
+- Started implementing ptu export as folder of frames
+- v0.58
+
+2022-07-23 (XM)
+- Fixed "jumping" scrollbar in Notebook
+- Added font size options in Notebook
+- Fixed disappearing selection when using context menu in Notebook
+- v0.57 release
+
+2022-07-22 (XM)
+- Minor code touch up
+- Fixed installer and re-release of v0.57
+
+2022-07-21 (XM)
+- Finished refactoring
+- internal v0.57 release
+- Re-ordered Event List typedef enum
+- Added Internal "Busy Flags" for computationally intensive actions following user interaction with mouse
+
+2022-07-20 (XM)
+- Action Loop splitting into Categories (TBC)
+
+2022-07-19 (XM)
+- Fixed bug in Phasor Graph->Export Phasor Plot(s) Data, which would not output the full header line
+- Fixed initialization of "Gates to Use" parameter in Settings->Data Information
+- AlliGator Menu items handling in subVIs (TBC)
+
+2022-07-18 (XM)
+- Added busy icon when computing Phasor Raio References based on fitting
+- Added parallelization in "Phasor Graph:Compute Average Phasor"
+- Ignores single pixel ROIs not meeting intensity conditions when computing "All ROIs Phasor Analysis (fast, non-interactive)"
+
+2022-07-17 (XM)
+- Fixed bug in loading "Gate Separation" for Becker & Hickl  .std files
+- Fixed a bug in "Skip Gate" file loading options, which was swapping "start" and "end" values
+- v0.56.4 release
+- Replaced "preallocated" clones by "shared" ones
+- Changed VI priorities to "Normal"
+- Renamed Action Elements as "Prefix:Action" in order to split the main case structure into fewer generic cases 
+- v0.57
+
+2022-07-12 (XM)
+- Fixed display of calibrated L_N[W] SEPL
+- Added template for "Whole Image Phasor Scatter Plot" script
+- v0.56.4
+
+2022-06-30 (XM)
+- deprecated "Whole Image Phasor Scatter Plot" in Analysis->Phasor Graph, as it is now done by selecting a ROI encompassing the whole image and converting it to single-pixel ROIs, followed by Analysis->Dataset->Multiple ROIs Analysis->All ROIs Phasor Analysis->Non-Interactive (Fast) [Ctrl+Shift+A]
+- v0.56.3 released
+
+2022-06-29 (XM)
+- Fixed a bug which would sometimes prevent update of the Harmonic Frequency parameter in Settings->SEPL
+- Added context menu item to Settings->SEPL:IRF Period to set it equal to the Dataset Laser Period (default is 0 and results in no SEPL to be displayed in the Phasor Graph or Phasor Plot
+- v0.56.2 release
+
+2022-06-27 (XM)
+- Fixed a bug which would not properly update the Reference Lifetime Indicators in the Phasor Graph panel
+- Updated "# Gates" parameter description to explain that it is ignored in most cases
+- release of v0.56.1
+
+2022-06-26 (XM)
+- Ironing out a few UI bugs
+- Removing Import I/m/phi dataset from File menu
+- Renaming Other Files->Open White Light Image and Open Mask Image to 8- or 16-bit White Light Image and 8-bit Mask Image
+- internal release of v0.56
+
+2022-06-25 (XM)
+- Further simplification of dataset loading
+- Fixing UI update issues (busy icon, status message, file path controls, SS3 gate selection, etc.)
+- Debugging and testing code.
+
+2022-06-24 (XM)
+- Implemetation of PQ BIN Dataset loading using common core loading VI
+- Implementation of SS1 (.dat) and SS2 (HDF5) Dataset using common core loading VI
+
+2022-06-23 (XM)
+- Implemetation of B&H Dataset loading using common core loading VI
+
+2022-06-22 (XM)
+- Continued refactoring
+- Achieved working splash screen functionality
+- Fixed Gate Name/Gate Arithmetic update in Settings
+
+2022-06-21 (XM)
+- Removes -Inf, Inf and NaN values from the Image Histogram
+- Removes -Inf & +Inf Sum of All Gates pixel values from ROI Decay calculation
+- Do not create empty decay plots (when no valid pixels)
+- Continued refactoring to support dual-channel
+
+2022-06-20 (XM)
+- Change Mask Image type to U16 to support a larger max number of ROIs (later reverted to U8 for VDM Toolkit API compatibility)
+- Debugging of Dual-Chanel support (cont'd)
+
+2022-06-19 (XM)
+- Gate Arithmetic implementation and further modification of Load Gate Images Core.
+- Need to implement Loaded Background File Options storage and comparison to avoid reloading the same file
+
+2022-06-18 (XM)
+- Fixed bug in Gate Name storage after user selection dialog
+- Refactoring of Load Gate Data to account for dual-channel gate: sum array and displayed image as well as gate arithmetic needs to be implemented as post-loading action (to allow for background subtraction)
+
+2022-06-17 (XM)
+- Fixed bug related to gate arithmetic in case of single gate datasets
+
+2022-06-16 (XM)
+- Implementation of AlliGator FLI Dataset Loading Core.vi for HDF5 and PTU files
+- Implementation of AlliGator FLI Dataset Loading Core.vi for Image Folders
+
+2022-06-15 (XM)
+- refactoring of .ptu file loading
+
+2022-06-14 (XM)
+- Fixed a bug which would prevent loading of two dataset of different kinds consecutively (e.g. image folder followed by hdf5 dataset)
+- Refactoring of HDF5 Dataset loading to prepare for uniformization of dataset loading irrespective of file type
+
+2022-06-13 (XM)
+- Minor updates to the splashscreen behavior
+- Fixed released .ini file
+- Fixed image histogram update after execution of an Image Python Plugin function
+- Fixed copy of Python Plugins folder content by the Installer.
+
+2022-06-09 (XM)
+- Fixed startup and shutdown issues
+- Added ALliGator logo to splash screen, installer and About windows
+- tested standalone
+- Need to check "Reset" Python Session and Image Plugin error
+
+2022-06-08 (XM)
+- Added support for python doc string and sending them to the Notebook when using the 'H' key pressed while selecting a plugin menu item
+- Plugins folder needs to be explicitely added to installer (creating it with the executable is not sufficient)
+- Added graphics to Installer dialog
+
+2022-06-07 (XM)
+- Implemented basic support for Source Image Python plugin
+
+2022-06-06 (XM)
+- Started replacing standard phase/modulus lifetime formula by context-dependent formula (L_N, L_N[W], etc.)
+- Started implementing Python Pluging parameter passing for Source Image
+
+2022-06-03 (XM)
+- Added "Multi-ROI Phase Lifetime vs X Satistics" virtual folder to Tools virtual folder to store tools used for the kind of study needed to benchmark SSx.
+
+2022-06-02 (XM)
+- Fixed a bug in "ROI to single pixel ROIs" which would not remove the original ROI unless it was the first in the list
+- Added option to save a "Phase Lifetime vs X" scatter plot during "Multi-ROI Single Pixel Phasor Analysis", where X is in {None, Total Intensity, Background-subtracted Intensity, Amplitude, Background, Fitted Lifetime (Bkgd Subtraction)}
+
+2022-05-31 (XM)
+- Added "Export JSON String to Clipboard" right-click menu item to Settings controls (this string being used to pass each parameter to Python plugins).
+- Added "Send" AlliGator Parameters JSON Strings to Clipboard button in the Settings->Plugins tab
+- Implemented support for internal AlliGator parameter passing to Python Plugins in addition to user-specified parameters
+
+2022-05-30 (XM)
+- ms precision for date/time stamps of Notebook messages
+- Added "Plugins" tab in Settings
+- Developing Python Plugin API for Decay Graph
+
+2022-05-27 (XM)
+- Refactoring of AlliGator Launching to better handle initialization
+- Added template for Get Python Plugin Function Parameters
+
+2022-05-26 (XM)
+- AlliGator refactoring
+- Implemented test of Python Plugins for Decay Graph
+
+2022-05-25 (XM)
+- Fixed incorrect SEPL plot name in Phasor Graph
+- Added "Python Settings" to Settings->Miscellaneous
+- Reorganized AlliGator menu bar
+- Removed "Average Dataset Sum" checkbox in Settings->Source Image (replaced by two menu items in Analysis->Dataset Series
+
+2022-05-24 (XM)
+- Fixed "busy" icon and UI sluggishness when adjusting Image Histogram cursors
+- Fixed Image Contrast Image Type
+- Implemented "Remove Outliers" from image. Tested (DEBUG) on SGL image type
+
+2022-05-23 (XM)
+- Fixed "sticky" Series Slide when loading an indiviual dataset
+
+2019-05-20 (XM)
+- Fixed unneeded ROI output to Notebook when Decay Graph & Phasor Graph are inactive
+- Fixed bogus first Intensity Time Trace point in Phasor Series Analysis
+
+2022-05-19 (XM)
+- Added dialog when loading single image (Mask or White Light?)
+
+2022-05-18 (XM)
+- v0.56
+- Fixed bug in Sum of Datasets
+
+2022-05-13 (XM)
+- Added G2/INT*max(INT) gate arithmetic option
+- Fixed Image Histogram failure when NaN pixel values were encountered
+- Fixed bug in "Define Shortest Lifetime as" Settings which would always set it to Reference 1
+- v0.55 release
+
+2022-05-12 (XM)
+- v0.54 release
+
+2022-05-11 (XM)
+- Added "Define Shortest Lifetime as" (Reference 1, Reference 2) radio button to Settings>>Phasor Graph window to tell how to define which reference is 1 or 2 when using UC/Fit intersection or Minor/Major Axis/UC Intersection in either Phasor Plot or Phasor Graph
+- v0.54
+
+2022-05-10 (XM)
+- v0.53.1 release
+
+2022-05-09 (XM)
+- v0.53.1
+- Fixed erroneous saving of Phasor Plot image with overlay irrespective of the selected option
+- Fixed erroneous Decay Name when using File Background correction (was set to the background file name)
+- Fixed erroneous Dataset Information when using File Background correction (showed background file information: now shows both)
+
+2022-05-07 (XM)
+- Implemented 1-Normalize, Shift and Fold decay in the Decay Graph context menu
+- Minor fixes to the output messages for these pre-processing steps
+- Removed Graph Index Display because of conflict with plot identification
+- v0.53 release
+
+2022-05-06 (XM)
+- v0.53
+- Added template for 1-Normalize, Shift and Fold decay in the Decay Graph context menu
+
+2022-05-05 (XM)
+- v0.52 release
+- Deactivation of the "Integration" mode for fit function calculation
+- Changed name of "Decay Fit Parameter Names" to "Decay Fit Parameter IDs" in HDF5 file in which NLSF Map data are saved. A new (different) "Decay Fit Parameter Names" array is added which actually contains the parameter names.
+
+2022-05-03 (XM)
+- Fixed longstanding bug in Phasor Plot computation when decay pre-processing is selected
+
+2022-04-29 (XM)
+- Fixed Notebook closure issue by switching to an architecture in which a launcher spawns AlliGator and runs in the background until all AlliGator windows (including Notebook) are closed.
+
+2022-04-28 (XM)
+- Fixed missing Notebook message when saving images with overlay
+- Fixed ambiguity when saving SGL image to 16-bit TIFF
+
+2022-04-23 (XM)
+- Replaced LV 3-button dialog with custom one
+
+2022-04-22 (XM)
+- Fixed Notebook Quit dialog problem using a custom dialog window
+
+2022-04-20/21 (XM)
+- Implemented AlliGator Action Loop.vi
+- Discovered bug in Quit dialog for Notebook
+
+2022-04-19 (XM)
+- Finalized removal of local variables
+- Fixed a bug in Export Phasor (multiple) Plot Data to ASCII where the header might be incomplete
+- Isolated Action Loop to move to a subVI (required creating and bundling refnums and creating new VIs)
+ 
+2022-04-18 (XM)
+- Removing local variables to move Action loop to subVI
+- Changed VIs to normal priority
+- Fixed dirty dot issues in some VIs. Type-specific subVIs.
+
+2022-04-15 (XM)
+- Updating code to take into account the Background File Subtraction Settings move to Data Information
+
+2022-04-14 (XM)
+- Cosmetic edits to FP of VIs using AlliGator IV DVR
+
+2022-04-13 (XM)
+- Added Arithmetic on Curves in Plot Editor
+
+2022-04-12 (XM)
+- Added Plot Legend Index Display control to complement scrollbar in Graphs
+- Support for new Github location of Version History and Installer for AlliGator updates
+
+2022-04-11 (XM)
+- Added Plot Legend Index Display to Graphs
+- Fixed update bug in Plot Editor "Fill Array with Ramp" dialog
+- Corrected Example String in single variable and 2-variables formula input dialogs
+
+2022-04-10 (XM)
+- Cosmetic changes (Control Names)
+
+2022-04-08 (XM)
+- Cases rearrangement
+
+2022-04-07 (XM)
+- Moved Background File Subtraction parameters from Decay pre-processing to Data Information
+
+2022-04-06 (XM)
+- Added Gate Arithmetic Enum instead of flag, with values: None, INT-G2, (<INT>+INT)/2-G2, G2+(<INT>-INT)/2
+- Implemented  corresponding calculations in Load HDF5 FLI Dataset
+
+2022-04-0 (XM)
+- Fixed a bug in Settings>>Fluorescence Decay>>Decay Pre-Processing, which did not preserve either the Pile-up Correction flag or the Max Value.
+
+2022-03-31 (XM)
+- edited description of SS3-specific settings
+- fixed a bug in the Drag & Drop behavior of the ROI Managers
+
+2022-03-30 (XM)
+- Implemented INT-G2 gate loading for HDF5
+
+2022-03-29 (XM)
+- Started implementing complementary gate loading
+
+2022-03-24 (XM)
+- Migrated VI refnums and some other control/indicator refnums to AlliGatore refnum storage
+
+2022-03-20 (XM)
+- Fixed Single Gate/Sum of All Gates update issue when loading a new file
+- Fixed Available Gate Names update in Settings Window when loading a new file
+
+2022-03-19 (XM)
+- Added option to load <INT> + INT - 2 G2 for dual gate datasets
+
+2022-03-17 (XM)
+- Fixed a bug in 2-Exp Fit which converted it into a 1-Exp fit
+- Cosmetic bug fixes 
+- v0.52
+
+2022-03-12 (XM)
+- Implemented SS3 Gate Slip Correction (to be incorporated in SwissSPAD Live) as DEBUG menue item
+- Removed "Dispose All Images" during initialization, as this interferes with SwissSPAD Live in development mode
+
+2022-03-07 (XM)
+- v0.51 release
+
+2022-03-06 (XM)
+- Fixed Notebook backup issues with new logic and added message bar at the bottom to inform on most recent backup
+- Implemented Batch Conversion to TIFF Series
+
+2022-03-05 (XM)
+- Implemented Batch Conversion to HDF5
+
+2022-03-04 (XM)
+- Added export of intensity and amplitude-phasor ratio and average lifetiem in export tool
+- trying to debug broken Load SS2 File as Image Stack v2.vi (fixed after reload)
+- Started implementing batch file conversion to HDF5
+
+2022-03-03 (XM)
+- Potential problem with Notebook content preservation when closing during session
+
+2022-03-02 (XM)
+- Upgraded to LabVIEW 2021 SP1
+
+2022-03-01 (XM)
+- Debugged loading of updated multigate name HDF5 FLI Datasets
+
+2022-02-28 (XM)
+- Added Gate Names ring control to Settings (for multigate FLI datasets such as encountered in SS3)
+- Started implementing UI logic and data loading
+
+2022-02-27 (XM)
+- Edits following SwissSPAD Live modifications
+
+2022-02-10 (XM)
+- cosmetic code changes
+
+2022-02-04 (XM)
+- Fixed NLSF Fit
+
+2022-02-03 (XM)
+- Fixed Error in reduced Chi2 expression (Chi2/DOF, was Chi2/N)
+- Uses normalized decay fit internally but returns scaled parameters
+- Now outputs correct reduced Chi2 in Notebook (was RMSE)
+- Outputs Guess Parameters even if fit fails
+
+2022-02-02 (XM)
+- Changed Fit Weight option from boolean to enum (unweighted, 1/Variance, Best of Both)
+- v0.51
+
+2022-02-01 (XM)
+- Changed Notebook dialogs to minimize user confusion
+
+2022-01-31 (XM)
+- Added ProcessID to Notebook backup file name to distinguish between processes
+- Added "Live" Highlight of Source Image pixels in Phasor ROI (H key pressed while moving selected ROI in Phasor Plot)
+- v0.50 release
+
+2022-01-30 (XM)
+- v0.49 release
+
+2022-01-29 (XM)
+- Compares unweighted & weighted fit results when weighted fit is requested, returning the best of both
+
+2022-01-28 (XM)
+- Implemented # Logical Processors Used in Settings, in order to control CPU usage for resource-demanding functions such as NLSF
+
+2022-01-26 (XM)
+- Replaced Image Sum readout in nested loops by Array indexing (Image Sum array created upon creation)
+- v0.49
+
+2022-01-17 (XM)
+- Fixed bug in Clear Graph in Histogram Window
+- v0.48.4
+
+2022-01-15 (XM)
+- Added LED indicator when IRF options have been defined in Multi-ROI Single-Pixel Scripts
+- Added Set Options button (and LED) for dataset (for consistency)
+- Added message to Notebook after saving it (if it fails, a warning is printed)
+- Updates Parameter Range when changing selected parameter in Decay Fit Parameter Map
+
+2022-01-14 (XM)
+- Fixed transition from Accumulated to Single File and back
+- Fixed bug that prevent intensity time trace from being computed when no decay pre-processing options were selected
+- v0.48.3
+
+2022-01-13 (XM)
+- Refactoring (related to Notebook)
+- Fixed bug in "Export All Settings to Notebook"
+
+2022-01-11 (XM)
+- Fixed ROI Statistics error when at least one of the pixel value is negative (now removed from SNR statistics)
+- Fixed ROI Color update at startup
+- Fixed bug in "Export ROI Data as ASCII" and "Export All ROIs Data as ASCII" in Decay Fit Parameter Map.
+- v0.48.2 release
+
+2022-01-08 (XM)
+- Fixed a bug in Sum All Datasets in Series that prevented it from working
+- A bug in Notebook preventing from saving it on a drive other than C: appears not to be one but some Windows glitch
+- v0.48.1 release
+
+2022-01-07 (XM)
+- Split the Script into one for Phasor analysis and another for NLSF analysis
+- Added Color Boxes to Select ROI Color for Source Image/Phasor Plot and Decay Fit Parameter Map
+- Linked Decay Fit Parameter Map ROI to Source Image ROI
+- v0.48 release
+
+2022-01-06 (XM)
+- Added "Export ROI Data as ASCII" and "Export All ROIs Data as ASCII" menu items
+- Debugged Phasor + NLSF ROI Script
+- Todo: synchronization of ROI display in both Source Image and Parameter Map Image
+- Todo: Improved NLSF Script Dialog (group Parameter+Bin+Checkbox to handle optional histogramming)
+
+2022-01-05 (XM)
+- Fixed a bug in the Notebook that made it non-persistent
+- Debugging the final part of the script/Fixed
+
+2022-01-04 (XM)
+- Added Export All Maps Data as ASCII menu item to Decay Fit Parameter Map
+- Implemented IRF Options in NLSF/Phasor Script
+- Debugging of Phase Lifetime Histogram creation
+
+2022-01-03 (XM)
+- Updated Settings parameters change triggering Phasor Plot update flag (background-correction related parameters)
+- Added Histogram Options to Settings>>Miscellaneous: used for scripts
+- Started implementing fractional gate offset
+
+2022-01-01 (XM)
+- Fixed a bug which prevented the "Save As..." menu of the Notebook to work.
+- Added Analysis>>Series Analysis>>Show Dataset Series Sum menu item
+
+2021-12-31 (XM)
+- Debugging Sum Dataset Series...
+- Added Internal Image Status.vi to monitor internally stored images (derived from a vi.lib VI).
+
+2021-12-30 (XM)
+- Debugging script
+- Adding histogramming functions to be tested
+- Found a bug in Sum/Average Dataset Series
+
+2021-12-29 (XM)
+- Implemented NLSF part of the NLSF & Phasor Multi-ROI Analysis Script
+- Refactoring to support saving plots programmatically (with path)
+
+2021-12-28 (XM)
+- Changing the selected ROI (in Source ROI Manager) updates the Local Decay Graph window if the ROI is a point
+- IRF number does not need to be identical to decay number in All ROIs Decay Fit (No-interactive, fast, Individual IRF)
+- Added "Fold Decay" preprocessing option (parameter: # Folds)
+
+2021-12-27 (XM)
+- Added "Delete All Unselected ROIs" to ROI Manager and Image context menu
+- Debugged single ROI pixel-wise phasor calculation and phase lifetime export
+
+2021-12-26 (XM)
+- Added ROI ID selection and corresponding UI
+- Implemented NLSF fit all ROIs, single pixel, IRFs & Fit Data Map export, untested
+- Implemented single ROI pixel-wise phasor calculation and phase lifetime export, untested
+
+2021-12-25 (XM)
+- Implemented Phasor Calibration checkboxes replacement by Enum
+- Debugged Script up until IRF phasor map
+
+2021-12-24 (XM)
+- Started implementing NLSF & Phasor Multi-ROI Analysis Script
+- Started implementing Phasor Calibration checkboxes replacement by Enum
+
+2021-12-22 (XM)
+- Switch to HDF5 format for IRFs & Fit Data Map
+- Lifetime Analysis panel renamed Lifetime & Other Parameters Analysis
+- Image ROIs (stored in the ROI Manager) are now shown in the Decay Fit Parameter Map
+- Support for exporting Selected ROI(s), All ROIs or All Map Data to Lifetime & Other Parameters Analysis Graph
+
+2021-12-19 (XM)
+- Code refactoring (Ctrl Refnums bundle)
+- v0.48
+
+2021-12-18 (XM)
+- Added mode, median and SNR statistics to ROI Statistics output to Notebook
+- Added option to use a First Gate index larger than Last Gate index when using the "Gates to Keep" option. In that case, the gate images (F, F+1, ..., N-1) are loaded first, and gate images (0, 1, ..., L) are loaded last. This is useful for instance to stitch together a decay with offset.
+- v0.47 released
+
+2021-12-11 (XM)
+- Finished implementation of Export Single Phasor Plot Data, Export Selected/All Phasor Plots Data
+- v0.46 released
+
+2021-12-10 (XM)
+- Started implementation of single Plot Add't Phasor Data export
+
+2021-12-09 (XM)
+- Changed Phasor Graph menu item: Phase Lifetime Trajectory >> Phase Lifetime Series
+- Added Save Phasor Plot Add'l Data submenu: Save Single Phasor Plot Add'l Data, Export Selected Phasor Plots Add'l Data, Export All Phasor Plots Add'l Data
+	
+2021-12-03 (XM)
+- updated dialog window message when exporting average lifetime map from Phasor Plot
+- v0.45.2
+
+2021-12-01 (XM)
+- tweaked amplitude fit parameters adjustment when selecting "Use Last Fitted Parameters"
+- changed IRF normalization for convolution so that its integral is equal to 1 => fitted parameters (baseline, amplitudes) are accordingly rescaled
+- removed a few innocuous error messages showing up in verbose error mode
+- v0.45.1 release
+
+2021-11-30 (XM)
+- Added support for decay pre-processing in the Local Decay Window
+- Fixed a bug in Extrapolate Decay as part of Pre-Processing (Head & Tail fractions were reversed)
+- Changed style of warnings in Notebook
+- Implemented baseline and amplitude fit parameters adjustment when selecting "Use Last Fitted Parameters"
+- v0.45 release
+
+2021-11-29 (XM)
+- Added dashed line connecting references in Phasor Plot
+- Fixed update of Phasor Ratio References with Phasor Frequency (Phasor Plot & Phasor Graph)
+
+2021-11-28 (XM)
+- Changed UI behavior of "Clear Source Image Overlay" and "Clear Phasor Overlay" buttons, by removing adjacent checkmarks and moving all options to right-click menu. See context help for description.
+- Added option to define the Phasor Ratio References by Phase Lifetime value (in Phasor Graph)
+- v0.45
+
+2021-11-12 (XM)
+- Fixed Calibration Map change detection, resulting in subsequent speed up of phasor plot update
+- Fixed bug preventing loading of Calibration, Calibration Series or Calibration Map
+- Changed the Phasor Ratio/Amplitude output from f2 to f1 (fraction of reference 1). The other derived quantities (e.g. average lifetime) were computed correctly and therefore remain unchanged. This definition is now made clear in Notebook outputs or indicator captions.
+- Changed some default Fit Options Termination Criteria (1E+/-6 -> 1E+/-9) to improve convergence
+- v0.44.3 release
+
+2021-11-11 (XM)
+- Fixed error when drag & dropping plot when the visible Graph does not support drag & dropping
+- Fixed bug in 2-Exp NLSF introduced in v0.42
+- v0.44.2 release
+
+2021-11-10 (XM)
+- Minor menu edits
+- Added Fit Options & Parameters to IRFs & Fit Data Map output
+
+2021-11-09 (XM)
+- Fixed fit parameters map file loading error
+- Wrote HDF5 replacement to IRFs & Fit Data Map .dat file format (not implemented)
+- v0.44.2
+
+2021-11-07 (XM)
+- Fixed missing Pixel-Normalize Decay step in Phasor Array Calculation
+- Fixed problem with computing Phasor Plot when a large number of ROIs is defined
+- v0.44.1 release
+
+2021-11-06 (XM)
+- Added Selected Phasor Plot ROI(s)" and "All Phasor Plot ROIs" option for Linear Fit/UC intersections
+- Added support for Phasor Plot ROI file Drag & Drop
+
+2021-11-05 (XM)
+- Fixed cases where no ROI exists
+- Changed Phasor Plot Reference manipulation approach: now uses keyboard key 1 and 2 to select reference 1 and 2, the buttons being highlighted when used
+- Added "Selected Phasor Plot ROI(s)" and "All Phasor Plot ROIs" option to analyze the Phasor Plot (e.g. Reference calculation)
+
+2021-11-04 (XM)
+- Minor fixes to handling of Fit Parameter Constraints/Guess Parameters and Displayed Fit Parameters arrays in Settings>>Fluorescence Decay>>Fit Parameters
+- Opens the Notebook on startup
+- Added Major/Minor Axis option in UC Intersection in Phasor Plot and Phasor Graph
+- Added Linear Fit - UC Intersection in Phasor Pot
+- v0.44
+
+2021-11-03 (XM)
+- Export of Phasor Ratio Map and Average Lifetime Map added to Phasor Plot contextual menu
+- v0.43 release
+
+2021-11-02 (XM)
+- Added "Phasor Ratio Color-Coded Quantity" parameter in Phasor Plot Settings, to select between Phasor Ratio and Average Lifetime when overlaying the phasor plot results onto the Source Image.
+
+2021-11-01 (XM)
+- Implemented faster smoothing algorithm (at the expense of less accurate pixel rejection)
+- Added option for smoothing algorithm
+
+2021-10-31 (XM)
+- Added "Selected Image ROI(s)" and "All Image ROIs" option to compute the Phasor Plot
+- Simplified phasor plot computation
+- v0.43
+
+2021-10-29 (XM)
+- Fixed bug in Gates to skip/Gates to keep calculation
+- v0.42.3 release
+
+2021-10-27 (XM)
+- Corrected bug in amplitude weighted average phase lifetime calculation (Phasor Graph)
+- Fixed non-functioning "Save Phasor Plot Image with Overlay" menu item (Phasor Plot)
+- v0.42.2 release
+
+2021-10-21 (XM)
+- ptu loading files touch-up (inlining, code separated from VI, shift register initialization) to improve performance
+- fixed default filename when exporting HDF5 dataset
+- v0.42.1 release
+
+2021-10-18 (XM)
+- Fit Options are now used throughout AlliGator (e.g. Histogram)
+- deactivated TRDL option
+- v0.42 release
+- Refactoring of Gated Decay Calculations
+
+2021-10-17 (XM)
+- Unsuccessfully debugging TRLD
+- Removed Error in NL Fit if the Hessian cannot be inverted
+
+2021-10-16 (XM)
+- Added Trust-Region Dogleg algorithm
+- Fixed a bug in Fit Function weight calculations
+
+2021-10-15 (XM)
+- Added "Define Gates to Keep" option (in addition to Gates to Skip)
+- v0.42
+
+2021-10-10 (XM)
+- Support for Drag & Drop of IRFs & Fit Data files
+- v0.41 release
+
+2021-10-09 (XM)
+- Removed White Light Image Histogram (fusioned with Fluorescence Image Histogram)
+- Support for Drag & Drop of Mask, White Light Image
+- Fixed Drag & Drop of folder of folder of gate images
+- Support for Drag & Drop of individual Phasor Plot (phplot) in Phasor Graph
+- Support for Drag & Drop of calibration, calibration series & calibration map
+- v0.41
+
+2021-10-08 (XM)
+- Fixed a bug in Compute Average Phasor (Selected Plots) that would remove the first selected plot if the UC was not selected
+- Modified zero-weight replacement to use interpolated values whenever possible (instead of 1)
+- Added Average Lifetime to Phasor Plot & Phasor Graph display and Notebook output when references are defined
+- v0.40.1 release
+
+2021-10-07 (XM)
+- Added transparent option for Phasor Plot References and Boundary
+- Added Phase Lifetime SDV output for Average Phasor (as well as Modulus and SDV)
+- Added Compute Average Phasor (Selected Plots) to Phasor Graph
+- Added Phasor Ratio (or Amplitude Ratio if selected) as Notebook output for the previous operations
+- v0.40 release
+
+2021-10-06 (XM)
+- Update Phasor Frequency at startup
+- Added Reference Point Radius parameter for Phasor Plot
+- Fixed context menu for phasor frequency and initialization in SEPL Settings
+- v0.39.4 release
+
+2021-09-30 (XM)
+- Corrected a bug in Multiple ROI Analysis that could result in some ROIs' data to not be processed
+- v0.39.3 release
+
+2021-09-29 (XM)
+- Corrected bug in Export Decay to Phasor Graph menu item added to Decay Graph
+- v0.39.2 release
+
+2021-09-28 (XM)
+- Added Create ROI(s) from Pixel with Intesity over Min
+- v0.39.1 release
+
+2021-09-27 (XM)
+- Added more colors to Notebook
+- Force file dialog when saving IRFs & Fit Data
+- v0.39 release
+
+2021-09-26 (XM)
+- Added verbose message for ROI manipulation
+
+2021-09-25 (XM)
+- Do not show the Create Phasor Plot Dialog if Phasor Graph is inactive
+- Added Export Decay to Phasor Graph menu item added to Decay Graph
+- Moved some items in Decay Graph menu
+- Output Decay Fit results even in case of convergence or other failure (with error message)
+
+2021-09-23 (XM)
+- Added separate Pile-up Correction option for Background File
+
+2021-09-21 (XM)
+- Added Export Bounding Cursors Definition to Notebook menu item to Decay Graph
+- Bounding cursors follow multiple/all plots 
+
+2021-09-16 (XM)
+- cosmetic code changes
+- modified description of fit parameter map parameters
+
+2021-09-14 (XM)
+- Fixed bug in standard File menu based data loading
+- v0.38.1 release
+
+2021-09-13 (XM)
+- Removed pixel-level phasor graph calculation option (hidden anyway)
+- Added "Phasor Graph Active" checkbox
+- Fixed OpenG bug resulting in erroneous interpretation of .ptu files
+- v 0.38 release
+
+2021-09-08 (XM)
+- Corrected a bug in Phasor Amplitude Ratio calculation
+- Cancel in Phasor Ratio abscissa input is now handled properly
+- Added verbose Notebook message for Phasor Ratio reference updates
+
+2021-09-07 (XM)
+- Added support for Drag & Drop of plots
+- Fix bug where a background constant subtraction was not applied when computing the Phasor Plot
+
+2021-09-06 (XM)
+- Fixed Global Fit to use Periodic Convolution functions (to be fully debugged)
+- Added Drag & Drop of ROI definitions
+
+2021-09-05 (XM)
+- Added "Store Cursor-defined Head & Tail Fractions" in Decay Graph context menu (to use in automated analyses)
+- Restored Algebraic IRF deconvolution
+
+2021-09-04 (XM)
+- corrected bug in Notebook output of Phasor Plot calculation (was returning number of valid phasors instead of invalid phasors)
+- corrected a bug in Phasor Plot calculation (phasor calibration map case) and simplified code
+
+2021-09-03 (XM)
+- Fixing after-effects of the previous refactoring
+
+2021-09-02 (XM)
+- Phasor Explorer-related updates (using identical Settings Parameters for SEPL definition)
+
+2021-09-31 (XM)
+- Fixed Natural Frequency calculation to take into account the "User Decay Pre-Processing" flag
+- Fixed progress bar display for parallel loops
+
+2021-08-31 (XM)
+- Fixed post-loading actions when drag & dropping path
+- Improved extrapolated decay (fixed NL Fit Options, head weights, shotnoise)
+
+2021-08-27 (XM)
+- Minor setting changes
+- Added overwrite warning in Notebook Save As...
+
+2021-08-21 (XM)
+- Added Phasor Plot name(s) used to compute references in Phasor Graph
+- Improved Decay Extrapolation by increasjing weight of head part in case of periodicity
+
+2021-08-20 (XM)
+- Made error message when no Reference Decay/IRF is found clearer (it could be due to the "Use Local IRF" checkbox being checked
+- Changed menu item from Compute Phasor Plot's Phasor Ratio to Compute Phasor Plot's Average Phasor Ratio
+
+2021-08-19 (XM)
+- Added option to create new Phasor Ratio plot in input dialog window
+- output of phasor frequency in multipoint Phasor Plot calculation
+- improved display precision for several numeric indicators
+- Save Image or Phasor with Overlay now does not require computing any overlay
+
+2021-08-18 (XM)
+- Fixed a but preventing from aborting Playback
+- Fixed a bug in loading ptu files
+- Fixed a bug in Playback Script where the dataset index was not incremented
+- Implemented drag & drop file/folder to open a file or a series
+
+2021-08-17 (XM)
+- Cosmetic edits
+- v0.38
+
+2021-08-16 (XM)
+- Fixed bug in Load Plot(s) which was missing partially empty columns
+- Modified Linear Fit in Phasor Ratio Graph to encompass min and max values
+- v0.37 released
+
+2021-08-13 (XM)
+- Update Phasor Graph line if reference is updated
+- Corrected bug in Multiple Plots Fitted Line/UC intersections which include UC in the calculation
+- Added Single Phasot Plot Phasor Ratio calculation
+
+2021-08-12 (XM)
+- Added Use Multiple Plots Fitted Line/UC Intersections to Phasor Graph contextual menu
+- Corrected bug in Use Single Plot Fitted Line/UC Intersections
+- v0.37
+
+2021-08-05 (XM)
+- Does not reject Phasor Plot calculation if an individual phasor cannot be computed.
+- v0.36
+
+2021-08-04 (XM)
+- Added requirement to press the Left or Right Shift key for Phasor update at current location to actually update phasor information in the phasor plot panel (in order to avoid queueing too many events), when moving the mouse in either the Source Image or the Phasor Plot image
+- Fixed Image contrast update frequency when moving mouse in the image histogram(s) by requiring the mouse to be down for this to happen
+- Added ability to view decay profile at location in Image Source
+- Fixed Preprocess Decay checkbox impact on calculations throughout AlliGator (was partially implemented)
+
+2021-07-29 (XM)
+- cosmetic edits
+- v0.35 release
+
+2021-07-26 (XM)
+- Implemented option to use local IRF for decay fits (manual)
+- v0.35
+
+2021-07-25 (XM)
+- Fixed Square Gate Fit corner case issue
+- Improved Logistic Gate Fits
+
+2021-07-24 (XM)
+- Added Mouse Click requirement to update Local Decay Profile window
+- Fixed Clear ROI bug in Decay Fit Parameter Map Image
+- Added controls for Square Gate Fit Parameter Map (hidden, TBC)
+- Debugging corner cases of Square Gate Fit
+
+2021-07-23 (XM)
+- Fixed progress bar problem
+- Switched to geometrical proximity to find valid fit parameters for map (unsatisfactory)
+- Fixed Settings>>Data Information export to Notebook
+- v0.34.4
+- Added Save/Load IRFs & Fit Data Maps
+- Added IRF to Local Decay Graph Window
+
+2021-07-22 (XM)
+- updated definition of derived fit parameters and added better description of their definition
+- version 0.34.2 release
+- Fixed 2nd-pass fit approach in Decay Fit Parameter Map
+- version 0.34.3 release
+
+2021-07-21 (XM)
+- corrected a bug in the Decay Fit Parameter Map output for 2-Exp decays
+
+2021-07-20 (XM)
+- Implemented more robust clip decay for fit
+- Added NaN check in decay before fit
+- v 0.34.2
+
+2021-07-01 (XM)
+- Fixed bug where the periodicity option (and period) were not taken into account in "Extrapolate Decay" when extracting a decay
+- Fixed glitches in Settings>>Fluorescence Decay>>Decay Pre-Processings update of "Extrapolate Decay" options
+- v0.34.1 release
+
+2021-06-29 (XM)
+- Implementing Local Decay Graph Window for Decay Fit Parameter Map
+- v0.34 release
+
+2021-06-28 (XM)
+- Implemented Decay Fit Parameter Map profile
+- v0.34
+
+2021-06-27 (XM)
+- Progress bar edits
+- Minor cosmetic changes to Decay Fit Parameter Map behavior
+- v0.33.6. release
+- Fixed a cosmetic bug with min/max decay parameters
+- Added condition to retry fit in decay fit map: R2 < 0.95
+- cosmetic fix to progress bar
+- v0.33.7 release
+
+2021-06-26 (XM)
+- Fixed bug in decay fit parameter output
+- Fixed missing Guess Parameters output to Notebook in Settings>>Export Settings to Notebook
+- Fixed Fit Parameter Map color scale update
+- Added 2nd round of fits for decay fit parameter map, using successfull neighboring fits
+- v0.33.5 release
+
+2021-06-25 (XM)
+- Turned back parallel computation on for decay fits
+- Fixed missing Settings string outputs
+- Added Use Decay Pre-Processing Option
+
+2021-06-24 (XM)
+- Added dlls needed for h5labview in build
+- v 0.33.2 released
+- Fixed some newly introduced Settings memory bug
+- Fixed HDF5 Dataset Parameter saving
+- Changed internal storage of current dataset parameters
+- v 0.33.3 released
+ 
+2021-06-23 (XM)
+- Fixed disappearing "Operation Order" in Settings
+- Fixed Error code constants
+
+2021-06-22 (XM)
+- Fixed Shift parameter message in Notebook
+- Fixed Grid display bug in Lifetime and Phasor Ratio Graph
+- Reverted to previous h5labview version as standalone app failed to work
+- v0.33 unofficial release
+- Fixed missing Operation Order parameter in Settings
+- Fixed Phasor Frequency synchronization (removed Phasor Calibration Frequency in Settings)
+
+2021-06-21 (XM)
+- Further refactoring of Histogram Window with bug fix and logic simplification
+
+2021-06-20 (XM)
+- Added support for binning of white light image and ROI mask
+- Added Send Map Data to Lifetime Graph shortcut menu
+
+2021-06-18 (XM)
+- Fixed missing menu items in Phasor Graph
+- Implemented Export Phasor Ratio Map to ASCII in Source Image
+- Template for same feature for Phase Lifetime Map
+
+2021-06-17 (XM)
+- Fixed confusion in Phasor Data Storage format
+- Fixed high CPU usage in Source Image local Phasor display
+- Refactored Phasor Reference extraction
+
+2021-06-16 (XM)
+- Found a bug where g and s were interverted
+- More transposition bugs to be solved in Phasor Image
+
+2021-06-15 (XM)
+- Refactoring and adding busy icon display for potentially lengthy tasks
+- Changed Decay Fit parameters output formulas
+
+2021-06-14 (XM)
+- Fixed some Settings window issues
+- Phasor Calibration debugging
+
+2021-06-13 (XM)
+- Further debugging and implementation of Decay Fit Parameter Map functions
+
+2021-06-12 (XM)
+- Debugged Decay Fit Parameter Map Overlay
+
+2021-06-11 (XM)
+- Implemented contextual menu for Decay Fit Parameter Map
+- Implemented Use Image Brightness in Decay Fit Parameter Map
+- Code refactoring in Source Image and Phasor Plot UI
+
+2021-06-10 (XM)
+- Added Merge All ROIs in Source & Phasor Plot Image ROI Manager
+- Corrected typo in Define ROI(s) above Min Peak menu item
+- Added Invert Binary Mask Option in Settings>>Source Image
+
+2021-06-09 (XM)
+- Coded Build Decay Fit Parameter Map
+- Refactored Initialization
+
+2021-06-08 (XM)
+- Fixed bugs in and refactored Histogram Window
+- Added Status Indicators for Reference/IRF and Individual IRFs Defined
+
+2021-06-06 (XM)
+- Added Progress Bar to main window (supported in All ROIs Decay Fit Non-Interactive (Fast + Individual IRF))
+
+2021-06-05 (XM)
+- Implemented All ROIs Decay Fit Non-Interactive (Fast + Individual IRF).vi
+
+2021-06-04 (XM)
+- Added Multiple Decay Fit Parameters Internal Variable to store the ouput of multiple ROIs (in particular pixel ROIs) fit results (including ROI center coordinates)
+- Added Lifetime Map template
+- Added All IRF Analysis (fast & slow) scripts
+
+2021-06-03 (XM)
+- Corrected a bug in Accumulate/Average Datasets where the number of gates was used instead of the number of datasets
+- Added output of number of averaged/accumulated datasets in Notebook
+- Updated Save FLI Dataset as HDF5 to follow the new HDF5 File format (and to implement compression more efficiently)
+- Corrected UI bug which would remember Background Dataset as last used files
+- Suggested HDF5 FLI Dataset File Name now returns current dataset and folder
+
+2021-05-25 (XM)
+- Fixed Pile-up Correction update bug in Settings
+- Outputs fit range when using min/max percentile
+
+2021-05-13 (XM)
+- Added Head Fraction as a Settings parameter
+- Improved Decay Extrapolation
+
+2021-05-12 (XM)
+- Added cursors option to define head and tail fraction for extrapolation (only interactively)
+
+2021-05-11 (XM)
+- Added "Use Periodicity" checkbox in Settings>>Fluorescence Decay>>Basic Analysis under "Extrapolate Decay"
+- Added "Period" parameter to Extrapolate Decay (in case of periodicity)
+- Using tail and head part of the decay for periodic decay extrapolation
+
+2021-05-10 (XM)
+- Modifed Decay Extrapolation to support periodic decays (to finish)
+
+2021-05-03 (XM)
+- Added offset fit for 2-Exp decay model
+- Corrected bug in Save Plot dialog
+- Corrected a bug in Use Previous Decay Fit Parameters
+
+2021-05-01 (XM)
+- Added internal debug tool to monitor decay offset parameter fit
+- Added automatic switch to unweighted fit when performing offset fit, followed by weighted fit pass if this is the user choice
+- Added check to avoid mistakenly overwriting plot files.
+
+2021-04-30 (XM)
+- Fixed Periodic Decay fit of the offset by treating differently than the other parameters
+- Added all Termination Conditions to Fit Options
+
+2021-04-29 (XM)
+- Fixed bug in reading HDF5 files version 0.4 (introduced with file version 0.5)
+- Added Max Fit Iterations and Tolerance as part of the Fit Options
+- Renamed Settings>>Decay Analysis>>Fitting to Fit Options, and moved some controls to >>Fit Parameters
+
+2021-04-27 (XM)
+- Fixed bug where 1-Normalize Decay was ignored
+- Added Support for version 0.5 of HDF5 File Format
+
+2021-04-26 (XM)
+- Added repetition of fit to improve convergence
+- Added All ROIs Decay Fit scripts (interactive and fast)
+- Added optional export of tabulated fit results in non-interactive mode
+
+2021-04-24 (XM)
+- Corrected a bug to cancel abort in 2-Exp Decay Fit
+
+2021-04-23 (XM)
+- recovering from erroneous refactoring
+
+2021-04-20 (XM)
+- Added plot clipping information in Decay Fit output
+- Added Guess Fit Parameters in Decay Fit output
+
+2021-04-19 (XM)
+- Added "Use Last Fitted Parameters" to Guess Parameters Tab in Fluorescence Decay Tab & associated logic
+
+2021-04-11 (XM)
+- Added Oval and Point ROI Grid definition
+- Fixed a bug in Fit Decay parameter passing for fitted decay calculation
+
+2021-04-09 (XM)
+- Check that Fit Options is not stuck on "Simulation" (which is not implemented)
+- Implemented 2-Exp periodic convolution fit
+
+2021-04-08 (XM)
+- Added IRF Period to Fluorescence Decay >> Basic Analysis and Fluorescence Decay >> Fitting
+- Right-click menu allows setting IRF Period in Fitting and SEPL to the same value as in Basic Analysis
+- Right-click menu allows Setting IRF Period in Basic Analysis to Laser Period
+- Implemented PSED + IRF convolution fit
+
+2021-04-07 (XM)
+- Modified IRF & Decay Parameter name in SEPL tab: "IRF Period"
+- v 0.33
+
+2021-04-03 (XM)
+- Using a wrapper for IMAQ Get Pixel Value.vi to avoid error when pixel is outside image
+
+2021-04-01 (XM)
+- Fixed an inactive menu item in Settings
+- Release of v0.32
+
+2021-03-25 (XM)
+- Added IRF parameters to SEPL Settings tab
+- Added SEPL Calibration parameters to SEPL Settings tab
+
+2021-03-24 (XM)
+- Added SEPL Calibration option
+- Started implementing SEPL Display in Phasor Plot
+- Added template for SEPL Tick Labels in Phasor Plot
+- minor refactoring
+- Debugged drawing of SEPL in Phasor Plot
+
+2021-03-21 (XM)
+- Added SEPL Display Options in Settings
+- Borrowed SEPL computation (Phasor Graph) from Phasor Explorer
+- Corrected a bug in the computation of natural frequency in Settings
+- Implemented initial support of modified SEPL in Phasor Graph
+
+2021-03-20 (XM)
+- Corrected a bug in partial loading of HDF5 Datasets
+- Removed "Show Ticks" for SEPL (common option with UC)
+- icon update
+- Modified SEPL Parameters (borrowed from Phasor Explorer): to be updated
+- Move Calibrations settings to a separate Tab
+
+2021-03-17 (XM)
+- Fixed a LV bug with IMAQ Read Image.vi which misreads U16 TIFF images
+- Fixed a bug with Time Gate Slider
+- Updated dependencies after Phasor Explorer project update
+- Preparing for SEPL plot
+
+2021-02-27 (XM)
+- Fixing some repository mix up
+- Implementing read of FLI HDF5 v0.4
+
+2021-02-24 (XM)
+- Added support for HDF5 file version 0.3.1 adding Image Information (cropping)
+- Fixed bug in v0.3.1 support
+
+2021-02-18 (XM)
+- Fixed popping-up dialog when some mondane error was encountered
+- Fixed default settings bug in Histogram Fit
+
+2021-02-17 (XM)
+- cosmetic diagrams changes
+- Fixed a bug where the Profile Window was not updated when a new dataset was loaded
+
+2021-01-29 (XM)
+- Handling of incomplete image gate series in HDF5 file
+- release of v0.31
+
+2020-12-30 (XM)
+- Fixed v0.3 loading
+
+2020-12-27 (XM)
+- Edited HDF5 FLI Dataset Loading
+
+2020-12-20 (XM)
+- Refactored FLI HDF5 file loading
+- Debugged FLI HDF5 v0.3 loading
+
+2020-12-19 (XM)
+- Started implementing FLI HDF5 file format
+- Looking into refactoring file loading
+
+2020-12-13 (XM)
+- Changed parameters for zlib compression in Save to HDF5
+
+2020-12-06 (XM)
+- Time String moved to Time folder
+
+2020-11-28 (XM)
+- updated Main VI Name passing to Notebook
+
+2020-11-25 (XM)
+- file paths update
+
+2020-10-26 (XM)
+- commented out unnecessary calculation in Fourier decomposition
+
+2020-10-17 (XM)
+- Further modifications of Cubic Spline + Sine fit, to not much avail...
+
+2020-10-14 (XM)
+- Debugging Cubic Spline + Sine Fit
+
+2020-10-13 (XM)
+- First implementation of Cubic Spline + Sine fit
+
+2020-10-06 (XM)
+- Replaced multiple case with XY Graph Generic Event handler
+
+2020-10-05 (XM)
+- Added computation of IRF*PSED with smoothed Fourier-deconvolved IRF
+
+2020-10-04 (XM)
+- Added Fixed/Automatic Fourier Order option in Settings
+
+2020-10-03 (XM)
+- Updated Notebook behavior
+- Added Fourier spectrum (and smoothed version) graph output in Notebook
+
+2020-09-30 (XM)
+- Finished debugging and cleaning up the Fourier Series approach to IRF deconvolution
+
+2020-09-29 (XM)
+- code cleanup
+
+2020-09-28 XM)
+- Introduced heuristic fix to the IRF calculation
+
+2020-09-27 (XM)
+- Correct (but not very useful) formulas for the Fourier Series approach
+- Added Fejer summation option (as a Global Variable)
+
+2020-09-26 (XM)
+- Trying to fix the Fourier Series approach
+
+2020-09-24 (XM)
+- Fourier Series approach bug fixes
+
+2020-09-23 (XM)
+- Debugged Fourier Series approach to IRF deconvolution
+
+2020-09-22 (XM)
+- Implemented Fourier Series approach to IRF deconvolution
+
+2020-09-14 (XM)
+- Fixed "Phasor Plot Update Needed" flag erased by Settings Window
+
+2020-09-13 (XM)
+- Fixed a few cosmetic issues with HDF5 loading/saving
+
+2020-09-12 (XM)
+- Corrected a bug in Time Series loading that prevented proper extraction of file name root in some special cases
+
+2020-09-08 (XM)
+- Further attempt to study the squared multiexponential IRF fit model
+
+2020-09-07 (XM)
+- Implemented squared multiexponential fit with dependent last amplitude (to enforce IRF(0)=0)
+
+2020-09-05 (XM)
+- Further debugging
+
+2020-09-05 (XM)
+- Trying to improve on the IRF fit with variants of the multiexponential sum
+
+2020-09-04 (XM)
+- Implemented squared multiexponential IRF fit with fixed time constants
+- Updated Compute Optimal Deconvolution IRF (to be debugged)
+
+2020-09-02 (XM)
+- Implemented multiexponential IRF fit with fixed time constants
+
+2020-08-24 (XM)
+- Implemented T-periodic t^n e^(-t/tau) functions
+
+2020-08-22 (XM)
+- Corrected a bug in HDF5 dataset loading
+- Modified multiexponential IRF fit
+
+2020-08-20 (XM)
+- Started debugging new IRF deconvolution approach
+- Added IRF output and parameters display in Notebook
+
+2020-08-19 (XM)
+- Started implementing new IRF deconvolution approach
+
+2020-08-12 (XM)
+- Implemented HDF5 compression
+- Template for Batch conversion added
+- v 0.30 released
+
+2020-08-11 (XM)
+- Added support for PicoQuant .bin files and series
+
+2020-08-05 (XM)
+- v 0.29
+- Implemented UC/Axis of Inertia intersections as References
+- Added Phasor Ratio Display Range Sliders to control color map
+
+2020-08-01 (XM)
+- v 0.28 release
+- Implemented update of Phasor Ratio references with phasor harmonic
+
+2020-07-31 (XM)
+- Added Phasor Frequency to Phasor Ratio Reference information
+
+2020-07-30 (XM)
+Phasor Plot:
+- Remove NaN before computing Phase Lifetime vs Intensity Scatterplot
+- Displays Phasor Ratio/Amplitude where mouse is located
+
+2020-07-26 (XM)
+- Support for rootless series (eg. 1.hdf5, 2.hdf5, etc.)
+- Series digital control's increment/decrement shown
+
+2020-07-25 (XM)
+- Modified utility to support multipled single-column ASCII files and merging into a single output file
+
+2020-07-23 (XM)
+- More minor bug fixes
+
+2020-07-22 (XM)
+- Implemented Single Column Timestap ASCII conversion to HDF5 pseudo-image dataset
+
+2020-07-12 (XM)
+- Implemented Displayed vs Raw Data option in Image Profile
+- Minor internal fixes+
+
+2020-07-11 (XM)
+- Image Profile Window coding
+- Basic Intensity Profile Functionalities
+- Basic Phase Lifetime Profile Functionalities
+
+2020-07-10 (XM)
+- Started implementing Phasor Ratio Reference calculation as UC/PCA Intersection
+- Minor bug fixes
+
+2020-07-09 (XM)
+- Added Calibration Map Resolution X & Y information
+- Notebook Output of Calibration information when computing a Phasor Plot
+- Implementation of Phasor Harmonic Manager mechanics for Single Calibration Phasors
+- Further work on Phasor Harmonic Manager
+- Implementation of Weber 2-component algorithm for single-calibration datasets
+- Added Image Profile Window placeholder
+
+2020-07-08 (XM)
+- refactoring of ROI Managers
+- started implementing Phasor Harmonics Manager
+
+2020-07-06 (XM)
+- Edited Dataset Information string for I/m/phi files
+- Fixed a glitch with Phasor Range slider control of the Phasor Plot color scale
+- released v 0.27
+- v 0.28
+- Added Natural Frequency indicator in Settings>>Fluorescence Decay
+- Started introducing multi-harmonic data structure in Phasor Plot
+- Added "Use f = 1/D" and "Use f = n/D (n > 1)" in the Phasor Frequency controls shortcut menus
+- Computation of Base Frequency and Harmonic Orders given an array of phasor frequencies
+
+2020-07-05 (XM)
+- Fixed Weber's algorithm implementation
+- Modified Histogram Fit to use weighted fits and better estimates of the SDV of multi-Gaussians models
+- Fixed a bug of invisible Lifetime Graph tipstrip introduced in a recent release
+- Added support for multi-harmonic (n > 2) I/m/phi Datasets
+- Fixed a bug in Image smoothing for Gate Image Folder and SS1 datasets
+
+2020-07-04 (XM)
+- Implemented Weber's 2-component decomposition algorithm
+
+2020-07-02 (XM)
+- Fixed a problem with Smooth 2D Array where a NaN value was replaced prematurely with 0
+- Reverted to Constant Background = Background/Gate as this is simpler to read off the decay
+- Added Pixel-Normalize Decay option
+- Implemented Phasor Plot Smoothing for I/m/phi Dataset
+- Fixed bug with I/m/phi Phasor Plot calculation
+
+2020-07-01 (XM)
+- Refactoring of Phasor Plot computation
+- Implementation of Phasor Constraints and Binning for I/m/phi Dataset
+- Fixed a bug in Constant Background subtraction which did not take into account the size of the ROI
+- Fixed a Settings Window update issue
+
+2020-06-30 (XM)
+- Started implementing support for I/m/phi datasets such as obtained from the FLIMbox hardware - Finished implementation
+
+2020-06-29 (XM)
+- Added constant baseline subtraction method
+- Fixed bug preventing Histogram calculation in Graphs
+- Fixed a bug where the Phasor Plot analysis functions did not take into account the conditions used to compute the Phasor Plot (e.g. min intensity)
+
+2020-06-28 (XM)
+- Corrected a few bugs introduced during refactoring
+- Added Phasor Ratio color map display in Settings when interpolation is used
+- Added Settings window initialization step to clean up display
+- Added Phasor Plot ROI resizing with Shift-Click
+- v0.26 released
+- v0.26.1: correcting a bug in Save Phasor PLot as TIFF Image
+- v0.26 released
+
+2020-06-27 (XM)
+- Added reading AlliGator version in metadata.txt for backward compatibility
+- cosmetic fixes in ROI managers
+- Implemented Phasor at Pixel in Source Image
+- Refactoring of User Events
+- Reverted the data transposition as it is pointless (and wrong)
+
+2020-06-26 (XM)
+- Corrected a bug in .sdt file import, which skipped an image transposition step, preventing a meaningful registration of phasor and image pixels
+- Bundling control refnums refactoring
+- Corrected a bug where the color scale of the Phasor Plot was not updated when moving the slider
+- Support for AlliGator gate folder metadata .txt file during gate folder loading
+
+2020-06-25 (XM)
+- Added Notebook Shortcut window
+- Fixed a bug which prevented the pixel value conditions from being used for Phasor Plot calculation when no smoothing was used
+- Implemented Phasor Plot Phase Lifetime vs Intensity Scatter Plot
+
+2020-06-23 (XM)
+- Added Phase Lifetime Histogram to Phasor Plot
+- Added Phasor or Amplitude Ratio Histogram to Phasor Plot
+- Improved .set and RecSettings.txt decoding
+- Fixed a bug which prevented the pixel value conditions from being used for Phasor Plot calculation
+- Fixed a few bugs with ROI saving and loadings, calibration menu checking
+
+2020-06-22 (XM)
+- Fixed non-functioning Playback and Loop functions
+- v0.25 release
+- v0.26
+- Fixed conversion to TIFF images (adding floor function)
+
+2020-06-21 (XM)
+- Corrected bug in LaVision .set series reading
+- Icon update and minor refactoring
+
+2020-06-20 (XM)
+- Further bug fixes+
+- Added n/T harmonic choice dialog
+- Added Save Image Data as TIFF (for both Source and Phasor)
+- Added Save Dataset as TIFF series (and metadata)
+
+2020-06-19 (XM)
+- Finished refactoring background correction
+- Added "Use 1/Laser Period" context menu shortcut for Phasor Frequency Controls
+- Debugging
+
+2020-06-18 (XM)
+- Refactoring continued
+
+2020-06-17 (XM)
+- Started adding support for PTU files
+- Added # Gates control in Settings>>Fluorescence Decays
+- Refactoring of Dataset Loading
+- v 0.25
+
+2020-06-10 (XM)
+- Fixed a bug preventing proper loading of Gate Image folder
+
+2020-05-26 (XM)
+- Added UC (and PUC) tick option to Phasor Graph
+
+2020-05-25 (XM)
+- Added UC tau ticks & labels to Phasor Plot
+
+2020-05-24 (XM)
+- Added "Show UC Ticks" in Phasor Plot Settings (disabled)
+
+2020-05-22 (XM)
+- Fixed sticky Phasor Plot Reference in Phasor Plot
+- Added output of Phasor References to Notebook when choosing "Use Segment Extremities as References"
+- Added "Use UC/Segment Intersections as References" to Phasor Plot menu
+
+2020-05-21 (XM)
+- Debugging of ROI Managers
+- Added ROI Overlay Color information to stored data
+- Working towards ROI/Overlay clearing and updating
+
+2020-05-20 (XM)
+- Added Phasor Plot ROI Manager Window mirroring the functionality of the Source Image ROI Manager Window
+- v 0.24
+
+2020-05-19 (XM)
+- Implemented support for compressed B&H sdt files
+- v 0.23 released
+- Fixed a bug that prevented the Phasor Plot to be updated past the first file
+- v 0.23.1 released
+
+2020-05-18 (XM)
+- v 0.23
+- Implemented better formatting of cluster output string for Notebook
+- Added place holder for Default Plot Style in Settings Window
+
+2020-05-17 (XM)
+- Finished fixing the UI for modified Dataset/Phasor Plot
+- Added a Phasor Frequency control in the Phasor Plot tabs of AlliGator and Settings
+- v 0.22 released
+
+2020-05-16 (XM)
+- Debugged "Phasor Plot Update Needed" indicator
+- Fixed bug in "Reset Settings to Default" and some ouput to Notebook
+
+2020-05-15 (XM)
+- Implemented Image Binning Options (to actually bin the image rather than smoothing it, which is what the other options are doing).
+- Phasor Plot Parameter change monitoring (to be debugged)
+
+2020-05-14 (XM)
+- Started Implementing status LEDs to warn of needed update to the Source Image and Phasor Plot
+
+2020-05-13 (XM)
+- Started to implement Image Binning with the same flexibility as for Phasor Plot Calculation
+- v 0.22
+
+2020-05-11 (XM)
+- Fixed a bug preventing from exporting the Complex Phasor Data to file
+- v 0.21.1 released
+
+2020-05-10 (XM)
+- Debugged Phasor Ratio Reference handling
+- Removed "Reload Dataset" button as confusing
+- v 0.21 released
+
+2020-05-09 (XM)
+- AlliGator Abort moved to a separate GV
+- Refreshed Phasor Map Color Picker
+- Refactored Phasor Ratio Reference handling (need debugging)
+
+2020-05-08 (XM)
+- Added support for uncompressed B&H sdt FLIM datasets (and dataset series)
+
+2020-05-07 (XM)
+- Changed calibration & reference status indicator
+- Improved Phasor Plot menu
+
+2020-05-06 (XM)
+- Error code verbose option
+- Fixed Open Folder not remembering the last opened folder
+- Added (m, phi), tau_phi and tau_m display to Phasor Plot
+- Added Phasor Ratio Reference mouse control on the Phasor Plot
+- Version 0.21
+
+2020-05-05 (XM)
+- Fixed a few issues with Plot Editor (major refactoring)
+- Added Export Phasor Plot Data menu item to Phasor Plot
+- Added Full Decay Preprocessing to Phasor Plot calculation/Parallelization
+
+2020-04-24 (XM)
+- Fixed a bug in Settings save
+
+2019-12-18 (XM)
+- SS1 Loading modified to account for older formats
+
+2019-12-10 (XM)
+- Changed output string in IRF Characteristics Map to output something even when the fit fails.
+
+2019-12-08 (XM)
+- Improved Square Pulse implementation robustness against noise
+
+2019-12-07 (XM)
+- Added Square Pulse Options in Settings
+- Implementation of Square Pulse Characteristics Map
+
+2019-12-06 (XM)
+- Finished IEEE (improved) square pulse analysis
+
+2019-12-05 (XM)
+- Corrected a bug resulting in gate image order scrambling and/or image mask creation failure
+- Started adding IEEE square pulse characteristics
+
+2019-12-02 (XM)
+- SubVI'd Source Image context menu handling in order to be able to reuse the menu in the ROI Manager Window
+- First implementation of "Paste ROI Description"
+
+2019-11-30 (XM)
+- changed square gated IRF fits formulas ti avoid discontinuities
+- ROI Statistics: provide ROI information when the ROI hasn't been stored yet
+- TODO: Paste ROI Definition (to use Notebook information to reproduce a ROI)
+
+2019-11-25 (XM)
+- corrected typos
+
+2019-11-26 (XM)
+- Renaming 7 Moving Files (Cont'd)
+- Added Simple & Complex Plot Formula in Decay Graph
+- Corrected a bug in File Background Correction (leading to failure to correct background Max Image)
+- Added Background Scaling Factor parameter to adjust amount of background file to subtract
+- v 0.20.4 released
+
+2019-11-25 (XM)
+- Renaming Files
+
+2019-11-24 (XM)
+- Moved files around
+
+2019-11-21 (XM)
+- Modified formatting of new version information
+- Added delay for installer download to minimize time-out problem
+- version 0.20.3 released
+
+2019-11-20 (XM)
+- Trying to fix issues with scrambled gate images
+- Fixed new version download/installation
+
+2019-11-19 (XM)
+- Fixed missing pre-processing operation order information
+- Skip Square Gated Background Correction if one of the parameters is invalid (extrema positions, gate duration, laser period)
+
+2019-11-18 (XM)
+- Fixed problem introduced in skippable dialogs
+- Improved error handling when loading datasets
+
+2019-11-17 (XM)
+- Changed Open Image Folder dialog behavior to show folder content and remember last open folder
+- Improved ROI Grid creation speed
+
+2019-11-16 (XM)
+- Implemented Tilted Square Gated IRF Fit (and corresponding Map script)
+
+2019-11-15 (XM)
+- minor bug fixes
+
+2019-11-14 (XM)
+- Added output to the Notebook of # Gates loaded
+- Additional information added to Dataset Information Window
+- Corrected a bug in the Phasor Plot calculation in the absence of background correction
+- Made SS1 Laser Frequency dialog skippable
+
+2019-11-13 (XM)
+- Refactoring of File loading VIs for beter consistency (a few things to debug)
+
+2019-11-12 (XM)
+- Documentation of Square-Gated IRF Characteristics Map
+- Corrected a  bug where the first cursor (tR1) offset was not added back to the output
+- Added a "Verbose" option to turn on/off decay pre-processing information output to the Notebook
+
+2019-11-04 (XM)
+- Fixed a bug where the decay pre-processing order wasn't saved properly
+- Fixed a bug where the total intensity of a decay was not saved if no background subtraction operation was used
+- version 0.20.2 released
+
+2019-10-23 (XM)
+- Fixed AlliGator not closing upon quitting
+- version 0.20.1 release
+
+2019-10-06 (XM)
+- version 0.20.1
+- Fixed output format of Square-Gated IRF Characteristics Map Script
+
+2019-10-05 (XM)
+- version 0.20 released
+- Tested Calibration Map for Phasor Plot
+- Added Color Scale indicator in Settings Windows to show which color scale has been selected by the user
+- Added Skip this dialog to the Create Phasor Plot Dialog Window
+- Added Phase Lifetime vs Amplitude plot in Phasor Graph
+
+2019-10-03 (XM)
+- Implemented Calibration Map for Phasor Plot (untested) 
+
+2019-10-02 (XM)
+- Corrected the definition of "Fixed High Background Threshold" in Settings>>Source Image to refer to the Intensity Histogram mode (it previously erroneously referred to the maximum pixel intensity).
+- Minor cosmetic changes to the names of parameters in the Settings>>Source Image panel.
+
+2019-10-01 (XM)
+- Corrected formula for background-corrected integrated intensity (square-gated decay fit)
+- Fixed a bug with Skippable Dialog Windows handling
+
+2019-09-26 (XM)
+- Started handling Phasor Calibation Map in Phasor Plot
+
+2019-09-24 (XM)
+- Implemented Square Gated IRF Characteristics Map (to be debugged)
+- Implemented single IRF Square Gated Fit
+
+2019-09-23 (XM)
+- Changed checkbox to Radio Buttons for "New/Add to Phasor Plot" dialog
+- Added a Reset button in Settings to restore skipped dialog windows
+
+2019-09-22 (XM)
+- Started implementing Square Gated IRF Analysis Script
+
+2019-09-19 (XM)
+- Added Plot histogram to Phasor Ratio Graph
+
+2019-09-16 (XM)
+- Added "Phase Lifetime vs Fitted Lifetime (Bkgd Subtraction)" function in Phasor Graph 
+
+2019-09-15 (XM)
+- Unified SS2 HDF5 and AlliGator HDF5 dataset loading (no need to "import" SS2 datafiles)
+- if HDF5 file has already been pile-up corrected, don't apply further pile-up correction
+- version 0.19 released
+
+2019-09-14 (XM)
+- background subtraction added to the preprocesing operations list (allows performing it after other operations)
+
+2019-09-13 (XM)
+- Added user-defined decay preprocessing operations order
+- version 0.18.3
+
+2019-09-11 (XM)
+- Cleaned up Decay Pre-processing error handling
+- Released version 0.18.2
+
+2019-09-04 (XM)
+- reorganized preprocess decay to move Normalize Decay at the end
+- Added option to remove out-of-bound values in the Plot Editor (to clean up data points before histogramming)
+
+2019-09-03 (XM)
+- corrected Decay shift Notebook output
+
+2019-08-27 (XM)
+- Implemented Phasor Ratio Color Map
+
+2019-08-26 (XM)
+- Started to add Phasor Ratio Color Map UI
+
+2019-08-25 (XM)
+- Handled cases of duplicated ROIs when computing a phasor calibration map: duplicates are now removed before computing the map and do not result in an error.
+
+2019-08-22 (XM)
+- Added default shift decay option controlled by "shift" parameter (no longer equivalent to no shift)
+- Added "Rotate" option flag for decay shift
+
+2019-08-21 (XM)
+- corrected a bug which prevented plotting phasor graph series when one of the ROIs was invalid
+
+2019-08-05 (XM)
+- Version 0.18.1 released
+
+2019-08-03 (XM)
+- Corrected a bug which resulted in NaN phasor in the absence of background correction
+
+2019-07-09 (XM)
+- removing duplicated control references
+
+2019-06-30 (XM)
+- Made Format SwissSPAD2 Data.vi a VIM to allow handling U8 or U16 data
+
+2019-06-19 (XM)
+- Fixed various bugs with Phasor Plot overlays
+- released v 0.18
+
+2019-06-13 (XM)
+- Debugged issues with Phasor Calibration & Phasor Plot Overlays
+
+2019-06-07 (XM)
+- corrected a problem with Phasor Plot Overlay
+
+2019-06-06 (XM)
+- Fixed Load Phasor Plot Data bug preventing from loading older file versions
+- Check for phasor plot adequation to be used as phasor calibration map
+
+2019-06-04 (XM)
+- Does not automatically apply calibration to the last plot when calibration (or type) is changed interactively
+
+2019-06-03 (XM)
+- Release of version 0.18
+
+2019-06-02 (XM)
+- Initialization of Phasor Plot Components to Update
+
+2019-06-01 (XM)
+- Added Update/Clear Selected Plots Calibrations
+- Removed "Save Phasor Plot as..." and made it the default function of "Save Phasor Plot"
+- Implemented Mouse Wheel and Alt-Rectangle Zoom on Source & Phasor Image
+
+2019-05-31 (XM)
+- Script debugged
+
+2019-05-30 (XM)
+- Implemented Calibrated Phasor Map Series script (to be debugged)
+
+2019-05-29 (XM)
+- Debugged Phasor Calibration Map (# Gates Series) Script
+- Fixed a nagging bug with gate images being scrambled after a few loading actions, by disposing of unused images.
+
+2019-05-28 (XM)
+- Implemented Save/Load Calibration Map
+- Implemented Phasor Calibration Map (# Gates Series) Script
+
+2019-05-26 (XM)
+- Implemented Calibration Map UI
+- Implementation of Calibration map and initial testing 
+
+2019-05-25 (XM)
+- Added Use Calibration Phasor Map option (not computation implemented)
+- Added ROI Description & Center position to Decay Point Metadata
+
+2019-05-23 (XM)
+- Updated implementation of Image Brightness use for Phasor Overlay
+- Implemented it for Phasor Ratio and Phasor Color Map
+- Corrected bug in Cumulative Phasor Plot
+- Optimized Binned Phasor Plot calculation
+
+2019-05-22 (XM)
+- Invert Plots Selection added to Lifetime Graph
+- Added right-click menus to Update Phasor Plot & Erase Overlay buttons to allow selecting which items are updated
+
+2019-05-17 (XM)
+- added option to select 8-bit frames when importing SS2 dataset
+
+2019-05-14 (XM)
+- added automatic style choice for histograms and fits
+
+2019-05-12 (XM)
+- Added Background-subtrated Intensity to decay metadata (this is what is now returned instead of the amplitude, when using Phase Lifetime vs Bkgd-subtracted Intensity plot)
+
+2019-05-09 XM)
+- Added partial Settings export to Notebook
+
+2019-05-04 (XM)
+- Handling of decays with min preceding max (for square gate background correction)
+- Messages added for decay processing
+
+2019-05-03 (XM)
+- Fixed exported color bar size glitch
+- various fixes and cosmetic changes
+
+2019-04-28 (XM)
+- Added check/unckeck visible items custom items
+- Corrected message output when saving single plot
+- Added Transpose Plot in Lifetime Graph
+- Added Phase lifetime vs Background Plot
+
+2019-04-27 (XM)
+- handle corner case where a gate image contains a NaN
+- added "Show/Hide Tool Panel" shortcut menu item
+
+2019-04-25 (XM)
+- minor changes to SS2 file import
+
+2019-04-18 (XM)
+- update
+
+2019-04-04 (XM)
+- Implemented non-interactive All ROIs Analysis
+- Version 0.17.4 Released
+
+2019-04-03 (XM)
+- Added Low and High Percentile Rejection in Image Source Settings
+
+2019-04-02 (XM)
+- Updates related to XY Graph handling
+
+2019-04-01 (XM)
+- Changed to NXG Style
+- XY Graph handling update
+
+2019-03-22 (XM)
+- Added "Straighten Decay" option in Decay Analysis Settings panel
+- version 0.17.3 released
+
+2019-03-19 (XM)
+- Modified "Straighten Decay" to account for background
+
+2019-03-12 (XM)
+- Fixed missing Graph menus
+- v 0.17.1 released
+- Fixed menu item problem in Histogram Window
+- Fixed delayed bin size registration in Plot Histogram
+- Added "busy" icon for a few tasks
+- Few issues with Settings Windows update fixed
+- v 0.17.2 released
+- Better Graph legend clean-up
+- v 0.17.3
+
+2019-03-11 (XM)
+- Added Show/Hide Grid right-click menu item
+
+2019-03-10 (XM)
+- Plot Histogram function added to Intensity Time Trace
+- Fixed a bug resulting in inefficient memory usage
+- Added support for HDF5 Dataset Series
+- Support for Playback of all types of Dataset Series
+- Graph Style change
+- v 0.17 released
+
+2019-03-09 (XM)
+- Modified ROI Save/Load VIs using JSON format (for speed up)
+- Modified Phasor Plots Save/Load VUs using JSON format (for speed up)
+- Added Lifetime Plot Histogram
+
+2019-03-06 (XM)
+- Restored compatibility with v1 of Raw Phasor Plot Data file (XML)
+- Added ROI validity check
+
+2019-03-01 (XM)
+- Corrected a bug resulting in a dialog when reloading HDF5 dataset
+- Added support for background HDF5 Dataset subtraction
+
+- Corrected a bug preventing reloading of image folders
+- Added busy icon for Build Phasor and ROI Highlighting tasks
+- Version 0.16.2 released
+
+2019-02-28 (XM)
+- v0.16.1 released
+
+2019-02-27 (XM)
+- Polished Saving HDF5 Dataset and metadata
+- Minor cosmetic changes (menu shortcuts)
+- Added Average option to Dataset Accumulation
+
+2019-02-26 (XM)
+- Debugged Time-Series Time Trace problem
+- Added storage of parameters needed for HFD5 saving
+
+2019-02-25 (XM)
+- Implemented v0.1 of Save Dataset (hdf5)
+- Added Load Dataset (Ctrl+O)
+- Renamed "Open Dataset" and "Open Dataset Series" to "Open Image Folder" (Ctrl+L) and "Open Image Folder Series" (Ctrl+Shift+L) (replaced shortcuts)
+- Implemented v0.1 of Load Dataset (hdf5)
+
+2019-02-23 (XM)
+- Debugged Series Accumulation
+- Template for Export Dataset function
+- v0.16 released unofficially
+
+2019-02-22 XM)
+- Added distinct "Clear Overlay" buttons in Source Image & Phasor Plot to separate clearing overlay from recalculating.
+- Converted the "Recycle" button of the Image Source to "Reload Dataset"
+- Better update of Settings visibility
+- Delete Notebook backup when quitting (when Notebook is closed)
+- "Modified" asterisk preserved when reopening an unsaved Notebook
+- Added "Verbose Error Mode" to turn on/off Notebook display of internal error codes
+- Started Implementing Series Accumulation
+
+
+2019-02-21 (XM)
+- Corrected bug in SS2 loading
+- Inf replacement value is now NaN (pile-up correction)
+- Number of replacements output to Notebook
+- Implemented SS2 Background Subtraction
+
+2019-02-20 (XM)
+- Added support for SS2 series
+- Implemented Phasor & Fit Time Series Analyses for SS2
+
+2019-02-19 (XM) v 0.15.3
+- Applying pile-up correction at the single gate image level, rather than ROI level
+- Added #Bins parameters for both image histograms
+
+2019-02-19 (XM) v 0.15.2
+- Corrected a bug introduced in the Phasor Plot
+- Fixed a bug to render Notebook persistent
+
+2019-02-17 (XM)
+- Added Description in Settings Window
+- Renamed "Revert Gates" to "Reverse Gates"
+- Minor cosmetic changes and bug fixes
+- Version 0.15.1 released
+
+2019-02-16 (XM)
+- Reload function debuged
+
+2019-02-15 (XM)
+- Parallelism in Phasor Plot calculation
+- Renamed "Decay Points to Skip" to "Gates to Skip"
+- Modified partial gate loading
+- Added Reload function for all file formats (to be debugged)
+
+2019-02-11 (XM)
+- Add File Path to VI Title
+
+2019-02-09
+- 0.15 version released
+
+2019-02-06 (XM)
+- placeholder for All ROI Analysis subroutine
+
+2019-02-03 (XM)
+- Corrected a bug in Settings Window (Laser Period)
+
+2019-01-29 XM)
+- Fixed bugs in Phasor Plot (Binning not recognized and new background subtraction methods)
+
+2019-01-28 (XM)
+- Added option to represent phase lifetime vs total intensity or background-subtracted intensity (Phasor Graph)
+- Settings: Moved "Laser Period" parameter to Fluorescence Decay tab and "Pseudo Phasor Add'l Parameters" to Phasor Graph tab
+
+2019-01-22 (XM)
+- removed Ctrl+C and Ctrl+Shift+C shortcuts to avoid conflict with the standard usage
+- fixed a few graph contextual menu bugs
+- debugged Square Gated Single-Exponential background subtraction method
+- added Amplitude/Background/Lifetime parameter display in the Fluorescence Decay panel (from background subrtaction, when relevant)
+
+2019-01-21 (XM)
+- Added "Square Gated Single-Exponential" background subtraction method
+- Implemented the method/not debugged
+
+2019-01-20 (XM)
+- added phasor metadata (total intensity, # Gates) to raw phasor plot data
+- renamed "Compute Phase Lifetime Plot" into "Phase Lifetime Trajectory"
+- added "Phase Lifetime vs Intensity Scatter Plot" menu item to Phasor Graph menu
+- Implemented Phase Lifetime vs Intensity Scatter Plot
+
+2019-01-15 (XM)
+- further error propagation clean-up
+- modified Decay Fit to add a constraint on lambda parameter range
+
+2019-01-14 (XM)
+- connected a few error outputs which caused dialog pop-up in "auto-handle error dialog" mode
+
+2019-01-08 (XM)
+- Debugged SS2 HDF5 File loading
+- Added Timing Information to Notebook for image folder
+- Added Active Graph/Plot flag to settings
+
+2019-01-07 (XM)
+- Added Open SS2 HDF5 File
+
+2018-11-29 (XM)
+- Updated Clear Graph Event for speed
+
+2018-10-09 (XM)
+- Debugged PUC on Phasor Plot Image
+
+2018-10-08 (XM)
+- Started to implement drawing of PUC on Phasor Plot
+
+2018-10-06 (XM)
+- Added option to save/load AlliGator Settings to file
+
+2018_09-29 (XM)
+- Added Laser Period & Decay Offset to Settings>>Fluorescence Decay>>Basic Settings
+- Option to plot Pseudo UC in the Phasor Graph
+
+2018-09-20 (XM)
+- Corrected a bug in background subtraction due to using integer images
+- Whole image phasor scatter plot activated
+
+2018-09-19 (XM)
+- timing output for SS1 file format reading
+
+2018-09-17 (XM)
+- Implemented Background Image Substraction
+
+2018-09-15 (XM)
+- Implemented Whole image Phasor
+
+2018-09-14 (XM)
+- Implemented bilinear and Gaussian Phasor Plot smoothing
+- Work on Whole Image Phasor
+
+2018-09-13 (XM)
+- Started implementing Whole Image Phasor
+
+2018-09-09 (XM)
+- Added template for whole image analysis (with image binning options)
+
+2018-07-12 (XM)
+- version 0.13 beta released
+
+2018-07-03 (XM)
+- Fixed a few bugs
+
+2018-07-02 (XM)
+- Updated Fit result ouput to document options
+- Started reorganizing code to support all combination of fit menthod/options
+
+2018-07-01 (XM)
+- Brushed up GUI for Guess Parameters
+- Added test function calculation method (simulation, convolution, integration)
+
+2018-06-30 (XM)
+- Debugged time-gated analysis
+- Added Guess Fit Parameters and Use Guess Fit Parameters to Settings
+
+2018-06-28 (XM)
+- remove NaN-containing phasors when computing average phasor
+- added phase lifetime output to Notebook when computing average phasor
+
+2018-06-25 (XM)
+- New convolution analysis (to debug)
+
+2018-05-30 (XM)
+- Removed LavaG dependency before moving to 2018
+
+2018-05-29 (XM)
+- updated Graph menus
+- updated VI names
+
+2018-04-07 (XM)
+- Debugged Verbose Settings Mode
+- Cosmetic changes to the busy icon code
+
+2018-04-06 (XM)
+- Added NaN and NaN-containing Pairs removeal in Plot Editor
+- Added Busy Icon for a few more operations
+- Corrected a dialog glitch when saving ROIs
+
+2018-03-29 (XM)
+- Added pile-up correction option for Swiss SPAD data
+
+2018-03-18 (XM)
+- Improved performance of ROI to Pixel ROIs
+
+2018-03-13 (XM)
+- Added ROI Grid tool
+- Added ROI to pixel ROIS tool
+
+2018-03-12 (XM)
+- Corrected a bug in Fluorescence Decay Statistics
+- Improved performance of Fluorescence Decay Statistics significantly
+
+2018-03-11 (XM)
+- Optimization of periodic decay convolution
+- Replacement of "Max Lifetime" parameter by "Period" (for periodic decays)
+- Reintroduced "Baseline" as fit parameter for periodic decay convolution
+
+2018-03-10 (XM)
+- Implemented exact periodic decay convolution
+- Implemented 2-Exp fit of periodic decay convolution
+
+2018-02-26 (XM)
+- Corrected a bug in decimated decay creation that would sometimes result in different element numbers in time axis and intensity axis
+
+2018-02-21 (XM)
+- Color scale min and max color (Source Image and Phasor Plot Image) are updated upon clicking the color scale
+
+2018-02-18 (XM)
+- Made the manual generation tools more general and user-friendly
+
+2018-02-17 (XM)
+- Tools to export AlliGator web manual as PDF
+
+2018-02-15 (XM)
+- Added "Revert Gates" option to handle Swiss SPAD 2 data
+- Added "Max Lifetime" parameter to be used in determining how far to compute the model decay
+
+2018-02-14 (XM)
+- Preliminary implementation of periodic boundary convolution fit (1-Exp)
+
+2018-02-13 (XM)
+- Swiss SPAD support complete
+- Started implementing "Periodid Boundaries" option
+
+2018-02-12 (XM)
+- Added beta version option
+- Swiss SPAD data support (beta)
+- minor bug and cosmetic fixes
+
+2018-02-10 (XM)
+- Added more verbose/output messages
+- Removed launcher due to problem in main VI GUI
+- Added Check for Updates Help menu item
+
+2018-02-09 (XM)
+- Fixed a problem with busy icon in executable
+
+2018-02-08 (XM)
+- Fixed Launcher issues
+- Version 0.10.6 Released
+
+2018-02-07 (XM)
+- added Plot Decay Shifts as an shortcut menu of Lifetimes Graph
+
+2018-02-06 (XM)
+- added PNG file type for gate images
+- added AlliGator launcher to check for updates
+
+2018-01-21 (XM)
+- Plot Editor cosmetic changes
+- added template to save Decay Shifts plot
+- fixed first Phasor Ratio/Lifetime plot name issue (?)
+
+2018-01-20 (XM)
+- fixed a bug which could delete the UC when toggling single step phasor plot manipulation.
+
+2018-01-19 (XM)
+- Added option to not compute fit parameter uncertainties
+2018-01-17 (XM)
+- Added separate histogram for white light image contrast
+- Added ability to show overlay on white light image (and save the image)
+
+2018-01-15 (XM)
+- Removed "Regularized" IRF option
+- Fixed a bug in Decay Shift which padded decays artificially
+
+2018-01-14 (XM)
+- Added Thresholded IRF function
+
+2018-01-13 (XM)
+- Added export dataset information to Notebook right-click menu
+- Moved phFRET to its own project
+
+2018-01-08 (XM)
+- Added Verbose Settings Mode option
+
+2018-01-07 (XM)
+- Added Wavelet Analysis Options to Settings & Decay context menu
+- Added Decay Extrapolation to Settings & Decay context menu
+
+2018-01-04 (XM)
+- Added regularized IRF extraction both direct or by search (optimal IRF)
+
+2018-01-03 (XM)
+- Added IRF denoising to Decay Graph
+
+2017-12-30 (XM)
+- Added Selected Plots Locking to either phasor ratio references
+
+2017-12-29 (XM)
+- Speed up of plot updates using Defer Panel Update and Hide Graph
+- Some calibration code fixes
+
+2017-12-27 (XM)
+- corrected a few bugs introduced regarding calibration
+- sped up Graph updates by deferring panel updates/hiding Graph
+
+2017-12-27 (XM)
+- Added Optimal IRF Computation
+- Cosmetic changes
+
+2017-12-26 (XM)
+- fixed a few issues with outputs to Notebook
+- added Shift output when using Decay Shift option
+
+2017-12-25 (XM)
+- Added Use Cursor n as Reference n menu item
+- Minor code edits
+
+2017-12-24 (XM)
+- Further debugging of Plot Editor (not a modal window anymore)
+- Implemented Optimal Calibration from Reference Pair
+
+2017-12-23 (XM)
+- Further debugging of Plot Editor
+
+2017-12-22 (XM)
+- implemented ROI modification
+- replaced busy cursors by busy icon
+- implemented Plot Editor (to edit abscissa of multi ROI Global Parameters Plots)
+- change to saved ASCII Plot header format (Scale {{Plot Name}})
+
+2017-12-21 (XM)
+- checks if busy indicator is TRUE before stacking events in the queue
+- added keyboard shortcut option to New Plot dialog
+- added All ROIs Analysis script
+- allowed rearranging ROIs in ROI manager
+
+2017-12-19 (XM)
+- Simplified/corrected convolution code
+- minor cosmetic output edits
+
+2017-12-18 (XM)
+- Corrected a few bugs in fitting
+- Added some info to fit output to Notebook
+
+2017-12-17 (XM)
+- Modified the Parameter Uncertainties VI to ouptu 0 instead of NaN
+- Extended range of the mode function support for convolution
+
+2017-12-16 (XM)
+- Rewrite of the convolved decay(s) fit routines
+- Additional fit output messages
+
+2017-12-14 (XM)
+- Added further Notebook outpts
+- Added choice of individual Fit Algorithm (or Best of All)
+
+2017-12-11 (XM)
+- Output of Global Fit parameters to Lifetime Graph if requested (Displayed parameter list)
+- Minor fixes
+
+2017-12-09 (XM)
+- Added AlliGator Global Fit Status Window
+
+2017-12-08 (XM)
+- Support of single data point for new LaVision format
+
+2017-12-05 (XM)
+- Added ROIs from Peak above Min
+
+2017-11-28 (XM)
+- Multiple bug fixes
+- Added IRF Fit by a Gaussian-Exponential
+
+2017-11-27 (XM)
+- Debugged Plot(s) Loading
+
+2017-11-26 (XM)
+- Debugged Plot Saving
+- Started Plot Loading
+
+2017-11-25 (XM)
+- Minor bug fixes
+- Added Show Reference Decay/IRF
+- Added place holder for Plot Saving
+
+2017-11-22 (XM)
+- Selected Plot Style Dialog
+- Abort option for Global Fits
+- Average Selected Plots
+
+2017-11-21 (XM)
+- Option to export tabulated global fit results to file
+
+2017-11-16 (XM)
+- Added Visible Items menu to all Graphs
+- Delete Selected Plots function added to all Graphs
+
+2017-11-09 (XM)
+- Debugged Global Fit of 2-Exp Decay
+- New Decay Plot's name is set to "Dataset Name: ROI Name"
+
+2017-11-08 (XM)
+- Progress in implementing Global Fit
+
+2017-11-07 (XM)
+- Tweaks to Image ROI Manager
+
+2017-11-06 (XM)
+- Implemented Source Image ROI Manager
+
+2017-10-29 (XM)
+- Added Cumulative Function extraction
+
+2017-10-28 (XM)
+- Minor bug fixes
+- Started developing global fit analysis
+
+2017-10-27 (XM)
+- Added Save Phasor Graph option
+ 
+2017-10-23 (XM)
+- minor bug fixes
+
+2017-10-22 (XM)
+- Changed the way ROIS are handled internally
+- Corrected a bug with playback order
+
+2017-10-20 (XM)
+- Added Parameter Fit Bounds
+
+2017-10-19 (XM)
+- Added information output to Notebook (ROI used).
+
+2017-10-18 (XM)
+- Further improvements on lifetime fitting: added weighted fit option, etc.)
+- Addition of messages for a few script actions
+
+2017-10-16 (XM)
+- Handling of truncated decays (min amd max percentile approach)
+
+2017-10-14 (XM)
+- Added plots of user selected decay fit parameters
+
+2017-10-13 (XM)
+- Added option to only show the last decay plot
+- Decay plot/fit/residuals colors changed
+
+2017-10-12 (XM)
+- Phasor Ratio/Lifetime Plot Name now updated
+
+2017-10-09 (XM)
+- some bug fixes and cosmetic changes
+
+2017-10-04 (XM)
+- Corrected a bug which would not take into account the image threshold settings
+- minor bug fixes
+
+2017-10-01 (XM)
+- added template code for Phasor SDV plot handling
+
+2017-09-30 (XM)
+- added Pixel-level Phasor Computation option
+- started implementation
+
+2017-09-28 (XM)
+- code cleanup. Corrected a missing DVR close which returned an error after LV 2017 f2 patch upgrade,
+
+2017-09-16 (XM)
+- Prepared for Phasor SDV calculation
+
+2017-09-13 (XM)
+- Minor change to Current Phasor control update
+
+2017-09-08 (XM)
+- Added Set/Copy Phasor Graph Cursor to/from Current Phasor
+- Added ROI Statistics menu to Source Image
+
+2017-09-06 (XM)
+- Reverted to no-Gradient calculation for 1-Exp and 2-Exp fitting
+
+2017-09-05 (XM)
+- Gradient calculation implemented for 1-Exp and 2-Exp
+
+2017-09-04 (XM)
+- Implementation of 2-Exp Fit
+
+2017-09-02 (XM)
+- Time-Series 1-Exp fit implementation
+- Added Compute Average Plot Phasor
+ 
+2017-09-01 (XM)
+- Added Baseline Subtraction Method
+- Implemented 1-Exp + IRF Convolution Fit
+
+2017-08-31 (XM)
+- Added option to turn off Image Histogram/Contrast and Phasor Plot to speed up analysis
+- Added Phasor (m, phi) control next to (g, s) version
+- Output of Phase Lifetime each time these values are updated
+
+2017-08-29 (XM)
+- Allowed "transparent" color for ROI overlay on image or phasor plot
+
+2017-08-28 (XM)
+- Cosmetic fixes to Settings window behavior
+
+2017-08-22 (XM)
+- Added High and Low Color for Source Image and Phasor Plot
+
+2017-08-07/08 (XM)
+- Changed the way Image Source ROIs are stored and saved
+
+2017-08-3 (XM)
+- Some optimization using DVR
+
+2017-08-2 (XM)
+- Set different file extensions for the different types of files
+
+2017-06-05 (XM)
+- sub-VIed Phasor Ratio Analysis for message output
+
+2017-05-23 (XM)
+- Corrected a bug in reporting wrong number of files in gate folders
+
+2017-05-17 (XM)
+- Corrected bug in Export Settings to Notebook
+
+2017-04-04 (XM)
+- Corrected bug when showing the Reference 1 control with a non-updated value
+- Loading Phasor Plots now shows them with a visible style
+
+2017-04-03 (XM)
+- Implemented Phasor Plot locking to Reference 1 and ability to move Ref 1 (and Ref 2) along the UC
+ 
+2017-04-02 (XM)
+- Added scrollbar to navigate through Image Soure ROIs
+
+2017-04-01 (XM)
+- Corrected a bug with file list order
+
+2017-03-31 (XM)
+- Checks number of gates in each folder of a series and warns if there are difference
+
+2017-03-30 (XM)
+- Added load/save references in the Phasor Graph
+
+2017-03-26 (XM)
+- Added option to compute amplitude ratio instead of phasor ratio
+- Improved Phasor Color Map Picker UI
+- Version 0.9.9 Released
+
+2017-03-25 (XM)
+- Corrected Phasor Color Map Picker initialization bug
+
+2017-03-09 (XM)
+- Phasor Color Map UI improvements
+- Save-Load Phasor Color Map
+
+2017-03-08 (XM)
+- Phasor Color Map UI and overlay implementation
+
+2017-03-06 (XM)
+- Incorporated correction file definition UI to AlliGator
+- Added correction file handling into Settings
+
+2017-02-16 (XM)
+- Added intensity correction factors option
+- UI to create the correction factor files
+
+2017-02-02 (XM)
+- Added Computation of Phase Lifetime Plot in Phasor Graph
+
+2017-01-21 (XM)
+- Fixed a bug in decay background correction (min and max gate were not taken into account)
+- Implemented Rejection of High Decay Peak Pixels
+- Search ROI now returns the barycenter of all the maxima as center
+- Minor bug fixes and cosmetic changes
+ 
+2017-01-20 (XM)
+- Corrected bug in Phasor Ratio plot linear fit
+
+2017-01-18 (XM)
+- Added Reject High Decay Peak Pixel options
+
+2017-01-10/11 (XM)
+- Bug fixes
+- Added a Create New Plot dialog box when analysing a single image
+
+2017-01-09 (XM)
+- Loading/Saving Phasor Plot implemented
+- Added options for calibration backup
+
+2017-01-07 (XM)
+- corrected a bug with calibration update
+- Clearing the Phasor Ratio and Lifetime graphs are independent actions
+- Added a beep at the end of a time-series analysis
+- Template for loading/saving phasor plots
+
+2017-01-06 (XM)
+- Introduced recalibration of multiple plots
+
+2017-01-05 (XM)
+- Corrected bug in Decay Shifting
+- Minor improvements/cosmetic changes
+
+2017-01-04 (XM)
+- Corrected a bug in Phasor Ratio Map which blanked out the image if a (NaN,NaN) calibration was available
+- Implemented Decay Smoothing and Shifting
+- Minor improvements/cosmetic changes
+
+2016-12-30 (XM)
+- Improved CC Analysis of decays
+- Improved Threshold Analysis of decays
+- Improved Zero-Crossing Analysis of decays
+- Analysis of decays does not require to go through IRF extraction
+
+2016-12-29 (XM)
+- Added Dataset Information Window
+- Added Normalize Decay option
+
+2016-12-28 (XM)
+- Implemented cross-correlation decays shift analysis
+- corrected bug with hiding tipstrip
+
+2016-12-26 (XM)
+- Optimize gate file loading
+
+2016-12-24 (XM)
+- Show File Time Stamp below image (in time series)
+- Template for ROI definition from Pixels above Min
+
+2016-12-23 (XM)
+
+- Added fading Phasor Ratio Map option
+
+- File numbering doesn’t need to be justify-formatted anymore
+
+
+2016-12-22 (XM)
+- Phasor Ratio Reference can be defined in the Phasor Plot and using a line ROI
+
+2016-12-13,14 (XM)
+- Added Phasor Ratio Color Map functionality
+
+2016-12-12 (XM)
+- Corrected a few bugs related to the Current Data Set internal variable
+- Changing the Phasor Calibration checkboxes in the Settings window now updates the Phasor Calibration Used LED
+- Added RCM item to save the Overlay as an 8-bit Image
+- Corrected a bug where loading a Phasor Plot Image ROI would add it to the Image Source ROI array.
+
+2016-12-09 (XM)
+- Improved handling/saving/loading of ROIs
+
+2016-12-08 (XM)
+- Corrected a bug with the "Use File Timestamp"
+- New Plot name is Data n, where n is the plot number (if it isn't taken already)
+- Multi-ROI definition now compatible with "Use Fixed ROI Diameter"
+
+2016-12-07 (XM)
+- Released bug fix as version 0.9.4 again
+- Added automatic update of Decay Statistics Histograms when the Decay Statistics Bin is updated
+
+2016-12-05 (XM)
+- Corrected a bug where a new Phasor Graph plot was created twice and no Phasor Ratio and/or Lifetime plot was created
+
+2016-12-01 (XM)
+- Debugged a few hiccups with data management and settings
+- Version 0.9.4 released and manual updates
+
+2016-11-28 (XM)
+- Debugged some issues with ROI Mask Image
+- Changed Phasor Plot Image type to SGL
+
+2016-11-27 (XM)
+- Added template for phasor and lifetime standard deviation
+
+2016-11-26 (XM)
+- Finished Settings debugging
+
+2016-11-25 (XM)
+- Debugged Settings update of AlliGator
+
+2016-11-23 (XM)
+- AlliGator Settings architecture
+
+2016-11-19 (XM)
+- Finished debugging multiplot features
+- Added tipstrips to graphs
+
+2016-11-18 (XM)
+- Debugged multiplots
+
+2016-11-17 (XM)
+- Debugging of multiplot: still much to do...
+
+2016-11-16 (XM)
+- Debugged loading of White Light Image and ROI Mask Image
+
+2016-11-15 (XM)
+- Loading of White Light Image and ROI Mask Image
+
+2016-11-10 (XM)
+- Implemented pixel rejection in ROI Decay calculation based on Min Decay Peak criterion
+
+2016-11-09 (XM)
+- Corrected a bug where the Phasor Image file name was not including the time point number
+- Corrected a bug where analyzing a single frame of a time-series was not using the proper time-dependent calibration
+- Added Devay Min and Max Histogram in new Fluorescence Decay Statistics panel
+
+2016-11-06 (XM)
+- Added overlay of image ROI in the Phasor Plot as a step of ROI analysis
+- Keyboard shortcuts for different actions
+
+2016-10-28,29 (XM)
+- Debugged Load/Save Calibrations
+- Rearranged menus
+- Version 0.9.3 Released
+
+2016-10-27 (XM)
+- Slider in Phasor Graph panel to replay time series one step at a time
+- Phasor Calibration and Phasor Calibration Curve can now be saved an reloaded
+- ROIs can be saved and reloaded in both Source image and Phasor Plot image
+- Search ROI center is displayed as an overlay on the Source image
+
+2016-10-24 (XM)
+- Added option to display cumulative Phasor Plot
+- Changed location of Phasor Calibration menu item
+ 
+2016-9-22 (XM):
+- Fixed a bug where the ROI highlighted in the Phasor plot was incorrect after a "Use ROI as Search Area" option had been used (even if it had apparently been toggled off).
+
+2016-9-21 (XM):
+- Fixed a bug in Notebook where it was not preserved when closing it
+
+2016-9-19 (XM):
+- Fixed Phasor Plot zoom factor at startup
+- Added option to use image (or phasor plot) intensity to render overlays
+- Added Time Trace Cursor Location Display
+- Minor cosmetic fixes
+
+2016-9-16 (XM):
+- Released version 0.9
+
+2016-9-4 (XM):
+- takes into consideration image intensity histogram threshold for decay, intensity and phasor graph analysis.	
+
+2016-9-3 (XM):
+
+- added more support for Notebook export
+
+- Settings can be exported to Notebook in a single step
+
+- Quit dialog reminds the user of saving the Notebook (if so desired)
+
+
+2016-8-31 (XM):
+- corrected a bug whereby resizing the Source Image ROI when the "Used Fixed ROI Diameter" was checked did not preserve the size.
+- added support for some Notebook exports, including ROI characteristics
+- added verbose option
+- added CPU/Frame calculation and display

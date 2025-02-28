@@ -187,6 +187,83 @@ Data Information
 .. image:: images/AlliGator-Settings-Data-Information.png
    :align: center
 
+- *Gate Characteristics*: loaded with the dataset file, although in some cases 
+  (e.g. raw *.ptu* files), the *# Gates* can be specified before loading. These 
+  parameers can be overwritten after loading, for instance to correct for a 
+  known bogus parameter value.
+
+    * *Gate Width*: for a square gate (or bin), defines the nominal full width 
+      at half maximum (FWHM). For binned data, it is the bin size.
+    * *Gate Separation* (or gate shift): temporal offset of two consecutive 
+      gates. In the case of binned data, this parameter is equal to the *Gate 
+      Width* parameter. 
+    * *Gate Step*: integer parameter specifying by how much the index of 
+      successive gates is incremented when loading a new dataset. The default is 
+      1, which corresponds to all gates being loaded. A value of 2 would result 
+      in every other gate being loaded.
+    * *# Gates*: number of gates in the dataset (or number of gates to bin the 
+      data into in the case of a time-tagged dataset such as *.ptu* files). For 
+      fual-gate datasets, this corresponds to the number of channel pairs.
+    * *Gate Image Exposure*: time during which the detector is actually capable 
+      of detecting photons (= *n x W*, where *n* is the number of laser periods 
+      and *W* the gate width).
+    * *Gate Image Integration*: total time taken to acquire the gate image (= 
+      *n x T*, where *n* is the number of laser periods during acquisition and 
+      *T* is the laser period).
+
+- *Define Gates to*: *Skip* or *Keep*, whose corresponding parameter are 
+  displayed below, allows to reject gates when loading a dataset, providing two 
+  alternative ways to do so:
+
+    * *Gates to Skip*: *from Start/End* are the number of gates to ignore at 
+      the beginning/end of the series when loading the dataset.
+    * Gates to Keep*: *First/Last* are the indices of the first (default: 0) and 
+      last gate (default: 4294,967,295) to keep when loading the dataset. The 
+      indice of the first gate in the dataset is 0, while the indice of the 
+      last gate is *G-1*, where *G* is the total number of gates in the dataset.
+
+- *Channel Name*: List showing the root name of available gates in the loaded 
+  dataset. For standard single channel datasets, this will be limited to a 
+  single name (generally *Gate*), while in the case of dual-channel datasets, 
+  the name of both channels will be shown. Use this drop-down list to switch 
+  from one to the other and update the displayed *Source Image*.
+- *Channel Arithmetic*: *"None"/"INT-G2"/"G2/INT*<INT>"/"(1-G2/INT)*<INT>"* is 
+  a list allowing to process and display arithmetic combinations of dual-channel 
+  gates. It is necessary to reload the dataset to apply this change. Note that, 
+  unless *None* is selected, changing the *Channel Name* parameter will have no 
+  effect on the displayed *Source Image*.
+- *Laser Period*: generally loaded from the dataset when available. Can be 
+  user-modified
+- *Natural Frequency*: indicator representing *1/D*, where *D* is the duration 
+  covered by the loaded gates. It is the recommended frequency for phasor 
+  analysis.
+- *SYNC Period*: in general it is identical to the laser period (or undefined). 
+  It is the trigger frequency used during gate acquisition. When *SYNC Period > 
+  Laser Period*, multiple decay periods can be expected in the data.
+  
+- *Dataset Pile-up Correction* options: the type of corrected pile-up is that 
+  experienced in photon-counting detectors with finite counting capabilities.
+  The correction is applied on each loaded dataset as part of a series of 
+  operations whose order is defined in the **Source Image:Image Processing** 
+  panel *Image Pre-Processing Operations Order* list.
+  
+    * *Pile-up Correction*: check off this box to apply pile-up correction.
+    * *Max Value*: maximum value obtainable in each pixel.
+
+- *Scaling Factor*: optional dataset gate image intensity scaling factor 
+  (default: 1).
+  
+- *Background File Subtraction* options:
+
+    * *Background File Subtraction*: check off this box to apply background 
+      file subtraction when loading a dataset.
+    * *Background Dataset*: path of the dataset used as background file.
+    * *Pile-up Correction*: whether or not to apply pile-up correction as part of 
+      the background dataset loading steps.
+    * *Max Value*: maximum value obtainable in each pixel.
+    * *Scaling Factor*: optional dataset gate image intensity scaling factor 
+      (default: 1).
+ 
 .. _alligator-settings-fluorescence-decay:
 
 Fluorescence Decay

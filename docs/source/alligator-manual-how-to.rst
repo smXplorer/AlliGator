@@ -46,4 +46,4 @@ Menus and menu items will be rendered as follows: ``menu item`` or
 
 Links to different sections or pages of the manual will appear underlined when 
 moving the mouse over them, like the link to 
-:ref:`this page <alligator-manual-how-to>`
+:ref:`this page<alligator-manual-how-to>`

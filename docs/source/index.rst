@@ -22,7 +22,6 @@ Contents
    alligator-tutorials
    alligator-shortcuts
    alligator-installation
-   alligator-version-history
    alligator-bibliography
    alligator-acknowledgements
    alligator-support

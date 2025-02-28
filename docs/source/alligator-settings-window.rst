@@ -13,11 +13,15 @@ top page selector:
    :align: center
 
 The different pages are described in the sections below.
-Note that any value change done in the **Settings** window immediately takes effect and is reflected in the corresponding AlliGator window *control* (if there is one).
+Note that any value change done in the **Settings** window immediately takes 
+effect and is reflected in the corresponding AlliGator window *control* (if 
+there is one).
 
-Inversely, any change to a control in the **AlliGator** window is immediately reflected in the **Settings** window.
+Inversely, any change to a control in the **AlliGator** window is immediately 
+reflected in the **Settings** window.
 
-The value of the Settings controls are saved when AlliGator quits, and reloaded when it is restarted.
+The value of the Settings controls are saved when AlliGator quits, and reloaded 
+when it is restarted.
 
 .. _alligator-settings-source-image:
 
@@ -70,9 +74,9 @@ The **Source Image** panel is comprised of 3 sub-panels:
     * *Background High Threshold Factor*: this factor (:math:`B`) is multiplied 
       by the *mode* :math:`M` of the image histogram (computed with 256 bins) 
       to obtain :math:`Max_B = B M`.
-    * *Fixed High Background Threshold*: fixed quantity :math:`Max_T`, for instance 
-      estimated using the *Max* cursor of the Image Histogram to highlight 
-      pixels in the image above that value.
+    * *Fixed High Background Threshold*: fixed quantity :math:`Max_T`, for 
+      instance estimated using the *Max* cursor of the Image Histogram to 
+      highlight pixels in the image above that value.
     * *High Percentile*: value :math:`P_{max}` defining :math:`MaxP` such that 
       :math:`P_{max}` percent of all pixels have intensity :math:`I \le Max_P`.
 
@@ -81,7 +85,8 @@ The **Source Image** panel is comprised of 3 sub-panels:
   take effect).
 
     * *Remove Hot Pixels*: when checked off, applied hot pixel removal algorithm.
-    * *Percentile*: percentaile of high intensity pixels to consider as hot pixels.
+    * *Percentile*: percentaile of high intensity pixels to consider as hot 
+      pixels.
     * *Use Hot Pixel Mask*: when checked off, ignores the *Percentile* parameter 
       and used the *Hot Pixel Mask Image* instead.
     * *Hot Pixel Mask Image*: path of the mask (binary) image identifying hot 
@@ -97,12 +102,19 @@ The **Source Image** panel is comprised of 3 sub-panels:
     * *ROI Diameter* (in pixel): used in conjunction with the previous option.
     * *ROI Center Color*: used to locate the center of the last ROI whose decay 
       was processed (interactive mode only).
+    * *Overlay Analyzed ROI Center*: if checked off, the center of the analyzed 
+      ROI is highlighted using the 
+
+- *ROI Creation*
+
+    * *Invert Binary Mask*: check off this box to use binary mask images with 
+      regions of interest labeled with a value larger than the background.
     * *Peak Threshold*: *Min* parameter used in the "Create ROI(s) from Pixels 
       with Peak above Min" right-click menu function of the *Source Image*.
     * *Intensity Threshold*: *Min* parameter used in the "Create ROI(s) from 
       Pixels with Intensity above Min" right-click menu function of the *Source 
       Image*.
-
+      
 - *Image Pre-Processing Operations Order*: ordered drop-down list of operations 
   (optionally) applied to each gate image. Right-click on the list to access the 
   *Reorder Operations* dialog window.
@@ -112,9 +124,11 @@ The **Source Image** panel is comprised of 3 sub-panels:
     * *Use Image Binning*: check off this box to apply binning to gate images.
     * X/Y Bin*: binning parameter for each dimension.
 
-- *Image Smoothing Options*: requires reloading the current dataset to be applied.
+- *Image Smoothing Options*: requires reloading the current dataset to be 
+  applied.
 
-    * *Use Image Smoothing*: check off this box to apply smoothing to gate images.
+    * *Use Image Smoothing*: check off this box to apply smoothing to gate 
+      images.
     * *Type*:
 
       + *Uniform*: each pixel is replaced by an average of itself and its 
@@ -133,8 +147,23 @@ The **Source Image** panel is comprised of 3 sub-panels:
       + *Thorough*: treats borders properly but can be significantly slower for 
         large datasets.
 
+- *Save Image*: check off this box to save the displayed image with its overlay 
+  each time a new dataset is loaded. The file is saved in the *Saved Displayed 
+  Image Format* specified in the **Miscellaneous** Settings panel, in the same 
+  folder as the current dataset, with the dataset name to which the image type 
+  (Gate n, White Light or Total Intensity) is appended.
+
 .. image:: images/AlliGator-Settings-Source-Image-Cosmetics.png
    :align: center
+
+- *Use Image Brightness for Overlay*: when used, this option scales the pixel 
+  overlay color by the factor :math:`\lambda = (I - range_{min})/(range_{max} 
+  - range_{min})`, where *I* is the pixel's intensity.
+
+- *Blend Overlay with Background*: when used, this option replaces the pixel 
+  overlay color by :math:`\lambda O + (1-\lambda) B`, where *O* is the 
+  unscaled overlay color and *B* the underlying pixel color according to the 
+  source image color scale.
 
 - *Image Resolution (Pixel Size)*: information used to overlay a scale bar on 
   the image (see *Scale Bar Options* below).
@@ -144,16 +173,11 @@ The **Source Image** panel is comprised of 3 sub-panels:
 
     * *Show Scale Bar Overlay*: check this off to automaticxally show the scale 
       bar when loading a new dataset.
-    * *Scale Bar X/Y*: location of the scale bar in pixel unit. X = 0 corresponds 
+    * *Scale Bar X/Y*: location of the scale bar in pixel unit. X = 0 
+      corresponds 
       to the left of the image. Y = 0 corresponds to the top of the image.
-    * *Scale Bar Lenght/Height*: dimension of the displayed scale bar in physical 
-      units.
-
-- *Save Image*: check off this box to save the displayed image with its overlay 
-  each time a new dataset is loaded. The file is saved in the *Saved Displayed 
-  Image Format* specified in the **Miscellaneous** Settings panel, in the same 
-  folder as the current dataset, with the dataset name to which the image type 
-  (Gate n, White Light or Total Intensity) is appended.
+    * *Scale Bar Lenght/Height*: dimension of the displayed scale bar in 
+      physical units.
 
 .. _alligator-settings-data-information:
 

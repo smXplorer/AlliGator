@@ -184,6 +184,10 @@ The **Source Image** panel is comprised of 3 sub-panels:
 Data Information
 ----------------
 
+The options in this panel are discussed in the 
+:ref:`alligator-loading-saving-fli-dataset-data-information` section of the 
+:ref:`alligator-loading-saving-fli-dataset` page.
+
 .. image:: images/AlliGator-Settings-Data-Information.png
    :align: center
 
@@ -274,6 +278,9 @@ Fluorescence Decay
 Decay Pre-Processing
 ++++++++++++++++++++
 
+The options exposed in this panel are discussed in the 
+:ref:`alligator-decay-preprocessing` page of the manual.
+
 .. image:: images/AlliGator-Settings-Decay-Preprocessing.png
    :align: center
 
@@ -281,6 +288,7 @@ Decay Pre-Processing
 
 Advanced Analysis
 +++++++++++++++++
+
 
 .. image:: images/AlliGator-Settings-Decay-Advanced-Analysis.png
    :align: center

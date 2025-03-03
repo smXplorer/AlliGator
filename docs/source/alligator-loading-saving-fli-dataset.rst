@@ -61,6 +61,8 @@ AlliGator allows the analysis of individual time points, or a series of such
 time points (*i.e.* a time series). Loading a single time-point or a time-series 
 is done differently as described next.
 
+.. _alligator-loading-saving-fli-dataset-data-information:
+
 Data Information
 ++++++++++++++++
 

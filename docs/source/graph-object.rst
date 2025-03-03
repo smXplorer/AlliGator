@@ -56,9 +56,7 @@ The *plot legend* lists the plots stored in memory. Plot names do not need to
 be different, but it is easier to distinguish them if they are, especially when 
 the list is long. In that case, a scrollbar will appear on the righthand side 
 of the legend. Move the scrollbar up and down using the mouse wheel to show the 
-name of all plots. Alternatively, use the *Index Display* control above the 
-legend to select the index of the plot at the top of the list (the first plot 
-has index 0).
+name of all plots.
 
 Long plot names will not show up fully in the legend, but hovering over a plot 
 name with the mouse will reveal a 'tooltip' with the full name of the plot.
@@ -77,22 +75,22 @@ The small image on the right of each plot name (*plot icon*) can be clicked on
 
 .. _plot-menu:
 
-Plot Menu
----------
+Standard Plot Menu
+------------------
 
 .. image:: images/Standard-Plot-Menu.png
    :align: center
 
-This menu allows (among other things) to specify:
+This menu allows specifying (among other things):
 
-+ the type of the plot (symbols, line, line + symbols, etc.)
++ the plot type (symbols only, line, line + symbols, etc.)
 + its color, line style, thickness and anti-aliasing
 + the color and style of the symbols (if used)
-+ the scales (X and Y) associated with the plot (when there are more than one 
++ the scales (X and Y) associated with the plot (when there is more than one 
   scale available per axis)
 
 The ``Export`` options of this menu are less extended than those available 
-through the *custom menu* described next.
+through the *custom graph menu* described next.
 
 .. _custom-graph-menu:
 
@@ -103,31 +101,45 @@ The following custom menu (accessible by right-clicking anywhere in the graph
 except for the plot icons and the *cursor table*) is specific of the *Decay 
 Graph* in AlliGator, but many of its items are common to most graphs.
 
-The most common are described next.
+The most common (NOT highlighted in yellow in the figure below) are described 
+next.
 
 .. image:: images/Decay-Graph-Custom-Menu.png
    :align: center
   
 + ``Edit Plot``: opens the :ref:`Plot Editor <alligator-plot-editor-window>`
   window.
++ ``Transpose Plot``: swaps X- and Y-arrays.
++ ``Merge Selected Plots``: appends the X- and Y-arrays of all selected plots. 
+  This can be used to build a single scatterplot from many smaller ones, or to 
+  stitch together decays covering different parts of the time axis.
++ ``Plot Histogram``: selecting this item opens up a dialog window 
+  allowing specifying options to define the way the histogram of the 
+  selected decay's values is computed. The computed histogram is displayed 
+  in the separate **Histogram Window**.
 + ``Select All Plots`` does as it says.
 + ``Deselect All Plots`` as well.
 + ``Invert Plots Selection`` allows rapidly inverting the selected and 
   deselected plots.
 + ``Set Style of Selected Plots`` opens a :ref:`dialog window 
-  <selected-plot-style-window>` to change    the style of all selected plots at 
+  <selected-plot-style-window>` to change the style of all selected plots at 
   once.
 + ``Delete``, ``Delete Selected Plots`` and ``Delete All Plots`` or ``Clear 
-  Graph`` are self-explanatory (and irreversible)
+  Graph`` are self-explanatory (and irreversible).
 + ``Save Plot``, ``Save Selected Plots`` and ``Save All Plots`` allow saving 
   plots as ASCII files (:kbd:`TAB` separated columns of floating point numbers).
+  The first line of the saved file consists in the plot names and their 
+  associated scales.
+  When all plots have the same X-array, a dialog offers to save only one copy of 
+  it as the first column. Otherwise, the columns represent the X-array and 
+  Y-array for each plot, potentially resulting in columns of different lengths.
++ ``Paste Plot(s) from Clipboard``: 
 + ``Load Plot(s)`` opens a file dialog window with which one or more such ASCII 
   files can be selected and loaded.
 + ``Copy Data`` copies the Graph's image to the clipboard.
 + ``Export``: does the same thing as the ``Export`` submenu of the plot menu, 
   that is, either export the selected plot data to the clipboard or to Excel
 + ``Visible Items``
-
 
 .. image:: images/Graph-Visible-Items-Menu.png
    :align: center

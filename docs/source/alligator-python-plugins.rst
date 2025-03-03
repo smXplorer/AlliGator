@@ -139,7 +139,7 @@ script file, with the following transformations:
 + a single underscore at the beginning of the function name is interpreted as 
   meaning that an horizontal separator will precede that function in the menu.
 
-+ double underscores are alternatively replaced by a left and right parenthesis
++ double underscores are alternatively replaced by a left and right parenthesis 
   , respectively preceded and followed by a space.
 
 + single underscores are replaced by single spaces.
@@ -179,7 +179,7 @@ requires the following additional two import statements:
 
 The first is used to convert the input parameters string from JSON to a 
 dictionary, and the output parameters dictionary to a JSON string, while the 
-second refers to the ``alligoator.py`` script provided in the Python Plugins 
+second refers to the ``alligator.py`` script provided in the Python Plugins 
 folder, and contains type definitions that are useful to format input and 
 output data for a plugin.
 

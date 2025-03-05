@@ -289,9 +289,111 @@ The options exposed in this panel are discussed in the
 Advanced Analysis
 +++++++++++++++++
 
-
 .. image:: images/AlliGator-Settings-Decay-Advanced-Analysis.png
    :align: center
+
+- *Extract IRF instead of Decay*: in interactive mode, follows the 
+  ``Analysis:FLI Dataset:Current ROI Analysis`` step with a deconvolution 
+  step using the *IRF Extraction Options*, and outputs the resulting computed 
+  IRF instead of the decay.
+
+IRF Extraction Options
+^^^^^^^^^^^^^^^^^^^^^^
+
+- *Time Constant*: single-exponential time constant used for deconvolution.
+
+- *Smoothing*: applies one or more iterations of a Savitzky-Golay filter (6 
+  side points, polynomial order 3) to the deconvolved IRF.
+
+- *Smoothing Order*: number of iterations of the Savitzky-Golay filter.
+
+IRF Optimization Options
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Parameters for the optimal IRF extraction algorithm. The center lifetime 
+:math:`\tau_0` used in the search is the *Time Constant* parameter of the *IRF 
+Extraction Options*.
+
+- *Search Range*: :math:`\Delta \tau` defines the half search interval in which 
+  the optimal time constant is searched for.
+
+- *Search Step*: :math:`\delta \tau` is the step size by which the trial time 
+  constant is incremented at each step of the search.
+
+- *Tail Threshold (%)*: percentage of the deconvolved IRF tail used to compute 
+  the metrics.
+
+- *Metrics*: quantity used to determine the optimal time constant for 
+  deconvolution.
+
+- *Smooth Metrics*: if checked, a Savitzky-Golay filtered metrics is used to 
+  find the optimum time constant for IRF deconvolution 
+
+- *S-G Side Points*: number of side points used to compute the 
+  Savitzky-Golay filtered metrics.
+
+- *S-G Polynomial Order*: polynomial order used to compute the 
+  Savitzky-Golay filtered metrics.
+
+- *Export Plot*: if checked, sends the metrics plots (raw and filtered) to the 
+  Notebook.
+
+- *Export Data*: if checked, sends the metrics values to the Notebook
+
+Wavelet Analysis Options
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+The *Wavelet Analysis Options* are used to denoise decays (*Decay Graph*'s 
+``Process Plot(s):Denoising`` right-click menu). The parameters and their 
+interpretation are described in the online LabVIEW Advanced Signal Processing 
+Toolkit manual (https://www.ni.com/docs/en-US/bundle/lvaspt-api-ref/page/vi-lib/addons/wavelet-analysis/application-llb/wa-denoise-vi.html)
+
+Specifically, the *Wavelet Transform Type* parameter allows selecting between a 
+*Discrete Wavelet Transform* (https://www.ni.com/docs/en-US/bundle/lvaspt-api-ref/page/vi-lib/addons/wavelet-analysis/application-llb/wa-denoise-dwt-real-array-vi.html) and a "Undecimated Wavelet Transform* (https://www.ni.com/docs/en-US/bundle/lvaspt-api-ref/page/vi-lib/addons/wavelet-analysis/application-llb/wa-denoise-uwt-real-array-vi.html).
+
+Square Pulse Options
+^^^^^^^^^^^^^^^^^^^^
+
+These options are used for fits of the decay to a square pulse or its variants 
+(logistic square pulse and tilted logistic square pulse).
+
+- *Method*: `Mean` or `Median`, refers to the algorithm used to determine the 
+  baseline (low level) and plateau (high level) values used to define the square 
+  wave.
+  
+- *# Bins*: number of bins used to compute the level histogram used to determine 
+  the low and high level of the square pulse.
+
+- *Threshold %*: percentage of the low-to-high level height used to define the 
+  rising and falling edges start and stop.
+  
+- *Center on Midpoint*: defines whether the rising and falling edges of the 
+  "square" pulse pass through the rising and falling edges midpoints.
+  
+- Smoothen Plot*: defines whether the decay is smoothened before bing fitted to 
+  a square pulse.
+
+
+Average Lifetime Options
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+These options define the way an estimate of the average lifetime is computed 
+based on the measured decay and the IRF.
+
+- *Use Local IRF*: used only for multi-ROI analysis.
+
+- *Use IRF Offset*: define the decay offset as that deduced from the IRF 
+  according to the:
+  
+- *Baseline %*: define a threshold *th = (1 + %) x baseline* and find its 
+  intersection with the rising edge of the IRF as illustrated below.
+  
+
+.. image:: images/AlliGator-IRF-Offset.png
+   :align: center
+
+- *Use Fixed Offset*: ignoring the IRF, define a fixed offset to define time 0 
+  of the decay.
 
 .. _alligator-settings-fluorescence-decay-fit-options:
 

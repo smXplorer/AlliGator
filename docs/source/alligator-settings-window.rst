@@ -273,6 +273,16 @@ The options in this panel are discussed in the
 Fluorescence Decay
 ------------------
 
+The **Fluorescence Decay** tab is divided into 5 sub-panels:
+
+- **Decay Pre-Processing**
+- **Advanced Analysis**
+- **Fit Options**
+- **Fit Parameters**
+- **Styles**
+
+described below.
+
 .. _alligator-settings-fluorescence-decay-preprocessing:
 
 Decay Pre-Processing
@@ -400,6 +410,10 @@ based on the measured decay and the IRF.
 Fit Options
 +++++++++++
 
+The parameters accessible on this panel are discussed in the 
+:ref:`alligator-fit-parameters` section of the :ref:`alligator-decay-fitting` 
+page of the manual.
+
 .. image:: images/AlliGator-Settings-Decay-Fit-Options.png
    :align: center
 
@@ -407,6 +421,10 @@ Fit Options
 
 Fit Parameters
 ++++++++++++++
+
+The parameters accessible on this panel are discussed in the 
+:ref:`alligator-fit-parameters` section of the :ref:`alligator-decay-fitting` 
+page of the manual.
 
 .. image:: images/AlliGator-Settings-Decay-Fit-Parameters.png
    :align: center
@@ -419,6 +437,11 @@ Styles
 .. image:: images/AlliGator-Settings-Decay-Styles.png
    :align: center
 
+- *Show Last Decay Only*: if checked off, hides all other plots in the *Decay 
+  Graph* when adding a new plot.
+- *Decay Graph Color Array*: colors used for the decay itself, its fit and its 
+  residuals.
+
 .. _alligator-settings-fluorescence-decay-statistics:
 
 Fluorescence Decay Statistics
@@ -426,6 +449,16 @@ Fluorescence Decay Statistics
 
 .. image:: images/AlliGator-Settings-Decay-Statistics.png
    :align: center
+
+- *Reject Low Decay Peak Pixels*: if checked off, rejects decays whose peak 
+  values are strictly smaller than *Min Peak Value*.
+- *Min Peak Value*: peak value lower rejection threshold.
+- *Reject High Decay Peak Pixels*: if checked off, rejects decays whose peak 
+  values are strictly larger than *Max Peak Value*.
+- *Max Peak Value*: peak value upper rejection threshold.
+
+These criteria are applied after the min and max total intensity constraints 
+defined in the **Settings:Pixel Processing** panel.
 
 .. _alligator-settings-time-traces:
 
@@ -503,6 +536,17 @@ Lifetime Analysis
 
 .. image:: images/AlliGator-Settings-Lifetime-Analysis.png
    :align: center
+
+- *Decay Analysis Parameters*
+
+  + *Type*: ``Default``/``CDF``/``Threshold``/``Cross-Correlation`` selects 
+    which lifetime-related quantity is computed when using the ``Compute Single 
+    Phasor Ratio at Mouse Location`` menu item in the *Phasor Graph*. 
+    ``Default`` corresponds to the average lifetime, while the other three 
+    options correspond to the decay offset with respect to the stored 
+    IRF/Reference Decay.
+  + *Shift*: used in the ``CFD`` case (Constant Fraction Discrimination), where 
+    a shifted inverted decay is used.
 
 .. _alligator-settings-plugins:
 

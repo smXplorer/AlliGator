@@ -13,7 +13,7 @@ of fluorescence decay fitting:
   being output as maps (see :ref:`alligator-decay-fit-parameters-map-panel`)
 * Series analysis of a ROI in the image source can be done one ROI at a 
   time (the same ROI is used throughout the series), or a list of ROIs can be 
-  used, in dataset in the series using one of the ROI in the list (in the order 
+  used, one dataset in the series using one of the ROI in the list (in the order 
   they appear in the list). In both cases, selected parameters are output as 
   individual plots (one plot per parameter, one point per dataset).
 
@@ -34,7 +34,7 @@ section in the :ref:`alligator-decay-preprocessing` manual page).
 
 The fit model convolution with the IRF is compared with an interpolation of the 
 decay at the time points over which the IRF is defined. This means that a 
-fited decay does not need to cover the whole laser period.
+fitted decay does not need to cover the whole laser period.
 
 In the case of multiple ROIs fits, this single IRF decay can be replaced by 
 multiple ROIs IRFs as discussed below in the corresponding section on multiple 
@@ -45,6 +45,8 @@ If none is defined (or if none is desired, use the ``IRF/Reference Plot:Clear
 IRF/Reference Plot`` menu item of the *Decay Graph* to clear it), the 
 convolution step is skipped during fitting.
 
+.. _alligator-single-decay-fitting:
+
 Single decay fit
 ++++++++++++++++
 
@@ -53,12 +55,12 @@ Overview
 
 A single plot can be fitted by a model function convolved with the selected IRF 
 by right-clicking on its legend (or close to it in the graph) and selecting 
-``Fit Decay``. The options specifying the type of fit and the constraints used 
-are defined in the **Settings:Fluorescence Decay:Fit Options** and 
-**Settings:Fluorescence Decay:Fit Parameters** panels respectively.
+``Nonlinear Least Square Fit:IRF o N-Exp``. The options specifying the type of fit and the constraints used 
+are defined in the :ref:`alligator-settings-fluorescence-decay-fit-options` and 
+:ref:`alligator-settings-fluorescence-decay-fit-parameters` panels respectively.
 
 Several fit options, discussed below, are available in the 
-**Settings:Fluorescence Decay:Fit Options** panel:
+:ref:`alligator-settings-fluorescence-decay-fit-options` panel:
 
 - Model
 - Fitting Algorithm
@@ -77,28 +79,31 @@ Several fit options, discussed below, are available in the
 - Offset Resolution
 
 Parameter constraints, guess parameters and whether or not to display the 
-output as plots are managed in the **Settings:Fluorescence Decay:Fit 
-Parameters** panel
+output as plots are managed in the 
+:ref:`alligator-settings-fluorescence-decay-fit-parameters` panel
 
 - Fit with constraints applied on individual parameters is handled by an array 
-  of Fit Parameter Constraints specifying the:
+  of *Fit Parameter Constraints* specifying the:
 
   + Parameter
   + Min & Max Value
-  + whether or not it is a Global parameter (applicable in case of multiple 
-    fits only)
-  + whether the constraint is used or not
-- Guess parameters can be provided in the corresponding array by selecting the 
+  + whether or not it is a Global parameter (currently unused)
+  + whether or not the constraint is used
+
+- *Guess Parameters* can be provided in the corresponding array by selecting the 
   parameter name and providing the guess value. Additionally, the way these 
-  parameter guesses are used (or not) can be dedined via the Options pull-down 
+  parameter guesses are used (or not) can be defined via the *Options* pull-down 
   list:
 
   + Numerically Estimated
   + User-provided
   + User-provided (normalized)
   + Last valid fitted parameters
-- The Displayed Fit Parameters array only applies to series analysis and 
+
+- The *Displayed Fit Parameters* array only applies to series analysis and 
   will be discussed in that context in a later section.
+
+.. _alligator-fit-options:
 
 Fit Options
 -----------
@@ -203,6 +208,8 @@ Fit Options
   minimal value for the cost function. A small value of this parameter may 
   increase the precision of that parameter but will result in a longer fit 
   duration.
+
+.. _alligator-fit-parameters:
 
 Fit Parameters
 --------------

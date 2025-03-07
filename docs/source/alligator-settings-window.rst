@@ -34,19 +34,19 @@ The **Source Image** panel is comprised of 3 sub-panels:
    :align: center
 
 - *Use Image Histogram for Contrast*: if checked, uses the location of the *Min* 
-  and *Max* cursors in the *Image Histogram* to adjust the correspondence between 
-  pixel intensity and color scale. Namely, any pixel with intensity smaller than 
-  *Min* will be colored with the *Low Color* shown below the color scale, while 
-  any pixel with intensity larger than *Max* will be colored with the *High Color*
-  shown above the color scale. Pixels with intensity between *Min* and *Max* will 
-  be colored according to the color scale.
+  and *Max* cursors in the *Image Histogram* to adjust the correspondence 
+  between pixel intensity and color scale. Namely, any pixel with intensity 
+  smaller than *Min* will be colored with the *Low Color* shown below the color 
+  scale, while any pixel with intensity larger than *Max* will be colored with 
+  the *High Color* shown above the color scale. Pixels with intensity between 
+  Min* and *Max* will be colored according to the color scale.
 
   A side effect of this selection is that, when hovering over the image, the 
   indicated intensity will show clipped values, any pixel with intensity smaller 
   than *Min* will be indicated as *equal to Min*, while any pixel with intensity 
-  larger than *Max* will be indicated as *equal to Max*. However, internally, the 
-  correct intensity value is preserved. To read the actual intensity of a pixel, 
-  simply unchecked this option before hovering over the pixel again.
+  larger than *Max* will be indicated as *equal to Max*. However, internally, 
+  the correct intensity value is preserved. To read the actual intensity of a 
+  pixel, simply unchecked this option before hovering over the pixel again.
 
 - *Low Count Pixels Rejection Options*: defines which rejection criteria to use 
   for the dimmest pixels in the image. The minimum of all criteria, 
@@ -54,13 +54,14 @@ The **Source Image** panel is comprised of 3 sub-panels:
 
     * *Reject Low Count Pixels*: when checked off, combine the following 
       criteria to define a minimum value :math:`m`.the pixel intensity :math:`I` 
-      needs to reach in order to be included in subsequent analyses: :math:`I \ge m`.
+      needs to reach in order to be included in subsequent analyses: :math:`I 
+      \ge m`.
     * *Background Low Threshold Factor*: this factor (:math:`b`) is multiplied 
       by the *mode* :math:`M` of the image histogram (computed with 256 bins) 
       to obtain :math:`Min_B = b M`.
-    * *Fixed Low Background Threshold*: fixed quantity :math:`Min_T`, for instance 
-      estimated using the *Min* cursor of the Image Histogram to highlight 
-      pixels in the image below that value.
+    * *Fixed Low Background Threshold*: fixed quantity :math:`Min_T`, for 
+      instance estimated using the *Min* cursor of the Image Histogram to 
+      highlight pixels in the image below that value.
     * *Low Percentile*: value :math:`P_{min}` defining :math:`Min_P` such that 
       :math:`P_{min}` percent of all pixels have intensity :math:`I \ge Min_P`.
 
@@ -70,7 +71,8 @@ The **Source Image** panel is comprised of 3 sub-panels:
 
     * *Reject High Count Pixels*: when checked off, combine the following 
       criteria to define a maximum value :math:`M`.the pixel intensity :math:`I` 
-      needs to reach in order to be included in subsequent analyses: :math:`I \le M`.
+      needs to reach in order to be included in subsequent analyses: :math:`I 
+      \le M`.
     * *Background High Threshold Factor*: this factor (:math:`B`) is multiplied 
       by the *mode* :math:`M` of the image histogram (computed with 256 bins) 
       to obtain :math:`Max_B = B M`.
@@ -137,7 +139,7 @@ The **Source Image** panel is comprised of 3 sub-panels:
         its neighbors, the weights decreasing linearly from 1 away from the 
         center (to zero for the pixels outside the kernel dimension).
       + *Gaussian*: each pixel is replaced by a weighted average of itself and 
-        its neighbors, the weights decreasing according to a Gaussian with 
+        its neighbors, the weights decreasing according to a Gaussian width 
         :math:`\sigma = Bin/6` from 1 away from the center.
 
     * *Bin*: kernel dimension used in the smoothing operation.
@@ -262,8 +264,8 @@ The options in this panel are discussed in the
     * *Background File Subtraction*: check off this box to apply background 
       file subtraction when loading a dataset.
     * *Background Dataset*: path of the dataset used as background file.
-    * *Pile-up Correction*: whether or not to apply pile-up correction as part of 
-      the background dataset loading steps.
+    * *Pile-up Correction*: whether or not to apply pile-up correction as part 
+      of the background dataset loading steps.
     * *Max Value*: maximum value obtainable in each pixel.
     * *Scaling Factor*: optional dataset gate image intensity scaling factor 
       (default: 1).
@@ -447,6 +449,14 @@ Styles
 Fluorescence Decay Statistics
 -----------------------------
 
+The **Fluorescence Decay Statistics** panel of AlliGator provides information 
+on the max and min intensities in each pixel, displaying an histogram of both. 
+The parameters in the corresponding panel of the **Settings** window allow using 
+this information to reject pixels based on their min and max intensity, 
+similarly to what the *Low/High Count Pixels Rejection Options* of the 
+:ref:`alligator-settings-source-image` panel allow doing based on the total 
+pixel intensities.
+
 .. image:: images/AlliGator-Settings-Decay-Statistics.png
    :align: center
 
@@ -462,32 +472,258 @@ defined in the **Settings:Pixel Processing** panel.
 
 .. _alligator-settings-time-traces:
 
-Time Traces
------------
+Intensity Time Trace
+--------------------
+
+Parameters in this panel affect the way intensity time traces, discussed in the 
+:ref:`alligator-intensity-time-trace-panel` are computed.
 
 .. image:: images/AlliGator-Settings-Time-Traces.png
    :align: center
+
+- *Use File Timestamp*: check off  this box to use the timestamp saved with 
+  each dataset in a series, when building the intensity time trace.
+
+- *Time Step*: increment used to compute the timestamp of each dataset in a 
+  series, absent a timestamp saved with the dataset.
+
+- *Use Intensity Correction File*: Check off this box to renormalize the 
+  intensity time with the information contained in the *Intensity Correction 
+  File*.
+
+- *Intensity Correction File*: path of the intensity correction file to be used 
+  renormalize the intensity time trace.
 
 .. _alligator-settings-phasor-plot:
 
 Phasor Plot
 -----------
 
-.. image:: images/AlliGator-Settings-Phasor-Plot.png
+The **Phasor Plot** panel is subdivided into 3 subpanels:
+
+- **Phasor Plot Calculation**
+
+- **Phasor Plot Information Overlay**
+
+- **Phasor Plot Appearance**
+
+Phasor Plot Calculation
++++++++++++++++++++++++
+
+The parameters in this panel are used to control the way the phasor plot is 
+computed and represented in the **Phasor Plot** panel of AlliGator, discussed 
+in the :ref:`alligator-phasor-plot-panel` page of the manual.
+
+.. image:: images/AlliGator-Settings-Phasor-Plot-Calculation.png
    :align: center
+   
+- *Phasor Frequency*: sets the frequency used to compute phasors. This value is 
+  synchronized throughout AlliGator different windows and panels.
+
+- *Cumulative Phasor Plot*: check off this box to preserved phasor plot data 
+  when loading new datasets. When checked off, the current phasor plot is not 
+  preserved. The first phasor plot to be accumulated is the subsequent one.
+
+- *Phasor Plot Smoothing Options*:
+
+    * *Use Phasor Plot Smoothing*: check off this box to apply smoothing to the 
+      phasor plot
+    * *Type*:
+
+      + *Uniform*: each phasor is replaced by an average of the phasor of its 
+        pixel and those of its neighbors.
+      + *Bilinear*: each phasor is replaced by a weighted average of the phasor 
+        of its pixel and those of its neighbors., the weights decreasing 
+        linearly from 1 away from the center (to zero for the pixels outside 
+        the kernel dimension).
+      + *Gaussian*: each phasor is replaced by a weighted average ofthe phasor 
+        of its pixel and those of its neighbors., the weights decreasing 
+        according to a Gaussian width :math:`\sigma = Bin/6` from 1 away from 
+        the center.
+
+    * *Bin*: kernel dimension used in the smoothing operation.
+    * *Algorithm*:
+
+      + *Rapid*: ignores image border subtleties.
+      + *Thorough*: treats borders properly but can be significantly slower for 
+        large datasets.
+        
+- *Limit Phasor Plot Calculation to*: 
+
+    * *Selected Image ROI(s)*: currently limited to a single ROI. All pixels 
+      outside the ROI are excluded from the phasor plot calculation.
+    * *All Image ROIs*: All pixels outside the image ROIs are excluded from the 
+      phasor plot calculation.
+
+- *Limit Phasor Plot Analysis to*: 
+
+    * *Selected Phasor Plot ROI(s)*: currently limited to a single ROI. When 
+      performing an analysis involving the phasor plot data, limits this 
+      analysis to the phasors within the selected phasor plot ROI.
+
+    * *All Phasor Plot ROIs*: When performing an analysis involving the phasor 
+      plot data, limits this analysis to the phasors within any of the phasor 
+      plot ROIs.
+
+Phasor Plot Information Overlay
++++++++++++++++++++++++++++++++
+
+.. image:: images/AlliGator-Settings-Phasor-Plot-Information-Overlay.png
+   :align: center
+
+- *Phasor Ratio/Average Lifetime Style Options*:
+
+    + *Color Map Type*:
+
+        * *Phasor Ratio (f1 or a1)*: standard phasor ratio (either intensity or 
+          amplitude weighted, depending on the *Phasor Ratio Type* parameter in 
+          the **Phasor Graph** panel of the **Settings** window).
+        * *Average Lifetime (<tau>_i or <tau>_a)*: amplitude- or 
+          intensity-weighted average lifetime, depending on the *Phasor Ratio 
+          Type* parameter in the **Phasor Graph** panel of the **Settings** 
+          window).
+        * *User-Defined Quantity*: elementary quantity or alias for a definition 
+          based on elementary quantities.
+
+    + *User-Defined Quantity*: Use the context menu of this control 
+      to open the **Aliases Definitions** window and define a quantity 
+      based on one of the following elementary quantities:
+
+        * *f1*: phasor ratio
+        * *a1*: amplitude phasor ratio
+        * *tau_phi*: phase lifetime
+        * *tau_m*: modulus lifetime
+        * *<tau>_i*: intensity-weighted average lifetime
+        * *<tau>_a*: amplitude-weighted average lifetime
+        * *tau_1*: lifetime of phasor ratio reference 1
+        * *tau_2*: lifetime of phasor ratio reference 2
+
+    + *Decay Range*: range of the exponential fading factor used in the phasor 
+      ratio (or other derived quantity) color map. This range is shown as a 
+      boundary surrounding the two reference phasors in the *Phasor Plot*. If 
+      the *Exponential Fading* checkbox is not selected, phasors outside the 
+      range (i.e. whose distance to the segment connecting the two references 
+      is larger than the range) are not taken into account in subsequent 
+      analyses.
+    + *Exponential Fading*: if checked off, applies an exponentially decaying 
+      fading factor to the phasor ratio (or other derived quantity) color map 
+      intensity.
+    + *Reference Colors*:
+
+        * *Reference 1*: color used for phasor reference 1.
+        * *Reference 2*: color used for phasor reference 2.
+        * *Boundary*: color used for the boundary of the region of the phasor 
+          plot located *Decay Range* away from the segment connecting 
+          phasor references 1 & 2.
+
+    + *Reference Radius*: size of the dots representing references 1 & 2 on the 
+      phasor plot.
+    + *Draw Reference Segment*: whether or not ro connect both references by a 
+      (dashed) line.
+    + *Color Map Type*: ``Interpolate Reference Colors`` or ``Use Custom Map``.
+    + *Average Lifetime Color Map*: right-click on the box to select predefined 
+      color scales.
+
+- *Color Scale*: represents the selected *Color Map*.
+
+- *Display Range*: slide used to define the min and max Phasor Ratio/Average 
+  Lifetime/User-Defined Quantity encoded by the *Color Scale*. The sliders and 
+  the corresponding values displayed in the respective numeric controls to the 
+  right correspond to the max and min values encoded by the color scale. The max 
+  and min values displayed on the left scale have no meaning for the color 
+  coding.
+
+- *Use Phasor Brightness for Overlay*: when color-coding the pixels of a ROI in 
+  the *Source Image*, this option allows adjusting the color intensity to the 
+  underlying phasor plot bin value.
+
+- *Blend Overlay with Background*: if checked off, this  option replaces the 
+  black color corresponding to 0-valued bins in the option above by the phasor 
+  plot current color.
+  
+Phasor Plot Appearance
+++++++++++++++++++++++
+
+.. image:: images/AlliGator-Settings-Phasor-Plot-Appearance.png
+   :align: center
+
+- *Phasor Plot Size & Style*
+
+    * *H*: horizontal size (in pixels) of the phasor plot image.
+    * *V*: vertical size (in pixels) of the phasor plot image.
+    * *Margin*: fractional size of the regions to the left and right of the 
+      unit square in which the universal circle is encompassed.
+    * *UC Style*: universal circle style settings.
+    
+        + *UC Color*: color used for the UC.
+        + *UC*: whether or not to display the UC.
+        + *Ticks*: whether or not to display the phase lifetime ticks.
+        + *Labels*: whether or not to display the tick labels.
+        + *Size*: label size in pixels.
+        + *Distance*: distance of the labels from the UC in pixels.
+        
+    * *SEPL Style*: single-exponential phasor locus style settings.
+    
+        + *SEPL Color*: color used for the SEPL.
+        + *SEPL*: whether or not to display the SEPL.
+        + *Ticks*: whether or not to display the phase lifetime ticks.
+        + *Labels*: whether or not to display the tick labels.
+        + *Size*: label size in pixels.
+        + *Distance*: distance of the labels from the SEPL in pixels.
+    
+    * *Axes Style*: axes style settings.
+    
+        + *Axes Color*: color used for the axes.
+        + *Axes*: whether or not to display the axes.
+        + *Ticks*: whether or not to display the axes ticks.
+        + *Labels*: whether or not to display the tick labels.
+        + *Size*: label size in pixels.
+        + *Distance*: distance of the labels from the axess in pixels.
+        
 
 .. _alligator-settings-phasor-graph:
 
 Phasor Graph
 ------------
 
+The **Phasor Graph** panel of the **Settings** window contains options and 
+parameters that have an effect beyond the **Phasor Graph** panel of AlliGator.
+
 .. image:: images/AlliGator-Settings-Phasor-Gaph.png
    :align: center
+
+- *Phasor Frequency*: sets the frequency used for phasor computation throughout 
+  AlliGator.
+- *Save Phasor Graph Image*: if checked off, every change to the *Phasor Graph* 
+  generates a file named "Phasor Graph Current Dataset (n).xxx" in the current 
+  dataset folder, where *Current Dataset* is the file name of the current 
+  dataset and *n* is an integer incremented to avoid overwriting previous files.
+  *xxx* is the file extension corresponding to the *Saved Displayed Image File 
+  Format* defined in the :ref:`alligator-settings-miscellaneous` Settings panel.
+- *Phasor SDV Options*: used in case an estimate of the shotnoise contribution 
+  to the phasor (and average lifetime) standard deviation needs to be estimated.
+
+    + *Compute Estimated SDV*: turns the option on or off.
+    + *# Replicas*: number of replicas of the decay simulated to estimate the 
+      phasor SDV.
+    + *Use Estimated Average Phasor*: if checked off, returns the average of all 
+      replicas instead of the original phasor.
+
+- *Define Shortest Lifetime as*: ``Reference 1``/``Reference 2``: when computing 
+  phasor references, defines the shortest lifetime as the selected reference.
+- *Phasor Ratio Type*: ``Intensity-Weighted``/``Amplitude-weighted``: specifies 
+  which phasor ratio (or derived quantity such as the average lifetime) to 
+  compute.
 
 .. _alligator-settings-SEPL:
 
 Single-Exponential Phasor Locus (SEPL)
 --------------------------------------
+
+The options and parameters in this panel control the aspect of the SEPL as 
+displayed in the *Phasor Plot* image or the *Phasor Graph*. For a detailed 
+explanation of the role of these different parameters, check ref. [XM2021]_
+in the :ref:`Bibliography page <alligator-bibliography>`.
 
 .. _alligator-settings-SEPL-display:
 
@@ -497,6 +733,15 @@ Display
 .. image:: images/AlliGator-Settings-SEPL-Display.png
    :align: center
 
+- *Display Parameters*:
+
+    + *# Points*: number of points used to draw the SEPL.
+    + *Ramp Type*: ``Linear``/``Logarithmic``.
+    + *Min tau*: lower :math:`\tau` value used in the ramp.
+    + *Include 0*: whether or not to add the phasor for :math:`\tau = 0`
+    + *Max tau*:upper :math:`\tau` value used in the ramp.
+    + *Include Inf*: whether or not to add the phasor for :math:`\tau = \inf`
+    
 .. _alligator-settings-SEPL-phasor:
 
 Phasor
@@ -504,6 +749,19 @@ Phasor
 
 .. image:: images/AlliGator-Settings-SEPL-Phasor.png
    :align: center
+   
+- *Phasor Parameters*:
+
+    + *Phasor Calculation*: ``Direct Sum``/``Analytical Formula``
+    + *Harmonic Frequency*: frequency used to compute the SEPL. This is **not** 
+      linked to the *Phasor Frequency* parameters visible in the **Phasor Plot** 
+      and **Phasor Graph** panels of the **Settings** and **AlliGator** windows.
+    + *Calibrated Phasor*: if checked off, calibrate the SEPL using the 
+      remaining parameters.
+    + *SEPL Type*: ``UC``/``L_N``/``L_N(W)``/``L_X``
+    + *Calibration Lifetime*: self-explanatory.
+    + *# Gates*: number of gates used to compute the calibration phasor.
+    + *Show Ticks*: shows ticks on the computed SEPL
 
 .. _alligator-settings-SEPL-IRF:
 
@@ -513,6 +771,12 @@ IRF
 .. image:: images/AlliGator-Settings-SEPL-IRF.png
    :align: center
 
+- *IRF Parameters*:
+
+    + *IRF Period*: self-explanatory.
+    + *IRF Model*: ``Dirac``/``Exponential``
+    + *IRF Offset*: time shift of the IRF.
+
 .. _alligator-settings-SEPL-gates:
 
 Gates
@@ -521,6 +785,41 @@ Gates
 .. image:: images/AlliGator-Settings-SEPL-Gates.png
    :align: center
 
+.. image:: images/AlliGator-Settings-SEPL-Gates2.png
+   :align: center
+
+- *Use Current Dataset Parameters*: if checked off, use the gate parameters of 
+  the current loaded dataset, as defined in the **Data Information** panel.
+  
+- *Gate Parameters*:
+
+  + *Gate Type*: select what type of gate shape is used.
+
+    .. image:: images/AlliGator-Settings-SEPL-Gates-Gate-Type.png
+       :align: center
+
+
+  + *Type of User-defined Function*: ``Gate``/``IRF``
+  + *Edit User-defined Function*: button used to open the **Plot Editor** 
+    window in which to load or define the function to use.
+  + *First Gate Start*: location of first timestamp.
+  + *Use Gate Center*: if checked off, timestamps indicate the center of the 
+    gate rather than its start.
+  + *Gate Width*: self-explanatory.
+  + *Use Gate Step*: if checked, the width is equal to the gate step.
+  + *Gate Step*: separation between consecutive gates
+  + *Match Laser Period*: if checked, indicates that the series of gates 
+    covers the whole laser period.
+  + *Adjust*: ``Gate Step``/``# Gates``. Shown when *Match Laser Period* is 
+    selected.
+  + *# Gates*: number of gates comprising the waveform.
+  + *Integration*: ``Fixed``/``Adaptive``. shown when ``User-defined`` *Gate 
+    Type* is selected. Specifies how the resolution used for convolution is 
+    defined.
+  + *Tolerance*: shown when ``Adaptive`` *Integration* is selected.
+  + *# Steps*: shown when ``Fixed`` *Integration* (step number) is selected.
+
+    
 .. _alligator-settings-phasor-calibration:
 
 Phasor Calibration

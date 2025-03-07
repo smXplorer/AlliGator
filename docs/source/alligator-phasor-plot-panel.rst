@@ -6,7 +6,7 @@ Phasor Plot Panel
 The *Phasor Plot* image of the **Phasor Plot** panel represents the phasors of 
 all valid pixels as a color-coded map (a 2-dimensional histogram) as ahown 
 below. Valid pixels are those whose decay meet the conditions defined in the 
-**Settings:Source Image* panel, as well as belong to allowed ROIs as defined in 
+**Settings:Source Image** panel, as well as belong to allowed ROIs as defined in 
 the **Settings:Phasor Plot** panel.
 
 .. image:: images/AlliGator-Phasor-Plot-No-Binning.png

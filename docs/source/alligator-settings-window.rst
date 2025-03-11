@@ -817,7 +817,8 @@ Gates
     Type* is selected. Specifies how the resolution used for convolution is 
     defined.
   + *Tolerance*: shown when ``Adaptive`` *Integration* is selected.
-  + *# Steps*: shown when ``Fixed`` *Integration* (step number) is selected.
+  + *# Steps*: shown when ``Fixed`` *Integration* (step number) is selected. 
+    Number of integration steps used for convolution.
 
     
 .. _alligator-settings-phasor-calibration:
@@ -827,6 +828,27 @@ Phasor Calibration
 
 .. image:: images/AlliGator-Settings-Phasor-Calibration.png
    :align: center
+   
+- *Calibration Options*:
+
+    + *Calibration Lifetime*: single-lifetime lifetime of the decay used as 
+      calbration phasor.
+    + *Calibration Type*: ``None``/``Single Phasor``/``Phasor Series``/``Phasor 
+      Map``
+    + *Use Backup Calibration if needed*: check this box off to use backup a 
+      calibration phasor if none is available. The type of backup calibration 
+      phasor ised is defined by *Backup Calibration Type*.
+    + *Backup Calibration Type*: if there is no calibration phasor defined for 
+      a dataset in a series, and *Use Backup Calibration if needed* is checked 
+      off, the backup calibration used instead can be of two types:
+
+        * *Single Calibration*: uses the *Single Calibration* phasor stored 
+          internally (if one has been defined). If none, has been defined, no 
+          calibration is used.
+        * *Nearest Valid Calibration*: looks for the closest valid calibration 
+          available in the series. If none is found, uses the single 
+          calibration phasor stored internally, or no calibration if none has 
+          been defined.
 
 .. _alligator-settings-lifetime-analysis:
 
@@ -855,6 +877,29 @@ Plugins
 .. image:: images/AlliGator-Settings-Plugins.png
    :align: center
 
+- *Python* Settings:
+
+    + *Python Version*: called when using a plugin.
+    + *Use PATH definition*: if checked off, used the *PATH* system file to 
+      obtain the path to the specified python executable version. If not, uses 
+      the path provided in the *Python.exe Path* control below.
+    + *Python.exe Path*: path to the python executable.
+    + *Include Example Plugins*: if checked, adds the python example plugins to 
+      the corresponding menus.
+    + *Reset Python Session*: press this button to close the current python 
+      session and restart a new one.
+    + *Valid Python Session*: LED tuned on when a python session is currenttly 
+      running (off is no valid python executable has been found).
+
+- *Send JSON to Clipboard*: sends the list of JSON-formatted parameters to the 
+  clipboard. Useful for python plugin developers, in order to know what string 
+  to expect and decode when developing a python plugin requiring a specific 
+  AlliGator parameter
+- *Parameter Names only*: if not checked, returns the current value of each 
+  shared AlliGator parameter in the list above.
+- *Plugins Folder*: use this button to specify where to find the python plugins 
+  (if different from the default location).
+    
 .. _alligator-settings-miscellaneous:
 
 Miscellaneous
@@ -863,14 +908,53 @@ Miscellaneous
 .. image:: images/AlliGator-Settings-Miscellaneous.png
    :align: center
 
+- *UI Options*:
 
+    + *# Logical Processors Used*: select the number of logical processors 
+      available to AlliGator for parallel computing. The number of available 
+      logical processors is indicated to the left of this control.
+    + *Verbose Mode*: if checked off, outputs information on indivudal 
+      processing steps during AlliGator processing (displayed in italics and 
+      light gray color in the Notebook). This can be useful to provide a 
+      complete record of a workflow.
+    + *Verbose Settings Mode*: if checked off, sends a copy of each change in 
+      the Settings window to the Notebook (green italics).
+    + *Verbose Error Mode*: if checked off, sends a copy of each internal error 
+      message to the Notebook (useful for debugging or error reporting 
+      purposes). Errors are ignored and do not prevent AliGator from running, 
+      but might indicate bugs or incorrect input parameters.
+    + *Beep on Error*: if checked off, each error is signalled by a Windows 
+      "Critical Stop" sound.
+    + *Beep after Script*: if checked off, outputs a Windows "Exclamation" 
+      sound.
+    + *Include Loading in Timing*: if checked, reports the time spend loading a 
+      dataset from file when calculating the time needed to get it into memory.
 
+- *Image Saving Options*:
 
+    + *Saved Displayed Image File Format*: ``PNG``/``JPEG``/``BMP``: file format 
+      used to save the displayed source image with overlay, the source image 
+      overlay, the phasor graph, the phasor plot with overlay or the decay fit 
+      parameter map.
+    + *Transparent Mask Color*: select the color in the image that will be made 
+      transparent in the saved image (works with PNG format only).
+    + *Export Gate Image Settings*: conversion settings used to save gate images 
+      as 8 or 16 bit images.
+    
+        * *16 bits*: if unchecked, exports the image as an 8 bit TIFF file.
+        * *Min/Max Value*: values used to convert a floating point image to an 
+          integer one according to :math:`(I-min)/(max-min)*I_{range}`, where 
+          :math:`I` is the floating point pixel intensity, and :math:`I_{range}` 
+          the dynamic range of the destination integer image. If one of the 
+          limits (*Min* or *Max*) is *inf* or *NaN*, the image is clipped to 
+          the destination image's range with the user's approbation.
 
-
-
-
-
+    + *Restore Skipped Dialog*: press this button to reset all skippable dialogs
+      so that they show up again.
+    + *ROI Description Max Characters*: sets the maximum string length output 
+      to the Notebook when exporting a ROI's description.
+      **Warning**: the description will be truncated to that length, which will 
+      make it impossible to copy and paste it later for reconstruction.
 
 
 

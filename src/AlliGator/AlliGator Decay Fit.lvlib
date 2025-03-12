@@ -40,12 +40,10 @@
 	<Item Name="AlliGator Get Guess Offset.vi" Type="VI" URL="../AlliGator Get Guess Offset.vi"/>
 	<Item Name="AlliGator Get IRF Values &amp; Locations.vi" Type="VI" URL="../AlliGator Get IRF Values &amp; Locations.vi"/>
 	<Item Name="AlliGator Get Last Fitted Parameters.vi" Type="VI" URL="../AlliGator Get Last Fitted Parameters.vi"/>
-	<Item Name="AlliGator Get Min Decay Peak Value.vi" Type="VI" URL="../AlliGator Get Min Decay Peak Value.vi"/>
 	<Item Name="AlliGator Get n-Exp Guess Parameters.vi" Type="VI" URL="../AlliGator Get n-Exp Guess Parameters.vi"/>
 	<Item Name="AlliGator Get Tabulated Results Header (Decay Fit).vi" Type="VI" URL="../AlliGator Get Tabulated Results Header (Decay Fit).vi"/>
 	<Item Name="AlliGator Is Decay Valid.vi" Type="VI" URL="../AlliGator Is Decay Valid.vi"/>
 	<Item Name="AlliGator Is IRF Valid.vi" Type="VI" URL="../AlliGator Is IRF Valid.vi"/>
 	<Item Name="AlliGator n-Exp + IRF Fit v4.vi" Type="VI" URL="../AlliGator n-Exp + IRF Fit v4.vi"/>
-	<Item Name="AlliGator Number of Convolution Points.vi" Type="VI" URL="../AlliGator Number of Convolution Points.vi"/>
 	<Item Name="AlliGator Update Decay Fit Results (Stats).vi" Type="VI" URL="../AlliGator Update Decay Fit Results (Stats).vi"/>
 </Library>

@@ -49,7 +49,6 @@
 		<Item Name="AlliGator Send Python Function Doc String to Notebook.vi" Type="VI" URL="../AlliGator Send Python Function Doc String to Notebook.vi"/>
 	</Item>
 	<Item Name="Decay Graph" Type="Folder">
-		<Item Name="AlliGator Get Plots from JSON Output.vi" Type="VI" URL="../AlliGator Get Plots from JSON Output.vi"/>
 		<Item Name="AlliGator Run XY Graph Python Function.vi" Type="VI" URL="../AlliGator Run XY Graph Python Function.vi"/>
 		<Item Name="AlliGator XY Graph Python Function Handler Core.vi" Type="VI" URL="../AlliGator XY Graph Python Function Handler Core.vi"/>
 	</Item>

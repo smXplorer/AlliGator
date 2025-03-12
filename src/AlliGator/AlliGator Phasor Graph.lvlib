@@ -26,7 +26,6 @@
 		<Item Name="AlliGator Raw Phasor Plot Data v2.ctl" Type="VI" URL="../AlliGator Raw Phasor Plot Data v2.ctl"/>
 		<Item Name="AlliGator Raw Phasor Plot Data v3.ctl" Type="VI" URL="../AlliGator Raw Phasor Plot Data v3.ctl"/>
 		<Item Name="AlliGator Raw Phasor Plot Data v4.ctl" Type="VI" URL="../AlliGator Raw Phasor Plot Data v4.ctl"/>
-		<Item Name="Current Phasor (g,s).rtm" Type="Document" URL="../Current Phasor (g,s).rtm"/>
 	</Item>
 	<Item Name="AlliGator Add Phasor Value to Plot v2.vi" Type="VI" URL="../AlliGator Add Phasor Value to Plot v2.vi"/>
 	<Item Name="AlliGator All ROIs Phasor Analysis Script.vi" Type="VI" URL="../AlliGator All ROIs Phasor Analysis Script.vi"/>

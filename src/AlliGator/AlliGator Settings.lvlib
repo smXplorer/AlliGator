@@ -75,5 +75,4 @@
 	<Item Name="AlliGator Update Settings Python Options &amp; Valid Flag.vi" Type="VI" URL="../AlliGator Update Settings Python Options &amp; Valid Flag.vi"/>
 	<Item Name="AlliGator Update Settings Python Options.vi" Type="VI" URL="../AlliGator Update Settings Python Options.vi"/>
 	<Item Name="AlliGator Update Settings SEPL Parameters.vi" Type="VI" URL="../AlliGator Update Settings SEPL Parameters.vi"/>
-	<Item Name="Phasor Frequency Control.rtm" Type="Document" URL="../Phasor Frequency Control.rtm"/>
 </Library>

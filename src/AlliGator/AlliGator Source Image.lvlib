@@ -25,7 +25,6 @@
 	<Item Name="AlliGator Export Phasor Ratio Map as ASCII.vi" Type="VI" URL="../AlliGator Export Phasor Ratio Map as ASCII.vi"/>
 	<Item Name="AlliGator Export User-Defined Quantity Map as ASCII.vi" Type="VI" URL="../AlliGator Export User-Defined Quantity Map as ASCII.vi"/>
 	<Item Name="AlliGator Find Optimal ROI.vi" Type="VI" URL="../AlliGator Find Optimal ROI.vi"/>
-	<Item Name="AlliGator Gate Images as 3D Array.vi" Type="VI" URL="../AlliGator Gate Images as 3D Array.vi"/>
 	<Item Name="AlliGator Get Hot Pixel Removal String.vi" Type="VI" URL="../AlliGator Get Hot Pixel Removal String.vi"/>
 	<Item Name="AlliGator Get Image Destination File Path.vi" Type="VI" URL="../AlliGator Get Image Destination File Path.vi"/>
 	<Item Name="AlliGator Get Image Smoothing String.vi" Type="VI" URL="../AlliGator Get Image Smoothing String.vi"/>
@@ -38,9 +37,7 @@
 	<Item Name="AlliGator Set Check Marks in Source Image Overlay to Erase Button Menu.vi" Type="VI" URL="../AlliGator Set Check Marks in Source Image Overlay to Erase Button Menu.vi"/>
 	<Item Name="AlliGator Set Image Display Range.vi" Type="VI" URL="../AlliGator Set Image Display Range.vi"/>
 	<Item Name="AlliGator Set Loaded Image Resolution.vi" Type="VI" URL="../AlliGator Set Loaded Image Resolution.vi"/>
-	<Item Name="AlliGator Set Search ROI.vi" Type="VI" URL="../AlliGator Set Search ROI.vi"/>
 	<Item Name="AlliGator Single Image Histogram.vi" Type="VI" URL="../AlliGator Single Image Histogram.vi"/>
-	<Item Name="AlliGator Single Image Type.vi" Type="VI" URL="../AlliGator Single Image Type.vi"/>
 	<Item Name="AlliGator Source Image Context Menu Handler.vi" Type="VI" URL="../AlliGator Source Image Context Menu Handler.vi"/>
 	<Item Name="AlliGator Source Image Mouse Move Event.vi" Type="VI" URL="../AlliGator Source Image Mouse Move Event.vi"/>
 	<Item Name="AlliGator Source Image Mouse Up Event.vi" Type="VI" URL="../AlliGator Source Image Mouse Up Event.vi"/>
@@ -52,5 +49,4 @@
 	<Item Name="AlliGator Update Checkmarks in Source Image Overlay to Erase Button Menu.vi" Type="VI" URL="../AlliGator Update Checkmarks in Source Image Overlay to Erase Button Menu.vi"/>
 	<Item Name="AlliGator Update Displayed Image.vi" Type="VI" URL="../AlliGator Update Displayed Image.vi"/>
 	<Item Name="AlliGator Update Local Decay Window Event.vi" Type="VI" URL="../AlliGator Update Local Decay Window Event.vi"/>
-	<Item Name="Source Image.rtm" Type="Document" URL="../Source Image.rtm"/>
 </Library>

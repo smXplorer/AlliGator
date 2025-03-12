@@ -14,7 +14,6 @@
 		<Item Name="AlliGator Ctrl Refnums.ctl" Type="VI" URL="../AlliGator Ctrl Refnums.ctl"/>
 		<Item Name="AlliGator Dataset Ctrl Refnums.ctl" Type="VI" URL="../AlliGator Dataset Ctrl Refnums.ctl"/>
 		<Item Name="AlliGator Event Registration v2.ctl" Type="VI" URL="../AlliGator Event Registration v2.ctl"/>
-		<Item Name="AlliGator Event Registration.ctl" Type="VI" URL="../AlliGator Event Registration.ctl"/>
 		<Item Name="AlliGator Image Histogram Control Refnums.ctl" Type="VI" URL="../AlliGator Image Histogram Control Refnums.ctl"/>
 		<Item Name="AlliGator Initialization Steps.ctl" Type="VI" URL="../AlliGator Initialization Steps.ctl"/>
 		<Item Name="AlliGator Main Window Tabs.ctl" Type="VI" URL="../AlliGator Main Window Tabs.ctl"/>

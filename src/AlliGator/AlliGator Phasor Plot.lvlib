@@ -49,7 +49,6 @@
 	<Item Name="AlliGator Filter Phasors in ROI(s).vi" Type="VI" URL="../AlliGator Filter Phasors in ROI(s).vi"/>
 	<Item Name="AlliGator Formula Interpreter.vi" Type="VI" URL="../AlliGator Formula Interpreter.vi"/>
 	<Item Name="AlliGator Get (Smoothed) Gate Images Sum &amp; Stack.vi" Type="VI" URL="../AlliGator Get (Smoothed) Gate Images Sum &amp; Stack.vi"/>
-	<Item Name="AlliGator Get Phasor at Phasor Plot Image Mouse Location.vi" Type="VI" URL="../AlliGator Get Phasor at Phasor Plot Image Mouse Location.vi"/>
 	<Item Name="AlliGator Get Phasor at Source Image Cursor Location.vi" Type="VI" URL="../AlliGator Get Phasor at Source Image Cursor Location.vi"/>
 	<Item Name="AlliGator Get Phasor Plot Calibration Message String.vi" Type="VI" URL="../AlliGator Get Phasor Plot Calibration Message String.vi"/>
 	<Item Name="AlliGator Get Phasor Plot Display Options.vi" Type="VI" URL="../AlliGator Get Phasor Plot Display Options.vi"/>

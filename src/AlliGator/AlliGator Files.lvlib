@@ -32,7 +32,6 @@
 		<Item Name="AlliGator Script_Convert FLI Dataset to HDF5 or TIFF Series.vi" Type="VI" URL="../AlliGator Script_Convert FLI Dataset to HDF5 or TIFF Series.vi"/>
 		<Item Name="Batch Dataset Export Window.rtm" Type="Document" URL="../Batch Dataset Export Window.rtm"/>
 	</Item>
-	<Item Name="Becker-Hickl sdt" Type="Folder"/>
 	<Item Name="Close" Type="Folder">
 		<Item Name="AlliGator Close FLI Dataset Series.vi" Type="VI" URL="../AlliGator Close FLI Dataset Series.vi"/>
 		<Item Name="AlliGator Close FLI Dataset.vi" Type="VI" URL="../AlliGator Close FLI Dataset.vi"/>
@@ -43,7 +42,6 @@
 			<Item Name="AlliGator After Loading Dataset Information.ctl" Type="VI" URL="../AlliGator After Loading Dataset Information.ctl"/>
 			<Item Name="AlliGator Current Dataset Information.ctl" Type="VI" URL="../AlliGator Current Dataset Information.ctl"/>
 			<Item Name="AlliGator Data Series Type.ctl" Type="VI" URL="../AlliGator Data Series Type.ctl"/>
-			<Item Name="AlliGator File Type.ctl" Type="VI" URL="../AlliGator File Type.ctl"/>
 			<Item Name="AlliGator FLI Dataset Type.ctl" Type="VI" URL="../AlliGator FLI Dataset Type.ctl"/>
 			<Item Name="AlliGator Folder Selection.ctl" Type="VI" URL="../AlliGator Folder Selection.ctl"/>
 			<Item Name="AlliGator Gate Image Set.ctl" Type="VI" URL="../AlliGator Gate Image Set.ctl"/>

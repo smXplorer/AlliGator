@@ -1,3 +1,74 @@
+2025-05-14 (XM)
+- now providing IRFs and IRF axis as part of the Parameters Map structure passed to FLI Dataset Python plugins
+- added template for array-based internal storage of image data
+
+2025-05-04 (XM)
+- Updated copyright text in VI diagrams to reflect BSD license file
+
+2025-05-01 (XM)
+- Updated copyright statement on diagrams to replace "THE X CONSORTIUM" by "THE REGENTS OF THE UNIVERSITY OF CALIFORNIA"
+
+2025-04-39 (XM)
+- updated About message to include NI copyright statement
+
+2025-04-29 (XM)
+- Removed Averna Balloon Tip
+
+2025-04-28 (XM)
+- Licenses text edits and addition/removal
+- Minor code edits
+
+2025-04-22 (XM)
+- cosmetic code edits
+
+2025-04-17 (XM)
+- Minor code cleanup
+
+2025-04-05 (XM)
+- Added support for dropping files in the side panel
+- Added support for dialog-free plot loading in Generic XY Graph Event Handler
+
+2025-04-04 (XM)
+- Implemented and tested Test Dataset Loading for: HDF5, LaVision image folder, SPAD512S image folder, PicoQuant PTU & BIN dataset, B&H SDT dataset
+- Refactored Files Tests
+
+2025-04-03 (XM)
+- Started implementing test suite
+
+2025-03-11 (XM)
+- Fixed non-functioning "Close Mask Image" menu item
+
+2025-03-10 (XM)
+- Fixed visibility of Edit User-defined Function in settings:SEPL:Gates tab
+- Changed verbose settings style to green italics
+
+2025-03-07 (XM)
+- Settings documentation update
+
+2025-03-06 (XM)
+- Phasor Plot Settings layout change
+
+2025-03-05 (XM)
+- Cosmetic changes to Settings and documentation
+
+2025-03-04 (XM)
+- Cosmetic changes to Settings & other VIs related to Advanced Decay Analysis
+
+2025-03-03 (XM)
+- Cosmetic changes to the Decay Graph right-click menu
+
+2025-03-02 (XM)
+- Minor edits
+
+2025-02-28 (XM)
+- documentation update
+
+2025-02-27 (XM)
+- Fixed inconsistent implementation of overlay color blending
+
+2025-02-26 (XM)
+- Moved Source Image Settings across sub-panels
+
 2025-02-14 (XM)
 - Fixed Bug in Auto-adjust Contrast that did not use the Upper and Lower Percentile correctly
 - v1.00 release (with source code)

@@ -44,8 +44,6 @@
 			<Item Name="AlliGator Data Series Type.ctl" Type="VI" URL="../AlliGator Data Series Type.ctl"/>
 			<Item Name="AlliGator FLI Dataset Type.ctl" Type="VI" URL="../AlliGator FLI Dataset Type.ctl"/>
 			<Item Name="AlliGator Folder Selection.ctl" Type="VI" URL="../AlliGator Folder Selection.ctl"/>
-			<Item Name="AlliGator Gate Image Set.ctl" Type="VI" URL="../AlliGator Gate Image Set.ctl"/>
-			<Item Name="AlliGator Gate Images Structure.ctl" Type="VI" URL="../AlliGator Gate Images Structure.ctl"/>
 			<Item Name="AlliGator Image Pre-processing Parameters.ctl" Type="VI" URL="../AlliGator Image Pre-processing Parameters.ctl"/>
 			<Item Name="AlliGator Image Pre-processing Step.ctl" Type="VI" URL="../AlliGator Image Pre-processing Step.ctl"/>
 			<Item Name="AlliGator Load Dataset Options.ctl" Type="VI" URL="../AlliGator Load Dataset Options.ctl"/>
@@ -183,4 +181,5 @@
 		<Item Name="AlliGator Load SS2 FLI Dataset Prelude.vi" Type="VI" URL="../AlliGator Load SS2 FLI Dataset Prelude.vi"/>
 		<Item Name="skippable_AlliGator SS2 Dataset Load Option Dialog.vi" Type="VI" URL="../../SwissSPAD/skippable_AlliGator SS2 Dataset Load Option Dialog.vi"/>
 	</Item>
+	<Item Name="AlliGator Load Single Gate Image.vit" Type="VI" URL="../AlliGator Load Single Gate Image.vit"/>
 </Library>

@@ -35,12 +35,15 @@
 	<Item Name="AlliGator Load Calibration Phasor Map.vi" Type="VI" URL="../AlliGator Load Calibration Phasor Map.vi"/>
 	<Item Name="AlliGator Load Calibration Phasor Series.vi" Type="VI" URL="../AlliGator Load Calibration Phasor Series.vi"/>
 	<Item Name="AlliGator Load Calibration Phasor.vi" Type="VI" URL="../AlliGator Load Calibration Phasor.vi"/>
+	<Item Name="AlliGator Phasor Calibration Map Information.vi" Type="VI" URL="../AlliGator Phasor Calibration Map Information.vi"/>
+	<Item Name="AlliGator Phasor Calibration Series Information.vi" Type="VI" URL="../AlliGator Phasor Calibration Series Information.vi"/>
 	<Item Name="AlliGator Save Calibration Phasor Map.vi" Type="VI" URL="../AlliGator Save Calibration Phasor Map.vi"/>
 	<Item Name="AlliGator Save Calibration Phasor Series.vi" Type="VI" URL="../AlliGator Save Calibration Phasor Series.vi"/>
 	<Item Name="AlliGator Save Calibration Phasor.vi" Type="VI" URL="../AlliGator Save Calibration Phasor.vi"/>
 	<Item Name="AlliGator Select Phasor Calibration v3.vi" Type="VI" URL="../AlliGator Select Phasor Calibration v3.vi"/>
 	<Item Name="AlliGator Set Calibration Type Status LEDs.vi" Type="VI" URL="../AlliGator Set Calibration Type Status LEDs.vi"/>
 	<Item Name="AlliGator Show Phasor Calibration Map ROI Centers Overlay.vi" Type="VI" URL="../AlliGator Show Phasor Calibration Map ROI Centers Overlay.vi"/>
+	<Item Name="AlliGator Single Phasor Calibration Information.vi" Type="VI" URL="../AlliGator Single Phasor Calibration Information.vi"/>
 	<Item Name="AlliGator ucno_objective function phasor calibration.vi" Type="VI" URL="../AlliGator ucno_objective function phasor calibration.vi"/>
 	<Item Name="AlliGator Update Phasor Calibration &amp; References.vi" Type="VI" URL="../AlliGator Update Phasor Calibration &amp; References.vi"/>
 	<Item Name="AlliGator Update Phasor Graph References.vi" Type="VI" URL="../AlliGator Update Phasor Graph References.vi"/>

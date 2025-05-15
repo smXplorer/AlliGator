@@ -10,7 +10,10 @@
 
 </Property>
 	<Item Name="Ctrls" Type="Folder">
+		<Item Name="AlliGator Gate Image Data Set.ctl" Type="VI" URL="../AlliGator Gate Image Data Set.ctl"/>
+		<Item Name="AlliGator Gate Image Set.ctl" Type="VI" URL="../AlliGator Gate Image Set.ctl"/>
 		<Item Name="AlliGator Internal Variables v2.ctl" Type="VI" URL="../AlliGator Internal Variables v2.ctl"/>
+		<Item Name="AlliGator Internal Variables v3.ctl" Type="VI" URL="../AlliGator Internal Variables v3.ctl"/>
 	</Item>
 	<Item Name="AlliGator IV [Raw Phasor Plot].vi" Type="VI" URL="../AlliGator IV [Raw Phasor Plot].vi"/>
 	<Item Name="AlliGator IV Average Lifetime Map.vi" Type="VI" URL="../AlliGator IV Average Lifetime Map.vi"/>
@@ -40,6 +43,7 @@
 	<Item Name="AlliGator IV Selected Max or Sum Image.vi" Type="VI" URL="../AlliGator IV Selected Max or Sum Image.vi"/>
 	<Item Name="AlliGator IV Single Fit Parameters.vi" Type="VI" URL="../AlliGator IV Single Fit Parameters.vi"/>
 	<Item Name="AlliGator IV Start Time.vi" Type="VI" URL="../AlliGator IV Start Time.vi"/>
+	<Item Name="AlliGator IV Template.vit" Type="VI" URL="../AlliGator IV Template.vit"/>
 	<Item Name="AlliGator IV Time Series Timestamps &amp; Current Dataset.vi" Type="VI" URL="../AlliGator IV Time Series Timestamps &amp; Current Dataset.vi"/>
 	<Item Name="AlliGator IV Type of Displayed Image.vi" Type="VI" URL="../AlliGator IV Type of Displayed Image.vi"/>
 	<Item Name="AlliGator IV Valid Decay.vi" Type="VI" URL="../AlliGator IV Valid Decay.vi"/>

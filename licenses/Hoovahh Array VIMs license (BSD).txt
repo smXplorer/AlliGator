@@ -1,0 +1,60 @@
+Hooovahh Array VIMs v3.1.1.22 by Hooovahh
+Released On: Thu, 02 Nov 2023 16:58:50 +0000
+Author: Brian Hoover (hooovahh)
+Copyright: Copyright (c) 2023, Hooovahh
+License: BSD
+Compatible LabVIEW Versions: >= 2020.
+Compatible OS Versions: ALL.
+Repository Name: VIPM Community
+
+Description:
+This package contains Array functions converted into VIMs, primarily taken from the OpenG Array package. With minor improvements and optimizations using newer array manipulation techniques. 
+
+Release Notes:
+3.1.1.22
+- Filter 1D VIM now no longer uses the native sorted search. This was a VIM with classes and caused builds to fail
+- Updated the Sorted Search in this package, to also not use the native method with classes
+- Bug fix with Search Sorted 1D Array, to suport cluster data types
+- Improved the Search Sorted 1D Array Index and Length to support data types that the native < doesn't support This will mean less performance improvements but at least it doesn't have broken wires
+
+3.1.0.16
+- Added Search 1D Array Partial, and Search Filter 1D Array of Strings. These aren't VIM functions but are very useful and use VIMs.
+- Bug fix to the Remove Duplicates from 1D Array (without sort). It had a connector pane issue
+- Removed strict requirement to Index inputs being I32
+- Bug fix the Filter 1D array which wouldn't allow filtering if the array couldn't be sorted
+
+3.0.1.15
+- Bug fix with the Delete Elements From Array, when the filter is empty
+
+3.0.0.14
+- Performance improvements for Conditional Tunnel, Delete Elements, Filter 1D, Remove Duplicates, Reverse 2D, and Search 1D functions, with help from Mads on LAVAG
+- Added a Search Sorted 1D
+- Updated LabVIEW version to 2020 for Maps and Sets
+
+2.1.1.12
+- Bug fix for the Remove Duplicates if the array is empty and sorted
+
+2.1.0.11
+- Added option for Remove Duplicates if the array is sorted
+- Added Check Array Size Match
+
+2.0.0.10
+- Updated to LabVIEW 2018
+- Removed file suffix on installed files
+- Fix with delete elements from 2D Array
+- Added Index 2D array Row/Column
+- Added type def enums for various VIs
+
+1.2.0.9
+- Updated Conditional Auto-Indexing to use LabVIEW's native conditional tunnels
+- Added Conditional Trues and Falses which returns an array of fales and trues similar to Conditional Auto-Indexing
+
+1.1.0.8
+- Added Build Horizontally, Convert 1D to 2D and 2D to 1D, Find Subarray, Force Array Min Max size, and Foreign Key Sort VIMs.
+- Moved OpenG VIMs to their own subpalette, not sure if this is the right design but one palette is getting too cluttered.
+
+1.0.0.6
+- Initial release with 14 VIMs.  Some minor improements over the standard OpenG functions for things like Delete Elements From Array has an optional input to use the indicies if they are already sorted, and Filter 1D array to only filter the first found element.
+
+This Package depends on these other packages:
+OpenG String Library >= 4.1.0.12

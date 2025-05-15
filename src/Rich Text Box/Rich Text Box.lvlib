@@ -31,6 +31,7 @@
 			<Item Name="Error Style.vi" Type="VI" URL="../Error Style.vi"/>
 			<Item Name="Message Style.vi" Type="VI" URL="../Message Style.vi"/>
 			<Item Name="Result Style.vi" Type="VI" URL="../Result Style.vi"/>
+			<Item Name="Settings Style.vi" Type="VI" URL="../Settings Style.vi"/>
 			<Item Name="Verbose Style.vi" Type="VI" URL="../Verbose Style.vi"/>
 			<Item Name="Warning Style.vi" Type="VI" URL="../Warning Style.vi"/>
 		</Item>

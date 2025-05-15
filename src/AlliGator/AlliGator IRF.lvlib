@@ -18,7 +18,7 @@
 	<Item Name="AlliGator All ROIs IRF Analysis.vi" Type="VI" URL="../AlliGator All ROIs IRF Analysis.vi"/>
 	<Item Name="AlliGator Compute Optimal IRF v2.vi" Type="VI" URL="../AlliGator Compute Optimal IRF v2.vi"/>
 	<Item Name="AlliGator Create Cursors for Square Gated IRF Fit.vi" Type="VI" URL="../AlliGator Create Cursors for Square Gated IRF Fit.vi"/>
-	<Item Name="AlliGator Extract IRF Instead of Decay.vi" Type="VI" URL="../AlliGator Extract IRF Instead of Decay.vi"/>
+	<Item Name="AlliGator Extract IRF Instead of Decay Flag.vi" Type="VI" URL="../AlliGator Extract IRF Instead of Decay Flag.vi"/>
 	<Item Name="AlliGator Fit to Logistic Square Gated IRF.vi" Type="VI" URL="../AlliGator Fit to Logistic Square Gated IRF.vi"/>
 	<Item Name="AlliGator Fit to Model IRF.vi" Type="VI" URL="../AlliGator Fit to Model IRF.vi"/>
 	<Item Name="AlliGator Fit to Tilted Logistic Square Gated IRF.vi" Type="VI" URL="../AlliGator Fit to Tilted Logistic Square Gated IRF.vi"/>

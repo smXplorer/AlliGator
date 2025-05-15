@@ -102,6 +102,12 @@
 		<Item Name="Dispose Array of Images.vi" Type="VI" URL="../Dispose Array of Images.vi"/>
 		<Item Name="Create Same Type Image v2.vi" Type="VI" URL="../Create Same Type Image v2.vi"/>
 	</Item>
+	<Item Name="Image Manipulation" Type="Folder">
+		<Item Name="Fill Image Data.vim" Type="VI" URL="../Pixel Manipulation/Fill Image Data.vim"/>
+	</Item>
+	<Item Name="Basics" Type="Folder">
+		<Item Name="Set Image Data Size.vim" Type="VI" URL="../Basics/Set Image Data Size.vim"/>
+	</Item>
 	<Item Name="Adjusted Palette Range.vi" Type="VI" URL="../Adjusted Palette Range.vi"/>
 	<Item Name="Bin SGL Image.vi" Type="VI" URL="../Bin SGL Image.vi"/>
 	<Item Name="Calculate Zoom From Mouse Wheel.vi" Type="VI" URL="../Calculate Zoom From Mouse Wheel.vi"/>
@@ -158,4 +164,5 @@
 	<Item Name="Pixel Array Long &amp; Short Axis Length &amp; Aspect Ratio.vi" Type="VI" URL="../Pixel Array Long &amp; Short Axis Length &amp; Aspect Ratio.vi"/>
 	<Item Name="Create Image of Different Type.vi" Type="VI" URL="../Create Image of Different Type.vi"/>
 	<Item Name="Image Flatfield Correction (SGL).vi" Type="VI" URL="../Image Flatfield Correction (SGL).vi"/>
+	<Item Name="Blend Overlay Color with Background.vi" Type="VI" URL="../Blend Overlay Color with Background.vi"/>
 </Library>

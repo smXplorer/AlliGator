@@ -1,0 +1,21 @@
+MGI Graph v1.0.2.6 by MGI
+Released On: Tue, 30 Aug 2016 15:10:36 -0500
+Author: Moore Good Ideas, inc.
+Copyright: Copyright (c) 2016, MGI
+License: BSD
+Compatible LabVIEW Versions: >= 2009.
+Compatible OS Versions: ALL.
+Repository Name: NI LabVIEW Tools Network
+
+Description:
+This package contains VIs that operate with Graph or Chart References.
+
+NOTE:  VIPM 2014 or later  is required to install this package.
+
+Release Notes:
+Fixed 2 bugs relative to Active Plot and LegPlot.
+Specifically, we would return an error if the cached active plot was larger than the new number of plots.  Now, this is limited to the new number of plots.  Also, updated to use the current, supported, LegNumRows property instead of the obsolete LegPlots property.
+Update to VIPM 2014+
+
+This Package depends on these other packages:
+MGI Application Control >= 1.1.1.8

@@ -10,6 +10,7 @@
 
 </Property>
 	<Item Name="Ctrls" Type="Folder">
+		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Item Name="AlliGator 2-Phasor Plot Multiplication.ctl" Type="VI" URL="../AlliGator 2-Phasor Plot Multiplication.ctl"/>
 		<Item Name="AlliGator Decay Metadata v3.ctl" Type="VI" URL="../AlliGator Decay Metadata v3.ctl"/>
 		<Item Name="AlliGator Decay Metadata.ctl" Type="VI" URL="../AlliGator Decay Metadata.ctl"/>

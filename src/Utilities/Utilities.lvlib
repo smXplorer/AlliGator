@@ -27,8 +27,10 @@
 	<Item Name="Is Runtime Application.vi" Type="VI" URL="../Is Runtime Application.vi"/>
 	<Item Name="Logical Processors Used.vi" Type="VI" URL="../Logical Processors Used.vi"/>
 	<Item Name="Read-Write.ctl" Type="VI" URL="../Read-Write.ctl"/>
+	<Item Name="Replace BD Decoration Text by Label.vi" Type="VI" URL="../Replace BD Decoration Text by Label.vi"/>
 	<Item Name="Run Vi.vi" Type="VI" URL="../Run Vi.vi"/>
 	<Item Name="Save Control__A2E.vi" Type="VI" URL="../ArrayToEnum/Save Control__A2E.vi"/>
+	<Item Name="Set All Controls Description.vi" Type="VI" URL="../Set All Controls Description.vi"/>
 	<Item Name="Set Control Value by Name.vi" Type="VI" URL="../Set Control Value by Name.vi"/>
 	<Item Name="Variant To Control__A2E.vi" Type="VI" URL="../ArrayToEnum/Variant To Control__A2E.vi"/>
 	<Item Name="Version Description.ctl" Type="VI" URL="../Version Description.ctl"/>

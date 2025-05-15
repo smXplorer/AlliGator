@@ -4,7 +4,7 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">553680896</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
-	<Item Name="Ctrl" Type="Folder">
+	<Item Name="Ctrls" Type="Folder">
 		<Item Name="Axis Differences.ctl" Type="VI" URL="../Axis Differences.ctl"/>
 		<Item Name="New Plot Information.ctl" Type="VI" URL="../New Plot Information.ctl"/>
 		<Item Name="Plot Scales.ctl" Type="VI" URL="../../Plot Scales.ctl"/>
@@ -15,6 +15,7 @@
 		<Item Name="XY Graph NXG with TipStrip.vi" Type="VI" URL="../XY Graph NXG with TipStrip.vi"/>
 		<Item Name="XY Graph NXG.vi" Type="VI" URL="../XY Graph NXG.vi"/>
 		<Item Name="XY Graph Plot Axis Type.ctl" Type="VI" URL="../XY Graph Plot Axis Type.ctl"/>
+		<Item Name="XY Graph Plot Format Information.ctl" Type="VI" URL="../XY Graph Plot Format Information.ctl"/>
 		<Item Name="XY Graph Plot Formula Definitiion.ctl" Type="VI" URL="../XY Graph Plot Formula Definitiion.ctl"/>
 		<Item Name="XY Graph Plot Scale Labels.ctl" Type="VI" URL="../XY Graph Plot Scale Labels.ctl"/>
 		<Item Name="XY Graph Plot Shift Method.ctl" Type="VI" URL="../XY Graph Plot Shift Method.ctl"/>

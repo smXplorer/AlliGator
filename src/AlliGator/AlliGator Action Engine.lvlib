@@ -21,6 +21,7 @@
 	<Item Name="AlliGator Add Action Array to Stack.vi" Type="VI" URL="../AlliGator Add Action Array to Stack.vi"/>
 	<Item Name="AlliGator Add Action(s) to Stack.vi" Type="VI" URL="../AlliGator Add Action(s) to Stack.vi"/>
 	<Item Name="AlliGator Add Single Action to Stack.vi" Type="VI" URL="../AlliGator Add Single Action to Stack.vi"/>
+	<Item Name="AlliGator Add Test Result.vi" Type="VI" URL="../Test Suites/AlliGator Add Test Result.vi"/>
 	<Item Name="AlliGator Calibration Actions.vi" Type="VI" URL="../AlliGator Calibration Actions.vi"/>
 	<Item Name="AlliGator Check for Abort.vi" Type="VI" URL="../AlliGator Check for Abort.vi"/>
 	<Item Name="AlliGator Compute P2 vs P1 Plots.vi" Type="VI" URL="../AlliGator Compute P2 vs P1 Plots.vi"/>
@@ -36,6 +37,7 @@
 	<Item Name="AlliGator Generic Graph Actions.vi" Type="VI" URL="../AlliGator Generic Graph Actions.vi"/>
 	<Item Name="AlliGator Get First Event.vi" Type="VI" URL="../AlliGator Get First Event.vi"/>
 	<Item Name="AlliGator GUI Actions.vi" Type="VI" URL="../AlliGator GUI Actions.vi"/>
+	<Item Name="AlliGator Hide Path Drop Boxes.vi" Type="VI" URL="../AlliGator Hide Path Drop Boxes.vi"/>
 	<Item Name="AlliGator Image Actions.vi" Type="VI" URL="../AlliGator Image Actions.vi"/>
 	<Item Name="AlliGator Initialize Images.vi" Type="VI" URL="../AlliGator Initialize Images.vi"/>
 	<Item Name="AlliGator Initialize Internal Variables.vi" Type="VI" URL="../AlliGator Initialize Internal Variables.vi"/>

@@ -1,3 +1,13 @@
+2025-05-19 (XM)
+- Fixed bogus released executable
+- Fixed minor bugs (reentrant quit dialog, distinctively named progress bars)
+- Simplified (faster) quit sequence
+- Updated project description
+- v1.0.2 release
+
+2025-05-16 (XM)
+- v1.0.1 release
+
 2025-05-14 (XM)
 - now providing IRFs and IRF axis as part of the Parameters Map structure passed to FLI Dataset Python plugins
 - added template for array-based internal storage of image data

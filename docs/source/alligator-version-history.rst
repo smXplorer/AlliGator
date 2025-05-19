@@ -10,6 +10,15 @@ AlliGator Version History
 Note: version numbers followed by an asterisk have not been released.
 
 ------------------
+1.0.2 (2025-05-15)
+------------------
+
+    - Bug Fixes
+        + Fixed bogus released executable
+        + Fixed minor bugs (reentrant quit dialog, distinctively named progress bars)
+        + Simplified (faster) quit sequence
+
+------------------
 1.0.1 (2025-05-14)
 ------------------
 

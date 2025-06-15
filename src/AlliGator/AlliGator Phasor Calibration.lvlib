@@ -45,6 +45,7 @@
 	<Item Name="AlliGator Show Phasor Calibration Map ROI Centers Overlay.vi" Type="VI" URL="../AlliGator Show Phasor Calibration Map ROI Centers Overlay.vi"/>
 	<Item Name="AlliGator Single Phasor Calibration Information.vi" Type="VI" URL="../AlliGator Single Phasor Calibration Information.vi"/>
 	<Item Name="AlliGator ucno_objective function phasor calibration.vi" Type="VI" URL="../AlliGator ucno_objective function phasor calibration.vi"/>
+	<Item Name="AlliGator Update IV Calibration Phasor.vi" Type="VI" URL="../AlliGator Update IV Calibration Phasor.vi"/>
 	<Item Name="AlliGator Update Phasor Calibration &amp; References.vi" Type="VI" URL="../AlliGator Update Phasor Calibration &amp; References.vi"/>
 	<Item Name="AlliGator Update Phasor Graph References.vi" Type="VI" URL="../AlliGator Update Phasor Graph References.vi"/>
 	<Item Name="AlliGator Use Phasor Plot as Phasor Calibration Map.vi" Type="VI" URL="../AlliGator Use Phasor Plot as Phasor Calibration Map.vi"/>

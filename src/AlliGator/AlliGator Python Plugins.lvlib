@@ -56,7 +56,7 @@
 		<Item Name="AlliGator Add Missing Parameter Map Parameters.vi" Type="VI" URL="../AlliGator Add Missing Parameter Map Parameters.vi"/>
 		<Item Name="AlliGator FLI Dataset Python Function Handler Core.vi" Type="VI" URL="../AlliGator FLI Dataset Python Function Handler Core.vi"/>
 		<Item Name="AlliGator Parameter Names to Parameters List.vi" Type="VI" URL="../AlliGator Parameter Names to Parameters List.vi"/>
-		<Item Name="AlliGator Pythin Plugin Get FLI Dataset.vi" Type="VI" URL="../AlliGator Pythin Plugin Get FLI Dataset.vi"/>
+		<Item Name="AlliGator Python Plugin Get FLI Dataset.vi" Type="VI" URL="../AlliGator Python Plugin Get FLI Dataset.vi"/>
 		<Item Name="AlliGator Python Plugin Get FLI Dataset Data.vi" Type="VI" URL="../AlliGator Python Plugin Get FLI Dataset Data.vi"/>
 		<Item Name="AlliGator Run FLI Dataset Python Function.vi" Type="VI" URL="../AlliGator Run FLI Dataset Python Function.vi"/>
 	</Item>

@@ -4,7 +4,10 @@ Image Profile
 =============
 
 Any of the open contour tool in the *Source Image* can be used to look at the 
-image intensity profile and additional information along that contour.
+image intensity profile and additional information along that contour. 
+Additionally, the ``Rectangle`` and ``Rotated Rectangle`` tools can be used to 
+analyze *averaged profile* as discussed in the 
+:ref:`alligator-averaged-image-profile` section below.
 
 The open contour tools are framed in black in the snapshot below:
 
@@ -78,6 +81,9 @@ The ``Background-subtracted`` option displays the raw intensity minus *G* x
 the FLI Dataset and ``Constant Background per Gate`` is defined in the 
 **Settings:Fluorescence Decay:Decay Pre-Processing** panel.
 
+
+.. _alligator-averaged-image-profile:
+
 Averaged Profile
 ++++++++++++++++
 
@@ -91,7 +97,9 @@ explains how this works:
 The computed profile will contain *L* values, which will each represent the 
 average along a perpendicular segment of length *W* (1-pixel wide). The only 
 exception is the intensity profile, which will represent the sum of the pixels' 
-intensities along the perpendicular segment.
+intensities along the perpendicular segment. Note that the profile will always 
+be measureed along the longest axis of the rectangle. The direction of the 
+profile can be inferred from the label of the Profile Graph.
 
 As usual, if a pixel has been rejected from analysis, it will be excluded from 
 this averaging. If all pixels along a segment are rejected, that average is not 
@@ -105,10 +113,10 @@ An example is shown below:
 Notice the green and red rectangles and the thick green center line. The green 
 (sometimes bizzarely deformed) rectangle is the one drawn by LabVIEW. The red 
 rectangle is that overlayed by AlliGator to provide the actual ROI used in the 
-analysis. To show it, use the ``Actions:Overlay ROI in Source Image`` (Ctrl+O) 
-**Source Image Profile** window menu item. The color of that overlayed 
-rectangle (and the associated center line) can be chosen using the 
-``Actions:Overlay Color Selection`` dialog window.
+analysis. To show it, check off the ``Overlay ROI Median`` checkbox in the
+**Settings:Source Image:Omage Cosmetics** window panel. The color of that 
+overlayed rectangle (and the associated center line) is the set by the ``Median 
+ROI Color* box in the same Settings panel.
 
 The  corresponding **Source Image Profile** window is shown below:
 
@@ -164,7 +172,7 @@ Type:Half Width`` option (``Ctrl+2``).
 .. image:: images/Source-Image-Profile-Window-Rectangle-Profile-Type-Menu.png
    :align: center
 
-Using the example shown abover, the resulting split profiles look as shown here:
+Using the example shown above, the resulting split profiles look as shown here:
 
 
 .. image:: images/Source-Image-Profile-Averaged-Split-Profile-Example.png

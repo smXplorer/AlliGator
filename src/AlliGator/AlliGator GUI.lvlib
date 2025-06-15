@@ -55,6 +55,7 @@
 	<Item Name="AlliGator Set Phasor Plot Update LED.vi" Type="VI" URL="../AlliGator Set Phasor Plot Update LED.vi"/>
 	<Item Name="AlliGator Set Playback &amp; Loop Menu Checkmarks.vi" Type="VI" URL="../AlliGator Set Playback &amp; Loop Menu Checkmarks.vi"/>
 	<Item Name="AlliGator Set Used Calibration Menu Checkmarks.vi" Type="VI" URL="../AlliGator Set Used Calibration Menu Checkmarks.vi"/>
+	<Item Name="AlliGator Source Image Display Mouse Down-Up Event Monitoring.vi" Type="VI" URL="../AlliGator Source Image Display Mouse Down-Up Event Monitoring.vi"/>
 	<Item Name="AlliGator Source Image Display Mouse Move Flag.vi" Type="VI" URL="../AlliGator Source Image Display Mouse Move Flag.vi"/>
 	<Item Name="AlliGator Update Gate Image Slide.vi" Type="VI" URL="../AlliGator Update Gate Image Slide.vi"/>
 	<Item Name="AlliGator Update Menu.vi" Type="VI" URL="../AlliGator Update Menu.vi"/>

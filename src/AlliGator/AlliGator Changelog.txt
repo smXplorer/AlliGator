@@ -1,3 +1,40 @@
+2025-06-13 (XM)
+- Fixed bug in rectangle profile
+- Added ROI Median Color box in Settings>>Source Image>>Image Cosmetic
+
+2025-06-12 (XM)
+- Fixed refresh lag in optional rectangle ROI median overlay
+- Added Overlay ROI Median option in Settings>>Source Image>>Cosmetic Settings
+- Fixed a bug whereby the doc string of a Python Plugin function would be printed twice in the Notebook when requested
+
+2025-06-11 (XM)
+- Updated enumerated list of internal variables
+- Fixed broken Image Profile window update
+- Implemented automatic selection of long axis for rectangular ROI profile
+
+2025-06-09 (XM)
+- Hid Parameter Map Tab
+- Created Phasor Harmonics & Global Decay Fit libraries
+
+2025-06-05 (XM)
+- Fixed erroneous parameter name conversion in FLI Dataset Python Plugin outputting a fit parameter map
+- Added new "Parameter Map" tab
+- Added internal Parameters Maps Data array
+
+2025-06-04 (XM)
+- Worked on reading XLSX files to extract LUT data
+
+2025-06-03 (XM)
+- Fixed typo in Python Plugin VI name
+
+2025-06-02 (XM)
+- Reading additional ICCD information from .set and RecSettings.txt file
+
+2025-05-30 (XM)
+- Added support for CSV files for plots
+- Added support for gate integration, MCP voltage and hardware binning for ICCD datasets
+- v1.01
+
 2025-05-19 (XM)
 - Fixed bogus released executable
 - Fixed minor bugs (reentrant quit dialog, distinctively named progress bars)

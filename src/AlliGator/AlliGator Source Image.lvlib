@@ -34,6 +34,7 @@
 	<Item Name="AlliGator Image Contrast Status.vi" Type="VI" URL="../AlliGator Image Contrast Status.vi"/>
 	<Item Name="AlliGator Is Search ROI Modified.vi" Type="VI" URL="../AlliGator Is Search ROI Modified.vi"/>
 	<Item Name="AlliGator Overlay ROI Center.vi" Type="VI" URL="../AlliGator Overlay ROI Center.vi"/>
+	<Item Name="AlliGator Overlay ROI Median.vi" Type="VI" URL="../AlliGator Overlay ROI Median.vi"/>
 	<Item Name="AlliGator Set Check Marks in Source Image Overlay to Erase Button Menu.vi" Type="VI" URL="../AlliGator Set Check Marks in Source Image Overlay to Erase Button Menu.vi"/>
 	<Item Name="AlliGator Set Image Display Range.vi" Type="VI" URL="../AlliGator Set Image Display Range.vi"/>
 	<Item Name="AlliGator Set Loaded Image Resolution.vi" Type="VI" URL="../AlliGator Set Loaded Image Resolution.vi"/>

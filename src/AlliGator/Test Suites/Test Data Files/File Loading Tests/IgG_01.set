@@ -1,0 +1,92 @@
+// set file <D:/MyData/2016-08-16_FRET_qi/R01_n_01.set> created by DaVis 17.08.16: 09:43:29
+
+#GROUP Sets
+SetBuffers = "1-1";
+SetGroups = "ScanDev_Control\n#GROUP DACQ_Special\nMPM_RecData\nMPM_DACQ:Variables\nMPM_DACQDLG:Variables\nMPM_RECORD:Variables\nMPM_DATAPROCESSING:Variables\nHRI Machine Settings\nHRIDU:Machine Settings";
+SetTime = "Wed Aug 17 09:43:29 2016";
+SetComments = "";
+SetType = 4352;
+SetScanParameter = "";
+SetScanParameterStart = 0;
+SetScanParameterIncrement = 166.667;
+SetTypeUser = 0;
+SetStart = 1;
+SetInc = 1;
+SetViewCallback = "";
+SetLoadCallback = "";
+SetSourceSet = "";
+
+#GROUP ScanDev_Control
+ASD_DeviceName = "HRI-Delay Unit";
+ASD_DeviceUnit = "[ps]";
+ASD_DeviceParName = "Delay";
+ASD_Start = 9400;
+ASD_Stop = 15360;
+ASD_Incr = 40;
+ASD_NSteps = 150;
+ASD_NCycles = 1;
+ASD_EnableDisableHRI = 0;
+ASD_DeviceSteps = 1;
+ASD_DeviceMax = 50000;
+ASD_DeviceMin = 0;
+ASD_DeviceSettings = "Device Settings\n--- CCD -------\nCamera Exposure:300ms (399) Trigger: YES\n--- HRI -------\nHRI Rev:\t 24\nCL Ver.:\tVer. 7.0 (15.6.07)\nInitialized:\tYES\t Stat:1\nMode :\t3 = Comb_Hi__300ps\nUmcp:\t550 V ....( Max = 900 V) \nEnable:\tTTL OFF\nTemp.:\t~22°C (516)\nTrig.: Pos TTL HIGH\nU clamp:\t\t7.4 V\nU average :\t23 V\nComb Width:\t20\n-------------------\nHRI-Delay Unit: Delay: 9440 ps\nPicoStar HRI: Mcp gain: 550V\n:  No User Dev.\n-------------------\nScan Device : HRI-Delay Unit\nStart: 9400 [ps] \nStop: 15360 [ps] \nIncr: 40 [ps] \n";
+mpmApplConfigFile = "LvProjectSettings.SET";
+mpmScanDevSelect = 0;
+mpmRecHRIModeSelect = 9;
+mpmTTLPortBank = 1;
+mpmTTLPortLaser1 = 12;
+mpmTTLPortLaser2 = 10;
+
+#GROUP #GROUP DACQ_Special
+
+#GROUP MPM_RecData
+mpmApplication = 0;
+
+#GROUP MPM_DACQ:Variables
+
+#GROUP MPM_DACQDLG:Variables
+fdNavgScans = { 1, 1 };
+mpmrec_SpecialSelectString = "DialogMPM_AcqPar_Standard()";
+
+#GROUP MPM_RECORD:Variables
+recScan_FlagSumImages = 0;
+recScan_NavgScan = 1;
+
+#GROUP MPM_DATAPROCESSING:Variables
+dpFlagProbe = -1;
+fdRecSetFileLast = { "", "" };
+mpmFlag_UseFitDLL = 1;
+flimfd_Freq = 80;
+flimFlagShowTrace = 1;
+
+#GROUP HRI Machine Settings
+hriPRF = 80;
+HRIType = 0;
+HRIMode = 3;
+HRIGain = 550;
+HRITrig_Edge = 1;
+HRITrig_Typ = 0;
+HRITrig_Level = -1;
+HRITrig_Term = 0;
+HRIThresh = 0.4;
+HRIClamp = 7.4;
+HRIAverage = 23;
+HRICombWidth = 20;
+HRIRFgain = 60;
+HRIRFgainIncr = 10;
+hriTempString = "~22°C (516)";
+HRIRateTune = 3;
+HRImodeString = "Comb_Hi__300ps";
+HRIGOIMode = 0;
+
+#GROUP HRIDU:Machine Settings
+hridu_40MHz_copy = 0;
+hridu_Trg_Coupling_copy = 1;
+hridu_Trg_Term_copy = 1;
+hridu_Trg_Edge_copy = 1;
+hridu_Trg_Attenuator_copy = 0;
+hridu_Trg_Thresh_copy = 95;
+hridu_Delay_copy = 10200;
+hridu_ScanDelayStart_copy = 0;
+hridu_ScanDelayStop_copy = 12000;
+hridu_ScanDelayIncr_copy = 40;

@@ -19,6 +19,7 @@
 	<Item Name="AlliGator Build Image SDV Profile Plots.vi" Type="VI" URL="../AlliGator Build Image SDV Profile Plots.vi"/>
 	<Item Name="AlliGator Get Phase Lifetime &amp; Phasor Ratio at Pixel.vi" Type="VI" URL="../AlliGator Get Phase Lifetime &amp; Phasor Ratio at Pixel.vi"/>
 	<Item Name="AlliGator Get Profile Plot Name.vi" Type="VI" URL="../AlliGator Get Profile Plot Name.vi"/>
+	<Item Name="AlliGator Image Profile Data.ctl" Type="VI" URL="../AlliGator Image Profile Data.ctl"/>
 	<Item Name="AlliGator Image Profile Menu Check Marks.vi" Type="VI" URL="../AlliGator Image Profile Menu Check Marks.vi"/>
 	<Item Name="AlliGator Image Profile Set Average Intensity Type.vi" Type="VI" URL="../AlliGator Image Profile Set Average Intensity Type.vi"/>
 	<Item Name="AlliGator Image Profile Set Displayed vs Raw Data.vi" Type="VI" URL="../AlliGator Image Profile Set Displayed vs Raw Data.vi"/>
@@ -27,5 +28,7 @@
 	<Item Name="AlliGator Init Image Profile Window Menu.vi" Type="VI" URL="../AlliGator Init Image Profile Window Menu.vi"/>
 	<Item Name="AlliGator Send Plots to Image Profile Window.vi" Type="VI" URL="../AlliGator Send Plots to Image Profile Window.vi"/>
 	<Item Name="AlliGator Source Image Profile Window.vi" Type="VI" URL="../AlliGator Source Image Profile Window.vi"/>
+	<Item Name="First &amp; Last Point.vi" Type="VI" URL="../../Image/First &amp; Last Point.vi"/>
+	<Item Name="Probe Drop.vi" Type="VI" URL="../../Utilities/Probe Drop.vi"/>
 	<Item Name="Source Image Profile Window.rtm" Type="Document" URL="../Source Image Profile Window.rtm"/>
 </Library>

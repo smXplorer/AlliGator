@@ -48,5 +48,4 @@
 	<Item Name="AlliGator IV Type of Displayed Image.vi" Type="VI" URL="../AlliGator IV Type of Displayed Image.vi"/>
 	<Item Name="AlliGator IV Valid Decay.vi" Type="VI" URL="../AlliGator IV Valid Decay.vi"/>
 	<Item Name="AlliGator IV White Light Image.vi" Type="VI" URL="../AlliGator IV White Light Image.vi"/>
-	<Item Name="AlliGator Update IV Calibration Phasor.vi" Type="VI" URL="../AlliGator Update IV Calibration Phasor.vi"/>
 </Library>

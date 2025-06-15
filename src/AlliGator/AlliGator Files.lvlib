@@ -100,9 +100,11 @@
 		<Item Name="AlliGator Create Series Subfolders.vi" Type="VI" URL="../AlliGator Create Series Subfolders.vi"/>
 		<Item Name="AlliGator Get FLI Image Folder Metadata.vi" Type="VI" URL="../AlliGator Get FLI Image Folder Metadata.vi"/>
 		<Item Name="AlliGator Get Gate Image Series Folders.vi" Type="VI" URL="../AlliGator Get Gate Image Series Folders.vi"/>
+		<Item Name="AlliGator Get ICCD Information.vi" Type="VI" URL="../AlliGator Get ICCD Information.vi"/>
 		<Item Name="AlliGator Get LaVision .set File Path.vi" Type="VI" URL="../AlliGator Get LaVision .set File Path.vi"/>
 		<Item Name="AlliGator Get Time Series Time Stamps &amp; Settings from RecSettings Files.vi" Type="VI" URL="../AlliGator Get Time Series Time Stamps &amp; Settings from RecSettings Files.vi"/>
 		<Item Name="AlliGator Get Time Stamps &amp; Settings from .set File.vi" Type="VI" URL="../AlliGator Get Time Stamps &amp; Settings from .set File.vi"/>
+		<Item Name="AlliGator ICCD-specific Information.ctl" Type="VI" URL="../AlliGator ICCD-specific Information.ctl"/>
 		<Item Name="AlliGator Load FLI Folder of Images Dataset Prelude.vi" Type="VI" URL="../AlliGator Load FLI Folder of Images Dataset Prelude.vi"/>
 		<Item Name="AlliGator Load FLI Image Folder File Information.vi" Type="VI" URL="../AlliGator Load FLI Image Folder File Information.vi"/>
 		<Item Name="AlliGator Load Single Gate Image from Image Folder.vi" Type="VI" URL="../AlliGator Load Single Gate Image from Image Folder.vi"/>

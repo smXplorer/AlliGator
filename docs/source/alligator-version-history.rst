@@ -10,7 +10,7 @@ AlliGator Version History
 Note: version numbers followed by an asterisk have not been released.
 
 -----------------
-1.01 (2025-06-14)
+1.01 (2025-06-16)
 -----------------
 
     - Bug Fixes
@@ -18,6 +18,7 @@ Note: version numbers followed by an asterisk have not been released.
         + Fixed a bug whereby the doc string of a Python Plugin function would be printed twice in the Notebook when requested
         + Fixed broken Image Profile window update
         + Fixed refresh lag in optional rectangle ROI median overlay
+        + Fixed a bug in "Use Image Brightness for Overlay" option
 
     - New Features
         + Added support for CSV files for loaded plots

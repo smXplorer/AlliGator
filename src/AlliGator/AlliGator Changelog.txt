@@ -1,3 +1,6 @@
+2025-06-16 (XM)
+- Fixed a bug in "Use Image Brightness for Overlay" option
+
 2025-06-13 (XM)
 - Fixed bug in rectangle profile
 - Added ROI Median Color box in Settings>>Source Image>>Image Cosmetic

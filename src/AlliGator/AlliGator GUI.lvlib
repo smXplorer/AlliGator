@@ -34,7 +34,6 @@
 	<Item Name="AlliGator Check whether Source Image needs update.vi" Type="VI" URL="../AlliGator Check whether Source Image needs update.vi"/>
 	<Item Name="AlliGator Conditional Menu Items.vi" Type="VI" URL="../AlliGator Conditional Menu Items.vi"/>
 	<Item Name="AlliGator Download Installer.vi" Type="VI" URL="../AlliGator Download Installer.vi"/>
-	<Item Name="AlliGator Event Started on-at String.vi" Type="VI" URL="../AlliGator Event Started on-at String.vi"/>
 	<Item Name="AlliGator Get All Ancillary Window Paths.vi" Type="VI" URL="../AlliGator Get All Ancillary Window Paths.vi"/>
 	<Item Name="AlliGator Get Ancillary Window Path.vi" Type="VI" URL="../AlliGator Get Ancillary Window Path.vi"/>
 	<Item Name="AlliGator Get Latest Version Number (Github).vi" Type="VI" URL="../AlliGator Get Latest Version Number (Github).vi"/>

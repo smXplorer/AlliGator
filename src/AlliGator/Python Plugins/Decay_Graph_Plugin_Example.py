@@ -1,8 +1,13 @@
 # Decay_Graph_Plugin_Example.py
 # Example AlliGator Decay Graph Python Plugin
-# Tested with AlliGator version 0.66
+# Tested with AlliGator version 1.02
 # Author: X. Michalet
-# Last modified: 2023-01-04
+# Last modified: 2025-06-19
+
+# The following (triple) comment is needed to specify the AlliGator Python 
+# Plugin API version number to use
+
+### AlliGator Python Plugin API Version = 1 ###
 
 # The following (triple) comment is needed to tell AlliGator where to
 # insert the plugin function(s) as menu item(s)
@@ -53,9 +58,8 @@ def Plot_Scaled_Sum_and_Difference__Selected_Plots__test(
     ### k:float64 # scaling parameter
     
     ### Phasor Frequency:AlliGator # This is not visible to the user
-    ### Reference Decay:AlliGator # this parameter is treated differently
     ### End of AlliGator Input Parameters Definitions ###
- 
+
     # The following (triple commented) section is mandatory to know which
     # type of output this function returns and which AlliGator
     # object they are destined to

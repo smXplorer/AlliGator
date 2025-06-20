@@ -9,6 +9,16 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+1.02 (2025-06-19)
+    Bug Fixes
+        Fixed bug in FLI Dataset Python Plugin core VI that prevented the plugin to run more than once (and other issues as well)
+        
+    New Features
+        Added API Version number requirement in AlliGator Python Plugin
+        Updated Python Plugin examples
+        Added AlliGator Plugin Publication page to the manual
+        Added AlliGator Plugin Github repository template
+
 1.01 (2025-06-16)
     Bug Fixes
         Fixed erroneous parameter name conversion in FLI Dataset Python Plugin outputting a fit parameter map

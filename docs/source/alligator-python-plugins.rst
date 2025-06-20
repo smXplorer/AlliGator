@@ -4,14 +4,17 @@ Python Plugins
 ==============
 
 AlliGator supports user-provided Python functions which appear as right-click 
-menu items for the corresponding object or menu.
+menu items for the corresponding object or main AlliGator Analysis menu.
 
 Currently, only two objects support plugins: the *Decay Graph* and the 
 *Source Image*. In addition, *FLI Dataset* plugins are supported as sub-menus of
-the ``Analysis:FLI Dataset`` menu.
+the ``Analysis:FLI Dataset`` menu. Future versions will support plugins for all 
+objects, as needs arise.
 Since objects have associated menus (sometimes empty) in the ``Analysis`` menu,
 plugins can also be inserted in the ``Analysis:Decay Graph`` and 
-``Analysis:Source Image`` menus.
+``Analysis:Source Image`` menus. However this does not always make sense, for 
+instance when a plugin requires the information of the mouse right-click 
+location.
 
 This page does **not** describe how to develop Python plugins for AlliGator, 
 but provides an overview of the design principle, followed by a description of 
@@ -20,7 +23,9 @@ for the *Decay Graph* graph. Example of plugins for the different supported
 objects can be found in the example scripts provided by default with AlliGator.
 
 Details on how to implement an AlliGator Python plugin can be found in the 
-:ref:`AlliGator Python Plugins API page <alligator-python-plugins-API>`.
+:ref:`AlliGator Python Plugins API page <alligator-python-plugins-API>`. In 
+particular, a section describes the recommended way to publish and document a 
+plugin in a dedicated GitHub repository.
 
 Design Principle
 ++++++++++++++++
@@ -161,6 +166,7 @@ Python-specific syntax.
 These syntaxic elements are as follows:
 
 + ``import`` statements
++ API version
 + Destination
 + Plugin Flag
 + Input Parameters Definition
@@ -183,21 +189,23 @@ second refers to the ``alligator.py`` script provided in the Python Plugins
 folder, and contains type definitions that are useful to format input and 
 output data for a plugin.
 
-In addition to these two import statements, the other 4 elements to include are 
+In addition to these two import statements, the other 5 elements to include are 
 briefly reviewed next.
 
-The first element (*Destination*) tells AlliGator where the plugin functions 
+The first element specifies which API version the plugin has been written for.
+
+The second element (*Destination*) tells AlliGator where the plugin functions 
 need to be inserted (in which menu or object's context menu). This is common to 
 *all* functions in the script, therefore if plugins for different targets are 
 developed (e.g. one  function for the **Decay Graph**, and another for the 
 **Source Image**), they will need to be in different script files.
 
-The second element (*Plugin Flag*) specifies whether the function is actually a 
+The third element (*Plugin Flag*) specifies whether the function is actually a 
 plugin  function or an helper function (in other words, helper functions are 
 unmodified Python functions and do not need any of the modifications 
 discussed here).
 
-The third  element (*Input Parameters Definition*) is used to inform AlliGator 
+The fourth  element (*Input Parameters Definition*) is used to inform AlliGator 
 about the parameters needed by the function (some parameters are passed by 
 default, depending on the function's target, as discussed below). If no 
 parameter is needed, this section can be ignored.
@@ -215,6 +223,15 @@ parameters may be required. This ``doc string`` can be sent to the
 **Notebook** window by holding the ``H`` key down while selecting the 
 Python plugin function in the corresponding menu (the function will not be 
 executed).
+
+API Version
+-----------
+
+The API version *n* is specified by the following triple-commented statement:
+
+.. code-block::
+
+    ### AlliGator Python Plugin API Version = n ###
 
 Destination
 -----------
@@ -394,12 +411,40 @@ by default.
 
     # Decay_Graph_Plugin_Example.py
     # Example AlliGator Decay Graph Python Plugin
+    # Tested with AlliGator version 1.02
+    # Author: X. Michalet
+    # Last modified: 2025-06-19
+
+    # The following (triple) comment is needed to specify the AlliGator Python 
+    # Plugin API version number to use
+
+    ### AlliGator Python Plugin API Version = 1 ###
+
+    # The following (triple) comment is needed to tell AlliGator where to
+    # insert the plugin function(s) as menu item(s)
+    # the syntax after the AlliGatorTarget = keyword is:
+    # Window/Type_of_Destination/Destination
+    # where 'Window' is the target AlliGator window, # 'Type_of_Destination' is
+    # 'Object' or 'Menu', and 'Destination' is the name of the object,
+    # or the menu item under which to insert the script's functions as
+    # 'script_name>>plugin function'
+    # A single insertion point per window and per object is supported
 
     ### AlliGatorTarget = AlliGator/Object/Decay Graph ###
     ### AlliGatorTarget = AlliGator/Menu/Decay Graph ###
 
+    # The following modules are needed to interpret incoming data and send outputs
+
     import json
     import alligator
+
+    # The double underscores in the function name below will be replaced
+    # by alternating parentheses in the AlliGator menu (with end spaces trimmed).
+    # To indicate that the function acts on all selected plots in the graph,
+    # the function name needs to contain 'Selected_Plots' as part of it.
+    # To indicate that the function acts on all plots in the graph, the function
+    # name needs to contain 'All_Plots' as part of it (case non sensitive).
+    # Otherwise, the function is assumed to act on the right-click selected plot.
 
     def Plot_Scaled_Sum_and_Difference__Selected_Plots__test(
             graph_data_in, params_in_json, addtl_params_out_json_list):
@@ -410,23 +455,33 @@ by default.
         Expects one float parameter (k: float64)
         The resulting k*Sum and k*Difference plots are added to the Decay Graph
         """
+        # The following (triple) comment indicates that this function is a plugin
+        # This is to distinguish it from accessory functions that should
+        # not be imported in AlliGator's menus
         
         ### IsAlliGatorPythonPlugin ###
 
+        # The following (triple commented) section describes which
+        # additional parameters are required for that function.
+        # If no parameter is needed this section can be ignored
+        
         ### AlliGator Input Parameters Definitions ###
         ### k:float64 # scaling parameter
         
-        ### Phasor Frequency:AlliGator
-        ### Reference Decay:AlliGator
+        ### Phasor Frequency:AlliGator # This is not visible to the user
         ### End of AlliGator Input Parameters Definitions ###
 
+        # The following (triple commented) section is mandatory to know which
+        # type of output this function returns and which AlliGator
+        # object they are destined to
+
         ### AlliGator Output Value Type & Destination ###
-        ### Plots:Decay Graph
+        ### Plots:Decay Graph          # comments are OK
         ### End of AlliGator Output Value Type & Destination ###
 
         message = 'Scaled Sum of Selected Plots and Phasor Frequency Update'
-        exception_type = "None"
-        exception_message = ""
+        exception_type = "None"     # could also be "Warning" or "Error"
+        exception_message = ""      # provide verbose information for error
 
         # decode the parameter string
        
@@ -435,7 +490,11 @@ by default.
         f = params['Phasor Frequency']
 
         # decode the graph data named tuple
-        
+        # the graph data comprises a list of Plot Data
+        # Each Plot Data is a named tuple comprised of 
+        # a 'Plot_Name' (string)
+        # and two lists of double, 'X_Array' and 'Y_Array'
+
         graph_name = graph_data_in.Graph_Name
         plots = graph_data_in.Plots
         nplots = len(plots)
@@ -459,6 +518,15 @@ by default.
             name2 = plot_data2.Plot_Name
             x2 = plot_data2.X_Array
             y2 = plot_data2.Y_Array
+            
+            # we also requested the Reference Decay, which is an internal data,
+            # not a 'parameter'. It is therefore passed as part of the graph_data_in
+            # named tuple. If it is not requested, that part of the named tuple will
+            # obviously be empty.
+            # Other such internal data may be added to graph_data_in in future versions
+            # in a (hopefully) backward compatible way.
+            # Note that this function DOES NOT use the Reference Decay (aka IRF).
+            # This is just to show how to request it and get to the data
             
             ref_decay_data = graph_data_in.Reference_Decay
             ref_decay_name = ref_decay_data.Plot_Name
@@ -505,19 +573,24 @@ by default.
             # all this packaged in a dictionary, converted to json and
             # appended to the (generally) empty string list
             # addtl_params_out_json_list
+            # Note: space and case are irrelevant in the item names
         
         info_out_dict = {
         "Notebook Message" : message,
         "Exception Type" : exception_type,
         "Exception Message" : exception_message,
-        "AlliGator:Phasor Frequency" : f
+        "AlliGator:Phasor Frequency" : f # example of internal parameter update
         }
         
         # conversion to JSON string and string is appended to the incoming
-        # addtl_params_out_json_list
+        # addtl_params_out_json_list (which is empty in this example)
+        # Note that AlliGator will ignore everything but the last string in the list
         
         addtl_params_out_json_list.append(json.dumps(info_out_dict))
         
         # return results to AlliGator
 
         return(graph_data_out)
+
+        # Note: it is possible to send debug messages to the Python Console
+        # using the standard print() statement

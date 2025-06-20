@@ -1,3 +1,16 @@
+2025-06-19 (XM)
+- Added API Version in AlliGator Python Plugin API
+- Changed Python Plugin error codes to 55xx
+- Moved Python Plugins VIs to Python Plugins API folder
+- Updated documentation
+- v1.02 release
+
+2025-06-18 (XM)
+- v1.01 release
+- v1.02
+- Updated FLI_Dataset_Plugin_Example.py to account for the data ouput structure change introduced on 2025-06-05
+- Fixed bug in FLI Dataset Python Plugin core VI that prevented the plugin to run more than once (and created more issues as well)
+ 
 2025-06-16 (XM)
 - Fixed a bug in "Use Image Brightness for Overlay" option
 

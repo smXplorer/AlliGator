@@ -1,11 +1,19 @@
 # Process_Plot.py
 # Basic Plot Operations Python Plugin
-# Tested with AlliGator version 0.66
+# Tested with AlliGator version 1.02
 # Author: X. Michalet
-# Last modified: 2023-01-04
+# Last modified: 2025-06-19
+
+# The following (triple) comment is needed to specify the AlliGator Python 
+# Plugin API version number to use
+
+### AlliGator Python Plugin API Version = 1 ###
 
 ### AlliGatorTarget = AlliGator/Object/Decay Graph ###
-### AlliGatorTarget = AlliGator/Menu/Decay Graph ###
+
+# Note: this funtion cannot run from the AlliGator Analysis menu
+# because it requires identifying the single selected plot
+# by the mouse right-click coordinates
 
 import json
 import alligator

@@ -108,7 +108,7 @@ computed and replaced by *NaN*, which does not appear in the displayed profile.
 An example is shown below:
 
 .. image:: images/Source-Image-Profile-Averaged-Profile-ROI.png
-   :align: center
+...:align: center
 
 Notice the green and red rectangles and the thick green center line. The green 
 (sometimes bizzarely deformed) rectangle is the one drawn by LabVIEW. The red 
@@ -120,8 +120,8 @@ ROI Color* box in the same Settings panel.
 
 The  corresponding **Source Image Profile** window is shown below:
 
-   .. image:: images/Source-Image-Profile-Averaged-Profile-Example.png
-      :align: center
+.. image:: images/Source-Image-Profile-Averaged-Profile-Example.png
+   :align: center
 
 The ``Phase Lifetime`` and ``Offset`` plots have been hidden, leaving the 
 ``Intensity`` and ``<tau>_a`` plots, as well as the ``Intensity SDV`` and 
@@ -129,8 +129,8 @@ The ``Phase Lifetime`` and ``Offset`` plots have been hidden, leaving the
 plot shown here is the ``Intensity-weighted`` one, one of two possible choices:
 
 
-   .. image:: images/Source-Image-Profile-Window-SDV-Menu.png
-      :align: center
+.. image:: images/Source-Image-Profile-Window-SDV-Menu.png
+   :align: center
 
 The recommended option is the second one, which calculated the SDV of a quantity 
 *f* along each perpendicular segment (containing *W* pixels) according to:

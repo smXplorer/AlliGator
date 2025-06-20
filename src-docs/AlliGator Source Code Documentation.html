@@ -462,17 +462,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_alligator_decay_statistics_lvlib">2.11. AlliGator Decay Statistics.lvlib</a></li>
 <li><a href="#_alligator_dual_channel_datasets_lvlib">2.12. AlliGator Dual-Channel Datasets.lvlib</a></li>
 <li><a href="#_alligator_fit_method_benchmark_lvlib">2.13. AlliGator Fit Method Benchmark.lvlib</a></li>
-<li><a href="#_alligator_globals_variables_constants_lvlib">2.14. AlliGator Globals, Variables &amp; Constants.lvlib</a></li>
-<li><a href="#_alligator_hdf5_lvlib">2.15. AlliGator HDF5.lvlib</a></li>
-<li><a href="#_alligator_intensity_corrections_lvlib">2.16. AlliGator Intensity Corrections.lvlib</a></li>
-<li><a href="#_alligator_internal_variables_lvlib">2.17. AlliGator Internal Variables.lvlib</a></li>
-<li><a href="#_alligator_lifetime_lvlib">2.18. AlliGator Lifetime.lvlib</a></li>
-<li><a href="#_alligator_local_decay_window_lvlib">2.19. AlliGator Local Decay Window.lvlib</a></li>
-<li><a href="#_alligator_python_plugins_lvlib">2.20. AlliGator Python Plugins.lvlib</a></li>
-<li><a href="#_alligator_rois_lvlib">2.21. AlliGator ROIs.lvlib</a></li>
-<li><a href="#_alligator_scripts_lvlib">2.22. AlliGator Scripts.lvlib</a></li>
-<li><a href="#_alligator_settings_lvlib">2.23. AlliGator Settings.lvlib</a></li>
-<li><a href="#_alligator_shot_noise_influence_on_average_lifetime_lvlib">2.24. AlliGator Shot Noise Influence on Average Lifetime.lvlib</a></li>
+<li><a href="#_alligator_global_decay_fit_lvlib">2.14. AlliGator Global Decay Fit.lvlib</a></li>
+<li><a href="#_alligator_globals_variables_constants_lvlib">2.15. AlliGator Globals, Variables &amp; Constants.lvlib</a></li>
+<li><a href="#_alligator_hdf5_lvlib">2.16. AlliGator HDF5.lvlib</a></li>
+<li><a href="#_alligator_intensity_corrections_lvlib">2.17. AlliGator Intensity Corrections.lvlib</a></li>
+<li><a href="#_alligator_internal_variables_lvlib">2.18. AlliGator Internal Variables.lvlib</a></li>
+<li><a href="#_alligator_lifetime_lvlib">2.19. AlliGator Lifetime.lvlib</a></li>
+<li><a href="#_alligator_local_decay_window_lvlib">2.20. AlliGator Local Decay Window.lvlib</a></li>
+<li><a href="#_alligator_python_plugins_lvlib">2.21. AlliGator Python Plugins.lvlib</a></li>
+<li><a href="#_alligator_rois_lvlib">2.22. AlliGator ROIs.lvlib</a></li>
+<li><a href="#_alligator_scripts_lvlib">2.23. AlliGator Scripts.lvlib</a></li>
+<li><a href="#_alligator_settings_lvlib">2.24. AlliGator Settings.lvlib</a></li>
+<li><a href="#_alligator_shot_noise_influence_on_average_lifetime_lvlib">2.25. AlliGator Shot Noise Influence on Average Lifetime.lvlib</a></li>
+<li><a href="#_alligator_test_suite_lvlib">2.26. AlliGator Test Suite.lvlib</a></li>
 </ul>
 </li>
 <li><a href="#_legal_information">3. Legal Information</a>
@@ -3979,18 +3981,95 @@ VIs for the Fit Method Benchmark Tool.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_alligator_globals_variables_constants_lvlib"><a class="anchor" href="#_alligator_globals_variables_constants_lvlib"></a><a class="link" href="#_alligator_globals_variables_constants_lvlib">2.14. AlliGator Globals, Variables &amp; Constants.lvlib</a></h3>
+<h3 id="_alligator_global_decay_fit_lvlib"><a class="anchor" href="#_alligator_global_decay_fit_lvlib"></a><a class="link" href="#_alligator_global_decay_fit_lvlib">2.14. AlliGator Global Decay Fit.lvlib</a></h3>
 <div class="paragraph">
 <p><strong>Responsibility:</strong>
-Globals, refnums, constants, etc.</p>
+VIs handling global decay fit operations</p>
 </div>
 <div class="paragraph">
 <p><strong>Version:</strong></p>
 </div>
 <div class="sect3">
 <h4 id="_functions_14"><a class="anchor" href="#_functions_14"></a><a class="link" href="#_functions_14">2.14.1. Functions</a></h4>
+<table class="tableblock frame-all grid-all stripes-none stretch">
+<caption class="title">Table 14. Functions (non private scope only)</caption>
+<colgroup>
+<col style="width: 14.8148%;">
+<col style="width: 29.6296%;">
+<col style="width: 44.4444%;">
+<col style="width: 3.7037%;">
+<col style="width: 3.7037%;">
+<col style="width: 3.7038%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Connector pane</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">S.</th>
+<th class="tableblock halign-left valign-top">R.</th>
+<th class="tableblock halign-left valign-top">I.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Convert Global Decay Fit Parameter Constraints</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Global_Decay_Fit.lvlib_Convert_Global_Decay_Fit_Parameter_Constraints.vi.png" alt="AlliGator Global Decay Fit.lvlib:Convert Global Decay Fit Parameter Constraints.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get 1-Exp Global Fit Guess Parameters v2</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Global_Decay_Fit.lvlib_Get_1_Exp_Global_Fit_Guess_Parameters_v2.vi.png" alt="AlliGator Global Decay Fit.lvlib:Get 1-Exp Global Fit Guess Parameters v2.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get 2-Exp Global Fit Guess Parameters v2</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Global_Decay_Fit.lvlib_Get_2_Exp_Global_Fit_Guess_Parameters_v2.vi.png" alt="AlliGator Global Decay Fit.lvlib:Get 2-Exp Global Fit Guess Parameters v2.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
-<p>This library has no functions set to non private scope.</p>
+<p><strong>S</strong>cope: <span class="image"><img src="Images/scope-protected.png" alt="scope protected"></span> &#8594; Protected | <span class="image"><img src="Images/scope-community.png" alt="scope community"></span> &#8594; Community</p>
+</div>
+<div class="paragraph">
+<p><strong>R</strong>eentrancy: <span class="image"><img src="Images/reentrancy-preallocated.png" alt="reentrancy preallocated"></span> &#8594; Preallocated reentrancy | <span class="image"><img src="Images/reentrancy-shared.png" alt="reentrancy shared"></span> &#8594; Shared reentrancy</p>
+</div>
+<div class="paragraph">
+<p><strong>I</strong>nlining: <span class="image"><img src="Images/inlined.png" alt="inlined"></span> &#8594; Inlined</p>
 </div>
 </div>
 <div class="sect3">
@@ -4012,7 +4091,40 @@ Globals, refnums, constants, etc.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_alligator_hdf5_lvlib"><a class="anchor" href="#_alligator_hdf5_lvlib"></a><a class="link" href="#_alligator_hdf5_lvlib">2.15. AlliGator HDF5.lvlib</a></h3>
+<h3 id="_alligator_globals_variables_constants_lvlib"><a class="anchor" href="#_alligator_globals_variables_constants_lvlib"></a><a class="link" href="#_alligator_globals_variables_constants_lvlib">2.15. AlliGator Globals, Variables &amp; Constants.lvlib</a></h3>
+<div class="paragraph">
+<p><strong>Responsibility:</strong>
+Globals, refnums, constants, etc.</p>
+</div>
+<div class="paragraph">
+<p><strong>Version:</strong></p>
+</div>
+<div class="sect3">
+<h4 id="_functions_15"><a class="anchor" href="#_functions_15"></a><a class="link" href="#_functions_15">2.15.1. Functions</a></h4>
+<div class="paragraph">
+<p>This library has no functions set to non private scope.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_library_constant_vis_15"><a class="anchor" href="#_library_constant_vis_15"></a><a class="link" href="#_library_constant_vis_15">2.15.2. Library Constant VIs</a></h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>No Constant VIs Found</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_alligator_hdf5_lvlib"><a class="anchor" href="#_alligator_hdf5_lvlib"></a><a class="link" href="#_alligator_hdf5_lvlib">2.16. AlliGator HDF5.lvlib</a></h3>
 <div class="paragraph">
 <p><strong>Responsibility:</strong>
 VIs handling HDF5 dataset files.</p>
@@ -4021,9 +4133,9 @@ VIs handling HDF5 dataset files.</p>
 <p><strong>Version:</strong> 1.0.0.0</p>
 </div>
 <div class="sect3">
-<h4 id="_functions_15"><a class="anchor" href="#_functions_15"></a><a class="link" href="#_functions_15">2.15.1. Functions</a></h4>
+<h4 id="_functions_16"><a class="anchor" href="#_functions_16"></a><a class="link" href="#_functions_16">2.16.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 14. Functions (non private scope only)</caption>
+<caption class="title">Table 15. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -4394,7 +4506,7 @@ VIs handling HDF5 dataset files.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_library_constant_vis_15"><a class="anchor" href="#_library_constant_vis_15"></a><a class="link" href="#_library_constant_vis_15">2.15.2. Library Constant VIs</a></h4>
+<h4 id="_library_constant_vis_16"><a class="anchor" href="#_library_constant_vis_16"></a><a class="link" href="#_library_constant_vis_16">2.16.2. Library Constant VIs</a></h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -4412,7 +4524,7 @@ VIs handling HDF5 dataset files.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_alligator_intensity_corrections_lvlib"><a class="anchor" href="#_alligator_intensity_corrections_lvlib"></a><a class="link" href="#_alligator_intensity_corrections_lvlib">2.16. AlliGator Intensity Corrections.lvlib</a></h3>
+<h3 id="_alligator_intensity_corrections_lvlib"><a class="anchor" href="#_alligator_intensity_corrections_lvlib"></a><a class="link" href="#_alligator_intensity_corrections_lvlib">2.17. AlliGator Intensity Corrections.lvlib</a></h3>
 <div class="paragraph">
 <p><strong>Responsibility:</strong>
 VIs handling intensity correction to the Sum of All Gates image.</p>
@@ -4421,9 +4533,9 @@ VIs handling intensity correction to the Sum of All Gates image.</p>
 <p><strong>Version:</strong> 1.0.0.0</p>
 </div>
 <div class="sect3">
-<h4 id="_functions_16"><a class="anchor" href="#_functions_16"></a><a class="link" href="#_functions_16">2.16.1. Functions</a></h4>
+<h4 id="_functions_17"><a class="anchor" href="#_functions_17"></a><a class="link" href="#_functions_17">2.17.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 15. Functions (non private scope only)</caption>
+<caption class="title">Table 16. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -4522,39 +4634,6 @@ VIs handling intensity correction to the Sum of All Gates image.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_library_constant_vis_16"><a class="anchor" href="#_library_constant_vis_16"></a><a class="link" href="#_library_constant_vis_16">2.16.2. Library Constant VIs</a></h4>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>No Constant VIs Found</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_alligator_internal_variables_lvlib"><a class="anchor" href="#_alligator_internal_variables_lvlib"></a><a class="link" href="#_alligator_internal_variables_lvlib">2.17. AlliGator Internal Variables.lvlib</a></h3>
-<div class="paragraph">
-<p><strong>Responsibility:</strong>
-VIs to access individual (or group of) internal data or variables using a data by value reference (DVR).</p>
-</div>
-<div class="paragraph">
-<p><strong>Version:</strong></p>
-</div>
-<div class="sect3">
-<h4 id="_functions_17"><a class="anchor" href="#_functions_17"></a><a class="link" href="#_functions_17">2.17.1. Functions</a></h4>
-<div class="paragraph">
-<p>This library has no functions set to non private scope.</p>
-</div>
-</div>
-<div class="sect3">
 <h4 id="_library_constant_vis_17"><a class="anchor" href="#_library_constant_vis_17"></a><a class="link" href="#_library_constant_vis_17">2.17.2. Library Constant VIs</a></h4>
 <div class="admonitionblock note">
 <table>
@@ -4573,7 +4652,40 @@ VIs to access individual (or group of) internal data or variables using a data b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_alligator_lifetime_lvlib"><a class="anchor" href="#_alligator_lifetime_lvlib"></a><a class="link" href="#_alligator_lifetime_lvlib">2.18. AlliGator Lifetime.lvlib</a></h3>
+<h3 id="_alligator_internal_variables_lvlib"><a class="anchor" href="#_alligator_internal_variables_lvlib"></a><a class="link" href="#_alligator_internal_variables_lvlib">2.18. AlliGator Internal Variables.lvlib</a></h3>
+<div class="paragraph">
+<p><strong>Responsibility:</strong>
+VIs to access individual (or group of) internal data or variables using a data by value reference (DVR).</p>
+</div>
+<div class="paragraph">
+<p><strong>Version:</strong></p>
+</div>
+<div class="sect3">
+<h4 id="_functions_18"><a class="anchor" href="#_functions_18"></a><a class="link" href="#_functions_18">2.18.1. Functions</a></h4>
+<div class="paragraph">
+<p>This library has no functions set to non private scope.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_library_constant_vis_18"><a class="anchor" href="#_library_constant_vis_18"></a><a class="link" href="#_library_constant_vis_18">2.18.2. Library Constant VIs</a></h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>No Constant VIs Found</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_alligator_lifetime_lvlib"><a class="anchor" href="#_alligator_lifetime_lvlib"></a><a class="link" href="#_alligator_lifetime_lvlib">2.19. AlliGator Lifetime.lvlib</a></h3>
 <div class="paragraph">
 <p><strong>Responsibility:</strong>
 VIs handling lifetime plots (Lifetime &amp; Other Parameters Graph).</p>
@@ -4582,9 +4694,9 @@ VIs handling lifetime plots (Lifetime &amp; Other Parameters Graph).</p>
 <p><strong>Version:</strong> 1.0.0.0</p>
 </div>
 <div class="sect3">
-<h4 id="_functions_18"><a class="anchor" href="#_functions_18"></a><a class="link" href="#_functions_18">2.18.1. Functions</a></h4>
+<h4 id="_functions_19"><a class="anchor" href="#_functions_19"></a><a class="link" href="#_functions_19">2.19.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 16. Functions (non private scope only)</caption>
+<caption class="title">Table 17. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -4649,7 +4761,7 @@ VIs handling lifetime plots (Lifetime &amp; Other Parameters Graph).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_library_constant_vis_18"><a class="anchor" href="#_library_constant_vis_18"></a><a class="link" href="#_library_constant_vis_18">2.18.2. Library Constant VIs</a></h4>
+<h4 id="_library_constant_vis_19"><a class="anchor" href="#_library_constant_vis_19"></a><a class="link" href="#_library_constant_vis_19">2.19.2. Library Constant VIs</a></h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -4667,7 +4779,7 @@ VIs handling lifetime plots (Lifetime &amp; Other Parameters Graph).</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_alligator_local_decay_window_lvlib"><a class="anchor" href="#_alligator_local_decay_window_lvlib"></a><a class="link" href="#_alligator_local_decay_window_lvlib">2.19. AlliGator Local Decay Window.lvlib</a></h3>
+<h3 id="_alligator_local_decay_window_lvlib"><a class="anchor" href="#_alligator_local_decay_window_lvlib"></a><a class="link" href="#_alligator_local_decay_window_lvlib">2.20. AlliGator Local Decay Window.lvlib</a></h3>
 <div class="paragraph">
 <p><strong>Responsibility:</strong>
 VIs used with the Local Decay Window.</p>
@@ -4676,9 +4788,9 @@ VIs used with the Local Decay Window.</p>
 <p><strong>Version:</strong> 1.0.0.0</p>
 </div>
 <div class="sect3">
-<h4 id="_functions_19"><a class="anchor" href="#_functions_19"></a><a class="link" href="#_functions_19">2.19.1. Functions</a></h4>
+<h4 id="_functions_20"><a class="anchor" href="#_functions_20"></a><a class="link" href="#_functions_20">2.20.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 17. Functions (non private scope only)</caption>
+<caption class="title">Table 18. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -4776,7 +4888,7 @@ This window displays the decay (and when available, IRF, fit and residuals) at t
 </div>
 </div>
 <div class="sect3">
-<h4 id="_library_constant_vis_19"><a class="anchor" href="#_library_constant_vis_19"></a><a class="link" href="#_library_constant_vis_19">2.19.2. Library Constant VIs</a></h4>
+<h4 id="_library_constant_vis_20"><a class="anchor" href="#_library_constant_vis_20"></a><a class="link" href="#_library_constant_vis_20">2.20.2. Library Constant VIs</a></h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -4794,7 +4906,7 @@ This window displays the decay (and when available, IRF, fit and residuals) at t
 </div>
 </div>
 <div class="sect2">
-<h3 id="_alligator_python_plugins_lvlib"><a class="anchor" href="#_alligator_python_plugins_lvlib"></a><a class="link" href="#_alligator_python_plugins_lvlib">2.20. AlliGator Python Plugins.lvlib</a></h3>
+<h3 id="_alligator_python_plugins_lvlib"><a class="anchor" href="#_alligator_python_plugins_lvlib"></a><a class="link" href="#_alligator_python_plugins_lvlib">2.21. AlliGator Python Plugins.lvlib</a></h3>
 <div class="paragraph">
 <p><strong>Responsibility:</strong>
 VIs handling python plugins.</p>
@@ -4803,9 +4915,9 @@ VIs handling python plugins.</p>
 <p><strong>Version:</strong> 1.0.0.0</p>
 </div>
 <div class="sect3">
-<h4 id="_functions_20"><a class="anchor" href="#_functions_20"></a><a class="link" href="#_functions_20">2.20.1. Functions</a></h4>
+<h4 id="_functions_21"><a class="anchor" href="#_functions_21"></a><a class="link" href="#_functions_21">2.21.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 18. Functions (non private scope only)</caption>
+<caption class="title">Table 19. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -5363,6 +5475,22 @@ VIs handling python plugins.</p>
 </div></div></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Check Missing Python Plugin API Version</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Python_Plugins.lvlib_AlliGator_Check_Missing_Python_Plugin_API_Version.vi.png" alt="AlliGator Python Plugins.lvlib:AlliGator Check Missing Python Plugin API Version.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Outputs warning with missing function name.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Check Missing Python Plugin Doc String</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="image"><img src="Images/AlliGator_Python_Plugins.lvlib_AlliGator_Check_Missing_Python_Plugin_Doc_String.vi.png" alt="AlliGator Python Plugins.lvlib:AlliGator Check Missing Python Plugin Doc String.vi"></span></p>
@@ -5496,6 +5624,38 @@ VIs handling python plugins.</p>
 </div></div></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Get Python Functions List in Scripts</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Python_Plugins.lvlib_AlliGator_Get_Python_Functions_List_in_Scripts.vi.png" alt="AlliGator Python Plugins.lvlib:AlliGator Get Python Functions List in Scripts.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gets python functions list in scripts array.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Get Python Plugin API Version</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Python_Plugins.lvlib_AlliGator_Get_Python_Plugin_API_Version.vi.png" alt="AlliGator Python Plugins.lvlib:AlliGator Get Python Plugin API Version.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Get Python Plugin Function Parameters String</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="image"><img src="Images/AlliGator_Python_Plugins.lvlib_AlliGator_Get_Python_Plugin_Function_Parameters_String.vi.png" alt="AlliGator Python Plugins.lvlib:AlliGator Get Python Plugin Function Parameters String.vi"></span></p>
@@ -5533,22 +5693,6 @@ VIs handling python plugins.</p>
 <p><span class="image"><img src="Images/AlliGator_Python_Plugins.lvlib_AlliGator_Get_Python_Script_Function_List.vi.png" alt="AlliGator Python Plugins.lvlib:AlliGator Get Python Script Function List.vi"></span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Extracts list of python plugin functions and their information from python script.</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Get Python Functions List in Scripts</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/AlliGator_Python_Plugins.lvlib_AlliGator_Get_Python_Functions_List_in_Scripts.vi.png" alt="AlliGator Python Plugins.lvlib:AlliGator Get Python Functions List in Scripts.vi"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Gets python functions list in scripts array.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
 </div></div></td>
@@ -5702,7 +5846,7 @@ VIs handling python plugins.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_library_constant_vis_20"><a class="anchor" href="#_library_constant_vis_20"></a><a class="link" href="#_library_constant_vis_20">2.20.2. Library Constant VIs</a></h4>
+<h4 id="_library_constant_vis_21"><a class="anchor" href="#_library_constant_vis_21"></a><a class="link" href="#_library_constant_vis_21">2.21.2. Library Constant VIs</a></h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -5720,7 +5864,7 @@ VIs handling python plugins.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_alligator_rois_lvlib"><a class="anchor" href="#_alligator_rois_lvlib"></a><a class="link" href="#_alligator_rois_lvlib">2.21. AlliGator ROIs.lvlib</a></h3>
+<h3 id="_alligator_rois_lvlib"><a class="anchor" href="#_alligator_rois_lvlib"></a><a class="link" href="#_alligator_rois_lvlib">2.22. AlliGator ROIs.lvlib</a></h3>
 <div class="paragraph">
 <p><strong>Responsibility:</strong>
 VIs handling ROI actions.</p>
@@ -5729,9 +5873,9 @@ VIs handling ROI actions.</p>
 <p><strong>Version:</strong> 1.0.0.0</p>
 </div>
 <div class="sect3">
-<h4 id="_functions_21"><a class="anchor" href="#_functions_21"></a><a class="link" href="#_functions_21">2.21.1. Functions</a></h4>
+<h4 id="_functions_22"><a class="anchor" href="#_functions_22"></a><a class="link" href="#_functions_22">2.22.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 19. Functions (non private scope only)</caption>
+<caption class="title">Table 20. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -6411,7 +6555,7 @@ VIs handling ROI actions.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_library_constant_vis_21"><a class="anchor" href="#_library_constant_vis_21"></a><a class="link" href="#_library_constant_vis_21">2.21.2. Library Constant VIs</a></h4>
+<h4 id="_library_constant_vis_22"><a class="anchor" href="#_library_constant_vis_22"></a><a class="link" href="#_library_constant_vis_22">2.22.2. Library Constant VIs</a></h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -6429,7 +6573,7 @@ VIs handling ROI actions.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_alligator_scripts_lvlib"><a class="anchor" href="#_alligator_scripts_lvlib"></a><a class="link" href="#_alligator_scripts_lvlib">2.22. AlliGator Scripts.lvlib</a></h3>
+<h3 id="_alligator_scripts_lvlib"><a class="anchor" href="#_alligator_scripts_lvlib"></a><a class="link" href="#_alligator_scripts_lvlib">2.23. AlliGator Scripts.lvlib</a></h3>
 <div class="paragraph">
 <p><strong>Responsibility:</strong>
 AlliGator actions performing a series of sequential tasks.</p>
@@ -6438,9 +6582,9 @@ AlliGator actions performing a series of sequential tasks.</p>
 <p><strong>Version:</strong> 1.0.0.0</p>
 </div>
 <div class="sect3">
-<h4 id="_functions_22"><a class="anchor" href="#_functions_22"></a><a class="link" href="#_functions_22">2.22.1. Functions</a></h4>
+<h4 id="_functions_23"><a class="anchor" href="#_functions_23"></a><a class="link" href="#_functions_23">2.23.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 20. Functions (non private scope only)</caption>
+<caption class="title">Table 21. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -6972,7 +7116,7 @@ AlliGator actions performing a series of sequential tasks.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_library_constant_vis_22"><a class="anchor" href="#_library_constant_vis_22"></a><a class="link" href="#_library_constant_vis_22">2.22.2. Library Constant VIs</a></h4>
+<h4 id="_library_constant_vis_23"><a class="anchor" href="#_library_constant_vis_23"></a><a class="link" href="#_library_constant_vis_23">2.23.2. Library Constant VIs</a></h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -6990,7 +7134,7 @@ AlliGator actions performing a series of sequential tasks.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_alligator_settings_lvlib"><a class="anchor" href="#_alligator_settings_lvlib"></a><a class="link" href="#_alligator_settings_lvlib">2.23. AlliGator Settings.lvlib</a></h3>
+<h3 id="_alligator_settings_lvlib"><a class="anchor" href="#_alligator_settings_lvlib"></a><a class="link" href="#_alligator_settings_lvlib">2.24. AlliGator Settings.lvlib</a></h3>
 <div class="paragraph">
 <p><strong>Responsibility:</strong>
 VIs handling user-defined parameters.</p>
@@ -6999,9 +7143,9 @@ VIs handling user-defined parameters.</p>
 <p><strong>Version:</strong> 1.0.0.0</p>
 </div>
 <div class="sect3">
-<h4 id="_functions_23"><a class="anchor" href="#_functions_23"></a><a class="link" href="#_functions_23">2.23.1. Functions</a></h4>
+<h4 id="_functions_24"><a class="anchor" href="#_functions_24"></a><a class="link" href="#_functions_24">2.24.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 21. Functions (non private scope only)</caption>
+<caption class="title">Table 22. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -7775,7 +7919,7 @@ The Settings window is updated as well (or if the Settings Window is the sender,
 </div>
 </div>
 <div class="sect3">
-<h4 id="_library_constant_vis_23"><a class="anchor" href="#_library_constant_vis_23"></a><a class="link" href="#_library_constant_vis_23">2.23.2. Library Constant VIs</a></h4>
+<h4 id="_library_constant_vis_24"><a class="anchor" href="#_library_constant_vis_24"></a><a class="link" href="#_library_constant_vis_24">2.24.2. Library Constant VIs</a></h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -7793,7 +7937,7 @@ The Settings window is updated as well (or if the Settings Window is the sender,
 </div>
 </div>
 <div class="sect2">
-<h3 id="_alligator_shot_noise_influence_on_average_lifetime_lvlib"><a class="anchor" href="#_alligator_shot_noise_influence_on_average_lifetime_lvlib"></a><a class="link" href="#_alligator_shot_noise_influence_on_average_lifetime_lvlib">2.24. AlliGator Shot Noise Influence on Average Lifetime.lvlib</a></h3>
+<h3 id="_alligator_shot_noise_influence_on_average_lifetime_lvlib"><a class="anchor" href="#_alligator_shot_noise_influence_on_average_lifetime_lvlib"></a><a class="link" href="#_alligator_shot_noise_influence_on_average_lifetime_lvlib">2.25. AlliGator Shot Noise Influence on Average Lifetime.lvlib</a></h3>
 <div class="paragraph">
 <p><strong>Responsibility:</strong>
 VIs used for the Shot Noise Influence on Average Lifetime Analysis Tool.</p>
@@ -7802,9 +7946,9 @@ VIs used for the Shot Noise Influence on Average Lifetime Analysis Tool.</p>
 <p><strong>Version:</strong> 1.0.0.0</p>
 </div>
 <div class="sect3">
-<h4 id="_functions_24"><a class="anchor" href="#_functions_24"></a><a class="link" href="#_functions_24">2.24.1. Functions</a></h4>
+<h4 id="_functions_25"><a class="anchor" href="#_functions_25"></a><a class="link" href="#_functions_25">2.25.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 22. Functions (non private scope only)</caption>
+<caption class="title">Table 23. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -7885,7 +8029,117 @@ VIs used for the Shot Noise Influence on Average Lifetime Analysis Tool.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_library_constant_vis_24"><a class="anchor" href="#_library_constant_vis_24"></a><a class="link" href="#_library_constant_vis_24">2.24.2. Library Constant VIs</a></h4>
+<h4 id="_library_constant_vis_25"><a class="anchor" href="#_library_constant_vis_25"></a><a class="link" href="#_library_constant_vis_25">2.25.2. Library Constant VIs</a></h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>No Constant VIs Found</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_alligator_test_suite_lvlib"><a class="anchor" href="#_alligator_test_suite_lvlib"></a><a class="link" href="#_alligator_test_suite_lvlib">2.26. AlliGator Test Suite.lvlib</a></h3>
+<div class="paragraph">
+<p><strong>Responsibility:</strong>
+No description found (add content in lvlib description)</p>
+</div>
+<div class="paragraph">
+<p><strong>Version:</strong> 1.0.0.0</p>
+</div>
+<div class="sect3">
+<h4 id="_functions_26"><a class="anchor" href="#_functions_26"></a><a class="link" href="#_functions_26">2.26.1. Functions</a></h4>
+<table class="tableblock frame-all grid-all stripes-none stretch">
+<caption class="title">Table 24. Functions (non private scope only)</caption>
+<colgroup>
+<col style="width: 14.8148%;">
+<col style="width: 29.6296%;">
+<col style="width: 44.4444%;">
+<col style="width: 3.7037%;">
+<col style="width: 3.7037%;">
+<col style="width: 3.7038%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Connector pane</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">S.</th>
+<th class="tableblock halign-left valign-top">R.</th>
+<th class="tableblock halign-left valign-top">I.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Test Internal Data</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Test_Suite.lvlib_AlliGator_Test_Internal_Data.vi.png" alt="AlliGator Test Suite.lvlib:AlliGator Test Internal Data.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Updates tested VI&#8217;s error code.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Test Suite</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Test_Suite.lvlib_AlliGator_Test_Suite.vi.png" alt="AlliGator Test Suite.lvlib:AlliGator Test Suite.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Runs a series of tests.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Wait for Test Result [no Error]</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Test_Suite.lvlib_AlliGator_Wait_for_Test_Result__no_Error_.vi.png" alt="AlliGator Test Suite.lvlib:AlliGator Wait for Test Result [no Error"></span>.vi]</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>S</strong>cope: <span class="image"><img src="Images/scope-protected.png" alt="scope protected"></span> &#8594; Protected | <span class="image"><img src="Images/scope-community.png" alt="scope community"></span> &#8594; Community</p>
+</div>
+<div class="paragraph">
+<p><strong>R</strong>eentrancy: <span class="image"><img src="Images/reentrancy-preallocated.png" alt="reentrancy preallocated"></span> &#8594; Preallocated reentrancy | <span class="image"><img src="Images/reentrancy-shared.png" alt="reentrancy shared"></span> &#8594; Shared reentrancy</p>
+</div>
+<div class="paragraph">
+<p><strong>I</strong>nlining: <span class="image"><img src="Images/inlined.png" alt="inlined"></span> &#8594; Inlined</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_library_constant_vis_26"><a class="anchor" href="#_library_constant_vis_26"></a><a class="link" href="#_library_constant_vis_26">2.26.2. Library Constant VIs</a></h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -8025,7 +8279,7 @@ This is the author&#8217;s responsibility to list any of the missing product use
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-06-16 15:08:41 -0700
+Last updated 2025-06-19 18:50:49 -0700
 </div>
 </div>
 </body>

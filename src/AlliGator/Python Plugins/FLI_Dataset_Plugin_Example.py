@@ -1,8 +1,13 @@
 # FLI_Dataset_Plugin_Example.py
 # Example AlliGator FLI Dataset Menu Python Plugin
-# Tested with AlliGator version 0.66
+# Tested with AlliGator version 1.02
 # Author: X. Michalet
-# Last modified: 2023-01-04
+# Last modified: 2025-06-19
+
+# The following (triple) comment is needed to specify the AlliGator Python 
+# Plugin API version number to use
+
+### AlliGator Python Plugin API Version = 1 ###
 
 # The following (triple) comment is needed to tell AlliGator where to
 # insert the plugin function(s) as menu item(s)
@@ -79,15 +84,10 @@ def Peak_Intensity_Above_Threshold_Mask(
     for i in range(gate_number):
         gate = np.asarray(images[i].Image)
         max = np.maximum(max, gate, out = max)
-    mask = (max > threshold).astype('float32')  # set values > th in max to 1
-                                                # # set values <= th to 0
+    mask = (max > threshold).astype('uint16')  # set values > th in max to 1
+                                               # set values <= th to 0
     mask_as_list = mask.tolist() # LabVIEW only accepts list as array output
-    mask_image_name = 'Mask Image (peak > '+ str(threshold) + ')'
-    mask_image_plugin_data = alligator.image_plugin_data(
-        Image_Name = mask_image_name,
-        Image = mask_as_list
-    )
-    
+
     fli_dataset_data_out = alligator.fli_dataset_plugin_data(
         FLI_Dataset_Name = '',
         Gate_Duration = 0,
@@ -95,8 +95,9 @@ def Peak_Intensity_Above_Threshold_Mask(
         Gate_Number = 1,
         X_Size = size_x,
         Y_Size = size_y,
-        Image_Data_List = [mask_image_plugin_data],
+        Image_Data_List = [],
         Reference_Decay = alligator.empty_plot,
+        Mask_Image = mask_as_list,
         Parameter_Map = alligator.empty_map
     )
     

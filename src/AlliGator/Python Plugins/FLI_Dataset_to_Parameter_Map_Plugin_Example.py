@@ -1,8 +1,13 @@
 # FLI_Dataset_to_Parameter_Map_Plugin_Example.py
 # Example AlliGator FLI Dataset Menu Python Plugin
-# Tested with AlliGator version 0.95
+# Tested with AlliGator version 1.02
 # Author: X. Michalet
-# Last modified: 2024-10-18
+# Last modified: 2025-06-19
+
+# The following (triple) comment is needed to specify the AlliGator Python 
+# Plugin API version number to use
+
+### AlliGator Python Plugin API Version = 1 ###
 
 # The following (triple) comment is needed to tell AlliGator where to
 # insert the plugin function(s) as menu item(s)
@@ -96,8 +101,7 @@ def Very_Simple_Average_Lifetime_Map(
     
     # building the parameter map
     # init
-    param_names = ['Offset','Baseline','A_1','tau_1',\
-        '<tau>_1','f1_1','f2_1','R^2']
+    param_names = ['A_1','<tau>_a']
     # not all parameters need to be provided, in which case only the names
     # of the provided parameters are needed
     irf_x = ref_decay.X_Array
@@ -111,8 +115,7 @@ def Very_Simple_Average_Lifetime_Map(
     for i in range(size_x):
         for j in range (size_y):
             irf_locations.append(alligator.location(X = i, Y = j))
-            param_map.append([i, j, 0, 0, sum[j, i],mean_t[j, i], mean_t[j, i],\
-                1, 0, 1])
+            param_map.append([i, j, sum[j, i],mean_t[j, i]])
     
     # packaging everything in the output format
     

@@ -1,7 +1,7 @@
 .. _alligator-python-plugins-API:
 
-AlliGator Python Plugins API v 0.1
-++++++++++++++++++++++++++++++++++
+AlliGator Python Plugins API v 1
+++++++++++++++++++++++++++++++++
 
 AlliGator versions: 0.63-current
 

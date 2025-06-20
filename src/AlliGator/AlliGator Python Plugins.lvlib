@@ -19,78 +19,84 @@
 		<Item Name="AlliGator Type of Plot Data.ctl" Type="VI" URL="../AlliGator Type of Plot Data.ctl"/>
 	</Item>
 	<Item Name="Plugin Data Type Ctrls" Type="Folder">
-		<Item Name="AlliGator Python Plugin FLI Dataset Data.ctl" Type="VI" URL="../AlliGator Python Plugin FLI Dataset Data.ctl"/>
-		<Item Name="AlliGator Python Plugin Graph Data Input.ctl" Type="VI" URL="../AlliGator Python Plugin Graph Data Input.ctl"/>
-		<Item Name="AlliGator Python Plugin Image Data.ctl" Type="VI" URL="../AlliGator Python Plugin Image Data.ctl"/>
-		<Item Name="AlliGator Python Plugin Parameter Map Data.ctl" Type="VI" URL="../AlliGator Python Plugin Parameter Map Data.ctl"/>
-		<Item Name="AlliGator Python Plugin Plot Data.ctl" Type="VI" URL="../AlliGator Python Plugin Plot Data.ctl"/>
+		<Item Name="AlliGator Python Plugin FLI Dataset Data v1.ctl" Type="VI" URL="../Python Plugins API/AlliGator Python Plugin FLI Dataset Data v1.ctl"/>
+		<Item Name="AlliGator Python Plugin Graph Data Input v1.ctl" Type="VI" URL="../Python Plugins API/AlliGator Python Plugin Graph Data Input v1.ctl"/>
+		<Item Name="AlliGator Python Plugin Image Data v1.ctl" Type="VI" URL="../Python Plugins API/AlliGator Python Plugin Image Data v1.ctl"/>
+		<Item Name="AlliGator Python Plugin Parameter Map Data v1.ctl" Type="VI" URL="../Python Plugins API/AlliGator Python Plugin Parameter Map Data v1.ctl"/>
+		<Item Name="AlliGator Python Plugin Plot Data v1.ctl" Type="VI" URL="../Python Plugins API/AlliGator Python Plugin Plot Data v1.ctl"/>
 	</Item>
 	<Item Name="Common" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">3</Property>
-		<Item Name="AlliGator Add Python Functions to Menu.vi" Type="VI" URL="../AlliGator Add Python Functions to Menu.vi"/>
-		<Item Name="AlliGator Add Python Functions to Object Menu.vi" Type="VI" URL="../AlliGator Add Python Functions to Object Menu.vi"/>
-		<Item Name="AlliGator Export Plugin Parameters to Clipboard.vi" Type="VI" URL="../AlliGator Export Plugin Parameters to Clipboard.vi"/>
-		<Item Name="AlliGator Find Object Python Function Information.vi" Type="VI" URL="../AlliGator Find Object Python Function Information.vi"/>
-		<Item Name="AlliGator Find Python Function Information.vi" Type="VI" URL="../AlliGator Find Python Function Information.vi"/>
-		<Item Name="AlliGator Format Path String for Python.vi" Type="VI" URL="../AlliGator Format Path String for Python.vi"/>
-		<Item Name="AlliGator Get Message &amp; Parameters from JSON Output.vi" Type="VI" URL="../AlliGator Get Message &amp; Parameters from JSON Output.vi"/>
-		<Item Name="AlliGator Get Python Function Parameter Values Dialog.vi" Type="VI" URL="../AlliGator Get Python Function Parameter Values Dialog.vi"/>
-		<Item Name="AlliGator Get Python Session ID.vi" Type="VI" URL="../AlliGator Get Python Session ID.vi"/>
-		<Item Name="AlliGator JSON Output Warning.vi" Type="VI" URL="../AlliGator JSON Output Warning.vi"/>
-		<Item Name="AlliGator JSON String to Settings Parameter.vi" Type="VI" URL="../AlliGator JSON String to Settings Parameter.vi"/>
-		<Item Name="AlliGator Parameter Type to Default Value String.vi" Type="VI" URL="../AlliGator Parameter Type to Default Value String.vi"/>
-		<Item Name="AlliGator Plugin Target to Submenu.vi" Type="VI" URL="../AlliGator Plugin Target to Submenu.vi"/>
-		<Item Name="AlliGator Python Plugin Function Doc String.vi" Type="VI" URL="../AlliGator Python Plugin Function Doc String.vi"/>
-		<Item Name="AlliGator Python Plugin is Function a Plugin.vi" Type="VI" URL="../AlliGator Python Plugin is Function a Plugin.vi"/>
-		<Item Name="AlliGator Python Plugin Plot Data Type.vi" Type="VI" URL="../AlliGator Python Plugin Plot Data Type.vi"/>
-		<Item Name="AlliGator Python Plugin Valid Input Datatype.vi" Type="VI" URL="../AlliGator Python Plugin Valid Input Datatype.vi"/>
-		<Item Name="AlliGator Python Plugin Valid Output Datatype.vi" Type="VI" URL="../AlliGator Python Plugin Valid Output Datatype.vi"/>
-		<Item Name="AlliGator Python Plugin Valid Output Destination.vi" Type="VI" URL="../AlliGator Python Plugin Valid Output Destination.vi"/>
-		<Item Name="AlliGator Send Python Function Doc String to Notebook.vi" Type="VI" URL="../AlliGator Send Python Function Doc String to Notebook.vi"/>
+		<Item Name="AlliGator Add Python Functions to Menu.vi" Type="VI" URL="../Python Plugins API/AlliGator Add Python Functions to Menu.vi"/>
+		<Item Name="AlliGator Add Python Functions to Object Menu.vi" Type="VI" URL="../Python Plugins API/AlliGator Add Python Functions to Object Menu.vi"/>
+		<Item Name="AlliGator Export Plugin Parameters to Clipboard.vi" Type="VI" URL="../Python Plugins API/AlliGator Export Plugin Parameters to Clipboard.vi"/>
+		<Item Name="AlliGator Find Object Python Function Information.vi" Type="VI" URL="../Python Plugins API/AlliGator Find Object Python Function Information.vi"/>
+		<Item Name="AlliGator Find Python Function Information.vi" Type="VI" URL="../Python Plugins API/AlliGator Find Python Function Information.vi"/>
+		<Item Name="AlliGator Format Path String for Python.vi" Type="VI" URL="../Python Plugins API/AlliGator Format Path String for Python.vi"/>
+		<Item Name="AlliGator Get Message &amp; Parameters from JSON Output.vi" Type="VI" URL="../Python Plugins API/AlliGator Get Message &amp; Parameters from JSON Output.vi"/>
+		<Item Name="AlliGator Get Python Function Parameter Values Dialog.vi" Type="VI" URL="../Python Plugins API/AlliGator Get Python Function Parameter Values Dialog.vi"/>
+		<Item Name="AlliGator Get Python Session ID.vi" Type="VI" URL="../Python Plugins API/AlliGator Get Python Session ID.vi"/>
+		<Item Name="AlliGator JSON Output Warning.vi" Type="VI" URL="../Python Plugins API/AlliGator JSON Output Warning.vi"/>
+		<Item Name="AlliGator JSON String to Settings Parameter.vi" Type="VI" URL="../Python Plugins API/AlliGator JSON String to Settings Parameter.vi"/>
+		<Item Name="AlliGator Parameter Type to Default Value String.vi" Type="VI" URL="../Python Plugins API/AlliGator Parameter Type to Default Value String.vi"/>
+		<Item Name="AlliGator Plugin Target to Submenu.vi" Type="VI" URL="../Python Plugins API/AlliGator Plugin Target to Submenu.vi"/>
+		<Item Name="AlliGator Python Plugin Function Doc String.vi" Type="VI" URL="../Python Plugins API/AlliGator Python Plugin Function Doc String.vi"/>
+		<Item Name="AlliGator Python Plugin is Function a Plugin.vi" Type="VI" URL="../Python Plugins API/AlliGator Python Plugin is Function a Plugin.vi"/>
+		<Item Name="AlliGator Python Plugin Plot Data Type.vi" Type="VI" URL="../Python Plugins API/AlliGator Python Plugin Plot Data Type.vi"/>
+		<Item Name="AlliGator Python Plugin Valid Input Datatype.vi" Type="VI" URL="../Python Plugins API/AlliGator Python Plugin Valid Input Datatype.vi"/>
+		<Item Name="AlliGator Python Plugin Valid Output Datatype.vi" Type="VI" URL="../Python Plugins API/AlliGator Python Plugin Valid Output Datatype.vi"/>
+		<Item Name="AlliGator Python Plugin Valid Output Destination.vi" Type="VI" URL="../Python Plugins API/AlliGator Python Plugin Valid Output Destination.vi"/>
+		<Item Name="AlliGator Send Python Function Doc String to Notebook.vi" Type="VI" URL="../Python Plugins API/AlliGator Send Python Function Doc String to Notebook.vi"/>
 	</Item>
 	<Item Name="Decay Graph" Type="Folder">
-		<Item Name="AlliGator Run XY Graph Python Function.vi" Type="VI" URL="../AlliGator Run XY Graph Python Function.vi"/>
-		<Item Name="AlliGator XY Graph Python Function Handler Core.vi" Type="VI" URL="../AlliGator XY Graph Python Function Handler Core.vi"/>
+		<Item Name="AlliGator Run XY Graph Python Function.vi" Type="VI" URL="../Python Plugins API/AlliGator Run XY Graph Python Function.vi"/>
+		<Item Name="AlliGator XY Graph Python Function Handler Core.vi" Type="VI" URL="../Python Plugins API/AlliGator XY Graph Python Function Handler Core.vi"/>
 	</Item>
 	<Item Name="FLI Dataset" Type="Folder">
-		<Item Name="AlliGator Add Missing Parameter Map Parameters.vi" Type="VI" URL="../AlliGator Add Missing Parameter Map Parameters.vi"/>
-		<Item Name="AlliGator FLI Dataset Python Function Handler Core.vi" Type="VI" URL="../AlliGator FLI Dataset Python Function Handler Core.vi"/>
-		<Item Name="AlliGator Parameter Names to Parameters List.vi" Type="VI" URL="../AlliGator Parameter Names to Parameters List.vi"/>
-		<Item Name="AlliGator Python Plugin Get FLI Dataset.vi" Type="VI" URL="../AlliGator Python Plugin Get FLI Dataset.vi"/>
-		<Item Name="AlliGator Python Plugin Get FLI Dataset Data.vi" Type="VI" URL="../AlliGator Python Plugin Get FLI Dataset Data.vi"/>
-		<Item Name="AlliGator Run FLI Dataset Python Function.vi" Type="VI" URL="../AlliGator Run FLI Dataset Python Function.vi"/>
+		<Item Name="AlliGator Add Missing Parameter Map Parameters.vi" Type="VI" URL="../Python Plugins API/AlliGator Add Missing Parameter Map Parameters.vi"/>
+		<Item Name="AlliGator FLI Dataset Python Function Handler Core.vi" Type="VI" URL="../Python Plugins API/AlliGator FLI Dataset Python Function Handler Core.vi"/>
+		<Item Name="AlliGator Parameter Names to Parameters List.vi" Type="VI" URL="../Python Plugins API/AlliGator Parameter Names to Parameters List.vi"/>
+		<Item Name="AlliGator Python Plugin Get FLI Dataset.vi" Type="VI" URL="../Python Plugins API/AlliGator Python Plugin Get FLI Dataset.vi"/>
+		<Item Name="AlliGator Python Plugin Get FLI Dataset Data.vi" Type="VI" URL="../Python Plugins API/AlliGator Python Plugin Get FLI Dataset Data.vi"/>
+		<Item Name="AlliGator Run FLI Dataset Python Function.vi" Type="VI" URL="../Python Plugins API/AlliGator Run FLI Dataset Python Function.vi"/>
 	</Item>
 	<Item Name="Internal Data Access" Type="Folder">
-		<Item Name="AlliGator Pythin Plugin Get Reference Decay.vi" Type="VI" URL="../AlliGator Pythin Plugin Get Reference Decay.vi"/>
+		<Item Name="AlliGator Pythin Plugin Get Reference Decay.vi" Type="VI" URL="../Python Plugins API/AlliGator Pythin Plugin Get Reference Decay.vi"/>
 	</Item>
 	<Item Name="Main menu" Type="Folder">
-		<Item Name="AlliGator Add Plugins to Main Menu.vi" Type="VI" URL="../AlliGator Add Plugins to Main Menu.vi"/>
+		<Item Name="AlliGator Add Plugins to Main Menu.vi" Type="VI" URL="../Python Plugins API/AlliGator Add Plugins to Main Menu.vi"/>
 	</Item>
 	<Item Name="Plugin Initialization" Type="Folder">
-		<Item Name="AlliGator Check Invalid Python Plugin Input Parameter Types.vi" Type="VI" URL="../AlliGator Check Invalid Python Plugin Input Parameter Types.vi"/>
-		<Item Name="AlliGator Check Invalid Python Plugin Output Destination.vi" Type="VI" URL="../AlliGator Check Invalid Python Plugin Output Destination.vi"/>
-		<Item Name="AlliGator Check Invalid Python Plugin Output Value Type.vi" Type="VI" URL="../AlliGator Check Invalid Python Plugin Output Value Type.vi"/>
-		<Item Name="AlliGator Check Missing Python Plugin Doc String.vi" Type="VI" URL="../AlliGator Check Missing Python Plugin Doc String.vi"/>
-		<Item Name="AlliGator Check Missing Python Plugin Function Name.vi" Type="VI" URL="../AlliGator Check Missing Python Plugin Function Name.vi"/>
-		<Item Name="AlliGator Check Missing Python Plugin Input Section.vi" Type="VI" URL="../AlliGator Check Missing Python Plugin Input Section.vi"/>
-		<Item Name="AlliGator Check Missing Python Plugin Output Section.vi" Type="VI" URL="../AlliGator Check Missing Python Plugin Output Section.vi"/>
-		<Item Name="AlliGator Check Valid Python Plugin Target.vi" Type="VI" URL="../AlliGator Check Valid Python Plugin Target.vi"/>
-		<Item Name="AlliGator Clear Unknown Python Error.vi" Type="VI" URL="../AlliGator Clear Unknown Python Error.vi"/>
-		<Item Name="AlliGator Close Python Session.vi" Type="VI" URL="../AlliGator Close Python Session.vi"/>
-		<Item Name="AlliGator Decode Python Plugin Output Section.vi" Type="VI" URL="../AlliGator Decode Python Plugin Output Section.vi"/>
-		<Item Name="AlliGator Get Python Plugin Function Parameters String.vi" Type="VI" URL="../AlliGator Get Python Plugin Function Parameters String.vi"/>
-		<Item Name="AlliGator Get Python Plugin Functions List.vi" Type="VI" URL="../AlliGator Get Python Plugin Functions List.vi"/>
-		<Item Name="AlliGator Get Python Script Function List.vi" Type="VI" URL="../AlliGator Get Python Script Function List.vi"/>
-		<Item Name="AlliGator Get Python Functions List in Scripts.vi" Type="VI" URL="../AlliGator Get Python Functions List in Scripts.vi"/>
-		<Item Name="AlliGator Parse Python Function Input Parameters.vi" Type="VI" URL="../AlliGator Parse Python Function Input Parameters.vi"/>
-		<Item Name="AlliGator Python Plugin Function Offsets.vi" Type="VI" URL="../AlliGator Python Plugin Function Offsets.vi"/>
-		<Item Name="AlliGator Python Plugin Get Function Name.vi" Type="VI" URL="../AlliGator Python Plugin Get Function Name.vi"/>
-		<Item Name="AlliGator Python Plugin Target Information.vi" Type="VI" URL="../AlliGator Python Plugin Target Information.vi"/>
-		<Item Name="AlliGator Reset Python Session.vi" Type="VI" URL="../AlliGator Reset Python Session.vi"/>
-		<Item Name="AlliGator Unzip Python Plugins.vi" Type="VI" URL="../AlliGator Unzip Python Plugins.vi"/>
+		<Property Name="NI.SortType" Type="Int">0</Property>
+		<Item Name="Error Checks" Type="Folder">
+			<Property Name="NI.SortType" Type="Int">0</Property>
+			<Item Name="AlliGator Check Invalid Python Plugin Input Parameter Types.vi" Type="VI" URL="../Python Plugins API/AlliGator Check Invalid Python Plugin Input Parameter Types.vi"/>
+			<Item Name="AlliGator Check Invalid Python Plugin Output Destination.vi" Type="VI" URL="../Python Plugins API/AlliGator Check Invalid Python Plugin Output Destination.vi"/>
+			<Item Name="AlliGator Check Invalid Python Plugin Output Value Type.vi" Type="VI" URL="../Python Plugins API/AlliGator Check Invalid Python Plugin Output Value Type.vi"/>
+			<Item Name="AlliGator Check Missing Python Plugin API Version.vi" Type="VI" URL="../Python Plugins API/AlliGator Check Missing Python Plugin API Version.vi"/>
+			<Item Name="AlliGator Check Missing Python Plugin Doc String.vi" Type="VI" URL="../Python Plugins API/AlliGator Check Missing Python Plugin Doc String.vi"/>
+			<Item Name="AlliGator Check Missing Python Plugin Function Name.vi" Type="VI" URL="../Python Plugins API/AlliGator Check Missing Python Plugin Function Name.vi"/>
+			<Item Name="AlliGator Check Missing Python Plugin Input Section.vi" Type="VI" URL="../Python Plugins API/AlliGator Check Missing Python Plugin Input Section.vi"/>
+			<Item Name="AlliGator Check Missing Python Plugin Output Section.vi" Type="VI" URL="../Python Plugins API/AlliGator Check Missing Python Plugin Output Section.vi"/>
+			<Item Name="AlliGator Check Valid Python Plugin Target.vi" Type="VI" URL="../Python Plugins API/AlliGator Check Valid Python Plugin Target.vi"/>
+			<Item Name="AlliGator Clear Unknown Python Error.vi" Type="VI" URL="../Python Plugins API/AlliGator Clear Unknown Python Error.vi"/>
+		</Item>
+		<Item Name="AlliGator Close Python Session.vi" Type="VI" URL="../Python Plugins API/AlliGator Close Python Session.vi"/>
+		<Item Name="AlliGator Decode Python Plugin Output Section.vi" Type="VI" URL="../Python Plugins API/AlliGator Decode Python Plugin Output Section.vi"/>
+		<Item Name="AlliGator Get Python Functions List in Scripts.vi" Type="VI" URL="../Python Plugins API/AlliGator Get Python Functions List in Scripts.vi"/>
+		<Item Name="AlliGator Get Python Plugin API Version.vi" Type="VI" URL="../Python Plugins API/AlliGator Get Python Plugin API Version.vi"/>
+		<Item Name="AlliGator Get Python Plugin Function Parameters String.vi" Type="VI" URL="../Python Plugins API/AlliGator Get Python Plugin Function Parameters String.vi"/>
+		<Item Name="AlliGator Get Python Plugin Functions List.vi" Type="VI" URL="../Python Plugins API/AlliGator Get Python Plugin Functions List.vi"/>
+		<Item Name="AlliGator Get Python Script Function List.vi" Type="VI" URL="../Python Plugins API/AlliGator Get Python Script Function List.vi"/>
+		<Item Name="AlliGator Parse Python Function Input Parameters.vi" Type="VI" URL="../Python Plugins API/AlliGator Parse Python Function Input Parameters.vi"/>
+		<Item Name="AlliGator Python Plugin Function Offsets.vi" Type="VI" URL="../Python Plugins API/AlliGator Python Plugin Function Offsets.vi"/>
+		<Item Name="AlliGator Python Plugin Get Function Name.vi" Type="VI" URL="../Python Plugins API/AlliGator Python Plugin Get Function Name.vi"/>
+		<Item Name="AlliGator Python Plugin Target Information.vi" Type="VI" URL="../Python Plugins API/AlliGator Python Plugin Target Information.vi"/>
+		<Item Name="AlliGator Reset Python Session.vi" Type="VI" URL="../Python Plugins API/AlliGator Reset Python Session.vi"/>
+		<Item Name="AlliGator Unzip Python Plugins.vi" Type="VI" URL="../Python Plugins API/AlliGator Unzip Python Plugins.vi"/>
 	</Item>
 	<Item Name="Source Image" Type="Folder">
-		<Item Name="AlliGator Image Python Function Handler Core.vi" Type="VI" URL="../AlliGator Image Python Function Handler Core.vi"/>
-		<Item Name="AlliGator Run Source Image Python Function.vi" Type="VI" URL="../AlliGator Run Source Image Python Function.vi"/>
+		<Item Name="AlliGator Image Python Function Handler Core.vi" Type="VI" URL="../Python Plugins API/AlliGator Image Python Function Handler Core.vi"/>
+		<Item Name="AlliGator Run Source Image Python Function.vi" Type="VI" URL="../Python Plugins API/AlliGator Run Source Image Python Function.vi"/>
 	</Item>
 </Library>

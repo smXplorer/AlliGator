@@ -1,8 +1,13 @@
 # Process_Multiple_Plots.py
 # Example AlliGator Decay Graph Python Plugin
-# Tested with AlliGator version 0.67
+# Tested with AlliGator version 1.02
 # Author: X. Michalet
-# Last modified: 2023-01-05
+# Last modified: 2025-06-19
+
+# The following (triple) comment is needed to specify the AlliGator Python 
+# Plugin API version number to use
+
+### AlliGator Python Plugin API Version = 1 ###
 
 # The following (triple) comment is needed to tell AlliGator where to
 # insert the plugin function(s) as menu item(s)

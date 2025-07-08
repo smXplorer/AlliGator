@@ -24,7 +24,7 @@
 		<Item Name="Decay Fit Parameter Constraints Arrays.ctl" Type="VI" URL="../IRF(X)PSED/Decay Fit Parameter Constraints Arrays.ctl"/>
 		<Item Name="Decay Fit Parameter Constraints with Values.ctl" Type="VI" URL="../IRF(X)PSED/Decay Fit Parameter Constraints with Values.ctl"/>
 		<Item Name="Decay Fit Parameters &amp; Derived Quantities List v1.ctl" Type="VI" URL="../IRF(X)PSED/Decay Fit Parameters &amp; Derived Quantities List v1.ctl"/>
-		<Item Name="Decay Fit Parameters &amp; Derived Quantities List.ctl" Type="VI" URL="../IRF(X)PSED/Decay Fit Parameters &amp; Derived Quantities List.ctl"/>
+		<Item Name="Decay Fit Parameters &amp; Derived Quantities List v2.ctl" Type="VI" URL="../IRF(X)PSED/Decay Fit Parameters &amp; Derived Quantities List v2.ctl"/>
 		<Item Name="Decay Fit Parameters In List.ctl" Type="VI" URL="../IRF(X)PSED/Decay Fit Parameters In List.ctl"/>
 		<Item Name="Decay Fit Steps.ctl" Type="VI" URL="../Decay Fit Steps.ctl"/>
 		<Item Name="Decay Model.ctl" Type="VI" URL="../Decay Convolution/Decay Model.ctl"/>

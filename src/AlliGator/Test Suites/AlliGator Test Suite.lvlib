@@ -4,6 +4,7 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">553680896</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="AlliGator Add Test Result.vi" Type="VI" URL="../AlliGator Add Test Result.vi"/>
 	<Item Name="AlliGator Test Data.ctl" Type="VI" URL="../AlliGator Test Data.ctl"/>
 	<Item Name="AlliGator Test Internal Data.vi" Type="VI" URL="../AlliGator Test Internal Data.vi"/>
 	<Item Name="AlliGator Test Suite.vi" Type="VI" URL="../AlliGator Test Suite.vi"/>

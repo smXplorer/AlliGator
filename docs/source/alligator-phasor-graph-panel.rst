@@ -377,7 +377,7 @@ Phasor Ratio References
 
 Phasor ratio analysis consists in measuring the relative distance of a phasor of 
 interest to two other so-called *reference* phasors. More details can be found 
-in refs. [Chen2018]_ and [JS2022]_. In case these two reference phasors 
+in refs. [KC18]_ and [JS22]_. In case these two reference phasors 
 correspond to single-exponential decays, the phasor ratio is theoretically 
 identical to the intensity fraction of the first reference.
 

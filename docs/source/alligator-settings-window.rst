@@ -722,7 +722,7 @@ Single-Exponential Phasor Locus (SEPL)
 
 The options and parameters in this panel control the aspect of the SEPL as 
 displayed in the *Phasor Plot* image or the *Phasor Graph*. For a detailed 
-explanation of the role of these different parameters, check ref. [XM2021]_
+explanation of the role of these different parameters, check ref. [XM21]_
 in the :ref:`Bibliography page <alligator-bibliography>`.
 
 .. _alligator-settings-SEPL-display:

@@ -13,4 +13,5 @@
 	<Item Name="Filter Errors.vi" Type="VI" URL="../Filter Errors.vi"/>
 	<Item Name="Get Best Case Error.vi" Type="VI" URL="../Get Best Case Error.vi"/>
 	<Item Name="Is there an Error.vi" Type="VI" URL="../Is there an Error.vi"/>
+	<Item Name="Probe Drop.vi" Type="VI" URL="../../Utilities/Probe Drop.vi"/>
 </Library>

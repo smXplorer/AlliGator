@@ -8,7 +8,6 @@
 		<Item Name="Set Image Data Size.vim" Type="VI" URL="../Basics/Set Image Data Size.vim"/>
 	</Item>
 	<Item Name="Ctrls" Type="Folder">
-		<Item Name="AlliGator Image Display Type.ctl" Type="VI" URL="../../AlliGator/AlliGator Image Display Type.ctl"/>
 		<Item Name="Box Profile Type.ctl" Type="VI" URL="../Box Profile Type.ctl"/>
 		<Item Name="Flatfield Correction Options.ctl" Type="VI" URL="../Flatfield Correction Options.ctl"/>
 		<Item Name="Image Characteristics Comparison Results.ctl" Type="VI" URL="../Image Characteristics Comparison Results.ctl"/>
@@ -130,6 +129,7 @@
 	<Item Name="Correct U16 Image Array.vi" Type="VI" URL="../../Arrays/Correct U16 Image Array.vi"/>
 	<Item Name="Create Image of Different Type.vi" Type="VI" URL="../Create Image of Different Type.vi"/>
 	<Item Name="Create Same Type Image.vi" Type="VI" URL="../Create Same Type Image.vi"/>
+	<Item Name="First &amp; Last Point.vi" Type="VI" URL="../First &amp; Last Point.vi"/>
 	<Item Name="Get Common Image Resolution.vi" Type="VI" URL="../Get Common Image Resolution.vi"/>
 	<Item Name="Get Image Number of Pixel Values.vi" Type="VI" URL="../Get Image Number of Pixel Values.vi"/>
 	<Item Name="Get Image Percentiles.vi" Type="VI" URL="../Get Image Percentiles.vi"/>

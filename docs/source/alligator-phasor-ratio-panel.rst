@@ -26,7 +26,7 @@ orthogonal projection of the phasor to the segment connecting the two references
 In this sense, a phasor ratio of 0 is obtained for all phasors on the line 
 passing through reference 1 and perpendicular  to the segment connecting both 
 references. More details on the definition of the phasor ratio can be found in 
-the literature [Col2012]_ , [Chen2018]_.
+the literature [RC12]_ , [KC18]_.
 
 In favorable cases, the standard phasor ratio :math:`f_1` is identical to the 
 corresponding intensity fraction of the decay reference 1 is the phasor of, and 

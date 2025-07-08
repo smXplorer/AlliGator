@@ -9,6 +9,18 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+1.03 (2025-07-07)
+    Bug Fixes
+        Fixed Decay Graph menu item error (prevented displaying IRF)
+        Fixed a bug where aborting the calculation of multiple IRFs would prevent further tasks to be completed
+        Fixed bug in Load IRFs & Fit Data Map
+        Fixed a bug which would not deselect the last stored Source Image ROI when a new one was drawn (and not stored) and used for analysis
+        Fixed similar bug in the Phasor Plot
+    
+    New Features
+        Cosmetic changes to Decay Fit Parameter Map contextual menu
+        Added Parameter 2 vs Parameter 1 Scatterplot computation in Decay Fit Parameter Map
+
 1.02 (2025-06-19)
     Bug Fixes
         Fixed bug in FLI Dataset Python Plugin core VI that prevented the plugin to run more than once (and other issues as well)

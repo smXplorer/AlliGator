@@ -9,6 +9,15 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+1.03.1 (2025-07-10)
+    Bug Fixes
+        Fixed Decay Graph context menu bug due to th eremoval of the grayed out Global Fit menu item
+    
+    New Features
+        Code refactoring (calibration map)
+        Added monitoring of mouse move in Phasor Plot Display Range to avoid event pile-up
+        Changed time-lag for event pile-up to 300 ms (vs 30 ms)
+
 1.03 (2025-07-07)
     Bug Fixes
         Fixed Decay Graph menu item error (prevented displaying IRF)

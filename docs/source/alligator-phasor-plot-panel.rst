@@ -98,15 +98,15 @@ using a *Phasor Plot Bin* value of 3 (and a bilinear kernel).
 Remember to press the *Refresh Phasor Plot* button (top left corner of the 
 image) to apply this new setting.
 
-Note that the phasor plot image calculation takes some computational time and 
-might not be useful during series analysis. In order to speed up analysis, 
-it is therefore possible to skip this process by unchecking the *Active* 
-checkbox at the top left corner of the panel.
+Note that the phasor plot image calculation takes some time and 
+might be best skipped during some types of analyses (e.g. during 
+series analysis).To skip the calculation of the Phasor Plot, uncheck the 
+*Active* checkbox at the top left corner of the panel.
 
 Phasor Plot Settings and Controls
 +++++++++++++++++++++++++++++++++
 
-The *Phasor Plot* image uses the same settings used by the *Phasor Plot* graph 
+The *Phasor Plot* image uses the same settings as the *Phasor Plot* graph 
 (**Phasor Graph** panel). In particular, phasors are corrected by the same 
 calibration phasor (or calibration phasor map), if one is defined and selected 
 (``Single Phasor``/``Phasor  Series``/``Phasor Map`` options of the 
@@ -151,6 +151,8 @@ image is indicated.
 
 Highlighting Phasor ROIs in the Source Image
 ++++++++++++++++++++++++++++++++++++++++++++
+
+.. _alligator-phasor-plot-panel-highlight-ROI:
 
 The *Highlight Phasor ROI* button on the top left (pencil icon) is used in 
 conjunction with the *Image Overlay Color* box to its right to highlight pixels 
@@ -287,7 +289,8 @@ Representing Phasor Ratio/Average Lifetime/User-defined Quantities as a Color Ma
 
 The phasor ratio can be used to color-code pixels in the *Source Image*, 
 creating a "Phasor Ratio Map" as described above. This requires switching the 
-*Overlay Mode* pull-down icon list to ``Phasor Ratio``:
+*Overlay Mode* pull-down icon list located at the top of the *Phasor Plot* to 
+``Phasor Ratio``:
 
 .. image:: images/AlliGator-Phasor-Ratio-Map-Button.png
    :align: center
@@ -297,8 +300,10 @@ such as user-defined quantities can also be used instead of the phasor ratio.
 Which quantity is mapped and how it is mapped is defined in the **Phasor Plot** 
 panel of the Settings window described next.
 
-To hide the phasor ratio overlay in the *Source Image*, simply refresh the 
-*Source Image*.
+To hide the phasor ratio overlay in the *Source Image*, simply clear the 
+*Source Image* overlay using the *Eraser* button above the *Source Image*. 
+Note that this butoon's action can be fine-tuned by right-clicking on it and 
+selecting which part of the overlay will be erased.
 
 .. Note:: Highlighting ROIs defined in the Phasor Plot in the Source Image 
    doesn't work when the Phasor Ratio Map is shown.
@@ -400,10 +405,10 @@ AlliGator.
 Color-coding Phasors with a user-defined Color Map
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-The phasor plot can sometimes be complex to interpret. A additional tool to 
+The phasor plot can sometimes be complex to interpret. An additional tool to 
 explore the location in the sample, of pixels characterized by different phasor 
-values, is provided by the ``Phasor Color Map`` option of the *Source Image*'s 
-*Overlay Mode* pull-down list:
+values, is provided by the ``Phasor Color Map`` option of *Overlay Mode* 
+pull-down list/button located to the right of the color box :
 
 .. image:: images/AlliGator-Phasor-Ratio-Overlay-Modes.png
    :align: center

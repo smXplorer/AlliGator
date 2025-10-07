@@ -18,7 +18,7 @@ it to be easily searchable on GitHub (or found by search engines).
 
 An AlliGator Python Plugin repository should contain at least 3 mandatory files:
 
-+ A Python script (*.py file) containing the function(s) to be called by 
++ A Python script (\*.py file) containing the function(s) to be called by 
   AlliGator. This script/function(s) should comply with the API as described in 
   AlliGator's :ref:`AlliGator Python Plugin manual page <alligator-python-plugin>`.
 
@@ -31,7 +31,7 @@ An AlliGator Python Plugin repository should contain at least 3 mandatory files:
   information on the plugin and preferably enough information on how to use it. 
   Instructions on how to use the plugin, or links to a website/URL providing 
   these instructions would belong to the Readme file. A simple guide to the 
-  markup language used in *.md file can be found 
+  markup language used in \*.md file can be found 
   `here <https://www.markdownguide.org/basic-syntax/>`_.
 
 If possible, provide files to test the plugin in a *data* folder within the 

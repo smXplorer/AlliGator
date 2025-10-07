@@ -115,10 +115,7 @@ The cluster of objects on the top-left corner of the image are used to:
 +---+---------------------------+------------------------------------------------------------+
 | 4 | .. image:: images/IB3.png |Use ROI as search area.                                     |
 +---+---------------------------+------------------------------------------------------------+
-| 5 | .. image:: images/IB4.png |Overlay mode used for the Source Image.                     |
-|   | .. image:: images/IB4b.png|                                                            |
-+---+---------------------------+------------------------------------------------------------+ 
-| 6 | .. image:: images/IB6.png |Add Scale Bar Overlay                                       | 
+| 5 | .. image:: images/IB6.png |Add Scale Bar Overlay                                       | 
 +---+---------------------------+------------------------------------------------------------+
 
 + *Delete source image overlay*: Right-click the button to specify the button's 
@@ -140,22 +137,14 @@ The cluster of objects on the top-left corner of the image are used to:
   phasors in the Phasor Plot as discussed above. choosing a Transparent color 
   (``T``) will result in no overlay being added.
 + *Use ROI as search area*: see description in the next section
-+ *Overlay mode used for the Source Image*: the *Color Overlay Mode* selector 
-  allows choosing between 3 different modes of overlay from the *Phasor Plot*: 
-  ``ROI``, ``Phasor Ratio/Average Lifetime Color Map`` and ``Phasor Color Map``.
 
-  - ``ROI``: ROIs defined in the *Phasor Plot* are highlighted in the 
-    *Source Image*.
-  - ``Phasor Ratio/Average Lifetime Map``: pixels whose phasor is located in 
-    the vicinity of the segment connecting the two phasor references defined in 
-    the *Phasor Plot* are highlighted in the *Source Image* with a color 
-    reflecting their phasor ratio or average lifetime depending on the option 
-    selected in the **Settings:Phasor Plot** panel.
-  - ``Phasor Color Map``: pixels are colored according 
-    to their location in the *Phasor Plot* with respect to multiple vertices 
-    defined in the **Phasor Map Color Picker** window.
 + *Scale Bar Overlay*: displays a scale bar on the image according to options 
   defined in **Settings:Source Image:Scale Bar Options**.
+  
+  .. note::
+   The *Overlay mode used for the Source Image* button previously located 
+   between the 4th and 5th button in the above list can now be found on the 
+   **Phasor Plot** panel, where it belongs logically.
 
 Use ROI as Search Area
 ----------------------

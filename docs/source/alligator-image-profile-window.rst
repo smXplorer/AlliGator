@@ -115,7 +115,7 @@ Notice the green and red rectangles and the thick green center line. The green
 rectangle is that overlayed by AlliGator to provide the actual ROI used in the 
 analysis. To show it, check off the ``Overlay ROI Median`` checkbox in the
 **Settings:Source Image:Omage Cosmetics** window panel. The color of that 
-overlayed rectangle (and the associated center line) is the set by the ``Median 
+overlayed rectangle (and the associated center line) is the set by the *Median 
 ROI Color* box in the same Settings panel.
 
 The  corresponding **Source Image Profile** window is shown below:

@@ -90,4 +90,4 @@ Ref. [XM25]_ describes AlliGator's features, architecture and open source releas
 
 .. [DR24] D. Roy, X. Michalet, E. W. Miller, S. Weiss, "Towards optical measurements of membrane potential values in Bacillus subtilis using fluorescence lifetime", Biophysical Reports 5 (2025) 100196, `doi: 10.1016/j.bpr.2025.1001960 <https://doi.org/10.1016/j.bpr.2025.100196>`_
 
-.. [XM25] X. Michalet, "AlliGator: Open Source Fluorescence Lifetime Imaging Analysis in G", SoftwareX (2025) accepted, `doi: 10.1101/2025.05.22.655640 <https://doi.org/10.1101/2025.05.22.655640>`_
+.. [XM25] X. Michalet, "AlliGator: Open Source Fluorescence Lifetime Imaging Analysis in G", SoftwareX 31 (2025) 102255, `doi: 10.1016/j.softx.2025.102255 <https://10.1016/j.softx.2025.102255>`_

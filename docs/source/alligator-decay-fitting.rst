@@ -29,12 +29,18 @@ it is best to have an IRF that covers the full laser period.
 
 This can be artifically obtained starting with a *truncated* decay (*i.e.* a 
 decay only partially covering the laser period) using single-exponential 
-extrapolation (see :reF:`Decay Extrapolation <alligator-decay-extrapolation>` 
-section in the :ref:`alligator-decay-preprocessing` manual page).
+extrapolation (see :ref:`Decay Extrapolation <alligator-decay-extrapolation>` 
+section in the :ref:`alligator-decay-preprocessing` manual page). This of course 
+only makes sense if the IRF is narrow and characterized by a tail. In all the 
+other cases, it is possible to manually add points to the IRF using the 
+:ref:`alligator-plot-editor-window`. Otherwise, missing data points will be 
+replaced with zeroes when computing the convolution product, which may result 
+distorted fits.
 
 The fit model convolution with the IRF is compared with an interpolation of the 
 decay at the time points over which the IRF is defined. This means that a 
-fitted decay does not need to cover the whole laser period.
+fitted decay does not need to cover the whole laser period, or even defined at 
+the same time points or with the same resolution.
 
 In the case of multiple ROIs fits, this single IRF decay can be replaced by 
 multiple ROIs IRFs as discussed below in the corresponding section on multiple 
@@ -55,9 +61,10 @@ Overview
 
 A single plot can be fitted by a model function convolved with the selected IRF 
 by right-clicking on its legend (or close to it in the graph) and selecting 
-``Nonlinear Least Square Fit:IRF o N-Exp``. The options specifying the type of fit and the constraints used 
-are defined in the :ref:`alligator-settings-fluorescence-decay-fit-options` and 
-:ref:`alligator-settings-fluorescence-decay-fit-parameters` panels respectively.
+``NLSF:IRF o N-Exp``. The options specifying the type of fit and the constraints 
+used are defined in the :ref:`alligator-settings-fluorescence-decay-fit-options` 
+and :ref:`alligator-settings-fluorescence-decay-fit-parameters` panels 
+respectively.
 
 Several fit options, discussed below, are available in the 
 :ref:`alligator-settings-fluorescence-decay-fit-options` panel:
@@ -139,6 +146,18 @@ Fit Options
     minimization function (sum of difference squared)
   + ``1/Variance``, where each data point i is weighted by :math:`1/{f_i}` 
     (or 1 if :math:`f_i = 0`), where :math:`f_i` is the function value.
+
+.. Note::
+   The choice of weights is sometimes a difficult one. Unweighted fits treat 
+   departure from the model equally at all points, and thus the residuals with 
+   respect to large values (around the decay peak) are those that tend to be 
+   minimized best, while the model fit to the tail might not necessarily be 
+   good. Inversely, a 
+   weighted fit will tend to minimize the residuals of the function's tail, 
+   allowing for relatively large residuals at the peak. If both fits are 
+   visually *bad* (which is not always adequatelly reflected in the 
+   :math:`\chi^2`), something is wrong with the model, or the assumption that 
+   decay variance is approximately Poissonian is invalid.
 
 - *Residuals*: The fit residuals (difference between the original decay and its 
   fit) can be optionally plotted in addition to the fit itself. Several 
@@ -230,6 +249,15 @@ If no parameter is constrained, it is possible to delete all elements of the
 array by right-clicking on the scrollbar and choosing ``Empty Array``. 
 Alternatively, checking off the ``Used`` checkbox will ignore this constraint.
 
+.. Note::
+   If the ``Offset`` parameter is fitted, an additional control will be 
+   displayed at the top: *Optimal Offset Selection Criterion* allows defining 
+   whether the maximum :math:`R^2` or the minimum :math:`\chi^2` are used to 
+   find the optimal offset parameter. The offset parameter is treated separately 
+   from the other parameters: a fit of all the other parameters is performed for 
+   a series of Offset values covering the selected constraint range and 
+   separated by *Offset Resolution*.
+
 - *Guess Parameters*: Convergence of the LM algorithm can sometimes be sped up 
   by providing guesses 
   for one or more parameters of the model. Note that bad guesses can also throw 
@@ -241,14 +269,16 @@ Alternatively, checking off the ``Used`` checkbox will ignore this constraint.
       computed for all parameters
     + User-provided: user-provided values are used for parameters that have 
       them, numerically estimated ones for the others.
-    + User-provided (noemalized): parameters are provided for the normalized 
+    + User-provided (normalized): parameters are provided for the normalized 
       decay (for which the maximum value is 1). This allows providing relative 
-      amplitude values rather than absolute ones.
+      amplitude values rather than absolute ones. This is useful when performing 
+      multi-ROI NLSF analysis, where the amplitude may vary from ROI to ROI, but 
+      the relative amplitude is expected to be fairly constant.
     + Last valid fitted parameters: uses the last successful fit parameters.
     
 - *Displayed Fit Parameters*: When performing a Series fit, this array 
   determines which fit parameters are output as a plot in the *Lifetime & Other 
-  Parameters* graph. Leave the arra  empty for all parameters to be output.
+  Parameters* graph. Leave the array empty for all parameters to be output.
 
 Fit Results
 -----------
@@ -258,59 +288,98 @@ are output to the Notebook. A typical output will read:
 ::
 
 
-    2-Exponentials weighted fit of XXXXX
+    1-Exponential weighted fit of XXXXX
 
     Model Calculation: Convolution
-    Use Local IRF: FALSE 
+    Use Local IRF: TRUE 
 
-    Periodic with  (SYNC) period: 12.5 ns
-    CPU: 0.120509 s
+    Periodic with (SYNC) period: 12.5 ns
+    CPU: 0.417112 s
     Fit range: 0%-100%
     Fitting Algorithm: Levenberg-Marquardt
     Fitting Methods: Least Square
-    Total number of iterations: 201
-    Max number of iteration per offset value: 201 [<200]
-    Total number of function calls: 202
-    Max number of function calls per offset value: 202 [<1000]
-    Gradient: 3.828665E-5 [1E-6]
-    |Delta Chi2|: 3.138666E-7
-    |Delta Chi2|/Chi2: 0.000428 [1E-6]
-    Max |Delta a/a|: 0.017266 [1E-6]
-    Lambda: 0.012433 [1E-6, 1000000]
-    Termination criterion: Max Iterations Exceeded
-    Residual Sum of Squares (RSS): 0.060079
-    Akaike Information Criterion (AIC): 397.180562
-    Bayesian Information Criterion (BIC): 474.215033
+    Number of offset fits: 0
+    Statistics on all offset fits:
+    Total number of iterations: 1074
+    Max number of iterations: 1074 [<2000 per fit]
+    Total number of function calls: 1115
+    Max number of function calls: 1115 [<10000 per fit]
+
+    Gradient: 0 [1E-9]
+    |Delta Chi2|: 117.359512
+    |Delta Chi2|/Chi2: 0.953912 [1E-9]
+    Max |Delta a/a|: 1.356458 [1E-9]
+    Lambda: 10.48576 [1E-9, 1E+9]
+    Termination criterion: Scale Range Exceeded
+    Residual Sum of Squares (RSS): 20647.455685
+    Akaike Information Criterion (AIC): 1471.322445
+    Bayesian Information Criterion (BIC): 1440.236246
+    IRF Normalization Factor: 616.8
+    Decay Normalization Factor: 912.4
     Guess Fit Parameters:
     Type: Numerically estimated
-    Offset: 0
-    Baseline: 0.001465
-    A1: 0.445958
-    tau 1: 0.865617
-    A2: 0.445958
-    tau 2: 2.596851
+    Offset: -0.2
+    Baseline: 5
+    A_1: 621
+    tau_1: 1.269572
 
     Fitted Parameters:
-    Offset: 0 ± NaN [0, 0]
-    Baseline: -0.03914 ± 0.004655 ]-Inf, +Inf[
-    A1: 2.828889 ± 0.990132 [0, Inf]
-    tau 1: 0.676268 ± 0.117808 [0, Inf]
-    A2: 0.698186 ± 1.025203 [0, Inf]
-    tau 2: 1.326534 ± 0.578591 [0, Inf]
-    Amplitude-averaged lifetime: 0.80498
-    Intensity-averaged lifetime: 0.888374
-    R^2: 0.997084
-    Chi^2: 0.500797
-    Reduced Chi^2: 0.002555
+    Offset: 0.11 ± NaN [-0.2, 0.2] (step: 0.01)
+    Baseline: 1.518746 ± 0.745548 ]-Inf, +Inf[
+    A_1: 993.625501 ± 24.222779 [0, Inf]
+    tau_1: 0.926133 ± 0.010069 ]-Inf, +Inf[
+
+    R^2: 0.99798
+    Weighted Chi^2: 123.029749
+    Degrees of freedom: 97
+    Reduced Weighted Chi^2: 1.268348
+    Unweighted Chi^2: 20647.455685
+    Reduced Unweighted Chi^2: 212.860368
     Standard residuals 
-    Plot(s) added to Decay Graph: 2-Exp Fit of XXXXX, 2-Exp Fit of XXXXX Residuals
+    Plot(s) added to Decay Graph: 1-Exp Fit of XXXXX, 1-Exp Fit of XXXXX Residuals
 
 
-where XXXXX is the decay name. :math:`R^2` and the reduced :math:`\chi ^2` as well 
-as the 68% confidence intervals (errors) are defined according to the 
-definitions provided `here <https://www.ni.com/en/shop/labview/overview-of-curve-fitting-models-and-methods-in-labview.html>`_
-If the fit fails, an error message will be displayed instead (and not plot 
-added to the *Decay Graph*).
+The first line indicates the fit model (*1-Exponential* or *2-Exponential*) and 
+whether the cost function was *weighted* or *unweighted*. XXXXX is the decay 
+name.
+
+*Model Calculation* indicates how the fitted function is evaluated (currently, 
+the only supported method is by *Convolution* of the model function with the 
+IRF (when provided). This convolution is done with a normalized IRF (normalized 
+to an integral of 1) such that pre-scaling (e.g. normalizing) the IRF has no 
+effect on the results. Cyclic convolution is done using fast fourier transform.
+
+*Use Local IRF* indicates the option selected in the **Settings** window.
+
+If the *Offset* parameter is fitted, *Number of offset fits* indicates how many 
+values have been tested. The following lines indicated the cumulated number of 
+iterations and functions calls used during these different minimizations.
+
+The next section returns minimization parameters for the optimal offset found 
+and what caused the end of iterative minimization. Statistical criteria useful 
+to compare models are provided next (RSS, AIC and BIC).
+
+The *IRF Normalization Factor* is the integral of the IRF used internally.
+
+*Decay Normalization Factor* is the corresponding integral of the decay, used 
+to normalize the decay internally before computation.
+
+:math:`R^2` as well 
+as the 68% confidence intervals (errors) are defined according to `this page <https://www.ni.com/en/shop/labview/overview-of-curve-fitting-models-and-methods-in-labview.html>`_.
+The *weighted* :math:`\chi ^2` is defined as the *Sum of Squares Error (SSE)* 
+defined on that page, with weights equal to :math:`1/y_i`, where :math:`1/y_i` 
+is the local funcion value, while the *unweighted* :math:`\chi ^2` is defined 
+similarly but with uniform weights equal to 1. The appropriate :math:`\chi ^2` 
+to consider depends on the type of fit (for instance, the *weighted* :math:`\chi 
+^2` is the one relevant in this example). The alternative :math:`\chi ^2` is 
+provided for comparison.
+Reduced :math:`\chi ^2` are obtained by dividing the previous quantities by the 
+number of *Degrees of freedom*.
+A reasonable fit with Poisson uncertainties on the decay values will have a 
+*reduced weighted* :math:`\chi ^2` close to 1.
+
+If the fit fails, an error message will be displayed instead (and not plot will 
+be added to the *Decay Graph*).
 
 .. _multiple-rois-decay-fit:
 
@@ -327,10 +396,11 @@ The analysis applies to all ROIs currently defined in the *Source Image*.
 There are two possible options:
 
 - Use a common IRF for all ROIs: the IRF needs to be defined using the 
-  ``IRF/Reference Plot:Use as IRF/Reference Plot`` menu item of the *Decay Graph*.
+  ``IRF/Reference Plot:Use as IRF/Reference Plot`` menu item of the *Decay 
+  Graph*.
 - Use one IRF per ROI: this option is recommended when the IRF is known to 
-  depend on the location in the field of view, as is for instance the case with 
-  wide-field detector.
+  depend on the location in the field of view, as is for instance often the 
+  case with wide-field detectors.
   
 Additionally, there are two types of outputs depending on the chosen *mode* 
 (verbose or silent, or equivalently slow or fast), which are described next.
@@ -346,7 +416,8 @@ Additionally, there are two types of outputs depending on the chosen *mode*
   exported as an ASCII file if the *Export Tabulated Results* checkbox in the 
   **Settings:Fluorescence Decay:Fit Parameters** panel is checked off. The 
   fit results can be examined using the **Decay Fit Parameter Map** panel, as 
-  discussed in the :ref:`corresponding manual page <alligator-decay-fit-parameters-map-panel>`.
+  discussed in the :ref:`corresponding manual page 
+  <alligator-decay-fit-parameters-map-panel>`.
 
 In order to define individual IRFs, use the ``Analysis:FLI Dataset:Multiple ROIS 
 Analysis:All ROIs IRF Extraction`` menu. An IRF dataset file is needed for that 
@@ -362,6 +433,15 @@ window turns on when local IRFs have been defined.
 In order to take advantage of these stored IRFs, it is necessary to check off 
 the *Use Local IRF* checkbox in the **Settings:Fluorescence Decay:Fit Options**
 panel.
+
+The *Local IRFs* computed in this manner can be saved to (HDF5) file using the 
+``Analysis:FLI Dataset:Multiple ROIS Analysis:All ROIs IRF Extraction:Save Local 
+IRFs`` menu item. They can later be reloaded using the corresponding 
+``Analysis:FLI Dataset:Multiple ROIS Analysis:All ROIs IRF Extraction:Load Local 
+IRFs`` menu item.
+
+To clear these IRFs from memory, use the ``Analysis:FLI Dataset:Multiple ROIS 
+Analysis:All ROIs IRF Extraction:Clear Local IRFs`` menu item.
 
 Series decay fit
 ++++++++++++++++

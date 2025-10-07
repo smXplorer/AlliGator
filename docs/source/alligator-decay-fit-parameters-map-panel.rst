@@ -27,15 +27,17 @@ specify what are the selected Min and Max of the displayed parameters.
 
 Any parameter above or below these two limits are color-coded with the unique 
 color boxes located at the top and bottom of the color scale (by default, the 
-bottom color is white, and is therefore not readily localized. Left-click right 
-below the color scale to reveal the color picker window and select the color 
-highlighting parameters below the display range minimum).
+bottom color is white, and is therefore not visible in the snapshot above). 
+Left-click above or below the color scale to reveal the color picker window and 
+select the color highlighting parameters respectively above or below the display 
+range minimum).
 
 The square Tools buttons on the top left of the *Decay Fit Parameters Map* 
 allow zooming, selecting, moving or clicking the image or a ROI.
  
-The *Refresh Parameter Map* forces redrawing the map, while the square color 
-selector at the bottom allows defining the color of the ROIs drawn over the map.
+The *Refresh Parameter Map* button forces redrawing the map, while the square 
+color selector at the bottom allows defining the color of the ROIs drawn over 
+the map.
 
 Finally, the *Overlay Parameter Map* button at the top left (brush tool) enables 
 overlaying the current *Decay Fit Parameters Map* on the *Source Image*.
@@ -114,6 +116,11 @@ The *Decay Fit Parameters Map* context menu is shown below and discussed next.
   analysis and work with it (see next) together with the loaded dataset (the 
   dataset is not loaded, neither are the ROIs, which needs to be done 
   separately, if needed).
+  
++ *Change Map Resolution*: when loading a Decay Fit Parameter Map file, the 
+  default size of the map is set to that of the loaded dataset. If that dataset 
+  does not correspond to the loaded Map data, it is necessary to manually set 
+  the Map's resolution (i.e. image size), which this function allows doing.
 
 The other functions are self-explanatory.
 

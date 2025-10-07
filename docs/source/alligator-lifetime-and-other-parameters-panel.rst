@@ -39,7 +39,8 @@ Average lifetime
 As discussed in the :ref:`Phasor Ratio panel <alligator-phasor-ratio-panel>` 
 manual page, computation of a phasor ratio is generally accompanied by the 
 calculation of the corresponding average lifetime, based on the formulas in the 
-introduction to phasor ratio references in the :ref:`Phasor Graph panel <phasor-ratio-introduction>` manual page.
+introduction to phasor ratio references in the :ref:`Phasor Graph panel 
+<phasor-ratio-introduction>` manual page.
 
 Decay fit parameters
 --------------------
@@ -81,11 +82,11 @@ described next:
   selected plot. This opens the **Histogram** window (described in the 
   :ref:`corresponding page <alligator-histogram-window>` of the manual, where a 
   number of further analyses can be carried out.
-- ``Compute Sliced Mean & SDV Plots``: this function allows computing the mean 
-  and standard deviation (SDV) of a plot by "slice". Slices correspond to 
-  subsets of the plot's data defined by fixed ranges of the abscissa values. The 
-  function requires input from the user, provided in the **Sliced Mean & SDV 
-  Options** window:
+- ``Compute Sliced Mean, SDV & CV Plots``: this function allows computing the 
+  mean, standard deviation (SDV) and coefficient of variation (CV) of a plot by 
+  "slice". Slices correspond to subsets of the plot's data defined by fixed 
+  ranges of the abscissa values. The function requires input from the user, 
+  provided in the **Sliced Mean, SDV & CV Options** window:
 
 .. image:: images/AlliGator-Sliced-Mean-SDV-Options-Dialog.png
    :align: center
@@ -94,15 +95,18 @@ described next:
 
   The slices are defined by:
 
-   + the first and last values of the abscissa considered (``Axis Start`` and 
-     ``Axis Stop``), which can be manually entered or automatically set to the 
-     data minimum and maximum values if the ``Use Data Min/Max`` checkbox is 
+   + the first and last values of the abscissa considered (*Axis Start* and 
+     *Axis Stop*), which can be manually entered or automatically set to the 
+     data minimum and maximum values if the *Use Data Min/Max* checkbox is 
      checked off.
-   + the number of slices or their "width" (``# Steps`` or ``Step Size``) 
-     depending on the radio button selection.
-   + within the data in each slice, the data ``Lower`` and ``Upper Percentile`` 
+   + the number of slices or their "width" 
+     depending on the radio button selection (*# Steps* or *Step Size*).
+   + within the data in each slice, the data *Lower* and *Upper Percentile* 
      retained in the analysis (allowing to reject outliers).
    + the minimum number of data points in a slice to compute the mean and SDV.
+   + the *Bin Location* (*Left*, *Center*, *Mean*, *Right*) defines 
+     each bin's abscissa: either the bin's lower bound, its center, the mean of 
+     all binned values or the bin's upper bound.
   
   If the *Output Abscissa Statistics Plots* checkbox is unchecked, the only 
   plots created are the *Mean*, *Standard Deviation* and *# Points* plots as a 

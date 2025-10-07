@@ -3,11 +3,51 @@
 .. Replace tabs with 4 space characters in the .txt version of this file
 .. Remove tab/space in empty lines
 .. Process with Tools_Format Version History .rst.vi
+.. Note that this page will not appear in the table of content of the 
+.. documentation in order to avoid a long list of subheadings. It can be found 
+.. by looking for 'version history'. which will provide a link to this page.
 
 AlliGator Version History
 =========================
 
 Note: version numbers followed by an asterisk have not been released.
+
+1.04 (2025-10-07)
+    Bug Fixes
+        Fixed memory-less file dialog in Load/Save IRFS & Fit Data from/to HDF5 File
+        Fixed bug in Clear Phasor Plot Overlays button action
+        Fixed handling of Low and High Color Scale colors in overlay (Fit Parameter Map)
+        Fixed handling of Low and High Color Scale colors in overlay (Phasor Ratio)
+        Fixed erroneous Notebook close dialog, which was showing up even when AlliGator's main window was open
+        Fixed Decay Fit Parameter Map's "Refresh Image" menu item
+        Fixed bug with color ramp range update in Decay Fit Parameter Map update
+        Fixed bugs in Chi^2 normalization for fixed offset cases
+        Fixed bug in weight computation for weighted fit
+        Fixed calculation of weighted/unweighted fit Chi^2 and parameter uncertainties
+        Fixed reported Guess Parameters
+        Fixed Guess Parameter calculation to account for internal normalization factors
+        Fixed erroneous NaN uncertainty on fixed offset parameter
+        
+    New Features
+        Added High and Low color overlay of Decay Fit Parameter Map in Source Image
+        Added High and Low Colors to the Phasor Ratio/Average Lifetime color scale in Settings>>Phasor Plot
+        Added support for .mat SS2 file
+        Implemented support for individual dataset selection within mat files (vs summing all datasets)
+        Added busy icon to most tasks
+        Added Abort button during loading
+        Added overlay of Phasor Plot Color Map vertices
+        Added CV to intensity-sliced analysis
+        Added bin location option for Sliced Mean, SDV & CV plots
+        Added Power Law and Power Law with Offset Fits to Lifetime & Other Parameters graph context menu
+        Removed Graph Tipstrips as they are superseded with native tipstrips for strings
+        Added Save/Load/Clear Local IRFs menu item to Analysis:FLI Dataset menu
+        Implemented Drag & Drop of Local IRFs file
+        Changed menu item: Batch Conversion >> Batch ptu Files Conversion
+        Added option to enter a loaded Decay Fit Parameter Map's size in the absence of the corresponding dataset
+        Added option to change the Decay Fit Parameter Map's resolution
+        Decay Fit Parameter Map Display Range min and max values now auto-adjust to the max and min slider values
+        Added option to find optimal offset by max R^2 or min Chi^2 in 1- or 2-Exp NLSF analysis
+        Changed default constrained fit parameter range to [-Inf, +Inf]
 
 1.03.1 (2025-07-10)
     Bug Fixes

@@ -1,0 +1,16 @@
+This project contains all the VIs needed to run AlliGator.
+The VIs are organized into virtual folders and labVIEW libraries (*.lvlib) 
+within these folders.
+The AlliGator VIs Coolection.vi found at the bottom of the project contains all 
+VIs used in AlliGator, including those that are dynamically loaded (i.e., which 
+are not linked to in other VIs). It is recommended to open it at the beginning 
+of a session for two reasons:
+- when running AlliGator (see below), it speeds up the startup, as all VIs are 
+already loaded in memory.
+- when editing the code, it ensures that any modification to a VI or a control 
+(in particular typedef controls) is propagated to all VIs and controls, 
+avoiding linking conflicts which could otherwise occur.
+
+To run AlliGator, first disclose the VIs virtual folder and then the 
+AlliGator GUI.lvlib library. Finally, open up and run the AlliGator Launcher.vi 
+at the top of the library (NOT the AlliGator.vi at the bottom of the library!).

@@ -10,10 +10,8 @@
 
 </Property>
 	<Item Name="Ctrls" Type="Folder">
-		<Item Name="AlliGator Gate Image Data Set.ctl" Type="VI" URL="../AlliGator Gate Image Data Set.ctl"/>
 		<Item Name="AlliGator Gate Image Set.ctl" Type="VI" URL="../AlliGator Gate Image Set.ctl"/>
 		<Item Name="AlliGator Internal Variables v2.ctl" Type="VI" URL="../AlliGator Internal Variables v2.ctl"/>
-		<Item Name="AlliGator Internal Variables v3.ctl" Type="VI" URL="../AlliGator Internal Variables v3.ctl"/>
 	</Item>
 	<Item Name="AlliGator IV [Raw Phasor Plot].vi" Type="VI" URL="../AlliGator IV [Raw Phasor Plot].vi"/>
 	<Item Name="AlliGator IV Average Lifetime Map.vi" Type="VI" URL="../AlliGator IV Average Lifetime Map.vi"/>

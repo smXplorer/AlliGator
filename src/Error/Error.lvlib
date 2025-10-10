@@ -5,13 +5,13 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Anything to no Error Cluster.vi" Type="VI" URL="../Anything to no Error Cluster.vi"/>
-	<Item Name="Clear Error.vi" Type="VI" URL="../Clear Error.vi"/>
 	<Item Name="Clear Warning.vi" Type="VI" URL="../Clear Warning.vi"/>
 	<Item Name="Convert Error Code &amp; Message to Error Cluster.vi" Type="VI" URL="../Convert Error Code &amp; Message to Error Cluster.vi"/>
 	<Item Name="Convert Error to Warning.vi" Type="VI" URL="../Convert Error to Warning.vi"/>
 	<Item Name="Error Code to Error Cluster.vi" Type="VI" URL="../Error Code to Error Cluster.vi"/>
+	<Item Name="Error Probe Drop.vi" Type="VI" URL="../Error Probe Drop.vi"/>
 	<Item Name="Filter Errors.vi" Type="VI" URL="../Filter Errors.vi"/>
 	<Item Name="Get Best Case Error.vi" Type="VI" URL="../Get Best Case Error.vi"/>
 	<Item Name="Is there an Error.vi" Type="VI" URL="../Is there an Error.vi"/>
-	<Item Name="Probe Drop.vi" Type="VI" URL="../../Utilities/Probe Drop.vi"/>
+	<Item Name="Tiny Clear Error.vi" Type="VI" URL="../Tiny Clear Error.vi"/>
 </Library>

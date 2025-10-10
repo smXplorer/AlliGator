@@ -13,10 +13,10 @@
 		<Item Name="AlliGator Phasor Color Map Definition.ctl" Type="VI" URL="../AlliGator Phasor Color Map Definition.ctl"/>
 		<Item Name="AlliGator Phasor Color Map User Event List.ctl" Type="VI" URL="../AlliGator Phasor Color Map User Event List.ctl"/>
 	</Item>
-	<Item Name="AlliGator Color Map Phasor in Original Image v3.vi" Type="VI" URL="../AlliGator Color Map Phasor in Original Image v3.vi"/>
 	<Item Name="AlliGator Compute Interpolated Color Map (Multipoints).vi" Type="VI" URL="../AlliGator Compute Interpolated Color Map (Multipoints).vi"/>
 	<Item Name="AlliGator Draw Color Map Vertices.vi" Type="VI" URL="../AlliGator Draw Color Map Vertices.vi"/>
 	<Item Name="AlliGator Get-Set Phasor Color Map Vertices.vi" Type="VI" URL="../AlliGator Get-Set Phasor Color Map Vertices.vi"/>
+	<Item Name="AlliGator Overlay Color Map Phasor in Original Image v3.vi" Type="VI" URL="../AlliGator Overlay Color Map Phasor in Original Image v3.vi"/>
 	<Item Name="AlliGator Phasor Color Map Picker.vi" Type="VI" URL="../AlliGator Phasor Color Map Picker.vi"/>
 	<Item Name="AlliGator Phasor Color Map User Event Refnum.vi" Type="VI" URL="../AlliGator Phasor Color Map User Event Refnum.vi"/>
 	<Item Name="AlliGator Save-Load Phasor Color Map.vi" Type="VI" URL="../AlliGator Save-Load Phasor Color Map.vi"/>

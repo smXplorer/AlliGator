@@ -22,6 +22,17 @@
 		<Item Name="Read PNG tEXt Chunk.vi" Type="VI" URL="../PNG/Read PNG tEXt Chunk.vi"/>
 		<Item Name="Read PNG zTXt Chunk.vi" Type="VI" URL="../PNG/Read PNG zTXt Chunk.vi"/>
 	</Item>
+	<Item Name="XLSX" Type="Folder">
+		<Item Name="Convert XLS Coordinate.vi" Type="VI" URL="../NI_Read XLSX File (revised, faster)/Convert XLS Coordinate.vi"/>
+		<Item Name="Fill XLSX Multicells.vi" Type="VI" URL="../NI_Read XLSX File (revised, faster)/Fill XLSX Multicells.vi"/>
+		<Item Name="Get unpacked Excel file data.vi" Type="VI" URL="../NI_Read XLSX File (revised, faster)/Get unpacked Excel file data.vi"/>
+		<Item Name="Get XLXS Cell Span Information.vi" Type="VI" URL="../NI_Read XLSX File (revised, faster)/Get XLXS Cell Span Information.vi"/>
+		<Item Name="NI_Read XLSX File (revised, faster).vi" Type="VI" URL="../NI_Read XLSX File (revised, faster)/NI_Read XLSX File (revised, faster).vi"/>
+		<Item Name="Remove XLSX Empty Columns.vi" Type="VI" URL="../NI_Read XLSX File (revised, faster)/Remove XLSX Empty Columns.vi"/>
+		<Item Name="Remove XLSX Empty Rows.vi" Type="VI" URL="../NI_Read XLSX File (revised, faster)/Remove XLSX Empty Rows.vi"/>
+		<Item Name="Remove XLSX last empty row.vi" Type="VI" URL="../NI_Read XLSX File (revised, faster)/Remove XLSX last empty row.vi"/>
+		<Item Name="UndotOrNot.vi" Type="VI" URL="../NI_Read XLSX File (revised, faster)/UndotOrNot.vi"/>
+	</Item>
 	<Item Name=".NET File Dialog.vi" Type="VI" URL="../.NET File Dialog.vi"/>
 	<Item Name=".NET Folder Dialog.vi" Type="VI" URL="../.NET Folder Dialog.vi"/>
 	<Item Name="ASCII File Header Definition.ctl" Type="VI" URL="../ASCII File Header Definition.ctl"/>

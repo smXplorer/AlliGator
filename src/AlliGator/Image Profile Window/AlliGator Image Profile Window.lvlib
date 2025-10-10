@@ -14,7 +14,6 @@
 		<Item Name="AlliGator Image Profile Data.ctl" Type="VI" URL="../AlliGator Image Profile Data.ctl"/>
 		<Item Name="AlliGator Image Profile Intensity Type.ctl" Type="VI" URL="../AlliGator Image Profile Intensity Type.ctl"/>
 		<Item Name="AlliGator Image Profile Plot Data.ctl" Type="VI" URL="../AlliGator Image Profile Plot Data.ctl"/>
-		<Item Name="AlliGator Source Image Profile Window Event Refnum.ctl" Type="VI" URL="../AlliGator Source Image Profile Window Event Refnum.ctl"/>
 	</Item>
 	<Item Name="AlliGator Build Image Profile Plots.vi" Type="VI" URL="../AlliGator Build Image Profile Plots.vi"/>
 	<Item Name="AlliGator Build Image SDV Profile Plots.vi" Type="VI" URL="../AlliGator Build Image SDV Profile Plots.vi"/>

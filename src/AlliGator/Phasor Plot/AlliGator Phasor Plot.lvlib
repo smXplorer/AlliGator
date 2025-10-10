@@ -57,11 +57,12 @@
 	<Item Name="AlliGator Get-Set Phasor Plot Reference is Updated.vi" Type="VI" URL="../AlliGator Get-Set Phasor Plot Reference is Updated.vi"/>
 	<Item Name="AlliGator Highlight Image ROI in Phasor Plot Wrapper.vi" Type="VI" URL="../AlliGator Highlight Image ROI in Phasor Plot Wrapper.vi"/>
 	<Item Name="AlliGator Highlight Image ROI in Phasor Plot.vi" Type="VI" URL="../AlliGator Highlight Image ROI in Phasor Plot.vi"/>
-	<Item Name="AlliGator Overlays Phasor Ratio or Derived Quantity on Source Image v3.vi" Type="VI" URL="../AlliGator Overlays Phasor Ratio or Derived Quantity on Source Image v3.vi"/>
+	<Item Name="AlliGator Overlay Phasor Ratio or Derived Quantity on Source Image v3.vi" Type="VI" URL="../AlliGator Overlay Phasor Ratio or Derived Quantity on Source Image v3.vi"/>
 	<Item Name="AlliGator Phasor Plot Context Menu Handler.vi" Type="VI" URL="../AlliGator Phasor Plot Context Menu Handler.vi"/>
 	<Item Name="AlliGator Phasor Plot Display Mouse Down-Up Event Monitoring.vi" Type="VI" URL="../AlliGator Phasor Plot Display Mouse Down-Up Event Monitoring.vi"/>
 	<Item Name="AlliGator Phasor Plot Display Range Mouse Move Event.vi" Type="VI" URL="../AlliGator Phasor Plot Display Range Mouse Move Event.vi"/>
 	<Item Name="AlliGator Phasor Plot Display Range User Event Refnum.vi" Type="VI" URL="../AlliGator Phasor Plot Display Range User Event Refnum.vi"/>
+	<Item Name="AlliGator Phasor Plot Elements List.vi" Type="VI" URL="../AlliGator Phasor Plot Elements List.vi"/>
 	<Item Name="AlliGator Phasor Plot Image Cursor Location to Phasor v2.vi" Type="VI" URL="../AlliGator Phasor Plot Image Cursor Location to Phasor v2.vi"/>
 	<Item Name="AlliGator Phasor Plot Mouse Move Event.vi" Type="VI" URL="../AlliGator Phasor Plot Mouse Move Event.vi"/>
 	<Item Name="AlliGator Phasor Plot Mouse Move Flag.vi" Type="VI" URL="../AlliGator Phasor Plot Mouse Move Flag.vi"/>

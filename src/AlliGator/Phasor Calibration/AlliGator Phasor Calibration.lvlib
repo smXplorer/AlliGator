@@ -10,6 +10,7 @@
 
 </Property>
 	<Item Name="Ctrls" Type="Folder">
+		<Item Name="AlliGator Basic Calibration Options .ctl" Type="VI" URL="../AlliGator Basic Calibration Options .ctl"/>
 		<Item Name="AlliGator Calibration Map Algorithm.ctl" Type="VI" URL="../AlliGator Calibration Map Algorithm.ctl"/>
 		<Item Name="AlliGator Phasor Calibration Map v1.ctl" Type="VI" URL="../AlliGator Phasor Calibration Map v1.ctl"/>
 		<Item Name="AlliGator Phasor Calibration Options.ctl" Type="VI" URL="../AlliGator Phasor Calibration Options.ctl"/>
@@ -28,6 +29,7 @@
 	<Item Name="AlliGator Convert Calibration Map v2 to v1.vi" Type="VI" URL="../AlliGator Convert Calibration Map v2 to v1.vi"/>
 	<Item Name="AlliGator Find Closest Valid Calibration Phasor.vi" Type="VI" URL="../AlliGator Find Closest Valid Calibration Phasor.vi"/>
 	<Item Name="AlliGator Find Optimal Phasor Calibration (no Starting Calibration).vi" Type="VI" URL="../AlliGator Find Optimal Phasor Calibration (no Starting Calibration).vi"/>
+	<Item Name="AlliGator Get Basic Calibration Options.vi" Type="VI" URL="../AlliGator Get Basic Calibration Options.vi"/>
 	<Item Name="AlliGator Get Dataset Series Phasor Calibration v2.vi" Type="VI" URL="../AlliGator Get Dataset Series Phasor Calibration v2.vi"/>
 	<Item Name="AlliGator Get Phasor Calibration in Calibration Map.vi" Type="VI" URL="../AlliGator Get Phasor Calibration in Calibration Map.vi"/>
 	<Item Name="AlliGator Get Phasor Calibration Options.vi" Type="VI" URL="../AlliGator Get Phasor Calibration Options.vi"/>

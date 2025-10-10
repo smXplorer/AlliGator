@@ -10,11 +10,12 @@
 
 </Property>
 	<Item Name="Ctrls" Type="Folder">
+		<Item Name="AlliGator FLI Dataset Information v1.ctl" Type="VI" URL="../../../Files/AlliGator FLI Dataset Information v1.ctl"/>
 		<Item Name="AlliGator IRF Deconvolution Metrics.ctl" Type="VI" URL="../AlliGator IRF Deconvolution Metrics.ctl"/>
 		<Item Name="AlliGator IRF Optimization Controls.ctl" Type="VI" URL="../AlliGator IRF Optimization Controls.ctl"/>
+		<Item Name="AlliGator Local IRFs HDF5 File Sections.ctl" Type="VI" URL="../AlliGator Local IRFs HDF5 File Sections.ctl"/>
 	</Item>
 	<Item Name="AlliGator All ROIs IRF Analysis.vi" Type="VI" URL="../AlliGator All ROIs IRF Analysis.vi"/>
-	<Item Name="AlliGator Check IRF.vi" Type="VI" URL="../AlliGator Check IRF.vi"/>
 	<Item Name="AlliGator Clear Local IRFs.vi" Type="VI" URL="../AlliGator Clear Local IRFs.vi"/>
 	<Item Name="AlliGator Compute Optimal IRF v2.vi" Type="VI" URL="../AlliGator Compute Optimal IRF v2.vi"/>
 	<Item Name="AlliGator Create Cursors for Square Gated IRF Fit.vi" Type="VI" URL="../AlliGator Create Cursors for Square Gated IRF Fit.vi"/>
@@ -29,6 +30,9 @@
 	<Item Name="AlliGator Get Reference Decay.vi" Type="VI" URL="../AlliGator Get Reference Decay.vi"/>
 	<Item Name="AlliGator Get Square Gated IRF Analysis Cursors.vi" Type="VI" URL="../AlliGator Get Square Gated IRF Analysis Cursors.vi"/>
 	<Item Name="AlliGator Is IRF Valid.vi" Type="VI" URL="../AlliGator Is IRF Valid.vi"/>
+	<Item Name="AlliGator Load Local IRFs.vi" Type="VI" URL="../AlliGator Load Local IRFs.vi"/>
+	<Item Name="AlliGator Save Local IRFs.vi" Type="VI" URL="../AlliGator Save Local IRFs.vi"/>
+	<Item Name="AlliGator Save-Load Local IRFs.vi" Type="VI" URL="../AlliGator Save-Load Local IRFs.vi"/>
 	<Item Name="AlliGator Script All ROIs IRF Analysis.vi" Type="VI" URL="../AlliGator Script All ROIs IRF Analysis.vi"/>
 	<Item Name="AlliGator Sort Cursors for Square Gated IRF Fit.vi" Type="VI" URL="../AlliGator Sort Cursors for Square Gated IRF Fit.vi"/>
 	<Item Name="AlliGator Square Gated IRF Fit Cursors String.vi" Type="VI" URL="../AlliGator Square Gated IRF Fit Cursors String.vi"/>

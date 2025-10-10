@@ -11,21 +11,12 @@
 </Property>
 	<Item Name="Ctrls" Type="Folder">
 		<Item Name="AlliGator Refnums List.ctl" Type="VI" URL="../AlliGator Refnums List.ctl"/>
-		<Item Name="AlliGator Tab Control Refnum.ctl" Type="VI" URL="../AlliGator Tab Control Refnum.ctl"/>
 		<Item Name="AlliGator Variables List.ctl" Type="VI" URL="../AlliGator Variables List.ctl"/>
-		<Item Name="AlliGator XY Graph Refnums.ctl" Type="VI" URL="../AlliGator XY Graph Refnums.ctl"/>
 	</Item>
 	<Item Name="AlliGator Abort.vi" Type="VI" URL="../AlliGator Abort.vi"/>
 	<Item Name="AlliGator Clear Variables.vi" Type="VI" URL="../AlliGator Clear Variables.vi"/>
-	<Item Name="AlliGator Decay Graph Max Legend Size.vi" Type="VI" URL="../AlliGator Decay Graph Max Legend Size.vi"/>
-	<Item Name="AlliGator Decay Statistics Graph Max Legend Size.vi" Type="VI" URL="../AlliGator Decay Statistics Graph Max Legend Size.vi"/>
 	<Item Name="AlliGator Exported Internal Variable Names.vi" Type="VI" URL="../AlliGator Exported Internal Variable Names.vi"/>
 	<Item Name="AlliGator Globals.vi" Type="VI" URL="../AlliGator Globals.vi"/>
-	<Item Name="AlliGator Graph Max Legend Size.vi" Type="VI" URL="../AlliGator Graph Max Legend Size.vi"/>
-	<Item Name="AlliGator Intensity Time Trace Max Legend Size.vi" Type="VI" URL="../AlliGator Intensity Time Trace Max Legend Size.vi"/>
-	<Item Name="AlliGator Lifetime Graph Max Legend Size.vi" Type="VI" URL="../AlliGator Lifetime Graph Max Legend Size.vi"/>
-	<Item Name="AlliGator Phasor Graph Max Legend Size.vi" Type="VI" URL="../AlliGator Phasor Graph Max Legend Size.vi"/>
-	<Item Name="AlliGator Phasor Ratio Graph Max Legend Size.vi" Type="VI" URL="../AlliGator Phasor Ratio Graph Max Legend Size.vi"/>
 	<Item Name="AlliGator Refnums Storage.vi" Type="VI" URL="../AlliGator Refnums Storage.vi"/>
 	<Item Name="Alligator Variables Storage.vi" Type="VI" URL="../Alligator Variables Storage.vi"/>
 	<Item Name="AlliGator Visible Tab Label.vi" Type="VI" URL="../AlliGator Visible Tab Label.vi"/>

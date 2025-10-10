@@ -22,4 +22,5 @@
 	<Item Name="AlliGator Get-Set Channel Selection.vi" Type="VI" URL="../AlliGator Get-Set Channel Selection.vi"/>
 	<Item Name="AlliGator Is Selected Channel First Channel.vi" Type="VI" URL="../AlliGator Is Selected Channel First Channel.vi"/>
 	<Item Name="AlliGator Select FLI Channel Type.vi" Type="VI" URL="../AlliGator Select FLI Channel Type.vi"/>
+	<Item Name="AlliGator Select FLI Dataset Channel Name.vi" Type="VI" URL="../AlliGator Select FLI Dataset Channel Name.vi"/>
 </Library>

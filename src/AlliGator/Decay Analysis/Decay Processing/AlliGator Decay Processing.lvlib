@@ -30,5 +30,5 @@
 	<Item Name="AlliGator Get Tabulated Results Header (Average Lifetimes).vi" Type="VI" URL="../AlliGator Get Tabulated Results Header (Average Lifetimes).vi"/>
 	<Item Name="AlliGator New Decay Plot Name.vi" Type="VI" URL="../AlliGator New Decay Plot Name.vi"/>
 	<Item Name="AlliGator Only Show Last Decay.vi" Type="VI" URL="../AlliGator Only Show Last Decay.vi"/>
-	<Item Name="Decay Graph.rtm" Type="Document" URL="../Decay Graph.rtm"/>
+	<Item Name="Decay Graph.rtm" Type="Document" URL="../../Decay Graph.rtm"/>
 </Library>

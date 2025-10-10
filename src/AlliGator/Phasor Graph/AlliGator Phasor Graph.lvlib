@@ -85,4 +85,5 @@
 	<Item Name="Current Phasor (g,s).rtm" Type="Document" URL="../Current Phasor (g,s).rtm"/>
 	<Item Name="Current Phasor (m,phi).rtm" Type="Document" URL="../../Current Phasor (m,phi).rtm"/>
 	<Item Name="Current Phasor.rtm" Type="Document" URL="../../Current Phasor.rtm"/>
+	<Item Name="Phasor Frequency Control.rtm" Type="Document" URL="../../Phasor Frequency Control.rtm"/>
 </Library>

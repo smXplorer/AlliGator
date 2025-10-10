@@ -4,26 +4,30 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">553680896</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="Ctrls" Type="Folder">
+		<Item Name="Color Brewer Palette.ctl" Type="VI" URL="../Color Brewer Palette.ctl"/>
+		<Item Name="Color Palette.ctl" Type="VI" URL="../../Arrays/Color Palette.ctl"/>
+		<Item Name="Custom Color Ramp 2.ctl" Type="VI" URL="../Custom Color Ramp 2.ctl"/>
+		<Item Name="Custom Color Ramp without Color Boxes.ctl" Type="VI" URL="../Custom Color Ramp without Color Boxes.ctl"/>
+		<Item Name="Image Palette Information.ctl" Type="VI" URL="../Image Palette Information.ctl"/>
+		<Item Name="Interpolated Color Scale Definition.ctl" Type="VI" URL="../Interpolated Color Scale Definition.ctl"/>
+		<Item Name="Limit+NaN Colors.ctl" Type="VI" URL="../Limit+NaN Colors.ctl"/>
+	</Item>
 	<Item Name="Brewer Palette Array.vi" Type="VI" URL="../Brewer Palette Array.vi"/>
 	<Item Name="Brewer Palette Dialog v2.vi" Type="VI" URL="../Brewer Palette Dialog v2.vi"/>
 	<Item Name="Check Selected Palette in Menu.vi" Type="VI" URL="../Check Selected Palette in Menu.vi"/>
-	<Item Name="Color Brewer Palette.ctl" Type="VI" URL="../Color Brewer Palette.ctl"/>
-	<Item Name="Color Palette.ctl" Type="VI" URL="../../Arrays/Color Palette.ctl"/>
 	<Item Name="Create 256 Values Palette.vi" Type="VI" URL="../Create 256 Values Palette.vi"/>
 	<Item Name="Create Interpolated Color Palette.vi" Type="VI" URL="../Create Interpolated Color Palette.vi"/>
-	<Item Name="Custom Color Ramp 2.ctl" Type="VI" URL="../Custom Color Ramp 2.ctl"/>
-	<Item Name="Custom Color Ramp without Color Boxes.ctl" Type="VI" URL="../Custom Color Ramp without Color Boxes.ctl"/>
 	<Item Name="Decode Palette Description.vi" Type="VI" URL="../Decode Palette Description.vi"/>
 	<Item Name="Edit Image Palette List Dialog.vi" Type="VI" URL="../Edit Image Palette List Dialog.vi"/>
 	<Item Name="Export Color Ramp to Clipboard.vi" Type="VI" URL="../Export Color Ramp to Clipboard.vi"/>
 	<Item Name="Get Brewer Palette Colors by Name (#Colors).vi" Type="VI" URL="../Get Brewer Palette Colors by Name (#Colors).vi"/>
 	<Item Name="Get Color Scale Information.vi" Type="VI" URL="../Get Color Scale Information.vi"/>
+	<Item Name="Get Palette Color Array.vi" Type="VI" URL="../Get Palette Color Array.vi"/>
 	<Item Name="Get Selected Palette&apos;s Color Array.vi" Type="VI" URL="../Get Selected Palette&apos;s Color Array.vi"/>
 	<Item Name="Get User Palette Choice.vi" Type="VI" URL="../Get User Palette Choice.vi"/>
 	<Item Name="Image Display Get Pixel Color Information.vi" Type="VI" URL="../../Image/Image Display Get Pixel Color Information.vi"/>
-	<Item Name="Image Palette Information.ctl" Type="VI" URL="../Image Palette Information.ctl"/>
 	<Item Name="Interpolate N Between Two Colors.vi" Type="VI" URL="../Interpolate N Between Two Colors.vi"/>
-	<Item Name="Interpolated Color Scale Definition.ctl" Type="VI" URL="../Interpolated Color Scale Definition.ctl"/>
 	<Item Name="Load-Save Color Palette List.vi" Type="VI" URL="../Load-Save Color Palette List.vi"/>
 	<Item Name="Palette to U32 Color Ramp.vi" Type="VI" URL="../Palette to U32 Color Ramp.vi"/>
 	<Item Name="Select Color Brewer Palette v2.vi" Type="VI" URL="../Select Color Brewer Palette v2.vi"/>

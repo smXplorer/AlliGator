@@ -38,6 +38,7 @@
 	<Item Name="AlliGator Initialize Images.vi" Type="VI" URL="../AlliGator Initialize Images.vi"/>
 	<Item Name="AlliGator Initialize Internal Variables.vi" Type="VI" URL="../AlliGator Initialize Internal Variables.vi"/>
 	<Item Name="AlliGator Intensity Actions.vi" Type="VI" URL="../AlliGator Intensity Actions.vi"/>
+	<Item Name="AlliGator Lifetime &amp; Other Parameters Actions.vi" Type="VI" URL="../AlliGator Lifetime &amp; Other Parameters Actions.vi"/>
 	<Item Name="AlliGator No Action Event.vi" Type="VI" URL="../AlliGator No Action Event.vi"/>
 	<Item Name="AlliGator Package Notebook Messages.vi" Type="VI" URL="../AlliGator Package Notebook Messages.vi"/>
 	<Item Name="AlliGator Parameter Map Actions.vi" Type="VI" URL="../AlliGator Parameter Map Actions.vi"/>

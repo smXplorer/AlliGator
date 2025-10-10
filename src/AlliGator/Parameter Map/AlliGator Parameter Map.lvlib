@@ -16,6 +16,7 @@
 	</Item>
 	<Item Name="AlliGator Build Parameter Map.vi" Type="VI" URL="../AlliGator Build Parameter Map.vi"/>
 	<Item Name="AlliGator Color Parameter Map in Original Image.vi" Type="VI" URL="../AlliGator Color Parameter Map in Original Image.vi"/>
+	<Item Name="AlliGator Decay Fit Parameter Map Size Dialog.vi" Type="VI" URL="../../Decay Fit Parameter Map/AlliGator Decay Fit Parameter Map Size Dialog.vi"/>
 	<Item Name="AlliGator Delete Parameter Map Set.vi" Type="VI" URL="../AlliGator Delete Parameter Map Set.vi"/>
 	<Item Name="AlliGator Export ROI(s) Parameter Set as ASCII File.vi" Type="VI" URL="../AlliGator Export ROI(s) Parameter Set as ASCII File.vi"/>
 	<Item Name="AlliGator Get Parameter Map Data Wrapper.vi" Type="VI" URL="../AlliGator Get Parameter Map Data Wrapper.vi"/>

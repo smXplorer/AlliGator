@@ -18,7 +18,6 @@
 		<Item Name="AlliGator Parameter Maps Data.ctl" Type="VI" URL="../AlliGator Parameter Maps Data.ctl"/>
 	</Item>
 	<Item Name="AlliGator Build Decay Fit Parameter Map.vi" Type="VI" URL="../AlliGator Build Decay Fit Parameter Map.vi"/>
-	<Item Name="AlliGator Color Decay Fit Parameter Map in Original Image.vi" Type="VI" URL="../AlliGator Color Decay Fit Parameter Map in Original Image.vi"/>
 	<Item Name="AlliGator Convert Decay Range Options.vi" Type="VI" URL="../AlliGator Convert Decay Range Options.vi"/>
 	<Item Name="AlliGator Decay Fit Parameter Map Actions.vi" Type="VI" URL="../../../Action Engine/AlliGator Decay Fit Parameter Map Actions.vi"/>
 	<Item Name="AlliGator Decay Fit Parameter Map Context Menu Handler.vi" Type="VI" URL="../AlliGator Decay Fit Parameter Map Context Menu Handler.vi"/>
@@ -28,18 +27,19 @@
 	<Item Name="AlliGator Get Decay Fit Parameter Map Data Wrapper.vi" Type="VI" URL="../AlliGator Get Decay Fit Parameter Map Data Wrapper.vi"/>
 	<Item Name="AlliGator Get Decay Fit Parameter Map Data.vi" Type="VI" URL="../AlliGator Get Decay Fit Parameter Map Data.vi"/>
 	<Item Name="AlliGator Get Local Fit Results String.vi" Type="VI" URL="../AlliGator Get Local Fit Results String.vi"/>
-	<Item Name="AlliGator Get NLSF Parameter Index.vi" Type="VI" URL="../AlliGator Get NLSF Parameter Index.vi"/>
 	<Item Name="AlliGator Get Single ROI Message Start.vi" Type="VI" URL="../AlliGator Get Single ROI Message Start.vi"/>
 	<Item Name="AlliGator Load IRFs &amp; Fit Data (Map) HDF5 File v0.3.vi" Type="VI" URL="../AlliGator Load IRFs &amp; Fit Data (Map) HDF5 File v0.3.vi"/>
 	<Item Name="AlliGator Load IRFs &amp; Fit Data Map v1.vi" Type="VI" URL="../AlliGator Load IRFs &amp; Fit Data Map v1.vi"/>
 	<Item Name="AlliGator New NLSF Parameter Map Resolution.vi" Type="VI" URL="../AlliGator New NLSF Parameter Map Resolution.vi"/>
 	<Item Name="AlliGator NLSF Parameters to Coordinates.vi" Type="VI" URL="../AlliGator NLSF Parameters to Coordinates.vi"/>
+	<Item Name="AlliGator Overlay Decay Fit Parameter Map in Original Image.vi" Type="VI" URL="../AlliGator Overlay Decay Fit Parameter Map in Original Image.vi"/>
 	<Item Name="AlliGator Plot Decay Fit Parameter vs Intensity Scatterplot v2.vi" Type="VI" URL="../AlliGator Plot Decay Fit Parameter vs Intensity Scatterplot v2.vi"/>
 	<Item Name="AlliGator Plot Fit Parameter 2 vs Parameter 1.vi" Type="VI" URL="../AlliGator Plot Fit Parameter 2 vs Parameter 1.vi"/>
 	<Item Name="AlliGator Plot Fit Parameter Scatterplot.vi" Type="VI" URL="../AlliGator Plot Fit Parameter Scatterplot.vi"/>
 	<Item Name="AlliGator Post-Fit Parameter Map Update.vi" Type="VI" URL="../AlliGator Post-Fit Parameter Map Update.vi"/>
 	<Item Name="AlliGator Read IRFs &amp; Fit Data HDF5 File Metadata.vi" Type="VI" URL="../AlliGator Read IRFs &amp; Fit Data HDF5 File Metadata.vi"/>
 	<Item Name="AlliGator Save All Decay Fit Parameter Maps to ASCII.vi" Type="VI" URL="../AlliGator Save All Decay Fit Parameter Maps to ASCII.vi"/>
+	<Item Name="AlliGator Save Decay Fit Parameter Map Image.vi" Type="VI" URL="../AlliGator Save Decay Fit Parameter Map Image.vi"/>
 	<Item Name="AlliGator Save Decay Fit Parameter Map to ASCII.vi" Type="VI" URL="../AlliGator Save Decay Fit Parameter Map to ASCII.vi"/>
 	<Item Name="AlliGator Save IRFs &amp; Fit Data (Map) HDF5 File v0.4.vi" Type="VI" URL="../AlliGator Save IRFs &amp; Fit Data (Map) HDF5 File v0.4.vi"/>
 	<Item Name="AlliGator Save-Load IRFs &amp; Fit Data (Map).vi" Type="VI" URL="../AlliGator Save-Load IRFs &amp; Fit Data (Map).vi"/>

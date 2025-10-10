@@ -31,7 +31,7 @@
 	<Item Name="AlliGator Define Phasor References.vi" Type="VI" URL="../AlliGator Define Phasor References.vi"/>
 	<Item Name="AlliGator Fit Phasor Ratio Plot v2.vi" Type="VI" URL="../AlliGator Fit Phasor Ratio Plot v2.vi"/>
 	<Item Name="AlliGator Get Phasor Ratio Interpolated Color v2.vi" Type="VI" URL="../AlliGator Get Phasor Ratio Interpolated Color v2.vi"/>
-	<Item Name="AlliGator Get Phasor Ratio Map Color v2.vi" Type="VI" URL="../AlliGator Get Phasor Ratio Map Color v2.vi"/>
+	<Item Name="AlliGator Get Phasor Ratio Map Color v3.vi" Type="VI" URL="../AlliGator Get Phasor Ratio Map Color v3.vi"/>
 	<Item Name="AlliGator Get Phasor Ratio Reference v2.vi" Type="VI" URL="../AlliGator Get Phasor Ratio Reference v2.vi"/>
 	<Item Name="AlliGator Get Updated Phasor Ratio References.vi" Type="VI" URL="../AlliGator Get Updated Phasor Ratio References.vi"/>
 	<Item Name="AlliGator Get-Set Phasor Ratio References.vi" Type="VI" URL="../AlliGator Get-Set Phasor Ratio References.vi"/>

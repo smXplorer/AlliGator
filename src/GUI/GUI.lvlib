@@ -19,6 +19,7 @@
 	<Item Name="Dialog Window with Option.vi" Type="VI" URL="../Dialog Window with Option.vi"/>
 	<Item Name="Embedded Progress Bar Q.vi" Type="VI" URL="../Embedded Progress Bar Q.vi"/>
 	<Item Name="Expand-Shrink Front Panel Right.vi" Type="VI" URL="../Expand-Shrink Front Panel Right.vi"/>
+	<Item Name="Extend Display Range to Match Slider(s).vi" Type="VI" URL="../Extend Display Range to Match Slider(s).vi"/>
 	<Item Name="Get 2-variable Formula String Dialog.vi" Type="VI" URL="../Get 2-variable Formula String Dialog.vi"/>
 	<Item Name="Get Formula String Dialog.vi" Type="VI" URL="../Get Formula String Dialog.vi"/>
 	<Item Name="Hide Animated Busy Icon with Message and Abort Button.vi" Type="VI" URL="../../Buttons/Hide Animated Busy Icon with Message and Abort Button.vi"/>

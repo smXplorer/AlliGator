@@ -7,6 +7,7 @@
 	<Item Name="Add N-complement Cursors.vi" Type="VI" URL="../Add N-complement Cursors.vi"/>
 	<Item Name="All Plots Mouse Coordinates Constant.vi" Type="VI" URL="../All Plots Mouse Coordinates Constant.vi"/>
 	<Item Name="Check wether Click is in Plot Area.vi" Type="VI" URL="../Get Plot at Mouse Click (XY Graph)/Check wether Click is in Plot Area.vi"/>
+	<Item Name="Compute Plot Legend Size.vi" Type="VI" URL="../Compute Plot Legend Size.vi"/>
 	<Item Name="Edit Color List Dialog.vi" Type="VI" URL="../Edit Color List Dialog.vi"/>
 	<Item Name="Get Added Plot Index.vi" Type="VI" URL="../Get Added Plot Index.vi"/>
 	<Item Name="Get Plot at Mouse Click [AAC].vi" Type="VI" URL="../Get Plot at Mouse Click (XY Graph)/Get Plot at Mouse Click [AAC].vi"/>

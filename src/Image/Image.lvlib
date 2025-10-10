@@ -70,6 +70,7 @@
 		<Item Name="Fill Image Data.vim" Type="VI" URL="../Pixel Manipulation/Fill Image Data.vim"/>
 	</Item>
 	<Item Name="Overlay" Type="Folder">
+		<Item Name="Overlay Circle (Center, Radius).vi" Type="VI" URL="../Overlay Circle (Center, Radius).vi"/>
 		<Item Name="Overlay Rectangle &amp; Median.vi" Type="VI" URL="../Overlay Rectangle &amp; Median.vi"/>
 	</Item>
 	<Item Name="ROIs" Type="Folder">
@@ -118,6 +119,7 @@
 	<Item Name="Calculate Zoom From Mouse Wheel.vi" Type="VI" URL="../Calculate Zoom From Mouse Wheel.vi"/>
 	<Item Name="Calculate Zoom from ROI &amp; Image Size.vi" Type="VI" URL="../Calculate Zoom from ROI &amp; Image Size.vi"/>
 	<Item Name="Color Picker Dialog.vi" Type="VI" URL="../Color Picker Dialog.vi"/>
+	<Item Name="Color Pixel with Color Scale.vi" Type="VI" URL="../Color Pixel with Color Scale.vi"/>
 	<Item Name="Compute Linear Coefficients.vi" Type="VI" URL="../Compute Linear Coefficients.vi"/>
 	<Item Name="Compute Max Image.vi" Type="VI" URL="../Compute Max Image.vi"/>
 	<Item Name="Compute Min Image.vi" Type="VI" URL="../Compute Min Image.vi"/>

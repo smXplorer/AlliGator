@@ -13,6 +13,7 @@
 		<Item Name="AlliGator FLI Data File Information.ctl" Type="VI" URL="../AlliGator FLI Data File Information.ctl"/>
 		<Item Name="AlliGator FLI Image Stack Action.ctl" Type="VI" URL="../AlliGator FLI Image Stack Action.ctl"/>
 		<Item Name="AlliGator HDF5 File Dataset Parameters Steps.ctl" Type="VI" URL="../AlliGator HDF5 File Dataset Parameters Steps.ctl"/>
+		<Item Name="AlliGator HDF5 File Type.ctl" Type="VI" URL="../AlliGator HDF5 File Type.ctl"/>
 		<Item Name="AlliGator HDF5 FLI File Loading Information v0.2.ctl" Type="VI" URL="../AlliGator HDF5 FLI File Loading Information v0.2.ctl"/>
 		<Item Name="AlliGator HDF5 FLI File Loading Information v0.6.ctl" Type="VI" URL="../AlliGator HDF5 FLI File Loading Information v0.6.ctl"/>
 	</Item>
@@ -22,8 +23,7 @@
 	<Item Name="AlliGator Check HDF5 Image Size v2.vi" Type="VI" URL="../AlliGator Check HDF5 Image Size v2.vi"/>
 	<Item Name="AlliGator Check HDF5 Image Size.vi" Type="VI" URL="../AlliGator Check HDF5 Image Size.vi"/>
 	<Item Name="AlliGator Convert FLI Dataset Info to String.vi" Type="VI" URL="../AlliGator Convert FLI Dataset Info to String.vi"/>
-	<Item Name="AlliGator Get DAQ &amp; Metadata.vi" Type="VI" URL="../AlliGator Get DAQ &amp; Metadata.vi"/>
-	<Item Name="AlliGator Get Pile-up Correction Parameter.vi" Type="VI" URL="../AlliGator Get Pile-up Correction Parameter.vi"/>
+	<Item Name="AlliGator Get HDF5 File Type.vi" Type="VI" URL="../AlliGator Get HDF5 File Type.vi"/>
 	<Item Name="AlliGator Is SS2 Dataset HDF5 File.vi" Type="VI" URL="../AlliGator Is SS2 Dataset HDF5 File.vi"/>
 	<Item Name="AlliGator Load HDF5 FLI Dataset Information.vi" Type="VI" URL="../AlliGator Load HDF5 FLI Dataset Information.vi"/>
 	<Item Name="AlliGator Load HDF5 FLI Dataset Prelude.vi" Type="VI" URL="../AlliGator Load HDF5 FLI Dataset Prelude.vi"/>
@@ -34,7 +34,10 @@
 	<Item Name="AlliGator Read HDF5 FLI Dataset Series Timestamps.vi" Type="VI" URL="../AlliGator Read HDF5 FLI Dataset Series Timestamps.vi"/>
 	<Item Name="AlliGator Read HDF5 FLI Image Information.vi" Type="VI" URL="../AlliGator Read HDF5 FLI Image Information.vi"/>
 	<Item Name="AlliGator Read HDF5 SSX Detector Information.vi" Type="VI" URL="../AlliGator Read HDF5 SSX Detector Information.vi"/>
-	<Item Name="AlliGator Select FLI Dataset Channel Name.vi" Type="VI" URL="../AlliGator Select FLI Dataset Channel Name.vi"/>
+	<Item Name="AlliGator Save FLI Dataset Gates to HDF5 (VDM).vi" Type="VI" URL="../AlliGator Save FLI Dataset Gates to HDF5 (VDM).vi"/>
+	<Item Name="AlliGator Save FLI Dataset Metadata to HDF5.vi" Type="VI" URL="../AlliGator Save FLI Dataset Metadata to HDF5.vi"/>
+	<Item Name="AlliGator Save FLI Dataset to HDF5 File v3 (VDM).vi" Type="VI" URL="../AlliGator Save FLI Dataset to HDF5 File v3 (VDM).vi"/>
+	<Item Name="AlliGator Save SGL Gate Image to HDF5.vi" Type="VI" URL="../AlliGator Save SGL Gate Image to HDF5.vi"/>
 	<Item Name="AlliGator Single SS3 Gate Slip Correction.vi" Type="VI" URL="../AlliGator Single SS3 Gate Slip Correction.vi"/>
 	<Item Name="AlliGator SS3 Gates Slip Correction.vi" Type="VI" URL="../AlliGator SS3 Gates Slip Correction.vi"/>
 </Library>

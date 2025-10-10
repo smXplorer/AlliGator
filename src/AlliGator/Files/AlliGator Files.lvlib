@@ -66,6 +66,7 @@
 		<Item Name="AlliGator Get Gated Dataset Loading Options.vi" Type="VI" URL="../AlliGator Get Gated Dataset Loading Options.vi"/>
 		<Item Name="AlliGator Get Image &amp; FLI Dataset Paths.vi" Type="VI" URL="../AlliGator Get Image &amp; FLI Dataset Paths.vi"/>
 		<Item Name="AlliGator Get Image Binning String.vi" Type="VI" URL="../AlliGator Get Image Binning String.vi"/>
+		<Item Name="AlliGator Get Pile-up Correction Parameter.vi" Type="VI" URL="../AlliGator Get Pile-up Correction Parameter.vi"/>
 		<Item Name="AlliGator Image Pre-Processing Step String Array to Enum List.vi" Type="VI" URL="../AlliGator Image Pre-Processing Step String Array to Enum List.vi"/>
 		<Item Name="AlliGator Image Pre-processing.vi" Type="VI" URL="../AlliGator Image Pre-processing.vi"/>
 		<Item Name="AlliGator Last Gate Loading.vi" Type="VI" URL="../AlliGator Last Gate Loading.vi"/>
@@ -75,7 +76,6 @@
 		<Item Name="AlliGator Post Loading Action List.vi" Type="VI" URL="../AlliGator Post Loading Action List.vi"/>
 		<Item Name="AlliGator Script_Open Single FLI Dataset.vi" Type="VI" URL="../AlliGator Script_Open Single FLI Dataset.vi"/>
 		<Item Name="AlliGator Select Folder.vi" Type="VI" URL="../AlliGator Select Folder.vi"/>
-		<Item Name="AlliGator skippable_Delete Existing ROIs Dialog Window.vi" Type="VI" URL="../AlliGator skippable_Delete Existing ROIs Dialog Window.vi"/>
 		<Item Name="AlliGator Supported FLI Dataset Files.vi" Type="VI" URL="../AlliGator Supported FLI Dataset Files.vi"/>
 		<Item Name="AlliGator Update Data File.vi" Type="VI" URL="../AlliGator Update Data File.vi"/>
 		<Item Name="AlliGator Update Fit Options Laser Period.vi" Type="VI" URL="../AlliGator Update Fit Options Laser Period.vi"/>
@@ -159,17 +159,14 @@
 		<Item Name="AlliGator Export Dataset to TIFF or HDF5.vi" Type="VI" URL="../AlliGator Export Dataset to TIFF or HDF5.vi"/>
 		<Item Name="AlliGator Gate Image File Name Format Dialog.vi" Type="VI" URL="../AlliGator Gate Image File Name Format Dialog.vi"/>
 		<Item Name="AlliGator Get Complementary Channel Names.vi" Type="VI" URL="../AlliGator Get Complementary Channel Names.vi"/>
+		<Item Name="AlliGator Get DAQ &amp; Metadata.vi" Type="VI" URL="../AlliGator Get DAQ &amp; Metadata.vi"/>
 		<Item Name="AlliGator Get Single Saved Dataset Path.vi" Type="VI" URL="../AlliGator Get Single Saved Dataset Path.vi"/>
 		<Item Name="AlliGator Ordered Available Channel Names.vi" Type="VI" URL="../AlliGator Ordered Available Channel Names.vi"/>
-		<Item Name="AlliGator Save FLI Dataset Gates to HDF5 (VDM).vi" Type="VI" URL="../AlliGator Save FLI Dataset Gates to HDF5 (VDM).vi"/>
-		<Item Name="AlliGator Save FLI Dataset Metadata to HDF5.vi" Type="VI" URL="../AlliGator Save FLI Dataset Metadata to HDF5.vi"/>
 		<Item Name="AlliGator Save FLI Dataset Metadata.vi" Type="VI" URL="../AlliGator Save FLI Dataset Metadata.vi"/>
-		<Item Name="AlliGator Save FLI Dataset to HDF5 File v3 (VDM).vi" Type="VI" URL="../AlliGator Save FLI Dataset to HDF5 File v3 (VDM).vi"/>
 		<Item Name="AlliGator Save FLI Dataset.vi" Type="VI" URL="../AlliGator Save FLI Dataset.vi"/>
 		<Item Name="AlliGator Save Gate Image Series.vi" Type="VI" URL="../AlliGator Save Gate Image Series.vi"/>
 		<Item Name="AlliGator Save Hot Pixel Mask Image.vi" Type="VI" URL="../AlliGator Save Hot Pixel Mask Image.vi"/>
 		<Item Name="AlliGator Save Image Data to File.vi" Type="VI" URL="../AlliGator Save Image Data to File.vi"/>
-		<Item Name="AlliGator Save SGL Gate Image to HDF5.vi" Type="VI" URL="../AlliGator Save SGL Gate Image to HDF5.vi"/>
 	</Item>
 	<Item Name="SwissSPAD1" Type="Folder">
 		<Item Name="AlliGator Load Single Gate Image from SS1 Dataset.vi" Type="VI" URL="../AlliGator Load Single Gate Image from SS1 Dataset.vi"/>
@@ -180,6 +177,14 @@
 		<Item Name="AlliGator Load Single Gate Image from SS2 Dataset.vi" Type="VI" URL="../AlliGator Load Single Gate Image from SS2 Dataset.vi"/>
 		<Item Name="AlliGator Load SS2 FLI Dataset Information.vi" Type="VI" URL="../AlliGator Load SS2 FLI Dataset Information.vi"/>
 		<Item Name="AlliGator Load SS2 FLI Dataset Prelude.vi" Type="VI" URL="../AlliGator Load SS2 FLI Dataset Prelude.vi"/>
+	</Item>
+	<Item Name="SwissSPAD2 mat files" Type="Folder">
+		<Item Name="AlliGator Check mat File Type.vi" Type="VI" URL="../AlliGator Check mat File Type.vi"/>
+		<Item Name="AlliGator Load mat FLI Dataset Information.vi" Type="VI" URL="../AlliGator Load mat FLI Dataset Information.vi"/>
+		<Item Name="AlliGator Load mat SS2 FLI Dataset Prelude.vi" Type="VI" URL="../AlliGator Load mat SS2 FLI Dataset Prelude.vi"/>
+		<Item Name="AlliGator Load Single Gate Image from SS2 mat File.vi" Type="VI" URL="../AlliGator Load Single Gate Image from SS2 mat File.vi"/>
+		<Item Name="AlliGator SS2 mat #Datasets Dialog with Skip Option.vi" Type="VI" URL="../AlliGator SS2 mat #Datasets Dialog with Skip Option.vi"/>
+		<Item Name="AlliGator SS2 mat FLI File Loading Information.ctl" Type="VI" URL="../AlliGator SS2 mat FLI File Loading Information.ctl"/>
 	</Item>
 	<Item Name="AlliGator Load Single Gate Image.vit" Type="VI" URL="../AlliGator Load Single Gate Image.vit"/>
 </Library>

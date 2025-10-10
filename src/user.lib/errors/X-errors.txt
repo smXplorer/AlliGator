@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<nidocument>
+<nicomment>
+Error codes used in X's software
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nifamily familyname="X Errors" displayname="X Errors">
+</nifamily>
+</nicomment>
+<nierror code="5000">
+Not a Valid XY Graph
+</nierror>
+<nierror code="5001">
+Not a Valid Plot
+</nierror>
+<nierror code="5002">
+Not a Valid File
+</nierror>
+<nierror code="5003">
+User Aborted Action
+</nierror>
+<nierror code="5004">
+Program Aborted Action
+</nierror>
+<nierror code="5005">
+Duplicate Channel Types
+</nierror>
+<nierror code="5006">
+Not a Supported File Type
+</nierror>
+<nierror code="5007">
+Empty Path
+</nierror>
+<nierror code="5008">
+No Valid File Found
+</nierror>
+<nierror code="5021">
+Empty Plot
+</nierror>
+<nierror code="5022">
+No Valid Plot Found
+</nierror>
+<nierror code="5023">
+Control Not Found
+</nierror>
+<nierror code="5024">
+Calibration with tau != 0 not supported in the general case (L_X)
+</nierror>
+<nierror code="5025">
+Phasor Ratio References defined with different frequencies
+</nierror>
+<nierror code="5026">
+Invalid Phasor Ratio Reference
+</nierror>
+<nierror code="5027">
+No Valid ROI Found
+</nierror>
+<nierror code="5028">
+Not a Valid Parameter
+</nierror>
+<nierror code="5029">
+No ROI stored
+</nierror>
+<nierror code="5030">
+No Reference Decay/IRF defined
+</nierror>
+<nierror code="5031">
+Missing Image Folder Metadata File
+</nierror>
+<nierror code="5032">
+Incompatible Phasor Frequencies
+</nierror>
+<nierror code="5033">
+Incorrect Number of NLSF Parameters
+</nierror>
+<nierror code="5034">
+Different Input Array Sizes
+</nierror>
+<nierror code="5035">
+Hot Pixel Location Mismatch
+</nierror>
+<nierror code="5036">
+Number of histogram bins exceeds the specified limit
+</nierror>
+<nierror code="5037">
+Gate data is larger than pile-up max value or negative
+</nierror>
+<nierror code="5038">
+Not a Valid Fit Output
+</nierror>
+<nierror code="5039">
+Invalid NLSF Constraint
+</nierror>
+<nierror code="5040">
+No Decay Fit Parameter Map loaded
+</nierror>
+<nierror code="5041">
+Invalid Decay Fit Parameter Map parameter selected
+</nierror>
+<nierror code="5042">
+No Dataset loaded
+</nierror>
+<nierror code="5043">
+Not a single-exponential decay phasor
+</nierror>
+<nierror code="5500">
+Python Plugin Missing API Version
+</nierror>
+<nierror code="5509">
+Python Plugin Invalid Input Parameter Type
+</nierror>
+<nierror code="5510">
+Python Plugin Invalid Output Value Type
+</nierror>
+<nierror code="5511">
+Python Plugin Invalid Output Destination
+</nierror>
+<nierror code="5512">
+Python Plugin Missing Output Section
+</nierror>
+<nierror code="5513">
+Python Plugin Missing Input Section
+</nierror>
+<nierror code="5514">
+Python Plugin Missing Function Name
+</nierror>
+<nierror code="5515">
+Python Plugin Missing Doc String
+</nierror>
+<nierror code="5516">
+Python Plugin Missing Target
+</nierror>
+<nierror code="5517">
+Python Plugin Function Not Found
+</nierror>
+<nierror code="5518">
+Python Plugin Internal Error
+</nierror>
+<nierror code="5519">
+Python Plugin Internal Warning
+</nierror>
+<nierror code="5520">
+Python Plugin Invalid JSON Output Parameter Type
+</nierror>
+</nidocument>

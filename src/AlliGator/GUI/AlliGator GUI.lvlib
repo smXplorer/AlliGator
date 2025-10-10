@@ -13,20 +13,19 @@
 	<Item Name="Ctrls" Type="Folder">
 		<Item Name="AlliGator Ctrl Refnums.ctl" Type="VI" URL="../AlliGator Ctrl Refnums.ctl"/>
 		<Item Name="AlliGator Dataset Ctrl Refnums.ctl" Type="VI" URL="../AlliGator Dataset Ctrl Refnums.ctl"/>
-		<Item Name="AlliGator Event Registration v2.ctl" Type="VI" URL="../AlliGator Event Registration v2.ctl"/>
+		<Item Name="AlliGator Image Display Type.ctl" Type="VI" URL="../AlliGator Image Display Type.ctl"/>
 		<Item Name="AlliGator Image Histogram Control Refnums.ctl" Type="VI" URL="../AlliGator Image Histogram Control Refnums.ctl"/>
 		<Item Name="AlliGator Initialization Steps.ctl" Type="VI" URL="../AlliGator Initialization Steps.ctl"/>
 		<Item Name="AlliGator Main Window Tabs.ctl" Type="VI" URL="../AlliGator Main Window Tabs.ctl"/>
 		<Item Name="AlliGator Open Wndow Event Data.ctl" Type="VI" URL="../AlliGator Open Wndow Event Data.ctl"/>
-		<Item Name="AlliGator Registered Events Ctrl Refnums.ctl" Type="VI" URL="../AlliGator Registered Events Ctrl Refnums.ctl"/>
-		<Item Name="AlliGator State Indicator.ctl" Type="VI" URL="../AlliGator State Indicator.ctl"/>
-		<Item Name="AlliGator Windows List.ctl" Type="VI" URL="../AlliGator Windows List.ctl"/>
 		<Item Name="AlliGator Other Ctrl Refnums.ctl" Type="VI" URL="../AlliGator Other Ctrl Refnums.ctl"/>
 		<Item Name="AlliGator Phasor Graph Ctrl Refnums.ctl" Type="VI" URL="../AlliGator Phasor Graph Ctrl Refnums.ctl"/>
 		<Item Name="AlliGator Phasor Plot Ctrl Refnums.ctl" Type="VI" URL="../AlliGator Phasor Plot Ctrl Refnums.ctl"/>
+		<Item Name="AlliGator Registered Events Ctrl Refnums.ctl" Type="VI" URL="../AlliGator Registered Events Ctrl Refnums.ctl"/>
 		<Item Name="AlliGator Set State Indicator Data.ctl" Type="VI" URL="../AlliGator Set State Indicator Data.ctl"/>
 		<Item Name="AlliGator Skippable Windows Status.ctl" Type="VI" URL="../AlliGator Skippable Windows Status.ctl"/>
-		<Item Name="AlliGator Image Display Type.ctl" Type="VI" URL="../AlliGator Image Display Type.ctl"/>
+		<Item Name="AlliGator State Indicator.ctl" Type="VI" URL="../AlliGator State Indicator.ctl"/>
+		<Item Name="AlliGator Windows List.ctl" Type="VI" URL="../AlliGator Windows List.ctl"/>
 	</Item>
 	<Item Name="AlliGator Launcher.vi" Type="VI" URL="../AlliGator Launcher.vi"/>
 	<Item Name="About Alligator.vi" Type="VI" URL="../About Alligator.vi"/>
@@ -49,21 +48,22 @@
 	<Item Name="AlliGator Local Decay Plots Status.vi" Type="VI" URL="../AlliGator Local Decay Plots Status.vi"/>
 	<Item Name="AlliGator Menu Items.vi" Type="VI" URL="../AlliGator Menu Items.vi"/>
 	<Item Name="AlliGator Parse Version History reStructuredText File Content.vi" Type="VI" URL="../AlliGator Parse Version History reStructuredText File Content.vi"/>
+	<Item Name="AlliGator Paths.vi" Type="VI" URL="../AlliGator Paths.vi"/>
 	<Item Name="AlliGator Quit Dialog.vi" Type="VI" URL="../AlliGator Quit Dialog.vi"/>
 	<Item Name="AlliGator Register Control Events.vi" Type="VI" URL="../AlliGator Register Control Events.vi"/>
 	<Item Name="AlliGator Set File Update LED.vi" Type="VI" URL="../AlliGator Set File Update LED.vi"/>
 	<Item Name="AlliGator Set Phasor Plot Update LED.vi" Type="VI" URL="../AlliGator Set Phasor Plot Update LED.vi"/>
 	<Item Name="AlliGator Set Playback &amp; Loop Menu Checkmarks.vi" Type="VI" URL="../AlliGator Set Playback &amp; Loop Menu Checkmarks.vi"/>
 	<Item Name="AlliGator Set Used Calibration Menu Checkmarks.vi" Type="VI" URL="../AlliGator Set Used Calibration Menu Checkmarks.vi"/>
+	<Item Name="AlliGator skippable_Delete Existing ROIs Dialog Window.vi" Type="VI" URL="../../Files/AlliGator skippable_Delete Existing ROIs Dialog Window.vi"/>
 	<Item Name="AlliGator Source Image Display Mouse Down-Up Event Monitoring.vi" Type="VI" URL="../AlliGator Source Image Display Mouse Down-Up Event Monitoring.vi"/>
 	<Item Name="AlliGator Source Image Display Mouse Move Flag.vi" Type="VI" URL="../AlliGator Source Image Display Mouse Move Flag.vi"/>
+	<Item Name="AlliGator Special Graph Menu Actions.vi" Type="VI" URL="../AlliGator Special Graph Menu Actions.vi"/>
+	<Item Name="AlliGator Update Dataset Series Slide.vi" Type="VI" URL="../AlliGator Update Dataset Series Slide.vi"/>
 	<Item Name="AlliGator Update Gate Image Slide.vi" Type="VI" URL="../AlliGator Update Gate Image Slide.vi"/>
 	<Item Name="AlliGator Update Menu.vi" Type="VI" URL="../AlliGator Update Menu.vi"/>
-	<Item Name="AlliGator Update Dataset Series Slide.vi" Type="VI" URL="../AlliGator Update Dataset Series Slide.vi"/>
 	<Item Name="AlliGator Windows List.vi" Type="VI" URL="../AlliGator Windows List.vi"/>
-	<Item Name="AlliGator.vi" Type="VI" URL="../AlliGator.vi"/>
-	<Item Name="AlliGator Special Graph Menu Actions.vi" Type="VI" URL="../AlliGator Special Graph Menu Actions.vi"/>
-	<Item Name="Alligator.ico" Type="Document" URL="../Alligator.ico"/>
 	<Item Name="Alligator.rtm" Type="Document" URL="../Alligator.rtm"/>
-	<Item Name="AlliGator Paths.vi" Type="VI" URL="../AlliGator Paths.vi"/>
+	<Item Name="AlliGator.vi" Type="VI" URL="../AlliGator.vi"/>
+	<Item Name="AlliGator_Graphs Metadata Types.vi" Type="VI" URL="../../AlliGator_Graphs Metadata Types.vi"/>
 </Library>

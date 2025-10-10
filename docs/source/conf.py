@@ -12,12 +12,12 @@
 #
 import os
 import sys
-import pylons_sphinx_themes
+#import pylons_sphinx_themes
 
 # sys.path.insert(0, os.path.abspath('.'))
 
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
-#html_theme = 'sphinx_rtd_theme'
+html_theme = 'sphinx_rtd_theme'
 
 if not on_rtd:
     import sphinx_rtd_theme
@@ -26,19 +26,19 @@ if not on_rtd:
     #html_theme = 'nature'
     #html_theme = 'insipid'
     #html_theme = 'sphinxdoc'
-    html_theme = 'pylons'
-    html_theme_path = pylons_sphinx_themes.get_html_themes_path()
-    #html_theme = 'sphinx_rtd_theme'
+    #html_theme = 'pylons'
+    #html_theme_path = pylons_sphinx_themes.get_html_themes_path()
+    html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-html_theme_options = {
-    'github_url': 'https://github.com/Pylons/docs-style-guide',
-    'canonical_url':
-        'https://docs.pylonsproject.org/projects/docs-style-guide/en/latest',
-}
+#html_theme_options = {
+#    'github_url': 'https://github.com/Pylons/docs-style-guide',
+#    'canonical_url':
+#        'https://docs.pylonsproject.org/projects/docs-style-guide/en/latest',
+#}
 
 # -- Project information -----------------------------------------------------
 

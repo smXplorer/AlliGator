@@ -35,7 +35,6 @@
 	<Item Name="LabVIEW Plot Interpolation.ctl" Type="VI" URL="../LabVIEW Plot Interpolation.ctl"/>
 	<Item Name="Last Plot Mouse Coordinates Constant.vi" Type="VI" URL="../Last Plot Mouse Coordinates Constant.vi"/>
 	<Item Name="Load-Save Color Lists.vi" Type="VI" URL="../Plot Style Selector/Load-Save Color Lists.vi"/>
-	<Item Name="Order Plot Axis.vi" Type="VI" URL="../Order Plot Axis.vi"/>
 	<Item Name="Plot Destination.ctl" Type="VI" URL="../Plot Destination.ctl"/>
 	<Item Name="Plot Magic Color (Unchanged).ctl" Type="VI" URL="../Plot Magic Color (Unchanged).ctl"/>
 	<Item Name="Plot Point Style.ctl" Type="VI" URL="../Plot Point Style.ctl"/>

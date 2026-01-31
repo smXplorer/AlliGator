@@ -11,12 +11,15 @@
 </Property>
 	<Item Name="Ctrls" Type="Folder">
 		<Item Name="Array Element Reordering.ctl" Type="VI" URL="../Array Element Reordering.ctl"/>
+		<Item Name="Array Modification.ctl" Type="VI" URL="../Array Modification.ctl"/>
 		<Item Name="Array Statistics.ctl" Type="VI" URL="../Array Statistics.ctl"/>
 		<Item Name="Kernel Type.ctl" Type="VI" URL="../Kernel Type.ctl"/>
 		<Item Name="Smoothing Algorithm.ctl" Type="VI" URL="../Smoothing Algorithm.ctl"/>
 	</Item>
+	<Item Name="Tests" Type="Folder">
+		<Item Name="Test Constant Elements Slices.vi" Type="VI" URL="../Tests/Test Constant Elements Slices.vi"/>
+	</Item>
 	<Item Name="(Signed) Index 1D Array.vim" Type="VI" URL="../(Signed) Index 1D Array.vim"/>
-	<Item Name="1D Histogram (G) v6.vim" Type="VI" URL="../1D Histogram (G) v6.vim"/>
 	<Item Name="[[Boolean]] to [[1,NaN]] (SGL).vi" Type="VI" URL="../[[Boolean]] to [[1,NaN]] (SGL).vi"/>
 	<Item Name="Add Element to Array if New.vim" Type="VI" URL="../Add Element to Array if New.vim"/>
 	<Item Name="Added Array Element Indices.vim" Type="VI" URL="../Added Array Element Indices.vim"/>
@@ -26,24 +29,22 @@
 	<Item Name="Array Exponential Dampening.vi" Type="VI" URL="../Array Exponential Dampening.vi"/>
 	<Item Name="Array Fraction.vi" Type="VI" URL="../Array Fraction.vi"/>
 	<Item Name="Array Level Estimation.vi" Type="VI" URL="../Array Level Estimation.vi"/>
-	<Item Name="Array Median.vim" Type="VI" URL="../Array Median.vim"/>
-	<Item Name="Array Percentile.vim" Type="VI" URL="../Array Percentile.vim"/>
-	<Item Name="Array Percentiles.vim" Type="VI" URL="../Array Percentiles.vim"/>
 	<Item Name="Array Pile-up Correction [[SGL]].vi" Type="VI" URL="../Array Pile-up Correction [[SGL]].vi"/>
 	<Item Name="Array Pile-up Correction [SGL].vi" Type="VI" URL="../Array Pile-up Correction [SGL].vi"/>
-	<Item Name="Array Reduced Mean &amp; SDV.vi" Type="VI" URL="../Array Reduced Mean &amp; SDV.vi"/>
-	<Item Name="Array Weighted Average.vi" Type="VI" URL="../Array Weighted Average.vi"/>
 	<Item Name="Arrays to Cluster Array.vim" Type="VI" URL="../Arrays to Cluster Array.vim"/>
 	<Item Name="Bin 2D Array.vim" Type="VI" URL="../Bin 2D Array.vim"/>
 	<Item Name="Binary (Approximate) Search 1D Array (DBL).vi" Type="VI" URL="../Binary (Approximate) Search 1D Array (DBL).vi"/>
+	<Item Name="Bootstrap Array with Linked Array.vi" Type="VI" URL="../Bootstrap Array with Linked Array.vi"/>
 	<Item Name="Check Index Ramp.vi" Type="VI" URL="../Check Index Ramp.vi"/>
 	<Item Name="Compute n x n Kernel (SGL).vi" Type="VI" URL="../Compute n x n Kernel (SGL).vi"/>
+	<Item Name="Constant Elements Slices.vi" Type="VI" URL="../Constant Elements Slices.vi"/>
 	<Item Name="Cumulative Array.vim" Type="VI" URL="../Cumulative Array.vim"/>
 	<Item Name="Cumulative Function Computation.vi" Type="VI" URL="../Cumulative Function Computation.vi"/>
 	<Item Name="Decimate Array.vim" Type="VI" URL="../Decimate Array.vim"/>
 	<Item Name="Define Ramp Array Dialog.vi" Type="VI" URL="../Define Ramp Array Dialog.vi"/>
 	<Item Name="Delete Element from Array (by ref) [U32].vi" Type="VI" URL="../Delete Element from Array (by ref) [U32].vi"/>
 	<Item Name="Delete Elements from 1D Array.vim" Type="VI" URL="../Delete Elements from 1D Array.vim"/>
+	<Item Name="Detect Which Array Element Was Modified in Event.vim" Type="VI" URL="../Detect Which Array Element Was Modified in Event.vim"/>
 	<Item Name="Determine Clicked Array Element Index - Calculate Gapped and Un-Gapped Coordinates.vi" Type="VI" URL="../Determine Clicked Array Element Index/SubVIs/Determine Clicked Array Element Index - Calculate Gapped and Un-Gapped Coordinates.vi"/>
 	<Item Name="Determine Clicked Array Element Index - Calculate Scrollbar Edges.vi" Type="VI" URL="../Determine Clicked Array Element Index/SubVIs/Determine Clicked Array Element Index - Calculate Scrollbar Edges.vi"/>
 	<Item Name="Determine Clicked Array Element Index - Cancel Error Code 1320.vi" Type="VI" URL="../Determine Clicked Array Element Index/SubVIs/Determine Clicked Array Element Index - Cancel Error Code 1320.vi"/>
@@ -107,6 +108,7 @@
 	<Item Name="Smoothen Noise below Threshold.vi" Type="VI" URL="../Smoothen Noise below Threshold.vi"/>
 	<Item Name="Split Array in Two.vim" Type="VI" URL="../Split Array in Two.vim"/>
 	<Item Name="Squish 1D Array to [0,1].vi" Type="VI" URL="../Squish 1D Array to [0,1].vi"/>
+	<Item Name="Straighten Array.vi" Type="VI" URL="../Straighten Array.vi"/>
 	<Item Name="Threshold 1D Array (Linear Search) [DBL].vi" Type="VI" URL="../Threshold 1D Array (Linear Search) [DBL].vi"/>
 	<Item Name="Threshold 1D Array (xN).vi" Type="VI" URL="../Threshold 1D Array (xN).vi"/>
 	<Item Name="Threshold 1D T-Periodic Array (xN).vi" Type="VI" URL="../Threshold 1D T-Periodic Array (xN).vi"/>

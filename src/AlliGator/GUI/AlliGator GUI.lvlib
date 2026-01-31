@@ -26,6 +26,8 @@
 		<Item Name="AlliGator Skippable Windows Status.ctl" Type="VI" URL="../AlliGator Skippable Windows Status.ctl"/>
 		<Item Name="AlliGator State Indicator.ctl" Type="VI" URL="../AlliGator State Indicator.ctl"/>
 		<Item Name="AlliGator Windows List.ctl" Type="VI" URL="../AlliGator Windows List.ctl"/>
+		<Item Name="AlliGator Image Mouse Up Event Data.ctl" Type="VI" URL="../AlliGator Image Mouse Up Event Data.ctl"/>
+		<Item Name="AlliGator Events Registration.ctl" Type="VI" URL="../AlliGator Events Registration.ctl"/>
 	</Item>
 	<Item Name="AlliGator Launcher.vi" Type="VI" URL="../AlliGator Launcher.vi"/>
 	<Item Name="About Alligator.vi" Type="VI" URL="../About Alligator.vi"/>

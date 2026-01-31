@@ -58,6 +58,7 @@
 		<Item Name="Image Display to Clipboard Options.ctl" Type="VI" URL="../Image Display to Clipboard Options.ctl"/>
 		<Item Name="Image Display User Event Data.ctl" Type="VI" URL="../Image Display User Event Data.ctl"/>
 		<Item Name="Image Display Zoom to Fit.vi" Type="VI" URL="../Image Display Zoom to Fit.vi"/>
+		<Item Name="Show Image Value in TipStrip.vi" Type="VI" URL="../Show Image Value in TipStrip.vi"/>
 	</Item>
 	<Item Name="Image Management" Type="Folder">
 		<Item Name="Compare Image Sizes.vi" Type="VI" URL="../Compare Image Sizes.vi"/>

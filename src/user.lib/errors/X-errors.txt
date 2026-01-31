@@ -43,6 +43,7 @@ Error codes used in X's software
 
 
 
+
 <nifamily familyname="X Errors" displayname="X Errors">
 </nifamily>
 </nicomment>
@@ -180,5 +181,8 @@ Python Plugin Internal Warning
 </nierror>
 <nierror code="5520">
 Python Plugin Invalid JSON Output Parameter Type
+</nierror>
+<nierror code="5009">
+Invalid Ramp Parameters
 </nierror>
 </nidocument>

@@ -23,7 +23,6 @@
 		<Item Name="Build Weighted Array Histogram.vi" Type="VI" URL="../Build Weighted Array Histogram.vi"/>
 		<Item Name="Build XY Plot Histogram (Core).vi" Type="VI" URL="../Build XY Plot Histogram (Core).vi"/>
 		<Item Name="Create XY Plot Histogram.vi" Type="VI" URL="../Create XY Plot Histogram.vi"/>
-		<Item Name="Filter Histogram Values.vi" Type="VI" URL="../Filter Histogram Values.vi"/>
 		<Item Name="Get Histogram Style.vi" Type="VI" URL="../Get Histogram Style.vi"/>
 		<Item Name="Histogram Bin Option.ctl" Type="VI" URL="../Histogram Bin Option.ctl"/>
 		<Item Name="Histogram Bin Position.ctl" Type="VI" URL="../Histogram Bin Position.ctl"/>

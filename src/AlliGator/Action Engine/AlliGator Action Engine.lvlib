@@ -24,6 +24,8 @@
 	<Item Name="AlliGator Check for Abort.vi" Type="VI" URL="../AlliGator Check for Abort.vi"/>
 	<Item Name="AlliGator Current Event.vi" Type="VI" URL="../AlliGator Current Event.vi"/>
 	<Item Name="AlliGator Decay Analysis Actions.vi" Type="VI" URL="../AlliGator Decay Analysis Actions.vi"/>
+	<Item Name="AlliGator Display Current Decay Fit Parameter Map (X,Y, I).vi" Type="VI" URL="../../Decay Fit Parameter Map/AlliGator Display Current Decay Fit Parameter Map (X,Y, I).vi"/>
+	<Item Name="AlliGator Display Current Parameter Map (X,Y, I).vi" Type="VI" URL="../../Parameter Map/AlliGator Display Current Parameter Map (X,Y, I).vi"/>
 	<Item Name="AlliGator Event to Event Category.vi" Type="VI" URL="../AlliGator Event to Event Category.vi"/>
 	<Item Name="AlliGator Event to String.vi" Type="VI" URL="../AlliGator Event to String.vi"/>
 	<Item Name="AlliGator Files Actions.vi" Type="VI" URL="../AlliGator Files Actions.vi"/>
@@ -32,6 +34,7 @@
 	<Item Name="AlliGator FLI Dataset Series Actions.vi" Type="VI" URL="../AlliGator FLI Dataset Series Actions.vi"/>
 	<Item Name="AlliGator Generic Graph Actions.vi" Type="VI" URL="../AlliGator Generic Graph Actions.vi"/>
 	<Item Name="AlliGator Get First Event.vi" Type="VI" URL="../AlliGator Get First Event.vi"/>
+	<Item Name="AlliGator Get Phasor Plot(s) &amp; Intensit(ies).vi" Type="VI" URL="../../Phasor Graph/AlliGator Get Phasor Plot(s) &amp; Intensit(ies).vi"/>
 	<Item Name="AlliGator GUI Actions.vi" Type="VI" URL="../AlliGator GUI Actions.vi"/>
 	<Item Name="AlliGator Hide Path Drop Boxes.vi" Type="VI" URL="../AlliGator Hide Path Drop Boxes.vi"/>
 	<Item Name="AlliGator Image Actions.vi" Type="VI" URL="../AlliGator Image Actions.vi"/>

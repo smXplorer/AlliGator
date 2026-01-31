@@ -12,11 +12,11 @@
 	<Item Name="Copyright Decoration" Type="Folder">
 		<Item Name="Add Copyright Decoration to Library.vi" Type="VI" URL="../Add Copyright Decoration to Library.vi"/>
 		<Item Name="Add Text Decoration.vi" Type="VI" URL="../Add Text Decoration.vi"/>
-		<Item Name="AlliGator BD License Notice.vi" Type="VI" URL="../../AlliGator/AlliGator BD License Notice.vi"/>
 		<Item Name="Look for (Label) Decoration.vi" Type="VI" URL="../Look for (Label) Decoration.vi"/>
 		<Item Name="Replace BD Decoration Text by Content.vi" Type="VI" URL="../Replace BD Decoration Text by Content.vi"/>
 		<Item Name="Replace BD Decoration Text by Label.vi" Type="VI" URL="../Replace BD Decoration Text by Label.vi"/>
 		<Item Name="UCLA License String.vi" Type="VI" URL="../UCLA License String.vi"/>
+		<Item Name="X@UCLA BD License Notice.vi" Type="VI" URL="../X@UCLA BD License Notice.vi"/>
 	</Item>
 	<Item Name="Ctrls" Type="Folder">
 		<Item Name="ControlTypes__A2E.ctl" Type="VI" URL="../ArrayToEnum/ControlTypes__A2E.ctl"/>

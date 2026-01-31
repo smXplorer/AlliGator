@@ -4,8 +4,8 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">553680896</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
-	<Item Name="[X] = X0 [DBL].vi" Type="VI" URL="../[X] = X0 [DBL].vi"/>
-	<Item Name="[X] ~ 0 [DBL].vi" Type="VI" URL="../[X] ~ 0 [DBL].vi"/>
+	<Item Name="All X[i] = X[0] [DBL].vi" Type="VI" URL="../All X[i] = X[0] [DBL].vi"/>
+	<Item Name="All X[i] ~ 0 [DBL].vi" Type="VI" URL="../All X[i] ~ 0 [DBL].vi"/>
 	<Item Name="Is a Valid Number (DBL).vi" Type="VI" URL="../Is a Valid Number (DBL).vi"/>
 	<Item Name="Is a Valid Number (SGL).vi" Type="VI" URL="../Is a Valid Number (SGL).vi"/>
 	<Item Name="Is Infinite or NaN.vim" Type="VI" URL="../Is Infinite or NaN.vim"/>

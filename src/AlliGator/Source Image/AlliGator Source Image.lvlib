@@ -21,6 +21,7 @@
 	<Item Name="AlliGator Clear Source Image Overlay.vi" Type="VI" URL="../AlliGator Clear Source Image Overlay.vi"/>
 	<Item Name="AlliGator Define ROI Selection Criteria.vi" Type="VI" URL="../AlliGator Define ROI Selection Criteria.vi"/>
 	<Item Name="AlliGator Display Accumulated Dataset.vi" Type="VI" URL="../AlliGator Display Accumulated Dataset.vi"/>
+	<Item Name="AlliGator Display True Pixel Value.vi" Type="VI" URL="../AlliGator Display True Pixel Value.vi"/>
 	<Item Name="AlliGator Export Average Lifetime Map as ASCII.vi" Type="VI" URL="../AlliGator Export Average Lifetime Map as ASCII.vi"/>
 	<Item Name="AlliGator Export Phasor Ratio Map as ASCII.vi" Type="VI" URL="../AlliGator Export Phasor Ratio Map as ASCII.vi"/>
 	<Item Name="AlliGator Export User-Defined Quantity Map as ASCII.vi" Type="VI" URL="../AlliGator Export User-Defined Quantity Map as ASCII.vi"/>

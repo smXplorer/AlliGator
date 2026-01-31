@@ -49,7 +49,6 @@
 			<Item Name="XY Graph Compute Complex Plot Formula Event.vi" Type="VI" URL="../XY Graph Compute Complex Plot Formula Event.vi"/>
 			<Item Name="XY Graph Compute Multiplot Math Event.vi" Type="VI" URL="../XY Graph Compute Multiplot Math Event.vi"/>
 			<Item Name="XY Graph Compute Simple Plot Formula Event.vi" Type="VI" URL="../XY Graph Compute Simple Plot Formula Event.vi"/>
-			<Item Name="XY Graph Compute Sliced Mean, SDV &amp; CV Plots.vi" Type="VI" URL="../XY Graph Compute Sliced Mean, SDV &amp; CV Plots.vi"/>
 			<Item Name="XY Graph Copy Plot(s) from Clipboard.vi" Type="VI" URL="../XY Graph Copy Plot(s) from Clipboard.vi"/>
 			<Item Name="XY Graph Cumulative Function of Multiple Plots.vi" Type="VI" URL="../XY Graph Cumulative Function of Multiple Plots.vi"/>
 			<Item Name="XY Graph Cumulative Function.vi" Type="VI" URL="../XY Graph Cumulative Function.vi"/>
@@ -87,7 +86,6 @@
 			<Item Name="XY Graph Shift Plot.vi" Type="VI" URL="../XY Graph Shift Plot.vi"/>
 			<Item Name="XY Graph Show-Hide Grid Event.vi" Type="VI" URL="../XY Graph Show-Hide Grid Event.vi"/>
 			<Item Name="XY Graph Show-Hide Tool Panels Event.vi" Type="VI" URL="../XY Graph Show-Hide Tool Panels Event.vi"/>
-			<Item Name="XY Graph Sliced Mean, SDV &amp; CV Plots Event.vi" Type="VI" URL="../XY Graph Sliced Mean, SDV &amp; CV Plots Event.vi"/>
 			<Item Name="XY Graph Smoothen Multiple Plots (Cubic Spline).vi" Type="VI" URL="../XY Graph Smoothen Multiple Plots (Cubic Spline).vi"/>
 			<Item Name="XY Graph Smoothen Plot (Cubic Spline).vi" Type="VI" URL="../XY Graph Smoothen Plot (Cubic Spline).vi"/>
 			<Item Name="XY Graph Smoothen Plot Data.vi" Type="VI" URL="../XY Graph Smoothen Plot Data.vi"/>
@@ -168,9 +166,9 @@
 			<Item Name="XY Graph Event.ctl" Type="VI" URL="../XY Graph Event.ctl"/>
 			<Item Name="XY Graph Mouse Click Event Data.ctl" Type="VI" URL="../XY Graph Mouse Click Event Data.ctl"/>
 			<Item Name="XY Graph New Plot Name Data.ctl" Type="VI" URL="../XY Graph New Plot Name Data.ctl"/>
+			<Item Name="XY Graph Plot Data.ctl" Type="VI" URL="../XY Graph Plot Data.ctl"/>
 			<Item Name="XY Graph Plot Properties.ctl" Type="VI" URL="../XY Graph Plot Properties.ctl"/>
 			<Item Name="XY Graph Sliced Mean &amp; SDV Step Definition.ctl" Type="VI" URL="../XY Graph Sliced Mean &amp; SDV Step Definition.ctl"/>
-			<Item Name="XY Plot Data.ctl" Type="VI" URL="../XY Plot Data.ctl"/>
 		</Item>
 		<Item Name="XY Graph Add Data to Last Plots.vi" Type="VI" URL="../XY Graph Add Data to Last Plots.vi"/>
 		<Item Name="XY Graph Add Multiplots with Names.vi" Type="VI" URL="../XY Graph Add Multiplots with Names.vi"/>
@@ -203,7 +201,6 @@
 		<Item Name="XY Graph Get Plot Metadata Type.vit" Type="VI" URL="../XY Graph Get Plot Metadata Type.vit"/>
 		<Item Name="XY Graph Get Plot Name Format String.vi" Type="VI" URL="../XY Graph Get Plot Name Format String.vi"/>
 		<Item Name="XY Graph Get Plot Names &amp; Number.vi" Type="VI" URL="../XY Graph Get Plot Names &amp; Number.vi"/>
-		<Item Name="XY Graph Get Plot Number.vi" Type="VI" URL="../XY Graph Get Plot Number.vi"/>
 		<Item Name="XY Graph Get Plot Range.vi" Type="VI" URL="../XY Graph Get Plot Range.vi"/>
 		<Item Name="XY Graph Get Plot(s) from Headerless String Array.vi" Type="VI" URL="../XY Graph Get Plot(s) from Headerless String Array.vi"/>
 		<Item Name="XY Graph Get Plot.vi" Type="VI" URL="../XY Graph Get Plot.vi"/>
@@ -229,7 +226,6 @@
 		<Item Name="XY Graph Show-Hide Grid.vi" Type="VI" URL="../XY Graph Show-Hide Grid.vi"/>
 		<Item Name="XY Graph Show-Hide Index Display Mask.vi" Type="VI" URL="../XY Graph Show-Hide Index Display Mask.vi"/>
 		<Item Name="XY Graph Show-Hide Tool Panels.vi" Type="VI" URL="../XY Graph Show-Hide Tool Panels.vi"/>
-		<Item Name="XY Graph Sliced Mean, SDV &amp; CV Enter Data Dialog.vi" Type="VI" URL="../XY Graph Sliced Mean, SDV &amp; CV Enter Data Dialog.vi"/>
 		<Item Name="XY Graph Straighten Decay [Core] v3.vi" Type="VI" URL="../XY Graph Straighten Decay [Core] v3.vi"/>
 		<Item Name="XY Graph Try Plot Name.vi" Type="VI" URL="../XY Graph Try Plot Name.vi"/>
 		<Item Name="XY Graph Update Plot &amp; Style.vi" Type="VI" URL="../XY Graph Update Plot &amp; Style.vi"/>
@@ -238,6 +234,8 @@
 	<Item Name="Tests" Type="Folder">
 		<Item Name="Test XY Graph with TipStrip.vi" Type="VI" URL="../../Test XY Graph with TipStrip.vi"/>
 	</Item>
+	<Item Name="XY Graph Add Multiplots with Names v2.vi" Type="VI" URL="../XY Graph Add Multiplots with Names v2.vi"/>
+	<Item Name="XY Graph Add Single Plot with Name v2.vi" Type="VI" URL="../XY Graph Add Single Plot with Name v2.vi"/>
 	<Item Name="XY Graph Average Selected Plots Event.vi" Type="VI" URL="../XY Graph Average Selected Plots Event.vi"/>
 	<Item Name="XY Graph Change Cursor Color.vi" Type="VI" URL="../XY Graph Change Cursor Color.vi"/>
 	<Item Name="XY Graph Check X Arrays Compatibility.vi" Type="VI" URL="../XY Graph Check X Arrays Compatibility.vi"/>
@@ -247,7 +245,9 @@
 	<Item Name="XY Graph Compute Interpolated Plot.vi" Type="VI" URL="../XY Graph Compute Interpolated Plot.vi"/>
 	<Item Name="XY Graph Compute Plots Circular Convolution Product v3.vi" Type="VI" URL="../XY Graph Compute Plots Circular Convolution Product v3.vi"/>
 	<Item Name="XY Graph Compute Thresholded Plot.vi" Type="VI" URL="../XY Graph Compute Thresholded Plot.vi"/>
+	<Item Name="XY Graph Default Color.vi" Type="VI" URL="../XY Graph Default Color.vi"/>
 	<Item Name="XY Graph Ellipse Plot.vi" Type="VI" URL="../XY Graph Ellipse Plot.vi"/>
+	<Item Name="XY Graph Filter Plot Values.vi" Type="VI" URL="../XY Graph Filter Plot Values.vi"/>
 	<Item Name="XY Graph Get Convolution Period.vi" Type="VI" URL="../XY Graph Get Convolution Period.vi"/>
 	<Item Name="XY Graph Get Convolution Step.vi" Type="VI" URL="../XY Graph Get Convolution Step.vi"/>
 	<Item Name="XY Graph Get Deleted Cursor Index.vi" Type="VI" URL="../XY Graph Get Deleted Cursor Index.vi"/>
@@ -262,6 +262,8 @@
 	<Item Name="XY Graph Modern.vi" Type="VI" URL="../XY Graph Modern.vi"/>
 	<Item Name="XY Graph Multiple TipStrip Event Registration.vi" Type="VI" URL="../../Tipstrip/XY Graph Multiple TipStrip Event Registration.vi"/>
 	<Item Name="XY Graph Normally Positivise Plot.vi" Type="VI" URL="../XY Graph Normally Positivise Plot.vi"/>
+	<Item Name="XY Graph Order Plot Axis.vi" Type="VI" URL="../XY Graph Order Plot Axis.vi"/>
+	<Item Name="XY Graph Pad Plot Style Array.vi" Type="VI" URL="../XY Graph Pad Plot Style Array.vi"/>
 	<Item Name="XY Graph Plot Convolution Dialog.vi" Type="VI" URL="../XY Graph Plot Convolution Dialog.vi"/>
 	<Item Name="XY Graph Register Mouse Move Events.vi" Type="VI" URL="../XY Graph Register Mouse Move Events.vi"/>
 	<Item Name="XY Graph Remove Head Outliers.vi" Type="VI" URL="../XY Graph Remove Head Outliers.vi"/>

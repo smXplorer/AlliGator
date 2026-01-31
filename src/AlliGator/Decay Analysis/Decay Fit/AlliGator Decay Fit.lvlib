@@ -38,4 +38,6 @@
 	<Item Name="AlliGator Is Decay Valid.vi" Type="VI" URL="../AlliGator Is Decay Valid.vi"/>
 	<Item Name="AlliGator n-Exp + IRF Fit v4.vi" Type="VI" URL="../AlliGator n-Exp + IRF Fit v4.vi"/>
 	<Item Name="AlliGator Update Decay Fit Results (Stats).vi" Type="VI" URL="../AlliGator Update Decay Fit Results (Stats).vi"/>
+	<Item Name="Draw CI Band from CI Plots.vi" Type="VI" URL="../../../../Fits/Draw CI Band from CI Plots.vi"/>
+	<Item Name="Fit Plots Cluster to Array.vi" Type="VI" URL="../../../../Fits/Fit Plots Cluster to Array.vi"/>
 </Library>

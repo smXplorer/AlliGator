@@ -27,6 +27,15 @@
 		<Item Name="AlliGator Raw Phasor Plot Data v2.ctl" Type="VI" URL="../AlliGator Raw Phasor Plot Data v2.ctl"/>
 		<Item Name="AlliGator Raw Phasor Plot Data v3.ctl" Type="VI" URL="../AlliGator Raw Phasor Plot Data v3.ctl"/>
 		<Item Name="AlliGator Raw Phasor Plot Data v4.ctl" Type="VI" URL="../AlliGator Raw Phasor Plot Data v4.ctl"/>
+		<Item Name="AlliGator Raw Phasor Plot Data v5.ctl" Type="VI" URL="../AlliGator Raw Phasor Plot Data v5.ctl"/>
+		<Item Name="AlliGator Phasor Plot Statistics.ctl" Type="VI" URL="../AlliGator Phasor Plot Statistics.ctl"/>
+	</Item>
+	<Item Name="Menus" Type="Folder">
+		<Item Name="Calibration Lifetime.rtm" Type="Document" URL="../../Calibration Lifetime.rtm"/>
+		<Item Name="Current Phasor (g,s).rtm" Type="Document" URL="../Current Phasor (g,s).rtm"/>
+		<Item Name="Current Phasor (m,phi).rtm" Type="Document" URL="../../Current Phasor (m,phi).rtm"/>
+		<Item Name="Current Phasor.rtm" Type="Document" URL="../../Current Phasor.rtm"/>
+		<Item Name="Phasor Frequency Control.rtm" Type="Document" URL="../../Phasor Frequency Control.rtm"/>
 	</Item>
 	<Item Name="AlliGator Add Phasor Value to Plot v2.vi" Type="VI" URL="../AlliGator Add Phasor Value to Plot v2.vi"/>
 	<Item Name="AlliGator All ROIs Phasor Analysis Script.vi" Type="VI" URL="../AlliGator All ROIs Phasor Analysis Script.vi"/>
@@ -38,14 +47,16 @@
 	<Item Name="AlliGator Clear Phasor Graph Associated Indicators.vi" Type="VI" URL="../AlliGator Clear Phasor Graph Associated Indicators.vi"/>
 	<Item Name="AlliGator Clear Phasor Ratio Reference.vi" Type="VI" URL="../AlliGator Clear Phasor Ratio Reference.vi"/>
 	<Item Name="AlliGator Clear Plot(s) Calibration(s).vi" Type="VI" URL="../AlliGator Clear Plot(s) Calibration(s).vi"/>
-	<Item Name="AlliGator Compute Average Plot Phasor.vi" Type="VI" URL="../AlliGator Compute Average Plot Phasor.vi"/>
 	<Item Name="AlliGator Compute Multiple Average Phasors (Selected Plots).vi" Type="VI" URL="../AlliGator Compute Multiple Average Phasors (Selected Plots).vi"/>
 	<Item Name="AlliGator Compute P2 vs P1 Plots.vi" Type="VI" URL="../AlliGator Compute P2 vs P1 Plots.vi"/>
 	<Item Name="AlliGator Compute Parameters SDV.vi" Type="VI" URL="../AlliGator Compute Parameters SDV.vi"/>
 	<Item Name="AlliGator Compute Phasor Plot Parameter Array.vi" Type="VI" URL="../AlliGator Compute Phasor Plot Parameter Array.vi"/>
 	<Item Name="AlliGator Compute SEPL Plot.vi" Type="VI" URL="../AlliGator Compute SEPL Plot.vi"/>
+	<Item Name="AlliGator Compute Weighted Phasor Plot Statistics (Core).vi" Type="VI" URL="../AlliGator Compute Weighted Phasor Plot Statistics (Core).vi"/>
+	<Item Name="AlliGator Compute Weighted Phasor Plot Statistics.vi" Type="VI" URL="../AlliGator Compute Weighted Phasor Plot Statistics.vi"/>
 	<Item Name="AlliGator Convert Raw Phasor Plot Data v2 to v3.vi" Type="VI" URL="../AlliGator Convert Raw Phasor Plot Data v2 to v3.vi"/>
 	<Item Name="AlliGator Convert Raw Phasor Plot Data v3 to v4.vi" Type="VI" URL="../AlliGator Convert Raw Phasor Plot Data v3 to v4.vi"/>
+	<Item Name="AlliGator Convert Raw Phasor Plot Data v4 to v5.vi" Type="VI" URL="../AlliGator Convert Raw Phasor Plot Data v4 to v5.vi"/>
 	<Item Name="AlliGator Create New Empty Phasor Plot.vi" Type="VI" URL="../AlliGator Create New Empty Phasor Plot.vi"/>
 	<Item Name="AlliGator Create Phasor Plot Additional Data String.vi" Type="VI" URL="../AlliGator Create Phasor Plot Additional Data String.vi"/>
 	<Item Name="AlliGator Current Phasor (g, s) Custom Menu Actions.vi" Type="VI" URL="../AlliGator Current Phasor (g, s) Custom Menu Actions.vi"/>
@@ -81,9 +92,4 @@
 	<Item Name="AlliGator Update Phasor Ratio Reference.vi" Type="VI" URL="../AlliGator Update Phasor Ratio Reference.vi"/>
 	<Item Name="AlliGator Update Phasor References v2.vi" Type="VI" URL="../AlliGator Update Phasor References v2.vi"/>
 	<Item Name="AlliGator Use Phasor Graph Selected Phasor Plots Principal Axis - UC Intersections as References.vi" Type="VI" URL="../AlliGator Use Phasor Graph Selected Phasor Plots Principal Axis - UC Intersections as References.vi"/>
-	<Item Name="Calibration Lifetime.rtm" Type="Document" URL="../../Calibration Lifetime.rtm"/>
-	<Item Name="Current Phasor (g,s).rtm" Type="Document" URL="../Current Phasor (g,s).rtm"/>
-	<Item Name="Current Phasor (m,phi).rtm" Type="Document" URL="../../Current Phasor (m,phi).rtm"/>
-	<Item Name="Current Phasor.rtm" Type="Document" URL="../../Current Phasor.rtm"/>
-	<Item Name="Phasor Frequency Control.rtm" Type="Document" URL="../../Phasor Frequency Control.rtm"/>
 </Library>

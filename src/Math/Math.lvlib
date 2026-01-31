@@ -4,8 +4,25 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">553680896</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="Statistics" Type="Folder">
+		<Item Name="Array Mean, Var &amp; SDV.vim" Type="VI" URL="../Statistics/Array Mean, Var &amp; SDV.vim"/>
+		<Item Name="Array Median.vim" Type="VI" URL="../Statistics/Array Median.vim"/>
+		<Item Name="Array Percentile.vim" Type="VI" URL="../Statistics/Array Percentile.vim"/>
+		<Item Name="Array Percentiles.vim" Type="VI" URL="../Statistics/Array Percentiles.vim"/>
+		<Item Name="Array Reduced Mean &amp; SDV.vi" Type="VI" URL="../Statistics/Array Reduced Mean &amp; SDV.vi"/>
+		<Item Name="F Inverse CDF Array.vi" Type="VI" URL="../F Inverse CDF Array.vi"/>
+		<Item Name="F-test Calculator.vi" Type="VI" URL="../../AlliGator/Camera Noise Influence on Lifetime/F-test Calculator.vi"/>
+		<Item Name="my Poisson Random.vi" Type="VI" URL="../my Poisson Random.vi"/>
+		<Item Name="Normal Coefficient of Variation PDF.vi" Type="VI" URL="../Normal Coefficient of Variation PDF.vi"/>
+		<Item Name="Periodic 1-Exp Distributed Random Variable.vi" Type="VI" URL="../Periodic 1-Exp Distributed Random Variable.vi"/>
+		<Item Name="Periodic Linear Combination of 1-Exp Distributed Random Variable.vi" Type="VI" URL="../Periodic Linear Combination of 1-Exp Distributed Random Variable.vi"/>
+		<Item Name="Test Inverse F CDF.vi" Type="VI" URL="../../AlliGator/Camera Noise Influence on Lifetime/Test Inverse F CDF.vi"/>
+		<Item Name="Test Normal Coefficient of Variation PDF.vi" Type="VI" URL="../Tests/Test Normal Coefficient of Variation PDF.vi"/>
+		<Item Name="Weighted Array Mean &amp; SDV.vi" Type="VI" URL="../Statistics/Weighted Array Mean &amp; SDV.vi"/>
+		<Item Name="Weighted Array Median.vi" Type="VI" URL="../Statistics/Weighted Array Median.vi"/>
+		<Item Name="Weighted Array RMS.vi" Type="VI" URL="../Statistics/Weighted Array RMS.vi"/>
+	</Item>
 	<Item Name="1D Quadrature (VI).vi" Type="VI" URL="../1D Quadrature (VI)/1D Quadrature (VI).vi"/>
-	<Item Name="Array Mean, Var &amp; SDV.vim" Type="VI" URL="../Array Mean, Var &amp; SDV.vim"/>
 	<Item Name="C(i,x,y) T-sum coefficient.vi" Type="VI" URL="../C(i,x,y) T-sum coefficient.vi"/>
 	<Item Name="Chop Integration Bins (VI).vi" Type="VI" URL="../1D Quadrature (VI)/Chop Integration Bins (VI).vi"/>
 	<Item Name="Chop One Bin (VI).vi" Type="VI" URL="../1D Quadrature (VI)/Chop One Bin (VI).vi"/>
@@ -34,9 +51,7 @@
 	<Item Name="Math Eval y=f(x).vi" Type="VI" URL="../Math Eval y=f(x).vi"/>
 	<Item Name="Math Fano Factor Zero Finder Data.ctl" Type="VI" URL="../Math Fano Factor Zero Finder Data.ctl"/>
 	<Item Name="Math Find Fano Factor.vi" Type="VI" URL="../Math Find Fano Factor.vi"/>
-	<Item Name="my Poisson Random.vi" Type="VI" URL="../my Poisson Random.vi"/>
-	<Item Name="Periodic 1-Exp Distributed Random Variable.vi" Type="VI" URL="../Periodic 1-Exp Distributed Random Variable.vi"/>
-	<Item Name="Periodic Linear Combination of 1-Exp Distributed Random Variable.vi" Type="VI" URL="../Periodic Linear Combination of 1-Exp Distributed Random Variable.vi"/>
+	<Item Name="Normal Coefficient of Variation PDF SDV.vi" Type="VI" URL="../Normal Coefficient of Variation PDF SDV.vi"/>
 	<Item Name="Polylogarithm (DBL).vi" Type="VI" URL="../Polylogarithm (DBL).vi"/>
 	<Item Name="Quotient &amp; Remainder.vim" Type="VI" URL="../Quotient &amp; Remainder.vim"/>
 	<Item Name="Random Seed for Parallel Loop.vi" Type="VI" URL="../Random Seed for Parallel Loop.vi"/>
@@ -49,4 +64,5 @@
 	<Item Name="T-Periodic Square Gate.vi" Type="VI" URL="../T-Periodic Square Gate.vi"/>
 	<Item Name="T-Periodic Triangle Gate.vi" Type="VI" URL="../T-Periodic Triangle Gate.vi"/>
 	<Item Name="Wavelet Analysis Options.ctl" Type="VI" URL="../Advanced Signal Processing Toolkit/Wavelet Analysis Options.ctl"/>
+	<Item Name="X +&amp;- Y.vim" Type="VI" URL="../X +&amp;- Y.vim"/>
 </Library>

@@ -34,6 +34,7 @@
 		<Item Name="Fit Control Data.ctl" Type="VI" URL="../Decay Convolution/Fit Control Data.ctl"/>
 		<Item Name="Fit Models.ctl" Type="VI" URL="../Fit Models.ctl"/>
 		<Item Name="Fit Plot Request Information.ctl" Type="VI" URL="../Fit Plot Request Information.ctl"/>
+		<Item Name="Fit Plots.ctl" Type="VI" URL="../Fit Plots.ctl"/>
 		<Item Name="Fit Results (statistics).ctl" Type="VI" URL="../Fit Results (statistics).ctl"/>
 		<Item Name="Fit Settings.ctl" Type="VI" URL="../Fit Settings.ctl"/>
 		<Item Name="Fit Statistics v3.ctl" Type="VI" URL="../Fit Statistics v3.ctl"/>
@@ -99,6 +100,18 @@
 	<Item Name="IRF(X)PSED" Type="Folder">
 		<Item Name="Compute IRF(X)PSED Fitted Plot.vi" Type="VI" URL="../IRF(X)PSED/Compute IRF(X)PSED Fitted Plot.vi"/>
 		<Item Name="Compute IRF(X)PSED Plot.vi" Type="VI" URL="../IRF(X)PSED/Compute IRF(X)PSED Plot.vi"/>
+		<Item Name="Convert Decay Fit Options v1 to v2.vi" Type="VI" URL="../IRF(X)PSED/Convert Decay Fit Options v1 to v2.vi"/>
+		<Item Name="Convert Decay Fit Options v2 to v3.vi" Type="VI" URL="../IRF(X)PSED/Convert Decay Fit Options v2 to v3.vi"/>
+		<Item Name="Convert Fit Parameters (tau to-from sigma).vi" Type="VI" URL="../Convert Fit Parameters (tau to-from sigma).vi"/>
+		<Item Name="Decay Fit Options v3.ctl" Type="VI" URL="../IRF(X)PSED/Decay Fit Options v3.ctl"/>
+		<Item Name="Decay Fit Parameters &amp; Derived Quantities List v3.ctl" Type="VI" URL="../IRF(X)PSED/Decay Fit Parameters &amp; Derived Quantities List v3.ctl"/>
+		<Item Name="Decay Fit Result Constraint.ctl" Type="VI" URL="../IRF(X)PSED/Decay Fit Result Constraint.ctl"/>
+		<Item Name="Double Exponential Guess Parameters.vi" Type="VI" URL="../Double Exponential/Double Exponential Guess Parameters.vi"/>
+		<Item Name="Get Full Decay Fit &amp; Residual Plots (1-Exp Fit) v2.vi" Type="VI" URL="../IRF(X)PSED/Get Full Decay Fit &amp; Residual Plots (1-Exp Fit) v2.vi"/>
+		<Item Name="Get Full Decay Fit &amp; Residual Plots (1-Exp Fit).vi" Type="VI" URL="../IRF(X)PSED/Get Full Decay Fit &amp; Residual Plots (1-Exp Fit).vi"/>
+		<Item Name="Get Full Decay Fit &amp; Residual Plots (2-Exp Fit) v2.vi" Type="VI" URL="../IRF(X)PSED/Get Full Decay Fit &amp; Residual Plots (2-Exp Fit) v2.vi"/>
+		<Item Name="Get Full Decay Fit &amp; Residual Plots (2-Exp Fit).vi" Type="VI" URL="../IRF(X)PSED/Get Full Decay Fit &amp; Residual Plots (2-Exp Fit).vi"/>
+		<Item Name="Get Full Decay Fit &amp; Residual Plots (n-Exp Fit) v3.vi" Type="VI" URL="../IRF(X)PSED/Get Full Decay Fit &amp; Residual Plots (n-Exp Fit) v3.vi"/>
 		<Item Name="IRF(X)PSED Extraction Options.ctl" Type="VI" URL="../IRF(X)PSED/IRF(X)PSED Extraction Options.ctl"/>
 		<Item Name="IRF(X)PSED Fit Parameters.ctl" Type="VI" URL="../IRF(X)PSED/IRF(X)PSED Fit Parameters.ctl"/>
 		<Item Name="IRF(X)PSED Fit Results.ctl" Type="VI" URL="../IRF(X)PSED/IRF(X)PSED Fit Results.ctl"/>
@@ -133,15 +146,17 @@
 	<Item Name="1-Exp (X) Gaussian Fit.vi" Type="VI" URL="../Decay Convolution/1-Exp (X) Gaussian Fit.vi"/>
 	<Item Name="1D Fit Effective Number of Parameters.vi" Type="VI" URL="../1D Fit Effective Number of Parameters.vi"/>
 	<Item Name="1D Fit Insert Fixed Parameters.vi" Type="VI" URL="../1D Fit Insert Fixed Parameters.vi"/>
+	<Item Name="1D Fit Max Relative Residual.vi" Type="VI" URL="../1D Fit Max Relative Residual.vi"/>
 	<Item Name="1D Fit Projected Function, Gradient, Hessian &amp; Chi2.vi" Type="VI" URL="../1D Fit Projected Function, Gradient, Hessian &amp; Chi2.vi"/>
 	<Item Name="1D Fit Rescale Fit Outputs.vi" Type="VI" URL="../1D Fit Rescale Fit Outputs.vi"/>
 	<Item Name="1D Fit Rescale Fit Results (Stats).vi" Type="VI" URL="../1D Fit Rescale Fit Results (Stats).vi"/>
-	<Item Name="1D Fit Unscale Fit Outputs v2.vi" Type="VI" URL="../1D Fit Unscale Fit Outputs v2.vi"/>
+	<Item Name="1D Fit Unscale Fit Outputs v3.vi" Type="VI" URL="../1D Fit Unscale Fit Outputs v3.vi"/>
 	<Item Name="1D Fit Unscaled Weights.vi" Type="VI" URL="../1D Fit Unscaled Weights.vi"/>
 	<Item Name="1D Scale n-Exp Parameters.vi" Type="VI" URL="../1D Scale n-Exp Parameters.vi"/>
 	<Item Name="1D Weighted-Unweighted Chi2.vi" Type="VI" URL="../1D Weighted-Unweighted Chi2.vi"/>
 	<Item Name="3 Gaussians Fit Guess Parameters.vi" Type="VI" URL="../Three Gaussians/3 Gaussians Fit Guess Parameters.vi"/>
 	<Item Name="Abort Fit Global.vi" Type="VI" URL="../Abort Fit Global.vi"/>
+	<Item Name="AlliGator Compute Residuals ACF.vi" Type="VI" URL="../../AlliGator/Local Decay Window/AlliGator Compute Residuals ACF.vi"/>
 	<Item Name="Build Convolution Support v2.vi" Type="VI" URL="../Decay Convolution/Build Convolution Support v2.vi"/>
 	<Item Name="Complement with Fixed Parameters.vi" Type="VI" URL="../Decay Convolution/Complement with Fixed Parameters.vi"/>
 	<Item Name="Compute 1-Exp Guess Parameters.vi" Type="VI" URL="../Decay Convolution/Compute 1-Exp Guess Parameters.vi"/>
@@ -155,15 +170,13 @@
 	<Item Name="Compute N-Exp Fit Optimal Offset.vi" Type="VI" URL="../Compute N-Exp Fit Optimal Offset.vi"/>
 	<Item Name="Compute Optimal IRF v3.vi" Type="VI" URL="../IRF(X)PSED/Compute Optimal IRF v3.vi"/>
 	<Item Name="Compute Plots Convolution Product v2.vi" Type="VI" URL="../IRF(X)PSED/Compute Plots Convolution Product v2.vi"/>
+	<Item Name="Compute Upper &amp; Lower CI Plots.vi" Type="VI" URL="../Compute Upper &amp; Lower CI Plots.vi"/>
 	<Item Name="Compute Weight Array v2.vi" Type="VI" URL="../Compute Weight Array v2.vi"/>
 	<Item Name="Constrained Non-Linear Fit (Best of All).vi" Type="VI" URL="../Constrained Non-Linear Fit (Best of All).vi"/>
-	<Item Name="Convert Decay Fit Options v1 to v2.vi" Type="VI" URL="../IRF(X)PSED/Convert Decay Fit Options v1 to v2.vi"/>
-	<Item Name="Convert Fit Parameters (tau to-from sigma).vi" Type="VI" URL="../Convert Fit Parameters (tau to-from sigma).vi"/>
 	<Item Name="Create Array of n-Exp Fit Constraints.vi" Type="VI" URL="../IRF(X)PSED/Create Array of n-Exp Fit Constraints.vi"/>
 	<Item Name="Cubic Spline + Sine Fit Result String.vi" Type="VI" URL="../Cubic Spline + Sine/Cubic Spline + Sine Fit Result String.vi"/>
 	<Item Name="Cubic Spline Matrices.vi" Type="VI" URL="../IRF(X)PSED/Cubic Spline Matrices.vi"/>
 	<Item Name="Decode Fit Parameter Names &amp; Values.vi" Type="VI" URL="../Decode Fit Parameter Names &amp; Values.vi"/>
-	<Item Name="Double Exponential Guess Parameters.vi" Type="VI" URL="../Double Exponential/Double Exponential Guess Parameters.vi"/>
 	<Item Name="Evaluate Partial Derivatives of 1-Exp.vi" Type="VI" URL="../Decay Convolution/Evaluate Partial Derivatives of 1-Exp.vi"/>
 	<Item Name="Evaluate Partial Derivatives of 2-Exp.vi" Type="VI" URL="../Decay Convolution/Evaluate Partial Derivatives of 2-Exp.vi"/>
 	<Item Name="Evaluate Sum of Exponentials.vi" Type="VI" URL="../Decay Convolution/Evaluate Sum of Exponentials.vi"/>
@@ -195,10 +208,6 @@
 	<Item Name="Get Fit Settings.vi" Type="VI" URL="../Get Fit Settings.vi"/>
 	<Item Name="Get Fixed &amp; Fitted Parameters v2.vi" Type="VI" URL="../Decay Convolution/Get Fixed &amp; Fitted Parameters v2.vi"/>
 	<Item Name="Get Fixed &amp; Fitted Parameters.vi" Type="VI" URL="../Decay Convolution/Get Fixed &amp; Fitted Parameters.vi"/>
-	<Item Name="Get Full Decay Fit &amp; Residual Plots (1-Exp Fit) v2.vi" Type="VI" URL="../IRF(X)PSED/Get Full Decay Fit &amp; Residual Plots (1-Exp Fit) v2.vi"/>
-	<Item Name="Get Full Decay Fit &amp; Residual Plots (1-Exp Fit).vi" Type="VI" URL="../IRF(X)PSED/Get Full Decay Fit &amp; Residual Plots (1-Exp Fit).vi"/>
-	<Item Name="Get Full Decay Fit &amp; Residual Plots (2-Exp Fit) v2.vi" Type="VI" URL="../IRF(X)PSED/Get Full Decay Fit &amp; Residual Plots (2-Exp Fit) v2.vi"/>
-	<Item Name="Get Full Decay Fit &amp; Residual Plots (2-Exp Fit).vi" Type="VI" URL="../IRF(X)PSED/Get Full Decay Fit &amp; Residual Plots (2-Exp Fit).vi"/>
 	<Item Name="Get Histogram Fit Axis v2.vi" Type="VI" URL="../Get Histogram Fit Axis v2.vi"/>
 	<Item Name="Get IRF from Decay v2.vi" Type="VI" URL="../IRF(X)PSED/Get IRF from Decay v2.vi"/>
 	<Item Name="Get IRF support &amp; Guess Values.vi" Type="VI" URL="../Decay Convolution/Get IRF support &amp; Guess Values.vi"/>
@@ -258,6 +267,7 @@
 	<Item Name="Normalize Decay.vi" Type="VI" URL="../Normalize Decay.vi"/>
 	<Item Name="Optimal Offset Calculations.vi" Type="VI" URL="../Optimal Offset Calculations.vi"/>
 	<Item Name="Optimal Offset Selection Criterion.ctl" Type="VI" URL="../Optimal Offset Selection Criterion.ctl"/>
+	<Item Name="Plot Upper &amp; Lower CI Plots.vi" Type="VI" URL="../Plot Upper &amp; Lower CI Plots.vi"/>
 	<Item Name="Replace Fixed Parameters.vi" Type="VI" URL="../Decay Convolution/Replace Fixed Parameters.vi"/>
 	<Item Name="Restore Offset to Logistic Square Pulse Parameters.vi" Type="VI" URL="../Square Pulse/Restore Offset to Logistic Square Pulse Parameters.vi"/>
 	<Item Name="Restore Offset to Tilted Logistic Square Pulse Parameters.vi" Type="VI" URL="../Square Pulse/Restore Offset to Tilted Logistic Square Pulse Parameters.vi"/>

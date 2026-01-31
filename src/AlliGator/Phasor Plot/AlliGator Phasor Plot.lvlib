@@ -14,7 +14,6 @@
 		<Item Name="AlliGator Phasor Harmonic Manager Actions.ctl" Type="VI" URL="../AlliGator Phasor Harmonic Manager Actions.ctl"/>
 		<Item Name="AlliGator Phasor Harmonic Manager Event Refnum.ctl" Type="VI" URL="../AlliGator Phasor Harmonic Manager Event Refnum.ctl"/>
 		<Item Name="AlliGator Phasor Multi-Harmonic Data.ctl" Type="VI" URL="../AlliGator Phasor Multi-Harmonic Data.ctl"/>
-		<Item Name="AlliGator Phasor Plot Mouse Up Event Data.ctl" Type="VI" URL="../AlliGator Phasor Plot Mouse Up Event Data.ctl"/>
 		<Item Name="AlliGator Phasor Plot Parameters v2.ctl" Type="VI" URL="../AlliGator Phasor Plot Parameters v2.ctl"/>
 		<Item Name="AlliGator Phasor Plot Size.ctl" Type="VI" URL="../AlliGator Phasor Plot Size.ctl"/>
 		<Item Name="AlliGator Phasor Plot Smoothing Options.ctl" Type="VI" URL="../AlliGator Phasor Plot Smoothing Options.ctl"/>
@@ -28,6 +27,7 @@
 	<Item Name="AlliGator Compute Phasor Plot for I-m-phi Dataset.vi" Type="VI" URL="../AlliGator Compute Phasor Plot for I-m-phi Dataset.vi"/>
 	<Item Name="AlliGator Compute Phasor Plot Phase Lifetime Histogram.vi" Type="VI" URL="../AlliGator Compute Phasor Plot Phase Lifetime Histogram.vi"/>
 	<Item Name="AlliGator Compute Phasor Plot Weber 2-Component Decomposition.vi" Type="VI" URL="../AlliGator Compute Phasor Plot Weber 2-Component Decomposition.vi"/>
+	<Item Name="AlliGator Compute Phasor Plot.vi" Type="VI" URL="../AlliGator Compute Phasor Plot.vi"/>
 	<Item Name="AlliGator Compute Pixel Phasor Array v3.vi" Type="VI" URL="../AlliGator Compute Pixel Phasor Array v3.vi"/>
 	<Item Name="AlliGator Compute Smoothed Complex Phasor Array.vi" Type="VI" URL="../AlliGator Compute Smoothed Complex Phasor Array.vi"/>
 	<Item Name="AlliGator Compute Valid Pixels Array.vi" Type="VI" URL="../AlliGator Compute Valid Pixels Array.vi"/>
@@ -37,6 +37,7 @@
 	<Item Name="AlliGator Convert Phasor to Phasor Plot Point.vi" Type="VI" URL="../AlliGator Convert Phasor to Phasor Plot Point.vi"/>
 	<Item Name="AlliGator Convert Phasor Value to Phasor Image Coordinates (1).vim" Type="VI" URL="../AlliGator Convert Phasor Value to Phasor Image Coordinates (1).vim"/>
 	<Item Name="AlliGator Convert Phasor Value to Phasor Image Coordinates (N).vi" Type="VI" URL="../AlliGator Convert Phasor Value to Phasor Image Coordinates (N).vi"/>
+	<Item Name="AlliGator Display True Phasor Plot Value.vi" Type="VI" URL="../AlliGator Display True Phasor Plot Value.vi"/>
 	<Item Name="AlliGator Draw Phasor Plot SEPL v2.vi" Type="VI" URL="../AlliGator Draw Phasor Plot SEPL v2.vi"/>
 	<Item Name="AlliGator Draw Phasor Plot UC.vi" Type="VI" URL="../AlliGator Draw Phasor Plot UC.vi"/>
 	<Item Name="AlliGator Draw Phasor Ratio Reference Overlay Wrapper.vi" Type="VI" URL="../AlliGator Draw Phasor Ratio Reference Overlay Wrapper.vi"/>

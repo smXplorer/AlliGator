@@ -412,9 +412,9 @@ based on the measured decay and the IRF.
 Fit Options
 +++++++++++
 
-The parameters accessible on this panel are discussed in the 
-:ref:`alligator-fit-parameters` section of the :ref:`alligator-decay-fitting` 
-page of the manual.
+The options accessible on this panel are discussed in the 
+:ref:`alligator-single-decay-fit-options` section of the 
+:ref:`alligator-decay-fitting` page of the manual.
 
 .. image:: images/AlliGator-Settings-Decay-Fit-Options.png
    :align: center

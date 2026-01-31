@@ -43,14 +43,14 @@ if not on_rtd:
 # -- Project information -----------------------------------------------------
 
 project = 'AlliGator'
-copyright = '2015-2025, Regents of the University of California'
+copyright = '2015-2026, Regents of the University of California'
 author = 'X. Michalet'
 
 # The short X.Y version.
-version = '1.04'
+version = '1.05'
 
 # The full version, including alpha/beta/rc tags
-release = '1.04'
+release = '1.05'
 
 # -- General configuration ---------------------------------------------------
 

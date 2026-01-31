@@ -19,4 +19,5 @@ These different panels are described individually in the following pages:
    alligator-phasor-graph-panel
    alligator-phasor-ratio-panel
    alligator-lifetime-and-other-parameters-panel
-   alligator-decay-fit-parameters-map-panel
+   alligator-decay-fit-parameter-map-panel
+   alligator-parameter-map-panel

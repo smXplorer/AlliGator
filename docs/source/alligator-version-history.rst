@@ -13,6 +13,45 @@ AlliGator Version History
 Note: version numbers followed by an asterisk have not been released.
 
 -----------------
+1.05 (2026-01-31)
+-----------------
+
+    - Bug Fixes
+        + Fixed discrepancy between Source Image Overlay and Map(s) palette
+        + Fixed missing Power Law with Offset fit output message
+        + Fixed broken Compute Sliced Mean, SDV and CV Plots
+        + Fixed color scale and parameter range update when changing the displayed parameter map
+        + Fixed Image Information box in Source Image and Phasor Plot
+        + Fixed Sliced Analysis Dialog to uncheck "Use Data Min/Max"
+        + Fixed limited range of "Min Decay Percentile" un Fit Options (was 0-1, now 0-100)
+        + Fixed bug in lifetime uncertainty calculation
+        + Fixed bug in offset uncertainty ouput
+        + Fixed Histogram Dialog display bug
+
+    - New Features
+        + Added Lifetime Variance Analysis to Decay Fit Parameter Map (Delta SDV, Delta CV, F-Test Significance, Chi^2-test Significance)
+        + Added Parameter Map panel (currently limited to Lifetime Variance Analysis Maps)
+        + Added (X, Y, I) display for Decay Fit Parameter Map and Parameter Map
+        + Added True Pixel Value indicator in the Source Image and Phasor Plot panels
+        + Added option to compute sliced analysis with fixed number of elements per slice
+        + Changed Local Decay Window axis names to Intensity, IRF and Other Parameter
+        + Associated Fit and Residual plots in the Local Decay Window to the Intensity axis
+        + Added Rectangle ROI to Decay Fit Parameter Map and Parameter Map displays to allow zooming (with Alt key modifier)
+        + Added 1-Exponential & 2-Exponentials models to the Lifetime & Other Parameters fit models
+        + Added support for Parameter vs Intensity, Parameter 2 vs Parameter 1 and Parameter Scatterplots computed on a different set of ROIS than those used during fitting
+        + Added optional plot of CI curves in decay fits
+        + Added parameter uncertainties to the Local Decay Window output
+        + Added bootstrap estimation of the CV(tau)'s SDV
+        + Added option to compute intensity-weighted phasor plot and phasor graph as well as Lifetime & Other Parameters graph
+        + Added Intensity-weighted Phasor option in the Phasor Graph Settings panel (linked to the identical option in the Phasor Plot panel
+        + Added option to compute Normalized Weighted Histogram (where the sum of all bins is equal to that of the unweighted histogram)
+        + Added saving/loading of Decay Sum array in Decay Fit Parameter Map data
+        + Added reordering of fitted lifetime so that tau_1 < tau_2
+        + Added Residuals Unbiased Normalized ACF display and statistics in Local Decay Window
+        + Added "Apply Decay Fit Result Constraints" menu item to Decay Fit Parameter Map to compute Scatterplots on a subset of the decay fit outputs
+        + Reintroduced non-native tip strip for graph objects
+
+-----------------
 1.04 (2025-10-07)
 -----------------
 

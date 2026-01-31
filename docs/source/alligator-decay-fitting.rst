@@ -69,51 +69,47 @@ respectively.
 Several fit options, discussed below, are available in the 
 :ref:`alligator-settings-fluorescence-decay-fit-options` panel:
 
-- Model
-- Fitting Algorithm
-- Fitting Method
-- Weights
-- Show Fit Residuals
-- Residuals
-- Max & Min Decay Percentile
-- Show Full Decay
-- Parameter Uncertainties
-- Periodic Boundaries
-- Period
-- Use Data Information Laser Period
-- Termination Criteria
-- Use Local IRF
-- Offset Resolution
+
+.. image:: images/AlliGator-Settings-Decay-Fit-Options.png
+   :align: center
+
+.
 
 Parameter constraints, guess parameters and whether or not to display the 
 output as plots are managed in the 
 :ref:`alligator-settings-fluorescence-decay-fit-parameters` panel
 
+
+.. image:: images/AlliGator-Settings-Decay-Fit-Parameters.png
+   :align: center
+
+.
+
 - Fit with constraints applied on individual parameters is handled by an array 
   of *Fit Parameter Constraints* specifying the:
 
-  + Parameter
-  + Min & Max Value
-  + whether or not it is a Global parameter (currently unused)
-  + whether or not the constraint is used
+  + *Parameter*
+  + *Min* & *Max* Value
+  + whether or not it is a *Global* parameter (currently unused)
+  + whether or not the constraint is *Used*
 
 - *Guess Parameters* can be provided in the corresponding array by selecting the 
   parameter name and providing the guess value. Additionally, the way these 
   parameter guesses are used (or not) can be defined via the *Options* pull-down 
   list:
 
-  + Numerically Estimated
-  + User-provided
-  + User-provided (normalized)
-  + Last valid fitted parameters
+  + ``Numerically Estimated``
+  + ``User-provided``
+  + ``User-provided (normalized)``
+  + ``Last valid fitted parameters``
 
 - The *Displayed Fit Parameters* array only applies to series analysis and 
   will be discussed in that context in a later section.
 
 .. _alligator-fit-options:
 
-Fit Options
------------
+Fit Options Details
+-------------------
 
 - *Model*: Two models are currently available.
 
@@ -135,10 +131,14 @@ Fit Options
 
 - *Fitting Method*: 4 methods are available:
 
-  + Least Square
-  + Least Absolute Residuals
-  + Bisquare
-  + MLE
+  + ``Least Square``
+  + ``Least Absolute Residuals``
+  + ``Bisquare``
+  + ``MLE``
+
+and the option to try them all out and retain the best:
+
+  + ``Best of All``
 
 - *Weights*: Two types of fits can be performed:
 
@@ -152,25 +152,27 @@ Fit Options
    departure from the model equally at all points, and thus the residuals with 
    respect to large values (around the decay peak) are those that tend to be 
    minimized best, while the model fit to the tail might not necessarily be 
-   good. Inversely, a 
-   weighted fit will tend to minimize the residuals of the function's tail, 
+   good. Inversely, a weighted fit (where the weight is larger the smaller the 
+   value is), will tend to minimize the residuals of the function's tail, 
    allowing for relatively large residuals at the peak. If both fits are 
    visually *bad* (which is not always adequatelly reflected in the 
-   :math:`\chi^2`), something is wrong with the model, or the assumption that 
-   decay variance is approximately Poissonian is invalid.
+   :math:`\chi^2`), something is wrong with the model, the IRF, or the 
+   assumption that decay variance is approximately Poissonian is invalid. Or 
+   the convergence may have failed, in which case providing reasonable guess 
+   parameters might improve the outcome.
 
 - *Residuals*: The fit residuals (difference between the original decay and its 
   fit) can be optionally plotted in addition to the fit itself. Several 
   options can be chosen:
 
-  The standard residual is the mere difference between the original decay and 
-  its fit, while the normalized residual is the difference divided by the 
-  function value. The reduced residual is the difference divided by the square 
-  root of the absolute value of the function value.
+  The ``Standard`` residual is the mere difference between the original decay 
+  and its fit, while the ``Normalized`` residual is the difference divided by 
+  the function value. The ``Reduced`` residual is the difference divided by the 
+  square root of the absolute value of the function value.
 
-- *Min & Max Decay Percentile*: The fit can be performed over the whole decay or 
-  limited to the "tail" part of the decay. The latter is defined as the part of 
-  the decay located between XX% of the decay maximum (max percentile) and YY% 
+- *Min* & *Max Decay Percentile*: The fit can be performed over the whole decay 
+  or limited to the "tail" part of the decay. The latter is defined as the part 
+  of the decay located between XX% of the decay maximum (max percentile) and YY% 
   (:math:`0  \le  YY  <  XX  \le  100`) of the decay maximum (min percentile).
 
 - *Show Full Decay*: When only part of the decay is fitted, it is possible to 
@@ -178,60 +180,65 @@ Fit Options
   decay range by checking this checkbox. The default (unchecked) is to only 
   show the decay over the selected range.
 
-- *Parameter Uncertainties*: Because parameter uncertainty calculation involves 
-  computing the covariance matrix of all parameters, this can be very memory 
-  consuming in the case of global fit of large data sets. In that case, it 
-  might be desirable to skip calculation of parameter uncertainties by leaving 
-  this checkbox unchecked.
+- *Show Confidence Interval*: When selecting this option, the confidence 
+  interval for each fitted decay value is plotted as two curves (upper limit 
+  and lower limit) connected by a colored area.
+  
+- *Confidence Level*: value between 0 and 100.
 
-- *Periodic Boundaries*: This option enforces periodic boundary conditions. The 
-  laser repetition period can be entered in the Period box below or the Use 
-  Data Information Laser Period can be checked.
+- *Parameter Uncertainties*: are estimated from the covariance matrix of all 
+  parameters.
 
-  This is mostly useful for large gates (e.g. SwissSPAD data) for which the 
-  resulting decay does not look anymore as a sharp rise followed by a tail 
-  decaying to background level, but instead as a continuous "wave". In these 
-  conditions, it is advantageous to treat the decay as periodic. Note that the 
-  recorded decay needs to be no longer than the provided period for the fit to 
-  be any good (it can be shorter, i.e. truncated).
+- *Periodic Boundaries*: This option enforces periodic boundary conditions, 
+  which is the default situation. The laser repetition period can be entered in 
+  the *Period* box below or the *Use Data Information Laser Period* checkbox 
+  can be checked off.
 
-- *Model Calculation*: Currently only a Convolution approach is available. It is 
-  based on FFT and works best with an IRF covering the whole laser period.
+- *Model Calculation*: Currently only a ``Convolution`` approach is available. 
+  It is based on FFT and works best with an IRF covering the whole laser period.
 
-- *Termination Criteria*: These parameters provide some control on the way 
-  convergence of the Levenberg-Marquardt (LM) algorithm is aasessed.
+- *Termination Criteria*: These parameters provide some control over the way 
+  convergence of the Levenberg-Marquardt (LM) algorithm is assessed.
 
-  + Max Iterations: This controls the number of iterations of the LM 
+  + *Max Iterations*: This controls the number of iterations of the LM 
     algorithm to perform before stopping optimizing the cost function for a 
     given offset parameter.
-  + Max Function Calls: controls the number of calls to the code computing 
+  + *Max Function Calls*: controls the number of calls to the code computing 
     the model values and/or its derivatives. This number is generally close 
     to twice the previous one.
-  + Max Time: sets the maximum time spent iterating the LM algorithm.
-  + Function Tolerance: Minimum relative change in cost function to achieve 
+  + *Max Time*: sets the maximum time spent iterating the LM algorithm.
+  + *Function Tolerance*: Minimum relative change in cost function to achieve 
     in order to stop the LM algorithm.
-  + Parameter Tolerance: Minimum relative change in any of the model 
+  + *Parameter Tolerance*: Minimum relative change in any of the model 
     parameters to stop the LM algorithm.
-  + Gradient Tolerance: Minimum relative change in the RMS of the models 
+  + *Gradient Tolerance*: Minimum relative change in the RMS of the model 
     function's gradient.
-  + Min & Max Lambda: Min & Max value of the LM algorithm's scale parameter.
+  + *Min* & *Max Lambda*: Min & Max value of the LM algorithm's scale parameter.
 
-- *Use Local IRF*: When a set of local IRFs has been defined, instructs the 
-  software to use it (rather than a common IRF defined by the user in the 
-  *Decay Graph*)
+- *Use Local IRF*: When a set of local (or individual) IRFs has been defined, 
+  instructs the software to use it (rather than a common IRF defined by the 
+  user in the *Decay Graph*).
 
-- *Offset Resolution*: The (IRF time) offset parameter is treated separately from 
-  the other model parameters. All values in the specified constraint range are 
-  tried by stepping through in increment of Offset Resolution, in order to 
+- *Offset Resolution*: The (IRF time) offset parameter is treated separately 
+  from the other model parameters. All values in the specified constraint range 
+  are tried by stepping through in increment of *Offset Resolution*, in order to 
   obtain the value for which the fit of the other parameters results in the 
-  minimal value for the cost function. A small value of this parameter may 
-  increase the precision of that parameter but will result in a longer fit 
-  duration.
+  minimal :math:`\chi^2` (or maximal :math:`R^2`, depending on the *Optimal 
+  Offset Selection Criterion* option discussed next). A small value of this 
+  parameter may increase the precision of that parameter but will result in a 
+  longer fit duration (which also depends on the *Min* and *Max* offset values 
+  specified in the constraints array (see below).
 
 .. _alligator-fit-parameters:
 
 Fit Parameters
 --------------
+
+- *Optimal Offset Selection Criterion*: When the *Offset* parameter is fitted 
+  (which requires selecting it in the *Fit Parameter Constraints* array 
+  discussed below), the optimal offset is defined as either that for which the 
+  :math:`\chi_2` is minimized or the :math:`R^2` is maximized (which is usually 
+  equivalent).
 
 - *Fit Parameter Constraints*: Fit parameters can be constrained within a 
   specified range defined by the min (-Inf if unconstrained) and max value 
@@ -283,60 +290,69 @@ Alternatively, checking off the ``Used`` checkbox will ignore this constraint.
 Fit Results
 -----------
 
-In addition to the plot output(s) in case of a successful fit, the fit results 
-are output to the Notebook. A typical output will read:
+.. image:: images/AlliGator-Fluorescence-Decay-Fit.png
+   :align: center
+
+In addition to the plot output(s) in case of a successful fit (see example 
+above), the fit results are output to the Notebook. A typical output will read:
 ::
 
-
-    1-Exponential weighted fit of XXXXX
+    2-Exponential weighted fit of XXXXX
 
     Model Calculation: Convolution
-    Use Local IRF: TRUE 
+    Use Local IRF: TRUE
 
     Periodic with (SYNC) period: 12.5 ns
-    CPU: 0.417112 s
+    CPU: 0.655846 s
     Fit range: 0%-100%
     Fitting Algorithm: Levenberg-Marquardt
     Fitting Methods: Least Square
     Number of offset fits: 0
     Statistics on all offset fits:
-    Total number of iterations: 1074
-    Max number of iterations: 1074 [<2000 per fit]
-    Total number of function calls: 1115
-    Max number of function calls: 1115 [<10000 per fit]
+    Total number of iterations: 1122
+    Max number of iterations: 1122 [<1000 per fit]
+    Total number of function calls: 1128
+    Max number of function calls: 1128 [<10000 per fit]
 
     Gradient: 0 [1E-9]
-    |Delta Chi2|: 117.359512
-    |Delta Chi2|/Chi2: 0.953912 [1E-9]
-    Max |Delta a/a|: 1.356458 [1E-9]
-    Lambda: 10.48576 [1E-9, 1E+9]
-    Termination criterion: Scale Range Exceeded
-    Residual Sum of Squares (RSS): 20647.455685
-    Akaike Information Criterion (AIC): 1471.322445
-    Bayesian Information Criterion (BIC): 1440.236246
-    IRF Normalization Factor: 616.8
-    Decay Normalization Factor: 912.4
+    |Delta Chi2|: 5.748458E-5
+    |Delta Chi2|/Chi2: 7.149123E-7 [1E-9]
+    Max |Delta a/a|: 0.00141 [1E-9]
+    Lambda: 0.001188 [1E-9, 1E+9]
+    Termination criterion: Max Iterations Exceeded
+    Residual Sum of Squares (RSS): 710.648673
+    Akaike Information Criterion (AIC): 2282.215104
+    Bayesian Information Criterion (BIC): 2359.249576
+    IRF Normalization Factor: 376.705174
+    Decay Normalization Factor: 270.8
     Guess Fit Parameters:
     Type: Numerically estimated
-    Offset: -0.2
-    Baseline: 5
-    A_1: 621
-    tau_1: 1.269572
+    Offset: 0
+    Baseline: 0
+    A1: 117
+    tau 1: 0.981033
+    A2: 117
+    tau 2: 2.943098
 
     Fitted Parameters:
-    Offset: 0.11 ± NaN [-0.2, 0.2] (step: 0.01)
-    Baseline: 1.518746 ± 0.745548 ]-Inf, +Inf[
-    A_1: 993.625501 ± 24.222779 [0, Inf]
-    tau_1: 0.926133 ± 0.010069 ]-Inf, +Inf[
-
-    R^2: 0.99798
-    Weighted Chi^2: 123.029749
-    Degrees of freedom: 97
-    Reduced Weighted Chi^2: 1.268348
-    Unweighted Chi^2: 20647.455685
-    Reduced Unweighted Chi^2: 212.860368
-    Standard residuals 
-    Plot(s) added to Decay Graph: 1-Exp Fit of XXXXX, 1-Exp Fit of XXXXX Residuals
+    Offset: 0.04 ± 0 [0, 0.2] (step: 0.04)
+    Baseline: -0.387295 ± 0.005974 ]-Inf, +Inf[
+    A1: 3178.652965 ± 5.446762 [0, Inf]
+    tau 1: 0.015512 ± 0.010178 ]-Inf, +Inf[
+    A2: 319.412135 ± 12963.870285 [0, Inf]
+    tau 2: 0.84741 ± 0.023186 ]-Inf, +Inf[
+    Amplitude-averaged lifetime: 0.091474
+    Intensity-averaged lifetime: 0.719217
+    R^2: 0.998958
+    Weighted Chi^2: 80.407879
+    Degrees of freedom: 196
+    Reduced Weighted Chi^2: 0.410244
+    Unweighted Chi^2: 710.648673
+    Reduced Unweighted Chi^2: 3.625759
+    Standard residuals
+    Plot(s) added to Decay Graph: 2-Exp Fit of XXXXX, 2-Exp Fit of XXXXX 
+    Residuals, 2-Exp Fit of XXXXX CI Upper Limit, 2-Exp Fit of XXXXX CI Lower 
+    Limit
 
 
 The first line indicates the fit model (*1-Exponential* or *2-Exponential*) and 
@@ -392,6 +408,7 @@ The analysis applies to all ROIs currently defined in the *Source Image*.
 
 .. image:: images/AlliGator-Multiple-ROIs-Analysis-Menu.png
    :align: center
+.
 
 There are two possible options:
 
@@ -417,13 +434,13 @@ Additionally, there are two types of outputs depending on the chosen *mode*
   **Settings:Fluorescence Decay:Fit Parameters** panel is checked off. The 
   fit results can be examined using the **Decay Fit Parameter Map** panel, as 
   discussed in the :ref:`corresponding manual page 
-  <alligator-decay-fit-parameters-map-panel>`.
+  <alligator-decay-fit-parameter-map-panel>`.
 
 In order to define individual IRFs, use the ``Analysis:FLI Dataset:Multiple ROIS 
 Analysis:All ROIs IRF Extraction`` menu. An IRF dataset file is needed for that 
 purpose, which is usually obtained with a solution of quenched fluorescent dye, 
-laser reflection off of a piece of paper or mirror, or any other method resulting 
-in data reporting on the temporal profile of the setup's response.
+laser reflection off of a piece of paper or mirror, or any other method 
+resulting in data reporting on the temporal profile of the setup's response.
 
 There are again two options (slow and fast) to extract these IRFs, the first 
 one outputting the different IRFs to the *Decay Graph*, while the latter stores 
@@ -456,11 +473,14 @@ Each time point decay is fitted separately, following the protocol described
 previously for single decays. In addition, it is possible to generate one or 
 more plots of the evolution of selected fit parameters across the series, using 
 the *Displayed Fit Parameters* array. These plots will be output in the 
-*Lifetime Graph* of the **Lifetime Analysis** panel (see corresponding manual 
-page). Parameters that can be displayed can be chosen from the following list:
+*Lifetime \& Other Parameters* Graph of the **Lifetime Analysis** panel (see the 
+corresponding :ref:`manual page <alligator-lifetime-and-other-parameters-panel>` 
+). Parameters that can be displayed can be chosen from the following list:
 
 .. image:: images/AlliGator-Fit-Parameters.png
    :align: center
+
+.
 
 This list includes the fit parameters and derived quantities, such as the mean 
 lifetimes <tau>_a and <tau>_i or fractions f1_a and f1_i (for the 
@@ -492,3 +512,4 @@ amplitude-averaged lifetime                                                     
 :math:`f_{2a} = 1 - f_{1a}`                                                                   :math:`f_{2i} = 1 - f_{1i}`
 ===========================================================================================   =====================================================================================
 
+(last modified on 01-30-2026)

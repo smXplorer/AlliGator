@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.22">
-<meta name="author" content="Antidoc v3.0.0, X. Michalet">
+<meta name="author" content="Antidoc v3.1.0, X. Michalet">
 <title>AlliGator Source Code Documentation</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -435,15 +435,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 </head>
-<body class="book toc2 toc-left">
+<body class="book">
 <div id="header">
 <h1>AlliGator Source Code Documentation</h1>
 <div class="details">
-<span id="author" class="author">Antidoc v3.0.0</span><br>
+<span id="author" class="author">Antidoc v3.1.0</span><br>
 <span id="author2" class="author">X. Michalet</span><br>
 <span id="email2" class="email">smXplorer@github</span><br>
 </div>
-<div id="toc" class="toc2">
+<div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_project_description">1. Project description</a></li>
@@ -502,7 +502,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 online manual: <a href="https://alligator-distribution.readthedocs.io/" class="bare">https://alligator-distribution.readthedocs.io/</a></p>
 </div>
 <div class="paragraph">
-<p>&#169; 2025 Regents of the University of California
+<p>&#169; 2026 Regents of the University of California
 Author: Xavier Michalet</p>
 </div>
 </div>
@@ -790,6 +790,38 @@ Appends (or prepends) a single action to the current ones being processed or abo
 </div></div></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Display Current Decay Fit Parameter Map (X,Y, I)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Action_Engine.lvlib_AlliGator_Display_Current_Decay_Fit_Parameter_Map_(X,Y,_I).vi.png" alt="AlliGator Action Engine.lvlib:AlliGator Display Current Decay Fit Parameter Map (X" width="Y" height="I).vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays last mouse position and true decay fit parameter map value at that location.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Display Current Parameter Map (X,Y, I)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Action_Engine.lvlib_AlliGator_Display_Current_Parameter_Map_(X,Y,_I).vi.png" alt="AlliGator Action Engine.lvlib:AlliGator Display Current Parameter Map (X" width="Y" height="I).vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays last mouse position and parameter map value at that location.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Event to Event Category</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="image"><img src="Images/AlliGator_Action_Engine.lvlib_AlliGator_Event_to_Event_Category.vi.png" alt="AlliGator Action Engine.lvlib:AlliGator Event to Event Category.vi"></span></p>
@@ -911,6 +943,22 @@ If not, enqueue the evenet and update the time/timeout information.</p></td>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Returns the first event (action + data) in the  <strong>AlliGator Q Elements</strong> input array in <strong>AlliGator Q Event</strong> and the remaining events in the <strong>AlliGator Q Elements</strong> output array.</p>
 <p class="tableblock">If there is a GUI:Abort element in the array, or if the abort flag is raised, returns a single GUI:Abort as <strong>AlliGator Q Event</strong> and an empty array as <strong>AlliGator Q Elements</strong> output array.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Get Phasor Plot(s) &amp; Intensit(ies)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Action_Engine.lvlib_AlliGator_Get_Phasor_Plot(s)_&amp;_Intensit(ies).vi.png" alt="AlliGator Action Engine.lvlib:AlliGator Get Phasor Plot(s) &amp; Intensit(ies).vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
 </div></div></td>
@@ -1463,11 +1511,139 @@ VIs related to the Decay Fit Parameter Map</p>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Compute Lifetime Variance Map (Core)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Compute_Lifetime_Variance_Map_(Core).vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Compute Lifetime Variance Map (Core).vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Compute Lifetime Variances</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Compute_Lifetime_Variances.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Compute Lifetime Variances.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Enter Power Law Parameters Dialog</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Enter_Power_Law_Parameters_Dialog.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Enter Power Law Parameters Dialog.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lets the user enter the power law parameters describing the CV_tau(I) dependency, where <strong>I</strong> is the pixel intensity and <strong>CV_tau</strong> is the lifetime coefficient of variation obtained from calibration measurements.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Lifetime Variance Maps Calculation</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Lifetime_Variance_Maps_Calculation.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Lifetime Variance Maps Calculation.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Apply Fit Result Constraints</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Apply_Fit_Result_Constraints.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Apply Fit Result Constraints.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Build Decay Fit Parameter Map</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Build_Decay_Fit_Parameter_Map.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Build Decay Fit Parameter Map.vi"></span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Builds the selected fit parameter map image.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Check Activated Decay Fit Result Constraints</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Check_Activated_Decay_Fit_Result_Constraints.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Check Activated Decay Fit Result Constraints.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Checks whether any constraint is activated.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Check Fit Result Constraints</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Check_Fit_Result_Constraints.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Check Fit Result Constraints.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Checks whether the fit parameters and derived quantities verify all the provided constraints.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Check ROIs</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Check_ROIs.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Check ROIs.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Checks whether the sinternally stored ROIs exist, and if not, use the user-loaded ones.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
 </div></div></td>
@@ -1575,6 +1751,22 @@ VIs related to the Decay Fit Parameter Map</p>
 </div></div></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Fit Results Constraints Window</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Fit_Results_Constraints_Window.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Fit Results Constraints Window.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Get Decay Fit Parameter Map Data Wrapper</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Get_Decay_Fit_Parameter_Map_Data_Wrapper.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Get Decay Fit Parameter Map Data Wrapper.vi"></span></p>
@@ -1639,9 +1831,9 @@ VIs related to the Decay Fit Parameter Map</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Load IRFs &amp; Fit Data (Map) HDF5 File v0.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Load IRFs &amp; Fit Data (Map) HDF5 File v0.6</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Load_IRFs_&amp;_Fit_Data_(Map)_HDF5_File_v0.3.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Load IRFs &amp; Fit Data (Map) HDF5 File v0.3.vi"></span></p>
+<p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Load_IRFs_&amp;_Fit_Data_(Map)_HDF5_File_v0.6.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Load IRFs &amp; Fit Data (Map) HDF5 File v0.6.vi"></span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Loads Decay Fit Parameter Map and associated metadata.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -1801,6 +1993,54 @@ VIs related to the Decay Fit Parameter Map</p>
 </div></div></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Remove Duplicate Fit Result Constraint</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Remove_Duplicate_Fit_Result_Constraint.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Remove Duplicate Fit Result Constraint.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Residuals or ACF needed</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Residuals_or_ACF_needed.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Residuals or ACF needed.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator ROI Descriptors Selection</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_ROI_Descriptors_Selection.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator ROI Descriptors Selection.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Save All Decay Fit Parameter Maps to ASCII</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Save_All_Decay_Fit_Parameter_Maps_to_ASCII.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Save All Decay Fit Parameter Maps to ASCII.vi"></span></p>
@@ -1849,9 +2089,9 @@ VIs related to the Decay Fit Parameter Map</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Save IRFs &amp; Fit Data (Map) HDF5 File v0.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Save IRFs &amp; Fit Data (Map) HDF5 File v0.6</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Save_IRFs_&amp;_Fit_Data_(Map)_HDF5_File_v0.4.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Save IRFs &amp; Fit Data (Map) HDF5 File v0.4.vi"></span></p>
+<p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Save_IRFs_&amp;_Fit_Data_(Map)_HDF5_File_v0.6.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Save IRFs &amp; Fit Data (Map) HDF5 File v0.6.vi"></span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Saves Decay Fit Parameter Map and associated metadata to an HDF5 file.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -1902,6 +2142,22 @@ VIs related to the Decay Fit Parameter Map</p>
 <p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Update_Decay_Fit_Parameter_Map_Palette.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Update Decay Fit Parameter Map Palette.vi"></span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Updates the color palette of the <strong>Decay Fit Parameter Map</strong> image.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Used ROIs String</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Used_ROIs_String.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Used ROIs String.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
 </div></div></td>
@@ -2413,6 +2669,39 @@ VIs used to fit decays to 1-Exp or 2-Exp models.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Draw CI Band from CI Plots</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Decay_Fit.lvlib_Draw_CI_Band_from_CI_Plots.vi.png" alt="AlliGator Decay Fit.lvlib:Draw CI Band from CI Plots.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Connects the last two plots of a XY Graph to draw a CI band around the fitted plot.</p>
+<p class="tableblock">This needs to be used right after the two CI plots have be drawn.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/reentrancy-shared.png" alt="reentrancy-shared.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fit Plots Cluster to Array</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Decay_Fit.lvlib_Fit_Plots_Cluster_to_Array.vi.png" alt="AlliGator Decay Fit.lvlib:Fit Plots Cluster to Array.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/reentrancy-shared.png" alt="reentrancy-shared.png"></span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
@@ -5522,7 +5811,7 @@ Handles IRF-related functions.</p>
 No description found (add content in lvlib description)</p>
 </div>
 <div class="paragraph">
-<p><strong>Version:</strong> 1.0.0.0</p>
+<p><strong>Version:</strong></p>
 </div>
 <div class="sect3">
 <h4 id="_functions_19"><a class="anchor" href="#_functions_19"></a><a class="link" href="#_functions_19">2.19.1. Functions</a></h4>
@@ -5548,9 +5837,79 @@ No description found (add content in lvlib description)</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Power Law Fit from Intensity Distribution</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Compute CV Mean &amp; SDV</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/AlliGator_Lifetime_&amp;_Other_Parameters.lvlib_AlliGator_Power_Law_Fit_from_Intensity_Distribution.vi.png" alt="AlliGator Lifetime &amp; Other Parameters.lvlib:AlliGator Power Law Fit from Intensity Distribution.vi"></span></p>
+<p><span class="image"><img src="Images/AlliGator_Lifetime_&amp;_Other_Parameters.lvlib_AlliGator_Compute_CV_Mean_&amp;_SDV.vi.png" alt="AlliGator Lifetime &amp; Other Parameters.lvlib:AlliGator Compute CV Mean &amp; SDV.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Compute Sliced Mean, SDV &amp; CV Plots</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Lifetime_&amp;_Other_Parameters.lvlib_AlliGator_Compute_Sliced_Mean,<em>SDV</em>&amp;_CV_Plots.vi.png" alt="AlliGator Lifetime &amp; Other Parameters.lvlib:AlliGator Compute Sliced Mean" width="SDV &amp; CV Plots.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Computes sliced data statistics.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Format Slice Analysis Plots</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Lifetime_&amp;_Other_Parameters.lvlib_AlliGator_Format_Slice_Analysis_Plots.vi.png" alt="AlliGator Lifetime &amp; Other Parameters.lvlib:AlliGator Format Slice Analysis Plots.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gets a cluster of calculated plots and outputs them as an array, skipping empty plots (which haven&#8217;t been calculated).</p>
+<p class="tableblock">The associated names are also output, as well as a format string used to output a message listing these plots.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Histogram Bin Size Definition Dialog</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Lifetime_&amp;_Other_Parameters.lvlib_AlliGator_Histogram_Bin_Size_Definition_Dialog.vi.png" alt="AlliGator Lifetime &amp; Other Parameters.lvlib:AlliGator Histogram Bin Size Definition Dialog.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays a standard dialog box that prompts users to enter information, such as a user name and password.
+--------------------</p>
+<p class="tableblock">This Express VI is configured as follows:</p>
+<p class="tableblock">Message to Display to the User:Histogram bin to use:
+The inputs are:
+Number: Bin</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Plot Histogram Event</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Lifetime_&amp;_Other_Parameters.lvlib_AlliGator_Plot_Histogram_Event.vi.png" alt="AlliGator Lifetime &amp; Other Parameters.lvlib:AlliGator Plot Histogram Event.vi"></span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -9451,7 +9810,7 @@ This is the author&#8217;s responsibility to list any of the missing product use
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-10-09 17:55:26 -0700
+Last updated 2026-01-31 08:00:52 +0100
 </div>
 </div>
 </body>

@@ -413,7 +413,7 @@ Fit Options
 +++++++++++
 
 The options accessible on this panel are discussed in the 
-:ref:`alligator-single-decay-fit-options` section of the 
+:ref:`alligator-single-decay-fitting` section of the 
 :ref:`alligator-decay-fitting` page of the manual.
 
 .. image:: images/AlliGator-Settings-Decay-Fit-Options.png

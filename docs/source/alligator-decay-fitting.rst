@@ -10,7 +10,7 @@ of fluorescence decay fitting:
   model convolved with or without an experimental instrument response function 
   (IRF).
 * Multiple ROIs in the image source can be fitted, the resulting parameters 
-  being output as maps (see :ref:`alligator-decay-fit-parameters-map-panel`)
+  being output as maps (see :ref:`alligator-decay-fit-parameter-map-panel`)
 * Series analysis of a ROI in the image source can be done one ROI at a 
   time (the same ROI is used throughout the series), or a list of ROIs can be 
   used, one dataset in the series using one of the ROI in the list (in the order 
@@ -408,6 +408,7 @@ The analysis applies to all ROIs currently defined in the *Source Image*.
 
 .. image:: images/AlliGator-Multiple-ROIs-Analysis-Menu.png
    :align: center
+
 .
 
 There are two possible options:

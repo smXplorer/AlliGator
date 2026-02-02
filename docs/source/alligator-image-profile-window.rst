@@ -46,7 +46,7 @@ been calculated, or because no phasor ratio references have been defined, or no
 decay fit parameter map has been computed), their value will appear as zero.
 
 The decay fit parameter shown last in the *Plot Legend* is that defined in the 
-:ref:`alligator-decay-fit-parameters-map-panel`. Changing it there will update 
+:ref:`alligator-decay-fit-parameter-map-panel`. Changing it there will update 
 the corresponding profile plot in the *Image Profile* graph.
 
 The *Image Profile* graph is updated each time the contour is modified in the 
@@ -94,6 +94,8 @@ explains how this works:
 .. image:: images/Source-Image-Profile-Averaged-Profile-Schematics.png
    :align: center
 
+.
+
 The computed profile will contain *L* values, which will each represent the 
 average along a perpendicular segment of length *W* (1-pixel wide). The only 
 exception is the intensity profile, which will represent the sum of the pixels' 
@@ -108,7 +110,9 @@ computed and replaced by *NaN*, which does not appear in the displayed profile.
 An example is shown below:
 
 .. image:: images/Source-Image-Profile-Averaged-Profile-ROI.png
-...:align: center
+   :align: center
+
+.
 
 Notice the green and red rectangles and the thick green center line. The green 
 (sometimes bizzarely deformed) rectangle is the one drawn by LabVIEW. The red 

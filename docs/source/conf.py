@@ -9,25 +9,18 @@
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-#
+
 import os
 import sys
 
 # sys.path.insert(0, os.path.abspath('.'))
 
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
-html_theme = 'sphinx_rtd_theme'
+#html_theme = 'sphinx_rtd_theme'
 
 if not on_rtd:
-    #import sphinx_rtd_theme
-    #html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-    #html_theme_path = ["_themes", ]
-    #html_theme = 'nature'
-    #html_theme = 'insipid'
-    #html_theme = 'sphinxdoc'
-    #html_theme = 'pylons'
-    #html_theme_path = pylons_sphinx_themes.get_html_themes_path()
-    html_theme = 'sphinx_rtd_theme'
+    import sphinx_rtd_theme
+    html_theme = 'nature'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -46,9 +39,11 @@ copyright = '2015-2026, Regents of the University of California'
 author = 'X. Michalet'
 
 # The short X.Y version.
+
 version = '1.05'
 
 # The full version, including alpha/beta/rc tags
+
 release = '1.05'
 
 # -- General configuration ---------------------------------------------------
@@ -56,6 +51,7 @@ release = '1.05'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
+
 extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
@@ -70,5 +66,6 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
+
 exclude_patterns = ['_build']
 

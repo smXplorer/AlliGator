@@ -27,7 +27,7 @@ if not on_rtd:
     #html_theme = 'sphinxdoc'
     #html_theme = 'pylons'
     #html_theme_path = pylons_sphinx_themes.get_html_themes_path()
-    #html_theme = 'sphinx_rtd_theme'
+    html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the

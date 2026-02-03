@@ -10,8 +10,7 @@ it in the *Python Plugins* folder and resetting the Python session in the
 
 To make your plugin available to others, it is recommended to publish it on 
 GitHub (or any other publicly accessible repository) using the template provided 
-at `https://github.com/smXplorer/AlliGator-Plugin-Template 
-<https://github.com/smXplorer/AlliGator-Plugin-Template>`_.
+at https://github.com/smXplorer/AlliGator-Plugin-Template.
 
 If possible, name your repository "AlliGator-Plugin-my-plugin-name" in order for 
 it to be easily searchable on GitHub (or found by search engines).
@@ -31,8 +30,8 @@ An AlliGator Python Plugin repository should contain at least 3 mandatory files:
   information on the plugin and preferably enough information on how to use it. 
   Instructions on how to use the plugin, or links to a website/URL providing 
   these instructions would belong to the Readme file. A simple guide to the 
-  markup language used in \*.md file can be found 
-  `here <https://www.markdownguide.org/basic-syntax/>`_.
+  markup language used in \*.md file can be found at 
+  https://www.markdownguide.org/basic-syntax/.
 
 If possible, provide files to test the plugin in a *data* folder within the 
 repository, and if appropriate, results from the analysis (e.g. screenshot of 
@@ -41,5 +40,5 @@ outputs, AlliGator notebook, plot files, etc.) in a *results* folder.
 It is recommended to store images used to illustrate the Readme file in an 
 *images* folder in the repository.
 
-An example of such a repository with these different elements can be found `here 
-<https://github.com/smXplorer/AlliGator-Plugin-IntensityOverThresholdMask>`_
+An example of such a repository with these different elements can be found at 
+https://github.com/smXplorer/AlliGator-Plugin-IntensityOverThresholdMask.

@@ -54,9 +54,14 @@ release = '1.05'
 
 extensions = [
     'sphinx.ext.todo',
-    'sphinx.ext.mathjax',
-    'sphinx_rtd_theme'
+    'sphinx.ext.mathjax'
 ]
+
+# extensions = [
+#     'sphinx.ext.todo',
+#     'sphinx.ext.mathjax',
+#     'sphinx_rtd_theme'
+# ]
 
 todo_include_todos = True
 

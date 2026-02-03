@@ -5,7 +5,8 @@ Bibliography
 
 The following publications have used AlliGator or discuss topics of relevance 
 (see article summary to see which category they belong to).
-Please consider citing [XM25]_ if you are using AlliGator in your work.
+Please consider citing [XM25]_ and/or [KC18]_ if you are using AlliGator in 
+your work.
 
 Most of them are available for 
 free on `PubMed <https://pubmed.ncbi.nlm.nih.gov/?term=xavier+michalet>`_ or 
@@ -24,12 +25,12 @@ analysis, as well as details on data analysis with AlliGator, which can be
 found `here <https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.
 1002%2Fjbio.201800185&file=jbio201800185-sup-0002-SupInfo.pdf>`_.
 
-Data used in this work can be found `here 
-<https://doi.org/10.6084/m9.figshare.5561872.v1>`_, `here 
-<https://doi.org/10.6084/m9.figshare.5776890.v2>`_, `here 
-<https://doi.org/10.6084/m9.figshare.5786694.v2>`_, `here 
-<https://doi.org/10.6084/m9.figshare.5788128.v2>`_, and `here 
-<https://doi.org/10.6084/m9.figshare.5791476.v4>`_.
+Data used in this work can be found at 
+https://doi.org/10.6084/m9.figshare.5561872.v1, 
+https://doi.org/10.6084/m9.figshare.5776890.v2, 
+https://doi.org/10.6084/m9.figshare.5786694.v2, 
+https://doi.org/10.6084/m9.figshare.5788128.v2 and 
+https://doi.org/10.6084/m9.figshare.5791476.v4.
 
 Ref. [AU19]_ describes the use of AlliGator for time-gated decay fitting of data 
 acquired with SwissSPAD2, a custom time-gated CMOS SPAD array (with large gates). 
@@ -72,7 +73,7 @@ Ref. [XM25]_ describes AlliGator's features, architecture and open source releas
 
 .. [RC12] Ryan A. Colyer, Oswald H.W. Siegmund, Anton S. Tremsin, John V. 
    Vallerga, Shimon Weiss, Xavier Michalet, "Phasor imaging with a widefield 
-   photon-counting detector, Journal of Biomedical Optics 17 (2012) 016008. 
+   photon-counting detector", Journal of Biomedical Optics 17 (2012) 016008. 
    `doi:10.1117/1.JBO.17.1.016008 <https://doi.org/doi:10.1117/1.JBO.17.1.016008>`_
 
 .. [KC18] Sez‐Jade Chen, Nattawut Sinsuebphon, Alena Rudkouskaya, Margarida 

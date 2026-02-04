@@ -8,7 +8,7 @@ AlliGator versions: 0.63-current
 .. toctree::
    alligator-internal-parameters
 
-parameter types
+Parameter Types
 ---------------
 The following input parameter types are supported:
 

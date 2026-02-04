@@ -194,7 +194,7 @@ beneath the *Background Dataset* control
 3. The background *Scaling Factor* parameter (default: 1) can be used to 
 adjust the amount of background file correction to apply.
 
-single HDF5 FLI Dataset
+Single HDF5 FLI Dataset
 +++++++++++++++++++++++
 
 A simple open source file format in which to save a variety of different files 

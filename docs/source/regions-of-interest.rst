@@ -174,8 +174,8 @@ Pixels with Peak above Min``.
 The result of this operation is one or more ROIs meeting this criterion. The 
 ROIs are stored and added to the pool of existing ROIs.
 
-Defining ROI(s) by a image intensity threshold
-++++++++++++++++++++++++++++++++++++++++++++++
+Defining ROI(s) by an image intensity threshold
++++++++++++++++++++++++++++++++++++++++++++++++
 
 The **Source Image** panel of the **Settings** window has a parameter named 
 ``Intensity Threshold``.

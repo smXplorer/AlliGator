@@ -1,10 +1,12 @@
 .. _alligator-user-guide:
 
-Alligator User Guide
+AlliGator User Guide
 ====================
 
 The following pages introduce the user to different topics and functions of AlliGator.
+
 A first time user may benefit from reading them in the order they are listed below.
+
 Alternatively, tutorial videos found on the :ref:`alligator-tutorials` page can be consulted as either a complement or an introduction to these topics.
 
 .. toctree::

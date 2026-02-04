@@ -6,7 +6,7 @@ listed below. Most can be accessed directly from the ``Windows`` menu
 (see :ref:`alligator-windows-menu`).
 
 
-Main windows
+Main Windows
 ------------
 
 .. toctree::
@@ -16,7 +16,7 @@ Main windows
    alligator-notebook-window
    alligator-settings-window
 
-Accessory windows
+Accessory Windows
 -----------------
 
 .. toctree::
@@ -33,7 +33,7 @@ Accessory windows
    alligator-histogram-window
    alligator-plot-editor-window
 
-Analysis Tools windows
+Analysis Tools Windows
 ----------------------
 
 .. toctree::

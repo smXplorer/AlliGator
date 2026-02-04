@@ -11,24 +11,31 @@ executable*.
 ## Standalone executable installer
 
 Instructions on how to install AlliGator can be found in the *AlliGator Installation* 
-page of the online manual: https://alligator-distribution.readthedocs.io/en/latest/alligator-installation.html
+page of the online manual: 
+https://alligator-distribution.readthedocs.io/en/latest/alligator-installation.html
 
 For the latest standalone AlliGator software installer, check the 
 https://github.com/smXplorer/AlliGator/tree/main/installer/latest folder. This 
 executable requires the LabVIEW 2021 SP1 runtime (free) and Vision Development 
-Module 2021 runtime (to be purchased from Emerson/National Instruments).
+Module 2021 runtime (to be purchased from Emerson/National Instruments). Note 
+that if you have the development version of LabVIEW and the VDM installed, you 
+don't need to download these runtimes, nor purchase a VDM runtime license.
 
 The latest online manual can be found at https://alligator-distribution.readthedocs.io, 
-where a PDF version can also be found.
+which has a link to a downloadable PDF version of the manual. Older versions of 
+the manual are linked on that same website.
 
 For a legacy AlliGator manual, check the older AlliGator website backed-up on 
-the Internet Archive at https://web.archive.org/web/20201028034436/https://sites.google.com/a/g.ucla.edu/alligator/manual
+the Internet Archive at 
+https://web.archive.org/web/20201028034436/https://sites.google.com/a/g.ucla.edu/alligator/manual
 (Note that the link to a PDF version of the manual on this archived website is dead). 
 
-New standalone version releases and changelogs are posted on the AlliGator 
-Google Group site at https://groups.google.com/g/alligator-software-support
+New standalone version releases and changelogs (copied from the version history 
+page, see below) are posted on the AlliGator Google Group site at 
+https://groups.google.com/g/alligator-software-support
 
-The version history page can be found at https://alligator-distribution.readthedocs.io/en/latest/alligator-version-history.html
+The version history page can be found at 
+https://alligator-distribution.readthedocs.io/en/latest/alligator-version-history.html
 
 ## LabVIEW 2021 SP1 source code (Windows 64 bit compatible)
 
@@ -60,12 +67,12 @@ free VIPM (VI package Manager) distributed by JKI
 To use the source code, open the AlliGator.lvproj project in LabVIEW and look 
 for the *AlliGator Launcher.vi* VI in *AlliGator GUI.lvlib* in the *VIs* folder 
 of the project. This is the top-level VI that needs to be run to start 
-AlliGator. Running AlliGator.vi directly will fail, as some preparatory steps 
-are handled by AlliGator Launcher.vi.
+AlliGator. Running AlliGator.vi directly **will fail**, as some preparatory 
+steps are handled by AlliGator Launcher.vi.
 
 ## Source code documentation
 
 A list of Virtual Instruments (VIs) included in the distribution, as well as 
 their brief description by library can be found in the *src-docs* directory, 
-and can be accessed by opening the Project-Documentation.html or the 
-Project-Documentation.pdf files.
+and can be accessed by opening the *Project-Documentation.html* or the 
+*Project-Documentation.pdf* files.

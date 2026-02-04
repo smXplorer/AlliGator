@@ -14,7 +14,7 @@ Since time-gated image datasets tend to be large, and many analysis steps
 involve processing all time-gate images, it is preferable to have as much RAM 
 as possible available. 16 GB or more are recommended.
 
-Download the installer(s)
+Download the Installer(s)
 +++++++++++++++++++++++++
 
 3 pieces of software need to be present on your computer for AlliGator to run 
@@ -129,7 +129,7 @@ available.
 
 .. _HDF5-library-installation:
 
-HDF5 library installation
+HDF5 Library Installation
 -------------------------
 
 In order to be able to save and load HDF5 files introduced in version 0.16, HDF5 

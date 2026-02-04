@@ -417,7 +417,7 @@ This option uses a color map defined by the user in the Phasor Color Map Picker 
 
 This opens the **Phasor Color Map Picker** window:
 
-Phasor Color Map Picker window
+Phasor Color Map Picker Window
 ------------------------------
 
 This window shows an empty phasor plot with the universal circle, in which a 

@@ -3,8 +3,8 @@
 AlliGator Exposed Internal Parameters
 +++++++++++++++++++++++++++++++++++++
 
-AlliGator exposed internal parameters' JSON strings with default values
------------------------------------------------------------------------
+AlliGator exposed internal parameters JSON strings with default values
+----------------------------------------------------------------------
 
 + # Folds:1
 + # Gates:100

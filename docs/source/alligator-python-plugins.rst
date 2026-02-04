@@ -75,10 +75,11 @@ target and is described in the
 
 Both input and output definition sections are discussed below.
 
-Plugins Folder
-++++++++++++++
+Python Plugins Folder
++++++++++++++++++++++
 
-Plugins consists of functions saved within Python script files (.py extension).
+Python plugins consists of functions saved within Python script files (files 
+with a ``.py`` extension).
 
 These script files need to be saved within the ``Python Plugins`` folder
 located in the AlliGator installation folder (generally in 
@@ -86,10 +87,10 @@ located in the AlliGator installation folder (generally in
 installation.
 
 Each file can be saved within a subfolder hierarchy within the 
-``Plugins Folder``.
+*Python Plugins* Folder.
 
-Plugin Files
-++++++++++++
+Python Plugin Files
++++++++++++++++++++
 
 Each .py plugin file will give its name to a submenu in the right-click menu of 
 the object it is targeting (see below to learn how to specify a plugin's target)
@@ -98,10 +99,10 @@ script file name ``UCLA_Plot_Functions.py`` is added and targeted to the
 **Decay Graph**, the functions within will be added to the *Decay Graph* 
 context menu in a submenu named ``UCLA Plot Functions``.
 
-For instance, if there are two files in Plugins folder named ``plugins 1.py`` 
-and ``plugins 2.py``, both targeted to the **Decay Graph**, two submenus will be 
-added to the right-click menu of the **Decay Graph**, respectively called 
-``plugins 1`` and ``plugins 2``.
+For instance, if there are two files in the Python Plugins folder named 
+``plugins 1.py`` and ``plugins 2.py``, both targeted to the **Decay Graph**, 
+two submenus will be added to the right-click menu of the **Decay Graph**, 
+respectively called ``plugins 1`` and ``plugins 2``.
 
 If a submenu already exists, the plugin functions within the .py file will be
 added to it.
@@ -182,11 +183,10 @@ requires the following additional two import statements:
     import json
     import alligator
 
-
 The first is used to convert the input parameters string from JSON to a 
 dictionary, and the output parameters dictionary to a JSON string, while the 
 second refers to the ``alligator.py`` script provided in the Python Plugins 
-folder, and contains type definitions that are useful to format input and 
+folder [1]_, and contains type definitions that are useful to format input and 
 output data for a plugin.
 
 In addition to these two import statements, the other 5 elements to include are 
@@ -216,13 +216,13 @@ section can be ignored.
 
 The syntax of these different elements is discussed in the following sections.
 
-**Note**: In addition to these 4 mandatory elements, it is recommended to 
-include a Python ``doc string`` to provide a description of what the function is 
-doing, as well as information on whether or not and what user-provided 
-parameters may be required. This ``doc string`` can be sent to the 
-**Notebook** window by holding the ``H`` key down while selecting the 
-Python plugin function in the corresponding menu (the function will not be 
-executed).
+.. Note: In addition to these 4 mandatory elements, it is recommended to 
+   Include a Python ``doc string`` to provide a description of what the 
+   function is doing, as well as information on whether or not and what 
+   user-provided parameters may be required. This ``doc string`` can be sent to 
+   the **Notebook** window by holding the ``H`` key down while selecting the 
+   Python plugin function in the corresponding menu (the function will not be 
+   executed).
 
 API Version
 -----------
@@ -235,6 +235,7 @@ The API version *n* is specified by the following triple-commented statement:
 
 Destination
 -----------
+
 To instruct AlliGator to insert a script's functions into a specific menu, the
 following statement needs to be inserted before the different functions:
 
@@ -399,6 +400,16 @@ Python function used as a plugin, it is easiest to look at the (not very useful
 as an AlliGator plugin) example installed with AlliGator and appearing as 
 submenu item of ``Analysis:Decay Graph`` and as a context menu item of the 
 *Decay Graph*.
+
+.. rubric:: Footnotes
+
+.. [1] The ``import alligator`` statement may result in ambiguities if the Pypi 
+   *alligator* package is installed in the Python instance (this is a different 
+   beast altogether, dedicated to managing simple offline task queues in 
+   Python). If that is the case, disambiguate this import statement by ensuring 
+   that the AlliGator Python Plugins folder takes precedence in the search path 
+   to avoid importing the wrong library.
+
 
 Decay Graph example
 +++++++++++++++++++

@@ -34,11 +34,19 @@ An AlliGator Python Plugin repository should contain at least 3 mandatory files:
   https://www.markdownguide.org/basic-syntax/.
 
 If possible, provide files to test the plugin in a *data* folder within the 
-repository, and if appropriate, results from the analysis (e.g. screenshot of 
-outputs, AlliGator notebook, plot files, etc.) in a *results* folder.
+repository [1]_, and if appropriate, results from the analysis (e.g. screenshot 
+of outputs, AlliGator notebook, plot files, etc.) in a *results* folder.
 
 It is recommended to store images used to illustrate the Readme file in an 
 *images* folder in the repository.
 
 An example of such a repository with these different elements can be found at 
 https://github.com/smXplorer/AlliGator-Plugin-IntensityOverThresholdMask.
+
+.. rubric:: Footnotes
+
+.. [1] Do not modify the *alligator.py* script distributed in the *Python 
+   Plugins* folder, as this will be overwritten with the next AlliGator 
+   installation and will break compatibility with other plugins. If you need 
+   additional functionalities not currently supported, create an Issue on Github 
+   at https://github.com/smXplorer/AlliGator/issues.

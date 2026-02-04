@@ -3,7 +3,8 @@
 AlliGator Reference
 ===================
 
-The following pages describe specific topics not covered in other parts of the manual.
+The following pages describe specific topics not covered in other parts of the 
+manual.
 
 .. toctree::
    

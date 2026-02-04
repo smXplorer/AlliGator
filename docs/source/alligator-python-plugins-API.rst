@@ -26,12 +26,13 @@ The following input parameter types are supported:
    string, a string, string
    path, "C:\\Desktop\\test.txt", file or folder path
    boolean, True, boolean: True or False
-   AlliGator, Phasor Frequency, any exposed AlliGator parameter (*)
+   AlliGator, Phasor Frequency, any exposed AlliGator parameter [*]_
 
-(*) Requested AlliGator parameters are provided automatically to the plugin 
-function. To obtain a list of current exposed internal AlliGator parameters, 
-use the *Send* button in the **Settings:Plugins** panel. This will send a copy 
-of that list to the Clipboard, together with the current parameter values.
+.. [*]: Requested AlliGator parameters are provided automatically to the plugin 
+   function. To obtain a list of current exposed internal AlliGator parameters, 
+   use the *Send* button in the **Settings:Plugins** panel. This will send a 
+   copy of that list to the Clipboard, together with the current parameter 
+   values.
 
 A list of exposed parameters with their default values can be found 
 :ref:`here <alligator-internal-parameters>`.

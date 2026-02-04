@@ -3,6 +3,13 @@
 AlliGator Installation
 ======================
 
+This section describes requirements and procedures for installing the standalone 
+application (several copies of which can be launched in parallel). A development 
+LabVIEW installation is not needed, but if present (and of the correct version, 
+*i.e*. 2021 SP1), will dispense of having to install the runtime engine 
+described below. Likewise, if a development version of the Vision Development 
+Module (2021) is installed, the VDM RTE installation step can be skipped.
+
 System Requirements
 +++++++++++++++++++
 
@@ -27,7 +34,9 @@ properly:
 Follow the instructions below to make sure you install the correct versions of 
 each. Do not hesitate to post a support request on the `AlliGator Support Google 
 Group <https://groups.google.com/u/1/g/alligator-software-support>`_ to ask for 
-help or advice. You only need to install the LabVIEW and VDM RTE once.
+help or advice. You only need to install the LabVIEW and VDM RTE once. Note that 
+if you have a development version of both LabVIEW 2021 SP1 and VDM 2021, there 
+is no need to install these RTE.
 
 AlliGator Installer
 -------------------

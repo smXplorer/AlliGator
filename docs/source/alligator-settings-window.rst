@@ -879,7 +879,9 @@ Plugins
 
 - *Python* Settings:
 
-    + *Python Version*: called when using a plugin.
+    + *Python Version*: Python version called when using a plugin. The example 
+      scripts have been tested with Python 3.9, but it is likely that calls to 
+      later (and possibly earlier) versions might work.
     + *Use PATH definition*: if checked off, used the *PATH* system file to 
       obtain the path to the specified python executable version. If not, uses 
       the path provided in the *Python.exe Path* control below.

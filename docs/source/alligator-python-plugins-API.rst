@@ -28,7 +28,7 @@ The following input parameter types are supported:
    boolean, True, boolean: True or False
    AlliGator, Phasor Frequency, any exposed AlliGator parameter [*]_
 
-.. [*]: Requested AlliGator parameters are provided automatically to the plugin 
+.. [*] Requested AlliGator parameters are provided automatically to the plugin 
    function. To obtain a list of current exposed internal AlliGator parameters, 
    use the *Send* button in the **Settings:Plugins** panel. This will send a 
    copy of that list to the Clipboard, together with the current parameter 

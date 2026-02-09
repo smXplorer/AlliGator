@@ -14,7 +14,7 @@ import os
 import sys
 
 #html_theme = 'sphinx_rtd_theme'
-html_theme = 'groundwork'
+html_theme = 'shibuya'
 
 # -- Project information -----------------------------------------------------
 
@@ -37,17 +37,40 @@ release = '1.05'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 
+extensions = [
+     'sphinx.ext.todo',
+     'sphinx.ext.mathjax',
+     'shibuya',
+]
+
 # extensions = [
      # 'sphinx.ext.todo',
      # 'sphinx.ext.mathjax',
      # 'sphinx_rtd_theme',
+# ]
+
+# extensions = [
+     # 'sphinx.ext.todo',
+     # 'sphinx.ext.mathjax',
      # 'groundwork'
 # ]
-extensions = [
-     'sphinx.ext.todo',
-     'sphinx.ext.mathjax',
-     'groundwork'
-]
+
+# html_theme_options = {
+    # 'logo_only': False,
+    # 'prev_next_buttons_location': 'bottom',
+    # 'style_external_links': False,
+    # 'vcs_pageview_mode': '',
+    # 'style_nav_header_background': 'white',
+    # 'flyout_display': 'hidden',
+    # 'version_selector': True,
+    # 'language_selector': True,
+    # # Toc options
+    # 'collapse_navigation': True,
+    # 'sticky_navigation': True,
+    # 'navigation_depth': 3,
+    # 'includehidden': True,
+    # 'titles_only': False
+# }
 
 todo_include_todos = True
 
@@ -76,7 +99,7 @@ exclude_patterns = ['_build']
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+#pygments_style = 'sphinx'
 
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []

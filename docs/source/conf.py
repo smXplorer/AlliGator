@@ -15,33 +15,12 @@ import sys
 
 html_theme = 'sphinx_rtd_theme'
 
-# sys.path.insert(0, os.path.abspath('.'))
-
-on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
-
-if not on_rtd:
-    import sphinx_rtd_theme
-    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-    #html_theme = 'nature'
-    html_theme = 'sphinx_rtd_theme'
-
-# Theme options are theme-specific and customize the look and feel of a theme
-# further.  For a list of options available for each theme, see the
-# documentation.
-#
-#html_theme_options = {
-#    'github_url': 'https://github.com/Pylons/docs-style-guide',
-#    'canonical_url':
-#        'https://docs.pylonsproject.org/projects/docs-style-guide/en/latest',
-#}
-
 # -- Project information -----------------------------------------------------
 
 project = u'AlliGator'
 copyright = u'2015-2026, Regents of the University of California'
 author = u'X. Michalet'
 show_authors = True
-nitpicky = True
 
 # The short X.Y version.
 

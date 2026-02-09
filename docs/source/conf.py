@@ -53,16 +53,11 @@ release = '1.05'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 
-extensions = [
-    'sphinx.ext.todo',
-    'sphinx.ext.mathjax'
-]
-
-# extensions = [
-#     'sphinx.ext.todo',
-#     'sphinx.ext.mathjax',
-#     'sphinx_rtd_theme'
-# ]
+ extensions = [
+     'sphinx.ext.todo',
+     'sphinx.ext.mathjax',
+     'sphinx_rtd_theme'
+ ]
 
 todo_include_todos = True
 

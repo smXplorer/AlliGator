@@ -13,7 +13,8 @@
 import os
 import sys
 
-html_theme = 'sphinx_rtd_theme'
+#html_theme = 'sphinx_rtd_theme'
+html_theme = 'groundwork'
 
 # -- Project information -----------------------------------------------------
 
@@ -161,7 +162,6 @@ html_show_copyright = True
 
 # Output file base name for HTML help builder.
 #htmlhelp_basename = ''
-
 
 # -- Options for LaTeX output ---------------------------------------------
 

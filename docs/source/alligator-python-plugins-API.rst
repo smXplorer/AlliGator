@@ -5,9 +5,6 @@ AlliGator Python Plugins API v 1
 
 AlliGator versions: 0.63-current
 
-.. toctree::
-   alligator-internal-parameters
-
 Parameter Types
 ---------------
 The following input parameter types are supported:

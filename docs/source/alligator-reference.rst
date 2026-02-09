@@ -15,4 +15,5 @@ manual.
    graph-object
    image-color-palette
    selected-plot-style-window
+   alligator-version-history
    

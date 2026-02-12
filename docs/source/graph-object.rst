@@ -4,7 +4,7 @@ Graph Object
 ============
 
 Multiplot graph objects are ubiquitous in AlliGator and are packed with many 
-functionalities. Not all functions are available in al graphs (it wouldn't make 
+functionalities. Not all functions are available in all graphs (it wouldn't make 
 sense to fit a decay model to an intensity histogram, for instance), therefore 
 custom function descriptions will be found in page manuals dealing with each 
 specific graph object. The following will hold for most graphs, with some 
@@ -15,7 +15,7 @@ exceptions.
 Graph Object Anatomy
 --------------------
 
-A graph oject is comprised of:
+A graph object is comprised of:
 
 + a :ref:`plot area <plot-area>`
 + a :ref:`plot legend <plot-legend>`
@@ -37,7 +37,7 @@ example shown above, a single plot is displayed, but in general, more than one
 plot will be present. The list of available plots is found on the right in the 
 *plot legend*.
 
-The apparence of the plot area can be modified in the following manner:
+The appearance of the plot area can be modified in the following manner:
 
 + by modifying the range of displayed values (using the X and Y *scales* 
   directly, or using the *graph palette*)
@@ -54,12 +54,14 @@ Plot Legend
 
 The *plot legend* lists the plots stored in memory. Plot names do not need to 
 be different, but it is easier to distinguish them if they are, especially when 
-the list is long. In that case, a scrollbar will appear on the righthand side 
-of the legend. Move the scrollbar up and down using the mouse wheel to show the 
-name of all plots.
+the list is long. In that case, a scrollbar will appear on the right-hand side 
+of the legend. Move the scrollbar up and down either using the mouse wheel while 
+hovering over the scrollbar, or drag the scrollbar with the mouse, or click on 
+the up and down arrow at the top and bottom of the scrollbar respectively, to 
+show the name of all plots.
 
 Long plot names will not show up fully in the legend, but hovering over a plot 
-name with the mouse will reveal a 'tooltip' with the full name of the plot.
+name with the mouse will reveal a 'tool-tip' with the full name of the plot.
 
 Plot names can be edited by clicking in them.
 
@@ -111,7 +113,7 @@ next.
   window.
 + ``Transpose Plot``: swaps X- and Y-arrays.
 + ``Merge Selected Plots``: appends the X- and Y-arrays of all selected plots. 
-  This can be used to build a single scatterplot from many smaller ones, or to 
+  This can be used to build a single scatter plot from many smaller ones, or to 
   stitch together decays covering different parts of the time axis.
 + ``Plot Histogram``: selecting this item opens up a dialog window 
   allowing specifying options to define the way the histogram of the 

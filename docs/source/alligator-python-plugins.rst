@@ -57,14 +57,16 @@ developer in the *Input Parameters Definition* section, and is passed to the
 Plugin function as a dictionary (see below and 
 :ref:`AlliGator Python Plugins API page <alligator-python-plugins-API>` 
 for details). Some of this data is provided by the user in a dialog window, 
-which is automatically opened by AlliGator before executing the plugin function.
-The rest is specifically requested internal AlliGator data and does not require 
-user input.
+which is automatically opened by AlliGator before executing the plugin function 
+(if needed).
+
+The rest is plugin-requested internal AlliGator parameters and/or data and does 
+not require user input.
 
 The data returned by the function is, as the input data, separated into two 
 parts: the default data type for the function's target, and the plugin-specific 
 data, specified by the user in an *AlliGator Output Value Type & Destination* 
-section. As the input parameters specidied in the *Input Parameters Definition* 
+section. As the input parameters specified in the *Input Parameters Definition* 
 section, it is passed as a dictionary (see below and 
 :ref:`AlliGator Python Plugins API page <alligator-python-plugins-API>` 
 for details).

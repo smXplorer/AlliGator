@@ -87,7 +87,7 @@ The **Source Image** panel is comprised of 3 sub-panels:
   take effect).
 
     * *Remove Hot Pixels*: when checked off, applied hot pixel removal algorithm.
-    * *Percentile*: percentaile of high intensity pixels to consider as hot 
+    * *Percentile*: percentile of high intensity pixels to consider as hot 
       pixels.
     * *Use Hot Pixel Mask*: when checked off, ignores the *Percentile* parameter 
       and used the *Hot Pixel Mask Image* instead.
@@ -173,12 +173,12 @@ The **Source Image** panel is comprised of 3 sub-panels:
 - *Scale Bar Options*: requires reloading the image or clicking the *Scale Bar 
   Overlay* button on the **Source Image** panel.
 
-    * *Show Scale Bar Overlay*: check this off to automaticxally show the scale 
+    * *Show Scale Bar Overlay*: check this off to automatically show the scale 
       bar when loading a new dataset.
     * *Scale Bar X/Y*: location of the scale bar in pixel unit. X = 0 
       corresponds 
       to the left of the image. Y = 0 corresponds to the top of the image.
-    * *Scale Bar Lenght/Height*: dimension of the displayed scale bar in 
+    * *Scale Bar Length/Height*: dimension of the displayed scale bar in 
       physical units.
 
 .. _alligator-settings-data-information:
@@ -195,7 +195,7 @@ The options in this panel are discussed in the
 
 - *Gate Characteristics*: loaded with the dataset file, although in some cases 
   (e.g. raw *.ptu* files), the *# Gates* can be specified before loading. These 
-  parameers can be overwritten after loading, for instance to correct for a 
+  parameters can be overwritten after loading, for instance to correct for a 
   known bogus parameter value.
 
     * *Gate Width*: for a square gate (or bin), defines the nominal full width 
@@ -209,7 +209,7 @@ The options in this panel are discussed in the
       in every other gate being loaded.
     * *# Gates*: number of gates in the dataset (or number of gates to bin the 
       data into in the case of a time-tagged dataset such as *.ptu* files). For 
-      fual-gate datasets, this corresponds to the number of channel pairs.
+      dual-gate datasets, this corresponds to the number of channel pairs.
     * *Gate Image Exposure*: time during which the detector is actually capable 
       of detecting photons (= *n x W*, where *n* is the number of laser periods 
       and *W* the gate width).
@@ -225,7 +225,7 @@ The options in this panel are discussed in the
       the beginning/end of the series when loading the dataset.
     * Gates to Keep*: *First/Last* are the indices of the first (default: 0) and 
       last gate (default: 4294,967,295) to keep when loading the dataset. The 
-      indice of the first gate in the dataset is 0, while the indice of the 
+      indice of the first gate in the dataset is 0, while the index of the 
       last gate is *G-1*, where *G* is the total number of gates in the dataset.
 
 - *Channel Name*: List showing the root name of available gates in the loaded 
@@ -382,7 +382,7 @@ These options are used for fits of the decay to a square pulse or its variants
 - *Center on Midpoint*: defines whether the rising and falling edges of the 
   "square" pulse pass through the rising and falling edges midpoints.
   
-- Smoothen Plot*: defines whether the decay is smoothened before bing fitted to 
+- Smoothen Plot*: defines whether the decay is smoothened before being fitted to 
   a square pulse.
 
 
@@ -536,7 +536,7 @@ in the :ref:`alligator-phasor-plot-panel` page of the manual.
         of its pixel and those of its neighbors., the weights decreasing 
         linearly from 1 away from the center (to zero for the pixels outside 
         the kernel dimension).
-      + *Gaussian*: each phasor is replaced by a weighted average ofthe phasor 
+      + *Gaussian*: each phasor is replaced by a weighted average of the phasor 
         of its pixel and those of its neighbors., the weights decreasing 
         according to a Gaussian width :math:`\sigma = Bin/6` from 1 away from 
         the center.
@@ -618,7 +618,7 @@ Phasor Plot Information Overlay
 
     + *Reference Radius*: size of the dots representing references 1 & 2 on the 
       phasor plot.
-    + *Draw Reference Segment*: whether or not ro connect both references by a 
+    + *Draw Reference Segment*: whether or not to connect both references by a 
       (dashed) line.
     + *Color Map Type*: ``Interpolate Reference Colors`` or ``Use Custom Map``.
     + *Average Lifetime Color Map*: right-click on the box to select predefined 
@@ -678,7 +678,7 @@ Phasor Plot Appearance
         + *Ticks*: whether or not to display the axes ticks.
         + *Labels*: whether or not to display the tick labels.
         + *Size*: label size in pixels.
-        + *Distance*: distance of the labels from the axess in pixels.
+        + *Distance*: distance of the labels from the axes in pixels.
         
 
 .. _alligator-settings-phasor-graph:
@@ -689,7 +689,7 @@ Phasor Graph
 The **Phasor Graph** panel of the **Settings** window contains options and 
 parameters that have an effect beyond the **Phasor Graph** panel of AlliGator.
 
-.. image:: images/AlliGator-Settings-Phasor-Gaph.png
+.. image:: images/AlliGator-Settings-Phasor-Graph.png
    :align: center
 
 - *Phasor Frequency*: sets the frequency used for phasor computation throughout 
@@ -700,7 +700,7 @@ parameters that have an effect beyond the **Phasor Graph** panel of AlliGator.
   dataset and *n* is an integer incremented to avoid overwriting previous files.
   *xxx* is the file extension corresponding to the *Saved Displayed Image File 
   Format* defined in the :ref:`alligator-settings-miscellaneous` Settings panel.
-- *Phasor SDV Options*: used in case an estimate of the shotnoise contribution 
+- *Phasor SDV Options*: used in case an estimate of the shot noise contribution 
   to the phasor (and average lifetime) standard deviation needs to be estimated.
 
     + *Compute Estimated SDV*: turns the option on or off.
@@ -832,12 +832,12 @@ Phasor Calibration
 - *Calibration Options*:
 
     + *Calibration Lifetime*: single-lifetime lifetime of the decay used as 
-      calbration phasor.
+      calibration phasor.
     + *Calibration Type*: ``None``/``Single Phasor``/``Phasor Series``/``Phasor 
       Map``
     + *Use Backup Calibration if needed*: check this box off to use backup a 
       calibration phasor if none is available. The type of backup calibration 
-      phasor ised is defined by *Backup Calibration Type*.
+      phasor used is defined by *Backup Calibration Type*.
     + *Backup Calibration Type*: if there is no calibration phasor defined for 
       a dataset in a series, and *Use Backup Calibration if needed* is checked 
       off, the backup calibration used instead can be of two types:
@@ -890,7 +890,7 @@ Plugins
       the corresponding menus.
     + *Reset Python Session*: press this button to close the current python 
       session and restart a new one.
-    + *Valid Python Session*: LED tuned on when a python session is currenttly 
+    + *Valid Python Session*: LED tuned on when a python session is currently 
       running (off is no valid python executable has been found).
 
 - *Send JSON to Clipboard*: sends the list of JSON-formatted parameters to the 
@@ -915,7 +915,7 @@ Miscellaneous
     + *# Logical Processors Used*: select the number of logical processors 
       available to AlliGator for parallel computing. The number of available 
       logical processors is indicated to the left of this control.
-    + *Verbose Mode*: if checked off, outputs information on indivudal 
+    + *Verbose Mode*: if checked off, outputs information on individual 
       processing steps during AlliGator processing (displayed in italics and 
       light gray color in the Notebook). This can be useful to provide a 
       complete record of a workflow.
@@ -925,7 +925,7 @@ Miscellaneous
       message to the Notebook (useful for debugging or error reporting 
       purposes). Errors are ignored and do not prevent AliGator from running, 
       but might indicate bugs or incorrect input parameters.
-    + *Beep on Error*: if checked off, each error is signalled by a Windows 
+    + *Beep on Error*: if checked off, each error is signaled by a Windows 
       "Critical Stop" sound.
     + *Beep after Script*: if checked off, outputs a Windows "Exclamation" 
       sound.

@@ -32,6 +32,7 @@
 	<Item Name="Graph Get-Set Color Array.vi" Type="VI" URL="../Plot Style Selector/Graph Get-Set Color Array.vi"/>
 	<Item Name="Graph Legend Special Coordinates.ctl" Type="VI" URL="../Graph Legend Special Coordinates.ctl"/>
 	<Item Name="Graph Plot Color Chooser Update.vi" Type="VI" URL="../Plot Style Selector/Graph Plot Color Chooser Update.vi"/>
+	<Item Name="Graph Scale Information.ctl" Type="VI" URL="../Graph Scale Information.ctl"/>
 	<Item Name="LabVIEW Plot Interpolation.ctl" Type="VI" URL="../LabVIEW Plot Interpolation.ctl"/>
 	<Item Name="Last Plot Mouse Coordinates Constant.vi" Type="VI" URL="../Last Plot Mouse Coordinates Constant.vi"/>
 	<Item Name="Load-Save Color Lists.vi" Type="VI" URL="../Plot Style Selector/Load-Save Color Lists.vi"/>

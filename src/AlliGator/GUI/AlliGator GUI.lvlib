@@ -68,4 +68,5 @@
 	<Item Name="Alligator.rtm" Type="Document" URL="../Alligator.rtm"/>
 	<Item Name="AlliGator.vi" Type="VI" URL="../AlliGator.vi"/>
 	<Item Name="AlliGator_Graphs Metadata Types.vi" Type="VI" URL="../../AlliGator_Graphs Metadata Types.vi"/>
+	<Item Name="Color Scale.rtm" Type="Document" URL="../../Color Scale.rtm"/>
 </Library>

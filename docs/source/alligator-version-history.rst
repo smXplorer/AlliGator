@@ -13,6 +13,13 @@ AlliGator Version History
 Note: version numbers followed by an asterisk have not been released.
 
 -----------------
+1.06 (2026-02-18)
+-----------------
+
+    - New Feature
+        + Added support for Notebook Themes
+
+-----------------
 1.05 (2026-01-31)
 -----------------
 

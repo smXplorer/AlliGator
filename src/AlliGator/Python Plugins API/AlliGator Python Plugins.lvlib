@@ -18,13 +18,6 @@
 		<Item Name="AlliGator Python Plugin Target Type.ctl" Type="VI" URL="../AlliGator Python Plugin Target Type.ctl"/>
 		<Item Name="AlliGator Type of Plot Data.ctl" Type="VI" URL="../AlliGator Type of Plot Data.ctl"/>
 	</Item>
-	<Item Name="Plugin Data Type Ctrls" Type="Folder">
-		<Item Name="AlliGator Python Plugin FLI Dataset Data v1.ctl" Type="VI" URL="../AlliGator Python Plugin FLI Dataset Data v1.ctl"/>
-		<Item Name="AlliGator Python Plugin Graph Data Input v1.ctl" Type="VI" URL="../AlliGator Python Plugin Graph Data Input v1.ctl"/>
-		<Item Name="AlliGator Python Plugin Image Data v1.ctl" Type="VI" URL="../AlliGator Python Plugin Image Data v1.ctl"/>
-		<Item Name="AlliGator Python Plugin Parameter Map Data v1.ctl" Type="VI" URL="../AlliGator Python Plugin Parameter Map Data v1.ctl"/>
-		<Item Name="AlliGator Python Plugin Plot Data v1.ctl" Type="VI" URL="../AlliGator Python Plugin Plot Data v1.ctl"/>
-	</Item>
 	<Item Name="Common" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Item Name="AlliGator Add Python Functions to Menu.vi" Type="VI" URL="../AlliGator Add Python Functions to Menu.vi"/>
@@ -50,7 +43,7 @@
 	</Item>
 	<Item Name="Decay Graph" Type="Folder">
 		<Item Name="AlliGator Run XY Graph Python Function.vi" Type="VI" URL="../AlliGator Run XY Graph Python Function.vi"/>
-		<Item Name="AlliGator XY Graph Python Function Handler Core.vi" Type="VI" URL="../AlliGator XY Graph Python Function Handler Core.vi"/>
+		<Item Name="AlliGator XY Graph Python Function Handler.vi" Type="VI" URL="../AlliGator XY Graph Python Function Handler.vi"/>
 	</Item>
 	<Item Name="FLI Dataset" Type="Folder">
 		<Item Name="AlliGator Add Missing Parameter Map Parameters.vi" Type="VI" URL="../AlliGator Add Missing Parameter Map Parameters.vi"/>
@@ -60,9 +53,7 @@
 		<Item Name="AlliGator Python Plugin Get FLI Dataset Data.vi" Type="VI" URL="../AlliGator Python Plugin Get FLI Dataset Data.vi"/>
 		<Item Name="AlliGator Run FLI Dataset Python Function.vi" Type="VI" URL="../AlliGator Run FLI Dataset Python Function.vi"/>
 	</Item>
-	<Item Name="Internal Data Access" Type="Folder">
-		<Item Name="AlliGator Pythin Plugin Get Reference Decay.vi" Type="VI" URL="../AlliGator Pythin Plugin Get Reference Decay.vi"/>
-	</Item>
+	<Item Name="Internal Data Access" Type="Folder"/>
 	<Item Name="Main menu" Type="Folder">
 		<Item Name="AlliGator Add Plugins to Main Menu.vi" Type="VI" URL="../AlliGator Add Plugins to Main Menu.vi"/>
 	</Item>
@@ -98,5 +89,24 @@
 	<Item Name="Source Image" Type="Folder">
 		<Item Name="AlliGator Image Python Function Handler Core.vi" Type="VI" URL="../AlliGator Image Python Function Handler Core.vi"/>
 		<Item Name="AlliGator Run Source Image Python Function.vi" Type="VI" URL="../AlliGator Run Source Image Python Function.vi"/>
+	</Item>
+	<Item Name="API v1" Type="Folder">
+		<Item Name="Plugin Data Types" Type="Folder">
+			<Item Name="AlliGator Python Plugin FLI Dataset Data v1.ctl" Type="VI" URL="../API v1/AlliGator Python Plugin FLI Dataset Data v1.ctl"/>
+			<Item Name="AlliGator Python Plugin Graph Data Input v1.ctl" Type="VI" URL="../API v1/AlliGator Python Plugin Graph Data Input v1.ctl"/>
+			<Item Name="AlliGator Python Plugin Image Data v1.ctl" Type="VI" URL="../API v1/AlliGator Python Plugin Image Data v1.ctl"/>
+			<Item Name="AlliGator Python Plugin Parameter Map Data v1.ctl" Type="VI" URL="../API v1/AlliGator Python Plugin Parameter Map Data v1.ctl"/>
+			<Item Name="AlliGator Python Plugin Plot Data v1.ctl" Type="VI" URL="../API v1/AlliGator Python Plugin Plot Data v1.ctl"/>
+		</Item>
+		<Item Name="AlliGator Run XY Graph Python Function (API v1).vi" Type="VI" URL="../API v1/AlliGator Run XY Graph Python Function (API v1).vi"/>
+		<Item Name="AlliGator Pythin Plugin Get Reference Decay (API v1).vi" Type="VI" URL="../API v1/AlliGator Pythin Plugin Get Reference Decay (API v1).vi"/>
+	</Item>
+	<Item Name="API v1.1" Type="Folder">
+		<Item Name="Plugin Data Type Ctrls" Type="Folder">
+			<Item Name="AlliGator Python Plugin Plot Data v1.1.ctl" Type="VI" URL="../API v1.1/AlliGator Python Plugin Plot Data v1.1.ctl"/>
+			<Item Name="AlliGator Python Plugin Graph Data Input v1.1.ctl" Type="VI" URL="../API v1.1/AlliGator Python Plugin Graph Data Input v1.1.ctl"/>
+		</Item>
+		<Item Name="AlliGator Run XY Graph Python Function (API v1.1).vi" Type="VI" URL="../API v1.1/AlliGator Run XY Graph Python Function (API v1.1).vi"/>
+		<Item Name="AlliGator Pythin Plugin Get Reference Decay (API v1.1).vi" Type="VI" URL="../API v1.1/AlliGator Pythin Plugin Get Reference Decay (API v1.1).vi"/>
 	</Item>
 </Library>

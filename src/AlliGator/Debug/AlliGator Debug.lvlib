@@ -10,6 +10,6 @@
 
 </Property>
 	<Item Name="AlliGator Debug Action List.ctl" Type="VI" URL="../AlliGator Debug Action List.ctl"/>
-	<Item Name="AlliGator Feature Tests.vi" Type="VI" URL="../../AlliGator Feature Tests.vi"/>
+	<Item Name="AlliGator DEBUG Actions.vi" Type="VI" URL="../../Action Engine/AlliGator DEBUG Actions.vi"/>
 	<Item Name="AlliGator Test Decay Fit Parameter Map Color Scale Refnum.vi" Type="VI" URL="../AlliGator Test Decay Fit Parameter Map Color Scale Refnum.vi"/>
 </Library>

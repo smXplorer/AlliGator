@@ -7,5 +7,6 @@
 	<Item Name="1D Histogram (G) v6.vim" Type="VI" URL="../1D Histogram (G) v6.vim"/>
 	<Item Name="Get Histogram Low &amp; High Percentile Locations.vi" Type="VI" URL="../Get Histogram Low &amp; High Percentile Locations.vi"/>
 	<Item Name="Histogram Min &amp; Max Percentiles.vi" Type="VI" URL="../Histogram Min &amp; Max Percentiles.vi"/>
+	<Item Name="Histogram to CDF.vi" Type="VI" URL="../Histogram to CDF.vi"/>
 	<Item Name="Set-Get Histogram Min &amp; Max Cursor Locations.vi" Type="VI" URL="../Set-Get Histogram Min &amp; Max Cursor Locations.vi"/>
 </Library>

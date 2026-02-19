@@ -1,3 +1,10 @@
+2026-02-18 (XM)
+- Added support user-defined Themes
+- Load/Saving of Themes
+
+2026-02-13 (XM)
+- Added Dialog to define default text formats and change the page background color
+
 2023-10-20 (XM)
 - Improved Search String Dialog behavior
 

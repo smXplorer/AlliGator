@@ -26,6 +26,7 @@
 		<Item Name="XY Graph Plot Shift Method.ctl" Type="VI" URL="../XY Graph Plot Shift Method.ctl"/>
 		<Item Name="XY Graph Plot Shift Parameters.ctl" Type="VI" URL="../XY Graph Plot Shift Parameters.ctl"/>
 		<Item Name="XY Graph Save Plot Data.ctl" Type="VI" URL="../XY Graph Save Plot Data.ctl"/>
+		<Item Name="XY Graph Scales Information.ctl" Type="VI" URL="../XY Graph Scales Information.ctl"/>
 		<Item Name="XY Graph Selected Plot Info+Flag.ctl" Type="VI" URL="../XY Graph Selected Plot Info+Flag.ctl"/>
 		<Item Name="XY Graph Selected Plot Info.ctl" Type="VI" URL="../XY Graph Selected Plot Info.ctl"/>
 		<Item Name="XY Graph Sliced CV Abscissa Location.ctl" Type="VI" URL="../XY Graph Sliced CV Abscissa Location.ctl"/>
@@ -154,7 +155,9 @@
 			<Item Name="XY Graph Get Y Scales Grid Colors.vi" Type="VI" URL="../XY Graph Get Y Scales Grid Colors.vi"/>
 			<Item Name="XY Graph Set Y Scales Grid Colors.vi" Type="VI" URL="../XY Graph Set Y Scales Grid Colors.vi"/>
 		</Item>
+		<Item Name="XY  Graph Get Multiple Scales Information.vi" Type="VI" URL="../XY  Graph Get Multiple Scales Information.vi"/>
 		<Item Name="XY Graph Get Plot Name &amp; Scale Arrays.vi" Type="VI" URL="../XY Graph Get Plot Name &amp; Scale Arrays.vi"/>
+		<Item Name="XY Graph Get Plot Properties.vi" Type="VI" URL="../XY Graph Get Plot Properties.vi"/>
 		<Item Name="XY Graph Is Plot Valid.vi" Type="VI" URL="../XY Graph Is Plot Valid.vi"/>
 		<Item Name="XY Graph Number of Plots.vi" Type="VI" URL="../XY Graph Number of Plots.vi"/>
 	</Item>
@@ -254,6 +257,7 @@
 	<Item Name="XY Graph Get Head &amp; Tail Fraction from Cursors.vi" Type="VI" URL="../XY Graph Get Head &amp; Tail Fraction from Cursors.vi"/>
 	<Item Name="XY Graph Get Plot Data Point at Mouse.vi" Type="VI" URL="../XY Graph Get Plot Data Point at Mouse.vi"/>
 	<Item Name="XY Graph Get Plot Data Point near Point.vi" Type="VI" URL="../XY Graph Get Plot Data Point near Point.vi"/>
+	<Item Name="XY Graph Get Scale Information.vi" Type="VI" URL="../XY Graph Get Scale Information.vi"/>
 	<Item Name="XY Graph Get Selected Plot(s) Indices.vi" Type="VI" URL="../XY Graph Get Selected Plot(s) Indices.vi"/>
 	<Item Name="XY Graph Get Tail (&amp; Head) &amp; Extra Points for Extrapolated Decay.vi" Type="VI" URL="../XY Graph Get Tail (&amp; Head) &amp; Extra Points for Extrapolated Decay.vi"/>
 	<Item Name="XY Graph Get Tail or Head Fraction.vi" Type="VI" URL="../XY Graph Get Tail or Head Fraction.vi"/>

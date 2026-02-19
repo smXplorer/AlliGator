@@ -25,11 +25,11 @@ show_authors = True
 
 # The short X.Y version.
 
-version = '1.05'
+version = '1.06'
 
 # The full version, including alpha/beta/rc tags
 
-release = '1.05'
+release = '1.06'
 
 # -- General configuration ---------------------------------------------------
 

@@ -31,5 +31,4 @@
 	<Item Name="AlliGator Save Parameter Map to ASCII.vi" Type="VI" URL="../AlliGator Save Parameter Map to ASCII.vi"/>
 	<Item Name="AlliGator Select Parameter Scatter Plot Type.vi" Type="VI" URL="../AlliGator Select Parameter Scatter Plot Type.vi"/>
 	<Item Name="AlliGator Update Parameter Map Palette.vi" Type="VI" URL="../AlliGator Update Parameter Map Palette.vi"/>
-	<Item Name="AlliGator Update Selected Map Set.vi" Type="VI" URL="../AlliGator Update Selected Map Set.vi"/>
 </Library>

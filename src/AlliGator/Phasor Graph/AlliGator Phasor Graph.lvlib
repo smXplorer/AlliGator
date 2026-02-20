@@ -30,13 +30,6 @@
 		<Item Name="AlliGator Raw Phasor Plot Data v5.ctl" Type="VI" URL="../AlliGator Raw Phasor Plot Data v5.ctl"/>
 		<Item Name="AlliGator Phasor Plot Statistics.ctl" Type="VI" URL="../AlliGator Phasor Plot Statistics.ctl"/>
 	</Item>
-	<Item Name="Menus" Type="Folder">
-		<Item Name="Calibration Lifetime.rtm" Type="Document" URL="../../Calibration Lifetime.rtm"/>
-		<Item Name="Current Phasor (g,s).rtm" Type="Document" URL="../Current Phasor (g,s).rtm"/>
-		<Item Name="Current Phasor (m,phi).rtm" Type="Document" URL="../../Current Phasor (m,phi).rtm"/>
-		<Item Name="Current Phasor.rtm" Type="Document" URL="../../Current Phasor.rtm"/>
-		<Item Name="Phasor Frequency Control.rtm" Type="Document" URL="../../Phasor Frequency Control.rtm"/>
-	</Item>
 	<Item Name="AlliGator Add Phasor Value to Plot v2.vi" Type="VI" URL="../AlliGator Add Phasor Value to Plot v2.vi"/>
 	<Item Name="AlliGator All ROIs Phasor Analysis Script.vi" Type="VI" URL="../AlliGator All ROIs Phasor Analysis Script.vi"/>
 	<Item Name="AlliGator All ROIs Phasor Analysis.vi" Type="VI" URL="../AlliGator All ROIs Phasor Analysis.vi"/>

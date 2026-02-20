@@ -86,5 +86,4 @@
 	<Item Name="AlliGator Use Phasor Plot UC-Principal Axis Intersections as References.vi" Type="VI" URL="../AlliGator Use Phasor Plot UC-Principal Axis Intersections as References.vi"/>
 	<Item Name="AlliGator Use Phasor Plot UC-Segment Intersections as References.vi" Type="VI" URL="../AlliGator Use Phasor Plot UC-Segment Intersections as References.vi"/>
 	<Item Name="AlliGator Variable Names.vi" Type="VI" URL="../AlliGator Variable Names.vi"/>
-	<Item Name="Clear Phasor Overlay.rtm" Type="Document" URL="../Clear Phasor Overlay.rtm"/>
 </Library>

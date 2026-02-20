@@ -65,8 +65,6 @@
 	<Item Name="AlliGator Update Gate Image Slide.vi" Type="VI" URL="../AlliGator Update Gate Image Slide.vi"/>
 	<Item Name="AlliGator Update Menu.vi" Type="VI" URL="../AlliGator Update Menu.vi"/>
 	<Item Name="AlliGator Windows List.vi" Type="VI" URL="../AlliGator Windows List.vi"/>
-	<Item Name="Alligator.rtm" Type="Document" URL="../Alligator.rtm"/>
 	<Item Name="AlliGator.vi" Type="VI" URL="../AlliGator.vi"/>
-	<Item Name="AlliGator_Graphs Metadata Types.vi" Type="VI" URL="../../AlliGator_Graphs Metadata Types.vi"/>
-	<Item Name="Color Scale.rtm" Type="Document" URL="../../Color Scale.rtm"/>
+	<Item Name="AlliGator_Graphs Metadata Types.vi" Type="VI" URL="../AlliGator_Graphs Metadata Types.vi"/>
 </Library>

@@ -30,7 +30,6 @@
 		<Item Name="AlliGator Get-Set TIFF Series Options.vi" Type="VI" URL="../AlliGator Get-Set TIFF Series Options.vi"/>
 		<Item Name="AlliGator Multiframe Loading Start.vi" Type="VI" URL="../AlliGator Multiframe Loading Start.vi"/>
 		<Item Name="AlliGator Script_Convert FLI Dataset to HDF5 or TIFF Series.vi" Type="VI" URL="../AlliGator Script_Convert FLI Dataset to HDF5 or TIFF Series.vi"/>
-		<Item Name="Batch Dataset Export Window.rtm" Type="Document" URL="../Batch Dataset Export Window.rtm"/>
 	</Item>
 	<Item Name="Close" Type="Folder">
 		<Item Name="AlliGator Close FLI Dataset Series.vi" Type="VI" URL="../AlliGator Close FLI Dataset Series.vi"/>

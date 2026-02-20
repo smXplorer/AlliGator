@@ -7,14 +7,12 @@
 	<Item Name="Ctrls" Type="Folder">
 		<Item Name="AlliGator Intensity Slice Definition.ctl" Type="VI" URL="../AlliGator Intensity Slice Definition.ctl"/>
 		<Item Name="AlliGator Lifetime &amp; Other Parameters Plot Metadata.ctl" Type="VI" URL="../AlliGator Lifetime &amp; Other Parameters Plot Metadata.ctl"/>
-		<Item Name="Lifetime &amp; Other Parameters Graph Metadata.ctl" Type="VI" URL="../../Lifetime &amp; Other Parameters Graph Metadata.ctl"/>
 	</Item>
 	<Item Name="AlliGator Compute CV Mean &amp; SDV.vi" Type="VI" URL="../AlliGator Compute CV Mean &amp; SDV.vi"/>
 	<Item Name="AlliGator Compute Sliced Mean, SDV &amp; CV Plots.vi" Type="VI" URL="../AlliGator Compute Sliced Mean, SDV &amp; CV Plots.vi"/>
 	<Item Name="AlliGator Format Slice Analysis Plots.vi" Type="VI" URL="../../Decay Fit Parameter Map/AlliGator Format Slice Analysis Plots.vi"/>
 	<Item Name="AlliGator Histogram Bin Size Definition Dialog.vi" Type="VI" URL="../AlliGator Histogram Bin Size Definition Dialog.vi"/>
 	<Item Name="AlliGator Plot Histogram Event.vi" Type="VI" URL="../AlliGator Plot Histogram Event.vi"/>
-	<Item Name="AlliGator Power Law Fit from Intensity Distribution.vi" Type="VI" URL="../AlliGator Power Law Fit from Intensity Distribution.vi"/>
 	<Item Name="AlliGator Sliced Analysis Initialization.vi" Type="VI" URL="../AlliGator Sliced Analysis Initialization.vi"/>
 	<Item Name="AlliGator Sliced Mean, SDV &amp; CV Enter Data Dialog.vi" Type="VI" URL="../AlliGator Sliced Mean, SDV &amp; CV Enter Data Dialog.vi"/>
 	<Item Name="AlliGator Sliced Mean, SDV &amp; CV Plots Event.vi" Type="VI" URL="../AlliGator Sliced Mean, SDV &amp; CV Plots Event.vi"/>

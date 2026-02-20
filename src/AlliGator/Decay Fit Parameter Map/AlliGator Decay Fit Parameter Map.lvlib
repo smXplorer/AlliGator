@@ -65,5 +65,4 @@
 	<Item Name="AlliGator Select Decay Fit Parameter Scatterplot Type.vi" Type="VI" URL="../AlliGator Select Decay Fit Parameter Scatterplot Type.vi"/>
 	<Item Name="AlliGator Update Decay Fit Parameter Map Palette.vi" Type="VI" URL="../AlliGator Update Decay Fit Parameter Map Palette.vi"/>
 	<Item Name="AlliGator Used ROIs String.vi" Type="VI" URL="../AlliGator Used ROIs String.vi"/>
-	<Item Name="Decay Fit Parameter Map Image.rtm" Type="Document" URL="../Decay Fit Parameter Map Image.rtm"/>
 </Library>

@@ -245,7 +245,6 @@
 	<Item Name="LM model function and gradient (IRF deconvolution + 1-Exp).vi" Type="VI" URL="../Decay Convolution/LM model function and gradient (IRF deconvolution + 1-Exp).vi"/>
 	<Item Name="LM model Function and gradient (Logistic Square-Gated IRF).vi" Type="VI" URL="../Square Pulse/LM model Function and gradient (Logistic Square-Gated IRF).vi"/>
 	<Item Name="LM model Function and gradient (Tilted Logistic Square-Gated IRF).vi" Type="VI" URL="../Square Pulse/LM model Function and gradient (Tilted Logistic Square-Gated IRF).vi"/>
-	<Item Name="LM Power Law from Intensity Distribution and gradient.vi" Type="VI" URL="../Power Law/LM Power Law from Intensity Distribution and gradient.vi"/>
 	<Item Name="LM Single Exponential and gradient.vi" Type="VI" URL="../Single Exponential/LM Single Exponential and gradient.vi"/>
 	<Item Name="LM Three Asymmetric Gaussians and gradient.vi" Type="VI" URL="../Three Asymmetric Gaussians/LM Three Asymmetric Gaussians and gradient.vi"/>
 	<Item Name="LM Three Gaussians and gradient.vi" Type="VI" URL="../Three Gaussians/LM Three Gaussians and gradient.vi"/>

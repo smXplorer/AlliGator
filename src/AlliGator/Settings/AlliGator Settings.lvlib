@@ -76,6 +76,4 @@
 	<Item Name="AlliGator Update Settings Python Options &amp; Valid Flag.vi" Type="VI" URL="../AlliGator Update Settings Python Options &amp; Valid Flag.vi"/>
 	<Item Name="AlliGator Update Settings Python Options.vi" Type="VI" URL="../AlliGator Update Settings Python Options.vi"/>
 	<Item Name="AlliGator Update Settings SEPL Parameters.vi" Type="VI" URL="../AlliGator Update Settings SEPL Parameters.vi"/>
-	<Item Name="Decay Pre-Processing Operations Order.rtm" Type="Document" URL="../Decay Pre-Processing Operations Order.rtm"/>
-	<Item Name="Phasor Graph Frequency.rtm" Type="Document" URL="../Phasor Graph Frequency.rtm"/>
 </Library>

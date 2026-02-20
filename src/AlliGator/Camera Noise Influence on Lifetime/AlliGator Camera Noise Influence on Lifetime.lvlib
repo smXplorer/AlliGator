@@ -11,7 +11,6 @@
 		<Item Name="Power Law Parameters.ctl" Type="VI" URL="../Power Law Parameters.ctl"/>
 	</Item>
 	<Item Name="AlliGator Get Dataset ICCD Parameters.vi" Type="VI" URL="../AlliGator Get Dataset ICCD Parameters.vi"/>
-	<Item Name="AlliGator ICCD DAQ Parameters Dialog.vi" Type="VI" URL="../../ICCD Noise Analysis/AlliGator ICCD DAQ Parameters Dialog.vi"/>
 	<Item Name="CV ICCD Data Plot.vi" Type="VI" URL="../CV ICCD Data Plot.vi"/>
 	<Item Name="CV Power Law Fit.vi" Type="VI" URL="../CV Power Law Fit.vi"/>
 	<Item Name="ICCD Noise Data Viewer.vi" Type="VI" URL="../ICCD Noise Data Viewer.vi"/>

@@ -51,5 +51,4 @@
 	<Item Name="AlliGator Update Checkmarks in Source Image Overlay to Erase Button Menu.vi" Type="VI" URL="../AlliGator Update Checkmarks in Source Image Overlay to Erase Button Menu.vi"/>
 	<Item Name="AlliGator Update Displayed Image.vi" Type="VI" URL="../AlliGator Update Displayed Image.vi"/>
 	<Item Name="AlliGator Update Local Decay Window Event.vi" Type="VI" URL="../AlliGator Update Local Decay Window Event.vi"/>
-	<Item Name="Clear Source Image Overlay.rtm" Type="Document" URL="../Clear Source Image Overlay.rtm"/>
 </Library>

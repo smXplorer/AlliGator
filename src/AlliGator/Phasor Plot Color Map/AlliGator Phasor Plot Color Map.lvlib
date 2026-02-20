@@ -23,5 +23,4 @@
 	<Item Name="AlliGator Set Phasor Map Color &amp; Cursor Arrays.vi" Type="VI" URL="../AlliGator Set Phasor Map Color &amp; Cursor Arrays.vi"/>
 	<Item Name="AlliGator Update Phasor Color Map Vertices Wrapper.vi" Type="VI" URL="../AlliGator Update Phasor Color Map Vertices Wrapper.vi"/>
 	<Item Name="AlliGator Update Phasor Color Picker Color.vi" Type="VI" URL="../AlliGator Update Phasor Color Picker Color.vi"/>
-	<Item Name="Color Map Picker Graph.rtm" Type="Document" URL="../Color Map Picker Graph.rtm"/>
 </Library>

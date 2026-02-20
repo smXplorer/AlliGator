@@ -11,5 +11,4 @@
 </Property>
 	<Item Name="AlliGator Build Dataset Information String.vi" Type="VI" URL="../AlliGator Build Dataset Information String.vi"/>
 	<Item Name="Alligator Dataset Information Window.vi" Type="VI" URL="../Alligator Dataset Information Window.vi"/>
-	<Item Name="Dataset Information.rtm" Type="Document" URL="../Dataset Information.rtm"/>
 </Library>

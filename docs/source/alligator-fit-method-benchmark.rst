@@ -8,11 +8,48 @@ Method Benchmark`` menu item. This tool allows computing the effect on fitted
 decay parameters uncertainty of a finite signal (total number of collected 
 photons) using simulations.
 
-The window is comprised of 3 panels:
+The window is comprised of one menu bar and 4 panels, accessible via a drop-down 
+menu located below the menu bar.
 
+Menu bar
+++++++++
+
+- File
+
+  - *Export Results* (``Ctrl+S``): Outputs the last script's results to an ASCII 
+    file.
+    
+  - *Quit* (``Ctrl+Q``: Close the **Fit Method Benchmark** window. 
+  
+- Analysis
+
+  - *Run Simulation* (``Ctrl+R``): Starts a simulation. This is equivalent to 
+    pressing the *Simulation* button in the **Simulations** panel.
+    
+  - *Run Script* (``Ctrl+Shift+R``): Starts a script. This is equivalent to 
+    pressing the *Run Script* button in the **Scripts** panel.
+    
+  - *Abort* (``Ctrl+C``): Aborts the current simulation. This is equivalent to 
+    pressing the *Abort* button in the message bar at bottom right of the window.
+    
+  - *Plot Decays, Fits & Residuals* (``Ctrl+D``): toggle plotting the simulation 
+    and fit outputs on or off (a checkmark is shown in the menu when the feature 
+    is on).
+    
+- Windows
+
+  - *Show Notebook* (``Ctrl+N``): displays AlliGator Notebook in which the Fit 
+    Method Benchmark results are output.
+
+Panels
+++++++
+ 
 - Simulations
 - Decay, Fit & Residuals Plots
 - Settings
+- Script
+
+Each panel is described in the following sections.
 
 Simulations panel
 +++++++++++++++++
@@ -41,8 +78,8 @@ progress bar at the bottom. Upon completion, one or more histograms are
 displayed, together with some summary statistics for one of the three possible 
 parameters (1 for single exponential decays, 3 for bi-exponential decays).
 
-This information is also available as text in the text box below the 
-*Simulation* button, and is exported to the AlliGator Notebook.
+This information is also available as text in the *Simulation Summary* text box 
+below the *Simulation* button, and is exported to the AlliGator Notebook.
 
 The full parameter output of the N simulations can be exported as an ASCII file 
 by clicking on the *Export* button. This will create a file with one header 
@@ -51,29 +88,38 @@ line followed by N rows, each containing the following information:
 Offset, Offset SDV, Baseline, Baseline SDV, A_1, A_1 SDV, tau_1, tau_1 SDV, R2, 
 Chi2
 
+Note that, in the presence of an asymmetric histogram or an histogram with 
+significant outliers, the summary statistics might be significantly biased. In 
+these cases, it might be preferable to fit the histogram with an appropriate 
+model and extract the relevant metrics from the fit parameters (e.g. Gaussian or 
+Asymmetric Gaussian fit).
+
 Returning to the top left control parameters, they can be used to improve the 
 appearance of the histograms generated after a simulation (they are ineffective 
 on previous histograms):
 
-- Histogram Bin Size (Lifetime): use this parameter to adjust the granularity 
+- *Histogram Bin Size (Lifetime)*: use this parameter to adjust the granularity 
   of the lifetime histogram(s). There is only one histogram when the decay is 
   mono-exponential, but two lifetime histograms (tau 1 and tau 2) when it is 
   bi-exponential.
-- Histogram Bin Size (f1): use this parameter to adjust the granularity 
+- *Histogram Bin Size (f1)*: use this parameter to adjust the granularity 
   of the fraction f1 histogram.
-- Histogram Lower/Upper Percentile: use these parameters to adjust the range of 
-  parameter values retained to build each histogram. Histograms can have no more 
-  than 10^5 bins. When a parameter is highly dispersed (with very large or very 
-  small outliers), choosing to small a bin size can result in an overflow. No 
-  histogram is actually displayed and an error output in AlliGator's Notebook. 
+- *Histogram Lower/Upper Percentile*: use these parameters to adjust the range 
+  of parameter values retained to build each histogram. Histograms can have no 
+  more than 10^5 bins. When a parameter is highly dispersed (with very large or 
+  very small outliers), choosing to small a bin size can result in an overflow. 
+  No histogram is actually displayed and an error output in AlliGator's Notebook. 
   To alleviate this problem, either change the bin size or eliminate ouliers by 
   gradually reducing the *Histogram Upper Percentile* (the *Lower Percentile* is 
   generally left equal to zero).
 
-Note that the graph has 4 scales: *Lifetime (ns)*, *tau Histogram*, one one hand 
-and *f1*, *f1 Histogram*, on the other. To show or hide ne of the scales listed 
+Note that the graph has 4 scales: *Lifetime (ns)*, *tau Histogram*, on one hand 
+and *f1*, *f1 Histogram*, on the other. To show or hide one of the scales listed 
 below the graph, left-click on the ``X.XX`` or ``Y.YY`` button in the *Scale 
 Legend* and select ``Visible Scale``.
+
+As mentioned above, each histogram can be fitted by one of the many models 
+available via the right-click *Fit* menu in the plot legend.
 
 Decay, Fit & Residuals Plots Panel
 ++++++++++++++++++++++++++++++++++
@@ -86,20 +132,20 @@ corresponding residuals.
 
 For a number of simulations N > 1000, this can require some additional memory
 resources. It is therefore recommended to use this display option (active when 
-the *Show Decays, Fits & Residuals* is checked off) only as a way to verify 
-that simulations and fits work as expected, using a small N (e.g. N = 100).
-By default, none of the plots are visible, but they can all be shown using the 
-graph's right-click shortcut menu.
+the *Show Decays, Fits & Residuals* checkbox is checked off) only as a way to 
+verify that simulations and fits work as expected, using a small N (e.g. N = 
+100). By default, none of the plots are visible, but they can all be shown using 
+the graph's right-click shortcut menu.
 
 Alternatively, it is possible to scroll through one decay and its fit and 
-residuals plot at a time using the *Select Decay, Fit & Residuals Index* control 
-above the plot legend.
+residuals plots at a time using the *Select Decay, Fit & Residuals Index* 
+control above the plot legend.
 
 This panel is also used to load and visualize the IRF, if an IRF is used in the 
 simulations (see the **Settings Panel** description below). To load an IRF, use 
 the ``Load Experimental IRF`` right-click menu item. If an IRF is loaded, it can 
 be visualized in the *Decay Graph* by using the ``Show Experimental IRF`` 
-right-click menu.
+right-click menu item.
 
 .. note::
    The IRF should cover the duration of the laser period, defined in the 
@@ -108,7 +154,7 @@ right-click menu.
 Settings Panel
 ++++++++++++++
 
-The last panel is used to define fitting options and is similar to the 
+The next panel is used to define fit options and is similar to the 
 corresponding AlliGator **Settings** panel (**Settings:Fluorescence Decay:Fit 
 Options**), with some elements of the **Settings:Fluorescence Decay:Fit 
 Parameters** panel.
@@ -140,6 +186,66 @@ The new elements are:
    Indeed, in that case, the fitted baseline might end up negative, which would 
    result in negative fitted values, which are incompatible with the MLE 
    assumption that values are positive (as photon count values). To avoid this, 
-   one can introduce an artificial offset enforcing a postive baseline. This 
+   one can introduce an artificial offset enforcing a positive baseline. This 
    temporary offset is subtracted from the fitted parameter before the results 
    are returned.
+
+Scripts Panel
++++++++++++++
+
+.. image:: images/AlliGator-Fit-Method-Benchmark4.png
+   :align: center
+
+This panel allows defining sets of simulations run sequentially in 3 different 
+ways:
+
+- Using a user-provided array of simulation parameters,
+- Incrementing one or more of the currently defined simulation parameters in the 
+  **Simulations** panel,
+- Multiplying one or more of the currently defined simulation parameters in the 
+  **Simulations** panel.
+  
+The desired approach is selected using the *Parameter Set Choice* radio buttons 
+at the top left. Next, the parameter sets, or parameter increment(s), or 
+parameter multiplication factor(s), are defined in their respective controls:
+
+- *Simulation Parameters*: enter as many parameter sets as desired. Use the array 
+  index control on the top left or the scrollbar at the bottom to define new 
+  sets.
+- *Simulation Parameters Increment(s)*: By default, the increment of all 
+  parameters is zero. To increment one or more parameter(s) at each step of the 
+  script, change the decay and/or fit parameters to the desired increment value.
+  The first set of *Decay Parameters* and *Fit Parameters* used during the 
+  script correspond to those defined in the **s** panel (without the 
+  increment(s) applied). Finally, define the *# Steps* to be used in the script.
+  
+  For instance, to study the fit method performance for lifetimes in the range 
+  0.5 to 5 ns every 0.5 ns, use a *Simulation Parameters Increment(s)* tau 1 
+  value of 0.5 ns, leaving all other values = 0, and set *# Steps* = 10.
+  
+- *Simulation Parameters Multiplication Factor(s)*: By default, the 
+  multiplication factor of all parameters is one. To multiply one or more 
+  parameter(s) at each step of the script, change the decay and/or fit 
+  parameters to the desired multiplication factor. The first set of *Decay 
+  Parameters* and *Fit Parameters* used during the 
+  script correspond to those defined in the **Simulations** panel (without the 
+  multiplication factor(s) applied). Finally, define the *# Steps* to be used in 
+  the script.
+  
+  For instance, to study the effect of the number *N* of photons on the fit 
+  method performance for *N* = 100 to 10,000 using a logarithmic spacing with 4 
+  values per decade, use a *Simulation Parameters Multiplication Factor(s)* 
+  #  value of :math:`10^{1/4} = 1.778` leaving all other values = 1, and set *# 
+  Steps* = 10.
+
+Once defined, the script can be started using the *Run Script* button or using 
+the ``Analysis:Run Script`` menu item. The output will be *# Steps* tau 1 
+histograms (in the case of 1-Exp fits) in the **Simulations** panel, and a table 
+of Decay & Simulation Parameters as well as parameter histogram(s) summary 
+statistics in the Notebook, an example of which is provided below:
+
+.. image:: images/AlliGator-Fit-Method-Benchmark5.png
+   :align: center
+
+The results can also be exported in an ASCII file using the ``File:Export 
+Results`` menu item.

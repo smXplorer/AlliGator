@@ -16,4 +16,5 @@
 	<Item Name="AlliGator Compute Shot Noise Average Lifetime Simulation Histograms.vi" Type="VI" URL="../AlliGator Compute Shot Noise Average Lifetime Simulation Histograms.vi"/>
 	<Item Name="AlliGator Shot Noise Influence on Average Lifetime.vi" Type="VI" URL="../AlliGator Shot Noise Influence on Average Lifetime.vi"/>
 	<Item Name="AlliGator Simulate Average Lifetime of Linear Combination.vi" Type="VI" URL="../AlliGator Simulate Average Lifetime of Linear Combination.vi"/>
+	<Item Name="AlliGator SNIAL Abort.vi" Type="VI" URL="../AlliGator SNIAL Abort.vi"/>
 </Library>

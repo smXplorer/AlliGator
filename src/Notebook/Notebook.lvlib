@@ -91,7 +91,6 @@
 		<Item Name="Send XY Graph to Notebook (Optional).vi" Type="VI" URL="../Send XY Graph to Notebook (Optional).vi"/>
 		<Item Name="Set-Get Calling VI Name.vi" Type="VI" URL="../Set-Get Calling VI Name.vi"/>
 		<Item Name="Set-Get Calling VI Process ID.vi" Type="VI" URL="../Set-Get Calling VI Process ID.vi"/>
-		<Item Name="Verbose Mode.vi" Type="VI" URL="../Verbose Mode.vi"/>
 	</Item>
 	<Item Name="Notebook Changelog.txt" Type="Document" URL="../Notebook Changelog.txt"/>
 </Library>

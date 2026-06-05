@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.22">
-<meta name="author" content="Antidoc v3.1.0, X. Michalet">
+<meta name="generator" content="Asciidoctor 2.0.26">
+<meta name="author" content="Antidoc v3.3.0, X. Michalet">
 <title>AlliGator Source Code Documentation</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -117,7 +117,6 @@ h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title str
 :not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
 pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
 pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
-pre>code{display:block}
 pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
 em em{font-style:normal}
 strong strong{font-weight:400}
@@ -220,6 +219,7 @@ table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
 .literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class=highlight],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
 .literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
 .listingblock>.content{position:relative}
+.listingblock pre>code{display:block}
 .listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
 .listingblock:hover code[data-lang]::before{display:block}
 .listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
@@ -439,7 +439,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 <h1>AlliGator Source Code Documentation</h1>
 <div class="details">
-<span id="author" class="author">Antidoc v3.1.0</span><br>
+<span id="author" class="author">Antidoc v3.3.0</span><br>
 <span id="author2" class="author">X. Michalet</span><br>
 <span id="email2" class="email">smXplorer@github</span><br>
 </div>
@@ -1022,6 +1022,22 @@ VIs used to fit decays to 1-Exp or 2-Exp models.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Fit Plots Cluster to Array</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="image"><img src="Images/AlliGator_Decay_Fit.lvlib_Fit_Plots_Cluster_to_Array.vi.png" alt="AlliGator Decay Fit.lvlib:Fit Plots Cluster to Array.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/reentrancy-shared.png" alt="reentrancy-shared.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XY Graph Shift Interpolated Plot</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Decay_Fit.lvlib_XY_Graph_Shift_Interpolated_Plot.vi.png" alt="AlliGator Decay Fit.lvlib:XY Graph Shift Interpolated Plot.vi"></span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -3077,153 +3093,23 @@ If not, enqueue the evenet and update the time/timeout information.</p></td>
 No description found (add content in lvlib description)</p>
 </div>
 <div class="paragraph">
-<p><strong>Version:</strong> 1.0.0.0</p>
+<p><strong>Version:</strong></p>
 </div>
 <div class="sect3">
 <h4 id="_functions_8"><a class="anchor" href="#_functions_8"></a><a class="link" href="#_functions_8">2.8.1. Functions</a></h4>
-<table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 8. Functions (non private scope only)</caption>
-<colgroup>
-<col style="width: 14.8148%;">
-<col style="width: 29.6296%;">
-<col style="width: 44.4444%;">
-<col style="width: 3.7037%;">
-<col style="width: 3.7037%;">
-<col style="width: 3.7038%;">
-</colgroup>
-<thead>
+<div class="admonitionblock note">
+<table>
 <tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Connector pane</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">S.</th>
-<th class="tableblock halign-left valign-top">R.</th>
-<th class="tableblock halign-left valign-top">I.</th>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>No functions found</p>
+</div>
+</td>
 </tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Get Dataset ICCD Parameters</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/AlliGator_Camera_Noise_Influence_on_Lifetime.lvlib_AlliGator_Get_Dataset_ICCD_Parameters.vi.png" alt="AlliGator Camera Noise Influence on Lifetime.lvlib:AlliGator Get Dataset ICCD Parameters.vi"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/reentrancy-preallocated.png" alt="reentrancy-preallocated.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CV ICCD Data Plot</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/AlliGator_Camera_Noise_Influence_on_Lifetime.lvlib_CV_ICCD_Data_Plot.vi.png" alt="AlliGator Camera Noise Influence on Lifetime.lvlib:CV ICCD Data Plot.vi"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CV Power Law Fit</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/AlliGator_Camera_Noise_Influence_on_Lifetime.lvlib_CV_Power_Law_Fit.vi.png" alt="AlliGator Camera Noise Influence on Lifetime.lvlib:CV Power Law Fit.vi"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ICCD Noise Data Viewer</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/AlliGator_Camera_Noise_Influence_on_Lifetime.lvlib_ICCD_Noise_Data_Viewer.vi.png" alt="AlliGator Camera Noise Influence on Lifetime.lvlib:ICCD Noise Data Viewer.vi"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Power Law Fit with Offset</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/AlliGator_Camera_Noise_Influence_on_Lifetime.lvlib_Power_Law_Fit_with_Offset.vi.png" alt="AlliGator Camera Noise Influence on Lifetime.lvlib:Power Law Fit with Offset.vi"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Reshape ICCD Parameter Table</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/AlliGator_Camera_Noise_Influence_on_Lifetime.lvlib_Reshape_ICCD_Parameter_Table.vi.png" alt="AlliGator Camera Noise Influence on Lifetime.lvlib:Reshape ICCD Parameter Table.vi"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Reshape ICCD Parameters Table Row</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/AlliGator_Camera_Noise_Influence_on_Lifetime.lvlib_Reshape_ICCD_Parameters_Table_Row.vi.png" alt="AlliGator Camera Noise Influence on Lifetime.lvlib:Reshape ICCD Parameters Table Row.vi"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-</tr>
-</tbody>
 </table>
-<div class="paragraph">
-<p><strong>S</strong>cope: <span class="image"><img src="Images/scope-protected.png" alt="scope protected"></span> &#8594; Protected | <span class="image"><img src="Images/scope-community.png" alt="scope community"></span> &#8594; Community</p>
-</div>
-<div class="paragraph">
-<p><strong>R</strong>eentrancy: <span class="image"><img src="Images/reentrancy-preallocated.png" alt="reentrancy preallocated"></span> &#8594; Preallocated reentrancy | <span class="image"><img src="Images/reentrancy-shared.png" alt="reentrancy shared"></span> &#8594; Shared reentrancy</p>
-</div>
-<div class="paragraph">
-<p><strong>I</strong>nlining: <span class="image"><img src="Images/inlined.png" alt="inlined"></span> &#8594; Inlined</p>
 </div>
 </div>
 <div class="sect3">
@@ -3256,7 +3142,7 @@ VIs handling Dataset Information displayed to the user.</p>
 <div class="sect3">
 <h4 id="_functions_9"><a class="anchor" href="#_functions_9"></a><a class="link" href="#_functions_9">2.9.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 9. Functions (non private scope only)</caption>
+<caption class="title">Table 8. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -3350,7 +3236,7 @@ features under test and accessible via the <strong>DEBUG</strong> menu item (whe
 <div class="sect3">
 <h4 id="_functions_10"><a class="anchor" href="#_functions_10"></a><a class="link" href="#_functions_10">2.10.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 10. Functions (non private scope only)</caption>
+<caption class="title">Table 9. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -3440,12 +3326,12 @@ features under test and accessible via the <strong>DEBUG</strong> menu item (whe
 VIs related to the Decay Fit Parameter Map</p>
 </div>
 <div class="paragraph">
-<p><strong>Version:</strong> 1.0.0.0</p>
+<p><strong>Version:</strong></p>
 </div>
 <div class="sect3">
 <h4 id="_functions_11"><a class="anchor" href="#_functions_11"></a><a class="link" href="#_functions_11">2.11.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 11. Functions (non private scope only)</caption>
+<caption class="title">Table 10. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -3599,6 +3485,22 @@ VIs related to the Decay Fit Parameter Map</p>
 <p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Check_ROIs.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Check ROIs.vi"></span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Checks whether the sinternally stored ROIs exist, and if not, use the user-loaded ones.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Convert Decay Fit Options v3 to v4</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Convert_Decay_Fit_Options_v3_to_v4.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Convert Decay Fit Options v3 to v4.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
 </div></div></td>
@@ -3786,9 +3688,9 @@ VIs related to the Decay Fit Parameter Map</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Load IRFs &amp; Fit Data (Map) HDF5 File v0.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Load IRFs &amp; Fit Data (Map) HDF5 File v0.7</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Load_IRFs_&amp;_Fit_Data_(Map)_HDF5_File_v0.6.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Load IRFs &amp; Fit Data (Map) HDF5 File v0.6.vi"></span></p>
+<p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Load_IRFs_&amp;_Fit_Data_(Map)_HDF5_File_v0.7.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Load IRFs &amp; Fit Data (Map) HDF5 File v0.7.vi"></span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Loads Decay Fit Parameter Map and associated metadata.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -4044,9 +3946,9 @@ VIs related to the Decay Fit Parameter Map</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Save IRFs &amp; Fit Data (Map) HDF5 File v0.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Save IRFs &amp; Fit Data (Map) HDF5 File v0.7</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Save_IRFs_&amp;_Fit_Data_(Map)_HDF5_File_v0.6.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Save IRFs &amp; Fit Data (Map) HDF5 File v0.6.vi"></span></p>
+<p><span class="image"><img src="Images/AlliGator_Decay_Fit_Parameter_Map.lvlib_AlliGator_Save_IRFs_&amp;_Fit_Data_(Map)_HDF5_File_v0.7.vi.png" alt="AlliGator Decay Fit Parameter Map.lvlib:AlliGator Save IRFs &amp; Fit Data (Map) HDF5 File v0.7.vi"></span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Saves Decay Fit Parameter Map and associated metadata to an HDF5 file.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -4165,7 +4067,7 @@ Handles the Decay Statistics Graph.</p>
 <div class="sect3">
 <h4 id="_functions_12"><a class="anchor" href="#_functions_12"></a><a class="link" href="#_functions_12">2.12.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 12. Functions (non private scope only)</caption>
+<caption class="title">Table 11. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -4259,7 +4161,7 @@ VIs handling dual-channel datasets</p>
 <div class="sect3">
 <h4 id="_functions_13"><a class="anchor" href="#_functions_13"></a><a class="link" href="#_functions_13">2.13.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 13. Functions (non private scope only)</caption>
+<caption class="title">Table 12. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -4481,12 +4383,12 @@ VIs handling dual-channel datasets</p>
 Handles all types of dataset files used by AlliGator.</p>
 </div>
 <div class="paragraph">
-<p><strong>Version:</strong> 1.0.0.0</p>
+<p><strong>Version:</strong></p>
 </div>
 <div class="sect3">
 <h4 id="_functions_14"><a class="anchor" href="#_functions_14"></a><a class="link" href="#_functions_14">2.14.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 14. Functions (non private scope only)</caption>
+<caption class="title">Table 13. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -6226,23 +6128,6 @@ If no change, return FALSE to skip  data loading, since we already have this dat
 <p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
 </div></div></td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Load Single Gate Image</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/AlliGator_Files.lvlib_AlliGator_Load_Single_Gate_Image.vit.png" alt="AlliGator Files.lvlib:AlliGator Load Single Gate Image.vit"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">VI template to use for any new type of FLI dataset file.</p>
-<p class="tableblock">The resulting VI will be dynamically called in the Core Loading VI.</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-</tr>
 </tbody>
 </table>
 <div class="paragraph">
@@ -6280,12 +6165,12 @@ If no change, return FALSE to skip  data loading, since we already have this dat
 VIs for the Fit Method Benchmark Tool.</p>
 </div>
 <div class="paragraph">
-<p><strong>Version:</strong> 1.0.0.0</p>
+<p><strong>Version:</strong></p>
 </div>
 <div class="sect3">
 <h4 id="_functions_15"><a class="anchor" href="#_functions_15"></a><a class="link" href="#_functions_15">2.15.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 15. Functions (non private scope only)</caption>
+<caption class="title">Table 14. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -6305,22 +6190,6 @@ VIs for the Fit Method Benchmark Tool.</p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator 2-Exp Decay Model</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/AlliGator_Fit_Method_Benchmark.lvlib_AlliGator_2_Exp_Decay_Model.vi.png" alt="AlliGator Fit Method Benchmark.lvlib:AlliGator 2-Exp Decay Model.vi"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Computes a 2-#xp decay with the provided parameters.</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Baseline Simulation Check</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -6391,6 +6260,166 @@ VIs for the Fit Method Benchmark Tool.</p>
 <p><span class="image"><img src="Images/AlliGator_Fit_Method_Benchmark.lvlib_AlliGator_Fit_Method_Benchmark.vi.png" alt="AlliGator Fit Method Benchmark.lvlib:AlliGator Fit Method Benchmark.vi"></span></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Fit Method Benchmark GUI.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator FMB Check for Abort</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Fit_Method_Benchmark.lvlib_AlliGator_FMB_Check_for_Abort.vi.png" alt="AlliGator Fit Method Benchmark.lvlib:AlliGator FMB Check for Abort.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator FMB Event to String</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Fit_Method_Benchmark.lvlib_AlliGator_FMB_Event_to_String.vi.png" alt="AlliGator Fit Method Benchmark.lvlib:AlliGator FMB Event to String.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Converts <strong>AlliGator Q Event</strong> enum to the corresponding string.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator FMB Get First Event</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Fit_Method_Benchmark.lvlib_AlliGator_FMB_Get_First_Event.vi.png" alt="AlliGator Fit Method Benchmark.lvlib:AlliGator FMB Get First Event.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator FMB Run Script</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Fit_Method_Benchmark.lvlib_AlliGator_FMB_Run_Script.vi.png" alt="AlliGator Fit Method Benchmark.lvlib:AlliGator FMB Run Script.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator FMB Save Simulation Results (1)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Fit_Method_Benchmark.lvlib_AlliGator_FMB_Save_Simulation_Results_(1).vi.png" alt="AlliGator Fit Method Benchmark.lvlib:AlliGator FMB Save Simulation Results (1).vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Format Script Output</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Fit_Method_Benchmark.lvlib_AlliGator_Format_Script_Output.vi.png" alt="AlliGator Fit Method Benchmark.lvlib:AlliGator Format Script Output.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Get Array Statistics String</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Fit_Method_Benchmark.lvlib_AlliGator_Get_Array_Statistics_String.vi.png" alt="AlliGator Fit Method Benchmark.lvlib:AlliGator Get Array Statistics String.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Get Simulation Options String</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Fit_Method_Benchmark.lvlib_AlliGator_Get_Simulation_Options_String.vi.png" alt="AlliGator Fit Method Benchmark.lvlib:AlliGator Get Simulation Options String.vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Get Simulation Parameters (by Increment)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Fit_Method_Benchmark.lvlib_AlliGator_Get_Simulation_Parameters_(by_Increment).vi.png" alt="AlliGator Fit Method Benchmark.lvlib:AlliGator Get Simulation Parameters (by Increment).vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Get Simulation Parameters (by x Factor)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="Images/AlliGator_Fit_Method_Benchmark.lvlib_AlliGator_Get_Simulation_Parameters_(by_x_Factor).vi.png" alt="AlliGator Fit Method Benchmark.lvlib:AlliGator Get Simulation Parameters (by x Factor).vi"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
 </div></div></td>
@@ -6555,7 +6584,7 @@ Globals, refnums, constants, etc.</p>
 <div class="sect3">
 <h4 id="_functions_16"><a class="anchor" href="#_functions_16"></a><a class="link" href="#_functions_16">2.16.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 16. Functions (non private scope only)</caption>
+<caption class="title">Table 15. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -6698,7 +6727,7 @@ User Interface-related VIs.</p>
 <div class="sect3">
 <h4 id="_functions_17"><a class="anchor" href="#_functions_17"></a><a class="link" href="#_functions_17">2.17.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 17. Functions (non private scope only)</caption>
+<caption class="title">Table 16. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -7376,7 +7405,7 @@ VIs handling HDF5 dataset files.</p>
 <div class="sect3">
 <h4 id="_functions_18"><a class="anchor" href="#_functions_18"></a><a class="link" href="#_functions_18">2.18.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 18. Functions (non private scope only)</caption>
+<caption class="title">Table 17. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -7808,7 +7837,7 @@ VIs used with the Image Profile Window.</p>
 <div class="sect3">
 <h4 id="_functions_19"><a class="anchor" href="#_functions_19"></a><a class="link" href="#_functions_19">2.19.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 19. Functions (non private scope only)</caption>
+<caption class="title">Table 18. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -8062,7 +8091,7 @@ VIs handling intensity correction to the Sum of All Gates image.</p>
 <div class="sect3">
 <h4 id="_functions_20"><a class="anchor" href="#_functions_20"></a><a class="link" href="#_functions_20">2.20.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 20. Functions (non private scope only)</caption>
+<caption class="title">Table 19. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -8185,12 +8214,12 @@ VIs handling intensity correction to the Sum of All Gates image.</p>
 VIs to access individual (or group of) internal data or variables using a data by value reference (DVR).</p>
 </div>
 <div class="paragraph">
-<p><strong>Version:</strong> 1.0.0.0</p>
+<p><strong>Version:</strong></p>
 </div>
 <div class="sect3">
 <h4 id="_functions_21"><a class="anchor" href="#_functions_21"></a><a class="link" href="#_functions_21">2.21.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 21. Functions (non private scope only)</caption>
+<caption class="title">Table 20. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -8659,22 +8688,6 @@ VIs to access individual (or group of) internal data or variables using a data b
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator IV Template</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/AlliGator_Internal_Variables.lvlib_AlliGator_IV_Template.vit.png" alt="AlliGator Internal Variables.lvlib:AlliGator IV Template.vit"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No description found (add content in vi description)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator IV Time Series Timestamps &amp; Current Dataset</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="image"><img src="Images/AlliGator_Internal_Variables.lvlib_AlliGator_IV_Time_Series_Timestamps_&amp;_Current_Dataset.vi.png" alt="AlliGator Internal Variables.lvlib:AlliGator IV Time Series Timestamps &amp; Current Dataset.vi"></span></p>
@@ -8780,7 +8793,7 @@ No description found (add content in lvlib description)</p>
 <div class="sect3">
 <h4 id="_functions_22"><a class="anchor" href="#_functions_22"></a><a class="link" href="#_functions_22">2.22.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 22. Functions (non private scope only)</caption>
+<caption class="title">Table 21. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -8976,7 +8989,7 @@ VIs used with the Local Decay Window.</p>
 <div class="sect3">
 <h4 id="_functions_23"><a class="anchor" href="#_functions_23"></a><a class="link" href="#_functions_23">2.23.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 23. Functions (non private scope only)</caption>
+<caption class="title">Table 22. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -9119,7 +9132,7 @@ VIs communicating with the Notebook.</p>
 <div class="sect3">
 <h4 id="_functions_24"><a class="anchor" href="#_functions_24"></a><a class="link" href="#_functions_24">2.24.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 24. Functions (non private scope only)</caption>
+<caption class="title">Table 23. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -9240,12 +9253,12 @@ VIs communicating with the Notebook.</p>
 VIs handling generic Parameter Maps.</p>
 </div>
 <div class="paragraph">
-<p><strong>Version:</strong> 1.0.0.0</p>
+<p><strong>Version:</strong></p>
 </div>
 <div class="sect3">
 <h4 id="_functions_25"><a class="anchor" href="#_functions_25"></a><a class="link" href="#_functions_25">2.25.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 25. Functions (non private scope only)</caption>
+<caption class="title">Table 24. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -9586,7 +9599,7 @@ VIs handling phasor calibration.</p>
 <div class="sect3">
 <h4 id="_functions_26"><a class="anchor" href="#_functions_26"></a><a class="link" href="#_functions_26">2.26.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 26. Functions (non private scope only)</caption>
+<caption class="title">Table 25. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -10249,7 +10262,7 @@ VIs handling Phasor Graph actions.</p>
 <div class="sect3">
 <h4 id="_functions_27"><a class="anchor" href="#_functions_27"></a><a class="link" href="#_functions_27">2.27.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 27. Functions (non private scope only)</caption>
+<caption class="title">Table 26. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -11198,7 +11211,7 @@ VIs handling multiple phasor harmonics operations.</p>
 <div class="sect3">
 <h4 id="_functions_28"><a class="anchor" href="#_functions_28"></a><a class="link" href="#_functions_28">2.28.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 28. Functions (non private scope only)</caption>
+<caption class="title">Table 27. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -11372,7 +11385,7 @@ VIs handling the phasor plot color map tool.</p>
 <div class="sect3">
 <h4 id="_functions_29"><a class="anchor" href="#_functions_29"></a><a class="link" href="#_functions_29">2.29.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 29. Functions (non private scope only)</caption>
+<caption class="title">Table 28. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -11594,7 +11607,7 @@ Handles Phasor Plot-related actions.</p>
 <div class="sect3">
 <h4 id="_functions_30"><a class="anchor" href="#_functions_30"></a><a class="link" href="#_functions_30">2.30.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 30. Functions (non private scope only)</caption>
+<caption class="title">Table 29. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -12755,7 +12768,7 @@ VIs handling phasor ratio analysis.</p>
 <div class="sect3">
 <h4 id="_functions_31"><a class="anchor" href="#_functions_31"></a><a class="link" href="#_functions_31">2.31.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 31. Functions (non private scope only)</caption>
+<caption class="title">Table 30. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -13212,12 +13225,12 @@ VIs handling phasor ratio analysis.</p>
 VIs handling python plugins.</p>
 </div>
 <div class="paragraph">
-<p><strong>Version:</strong> 1.0.0.0</p>
+<p><strong>Version:</strong></p>
 </div>
 <div class="sect3">
 <h4 id="_functions_32"><a class="anchor" href="#_functions_32"></a><a class="link" href="#_functions_32">2.32.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 32. Functions (non private scope only)</caption>
+<caption class="title">Table 31. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -14069,22 +14082,6 @@ VIs handling python plugins.</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Unzip Python Plugins</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/AlliGator_Python_Plugins.lvlib_AlliGator_Unzip_Python_Plugins.vi.png" alt="AlliGator Python Plugins.lvlib:AlliGator Unzip Python Plugins.vi"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Unzips python plugin archive provided with AlliGator installation.</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="Images/empty.png" alt="empty.png"></span></p>
-</div></div></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">AlliGator Image Python Function Handler Core</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><span class="image"><img src="Images/AlliGator_Python_Plugins.lvlib_AlliGator_Image_Python_Function_Handler_Core.vi.png" alt="AlliGator Python Plugins.lvlib:AlliGator Image Python Function Handler Core.vi"></span></p>
@@ -14224,7 +14221,7 @@ VIs handling ROI actions.</p>
 <div class="sect3">
 <h4 id="_functions_33"><a class="anchor" href="#_functions_33"></a><a class="link" href="#_functions_33">2.33.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 33. Functions (non private scope only)</caption>
+<caption class="title">Table 32. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -14965,7 +14962,7 @@ AlliGator actions performing a series of sequential tasks.</p>
 <div class="sect3">
 <h4 id="_functions_34"><a class="anchor" href="#_functions_34"></a><a class="link" href="#_functions_34">2.34.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 34. Functions (non private scope only)</caption>
+<caption class="title">Table 33. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -15526,7 +15523,7 @@ VIs handling user-defined parameters.</p>
 <div class="sect3">
 <h4 id="_functions_35"><a class="anchor" href="#_functions_35"></a><a class="link" href="#_functions_35">2.35.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 35. Functions (non private scope only)</caption>
+<caption class="title">Table 34. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -16329,7 +16326,7 @@ VIs used for the Shot Noise Influence on Average Lifetime Analysis Tool.</p>
 <div class="sect3">
 <h4 id="_functions_36"><a class="anchor" href="#_functions_36"></a><a class="link" href="#_functions_36">2.36.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 36. Functions (non private scope only)</caption>
+<caption class="title">Table 35. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -16439,7 +16436,7 @@ VIs handling Source Image actions.</p>
 <div class="sect3">
 <h4 id="_functions_37"><a class="anchor" href="#_functions_37"></a><a class="link" href="#_functions_37">2.37.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 37. Functions (non private scope only)</caption>
+<caption class="title">Table 36. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -17064,7 +17061,7 @@ Tests different files loading</p>
 <div class="sect3">
 <h4 id="_functions_38"><a class="anchor" href="#_functions_38"></a><a class="link" href="#_functions_38">2.38.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 38. Functions (non private scope only)</caption>
+<caption class="title">Table 37. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -17238,7 +17235,7 @@ No description found (add content in lvlib description)</p>
 <div class="sect3">
 <h4 id="_functions_39"><a class="anchor" href="#_functions_39"></a><a class="link" href="#_functions_39">2.39.1. Functions</a></h4>
 <table class="tableblock frame-all grid-all stripes-none stretch">
-<caption class="title">Table 39. Functions (non private scope only)</caption>
+<caption class="title">Table 38. Functions (non private scope only)</caption>
 <colgroup>
 <col style="width: 14.8148%;">
 <col style="width: 29.6296%;">
@@ -17475,7 +17472,7 @@ This is the author&#8217;s responsibility to list any of the missing product use
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-02-20 16:33:38 +0100
+Last updated 2026-06-04 17:15:30 -0700
 </div>
 </div>
 </body>

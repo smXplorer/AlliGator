@@ -155,6 +155,19 @@ graph individually.
 The ``Grid`` item of that menu allows rapidly showing/hiding a grid in the 
 *Plot Area*, rather than using the individual axes menu in the *Scale Legend*.
 
+Fits submenu
+++++++++++++
+
+Some graphs offer options to fit curves with model functions. An example of 
+supported models that can appear in the corresponding ``Fits`` submenu is shown 
+below:
+
+.. image:: images/Fit-Model-List.png
+   :align: center
+
+.
+
+
 .. _graph-scales:
 
 Graph Scales

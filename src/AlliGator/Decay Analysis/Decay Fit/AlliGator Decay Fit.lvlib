@@ -40,4 +40,5 @@
 	<Item Name="AlliGator Update Decay Fit Results (Stats).vi" Type="VI" URL="../AlliGator Update Decay Fit Results (Stats).vi"/>
 	<Item Name="Draw CI Band from CI Plots.vi" Type="VI" URL="../../../../Fits/Draw CI Band from CI Plots.vi"/>
 	<Item Name="Fit Plots Cluster to Array.vi" Type="VI" URL="../../../../Fits/Fit Plots Cluster to Array.vi"/>
+	<Item Name="XY Graph Shift Interpolated Plot.vi" Type="VI" URL="../../../../Graphs/XY Graph/XY Graph Shift Interpolated Plot.vi"/>
 </Library>

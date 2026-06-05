@@ -174,7 +174,7 @@
 			<Item Name="XY Graph Sliced Mean &amp; SDV Step Definition.ctl" Type="VI" URL="../XY Graph Sliced Mean &amp; SDV Step Definition.ctl"/>
 		</Item>
 		<Item Name="XY Graph Add Data to Last Plots.vi" Type="VI" URL="../XY Graph Add Data to Last Plots.vi"/>
-		<Item Name="XY Graph Add Multiplots with Names.vi" Type="VI" URL="../XY Graph Add Multiplots with Names.vi"/>
+		<Item Name="XY Graph Add Multiplots with Names v2.vi" Type="VI" URL="../XY Graph Add Multiplots with Names v2.vi"/>
 		<Item Name="XY Graph Add New Plot.vi" Type="VI" URL="../XY Graph Add New Plot.vi"/>
 		<Item Name="XY Graph Add Plot(s) with Name(s).vi" Type="VI" URL="../XY Graph Add Plot(s) with Name(s).vi"/>
 		<Item Name="XY Graph Add Single Plot with Name.vi" Type="VI" URL="../XY Graph Add Single Plot with Name.vi"/>
@@ -237,7 +237,6 @@
 	<Item Name="Tests" Type="Folder">
 		<Item Name="Test XY Graph with TipStrip.vi" Type="VI" URL="../../Test XY Graph with TipStrip.vi"/>
 	</Item>
-	<Item Name="XY Graph Add Multiplots with Names v2.vi" Type="VI" URL="../XY Graph Add Multiplots with Names v2.vi"/>
 	<Item Name="XY Graph Add Single Plot with Name v2.vi" Type="VI" URL="../XY Graph Add Single Plot with Name v2.vi"/>
 	<Item Name="XY Graph Average Selected Plots Event.vi" Type="VI" URL="../XY Graph Average Selected Plots Event.vi"/>
 	<Item Name="XY Graph Change Cursor Color.vi" Type="VI" URL="../XY Graph Change Cursor Color.vi"/>

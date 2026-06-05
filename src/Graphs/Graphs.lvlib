@@ -4,10 +4,26 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">553680896</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="Ctrls" Type="Folder">
+		<Item Name="Graph Cursor Info.ctl" Type="VI" URL="../Graph Cursor Info.ctl"/>
+		<Item Name="Graph Legend Special Coordinates.ctl" Type="VI" URL="../Graph Legend Special Coordinates.ctl"/>
+		<Item Name="Graph Scale Information.ctl" Type="VI" URL="../Graph Scale Information.ctl"/>
+		<Item Name="LabVIEW Plot Interpolation.ctl" Type="VI" URL="../LabVIEW Plot Interpolation.ctl"/>
+		<Item Name="Plot Destination.ctl" Type="VI" URL="../Plot Destination.ctl"/>
+		<Item Name="Plot Magic Color (Unchanged).ctl" Type="VI" URL="../Plot Magic Color (Unchanged).ctl"/>
+		<Item Name="Plot Point Style.ctl" Type="VI" URL="../Plot Point Style.ctl"/>
+		<Item Name="Plot Range.ctl" Type="VI" URL="../Plot Range.ctl"/>
+		<Item Name="Plot Style 3.ctl" Type="VI" URL="../Plot Style 3.ctl"/>
+		<Item Name="Plot Style Settings Step.ctl" Type="VI" URL="../Plot Style Settings Step.ctl"/>
+		<Item Name="Plot Update Steps.ctl" Type="VI" URL="../Plot Update Steps.ctl"/>
+		<Item Name="Single Plot Style 2.ctl" Type="VI" URL="../Single Plot Style 2.ctl"/>
+	</Item>
 	<Item Name="Add N-complement Cursors.vi" Type="VI" URL="../Add N-complement Cursors.vi"/>
 	<Item Name="All Plots Mouse Coordinates Constant.vi" Type="VI" URL="../All Plots Mouse Coordinates Constant.vi"/>
 	<Item Name="Check wether Click is in Plot Area.vi" Type="VI" URL="../Get Plot at Mouse Click (XY Graph)/Check wether Click is in Plot Area.vi"/>
 	<Item Name="Compute Plot Legend Size.vi" Type="VI" URL="../Compute Plot Legend Size.vi"/>
+	<Item Name="Convert Plot Interpolation (List to PN).vi" Type="VI" URL="../Convert Plot Interpolation (List to PN).vi"/>
+	<Item Name="Convert Plot Interpolation (PN to List).vi" Type="VI" URL="../Convert Plot Interpolation (PN to List).vi"/>
 	<Item Name="Edit Color List Dialog.vi" Type="VI" URL="../Edit Color List Dialog.vi"/>
 	<Item Name="Get Added Plot Index.vi" Type="VI" URL="../Get Added Plot Index.vi"/>
 	<Item Name="Get Plot at Mouse Click [AAC].vi" Type="VI" URL="../Get Plot at Mouse Click (XY Graph)/Get Plot at Mouse Click [AAC].vi"/>
@@ -26,28 +42,17 @@
 	<Item Name="Get Plot at Mouse Click in Plot Area.vi" Type="VI" URL="../Get Plot at Mouse Click (XY Graph)/Get Plot at Mouse Click in Plot Area.vi"/>
 	<Item Name="Get Plot at Mouse Click.vi" Type="VI" URL="../Get Plot at Mouse Click (XY Graph)/Get Plot at Mouse Click.vi"/>
 	<Item Name="Get Plots Scale Indices.vi" Type="VI" URL="../Get Plots Scale Indices.vi"/>
-	<Item Name="Graph Cursor Info.ctl" Type="VI" URL="../Graph Cursor Info.ctl"/>
 	<Item Name="Graph Get Color List Element.vi" Type="VI" URL="../Plot Style Selector/Graph Get Color List Element.vi"/>
 	<Item Name="Graph Get Single Plot Style.vi" Type="VI" URL="../Graph Get Single Plot Style.vi"/>
 	<Item Name="Graph Get-Set Color Array.vi" Type="VI" URL="../Plot Style Selector/Graph Get-Set Color Array.vi"/>
-	<Item Name="Graph Legend Special Coordinates.ctl" Type="VI" URL="../Graph Legend Special Coordinates.ctl"/>
 	<Item Name="Graph Plot Color Chooser Update.vi" Type="VI" URL="../Plot Style Selector/Graph Plot Color Chooser Update.vi"/>
-	<Item Name="Graph Scale Information.ctl" Type="VI" URL="../Graph Scale Information.ctl"/>
-	<Item Name="LabVIEW Plot Interpolation.ctl" Type="VI" URL="../LabVIEW Plot Interpolation.ctl"/>
 	<Item Name="Last Plot Mouse Coordinates Constant.vi" Type="VI" URL="../Last Plot Mouse Coordinates Constant.vi"/>
 	<Item Name="Load-Save Color Lists.vi" Type="VI" URL="../Plot Style Selector/Load-Save Color Lists.vi"/>
-	<Item Name="Plot Destination.ctl" Type="VI" URL="../Plot Destination.ctl"/>
-	<Item Name="Plot Magic Color (Unchanged).ctl" Type="VI" URL="../Plot Magic Color (Unchanged).ctl"/>
-	<Item Name="Plot Point Style.ctl" Type="VI" URL="../Plot Point Style.ctl"/>
-	<Item Name="Plot Range.ctl" Type="VI" URL="../Plot Range.ctl"/>
-	<Item Name="Plot Style 3.ctl" Type="VI" URL="../Plot Style 3.ctl"/>
 	<Item Name="Plot Style Chooser Dialog.vi" Type="VI" URL="../Plot Style Chooser Dialog.vi"/>
-	<Item Name="Plot Style Settings Step.ctl" Type="VI" URL="../Plot Style Settings Step.ctl"/>
-	<Item Name="Plot Update Steps.ctl" Type="VI" URL="../Plot Update Steps.ctl"/>
 	<Item Name="Point or Line Color List.vi" Type="VI" URL="../Plot Style Selector/Point or Line Color List.vi"/>
 	<Item Name="Restore X &amp; Scale Indices.vi" Type="VI" URL="../Restore X &amp; Scale Indices.vi"/>
 	<Item Name="Selected Plots Mouse Coordinates Constant.vi" Type="VI" URL="../Selected Plots Mouse Coordinates Constant.vi"/>
 	<Item Name="Set Waveform Graph Plot Style.vi" Type="VI" URL="../Set Waveform Graph Plot Style.vi"/>
-	<Item Name="Single Plot Style 2.ctl" Type="VI" URL="../Single Plot Style 2.ctl"/>
 	<Item Name="Special Mouse Coordinates.vi" Type="VI" URL="../Special Mouse Coordinates.vi"/>
+	<Item Name="Test Plot Interpolation Conversion.vi" Type="VI" URL="../Test Plot Interpolation Conversion.vi"/>
 </Library>

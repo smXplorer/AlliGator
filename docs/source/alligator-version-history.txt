@@ -12,6 +12,24 @@ AlliGator Version History
 
 Note: version numbers followed by an asterisk have not been released.
 
+1.07 (2026-06-03)
+    Bug Fixes
+        Fixed bug in mean and SDV calculation in unweighted histograms
+        Fixed style of some Generic Graph action messages
+        Fixed style of Fit Benchmark messages
+        Fixed Abort message typo in Fit Method Benchmark
+        Fixed bugs related to non-updated Fit Settings typedef
+        Fixed bug in Display Phasor Ratio References in Phasor Plot
+        Fixed bug preventing dataset series to be loaded with background correction
+        
+    New Features
+        Added tip-strip to Fit Method Benchmark graphs
+        Added Fits to Fit Method Benchmark Histograms graph
+        Adjusted Residual's plot display interpolation style to match that of the original decay
+        Implemented basic Fit Method Benchmark Scripting
+        Export of Multiple Fit Benchmark Results
+        Added menu bar to Fit Method Benchmark
+        
 1.06 (2026-02-18)
     New Feature
         Added support for Notebook Themes

@@ -32,7 +32,10 @@
 		<Item Name="Fit Calculation Method.ctl" Type="VI" URL="../Fit Calculation Method.ctl"/>
 		<Item Name="Fit Control Data v2.ctl" Type="VI" URL="../Decay Convolution/Fit Control Data v2.ctl"/>
 		<Item Name="Fit Control Data.ctl" Type="VI" URL="../Decay Convolution/Fit Control Data.ctl"/>
+		<Item Name="Fit Model Information.ctl" Type="VI" URL="../Fit Model Information.ctl"/>
 		<Item Name="Fit Models.ctl" Type="VI" URL="../Fit Models.ctl"/>
+		<Item Name="Fit Output Arrays.ctl" Type="VI" URL="../Fit Output Arrays.ctl"/>
+		<Item Name="Fit Output Data.ctl" Type="VI" URL="../Fit Output Data.ctl"/>
 		<Item Name="Fit Plot Request Information.ctl" Type="VI" URL="../Fit Plot Request Information.ctl"/>
 		<Item Name="Fit Plots.ctl" Type="VI" URL="../Fit Plots.ctl"/>
 		<Item Name="Fit Results (statistics).ctl" Type="VI" URL="../Fit Results (statistics).ctl"/>
@@ -158,6 +161,7 @@
 	<Item Name="Abort Fit Global.vi" Type="VI" URL="../Abort Fit Global.vi"/>
 	<Item Name="AlliGator Compute Residuals ACF.vi" Type="VI" URL="../../AlliGator/Local Decay Window/AlliGator Compute Residuals ACF.vi"/>
 	<Item Name="Build Convolution Support v2.vi" Type="VI" URL="../Decay Convolution/Build Convolution Support v2.vi"/>
+	<Item Name="CNR abx reweighted (Pearson option).vi" Type="VI" URL="../CNR abx reweighted (Pearson option).vi"/>
 	<Item Name="Complement with Fixed Parameters.vi" Type="VI" URL="../Decay Convolution/Complement with Fixed Parameters.vi"/>
 	<Item Name="Compute 1-Exp Guess Parameters.vi" Type="VI" URL="../Decay Convolution/Compute 1-Exp Guess Parameters.vi"/>
 	<Item Name="Compute 2-Exp Guess Parameters.vi" Type="VI" URL="../Decay Convolution/Compute 2-Exp Guess Parameters.vi"/>
@@ -176,6 +180,7 @@
 	<Item Name="Create Array of n-Exp Fit Constraints.vi" Type="VI" URL="../IRF(X)PSED/Create Array of n-Exp Fit Constraints.vi"/>
 	<Item Name="Cubic Spline + Sine Fit Result String.vi" Type="VI" URL="../Cubic Spline + Sine/Cubic Spline + Sine Fit Result String.vi"/>
 	<Item Name="Cubic Spline Matrices.vi" Type="VI" URL="../IRF(X)PSED/Cubic Spline Matrices.vi"/>
+	<Item Name="Decay Fit Options v4.ctl" Type="VI" URL="../IRF(X)PSED/Decay Fit Options v4.ctl"/>
 	<Item Name="Decode Fit Parameter Names &amp; Values.vi" Type="VI" URL="../Decode Fit Parameter Names &amp; Values.vi"/>
 	<Item Name="Evaluate Partial Derivatives of 1-Exp.vi" Type="VI" URL="../Decay Convolution/Evaluate Partial Derivatives of 1-Exp.vi"/>
 	<Item Name="Evaluate Partial Derivatives of 2-Exp.vi" Type="VI" URL="../Decay Convolution/Evaluate Partial Derivatives of 2-Exp.vi"/>
@@ -188,11 +193,13 @@
 	<Item Name="Fit Model to Plot Core.vi" Type="VI" URL="../Fit Model to Plot Core.vi"/>
 	<Item Name="Fit Model to Plot v3.vi" Type="VI" URL="../Fit Model to Plot v3.vi"/>
 	<Item Name="Fit Model to Plot Wrapper.vi" Type="VI" URL="../Fit Model to Plot Wrapper.vi"/>
+	<Item Name="Fit Model to Raw Plot.vi" Type="VI" URL="../Fit Model to Raw Plot.vi"/>
 	<Item Name="Fit Plot to Circle.vi" Type="VI" URL="../Circle Fit/Fit Plot to Circle.vi"/>
 	<Item Name="Fit Points to Circle.vi" Type="VI" URL="../Circle Fit/Fit Points to Circle.vi"/>
 	<Item Name="Fit RSS, AIC &amp; BIC.vi" Type="VI" URL="../Fit RSS, AIC &amp; BIC.vi"/>
 	<Item Name="Fit Tilted Logistic Square Pulse.vi" Type="VI" URL="../Square Pulse/Fit Tilted Logistic Square Pulse.vi"/>
 	<Item Name="Fit to Square Pulse.vi" Type="VI" URL="../Square Pulse/Fit to Square Pulse.vi"/>
+	<Item Name="Fit Weights Type v2.ctl" Type="VI" URL="../IRF(X)PSED/Fit Weights Type v2.ctl"/>
 	<Item Name="Format Fit Output.vi" Type="VI" URL="../Format Fit Output.vi"/>
 	<Item Name="Format Sum of Asymmetric Gaussians Fit Parameters.vi" Type="VI" URL="../Format Sum of Asymmetric Gaussians Fit Parameters.vi"/>
 	<Item Name="Format Sum of Gaussians Fit Parameters.vi" Type="VI" URL="../Format Sum of Gaussians Fit Parameters.vi"/>
@@ -262,6 +269,7 @@
 	<Item Name="My Nonlinear Curve Fit TR bounds.vi" Type="VI" URL="../My Nonlinear Curve Fit TR bounds.vi"/>
 	<Item Name="My Nonlinear Curve Fit TRDL bounds.vi" Type="VI" URL="../My Nonlinear Curve Fit TRDL bounds.vi"/>
 	<Item Name="N Asymmetric Gaussians Fit Guess Parameters.vi" Type="VI" URL="../N Asymmetric Gaussians Fit Guess Parameters.vi"/>
+	<Item Name="Nonlinear Curve Fit Intervals (Pearson option).vi" Type="VI" URL="../Nonlinear Curve Fit Intervals (Pearson option).vi"/>
 	<Item Name="Normalize Decay v2.vi" Type="VI" URL="../Normalize Decay v2.vi"/>
 	<Item Name="Normalize Decay.vi" Type="VI" URL="../Normalize Decay.vi"/>
 	<Item Name="Optimal Offset Calculations.vi" Type="VI" URL="../Optimal Offset Calculations.vi"/>
@@ -284,4 +292,5 @@
 	<Item Name="Two Asymmetric Gaussians Fit Guess Parameters.vi" Type="VI" URL="../Two Asymmetric Gaussians/Two Asymmetric Gaussians Fit Guess Parameters.vi"/>
 	<Item Name="Two Gaussians Fit Guess Parameters.vi" Type="VI" URL="../Two Gaussians/Two Gaussians Fit Guess Parameters.vi"/>
 	<Item Name="Update Optimal Offset Fit Output.vi" Type="VI" URL="../Update Optimal Offset Fit Output.vi"/>
+	<Item Name="Use Pearson Weights.vi" Type="VI" URL="../Use Pearson Weights.vi"/>
 </Library>

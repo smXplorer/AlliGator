@@ -13,6 +13,12 @@
 		<Item Name="AlliGator 2-Exp Parameters.ctl" Type="VI" URL="../AlliGator 2-Exp Parameters.ctl"/>
 		<Item Name="AlliGator Decay Simulation Parameters.ctl" Type="VI" URL="../AlliGator Decay Simulation Parameters.ctl"/>
 		<Item Name="AlliGator Fit Simulation Parameters.ctl" Type="VI" URL="../AlliGator Fit Simulation Parameters.ctl"/>
+		<Item Name="AlliGator FMB Histogram Options.ctl" Type="VI" URL="../AlliGator FMB Histogram Options.ctl"/>
+		<Item Name="AlliGator FMB Q Element.ctl" Type="VI" URL="../AlliGator FMB Q Element.ctl"/>
+		<Item Name="AlliGator FMB Q Event List.ctl" Type="VI" URL="../AlliGator FMB Q Event List.ctl"/>
+		<Item Name="AlliGator Simulation &amp; Fit Options &amp; Parameters.ctl" Type="VI" URL="../AlliGator Simulation &amp; Fit Options &amp; Parameters.ctl"/>
+		<Item Name="AlliGator Simulation Parameters x Factors.ctl" Type="VI" URL="../AlliGator Simulation Parameters x Factors.ctl"/>
+		<Item Name="AlliGator Simulation Parameters.ctl" Type="VI" URL="../AlliGator Simulation Parameters.ctl"/>
 	</Item>
 	<Item Name="AlliGator 2-Exp Decay Model.vi" Type="VI" URL="../AlliGator 2-Exp Decay Model.vi"/>
 	<Item Name="AlliGator Baseline Simulation Check.vi" Type="VI" URL="../AlliGator Baseline Simulation Check.vi"/>
@@ -20,6 +26,18 @@
 	<Item Name="AlliGator Decay Sum.vi" Type="VI" URL="../AlliGator Decay Sum.vi"/>
 	<Item Name="AlliGator Fit Linear Combinations of Exponentials.vi" Type="VI" URL="../AlliGator Fit Linear Combinations of Exponentials.vi"/>
 	<Item Name="AlliGator Fit Method Benchmark.vi" Type="VI" URL="../AlliGator Fit Method Benchmark.vi"/>
+	<Item Name="AlliGator FMB Check for Abort.vi" Type="VI" URL="../AlliGator FMB Check for Abort.vi"/>
+	<Item Name="AlliGator FMB Event to String.vi" Type="VI" URL="../AlliGator FMB Event to String.vi"/>
+	<Item Name="AlliGator FMB Get First Event.vi" Type="VI" URL="../AlliGator FMB Get First Event.vi"/>
+	<Item Name="AlliGator FMB Global.vi" Type="VI" URL="../AlliGator FMB Global.vi"/>
+	<Item Name="AlliGator FMB Output.ctl" Type="VI" URL="../AlliGator FMB Output.ctl"/>
+	<Item Name="AlliGator FMB Run Script.vi" Type="VI" URL="../AlliGator FMB Run Script.vi"/>
+	<Item Name="AlliGator FMB Save Simulation Results (1).vi" Type="VI" URL="../AlliGator FMB Save Simulation Results (1).vi"/>
+	<Item Name="AlliGator Format Script Output.vi" Type="VI" URL="../AlliGator Format Script Output.vi"/>
+	<Item Name="AlliGator Get Array Statistics String.vi" Type="VI" URL="../AlliGator Get Array Statistics String.vi"/>
+	<Item Name="AlliGator Get Simulation Options String.vi" Type="VI" URL="../AlliGator Get Simulation Options String.vi"/>
+	<Item Name="AlliGator Get Simulation Parameters (by Increment).vi" Type="VI" URL="../AlliGator Get Simulation Parameters (by Increment).vi"/>
+	<Item Name="AlliGator Get Simulation Parameters (by x Factor).vi" Type="VI" URL="../AlliGator Get Simulation Parameters (by x Factor).vi"/>
 	<Item Name="AlliGator Get tau1, tau2 &amp; a1.vi" Type="VI" URL="../AlliGator Get tau1, tau2 &amp; a1.vi"/>
 	<Item Name="AlliGator Load Experimental IRF.vi" Type="VI" URL="../AlliGator Load Experimental IRF.vi"/>
 	<Item Name="AlliGator Pad or Truncate Decay.vi" Type="VI" URL="../AlliGator Pad or Truncate Decay.vi"/>

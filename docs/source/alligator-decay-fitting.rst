@@ -27,7 +27,7 @@ the :ref:`alligator-fluorescence-decay-panel` manual page, any decay in the
 *Decay Graph* of the **Fluorescence Decay Panel** can be used as IRF. However,
 it is best to have an IRF that covers the full laser period.
 
-This can be artifically obtained starting with a *truncated* decay (*i.e.* a 
+This can be artificially obtained starting with a *truncated* decay (*i.e.* a 
 decay only partially covering the laser period) using single-exponential 
 extrapolation (see :ref:`Decay Extrapolation <alligator-decay-extrapolation>` 
 section in the :ref:`alligator-decay-preprocessing` manual page). This of course 
@@ -59,13 +59,38 @@ Single decay fit
 Overview
 --------
 
-A single plot can be fitted by a model function convolved with the selected IRF 
-by right-clicking on its legend (or close to it in the graph) and selecting 
-``NLSF:IRF o N-Exp``. The options specifying the type of fit and the constraints 
-used are defined in the :ref:`alligator-settings-fluorescence-decay-fit-options` 
+A single plot (see note below) can be fitted by a model function convolved with 
+the selected IRF by right-clicking on its legend (or close to it in the graph) 
+and selecting ``NLSF:IRF o N-Exp``. The options specifying the type of fit and 
+the constraints used are defined in the :ref:`alligator-settings-fluorescence-decay-fit-options` 
 and :ref:`alligator-settings-fluorescence-decay-fit-parameters` panels 
 respectively.
 
+.. note::
+   The *Interpolation* style of a plot plays a role in what data is actually 
+   fitted. The *Interpolation* style is accessed via the right-click menu of the 
+   plot's representation in the graph's legend as shown below:
+
+
+   .. image:: images/Plot-Interpolation.png
+      :align: center
+
+   Typically, binned decays are provided as pairs of *(t, I)* values, where *t* 
+   is the bin's lower bound and *I* is the total counts in the time interval 
+   *[t, t+dt]*, where *dt* is the bin (or gate) duration. In that instance, the 
+   *Interpolation* style highlighted in the figure above needs to be chosen. If 
+   instead the decays are defined with abscissa *t* corresponding to the bin (or 
+   gate) center, the third *Interpolation* style in the list shown above needs 
+   to be selected (or alternatively the 4th one, which does not represent the 
+   bin's width or duration). In the first case, AlliGator internally converts all 
+   abscissa *t* to *t + dt/2* before performing the fit. In the second case, no 
+   such conversion is performed. In the uncommon case where the abscissa *t* 
+   represents the bin's upper bound, the 2nd *Interpolation* style should be 
+   selected, which would result in AlliGator internally converting all 
+   abscissa *t* to *t - dt/2* before performing the fit.
+   
+   
+   
 Several fit options, discussed below, are available in the 
 :ref:`alligator-settings-fluorescence-decay-fit-options` panel:
 
@@ -155,7 +180,7 @@ and the option to try them all out and retain the best:
    good. Inversely, a weighted fit (where the weight is larger the smaller the 
    value is), will tend to minimize the residuals of the function's tail, 
    allowing for relatively large residuals at the peak. If both fits are 
-   visually *bad* (which is not always adequatelly reflected in the 
+   visually *bad* (which is not always adequately reflected in the 
    :math:`\chi^2`), something is wrong with the model, the IRF, or the 
    assumption that decay variance is approximately Poissonian is invalid. Or 
    the convergence may have failed, in which case providing reasonable guess 
@@ -362,8 +387,8 @@ name.
 *Model Calculation* indicates how the fitted function is evaluated (currently, 
 the only supported method is by *Convolution* of the model function with the 
 IRF (when provided). This convolution is done with a normalized IRF (normalized 
-to an integral of 1) such that pre-scaling (e.g. normalizing) the IRF has no 
-effect on the results. Cyclic convolution is done using fast fourier transform.
+to an integral of 1) such that prescaling (e.g. normalizing) the IRF has no 
+effect on the results. Cyclic convolution is done using Fast Fourier transforms.
 
 *Use Local IRF* indicates the option selected in the **Settings** window.
 
@@ -381,10 +406,11 @@ The *IRF Normalization Factor* is the integral of the IRF used internally.
 to normalize the decay internally before computation.
 
 :math:`R^2` as well 
-as the 68% confidence intervals (errors) are defined according to `this page <https://www.ni.com/en/shop/labview/overview-of-curve-fitting-models-and-methods-in-labview.html>`_.
+as the 68% confidence intervals (errors) are defined according to `this page 
+<https://www.ni.com/en/shop/labview/overview-of-curve-fitting-models-and-methods-in-labview.html>`_.
 The *weighted* :math:`\chi ^2` is defined as the *Sum of Squares Error (SSE)* 
 defined on that page, with weights equal to :math:`1/y_i`, where :math:`1/y_i` 
-is the local funcion value, while the *unweighted* :math:`\chi ^2` is defined 
+is the local function value, while the *unweighted* :math:`\chi ^2` is defined 
 similarly but with uniform weights equal to 1. The appropriate :math:`\chi ^2` 
 to consider depends on the type of fit (for instance, the *weighted* :math:`\chi 
 ^2` is the one relevant in this example). The alternative :math:`\chi ^2` is 

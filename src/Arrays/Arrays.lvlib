@@ -93,6 +93,7 @@
 	<Item Name="Remove Consecutive Duplicates.vim" Type="VI" URL="../Remove Consecutive Duplicates.vim"/>
 	<Item Name="Remove Element from 1D Array v2.vim" Type="VI" URL="../Remove Element from 1D Array v2.vim"/>
 	<Item Name="Remove Element from 1D Array.vim" Type="VI" URL="../Remove Element from 1D Array.vim"/>
+	<Item Name="Remove Lower Percentile from Array.vi" Type="VI" URL="../Remove Lower Percentile from Array.vi"/>
 	<Item Name="Remove NaN-containing Pairs.vi" Type="VI" URL="../Remove NaN-containing Pairs.vi"/>
 	<Item Name="Remove Zeros By Interpolation [DBL].vi" Type="VI" URL="../Remove Zeros By Interpolation [DBL].vi"/>
 	<Item Name="Removed Array Element Indices.vim" Type="VI" URL="../Removed Array Element Indices.vim"/>

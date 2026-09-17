@@ -4,8 +4,13 @@ Parameter Map Panel
 ===================
 
 The *Parameter Map* panel is used to display and further process 
-multi-ROIs non-NLSF analysis parameters. Its functions are similar to those of 
-the *Decay Fit Parameter Map*.
+multi-ROIs non-NLSF analysis parameters (which are displayed in the dedicated 
+**Decay Fit Parameter Map** panel). Its functions are similar to those of 
+the *Decay Fit Parameter Map*. The main difference between the two panels is 
+that the Parameter Map can be used to display the results of multiple analyses, 
+by simply selecting the *Parameter Map Set* of interest. Examples of such 
+*Parameter Map Set* are discussed in the :ref:`parameter-map-set-examples` 
+section below.
 
 The panel consists of different controls and indicators as illustrated below and 
 discussed next.
@@ -23,8 +28,8 @@ the color scale)
 Note that in contrast with the *Decay Fit Parameter Map*, results from 
 different analyses can be visualized sequentially by selecting the 
 appropriate *Parameter Map Set* from the corresponding pull-down menu.
-Unused Parameter Map Sets can be deleted from memory using the right-click menu 
-of the *Parameter Map Set* pull-down menu.
+Unused *Parameter Map Sets* can be deleted from memory using the ``Delete 
+Parameter Set`` right-click menu item of the *Parameter Map Set* pull-down menu.
 
 The *Max Parameter* and *Min Parameter* indicators provide the actual total 
 range of the computed parameters, while the controls immediately above and 
@@ -38,10 +43,10 @@ Left-click above or below the color scale to reveal the color picker window and
 select the color highlighting parameters respectively above or below the display 
 range minimum).
 
-The *X*,*Y* and *Map Value* indicators at the bottom right provide the location 
+The *X*, *Y* and *Map Value* indicators at the bottom right provide the location 
 of the cursor (also visible in the image information bar below the map), as well 
 as the actual map value at that location. if that latter indicator appears 
-unresponsive, briefly move the mouse out of the window and back to reactuivate 
+unresponsive, briefly move the mouse out of the window and back to reactivate 
 mouse tracking (that trick also work to reactivate the 
 :ref:`alligator-local-decay-graph-window` mentioned below).
 
@@ -138,5 +143,49 @@ The *Parameter Map* context menu is shown below and discussed next.
 
 The other functions are self-explanatory.
 
+.. _parameter-map-set-examples:
 
-(last updated: 2026-01-29)
+Examples of Parameter Map Set
+-----------------------------
+
+.. _lifetime-cv-analysis-parameter-maps:
+
+Lifetime CV Analysis Parameter Maps
++++++++++++++++++++++++++++++++++++
+
+The lifetime coefficient of variation analysis discussed in the 
+:ref:`alligator-lifetime-variance-analysis` section outputs several maps grouped 
+into a common *Parameter Map Set*. The following maps are computed:
+
+.. image:: images/AlliGator-Sliced-Lifetime-CV-Analysis-Map-List.png
+   :align: center
+
+
++ *Delta SDV(tau)*: the map represents the difference between the observed 
+  and expected lifetime standard deviation of the :math:`\tau_1` lifetime map, 
+  where :math:`SDV_\tau = 
+  CV_\tau*\tau`.
+
++ *Delta CV(tau)*: the map represents the difference between the observed and 
+  expected lifetime coefficient of variation of the :math:`\tau_1` lifetime map.
+
++ *CV Approximate F-Test*: the map represents the significance level of the 
+  observed lifetime CV ratio using an approximate *F*-test.
+  
++ *Variance F-Test*: the map represents the significance level of the observed 
+  lifetime variance ratio using the *F*-test.
+  
++ *CV Residuals test*: the map represents the significance level of the observed
+  lifetime CV using a scaled residuals standard deviation.
+  
++ *CV Bootstrap SDV test*: the map represents the significance level of the 
+  observed lifetime CV using a scaled CV standard deviation computed by bootstrap.
+
++ *# Elements*: map of the number of element in the intensity slice the pixel 
+  belongs to.
+
++ *<I>*: average slice intensity map.
+
++ *Slice*: slice index map
+
+(last updated: 2026-09-15)

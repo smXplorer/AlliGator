@@ -4,6 +4,14 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">553680896</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="Filters" Type="Folder">
+		<Item Name="_Test Modified Sync Filter.vi" Type="VI" URL="../_Test Modified Sync Filter.vi"/>
+		<Item Name="High Frequency Noise Cleaner.vi" Type="VI" URL="../Filters/High Frequency Noise Cleaner.vi"/>
+		<Item Name="Modified Sync Filter Array.vi" Type="VI" URL="../Modified Sync Filter Array.vi"/>
+		<Item Name="Modified Sync Filter k_j^n.vi" Type="VI" URL="../Modified Sync Filter k_j^n.vi"/>
+		<Item Name="Modified Sync Filter w_a(x).vi" Type="VI" URL="../Modified Sync Filter w_a(x).vi"/>
+		<Item Name="Modified Sync Filter Weights.vi" Type="VI" URL="../Modified Sync Filter Weights.vi"/>
+	</Item>
 	<Item Name="Statistics" Type="Folder">
 		<Item Name="Array Mean, Var &amp; SDV.vim" Type="VI" URL="../Statistics/Array Mean, Var &amp; SDV.vim"/>
 		<Item Name="Array Median.vim" Type="VI" URL="../Statistics/Array Median.vim"/>

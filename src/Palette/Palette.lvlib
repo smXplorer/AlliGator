@@ -16,6 +16,7 @@
 	<Item Name="Brewer Palette Array.vi" Type="VI" URL="../Brewer Palette Array.vi"/>
 	<Item Name="Brewer Palette Dialog v2.vi" Type="VI" URL="../Brewer Palette Dialog v2.vi"/>
 	<Item Name="Check Selected Palette in Menu.vi" Type="VI" URL="../Check Selected Palette in Menu.vi"/>
+	<Item Name="Color Ramp Change Display Format.vi" Type="VI" URL="../Color Ramp Change Display Format.vi"/>
 	<Item Name="Create 256 Values Palette.vi" Type="VI" URL="../Create 256 Values Palette.vi"/>
 	<Item Name="Create Interpolated Color Palette.vi" Type="VI" URL="../Create Interpolated Color Palette.vi"/>
 	<Item Name="Decode Palette Description.vi" Type="VI" URL="../Decode Palette Description.vi"/>

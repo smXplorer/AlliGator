@@ -27,6 +27,16 @@ left or on the AlliGator link at the top left.
 It is of course also possible to use the ``Go back`` or ``Go forward`` buttons 
 of the browser to step through the browsing history.
 
+Last but not least, the *Search* box can be used to look for a specific topic. 
+It is oftentimes the quickest way to find a link to the relevant information 
+within the manual.
+
+.. Note::
+
+   If you find an error or a typo in this manual, feel free to report it, either 
+   via the User Support Google Group (see :ref:`alligator-support`) or by 
+   submitting a GitHub issue at https://github.com/smXplorer/AlliGator/issues.
+   
 Notations
 ---------
 

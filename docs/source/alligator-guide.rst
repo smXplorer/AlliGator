@@ -17,4 +17,4 @@ Alternatively, tutorial videos found on the :ref:`alligator-tutorials` page can 
    alligator-decay-preprocessing
    alligator-decay-fitting
    alligator-all-rois-single-pixel-analysis
-   alligator-internal-parameters
+   alligator-intensity-slice-decay-variation-analysis

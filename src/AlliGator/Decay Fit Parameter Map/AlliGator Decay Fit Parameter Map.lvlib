@@ -14,19 +14,21 @@
 		<Item Name="AlliGator Decay Fit Options &amp; Parameters v2.ctl" Type="VI" URL="../AlliGator Decay Fit Options &amp; Parameters v2.ctl"/>
 		<Item Name="AlliGator Decay Fit Options &amp; Parameters v3.ctl" Type="VI" URL="../AlliGator Decay Fit Options &amp; Parameters v3.ctl"/>
 		<Item Name="AlliGator Decay Parameter Map Update Event Data.ctl" Type="VI" URL="../AlliGator Decay Parameter Map Update Event Data.ctl"/>
+		<Item Name="AlliGator Function Parameters.ctl" Type="VI" URL="../AlliGator Function Parameters.ctl"/>
 		<Item Name="AlliGator IRFs &amp; Fit Data v1.ctl" Type="VI" URL="../AlliGator IRFs &amp; Fit Data v1.ctl"/>
 		<Item Name="AlliGator IRFs &amp; Fit Data v2.ctl" Type="VI" URL="../AlliGator IRFs &amp; Fit Data v2.ctl"/>
+		<Item Name="AlliGator Lifetime Variance Statistical Test.ctl" Type="VI" URL="../AlliGator Lifetime Variance Statistical Test.ctl"/>
 		<Item Name="AlliGator Parameter Maps Data.ctl" Type="VI" URL="../AlliGator Parameter Maps Data.ctl"/>
-		<Item Name="AlliGator Power Law Parameters.ctl" Type="VI" URL="../AlliGator Power Law Parameters.ctl"/>
 		<Item Name="AlliGator Sliced Analysis Plots.ctl" Type="VI" URL="../AlliGator Sliced Analysis Plots.ctl"/>
 		<Item Name="Lifetime Variance Data.ctl" Type="VI" URL="../../Camera Noise Influence on Lifetime/Lifetime Variance Data.ctl"/>
 	</Item>
 	<Item Name="Lifetime Variance Analysis" Type="Folder">
 		<Item Name="AlliGator Compute Lifetime Variance Map (Core).vi" Type="VI" URL="../../Parameter Map/AlliGator Compute Lifetime Variance Map (Core).vi"/>
 		<Item Name="AlliGator Compute Lifetime Variances.vi" Type="VI" URL="../AlliGator Compute Lifetime Variances.vi"/>
-		<Item Name="AlliGator Enter Power Law Parameters Dialog.vi" Type="VI" URL="../AlliGator Enter Power Law Parameters Dialog.vi"/>
+		<Item Name="AlliGator Enter CV Analysis Parameters Dialog.vi" Type="VI" URL="../AlliGator Enter CV Analysis Parameters Dialog.vi"/>
 		<Item Name="AlliGator Lifetime Variance Maps Calculation.vi" Type="VI" URL="../AlliGator Lifetime Variance Maps Calculation.vi"/>
 	</Item>
+	<Item Name="AlliGator Add New Parameter Map Set.vi" Type="VI" URL="../../Parameter Map/AlliGator Add New Parameter Map Set.vi"/>
 	<Item Name="AlliGator Apply Fit Result Constraints.vi" Type="VI" URL="../AlliGator Apply Fit Result Constraints.vi"/>
 	<Item Name="AlliGator Build Decay Fit Parameter Map.vi" Type="VI" URL="../AlliGator Build Decay Fit Parameter Map.vi"/>
 	<Item Name="AlliGator Check Activated Decay Fit Result Constraints.vi" Type="VI" URL="../AlliGator Check Activated Decay Fit Result Constraints.vi"/>
@@ -34,6 +36,7 @@
 	<Item Name="AlliGator Check ROIs.vi" Type="VI" URL="../AlliGator Check ROIs.vi"/>
 	<Item Name="AlliGator Convert Decay Fit Options v3 to v4.vi" Type="VI" URL="../AlliGator Convert Decay Fit Options v3 to v4.vi"/>
 	<Item Name="AlliGator Convert Decay Range Options.vi" Type="VI" URL="../AlliGator Convert Decay Range Options.vi"/>
+	<Item Name="AlliGator Creat X &amp; Y Coordinate Arrays.vi" Type="VI" URL="../AlliGator Creat X &amp; Y Coordinate Arrays.vi"/>
 	<Item Name="AlliGator Decay Fit Options &amp; Parameters v4.ctl" Type="VI" URL="../AlliGator Decay Fit Options &amp; Parameters v4.ctl"/>
 	<Item Name="AlliGator Decay Fit Parameter Map Actions.vi" Type="VI" URL="../../../Action Engine/AlliGator Decay Fit Parameter Map Actions.vi"/>
 	<Item Name="AlliGator Decay Fit Parameter Map Context Menu Handler.vi" Type="VI" URL="../AlliGator Decay Fit Parameter Map Context Menu Handler.vi"/>
@@ -46,6 +49,7 @@
 	<Item Name="AlliGator Get Local Fit Results String.vi" Type="VI" URL="../AlliGator Get Local Fit Results String.vi"/>
 	<Item Name="AlliGator Get Single ROI Message Start.vi" Type="VI" URL="../AlliGator Get Single ROI Message Start.vi"/>
 	<Item Name="AlliGator IRFs &amp; Fit Data v3.ctl" Type="VI" URL="../AlliGator IRFs &amp; Fit Data v3.ctl"/>
+	<Item Name="AlliGator Load Fit Data (Map) mat File v0.1.vi" Type="VI" URL="../AlliGator Load Fit Data (Map) mat File v0.1.vi"/>
 	<Item Name="AlliGator Load IRFs &amp; Fit Data (Map) HDF5 File v0.6.vi" Type="VI" URL="../AlliGator Load IRFs &amp; Fit Data (Map) HDF5 File v0.6.vi"/>
 	<Item Name="AlliGator Load IRFs &amp; Fit Data (Map) HDF5 File v0.7.vi" Type="VI" URL="../AlliGator Load IRFs &amp; Fit Data (Map) HDF5 File v0.7.vi"/>
 	<Item Name="AlliGator Load IRFs &amp; Fit Data Map v1.vi" Type="VI" URL="../AlliGator Load IRFs &amp; Fit Data Map v1.vi"/>

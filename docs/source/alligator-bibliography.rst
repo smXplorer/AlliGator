@@ -13,16 +13,15 @@ free on `PubMed <https://pubmed.ncbi.nlm.nih.gov/?term=xavier+michalet>`_ or
 `eScholarship <https://escholarship.org/search?q=xavier%20michalet&searchType=
 eScholarship&searchUnitType=series>`_
 
-Ref. [RC12]_ discusses the phasor ratio concept (borrowed from the Gratton lab, where Ryan 
-Colyer came from) in the context of a custom-build time-resolved photon-counting 
-camera.
+Ref. [RC12]_ discusses the phasor ratio concept (borrowed from the Gratton lab, 
+where Ryan Colyer came from) in the context of a custom-build time-resolved 
+photon-counting camera.
 
 Ref. [KC18]_ is the first peer-reviewed publication introducing AlliGator 
 (developed for that work) and demonstrates its use for the analysis of time-gated 
-data of in vivo FRET acquired with an ICCD camera. The 
-supporting information of this article contains an extensive tutorial on phasor 
-analysis, as well as details on data analysis with AlliGator, which can be 
-found `here <https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.
+data of in vivo FRET acquired with an ICCD camera. The supporting information of 
+this article contains an extensive tutorial on phasor analysis, as well as 
+details on data analysis with AlliGator, which can be found `here <https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.
 1002%2Fjbio.201800185&file=jbio201800185-sup-0002-SupInfo.pdf>`_.
 
 Data used in this work can be found at 
@@ -68,6 +67,9 @@ Ref. [DR24]_ uses AlliGator for FLIM data analysis, focusing on amplitude-averag
 lifetime computed from phasor analysis.
 
 Ref. [XM25]_ describes AlliGator's features, architecture and open source release.
+
+Ref. [NY26]_ introduces the Lifetime Variance Analysis discussed briefly in the
+:ref:`alligator-lifetime-variance-analysis` section of the manual.
 
 .. rubric:: References
 
@@ -128,3 +130,7 @@ Ref. [XM25]_ describes AlliGator's features, architecture and open source releas
 .. [XM25] X. Michalet, "AlliGator: Open Source Fluorescence Lifetime Imaging 
    Analysis in G", SoftwareX 31 (2025) 102255, 
    `doi: 10.1016/j.softx.2025.102255 <https://10.1016/j.softx.2025.102255>`_
+
+.. [NY26] N. Yuan, V. Pandey, A. Verma, T. Humphrey, M. Barroso, S. Intes, 
+   X. Michalet, "Quantifying Lifetime Uncertainty in Gated-ICCD Fluorescence 
+   Lifetime Imaging", in preparation

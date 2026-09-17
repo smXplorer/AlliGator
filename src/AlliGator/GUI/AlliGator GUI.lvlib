@@ -67,4 +67,5 @@
 	<Item Name="AlliGator Windows List.vi" Type="VI" URL="../AlliGator Windows List.vi"/>
 	<Item Name="AlliGator.vi" Type="VI" URL="../AlliGator.vi"/>
 	<Item Name="AlliGator_Graphs Metadata Types.vi" Type="VI" URL="../AlliGator_Graphs Metadata Types.vi"/>
+	<Item Name="AlliGator Generic Image Display Mouse Move Flag.vi" Type="VI" URL="../AlliGator Generic Image Display Mouse Move Flag.vi"/>
 </Library>

@@ -6,7 +6,8 @@ Python Plugins
 AlliGator supports user-provided Python functions which appear as right-click 
 menu items for the corresponding object or main AlliGator Analysis menu.
 
-Currently, only two objects support plugins: the *Decay Graph* and the 
+Currently, only two types of objects support plugins: the *graphs* (*Decay 
+Graph*, *Decay Statistics Graph*, etc.) except for the *Phasor Graph* and the 
 *Source Image*. In addition, *FLI Dataset* plugins are supported as sub-menus of
 the ``Analysis:FLI Dataset`` menu. Future versions will support plugins for all 
 objects, as needs arise.
@@ -16,16 +17,17 @@ plugins can also be inserted in the ``Analysis:Decay Graph`` and
 instance when a plugin requires the information of the mouse right-click 
 location.
 
-This page does **not** describe how to develop Python plugins for AlliGator, 
-but provides an overview of the design principle, followed by a description of 
+This page is not a tutorial on how to develop Python plugins for AlliGator, 
+but provides an overview of the design principles, followed by a description of 
 the mandatory features for a plugin. The last section show an example of plugin 
 for the *Decay Graph* graph. Example of plugins for the different supported 
-objects can be found in the example scripts provided by default with AlliGator.
+objects can be found in the example scripts provided by default with AlliGator 
+(*Python Plugins* folder in the installation folder).
 
 Details on how to implement an AlliGator Python plugin can be found in the 
-:ref:`AlliGator Python Plugins API page <alligator-python-plugins-API>`. In 
-particular, a section describes the recommended way to publish and document a 
-plugin in a dedicated GitHub repository.
+:ref:`AlliGator Python Plugins API section <alligator-python-plugins-API>`. The 
+section :ref:`alligator-python-plugin-publication` describes how to publish and 
+document an AlliGator Python plugin on GitHub.
 
 Design Principle
 ++++++++++++++++
@@ -37,6 +39,18 @@ Python (the path and version of which can be specified by the user in the
 it a script path and function name within that script, together with parameters.
 The functions then returns a result or possibly an error code and message, in
 which case this is displayed in the **Notebook** window.
+
+.. note::
+   Python needs to be installed, together with all required modules, on the PC 
+   on which AlliGator is installed. The path to the *Python Version* selected in 
+   the **Settings:Plugins* panel can be either the default installation path 
+   (*Use PATH definition* checked) or a custom path (for instance to a local 
+   environment). If a module is missing when running a plugin (as is normally 
+   indicated by the returned Python error message - which requires the *Verbose 
+   Error Mode* checkbox to be checked-off in the **Settings:Miscellaneous** 
+   panel), install the module and reset the Python session in AlliGator (*Reset 
+   Python Session* button in the **Settings::Plugin** panel).
+
 
 The type of data that is passed to a plugin function is in part specified in the 
 function's body using AlliGator plugin 'statements' (described in subsequent 
@@ -166,7 +180,7 @@ AlliGator. The additional elements appear within comments bracketed between
 triple hash tags (``###``) and should therefore not interfere with any 
 Python-specific syntax.
 
-These syntaxic elements are as follows:
+These syntactic elements are as follows:
 
 + ``import`` statements
 + API version
@@ -183,13 +197,13 @@ requires the following additional two import statements:
 .. code-block::
 
     import json
-    import alligator
+    import alligatorFLI_n_m
 
 The first is used to convert the input parameters string from JSON to a 
 dictionary, and the output parameters dictionary to a JSON string, while the 
-second refers to the ``alligator.py`` script provided in the Python Plugins 
-folder [1]_, and contains type definitions that are useful to format input and 
-output data for a plugin.
+second refers to the ``alligatorFLI_n_m.py`` script provided in the Python 
+Plugins folder [1]_, and contains type definitions that are useful to format 
+input and output data for a plugin.
 
 In addition to these two import statements, the other 5 elements to include are 
 briefly reviewed next.
@@ -229,11 +243,12 @@ The syntax of these different elements is discussed in the following sections.
 API Version
 -----------
 
-The API version *n* is specified by the following triple-commented statement:
+The API version *n.m*, where n and m are integers, is specified by the following 
+triple-commented statement:
 
 .. code-block::
 
-    ### AlliGator Python Plugin API Version = n ###
+    ### AlliGator Python Plugin API Version = n.m ###
 
 Destination
 -----------
@@ -283,7 +298,9 @@ Some plugins do not require any input parameters. For instance, if a *Decay
 Graph* plugin computes the mean of a plot, the only required input is the plot 
 itself, which would be passed automatically as default data for a Graph plugin 
 (see :ref:`Python Plugins API <alligator-python-plugins-API>`). In that case, 
-the remainder of this section can be ignored.
+the remainder of this section can be ignored. To understand how internal data is 
+passed to a function check the :ref:`python-plugin-internal-data-passing` 
+section below.
 
 Other plugins will require either user input parameters (e.g. a scaling factor) 
 or AlliGator parameters (e.g. the phasor frequency). Both types of parameters 
@@ -293,9 +310,9 @@ the general structure shown below.
 .. code-block::
 
     ### AlliGator Input Parameters Definitions ###
-    ### parameter_1:type_1 # description 1
+    ### parameter_1:type_1:default_value # description 1
     ...
-    ### parameter_n:type_n # description n
+    ### parameter_n:type_n:default_value # description n
     ### End of AlliGator Input Parameters Definitions ###
 
 The first and last line of this (triple) commented section are used by AlliGator 
@@ -307,22 +324,26 @@ will be ignored.
 Input parameter declarations follow the model indicated above, that is, a triple 
 comment symbol (``###``) followed by a single parameter declaration per line.
 
-A parameter declaration consists of a unique name (at least in a given function)
-, followed by a semicolon, followed by the parameter type (from the limited 
-list of supported types (see :ref:`Python Plugins API 
-<alligator-python-plugins-API>` for details), including ``AlliGator``, which 
-indicates an internal AlliGator parameter. For a user-provided input parameter, 
-a short *description* is recommended and should be provided as a single 
-commented string (``# description n`` being replaced by something more... 
-descriptive!). It will appear next to the name and value of the parameter in a 
-dialog box when the plugin is called. An example of such a dialog box 
-(corresponding to the example shown at the bottom of this page) is provided 
-below.
+A parameter declaration consists of:
 
-.. figure:: images/AlliGator-Python-Pugin-Input-Parameters-Dialog.png   
+- a unique name (at least in a given function)
+- a semicolon followed by the parameter type (from the limited list of supported 
+  types (see :ref:`Python Plugins API <alligator-python-plugins-API>` for 
+  details), including ``AlliGator``, which indicates an internal AlliGator 
+  parameter
+- an *optional* semicolon and default value
+- an *optional description*: For a user-provided input parameter, a short 
+  *description* is recommended and should be provided as a single commented 
+  string (``# description n`` being replaced by something more descriptive!). It 
+  will appear next to the name and value of the parameter in a dialog box when 
+  the plugin is called. An example of such a dialog box (corresponding to the 
+  example shown at the bottom of this page) is provided below.
+
+.. figure:: images/AlliGator-Python-Plugin-Input-Parameters-Dialog.png   
    :align: center
 
-   AlliGator Python Pugin Input Parameters Dialog
+AlliGator Python Plugin Input Parameters Dialog
+-----------------------------------------------
 
 To expose which internal AlliGator parameters can be passed as input parameters, 
 use the *Send* button in the  **Settings:Plugins** panel. This will copy a list 
@@ -339,7 +360,7 @@ section can be omitted.
 Output Value Type & Destination
 -------------------------------
 
-Python plugins ouputs are of four general kinds (for details, see 
+Python plugins outputs are of four general kinds (for details, see 
 :ref:`Python Plugins API <alligator-python-plugins-API>`):
 
 + error code
@@ -360,7 +381,7 @@ message).
 
 Output sent to internal AlliGator variables are a way to modify the internal 
 state of AlliGator as a result of executing a Plugin. For instance, a plugin 
-could be change a **Settings** flag, or the *phasor frequency*. Use with 
+could change a **Settings** flag, or the *phasor frequency*. Use with 
 moderation, as this could have unintended consequences if done improperly.
 
 All previous three types of output do not require any special syntax to be added 
@@ -390,7 +411,7 @@ Valid *value_type* are specified in the :ref:`Python Plugins API
 <alligator-python-plugins-API>` page.
 
 Valid *destination* statements depend on the *value_type* and the plugin's 
-declared destination (so for instance, a ``plots`` value type cannot be sent to 
+declared destination (for instance, a ``plots`` value type cannot be sent to 
 an  image destination such as ``Mask Image`` but could be sent to 
 ``Decay Graph``).
 
@@ -398,40 +419,71 @@ If no output needs to be sent to a displayed object, this section can be
 omitted.
 
 To better understand these different syntactic elements and how they fit into a 
-Python function used as a plugin, it is easiest to look at the (not very useful 
-as an AlliGator plugin) example installed with AlliGator and appearing as 
-submenu item of ``Analysis:Decay Graph`` and as a context menu item of the 
-*Decay Graph*.
+Python function used as a plugin, it is easiest to look at the example installed 
+with AlliGator and appearing as submenu item of ``Analysis:Decay Graph`` and as 
+a context menu item of the *Decay Graph*.
 
 .. rubric:: Footnotes
 
-.. [1] The ``import alligator`` statement may result in ambiguities if the Pypi 
-   *alligator* package is installed in the Python instance (this is a different 
-   beast altogether, dedicated to managing simple offline task queues in 
-   Python). If that is the case, disambiguate this import statement by ensuring 
-   that the AlliGator Python Plugins folder takes precedence in the search path 
-   to avoid importing the wrong library.
+.. [1] The ``import alligator`` statement of the first API version could have 
+   resulted in ambiguities if the PyPI *alligator* package is installed in the 
+   Python instance (this is a different module altogether, dedicated to managing 
+   simple offline task queues in Python). Renaming the file as 
+   *alligatorFLI_n_m.py*, where *n.m* is the API version starting with version 
+   1.1, removes this ambiguity. Note that, in order to support plugins developed 
+   using older API versions, it is necessary to include the corresponding 
+   alligatorFLI_n.m.py files in the Python Plugins folder (and not modify them!).
 
+.. _python-plugin-internal-data-passing:
+
+LabVIEW internal data passing to and from Python plugin functions
+-----------------------------------------------------------------
+
+In API version 1, each plugin had a different way of passing internal data, 
+depending on what was needed for the function. Because the Python node outputs 
+the same data type, this also defined the data type of the output.
+
+In API v1.1 and following, all plugins receive the same plugin data type in (and 
+output that same data type), consisting in an structure containing all internal 
+data types, which a plugin could possibly need. However, because not all internal 
+data is needed by all plugins, only the requested data is provided in the 
+structure, the remainder of the components being empty objects.
+
+Likewise, the function needs only to provide the objects needed as output.
+
+To understand how this works in practice, the best is to check one of the plugin
+examples included in the Python Plugins folder. The Decay_Graph_Plugin_Example.py 
+example is reproduced in its entirety below, but others should be checked for 
+more complex situations. For instance, the Sliced_Decays_Variation_Analysis.py 
+plugin illustrates how to deal with a FLI Dataset and perform analysis on regions 
+of interest using the *Mask_Image* object corresponding to AlliGator's *Mask 
+Image* shown in the *Source Image* when selecting ``Mask Image`` in the 
+*Displayed Image* pull-down list underneath the *Source Image* display (for 
+details on the function itself, see the corresponding page of the manual: 
+:ref:`alligator-intensity-slice-decay-variation-analysis`).
+
+Future versions of this API will most likely affect the exact definition of this 
+structure as need arise to expose more internal data for specific functions.
 
 Decay Graph example
 +++++++++++++++++++
 
 The following example illustrates the principles outlined above.
 The same example with additional comments is installed in the Plugins Folder 
-by default.
+by default as *Decay_Graph_Plugin_Example.py*.
 
 .. code-block::
 
     # Decay_Graph_Plugin_Example.py
     # Example AlliGator Decay Graph Python Plugin
-    # Tested with AlliGator version 1.02
+    # Tested with AlliGator version 1.07
     # Author: X. Michalet
-    # Last modified: 2025-06-19
+    # Last modified: 2026-07-21
 
     # The following (triple) comment is needed to specify the AlliGator Python 
     # Plugin API version number to use
 
-    ### AlliGator Python Plugin API Version = 1 ###
+    ### AlliGator Python Plugin API Version = 1.1 ###
 
     # The following (triple) comment is needed to tell AlliGator where to
     # insert the plugin function(s) as menu item(s)
@@ -446,10 +498,11 @@ by default.
     ### AlliGatorTarget = AlliGator/Object/Decay Graph ###
     ### AlliGatorTarget = AlliGator/Menu/Decay Graph ###
 
-    # The following modules are needed to interpret incoming data and send outputs
+    # The following modules are needed to interpret incoming data and send 
+    # outputs
 
     import json
-    import alligator
+    import alligatorFLI_1_1
 
     # The double underscores in the function name below will be replaced
     # by alternating parentheses in the AlliGator menu (with end spaces trimmed).
@@ -459,8 +512,8 @@ by default.
     # name needs to contain 'All_Plots' as part of it (case non sensitive).
     # Otherwise, the function is assumed to act on the right-click selected plot.
 
-    def Plot_Scaled_Sum_and_Difference__Selected_Plots__test(
-            graph_data_in, params_in_json, addtl_params_out_json_list):
+    def Plot_Scaled_Sum_and_Difference__Selected_Plots__(
+            plugin_data_in, params_in_json, addtl_params_out_json_list):
         
         """Scaled Sum & Difference:
         
@@ -479,7 +532,7 @@ by default.
         # If no parameter is needed this section can be ignored
         
         ### AlliGator Input Parameters Definitions ###
-        ### k:float64 # scaling parameter
+        ### k:float64:1 # scaling parameter
         
         ### Phasor Frequency:AlliGator # This is not visible to the user
         ### End of AlliGator Input Parameters Definitions ###
@@ -501,27 +554,28 @@ by default.
         params = json.loads(params_in_json)
         k = params['k']
         f = params['Phasor Frequency']
-
-        # decode the graph data named tuple
+        
+        # decode the graph data named tuple from the plugin data named tuple
         # the graph data comprises a list of Plot Data
         # Each Plot Data is a named tuple comprised of 
         # a 'Plot_Name' (string)
         # and two lists of double, 'X_Array' and 'Y_Array'
 
-        graph_name = graph_data_in.Graph_Name
-        plots = graph_data_in.Plots
+        graph_plugin_data = plugin_data_in.Graph_Plugin_Data
+        graph_name = graph_plugin_data.Graph_Name
+        plots = graph_plugin_data.Plots
         nplots = len(plots)
-        
+
         # Adds and subtracts the first 2 plots if they have the same length
         # otherwise returns an error
 
         if nplots < 2:
             exception_type = "Error"
             exception_message = "Not enough selected plots!"
-            graph_data_out = alligator.graph_plugin_data(
+            graph_data_out = alligatorFLI_1_1.graph_plugin_data(
                 Graph_Name = graph_name,
                 Plots = [],
-                Reference_Decay = alligator.empty_plot)
+                Reference_Decay = alligatorFLI_1_1.empty_plot)
         else:
             plot_data1 = plots[0]
             name1 = plot_data1.Plot_Name
@@ -533,19 +587,19 @@ by default.
             y2 = plot_data2.Y_Array
             
             # we also requested the Reference Decay, which is an internal data,
-            # not a 'parameter'. It is therefore passed as part of the graph_data_in
-            # named tuple. If it is not requested, that part of the named tuple will
-            # obviously be empty.
-            # Other such internal data may be added to graph_data_in in future versions
-            # in a (hopefully) backward compatible way.
+            # not a 'parameter'. It is therefore passed as part of the 
+            # graph_data_in named tuple. If it is not requested, that part of 
+            # the named tuple will obviously be empty.
+            # Other such internal data may be added to graph_data_in in future 
+            # versions in a (hopefully) backward compatible way.
             # Note that this function DOES NOT use the Reference Decay (aka IRF).
             # This is just to show how to request it and get to the data
             
-            ref_decay_data = graph_data_in.Reference_Decay
+            ref_decay_data = graph_plugin_data.Reference_Decay
             ref_decay_name = ref_decay_data.Plot_Name
             ref_decay_x = ref_decay_data.X_Array
             ref_decay_y = ref_decay_data.Y_Array
-
+            
             # processing of the incoming data
             
             if (len(x1) != len(x2)):
@@ -563,31 +617,43 @@ by default.
                 # we need to repackage those plots into a list of named tuples
                 # (same structure as the input)
 
-                plot_data1_out = alligator.plot_plugin_data(
+                s_plot_data_out = alligatorFLI_1_1.plot_plugin_data(
                     Plot_Name = 'Scaled Sum of Plots',
                     X_Array = x1,
                     Y_Array = sumy
                 )
-                plot_data2_out = alligator.plot_plugin_data(
+                d_plot_data_out = alligatorFLI_1_1.plot_plugin_data(
                     Plot_Name = 'Scaled Difference of Plots',
                     X_Array = x1,
                     Y_Array = diffy
                 )
-                plots_out = [plot_data1_out, plot_data2_out]
+                plots_out = [s_plot_data_out, d_plot_data_out]
                 message = 'Scaled Sum of Selected Plots (scaling factor: ' +\
-                    str(k) + ', '+name1 + ', '+name2+') and Phasor Frequency Update'
-            graph_data_out = alligator.graph_plugin_data(
+                    str(k) + ', '+name1 + ', \
+                    '+name2+') and Phasor Frequency Update'
+
+            # packages the data into a Python Plugin graph data structure
+            
+            graph_data_out = alligatorFLI_1_1.graph_plugin_data(
                 Graph_Name = graph_name,
                 Plots = plots_out,
-                Reference_Decay = alligator.empty_plot)
+                Reference_Decay = alligatorFLI_1_1.empty_plot)
             
-            # Finally, we can send back information on the function outcome
-            # and can also set AlliGator Parameters
-            # all this packaged in a dictionary, converted to json and
-            # appended to the (generally) empty string list
-            # addtl_params_out_json_list
-            # Note: space and case are irrelevant in the item names
-        
+        # packages the data into a Python Plugin data structure
+
+        plugin_data_out = alligatorFLI_1_1.plugin_data(
+            Image_Plugin_Data = alligatorFLI_1_1.empty_image,
+            Graph_Plugin_Data = graph_data_out,
+            Parameter_Map_Plugin_Data = alligatorFLI_1_1.empty_parameter_map,
+            FLI_Dataset_Plugin_Data = alligatorFLI_1_1.empty_fli_dataset)
+                            
+        # Finally, we can send back information on the function outcome
+        # and can also set AlliGator Parameters
+        # all this packaged in a dictionary, converted to json and
+        # appended to the (generally) empty string list
+        # addtl_params_out_json_list
+        # Note: space and case are irrelevant in the item names
+
         info_out_dict = {
         "Notebook Message" : message,
         "Exception Type" : exception_type,
@@ -597,13 +663,16 @@ by default.
         
         # conversion to JSON string and string is appended to the incoming
         # addtl_params_out_json_list (which is empty in this example)
-        # Note that AlliGator will ignore everything but the last string in the list
+        # Note that AlliGator will ignore everything but the last string in the
+        # list
         
         addtl_params_out_json_list.append(json.dumps(info_out_dict))
         
         # return results to AlliGator
 
-        return(graph_data_out)
+        return(plugin_data_out)
 
         # Note: it is possible to send debug messages to the Python Console
         # using the standard print() statement
+        
+(last modified: 2026-09-15)

@@ -25,16 +25,20 @@
 	<Item Name="AlliGator Fit to Logistic Square Gated IRF.vi" Type="VI" URL="../AlliGator Fit to Logistic Square Gated IRF.vi"/>
 	<Item Name="AlliGator Fit to Model IRF.vi" Type="VI" URL="../AlliGator Fit to Model IRF.vi"/>
 	<Item Name="AlliGator Fit to Tilted Logistic Square Gated IRF.vi" Type="VI" URL="../AlliGator Fit to Tilted Logistic Square Gated IRF.vi"/>
+	<Item Name="AlliGator Get IRF from Decay v2.vi" Type="VI" URL="../AlliGator Get IRF from Decay v2.vi"/>
 	<Item Name="AlliGator Get IRF Values &amp; Locations.vi" Type="VI" URL="../AlliGator Get IRF Values &amp; Locations.vi"/>
 	<Item Name="AlliGator Get Optimal IRF from Decay v2.vi" Type="VI" URL="../AlliGator Get Optimal IRF from Decay v2.vi"/>
 	<Item Name="AlliGator Get Reference Decay.vi" Type="VI" URL="../AlliGator Get Reference Decay.vi"/>
 	<Item Name="AlliGator Get Square Gated IRF Analysis Cursors.vi" Type="VI" URL="../AlliGator Get Square Gated IRF Analysis Cursors.vi"/>
 	<Item Name="AlliGator Is IRF Valid.vi" Type="VI" URL="../AlliGator Is IRF Valid.vi"/>
 	<Item Name="AlliGator Load Local IRFs.vi" Type="VI" URL="../AlliGator Load Local IRFs.vi"/>
+	<Item Name="AlliGator Optimal IRF Metrics.vi" Type="VI" URL="../AlliGator Optimal IRF Metrics.vi"/>
+	<Item Name="AlliGator Optimal Lifetime Guess.vi" Type="VI" URL="../AlliGator Optimal Lifetime Guess.vi"/>
 	<Item Name="AlliGator Save Local IRFs.vi" Type="VI" URL="../AlliGator Save Local IRFs.vi"/>
 	<Item Name="AlliGator Save-Load Local IRFs.vi" Type="VI" URL="../AlliGator Save-Load Local IRFs.vi"/>
 	<Item Name="AlliGator Script All ROIs IRF Analysis.vi" Type="VI" URL="../AlliGator Script All ROIs IRF Analysis.vi"/>
 	<Item Name="AlliGator Sort Cursors for Square Gated IRF Fit.vi" Type="VI" URL="../AlliGator Sort Cursors for Square Gated IRF Fit.vi"/>
 	<Item Name="AlliGator Square Gated IRF Fit Cursors String.vi" Type="VI" URL="../AlliGator Square Gated IRF Fit Cursors String.vi"/>
 	<Item Name="AlliGator Thresholded IRF.vi" Type="VI" URL="../AlliGator Thresholded IRF.vi"/>
+	<Item Name="Compute Optimal IRF v4.vi" Type="VI" URL="../../../../Fits/IRF(X)PSED/Compute Optimal IRF v4.vi"/>
 </Library>

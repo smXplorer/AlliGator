@@ -159,7 +159,6 @@
 	<Item Name="1D Weighted-Unweighted Chi2.vi" Type="VI" URL="../1D Weighted-Unweighted Chi2.vi"/>
 	<Item Name="3 Gaussians Fit Guess Parameters.vi" Type="VI" URL="../Three Gaussians/3 Gaussians Fit Guess Parameters.vi"/>
 	<Item Name="Abort Fit Global.vi" Type="VI" URL="../Abort Fit Global.vi"/>
-	<Item Name="AlliGator Compute Residuals ACF.vi" Type="VI" URL="../../AlliGator/Local Decay Window/AlliGator Compute Residuals ACF.vi"/>
 	<Item Name="Build Convolution Support v2.vi" Type="VI" URL="../Decay Convolution/Build Convolution Support v2.vi"/>
 	<Item Name="CNR abx reweighted (Pearson option).vi" Type="VI" URL="../CNR abx reweighted (Pearson option).vi"/>
 	<Item Name="Complement with Fixed Parameters.vi" Type="VI" URL="../Decay Convolution/Complement with Fixed Parameters.vi"/>
@@ -172,8 +171,9 @@
 	<Item Name="Compute Fit Curve v4.vi" Type="VI" URL="../Compute Fit Curve v4.vi"/>
 	<Item Name="Compute Guess Fit Parameters.vi" Type="VI" URL="../Compute Guess Fit Parameters.vi"/>
 	<Item Name="Compute N-Exp Fit Optimal Offset.vi" Type="VI" URL="../Compute N-Exp Fit Optimal Offset.vi"/>
-	<Item Name="Compute Optimal IRF v3.vi" Type="VI" URL="../IRF(X)PSED/Compute Optimal IRF v3.vi"/>
 	<Item Name="Compute Plots Convolution Product v2.vi" Type="VI" URL="../IRF(X)PSED/Compute Plots Convolution Product v2.vi"/>
+	<Item Name="Compute Residuals Absolute Area.vi" Type="VI" URL="../Compute Residuals Absolute Area.vi"/>
+	<Item Name="Compute Residuals ACF.vi" Type="VI" URL="../Compute Residuals ACF.vi"/>
 	<Item Name="Compute Upper &amp; Lower CI Plots.vi" Type="VI" URL="../Compute Upper &amp; Lower CI Plots.vi"/>
 	<Item Name="Compute Weight Array v2.vi" Type="VI" URL="../Compute Weight Array v2.vi"/>
 	<Item Name="Constrained Non-Linear Fit (Best of All).vi" Type="VI" URL="../Constrained Non-Linear Fit (Best of All).vi"/>
@@ -216,7 +216,6 @@
 	<Item Name="Get Fixed &amp; Fitted Parameters v2.vi" Type="VI" URL="../Decay Convolution/Get Fixed &amp; Fitted Parameters v2.vi"/>
 	<Item Name="Get Fixed &amp; Fitted Parameters.vi" Type="VI" URL="../Decay Convolution/Get Fixed &amp; Fitted Parameters.vi"/>
 	<Item Name="Get Histogram Fit Axis v2.vi" Type="VI" URL="../Get Histogram Fit Axis v2.vi"/>
-	<Item Name="Get IRF from Decay v2.vi" Type="VI" URL="../IRF(X)PSED/Get IRF from Decay v2.vi"/>
 	<Item Name="Get IRF support &amp; Guess Values.vi" Type="VI" URL="../Decay Convolution/Get IRF support &amp; Guess Values.vi"/>
 	<Item Name="Get Optimal Fourier Order.vi" Type="VI" URL="../IRF(X)PSED/Get Optimal Fourier Order.vi"/>
 	<Item Name="Get Plot to Fit Wrapper.vi" Type="VI" URL="../Get Plot to Fit Wrapper.vi"/>
@@ -226,6 +225,7 @@
 	<Item Name="Get-Set NLLM Fit Status.vi" Type="VI" URL="../Get-Set NLLM Fit Status.vi"/>
 	<Item Name="Init Cubic Spline + Sine Parameters.vi" Type="VI" URL="../Cubic Spline + Sine/Init Cubic Spline + Sine Parameters.vi"/>
 	<Item Name="Insert Fitted Offset in Parameters Array.vi" Type="VI" URL="../Insert Fitted Offset in Parameters Array.vi"/>
+	<Item Name="IRF Tail Analysis.vi" Type="VI" URL="../IRF Tail Analysis.vi"/>
 	<Item Name="LM 2D Gaussian + Blinking ACF and gradient.vi" Type="VI" URL="../ACF-CCF/2D ACF/LM 2D Gaussian + Blinking ACF and gradient.vi"/>
 	<Item Name="LM 2D Gaussian + Flow ACF and gradient.vi" Type="VI" URL="../ACF-CCF/2D ACF/LM 2D Gaussian + Flow ACF and gradient.vi"/>
 	<Item Name="LM 2D Gaussian ACF + Flow and gradient (Global).vi" Type="VI" URL="../ACF-CCF/2D ACF/LM 2D Gaussian ACF + Flow and gradient (Global).vi"/>

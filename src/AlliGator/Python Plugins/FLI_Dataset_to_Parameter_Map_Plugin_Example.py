@@ -1,13 +1,13 @@
 # FLI_Dataset_to_Parameter_Map_Plugin_Example.py
 # Example AlliGator FLI Dataset Menu Python Plugin
-# Tested with AlliGator version 1.02
+# Tested with AlliGator version 1.07
 # Author: X. Michalet
-# Last modified: 2025-06-19
+# Last modified: 2026-07-29
 
 # The following (triple) comment is needed to specify the AlliGator Python 
 # Plugin API version number to use
 
-### AlliGator Python Plugin API Version = 1 ###
+### AlliGator Python Plugin API Version = 1.1 ###
 
 # The following (triple) comment is needed to tell AlliGator where to
 # insert the plugin function(s) as menu item(s)
@@ -23,14 +23,14 @@
 # The following modules are needed to interpret incoming data and send outputs
 
 import json
-import alligator
+import alligatorFLI_1_1
 
 # the following module is used in this plugin
 
 import numpy as np
 
 def Very_Simple_Average_Lifetime_Map(
-        fli_dataset_data_in, params_in_json, addtl_params_out_json_list):
+        plugin_data_in, params_in_json, addtl_params_out_json_list):
         
     """Very Simple Average Lifetime Map
 
@@ -48,10 +48,10 @@ def Very_Simple_Average_Lifetime_Map(
     # The following (triple commented) section describes which
     # additional parameters are required for that function.
     # If no parameter is needed this section can be ignored
-
+ 
     ### AlliGator Input Parameters Definitions ###
-    ### Laser Period: AlliGator
-    # the reference decay is part of the input fli_dataset_data_in
+    ### Low Count Pixels Rejection Options: AlliGator
+    # the reference decay is part of the input plugin_data_in
     ### End of AlliGator Input Parameters Definitions ###
 
     # The following (triple commented) section is mandatory to know which
@@ -59,11 +59,12 @@ def Very_Simple_Average_Lifetime_Map(
     # object they are destined to
 
     ### AlliGator Output Value Type & Destination ###
-    ### Decay Fit Parameters Map:Decay Fit Parameters Map Image
+    ### Parameter Map:Parameter Map
     ### End of AlliGator Output Value Type & Destination ###
 
-    # decode the dataset
+    # decode the plugin data
     
+    fli_dataset_data_in = plugin_data_in.FLI_Dataset_Plugin_Data
     fli_dataset_name = fli_dataset_data_in.FLI_Dataset_Name
     gate_duration = fli_dataset_data_in.Gate_Duration
     gate_separation = fli_dataset_data_in.Gate_Separation
@@ -71,74 +72,107 @@ def Very_Simple_Average_Lifetime_Map(
     size_x = fli_dataset_data_in.X_Size
     size_y = fli_dataset_data_in.Y_Size
     images = fli_dataset_data_in.Image_Data_List
-    ref_decay = fli_dataset_data_in.Reference_Decay
-    mask = fli_dataset_data_in.Mask_Image
+    # mask = fli_dataset_data_in.Mask_Image     # unused in this function
+
+    graph_data_in = plugin_data_in.Graph_Plugin_Data
+    ref_decay = graph_data_in.Reference_Decay
 
     # decode the parameter string
 
     params = json.loads(params_in_json)
-    period = params['Laser Period']         # we actually don't use it...
+    low_count_pixel_options = params['Low Count Pixels Rejection Options']
+    
+    # print(str(low_count_pixel_options))
+    
+    reject_low_count_pixels = low_count_pixel_options['Reject Low Count Pixels']
+    background_low_threshold_factor = low_count_pixel_options['Background Low Threshold Factor']
+    fixed_low_background_threshold = low_count_pixel_options['Fixed Low Background Threshold']
+    low_percentile = low_count_pixel_options['Low Percentile']
+    
+    # !!! in this example, we ignore background_low_threshold_factor and
+    # !!! low_percentile as they require an histogram analysis of the sun image
+    # !!! we only use the fixed_low_background_threshold (if selected)
+    
+    if not reject_low_count_pixels: fixed_low_background_threshold = 0.0
+    
+    # print('reject_low_count_pixel = '+str(reject_low_count_pixels))
+    # print('fixed_low_background_threshold = '+str(fixed_low_background_threshold))
     
     # process gate series: calculate a pseudo average lifetime as
-    # <tau> = sum((i - i0)*dt*y_i)/sum(y_i) where i0 is the peak location
+    # <tau> = sum((i - i0)*y_i)*dt/sum(y_i) where i0 is the peak location
     
-    dt = gate_separation*1E9                            # step in ns
-    sum = np.zeros((size_y,size_x),dtype=np.float32)    # init sum image
-    mean_t = np.zeros((size_y,size_x),dtype=np.float32) # init mean t image
-    decay_sum = np.zeros(gate_number,dtype=np.float32) # init decay sum
+    dt = gate_separation*1E9                              # step in ns
+    sum = np.zeros((size_y,size_x),dtype=np.float32)      # init sum image
+    integral = np.zeros((size_y,size_x),dtype=np.float32) # init integral image
+    decay_sum = np.zeros(gate_number,dtype=np.float32)    # init decay sum
+    mean_t = np.empty((size_y,size_x),dtype=np.float32)   # init mean t image
 
-    # Find location of maximum
+    # find location of maximum assuming there is no offset between pixels
+    
     for i in range(gate_number):
         decay_sum[i] = np.asarray(images[i].Image).sum()
     i0 = decay_sum.argmax()
     
-    # Compute integrals of t*y and y
+    # Note: alternatively, the Sum_Image data of the FLI Dataset Data structure
+    # could be used
+    
+    # compute integrals of t*y and y
+    
     for i in range(gate_number):
         gate = np.asarray(images[i].Image)
         np.add(sum, gate, out = sum)
-        np.add(mean_t, gate*(i-i0), out = mean_t)
-    np.divide(mean_t*dt, sum, out = mean_t)
+        time = (i-i0)*dt
+        np.add(integral, gate*time, out = integral)
+        
+    # replace sun values lower than threshold by nan
+    
+    sum[sum < fixed_low_background_threshold] = np.nan
+    
+    # compute mean tau
+
+    mean_t = np.divide(integral, sum)
     
     # building the parameter map
-    # init
-    param_names = ['A_1','<tau>_a']
+    
     # not all parameters need to be provided, in which case only the names
     # of the provided parameters are needed
+
+    parameter_names = ['A_1','<tau>_a']
+    
+    # copying IRFs from input data
+    
     irf_x = ref_decay.X_Array
     irf_y = ref_decay.Y_Array       # if there is a single IRF
                                     # otherwise provide one irf_y per location
-    irf_locations = []              # will be filled with locations
-    param_map = []                  # will be filled with parameter values
 
-    
     # fill the two flattened maps
+ 
+    irf_locations = []              # will be filled with locations
+    parameter_map = []              # will be filled with parameter values
     for i in range(size_x):
         for j in range (size_y):
-            irf_locations.append(alligator.location(X = i, Y = j))
-            param_map.append([i, j, sum[j, i],mean_t[j, i]])
+            irf_locations.append(alligatorFLI_1_1.location(X = i, Y = j))
+            parameter_map.append([i, j, sum[j, i],mean_t[j, i]])
+    
+    # print(str(parameter_map[:1000]))
     
     # packaging everything in the output format
     
-    simple_map = alligator.parameter_map_plugin_data(
-        Parameter_Names = param_names,
-        Parameter_Flattened_Map = param_map,
+    simple_map_data = alligatorFLI_1_1.parameter_map_plugin_data(
+        Parameter_Names = parameter_names,
+        Parameter_Flattened_Map = parameter_map,
         Locations = irf_locations,
         IRF_X = irf_x,
         IRF_Y_Flattened_List = [irf_y],
+        X_Resolution = size_x,
+        Y_Resolution = size_y
     )
     
-    fli_dataset_data_out = alligator.fli_dataset_plugin_data(
-        FLI_Dataset_Name = '',
-        Gate_Duration = 0,
-        Gate_Separation = 0,
-        Gate_Number = 1,
-        X_Size = size_x,
-        Y_Size = size_y,
-        Image_Data_List = [],
-        Reference_Decay = alligator.empty_plot,
-        Mask_Image = mask,
-        Parameter_Map = simple_map
-    )
+    plugin_data_out = alligatorFLI_1_1.plugin_data(
+        Image_Plugin_Data =alligatorFLI_1_1.empty_image,
+        Graph_Plugin_Data = alligatorFLI_1_1.empty_graph,
+        Parameter_Map_Plugin_Data = simple_map_data,
+        FLI_Dataset_Plugin_Data = alligatorFLI_1_1.empty_fli_dataset)
     
     # We can send back information on the function outcome
     # and can also set AlliGator Parameters
@@ -159,6 +193,6 @@ def Very_Simple_Average_Lifetime_Map(
     
     addtl_params_out_json_list.append(json.dumps(info_out_dict))
     
-    # return the Mask Image to AlliGator
+    # return the plugin data containing the parameter map and the mask
     
-    return(fli_dataset_data_out)
+    return(plugin_data_out)

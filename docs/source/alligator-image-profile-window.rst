@@ -38,7 +38,7 @@ parameters along the contour, provided these parameters are available:
 
 + Intensity
 + Phase Lifetime
-+ Phasor (Intemsity/Amplitude) Ratio/(Intensity/Amplitude)-Averaged Lifetime
++ Phasor (Intensity/Amplitude) Ratio/(Intensity/Amplitude)-Averaged Lifetime
 + Decay Fit Parameter
 
 If these parameters are not available (for instance because no phasor plot has 
@@ -59,7 +59,7 @@ in the ``Options`` menu of the **Image Profile** window.
 
 The ``Intensity`` shown in the graph corresponds to the image selected in the 
 *Source Image*. In particular, if ``Single Gate`` is selected as the 
-*Displayed Image*, the intensity aling the contour *in that single gate* will 
+*Displayed Image*, the intensity along the contour *in that single gate* will 
 be represented.
 
 Two alternative options accessible via the ``Options:Image Intensity`` menu of 
@@ -100,7 +100,7 @@ The computed profile will contain *L* values, which will each represent the
 average along a perpendicular segment of length *W* (1-pixel wide). The only 
 exception is the intensity profile, which will represent the sum of the pixels' 
 intensities along the perpendicular segment. Note that the profile will always 
-be measureed along the longest axis of the rectangle. The direction of the 
+be measured along the longest axis of the rectangle. The direction of the 
 profile can be inferred from the label of the Profile Graph.
 
 As usual, if a pixel has been rejected from analysis, it will be excluded from 
@@ -115,11 +115,11 @@ An example is shown below:
 .
 
 Notice the green and red rectangles and the thick green center line. The green 
-(sometimes bizzarely deformed) rectangle is the one drawn by LabVIEW. The red 
-rectangle is that overlayed by AlliGator to provide the actual ROI used in the 
+(sometimes bizarrely deformed) rectangle is the one drawn by LabVIEW. The red 
+rectangle is that overlaid by AlliGator to provide the actual ROI used in the 
 analysis. To show it, check off the ``Overlay ROI Median`` checkbox in the
-**Settings:Source Image:Omage Cosmetics** window panel. The color of that 
-overlayed rectangle (and the associated center line) is the set by the *Median 
+**Settings:Source Image:Image Cosmetics** window panel. The color of that 
+overlaid rectangle (and the associated center line) is the set by the *Median 
 ROI Color* box in the same Settings panel.
 
 The  corresponding **Source Image Profile** window is shown below:
@@ -136,18 +136,18 @@ plot shown here is the ``Intensity-weighted`` one, one of two possible choices:
 .. image:: images/Source-Image-Profile-Window-SDV-Menu.png
    :align: center
 
-The recommended option is the second one, which calculated the SDV of a quantity 
+The recommended option is the second one, which computes the SDV of a quantity 
 *f* along each perpendicular segment (containing *W* pixels) according to:
 
 .. math::
 
-   SDV = \left( \frac{\sum_{i=i}^{W} I_i f_i^2}{\sum_{i=i}^{W} I_i} - 
-   \left(\frac{\sum_{i=i}^{W} I_i f_i}{\sum_{i=i}^{W} I_i}\right)^2\right)^{1/2}
+   SDV = \left( \frac{\sum_{i=i}^{W} I_i f_i^2}{\sum_{i=1}^{W} I_i} - 
+   \left(\frac{\sum_{i=1}^{W} I_i f_i}{\sum_{i=i}^{W} I_i}\right)^2\right)^{1/2}
 
 This gives less weight to pixels with low intensity, providing a more realistic 
 estimate of the dispersion of the quantity of interest for the brightest pixels.
 
-The classic SDV uses the stadard formula, and will generally be larger, as it 
+The classic SDV uses the standard formula, and will generally be larger, as it 
 could mix background pixels (with a different lifetime) with pixels of interest.
 
 Average Intensity Profile
@@ -155,7 +155,7 @@ Average Intensity Profile
 
 The intensity data is treated differently than the other quantities, in the 
 sense that in addition to the standard average and intensity-weighted average, 
-the ``Integrated Intensity" can be represented instead. These options can be 
+the ``Integrated Intensity`` can be represented instead. These options can be 
 selected in the ``Option:Image Intensity`` menu shown above:
 
   - ``Integrated Intensity``: shows the sum of pixel intensities along the 
@@ -170,7 +170,7 @@ Split Profile
 
 When using a rectangle ROI, it is possible to divide each perpendicular segment 
 into two equal parts and display the average quantity for each of the two 
-halves in the *Image Profile* graph, by selecting the ``Option:Rectange Profile 
+halves in the *Image Profile* graph, by selecting the ``Option:Rectangle Profile 
 Type:Half Width`` option (``Ctrl+2``).
 
 .. image:: images/Source-Image-Profile-Window-Rectangle-Profile-Type-Menu.png
@@ -187,7 +187,7 @@ Current ROI Definition
 
 In order to keep a record of the ROI whose profile is being displayed, it is 
 possible to export its definition to the Notebook using the ``Actions:Export 
-ROI Description to Notebook`` (Vtrl+N)menu item:
+ROI Description to Notebook`` (Ctrl+N)menu item:
 
 
 .. image:: images/Source-Image-Profile-Actions-Menu.png

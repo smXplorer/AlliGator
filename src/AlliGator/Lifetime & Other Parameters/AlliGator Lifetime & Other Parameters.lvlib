@@ -5,6 +5,7 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Ctrls" Type="Folder">
+		<Item Name="AlliGator CV(tau) Model Function.ctl" Type="VI" URL="../../Decay Fit Parameter Map/AlliGator CV(tau) Model Function.ctl"/>
 		<Item Name="AlliGator Intensity Slice Definition.ctl" Type="VI" URL="../AlliGator Intensity Slice Definition.ctl"/>
 		<Item Name="AlliGator Lifetime &amp; Other Parameters Plot Metadata.ctl" Type="VI" URL="../AlliGator Lifetime &amp; Other Parameters Plot Metadata.ctl"/>
 	</Item>

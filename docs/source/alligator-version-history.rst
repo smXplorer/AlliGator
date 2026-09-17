@@ -13,6 +13,33 @@ AlliGator Version History
 Note: version numbers followed by an asterisk have not been released.
 
 -----------------
+1.08 (2026-09-16)
+-----------------
+
+    - Bug Fixes
+        + Fixed bug in Fit Decay where imposing some parameters to be fixed together with fitting the offset parameters would result in an erroneous fit
+        + Fixed incorrect Low Percentile limit for NLSF Fitting Options
+        + Fixed bug in Convert ROI to Mask, which would not convert the currently selected ROI if it was not stored
+        + Fixed typo in fitted plot name's mention of the weighting scheme
+        + Updated "Mouse Move" update frequency control mechanism for all image displays
+        + Fixed missing right-click menu for color scale in the Parameter Map panel
+        + Fixed Parameter 2 vs Parameter 1 scatterplot in Parameter Map
+        + Fixed buggy "Delete Parameter Map" action
+
+    - New Features
+        + Added support for pyFLI .mat NLSF Fit Results files
+        + Added Residuals ACF output to Decay Fit plots (and Notebook output)
+        + Added fit-based metrics in the Optimal IRF Extraction algorithm: Residuals ACF SDV/tau, Delta tau and Reduced Chi2/tau, deconvolved IRF tail metric
+        + Introduced Python Plugin API v1.1
+        + Added optional default value for input parameters of Python Plugins
+        + Introduced a Python_Plugin_Data object to pass data in and out of plugins in a more general manner
+        + Introduced support for Parameter Map output
+        + Added FLI Dataset Sliced Decay Variation Analysis Python plugin
+        + Updated version of Multi-ROIs Lifetime Variance Analysis in Decay Fit Parameter Map
+        + Added Color Bar and Color Bar Range right-click menu item for numeric format control
+        + Modified Python Plugin user parameters dialog to allow resizing the table
+
+-----------------
 1.07 (2026-06-03)
 -----------------
 

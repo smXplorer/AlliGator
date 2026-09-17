@@ -225,7 +225,7 @@ The options in this panel are discussed in the
       the beginning/end of the series when loading the dataset.
     * Gates to Keep*: *First/Last* are the indices of the first (default: 0) and 
       last gate (default: 4294,967,295) to keep when loading the dataset. The 
-      indice of the first gate in the dataset is 0, while the index of the 
+      index of the first gate in the dataset is 0, while the index of the 
       last gate is *G-1*, where *G* is the total number of gates in the dataset.
 
 - *Channel Name*: List showing the root name of available gates in the loaded 
@@ -361,7 +361,7 @@ interpretation are described in the online LabVIEW Advanced Signal Processing
 Toolkit manual (https://www.ni.com/docs/en-US/bundle/lvaspt-api-ref/page/vi-lib/addons/wavelet-analysis/application-llb/wa-denoise-vi.html)
 
 Specifically, the *Wavelet Transform Type* parameter allows selecting between a 
-*Discrete Wavelet Transform* (https://www.ni.com/docs/en-US/bundle/lvaspt-api-ref/page/vi-lib/addons/wavelet-analysis/application-llb/wa-denoise-dwt-real-array-vi.html) and a "Undecimated Wavelet Transform* (https://www.ni.com/docs/en-US/bundle/lvaspt-api-ref/page/vi-lib/addons/wavelet-analysis/application-llb/wa-denoise-uwt-real-array-vi.html).
+*Discrete Wavelet Transform* (https://www.ni.com/docs/en-US/bundle/lvaspt-api-ref/page/vi-lib/addons/wavelet-analysis/application-llb/wa-denoise-dwt-real-array-vi.html) and an *Undecimated Wavelet Transform* (https://www.ni.com/docs/en-US/bundle/lvaspt-api-ref/page/vi-lib/addons/wavelet-analysis/application-llb/wa-denoise-uwt-real-array-vi.html).
 
 Square Pulse Options
 ^^^^^^^^^^^^^^^^^^^^
@@ -499,7 +499,7 @@ Parameters in this panel affect the way intensity time traces, discussed in the
 Phasor Plot
 -----------
 
-The **Phasor Plot** panel is subdivided into 3 subpanels:
+The **Phasor Plot** panel is subdivided into 3 sub-panels:
 
 - **Phasor Plot Calculation**
 

@@ -32,10 +32,10 @@ Left-click above or below the color scale to reveal the color picker window and
 select the color highlighting parameters respectively above or below the display 
 range minimum).
 
-The *X*,*Y* and *Map Value* indicators at the bottom right provide the location 
+The *X*, *Y* and *Map Value* indicators at the bottom right provide the location 
 of the cursor (also visible in the image information bar below the map), as well 
 as the actual map value at that location. if that latter indicator appears 
-unresponsive, briefly move the mouse out of the window and back to reactuivate 
+unresponsive, briefly move the mouse out of the window and back to reactivate 
 mouse tracking (that trick also work to reactivate the 
 :ref:`alligator-local-decay-graph-window` mentioned below).
 
@@ -191,7 +191,7 @@ The additional quantities are described next:
    *Residual ACF SDV* are computed with this value excluded.
 
 Each constraint line ends with a checkbox indicating whether it should be used 
-or not. Finally, the *Use Decay Fit Results Cosntraints* checkbox at the top of 
+or not. Finally, the *Use Decay Fit Results Constraints* checkbox at the top of 
 the list indicates whether or not the selected constraints should be applied. 
 All selected constraints need to be satisfied in order for a pixel to be 
 retained in the analysis.
@@ -204,41 +204,135 @@ relative residual or residuals ACF are selected), but are only computed once.
 Lifetime Variance Analysis Maps
 -------------------------------
 
-This analysis involves external calibration data establishing the *expected* 
+This analysis assesses whether a sample's observed single-exponential decay 
+lifetime variance is consistent with statistical fluctuations and setup noise 
+characteristics (in particular the acquisition chain's noise characteristics) 
+or is likely due to additional sources, such as sample heterogeneity. It 
+requires external reference data establishing the *expected* or *normal* 
 lifetime coefficient of variation (:math:`CV_\tau`) dependency on intensity 
-(*I*) for an ideal sample. The analysis requires providing the power law 
-parameters describing this dependency, which are user-provided via the 
-following dialog:
+(*I*) for an ideal sample.
 
+Once the corresponding parameters have been computed and stored, any new sample 
+acquired n similar conditions can be analyzed to obtain a confidence level map 
+that the observed lifetime CV is consistent with that observed in the 
+reference sample (for details, see [NY26]_).
 
-.. image:: images/AlliGator-Power-Law-Parameters-Dialog.png
+The following discusses the different steps in the analysis, starting with 
+analysis of a reference sample and followed by that of a new sample.
+
+Reference Sample Lifetime CV Analysis
++++++++++++++++++++++++++++++++++++++
+
+A reference sample consists of a pure solution of the dye of interest recorded 
+with a specific set of acquisition parameters, which will be used when later 
+recording the new sample of interest. The analysis unfolds as follows:
+
+1. Define a ROI to analyze. Save it before converting it to single-pixel ROIs.
+2. The sample is analyzed using the `FLI Dataset:Multiple ROIs Analysis:All ROIS 
+   NLSF Analysis:Non-Interactive (Fast)` function of the `Analysis` main menu, 
+   with a single-exponential fit model, resulting in a series of maps in the 
+   corresponding AlliGator **Decay Fit Parameter Map** panel.
+3. In that panel, select the `tau_1` parameter map and use the ``Scatterplots:Create 
+   Selected Parameter vs Intensity Scatterplot`` function.
+4. Next, analyze the corresponding scatterplot in the *Lifetime & Other Parameters* 
+   graph in the **Lifetime & Other Parameters** panel, using the ``Compute Sliced 
+   Mean, SDV and CV Plots`` function. Note the intensity slice definitions, as 
+   they will be needed later. Use preferably slices defined by their ``# Element``
+   rather than by ``Step Size`` or ``# Steps``. There is no need to compute the
+   bootstrap CV's SDV (computing it is time-consuming).
+5. Fit the corresponding CV(I) plot using a ``Power Law`` or ``1-Exponential`` 
+   model, whichever is better. Note the fit parameters (or their location in the 
+   Notebook), as they are needed later.
+6. One optional step consists in histogramming the fit residuals and fitting the 
+   resulting histogram with a Gaussian model. Note the *Standard Deviation* of 
+   that fit, as it is needed later.
+7. Returning to the **Decay Fit Parameter Map** panel, clear the single-pixel ROIs 
+   and load the original ROI, before using the ``Multi-ROIs Lifetime Variance 
+   Analysis`` function. This function opens two consecutive dialog windows.
+  
+.. image:: images/AlliGator-CV-Analysis-Parameters-Dialog.png
    :align: center
-
+  
 .
 
-The analysis also requires providing parameters defining the intensity slices 
-to be used in each ROI defined in the image (see the ``Compute Sliced Mean, SDV 
-& CV Plots`` menu of the :ref:`alligator-lifetime-and-other-parameters-panel` 
-for details). This analysis establishes the *observed* :math:`CV_\tau(I)` 
-dependency.
+  - **CV Analysis Parameters Dialog** window: the first parameters of this dialog 
+    correspond to the CV(I) fit performed in one of the previous steps 
+    (*Function*, *Amplitude*, *Exponent/Scale* and *Baseline*). The 5th parameter 
+    (*Residuals SDV*) corresponds to an optional step of the previous analysis. 
+    It is used to build a confidence level (CL) map based on the CV(I) fit's 
+    residuals SDV. If no such map is needed, use NaN or 0 for that parameter. 
+    The last two parameters (*Minimum CL (%)* and *Low CL Percentile to Reject 
+    (%)*) are used to compute a scaling parameter needed to obtain a CL map that 
+    is self-consistent for the reference sample.
+    
+    .. note::
+       Select the ``Reference`` *Analysis Type* option during this step.
 
-The following maps are computed:
-
-+ *Delta SDV Map*: the map represents the difference between the observed and 
-  expected lifetime standard deviation of the selected lifetime map 
-  (:math:`\tau_1, \tau_2, \tau_a` or :math:`\tau_i`), where :math:`SDV_\tau = 
-  CV_\tau*\tau`.
-
-+ *Delta CV Map*: the map represents the difference between the observed and 
-  expected lifetimecoefficient of variation of the selected lifetime map 
-  (:math:`\tau_1, \tau_2, \tau_a` or :math:`\tau_i`).
-
-+ *Lifetime Variance F-Test Significance Map*: the map represents the 
-  significance level of the observed lifetime variance ratio using the F-test.
+  - **Sliced Mean, SDV & CV Options** window: the parameters in this window 
+    should be identical to those used for the ``Compute Sliced Mean, SDV and CV 
+    Plots`` step above, with the difference that *Bootstrap CV's SDV* should be 
+    checked off and a number of replicas  (*# Replicas*) should be provided (it 
+    is recommended to use the same value as for the *# Elements* parameter above).
   
-+ *Lifetime Variance* :math:`\chi^2`-*Test Significance Map*: the map represents 
-  the significance level of the observed lifetime variance ratio using the 
-  :math:`\chi^2`-test.
+.. image:: images/AlliGator-Sliced-Mean-SDV-Options-Dialog.png
+   :align: center
 
-(last updated: 2026-01-29)
+8. The results of this analysis will be available in the **Parameter Map** as 
+   described in the :ref:`lifetime-cv-analysis-parameter-maps` section. Write down 
+   the parameter(s) output in the Notebook, as they will be needed to the new 
+   sample lifetime CV analysis (see next sub-section):
+  
+   - *CV Res. x k*: parameter used for a CL map based on the CV(I) residuals.
+   - *CV Boot. SDV x k*: parameter used for a CL map based on a bootstrap 
+     analysis of the lifetime CV SDV.
+
+The maps generated during this analysis are discussed in the 
+:ref:`lifetime-cv-analysis-parameter-maps` section of the manual.
+
+.. note::
+   The reference sample analysis needs only to be done once. Its results (CV(I) 
+   fit parameters and *CV Res. x k* and/or *CV Boot. SDV x k*) can be stored 
+   for subsequent analysis of other samples acquired in the same experimental 
+   conditions.
+
+New Sample Lifetime CV Analysis
++++++++++++++++++++++++++++++++
+
+The analysis of a new sample proceeds along the same lines as for a reference 
+sample without steps 3-6 and a couple of differences in step 7, as discussed next.
+
+7bis. Returning to the **Decay Fit Parameter Map** panel, clear the single-pixel 
+      ROIs and load the original ROI, before using the ``Multi-ROIs Lifetime 
+      Variance Analysis`` function. This function opens two consecutive dialog 
+      windows.
+  
+.. image:: images/AlliGator-CV-Analysis-Parameters-Dialog2.png
+   :align: center
+  
+.
+
+        .. note::
+           Select the ``New Sample`` *Analysis Type* option during this step.
+
+      - **CV Analysis Parameters Dialog** window: the first parameters of this 
+        dialog correspond to the CV(I) fit performed on the reference sample 
+        (*Function*, *Amplitude*, *Exponent/Scale* and *Baseline*), as well as 
+        (optionally) the fit *Residuals SDV*. Because the
+        ``New Sample`` *Analysis Type* is selected, some of the parameters visible 
+        during a reference sample analysis are hidden. The last two parameters 
+        (*Residuals SDV x Scale Factor* and *Bootstrap SDV x Scale Factor*) 
+        correspond to the *CV Res. x k* and *CV Boot. SDV x k* parameters computed 
+        during the reference sample analysis.
+        
+      - **Sliced Mean, SDV & CV Options** window: the parameters in this window 
+        don't need to be identical to those used for the reference sample analysis, 
+        except for the *# Elements* one, which should be close to or identical to 
+        that one used for the reference sample. Finally, there is no need to 
+        computed the *Bootstrap CV's SDV*, therefore that checkbox can be left 
+        unchecked.
+
+The maps generated during this analysis are discussed in the 
+:ref:`lifetime-cv-analysis-parameter-maps` section of the manual.
+
+(last updated: 2026-09-15)
 

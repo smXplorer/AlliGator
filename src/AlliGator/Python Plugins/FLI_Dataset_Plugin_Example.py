@@ -2,12 +2,12 @@
 # Example AlliGator FLI Dataset Menu Python Plugin
 # Tested with AlliGator version 1.02
 # Author: X. Michalet
-# Last modified: 2025-06-19
+# Last modified: 2026-07-22
 
 # The following (triple) comment is needed to specify the AlliGator Python 
 # Plugin API version number to use
 
-### AlliGator Python Plugin API Version = 1 ###
+### AlliGator Python Plugin API Version = 1.1 ###
 
 # The following (triple) comment is needed to tell AlliGator where to
 # insert the plugin function(s) as menu item(s)
@@ -23,14 +23,14 @@
 # The following modules are needed to interpret incoming data and send outputs
 
 import json
-import alligator
+import alligatorFLI_1_1
 
 # the following module is used in this plugin
 
 import numpy as np
 
 def Peak_Intensity_Above_Threshold_Mask(
-        fli_dataset_data_in, params_in_json, addtl_params_out_json_list):
+        plugin_data_in, params_in_json, addtl_params_out_json_list):
         
     """Peak Intensity Above Threshold Mask
 
@@ -38,6 +38,7 @@ def Peak_Intensity_Above_Threshold_Mask(
     from the calling VI and processes the incoming Dataset as follows:
     max of all gates -> max
     if max > th, mask = 1, else mask = 0
+    identifying pixels for which the peak intensity is larger than the threshold
     The resulting processed mask image is returned to AlliGator
     """
     # The following (triple) comment indicates that this function is a plugin
@@ -59,19 +60,20 @@ def Peak_Intensity_Above_Threshold_Mask(
     # object they are destined to
 
     ### AlliGator Output Value Type & Destination ###
-    ### Mask Image:Source Image # comments are OK.
+    ### Mask Image:Source Image # sends Mask Image to Source Image display
 
     ### End of AlliGator Output Value Type & Destination ###
 
-    # decode the dataset
+    # get and decode the dataset
     
-    fli_dataset_name = fli_dataset_data_in.FLI_Dataset_Name
-    gate_duration = fli_dataset_data_in.Gate_Duration
-    gate_separation = fli_dataset_data_in.Gate_Separation
-    gate_number = fli_dataset_data_in.Gate_Number
-    size_x = fli_dataset_data_in.X_Size
-    size_y = fli_dataset_data_in.Y_Size
-    images = fli_dataset_data_in.Image_Data_List
+    fli_dataset_data = plugin_data_in.FLI_Dataset_Plugin_Data
+    fli_dataset_name = fli_dataset_data.FLI_Dataset_Name
+    gate_duration = fli_dataset_data.Gate_Duration
+    gate_separation = fli_dataset_data.Gate_Separation
+    gate_number = fli_dataset_data.Gate_Number
+    size_x = fli_dataset_data.X_Size
+    size_y = fli_dataset_data.Y_Size
+    images = fli_dataset_data.Image_Data_List
 
     # decode the parameter string
 
@@ -88,7 +90,10 @@ def Peak_Intensity_Above_Threshold_Mask(
                                                # set values <= th to 0
     mask_as_list = mask.tolist() # LabVIEW only accepts list as array output
 
-    fli_dataset_data_out = alligator.fli_dataset_plugin_data(
+    # packages the data into a Python Plugin data structure
+    # First builds a FLI Dataset data structure
+    
+    fli_dataset_data_out = alligatorFLI_1_1.fli_dataset_plugin_data(
         FLI_Dataset_Name = '',
         Gate_Duration = 0,
         Gate_Separation = 0,
@@ -96,10 +101,16 @@ def Peak_Intensity_Above_Threshold_Mask(
         X_Size = size_x,
         Y_Size = size_y,
         Image_Data_List = [],
-        Reference_Decay = alligator.empty_plot,
-        Mask_Image = mask_as_list,
-        Parameter_Map = alligator.empty_map
-    )
+        Mask_Image = mask_as_list)
+
+    # Then builds a Python Plugin data structure containing the FLI Dataset 
+    # data structure
+    
+    plugin_data_out = alligatorFLI_1_1.plugin_data(
+        Image_Plugin_Data = alligatorFLI_1_1.empty_image,
+        Graph_Plugin_Data = alligatorFLI_1_1.empty_graph,
+        Parameter_Map_Plugin_Data = alligatorFLI_1_1.empty_parameter_map,
+        FLI_Dataset_Plugin_Data = fli_dataset_data_out)
     
     # We can send back information on the function outcome
     # and can also set AlliGator Parameters
@@ -120,6 +131,6 @@ def Peak_Intensity_Above_Threshold_Mask(
     
     addtl_params_out_json_list.append(json.dumps(info_out_dict))
     
-    # return the Mask Image to AlliGator
+    # return the plugin data to AlliGator
     
-    return(fli_dataset_data_out)
+    return(plugin_data_out)

@@ -1,13 +1,13 @@
 # Source_Image_Plugin_Example.py
 # Example AlliGator Source Image Python Plugin
-# Tested with AlliGator version 1.02
+# Tested with AlliGator version 1.07
 # Author: X. Michalet
-# Last modified: 2025-06-19
+# Last modified: 2026-07-22
 
 # The following (triple) comment is needed to specify the AlliGator Python 
 # Plugin API version number to use
 
-### AlliGator Python Plugin API Version = 1 ###
+### AlliGator Python Plugin API Version = 1.1 ###
 
 # The following (triple) comment is needed to tell AlliGator where to
 # insert the plugin function(s) as menu item(s)
@@ -24,14 +24,14 @@
 # The following modules are needed to interpret incoming data and send outputs
 
 import json
-import alligator
+import alligatorFLI_1_1
 
 # the following module is used in this plugin
 
 import numpy as np
 
 def Intensity_Above_Threshold_Mask(
-        image_plugin_data_in, params_in_json, addtl_params_out_json_list):
+        plugin_data_in, params_in_json, addtl_params_out_json_list):
         
     """Source Image: Intensity Above Threshold Mask
 
@@ -51,7 +51,7 @@ def Intensity_Above_Threshold_Mask(
     # If no parameter is needed this section can be ignored
 
     ### AlliGator Input Parameters Definitions ###
-    ### th:float64            # Intensity threshold parameter
+    ### th:float64:0           # Intensity threshold parameter
     ### End of AlliGator Input Parameters Definitions ###
 
     # The following (triple commented) section is mandatory to know which
@@ -59,16 +59,18 @@ def Intensity_Above_Threshold_Mask(
     # object they are destined to
 
     ### AlliGator Output Value Type & Destination ###
-    ### Mask Image: Source Image # empty lines as well
+    ### Mask Image: Source Image
     ### End of AlliGator Output Value Type & Destination ###
 
     # get the image
     
-    image = np.array(image_plugin_data_in.Image)
+    image_plugin_data = plugin_data_in.Image_Plugin_Data 
+    image = np.array(image_plugin_data.Image)
     size_x = image.shape[1]
     size_y = image.shape[0]
-    print('x: ',size_x)
-    print('y: ',size_y)
+    
+    # print('x: ',size_x)
+    # print('y: ',size_y)
 
     # decode the parameter string
 
@@ -78,14 +80,13 @@ def Intensity_Above_Threshold_Mask(
     # process image
     
     mask = (image > threshold).astype('float32')  # set values > th in max to 1
-                                                # # set values <= th to 0
+                                                  # set values <= th to 0
     mask_as_list = mask.tolist() # LabVIEW only accepts list as array output
     mask_image_name = 'Mask Image (peak > '+ str(threshold) + ')'
-    mask_image_plugin_data = alligator.image_plugin_data(
+    mask_image_data = alligatorFLI_1_1.image_plugin_data(
         Image_Name = mask_image_name,
         Image = mask_as_list
     )
-    
     
     # We can send back information on the function outcome
     # and can also set AlliGator Parameters
@@ -106,6 +107,12 @@ def Intensity_Above_Threshold_Mask(
     
     addtl_params_out_json_list.append(json.dumps(info_out_dict))
     
-    # return the Mask Image to AlliGator
+    # packages the data into a Python Plugin data structure
     
-    return(mask_image_plugin_data)
+    plugin_data_out = alligatorFLI_1_1.plugin_data(
+        Image_Plugin_Data = mask_image_data,
+        Graph_Plugin_Data = alligatorFLI_1_1.empty_graph,
+        Parameter_Map_Plugin_Data = alligatorFLI_1_1.empty_parameter_map,
+        FLI_Dataset_Plugin_Data = alligatorFLI_1_1.empty_fli_dataset)
+     
+    return(plugin_data_out)

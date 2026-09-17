@@ -8,7 +8,11 @@
 		<Item Name="Elements Order in Action Stack.ctl" Type="VI" URL="../../Templates/[Event] Driven Action Engine/Elements Order in Action Stack.ctl"/>
 		<Item Name="Embedded Progress Bar Q Element.ctl" Type="VI" URL="../Embedded Progress Bar Q Element.ctl"/>
 		<Item Name="Event Source.ctl" Type="VI" URL="../Event Source.ctl"/>
+		<Item Name="Numeric Display Format.ctl" Type="VI" URL="../Numeric Display Format.ctl"/>
 		<Item Name="Open VI Options.ctl" Type="VI" URL="../Open VI Options.ctl"/>
+	</Item>
+	<Item Name="RTM" Type="Folder">
+		<Item Name="Custom Slide Right-Click Menu.rtm" Type="Document" URL="../Custom Slide Right-Click Menu.rtm"/>
 	</Item>
 	<Item Name="Add File Path to VI Title.vi" Type="VI" URL="../Add File Path to VI Title.vi"/>
 	<Item Name="Append Suffix to VI Name.vi" Type="VI" URL="../Append Suffix to VI Name.vi"/>
@@ -20,6 +24,7 @@
 	<Item Name="Embedded Progress Bar Q.vi" Type="VI" URL="../Embedded Progress Bar Q.vi"/>
 	<Item Name="Expand-Shrink Front Panel Right.vi" Type="VI" URL="../Expand-Shrink Front Panel Right.vi"/>
 	<Item Name="Extend Display Range to Match Slider(s).vi" Type="VI" URL="../Extend Display Range to Match Slider(s).vi"/>
+	<Item Name="Format &amp; Precision Dialog.vi" Type="VI" URL="../Format &amp; Precision Dialog.vi"/>
 	<Item Name="Get 2-variable Formula String Dialog.vi" Type="VI" URL="../Get 2-variable Formula String Dialog.vi"/>
 	<Item Name="Get Formula String Dialog.vi" Type="VI" URL="../Get Formula String Dialog.vi"/>
 	<Item Name="Hide Animated Busy Icon with Message and Abort Button.vi" Type="VI" URL="../../Buttons/Hide Animated Busy Icon with Message and Abort Button.vi"/>
@@ -33,6 +38,7 @@
 	<Item Name="Show Animated Busy Icon with Message and Abort Button.vi" Type="VI" URL="../../Buttons/Show Animated Busy Icon with Message and Abort Button.vi"/>
 	<Item Name="Show Animated Busy Icon with Message.vi" Type="VI" URL="../../Buttons/Show Animated Busy Icon with Message.vi"/>
 	<Item Name="Show Animated Busy Icon.vi" Type="VI" URL="../../Buttons/Show Animated Busy Icon.vi"/>
+	<Item Name="Slide Change Display Format.vi" Type="VI" URL="../Slide Change Display Format.vi"/>
 	<Item Name="Three Buttons Dialog Window.vi" Type="VI" URL="../Three Buttons Dialog Window.vi"/>
 	<Item Name="Two Button Dialog with Error.vi" Type="VI" URL="../Two Button Dialog with Error.vi"/>
 	<Item Name="Two Buttons Dialog Window with Resizeable Message.vi" Type="VI" URL="../Two Buttons Dialog Window with Resizeable Message.vi"/>

@@ -10,6 +10,7 @@
 
 </Property>
 	<Item Name="Ctrls" Type="Folder">
+		<Item Name="AlliGator New Parameter Map Set Event Data.ctl" Type="VI" URL="../AlliGator New Parameter Map Set Event Data.ctl"/>
 		<Item Name="AlliGator Parameter Map Control Refnums.ctl" Type="VI" URL="../AlliGator Parameter Map Control Refnums.ctl"/>
 		<Item Name="AlliGator Parameter Map Display Range Mouse Move Data.ctl" Type="VI" URL="../AlliGator Parameter Map Display Range Mouse Move Data.ctl"/>
 		<Item Name="AlliGator Parameter Map Update Event Data.ctl" Type="VI" URL="../AlliGator Parameter Map Update Event Data.ctl"/>

@@ -1,6 +1,12 @@
-# AlliGator Python Plugin Definitions
-# Author: X. Michalet
-# Last modified: 2026-02-18
+########################################
+# AlliGator Python Plugin Definitions  #
+# Author: X. Michalet                  #
+# Last modified: 2026-02-18            #
+########################################
+#                                      #
+#     DO NOT MODIFY THIS FILE !!!      #
+#                                      #
+########################################
 
 ### AlliGator Python Plugin API Version = 1 ###
 

@@ -45,8 +45,8 @@ https://github.com/smXplorer/AlliGator-Plugin-IntensityOverThresholdMask.
 
 .. rubric:: Footnotes
 
-.. [1] Do not modify the *alligator.py* script distributed in the *Python 
-   Plugins* folder, as this will be overwritten with the next AlliGator 
-   installation and will break compatibility with other plugins. If you need 
-   additional functionalities not currently supported, create an Issue on Github 
-   at https://github.com/smXplorer/AlliGator/issues.
+.. [1] Do not modify the *alligator.py* or *alligatorFLI_n_m.py* scripts 
+   distributed in the *Python Plugins* folder, as they will be overwritten with 
+   the next AlliGator installation and will break compatibility with other 
+   plugins. If you need additional functionalities not currently supported, 
+   create an Issue on Github at https://github.com/smXplorer/AlliGator/issues.

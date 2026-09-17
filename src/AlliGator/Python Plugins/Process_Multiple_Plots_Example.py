@@ -1,13 +1,13 @@
 # Process_Multiple_Plots.py
 # Example AlliGator Decay Graph Python Plugin
-# Tested with AlliGator version 1.02
+# Tested with AlliGator version 1.07
 # Author: X. Michalet
-# Last modified: 2025-06-19
+# Last modified: 2025-07-22
 
 # The following (triple) comment is needed to specify the AlliGator Python 
 # Plugin API version number to use
 
-### AlliGator Python Plugin API Version = 1 ###
+### AlliGator Python Plugin API Version = 1.1 ###
 
 # The following (triple) comment is needed to tell AlliGator where to
 # insert the plugin function(s) as menu item(s)
@@ -25,7 +25,7 @@
 # The following modules are needed to interpret incoming data and send outputs
 
 import json
-import alligator
+import alligatorFLI_1_1
 
 # The double underscores in the function name below will be replaced
 # by alternating parentheses in the AlliGator menu (with end spaces trimmed).
@@ -36,7 +36,7 @@ import alligator
 # Otherwise, the function is assumed to act on the right-click selected plot.
 
 def Linear_Combination__Selected_Plots__(
-        graph_data_in, params_in_json, addtl_params_out_json_list):
+        plugin_data_in, params_in_json, addtl_params_out_json_list):
     
     """Linear Combination:
     
@@ -55,9 +55,9 @@ def Linear_Combination__Selected_Plots__(
     # If no parameter is needed this section can be ignored
     
     ### AlliGator Input Parameters Definitions ###
-    ### a:float64 # scaling parameter for plot1
-    ### b:float64 # scaling parameter for plot2
-    ### c:float64 # vertical offset
+    ### a:float64:1 # scaling parameter for plot1
+    ### b:float64:1 # scaling parameter for plot2
+    ### c:float64:0 # vertical offset
     ### End of AlliGator Input Parameters Definitions ###
      
     # The following (triple commented) section is mandatory to know which
@@ -79,18 +79,19 @@ def Linear_Combination__Selected_Plots__(
     b = params['b']
     c = params['c']
     
-    # print(str(a))
+    # print(str(a)) # uncomment for debugging purpose
     # print(str(b))
     # print(str(c))
 
-    # decode the graph data named tuple
+    # decode the plugin data named tuple to get the graph data
     # the graph data comprises a list of Plot Data
     # Each Plot Data is a named tuple comprised of 
     # a 'Plot_Name' (string)
     # and two lists of double, 'X_Array' and 'Y_Array'
 
-    graph_name = graph_data_in.Graph_Name
-    plots = graph_data_in.Plots
+    graph_plugin_data = plugin_data_in.Graph_Plugin_Data
+    graph_name = graph_plugin_data.Graph_Name
+    plots = graph_plugin_data.Plots
     nplots = len(plots)
     
     # combines the first 2 plots if they have the same length
@@ -99,10 +100,10 @@ def Linear_Combination__Selected_Plots__(
     if nplots < 2:
         exception_type = "Error"
         exception_message = "Not enough selected plots!"
-        graph_data_out = alligator.graph_plugin_data(
+        graph_data_out = alligatorFLI_1_1.graph_plugin_data(
             Graph_Name = graph_name,
             Plots = [],
-            Reference_Decay = alligator.empty_plot)
+            Reference_Decay = alligatorFLI_1_1.empty_plot)
     else:
         plot_data1 = plots[0]
         name1 = plot_data1.Plot_Name
@@ -127,7 +128,7 @@ def Linear_Combination__Selected_Plots__(
             # we need to repackage those plots into a list of named tuples
             # (same structure as the input)
 
-            plot_data_out = alligator.plot_plugin_data(
+            plot_data_out = alligatorFLI_1_1.plot_plugin_data(
                 Plot_Name = 'Lin Comb('+name1+','+name2+')',
                 X_Array = x1,
                 Y_Array = lincomb
@@ -136,11 +137,22 @@ def Linear_Combination__Selected_Plots__(
             message = 'Linear Combination ['+f'{a:.6G}'+'*plot 1 + '+\
             f'{b:.6G}'+'*plot 2 + '+f'{c:.6G}'+ '] of plot 1: '+name1+\
             ' and plot 2: '+ name2+')'
-        graph_data_out = alligator.graph_plugin_data(
+        
+        # packaging the results into a graph data structure
+        
+        graph_data_out = alligatorFLI_1_1.graph_plugin_data(
             Graph_Name = graph_name,
             Plots = plots_out,
-            Reference_Decay = alligator.empty_plot)
+            Reference_Decay = alligatorFLI_1_1.empty_plot)
         
+        # packaging the graph data into a plugin data structure
+        
+        plugin_data_out = alligatorFLI_1_1.plugin_data(
+            Image_Plugin_Data = alligatorFLI_1_1.empty_image,
+            Graph_Plugin_Data = graph_data_out,
+            Parameter_Map_Plugin_Data = alligatorFLI_1_1.empty_parameter_map,
+            FLI_Dataset_Plugin_Data = alligatorFLI_1_1.empty_fli_dataset)
+
         # Finally, we can send back information on the function outcome
         # and can also set AlliGator Parameters
         # all this packaged in a dictionary, converted to json and
@@ -162,4 +174,4 @@ def Linear_Combination__Selected_Plots__(
     
     # return results to AlliGator
 
-    return(graph_data_out)
+    return(plugin_data_out)

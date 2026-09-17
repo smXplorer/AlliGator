@@ -1,13 +1,13 @@
 # Decay_Graph_Plugin_Example.py
 # Example AlliGator Decay Graph Python Plugin
-# Tested with AlliGator version 1.02
+# Tested with AlliGator version 1.07
 # Author: X. Michalet
-# Last modified: 2025-06-19
+# Last modified: 2026-07-22
 
 # The following (triple) comment is needed to specify the AlliGator Python 
 # Plugin API version number to use
 
-### AlliGator Python Plugin API Version = 1 ###
+### AlliGator Python Plugin API Version = 1.1 ###
 
 # The following (triple) comment is needed to tell AlliGator where to
 # insert the plugin function(s) as menu item(s)
@@ -25,7 +25,7 @@
 # The following modules are needed to interpret incoming data and send outputs
 
 import json
-import alligator
+import alligatorFLI_1_1
 
 # The double underscores in the function name below will be replaced
 # by alternating parentheses in the AlliGator menu (with end spaces trimmed).
@@ -35,8 +35,8 @@ import alligator
 # name needs to contain 'All_Plots' as part of it (case non sensitive).
 # Otherwise, the function is assumed to act on the right-click selected plot.
 
-def Plot_Scaled_Sum_and_Difference__Selected_Plots__test(
-        graph_data_in, params_in_json, addtl_params_out_json_list):
+def Plot_Scaled_Sum_and_Difference__Selected_Plots__(
+        plugin_data_in, params_in_json, addtl_params_out_json_list):
     
     """Scaled Sum & Difference:
     
@@ -55,7 +55,7 @@ def Plot_Scaled_Sum_and_Difference__Selected_Plots__test(
     # If no parameter is needed this section can be ignored
     
     ### AlliGator Input Parameters Definitions ###
-    ### k:float64 # scaling parameter
+    ### k:float64:1 # scaling parameter
     
     ### Phasor Frequency:AlliGator # This is not visible to the user
     ### End of AlliGator Input Parameters Definitions ###
@@ -77,27 +77,33 @@ def Plot_Scaled_Sum_and_Difference__Selected_Plots__test(
     params = json.loads(params_in_json)
     k = params['k']
     f = params['Phasor Frequency']
+    
+    # print('k = '+str(k))
+    # print('Phasor Frequency = '+str(f)+' Hz')
 
-    # decode the graph data named tuple
+    # decode the graph data named tuple from the plugin data named tuple
     # the graph data comprises a list of Plot Data
     # Each Plot Data is a named tuple comprised of 
     # a 'Plot_Name' (string)
     # and two lists of double, 'X_Array' and 'Y_Array'
 
-    graph_name = graph_data_in.Graph_Name
-    plots = graph_data_in.Plots
+    graph_plugin_data = plugin_data_in.Graph_Plugin_Data
+    graph_name = graph_plugin_data.Graph_Name
+    plots = graph_plugin_data.Plots
     nplots = len(plots)
-    
+
+    # print('nplots = '+str(nplots))
+ 
     # Adds and subtracts the first 2 plots if they have the same length
     # otherwise returns an error
 
     if nplots < 2:
         exception_type = "Error"
         exception_message = "Not enough selected plots!"
-        graph_data_out = alligator.graph_plugin_data(
+        graph_data_out = alligatorFLI_1_1.graph_plugin_data(
             Graph_Name = graph_name,
             Plots = [],
-            Reference_Decay = alligator.empty_plot)
+            Reference_Decay = alligatorFLI_1_1.empty_plot)
     else:
         plot_data1 = plots[0]
         name1 = plot_data1.Plot_Name
@@ -117,10 +123,13 @@ def Plot_Scaled_Sum_and_Difference__Selected_Plots__test(
         # Note that this function DOES NOT use the Reference Decay (aka IRF).
         # This is just to show how to request it and get to the data
         
-        ref_decay_data = graph_data_in.Reference_Decay
+        ref_decay_data = graph_plugin_data.Reference_Decay
         ref_decay_name = ref_decay_data.Plot_Name
         ref_decay_x = ref_decay_data.X_Array
         ref_decay_y = ref_decay_data.Y_Array
+        
+        # print('ref_decay_name = '+ref_decay_name)
+        # print(str(ref_decay_data))
 
         # processing of the incoming data
         
@@ -139,31 +148,53 @@ def Plot_Scaled_Sum_and_Difference__Selected_Plots__test(
             # we need to repackage those plots into a list of named tuples
             # (same structure as the input)
 
-            plot_data1_out = alligator.plot_plugin_data(
+            s_plot_data_out = alligatorFLI_1_1.plot_plugin_data(
                 Plot_Name = 'Scaled Sum of Plots',
                 X_Array = x1,
                 Y_Array = sumy
             )
-            plot_data2_out = alligator.plot_plugin_data(
+            d_plot_data_out = alligatorFLI_1_1.plot_plugin_data(
                 Plot_Name = 'Scaled Difference of Plots',
                 X_Array = x1,
                 Y_Array = diffy
             )
-            plots_out = [plot_data1_out, plot_data2_out]
+            plots_out = [s_plot_data_out, d_plot_data_out]
             message = 'Scaled Sum of Selected Plots (scaling factor: ' +\
                 str(k) + ', '+name1 + ', '+name2+') and Phasor Frequency Update'
-        graph_data_out = alligator.graph_plugin_data(
+        
+        # print('len(x1,x2) = '+str(len(x1))+', '+str(len(x2)))
+        # print(str(s_plot_data_out))
+        # print(str(d_plot_data_out))
+    
+        # packages the data into a Python Plugin graph data structure
+        
+        graph_data_out = alligatorFLI_1_1.graph_plugin_data(
             Graph_Name = graph_name,
             Plots = plots_out,
-            Reference_Decay = alligator.empty_plot)
-        
-        # Finally, we can send back information on the function outcome
-        # and can also set AlliGator Parameters
-        # all this packaged in a dictionary, converted to json and
-        # appended to the (generally) empty string list
-        # addtl_params_out_json_list
-        # Note: space and case are irrelevant in the item names
+            Reference_Decay = alligatorFLI_1_1.empty_plot)
+            
+        # print('graph_name = '+graph_name)
+        # print('graph_data_out filled')
+        # print(str(graph_data_out))
+  
+    # packages the data into a Python Plugin data structure
     
+    plugin_data_out = alligatorFLI_1_1.plugin_data(
+        Image_Plugin_Data = alligatorFLI_1_1.empty_image,
+        Graph_Plugin_Data = graph_data_out,
+        Parameter_Map_Plugin_Data = alligatorFLI_1_1.empty_parameter_map,
+        FLI_Dataset_Plugin_Data = alligatorFLI_1_1.empty_fli_dataset)
+        
+    # print('plugin_data_out filled')
+    # print(str(plugin_data_out))
+        
+    # Finally, we can send back information on the function outcome
+    # and can also set AlliGator Parameters
+    # all this packaged in a dictionary, converted to json and
+    # appended to the (generally) empty string list
+    # addtl_params_out_json_list
+    # Note: space and case are irrelevant in the item names
+
     info_out_dict = {
     "Notebook Message" : message,
     "Exception Type" : exception_type,
@@ -171,15 +202,22 @@ def Plot_Scaled_Sum_and_Difference__Selected_Plots__test(
     "AlliGator:Phasor Frequency" : f # example of internal parameter update
     }
     
+    # print('info_out_dict filled')
+    # print(str(info_out_dict))
+    
     # conversion to JSON string and string is appended to the incoming
     # addtl_params_out_json_list (which is empty in this example)
     # Note that AlliGator will ignore everything but the last string in the list
     
     addtl_params_out_json_list.append(json.dumps(info_out_dict))
     
+    # print('addtl_params_out_json_list')
+    
     # return results to AlliGator
 
-    return(graph_data_out)
+    # print('returning plugin_data_out')
+    
+    return(plugin_data_out)
 
     # Note: it is possible to send debug messages to the Python Console
     # using the standard print() statement

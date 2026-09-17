@@ -12,6 +12,7 @@ manual.
    alligator-python-plugins
    alligator-python-plugins-API
    alligator-python-plugin-publication
+   alligator-internal-parameters
    graph-object
    image-color-palette
    selected-plot-style-window

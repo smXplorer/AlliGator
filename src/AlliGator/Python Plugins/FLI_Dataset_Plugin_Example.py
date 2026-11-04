@@ -1,13 +1,13 @@
 # FLI_Dataset_Plugin_Example.py
 # Example AlliGator FLI Dataset Menu Python Plugin
-# Tested with AlliGator version 1.02
+# Tested with AlliGator version 1.09
 # Author: X. Michalet
-# Last modified: 2026-07-22
+# Last modified: 2026-10-21
 
 # The following (triple) comment is needed to specify the AlliGator Python 
 # Plugin API version number to use
 
-### AlliGator Python Plugin API Version = 1.1 ###
+### AlliGator Python Plugin API Version = 1.1.1 ###
 
 # The following (triple) comment is needed to tell AlliGator where to
 # insert the plugin function(s) as menu item(s)
@@ -23,7 +23,10 @@
 # The following modules are needed to interpret incoming data and send outputs
 
 import json
-import alligatorFLI_1_1
+
+import os
+os.environ["ALLIGATOR_DEFINITIONS_VERSION"] = "1.1.1"
+import alligator_def
 
 # the following module is used in this plugin
 
@@ -93,7 +96,7 @@ def Peak_Intensity_Above_Threshold_Mask(
     # packages the data into a Python Plugin data structure
     # First builds a FLI Dataset data structure
     
-    fli_dataset_data_out = alligatorFLI_1_1.fli_dataset_plugin_data(
+    fli_dataset_data_out = alligator_def.fli_dataset_plugin_data(
         FLI_Dataset_Name = '',
         Gate_Duration = 0,
         Gate_Separation = 0,
@@ -101,15 +104,18 @@ def Peak_Intensity_Above_Threshold_Mask(
         X_Size = size_x,
         Y_Size = size_y,
         Image_Data_List = [],
-        Mask_Image = mask_as_list)
+        Mask_Image = mask_as_list,
+        Sum_Image = [],
+        Max_Image = [],
+        Min_Image = [])
 
     # Then builds a Python Plugin data structure containing the FLI Dataset 
     # data structure
     
-    plugin_data_out = alligatorFLI_1_1.plugin_data(
-        Image_Plugin_Data = alligatorFLI_1_1.empty_image,
-        Graph_Plugin_Data = alligatorFLI_1_1.empty_graph,
-        Parameter_Map_Plugin_Data = alligatorFLI_1_1.empty_parameter_map,
+    plugin_data_out = alligator_def.plugin_data(
+        Image_Plugin_Data = alligator_def.empty_image,
+        Graph_Plugin_Data = alligator_def.empty_graph,
+        Parameter_Map_Plugin_Data = alligator_def.empty_parameter_map,
         FLI_Dataset_Plugin_Data = fli_dataset_data_out)
     
     # We can send back information on the function outcome

@@ -16,4 +16,5 @@
 	<Item Name="AlliGator Phasor Harmonic Manager.vi" Type="VI" URL="../AlliGator Phasor Harmonic Manager.vi"/>
 	<Item Name="AlliGator Phasor Harmonic Storage [SGL].vi" Type="VI" URL="../AlliGator Phasor Harmonic Storage [SGL].vi"/>
 	<Item Name="AlliGator Update Phasor Harmonic Orders.vi" Type="VI" URL="../AlliGator Update Phasor Harmonic Orders.vi"/>
+	<Item Name="Phasor Harmonic List.rtm" Type="Document" URL="../Phasor Harmonic List.rtm"/>
 </Library>

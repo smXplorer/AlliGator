@@ -1,12 +1,198 @@
 .. _alligator-python-plugins-API:
 
 The following sections describe the different parameter types and internal 
-AlliGator variables that can be passed.
+AlliGator variables that can be passed, depending on the API version used.
+
+
+.. _API_v1_1_1:
+
+AlliGator Python Plugins API v 1.1.1
+++++++++++++++++++++++++++++++++++++
+
+AlliGator versions: 1.09-current
+
+.. Note: there is no other change from version 1.1 than the location of the 
+   definition file and the way to refer to these definition within a python 
+   plugin script.
+
+Parameter Types
+---------------
+The following input parameter types are supported:
+
+.. csv-table::
+   :header: "Type", "Example", "Description"
+
+   U8, 1, unsigned byte
+   U16, 1, unsigned short integer
+   U32, 1, unsigned long integer
+   I8, -1, signed byte
+   I16, -1, signed short integer
+   I32, -1, signed long integer
+   float32, 1.0, single-precision floating point number
+   float64, 1.0, double-precision floating point number
+   string, a string, string
+   path, "C:\\Desktop\\test.txt", file or folder path
+   boolean, True, boolean: True or False
+   AlliGator, Phasor Frequency, any exposed AlliGator parameter [*]_
+
+.. [*] Requested AlliGator parameters are provided automatically to the plugin 
+   function. To obtain a list of current exposed internal AlliGator parameters, 
+   use the *Send* button in the **Settings:Plugins** panel. This will send a 
+   copy of that list to the Clipboard, together with the current parameter 
+   values.
+
+A list of exposed parameters with their default values can be found 
+:ref:`here <alligator-internal-parameters>`.
+
+Check the *Parameter Names only* checkbox in the **Settings:Plugins** panel to 
+get a list of exposed internal AlliGator parameters without their 
+current value.
+
+AlliGator Python Plugin Data Types
+----------------------------------
+
+The different data types are declared in the ``alligatorFLI_1_1.py`` script 
+found in the *Python Plugins* folder, reproduced below:
+
+.. code-block::
+
+  ########################################
+  # AlliGator Python Plugin Definitions  #
+  # Author: X. Michalet                  #
+  # Last modified: 2026-10-21            #
+  ########################################
+  #                                      #
+  #     DO NOT MODIFY THIS FILE !!!      #
+  #                                      #
+  ########################################
+
+  ### AlliGator Python Plugin API Version = 1.1.1 ###
+
+  import collections
+  from collections import namedtuple
+
+  ###############################################################################
+  # Object Definitions, in order of increasing complexity (and interdependence)
+  ###############################################################################
+
+  ###############################################################################
+  # Location
+  ###############################################################################
+
+  location = namedtuple('location', 'X, Y')
+
+  ###############################################################################
+  # Plot
+  ###############################################################################
+
+  plot_plugin_data = namedtuple('plot_plugin_data',\
+      'Plot_Name, X_Array, Y_Array')
+
+  # where 'X_Array' and 'Y_Array' are 1D lists of double-precision 
+  # floating point numbers
+
+  empty_plot = plot_plugin_data(Plot_Name = '', X_Array = [], Y_Array = [])
+
+  ###############################################################################
+  # Graph: contains several plots (not necessarily all plots of a source graph)
+  ###############################################################################
+
+  graph_plugin_data = namedtuple('graph_plugin_data',\
+      'Graph_Name, Plots, Reference_Decay')
+
+  # where 'Plots' is a list of, and 'Reference_Decay' is a single,
+  # plot_plugin_data object
+
+  empty_graph = graph_plugin_data(
+      Graph_Name = '',
+      Plots = [],
+      Reference_Decay = empty_plot)
+
+  ###############################################################################
+  # Image
+  ###############################################################################
+
+  image_plugin_data = namedtuple('image_plugin_data',\
+      'Image_Name, Image')
+
+  # where 'Image' is a 2D list of single-precision floating point numbers
+
+  empty_image = image_plugin_data(Image_Name = '', Image = [])
+
+  ###############################################################################
+  # Parameter Map 
+  ###############################################################################
+
+  parameter_map_plugin_data = namedtuple('parameter_map_plugin_data',\
+      'Parameter_Names, Parameter_Flattened_Map, Locations,\
+      IRF_X,IRF_Y_Flattened_List,X_Resolution, Y_Resolution')
+
+  # where 'Parameter_Names' is a list of provided parameters,
+  # 'Parameter_Flattened_Map' is a list of parameter lists, one parameter list
+  # per valid location
+  # 'Locations' is a list of namedtuple, coordinates of the fitted decays
+  # 'IRF_X' is the common time axis of all IRFs
+  # 'IRF_Y_Flattened_List' is a list of IRF Intensities at the different locations
+  # Note that in principle, the number of locations can be different from the
+  # number of parameter lists
+
+  empty_parameter_map = parameter_map_plugin_data(
+      Parameter_Names = [],
+      Parameter_Flattened_Map = [],
+      Locations = [],
+      IRF_X = [],
+      IRF_Y_Flattened_List = [],
+      X_Resolution = 0,
+      Y_Resolution = 0)
+
+  ###############################################################################
+  # FLI Dataset
+  ###############################################################################
+
+  fli_dataset_plugin_data = namedtuple('fli_dataset_plugin_data',\
+      'FLI_Dataset_Name, Gate_Duration, Gate_Separation, Gate_Number,\
+      X_Size, Y_Size, Image_Data_List, Mask_Image, Sum_Image, Max_Image,\
+      Min_Image')
+   
+  empty_fli_dataset = fli_dataset_plugin_data(
+      FLI_Dataset_Name = '',      # string
+      Gate_Duration = 0,          # DBL
+      Gate_Separation = 0,        # DBL
+      Gate_Number = 0,            # I32
+      X_Size = 0,                 # I32
+      Y_Size = 0,                 # I32
+      Image_Data_List = [],       # list of SGL 2D arrays
+      Mask_Image = [],            # U16 2D array
+      Sum_Image = [],             # SGL 2D array
+      Max_Image = [],             # SGL 2D array
+      Min_Image = [])             # SGL 2D array
+
+  ###############################################################################
+  # Python Plugin Data
+  ###############################################################################
+
+  plugin_data = namedtuple('plugin_data',\
+      'Image_Plugin_Data, Graph_Plugin_Data, Parameter_Map_Plugin_Data,\
+      FLI_Dataset_Plugin_Data')
+
+  # where the different objects are:
+  # Image_Plugin_Data: of type image_plugin_data
+  # Graph_Plugin_Data: of type graph_plugin_data
+  # Parameter_Map_Plugin_Data: of type parameter_map_plugin_data
+  # FLI_Dataset_Plugin_Data: of type fli_dataset_plugin_data
+
+  empty_plugin_data = plugin_data(
+      Image_Plugin_Data = empty_image,
+      Graph_Plugin_Data = empty_graph,
+      Parameter_Map_Plugin_Data = empty_parameter_map,
+      FLI_Dataset_Plugin_Data = empty_fli_dataset)
+
+.. _API_v1_1:
 
 AlliGator Python Plugins API v 1.1
 ++++++++++++++++++++++++++++++++++
 
-AlliGator versions: 1.07-current
+AlliGator versions: 1.07-1.08
 
 Parameter Types
 ---------------
@@ -181,10 +367,13 @@ found in the *Python Plugins* folder, reproduced below:
       Parameter_Map_Plugin_Data = empty_parameter_map,
       FLI_Dataset_Plugin_Data = empty_fli_dataset)
 
+
+.. _API_v1:
+
 AlliGator Python Plugins API v 1
 ++++++++++++++++++++++++++++++++
 
-AlliGator versions: 0.63-current
+AlliGator versions: 0.63-1.06
 
 Parameter Types
 ---------------

@@ -15,7 +15,6 @@
 		<Item Name="SwissSPAD 1 Extended Dataset Information.ctl" Type="VI" URL="../SwissSPAD 1 Extended Dataset Information.ctl"/>
 		<Item Name="SwissSPAD 1 Format Data.vi" Type="VI" URL="../SwissSPAD 1 Format Data.vi"/>
 		<Item Name="SwissSPAD 1 Load File Info.vi" Type="VI" URL="../SwissSPAD 1 Load File Info.vi"/>
-		<Item Name="SwissSPAD 1 Load FLI Dataset.vi" Type="VI" URL="../SwissSPAD 1 Load FLI Dataset.vi"/>
 		<Item Name="SwissSPAD1 File Information.ctl" Type="VI" URL="../SwissSPAD1 File Information.ctl"/>
 	</Item>
 	<Item Name="SS2" Type="Folder">

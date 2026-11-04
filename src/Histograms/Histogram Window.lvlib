@@ -8,7 +8,7 @@
 
 </Property>
 	<Item Name="Private" Type="Folder">
-		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 		<Item Name="Check Histogram Options.vi" Type="VI" URL="../Check Histogram Options.vi"/>
 		<Item Name="Get Last Plot Fit Data.vi" Type="VI" URL="../Get Last Plot Fit Data.vi"/>
 		<Item Name="Histogram Window Internal Variables.ctl" Type="VI" URL="../Histogram Window Internal Variables.ctl"/>
@@ -19,13 +19,10 @@
 	</Item>
 	<Item Name="Public" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
-		<Item Name="Build Array Histogram.vi" Type="VI" URL="../Build Array Histogram.vi"/>
 		<Item Name="Build Weighted Array Histogram.vi" Type="VI" URL="../Build Weighted Array Histogram.vi"/>
 		<Item Name="Build XY Plot Histogram (Core).vi" Type="VI" URL="../Build XY Plot Histogram (Core).vi"/>
 		<Item Name="Create XY Plot Histogram.vi" Type="VI" URL="../Create XY Plot Histogram.vi"/>
 		<Item Name="Get Histogram Style.vi" Type="VI" URL="../Get Histogram Style.vi"/>
-		<Item Name="Histogram Bin Option.ctl" Type="VI" URL="../Histogram Bin Option.ctl"/>
-		<Item Name="Histogram Bin Position.ctl" Type="VI" URL="../Histogram Bin Position.ctl"/>
 		<Item Name="Histogram Bin Size Definition Dialog.vi" Type="VI" URL="../Histogram Bin Size Definition Dialog.vi"/>
 		<Item Name="Histogram Bin Size Dialog.vi" Type="VI" URL="../Histogram Bin Size Dialog.vi"/>
 		<Item Name="Histogram Call Parameters.ctl" Type="VI" URL="../Histogram Call Parameters.ctl"/>
@@ -35,12 +32,12 @@
 		<Item Name="Histogram Window Q Element v2.ctl" Type="VI" URL="../Histogram Window Q Element v2.ctl"/>
 		<Item Name="Histogram Window Specific Actions.vi" Type="VI" URL="../Histogram Window Specific Actions.vi"/>
 		<Item Name="Histogram Window.vi" Type="VI" URL="../Histogram Window.vi"/>
-		<Item Name="Linear Histogram Options.ctl" Type="VI" URL="../Linear Histogram Options.ctl"/>
 		<Item Name="Plot Histogram.ctl" Type="VI" URL="../Plot Histogram.ctl"/>
 		<Item Name="Rebin Plot with Dialog.vi" Type="VI" URL="../Rebin Plot with Dialog.vi"/>
 		<Item Name="Send Data Statistics to Notebook.vi" Type="VI" URL="../Send Data Statistics to Notebook.vi"/>
 		<Item Name="Source Data Type.ctl" Type="VI" URL="../Source Data Type.ctl"/>
 	</Item>
+	<Item Name="Build Array Histogram.vi" Type="VI" URL="../Build Array Histogram.vi"/>
 	<Item Name="Compute Histogram Halves Standard Deviations.vi" Type="VI" URL="../Compute Histogram Halves Standard Deviations.vi"/>
 	<Item Name="Compute Histogram Thirds Standard Deviations.vi" Type="VI" URL="../Compute Histogram Thirds Standard Deviations.vi"/>
 	<Item Name="Histogram Mean &amp; Standard Deviation.vi" Type="VI" URL="../Histogram Mean &amp; Standard Deviation.vi"/>

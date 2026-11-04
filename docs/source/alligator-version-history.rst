@@ -13,6 +13,19 @@ AlliGator Version History
 Note: version numbers followed by an asterisk have not been released.
 
 -----------------
+1.09 (2026-10-27)
+-----------------
+
+    - Bug Fixes
+        + Fixed bug with Image Contrast update when moving Image Histogram cursors
+        + Fixed bugs in a few Python Plugin examples
+        + Fixed bug which would close a Python session restarted from the Settings>>Plugins tab when the the Settings window was closed
+
+    - New Features
+        + Detachable panels
+        + New Python Plugin API version 1.1.1 introduces dynamic loading of AlliGator internal data structures
+
+-----------------
 1.08 (2026-09-16)
 -----------------
 

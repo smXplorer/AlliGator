@@ -29,6 +29,7 @@
 	<Item Name="Array Exponential Dampening.vi" Type="VI" URL="../Array Exponential Dampening.vi"/>
 	<Item Name="Array Fraction.vi" Type="VI" URL="../Array Fraction.vi"/>
 	<Item Name="Array Level Estimation.vi" Type="VI" URL="../Array Level Estimation.vi"/>
+	<Item Name="Array Mean, Var &amp; SDV.vim" Type="VI" URL="../Array Mean, Var &amp; SDV.vim"/>
 	<Item Name="Array Pile-up Correction [[SGL]].vi" Type="VI" URL="../Array Pile-up Correction [[SGL]].vi"/>
 	<Item Name="Array Pile-up Correction [SGL].vi" Type="VI" URL="../Array Pile-up Correction [SGL].vi"/>
 	<Item Name="Arrays to Cluster Array.vim" Type="VI" URL="../Arrays to Cluster Array.vim"/>

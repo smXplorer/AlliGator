@@ -4,6 +4,12 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">553680896</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Property Name="NI.SortType" Type="Int">3</Property>
+	<Item Name="Ctrls" Type="Folder">
+		<Item Name="Histogram Bin Position.ctl" Type="VI" URL="../Histogram Bin Position.ctl"/>
+		<Item Name="Linear Histogram Options.ctl" Type="VI" URL="../Linear Histogram Options.ctl"/>
+		<Item Name="Histogram Bin Option.ctl" Type="VI" URL="../Histogram Bin Option.ctl"/>
+	</Item>
 	<Item Name="1D Histogram (G) v6.vim" Type="VI" URL="../1D Histogram (G) v6.vim"/>
 	<Item Name="Get Histogram Low &amp; High Percentile Locations.vi" Type="VI" URL="../Get Histogram Low &amp; High Percentile Locations.vi"/>
 	<Item Name="Histogram Min &amp; Max Percentiles.vi" Type="VI" URL="../Histogram Min &amp; Max Percentiles.vi"/>

@@ -25,7 +25,9 @@
 	<Item Name="AlliGator Compute Lifetime Simulation Histograms.vi" Type="VI" URL="../AlliGator Compute Lifetime Simulation Histograms.vi"/>
 	<Item Name="AlliGator Decay Sum.vi" Type="VI" URL="../AlliGator Decay Sum.vi"/>
 	<Item Name="AlliGator Fit Linear Combinations of Exponentials.vi" Type="VI" URL="../AlliGator Fit Linear Combinations of Exponentials.vi"/>
+	<Item Name="AlliGator Fit Method Benchmark.rtm" Type="Document" URL="../AlliGator Fit Method Benchmark.rtm"/>
 	<Item Name="AlliGator Fit Method Benchmark.vi" Type="VI" URL="../AlliGator Fit Method Benchmark.vi"/>
+	<Item Name="AlliGator Fit Method BenchmarkHistograms.rtm" Type="Document" URL="../AlliGator Fit Method BenchmarkHistograms.rtm"/>
 	<Item Name="AlliGator FMB Check for Abort.vi" Type="VI" URL="../AlliGator FMB Check for Abort.vi"/>
 	<Item Name="AlliGator FMB Event to String.vi" Type="VI" URL="../AlliGator FMB Event to String.vi"/>
 	<Item Name="AlliGator FMB Get First Event.vi" Type="VI" URL="../AlliGator FMB Get First Event.vi"/>

@@ -45,6 +45,7 @@ Error codes used in X's software
 
 
 
+
 <nifamily familyname="X Errors" displayname="X Errors">
 </nifamily>
 </nicomment>
@@ -77,6 +78,15 @@ No Valid File Found
 </nierror>
 <nierror code="5009">
 Invalid Ramp Parameters
+</nierror>
+<nierror code="5010">
+Invalid VI Refnum
+</nierror>
+<nierror code="5011">
+Invalid Control Refnum
+</nierror>
+<nierror code="5012">
+Invalid Menu Refnum
 </nierror>
 <nierror code="5021">
 Empty Plot

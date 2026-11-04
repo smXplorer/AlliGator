@@ -39,7 +39,8 @@ https://alligator-distribution.readthedocs.io/en/latest/alligator-version-histor
 
 ## LabVIEW 2021 SP1 source code (Windows 64 bit compatible)
 
-The LabVIEW 2021 SP1 source code can be found in the *src* directory.
+The LabVIEW 2021 SP1 source code can be found in the 
+https://github.com/smXplorer/AlliGator/tree/main/src directory.
 
 AlliGator depends on the following packages:
 
@@ -64,11 +65,17 @@ The free packages can be found on VIPM.io (https://www.vipm.io/) or using the
 free VIPM (VI package Manager) distributed by JKI 
 (https://www.vipm.io/download/).
 
-To use the source code, open the AlliGator.lvproj project in LabVIEW and look 
-for the *AlliGator Launcher.vi* VI in *AlliGator GUI.lvlib* in the *VIs* folder 
-of the project. This is the top-level VI that needs to be run to start 
-AlliGator. Running AlliGator.vi directly **will fail**, as some preparatory 
-steps are handled by AlliGator Launcher.vi.
+To use the source code, open the *AlliGator.lvproj* project in LabVIEW and look 
+for the *AlliGator Launcher.vi* VI in *AlliGator GUI.lvlib* in the *AlliGator 
+Libraries* folder of the project. This is the top-level VI that needs to be run 
+to start AlliGator. Running *AlliGator.vi* directly **will fail**, as some 
+preparatory steps are handled by *AlliGator Launcher.vi*.
+
+Alternatively, open the *AlliGator VIs Collection.vi*'s diagram (see image below) 
+and locate*AlliGator Launcher.vi* (indicated by the **Run this VI to start 
+AlliGator** label).
+
+![AlliGator VIs Collection.vi Diagram](AlliGator VIs Collection Diagram.png)
 
 ## Source code documentation
 

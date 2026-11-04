@@ -227,7 +227,8 @@ A reference sample consists of a pure solution of the dye of interest recorded
 with a specific set of acquisition parameters, which will be used when later 
 recording the new sample of interest. The analysis unfolds as follows:
 
-1. Define a ROI to analyze. Save it before converting it to single-pixel ROIs.
+1. Define one or more ROIs to analyze. Save them before converting it to 
+   single-pixel ROIs.
 2. The sample is analyzed using the `FLI Dataset:Multiple ROIs Analysis:All ROIS 
    NLSF Analysis:Non-Interactive (Fast)` function of the `Analysis` main menu, 
    with a single-exponential fit model, resulting in a series of maps in the 
@@ -302,7 +303,7 @@ The analysis of a new sample proceeds along the same lines as for a reference
 sample without steps 3-6 and a couple of differences in step 7, as discussed next.
 
 7bis. Returning to the **Decay Fit Parameter Map** panel, clear the single-pixel 
-      ROIs and load the original ROI, before using the ``Multi-ROIs Lifetime 
+      ROIs and load the original ROI(s), before using the ``Multi-ROIs Lifetime 
       Variance Analysis`` function. This function opens two consecutive dialog 
       windows.
   

@@ -16,6 +16,7 @@
 		<Item Name="AlliGator Parameter Map Update Event Data.ctl" Type="VI" URL="../AlliGator Parameter Map Update Event Data.ctl"/>
 	</Item>
 	<Item Name="AlliGator Build Parameter Map.vi" Type="VI" URL="../AlliGator Build Parameter Map.vi"/>
+	<Item Name="AlliGator Clear Parameter &amp; Map Set Rings.vi" Type="VI" URL="../AlliGator Clear Parameter &amp; Map Set Rings.vi"/>
 	<Item Name="AlliGator Color Parameter Map in Original Image.vi" Type="VI" URL="../AlliGator Color Parameter Map in Original Image.vi"/>
 	<Item Name="AlliGator Decay Fit Parameter Map Size Dialog.vi" Type="VI" URL="../../Decay Fit Parameter Map/AlliGator Decay Fit Parameter Map Size Dialog.vi"/>
 	<Item Name="AlliGator Delete Parameter Map Set.vi" Type="VI" URL="../AlliGator Delete Parameter Map Set.vi"/>
@@ -23,6 +24,9 @@
 	<Item Name="AlliGator Get Parameter Map Data Wrapper.vi" Type="VI" URL="../AlliGator Get Parameter Map Data Wrapper.vi"/>
 	<Item Name="AlliGator Get Parameter Map Data.vi" Type="VI" URL="../AlliGator Get Parameter Map Data.vi"/>
 	<Item Name="AlliGator Parameter Map Context Menu Handler.vi" Type="VI" URL="../AlliGator Parameter Map Context Menu Handler.vi"/>
+	<Item Name="AlliGator Parameter Map Ctrl Refnums.vi" Type="VI" URL="../AlliGator Parameter Map Ctrl Refnums.vi"/>
+	<Item Name="AlliGator Parameter Map Event Registration Refnums.vi" Type="VI" URL="../AlliGator Parameter Map Event Registration Refnums.vi"/>
+	<Item Name="AlliGator Parameter Map Panel.vi" Type="VI" URL="../AlliGator Parameter Map Panel.vi"/>
 	<Item Name="AlliGator Parameter Map Range Mouse Move Event.vi" Type="VI" URL="../AlliGator Parameter Map Range Mouse Move Event.vi"/>
 	<Item Name="AlliGator Parameters Map Mouse Up Event.vi" Type="VI" URL="../AlliGator Parameters Map Mouse Up Event.vi"/>
 	<Item Name="AlliGator Plot Parameter 2 vs Parameter 1.vi" Type="VI" URL="../AlliGator Plot Parameter 2 vs Parameter 1.vi"/>
@@ -32,5 +36,4 @@
 	<Item Name="AlliGator Save Parameter Map to ASCII.vi" Type="VI" URL="../AlliGator Save Parameter Map to ASCII.vi"/>
 	<Item Name="AlliGator Select Parameter Scatter Plot Type.vi" Type="VI" URL="../AlliGator Select Parameter Scatter Plot Type.vi"/>
 	<Item Name="AlliGator Update Parameter Map Palette.vi" Type="VI" URL="../AlliGator Update Parameter Map Palette.vi"/>
-	<Item Name="AlliGator Update Selected Map Set.vi" Type="VI" URL="../AlliGator Update Selected Map Set.vi"/>
 </Library>

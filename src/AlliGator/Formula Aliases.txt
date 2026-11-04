@@ -1,0 +1,3 @@
+K_tau	exp(ln((1E3*<tau>_a - 689.16)/42.74)/0.428)	Debjit's calibration data fit
+Vm_K	6.71-70.43*exp(-K/5.37)-79*exp(-K/151.42)	Shioi's data fit
+Vm_tau	6.71-70.43*exp(-exp(ln((1E3*<tau>_a - 689.16)/42.74)/0.428)/5.37)-79*exp(-exp(ln((1E3*<tau>_a - 689.16)/42.74)/0.428)/151.42)	Shioi & Debjit's data fit

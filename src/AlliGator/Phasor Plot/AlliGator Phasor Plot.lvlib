@@ -14,12 +14,14 @@
 		<Item Name="AlliGator Phasor Harmonic Manager Actions.ctl" Type="VI" URL="../AlliGator Phasor Harmonic Manager Actions.ctl"/>
 		<Item Name="AlliGator Phasor Harmonic Manager Event Refnum.ctl" Type="VI" URL="../AlliGator Phasor Harmonic Manager Event Refnum.ctl"/>
 		<Item Name="AlliGator Phasor Multi-Harmonic Data.ctl" Type="VI" URL="../AlliGator Phasor Multi-Harmonic Data.ctl"/>
+		<Item Name="AlliGator Phasor Plot Ctrl Refnums.ctl" Type="VI" URL="../AlliGator Phasor Plot Ctrl Refnums.ctl"/>
 		<Item Name="AlliGator Phasor Plot Parameters v2.ctl" Type="VI" URL="../AlliGator Phasor Plot Parameters v2.ctl"/>
 		<Item Name="AlliGator Phasor Plot Size.ctl" Type="VI" URL="../AlliGator Phasor Plot Size.ctl"/>
 		<Item Name="AlliGator Phasor Plot Smoothing Options.ctl" Type="VI" URL="../AlliGator Phasor Plot Smoothing Options.ctl"/>
 	</Item>
 	<Item Name="AlliGator Adjust Phasor Plot Display Range Wrapper.vi" Type="VI" URL="../AlliGator Adjust Phasor Plot Display Range Wrapper.vi"/>
 	<Item Name="AlliGator Build Phasor Plot Image.vi" Type="VI" URL="../AlliGator Build Phasor Plot Image.vi"/>
+	<Item Name="AlliGator Build Phasor Plot.vi" Type="VI" URL="../AlliGator Build Phasor Plot.vi"/>
 	<Item Name="AlliGator Check Decay Pre-Processing Steps Needed.vi" Type="VI" URL="../AlliGator Check Decay Pre-Processing Steps Needed.vi"/>
 	<Item Name="AlliGator Check whether Phasor Plot needs update.vi" Type="VI" URL="../AlliGator Check whether Phasor Plot needs update.vi"/>
 	<Item Name="AlliGator Clear Phasor Image Overlay.vi" Type="VI" URL="../AlliGator Clear Phasor Image Overlay.vi"/>
@@ -58,27 +60,30 @@
 	<Item Name="AlliGator Get-Set Phasor Plot Reference is Updated.vi" Type="VI" URL="../AlliGator Get-Set Phasor Plot Reference is Updated.vi"/>
 	<Item Name="AlliGator Highlight Image ROI in Phasor Plot Wrapper.vi" Type="VI" URL="../AlliGator Highlight Image ROI in Phasor Plot Wrapper.vi"/>
 	<Item Name="AlliGator Highlight Image ROI in Phasor Plot.vi" Type="VI" URL="../AlliGator Highlight Image ROI in Phasor Plot.vi"/>
+	<Item Name="AlliGator Is Phasor Plot Visible.vi" Type="VI" URL="../AlliGator Is Phasor Plot Visible.vi"/>
 	<Item Name="AlliGator Overlay Phasor Ratio or Derived Quantity on Source Image v3.vi" Type="VI" URL="../AlliGator Overlay Phasor Ratio or Derived Quantity on Source Image v3.vi"/>
 	<Item Name="AlliGator Phasor Plot Context Menu Handler.vi" Type="VI" URL="../AlliGator Phasor Plot Context Menu Handler.vi"/>
+	<Item Name="AlliGator Phasor Plot Ctrl Refnums.vi" Type="VI" URL="../../Action Engine/AlliGator Phasor Plot Ctrl Refnums.vi"/>
 	<Item Name="AlliGator Phasor Plot Display Mouse Down-Up Event Monitoring.vi" Type="VI" URL="../AlliGator Phasor Plot Display Mouse Down-Up Event Monitoring.vi"/>
 	<Item Name="AlliGator Phasor Plot Display Range Mouse Move Event.vi" Type="VI" URL="../AlliGator Phasor Plot Display Range Mouse Move Event.vi"/>
-	<Item Name="AlliGator Phasor Plot Display Range User Event Refnum.vi" Type="VI" URL="../AlliGator Phasor Plot Display Range User Event Refnum.vi"/>
 	<Item Name="AlliGator Phasor Plot Elements List.vi" Type="VI" URL="../AlliGator Phasor Plot Elements List.vi"/>
+	<Item Name="AlliGator Phasor Plot Event Registration Refnums.vi" Type="VI" URL="../AlliGator Phasor Plot Event Registration Refnums.vi"/>
 	<Item Name="AlliGator Phasor Plot Image Cursor Location to Phasor v2.vi" Type="VI" URL="../AlliGator Phasor Plot Image Cursor Location to Phasor v2.vi"/>
 	<Item Name="AlliGator Phasor Plot Mouse Move Event.vi" Type="VI" URL="../AlliGator Phasor Plot Mouse Move Event.vi"/>
 	<Item Name="AlliGator Phasor Plot Mouse Move Flag.vi" Type="VI" URL="../AlliGator Phasor Plot Mouse Move Flag.vi"/>
 	<Item Name="AlliGator Phasor Plot Mouse Up Event.vi" Type="VI" URL="../AlliGator Phasor Plot Mouse Up Event.vi"/>
 	<Item Name="AlliGator Phasor Plot Overlay List.vi" Type="VI" URL="../AlliGator Phasor Plot Overlay List.vi"/>
+	<Item Name="AlliGator Phasor Plot Panel.vi" Type="VI" URL="../AlliGator Phasor Plot Panel.vi"/>
 	<Item Name="AlliGator Phasor ROI to Source Image ROI.vi" Type="VI" URL="../AlliGator Phasor ROI to Source Image ROI.vi"/>
 	<Item Name="AlliGator Reset Cumulative Phasor Plot Image.vi" Type="VI" URL="../AlliGator Reset Cumulative Phasor Plot Image.vi"/>
 	<Item Name="AlliGator Set Checkmarks in Phasor Overlay to Erase Button Menu.vi" Type="VI" URL="../AlliGator Set Checkmarks in Phasor Overlay to Erase Button Menu.vi"/>
 	<Item Name="AlliGator Set Checks in Phasor Update Button.vi" Type="VI" URL="../AlliGator Set Checks in Phasor Update Button.vi"/>
 	<Item Name="AlliGator Show Local Phasor Info in Phasor Plot.vi" Type="VI" URL="../AlliGator Show Local Phasor Info in Phasor Plot.vi"/>
+	<Item Name="AlliGator Show-Hide Phasor Indicators.vi" Type="VI" URL="../AlliGator Show-Hide Phasor Indicators.vi"/>
 	<Item Name="AlliGator Show-Hide Phasor Plot Menu Items.vi" Type="VI" URL="../AlliGator Show-Hide Phasor Plot Menu Items.vi"/>
 	<Item Name="AlliGator Update Checkmarks in Phasor Overlay to Erase Button Menu.vi" Type="VI" URL="../AlliGator Update Checkmarks in Phasor Overlay to Erase Button Menu.vi"/>
 	<Item Name="AlliGator Update Phasor Image Elements to Update.vi" Type="VI" URL="../AlliGator Update Phasor Image Elements to Update.vi"/>
 	<Item Name="AlliGator Update Phasor Plot Image Overlay.vi" Type="VI" URL="../AlliGator Update Phasor Plot Image Overlay.vi"/>
-	<Item Name="AlliGator Update Phasor Plot Image v2.vi" Type="VI" URL="../AlliGator Update Phasor Plot Image v2.vi"/>
 	<Item Name="AlliGator Update Phasor Plot Image.vi" Type="VI" URL="../AlliGator Update Phasor Plot Image.vi"/>
 	<Item Name="AlliGator Update Phasor Plot Information at Mouse Location.vi" Type="VI" URL="../AlliGator Update Phasor Plot Information at Mouse Location.vi"/>
 	<Item Name="AlliGator Use Phasor Plot Segment Extremities as References.vi" Type="VI" URL="../AlliGator Use Phasor Plot Segment Extremities as References.vi"/>
@@ -86,4 +91,9 @@
 	<Item Name="AlliGator Use Phasor Plot UC-Principal Axis Intersections as References.vi" Type="VI" URL="../AlliGator Use Phasor Plot UC-Principal Axis Intersections as References.vi"/>
 	<Item Name="AlliGator Use Phasor Plot UC-Segment Intersections as References.vi" Type="VI" URL="../AlliGator Use Phasor Plot UC-Segment Intersections as References.vi"/>
 	<Item Name="AlliGator Variable Names.vi" Type="VI" URL="../AlliGator Variable Names.vi"/>
+	<Item Name="Clear Phasor Overlay.rtm" Type="Document" URL="../Clear Phasor Overlay.rtm"/>
+	<Item Name="Erase Phasor Overlay.rtm" Type="Document" URL="../Erase Phasor Overlay.rtm"/>
+	<Item Name="Phasor Plot Image.rtm" Type="Document" URL="../Phasor Plot Image.rtm"/>
+	<Item Name="Phasor Plot ROI List.rtm" Type="Document" URL="../Phasor Plot ROI List.rtm"/>
+	<Item Name="Refresh Phasor Plot.rtm" Type="Document" URL="../Refresh Phasor Plot.rtm"/>
 </Library>

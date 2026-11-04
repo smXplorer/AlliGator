@@ -1,13 +1,13 @@
 # Process_Multiple_Plots.py
 # Example AlliGator Decay Graph Python Plugin
-# Tested with AlliGator version 1.07
+# Tested with AlliGator version 1.09
 # Author: X. Michalet
-# Last modified: 2025-07-22
+# Last modified: 2025-10-21
 
 # The following (triple) comment is needed to specify the AlliGator Python 
 # Plugin API version number to use
 
-### AlliGator Python Plugin API Version = 1.1 ###
+### AlliGator Python Plugin API Version = 1.1.1 ###
 
 # The following (triple) comment is needed to tell AlliGator where to
 # insert the plugin function(s) as menu item(s)
@@ -25,7 +25,10 @@
 # The following modules are needed to interpret incoming data and send outputs
 
 import json
-import alligatorFLI_1_1
+
+import os
+os.environ["ALLIGATOR_DEFINITIONS_VERSION"] = "1.1.1"
+import alligator_def
 
 # The double underscores in the function name below will be replaced
 # by alternating parentheses in the AlliGator menu (with end spaces trimmed).
@@ -100,10 +103,10 @@ def Linear_Combination__Selected_Plots__(
     if nplots < 2:
         exception_type = "Error"
         exception_message = "Not enough selected plots!"
-        graph_data_out = alligatorFLI_1_1.graph_plugin_data(
+        graph_data_out = alligator_def.graph_plugin_data(
             Graph_Name = graph_name,
             Plots = [],
-            Reference_Decay = alligatorFLI_1_1.empty_plot)
+            Reference_Decay = alligator_def.empty_plot)
     else:
         plot_data1 = plots[0]
         name1 = plot_data1.Plot_Name
@@ -128,7 +131,7 @@ def Linear_Combination__Selected_Plots__(
             # we need to repackage those plots into a list of named tuples
             # (same structure as the input)
 
-            plot_data_out = alligatorFLI_1_1.plot_plugin_data(
+            plot_data_out = alligator_def.plot_plugin_data(
                 Plot_Name = 'Lin Comb('+name1+','+name2+')',
                 X_Array = x1,
                 Y_Array = lincomb
@@ -140,18 +143,18 @@ def Linear_Combination__Selected_Plots__(
         
         # packaging the results into a graph data structure
         
-        graph_data_out = alligatorFLI_1_1.graph_plugin_data(
+        graph_data_out = alligator_def.graph_plugin_data(
             Graph_Name = graph_name,
             Plots = plots_out,
-            Reference_Decay = alligatorFLI_1_1.empty_plot)
+            Reference_Decay = alligator_def.empty_plot)
         
         # packaging the graph data into a plugin data structure
         
-        plugin_data_out = alligatorFLI_1_1.plugin_data(
-            Image_Plugin_Data = alligatorFLI_1_1.empty_image,
+        plugin_data_out = alligator_def.plugin_data(
+            Image_Plugin_Data = alligator_def.empty_image,
             Graph_Plugin_Data = graph_data_out,
-            Parameter_Map_Plugin_Data = alligatorFLI_1_1.empty_parameter_map,
-            FLI_Dataset_Plugin_Data = alligatorFLI_1_1.empty_fli_dataset)
+            Parameter_Map_Plugin_Data = alligator_def.empty_parameter_map,
+            FLI_Dataset_Plugin_Data = alligator_def.empty_fli_dataset)
 
         # Finally, we can send back information on the function outcome
         # and can also set AlliGator Parameters

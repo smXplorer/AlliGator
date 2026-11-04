@@ -46,7 +46,6 @@ Based on PicoQuant LabVIEW demo code</Property>
 		<Item Name="Bin Photon Data in to Images.vi" Type="VI" URL="../Bin Photon Data in to Images.vi"/>
 		<Item Name="Bin Photons in Pixels.vi" Type="VI" URL="../Bin Photons in Pixels.vi"/>
 		<Item Name="Compute Nanotime Bin Size.vi" Type="VI" URL="../Compute Nanotime Bin Size.vi"/>
-		<Item Name="Compute Optimal Nanotime Bin Sizes.vi" Type="VI" URL="../Compute Optimal Nanotime Bin Sizes.vi"/>
 		<Item Name="Decode PTU File Header.vi" Type="VI" URL="../Decode PTU File Header.vi"/>
 		<Item Name="Read &amp; Decode PTU Data v4.vi" Type="VI" URL="../Read &amp; Decode PTU Data v4.vi"/>
 		<Item Name="Sum Frame Images.vi" Type="VI" URL="../Sum Frame Images.vi"/>

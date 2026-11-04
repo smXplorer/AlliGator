@@ -1,13 +1,13 @@
 # Decay_Graph_Plugin_Example.py
 # Example AlliGator Decay Graph Python Plugin
-# Tested with AlliGator version 1.07
+# Tested with AlliGator version 1.09
 # Author: X. Michalet
-# Last modified: 2026-07-22
+# Last modified: 2026-10-21
 
 # The following (triple) comment is needed to specify the AlliGator Python 
 # Plugin API version number to use
 
-### AlliGator Python Plugin API Version = 1.1 ###
+### AlliGator Python Plugin API Version = 1.1.1 ###
 
 # The following (triple) comment is needed to tell AlliGator where to
 # insert the plugin function(s) as menu item(s)
@@ -24,8 +24,12 @@
 
 # The following modules are needed to interpret incoming data and send outputs
 
+
 import json
-import alligatorFLI_1_1
+
+import os
+os.environ["ALLIGATOR_DEFINITIONS_VERSION"] = "1.1.1"
+import alligator_def
 
 # The double underscores in the function name below will be replaced
 # by alternating parentheses in the AlliGator menu (with end spaces trimmed).
@@ -100,10 +104,10 @@ def Plot_Scaled_Sum_and_Difference__Selected_Plots__(
     if nplots < 2:
         exception_type = "Error"
         exception_message = "Not enough selected plots!"
-        graph_data_out = alligatorFLI_1_1.graph_plugin_data(
+        graph_data_out = alligator_def.graph_plugin_data(
             Graph_Name = graph_name,
             Plots = [],
-            Reference_Decay = alligatorFLI_1_1.empty_plot)
+            Reference_Decay = alligator_def.empty_plot)
     else:
         plot_data1 = plots[0]
         name1 = plot_data1.Plot_Name
@@ -148,12 +152,12 @@ def Plot_Scaled_Sum_and_Difference__Selected_Plots__(
             # we need to repackage those plots into a list of named tuples
             # (same structure as the input)
 
-            s_plot_data_out = alligatorFLI_1_1.plot_plugin_data(
+            s_plot_data_out = alligator_def.plot_plugin_data(
                 Plot_Name = 'Scaled Sum of Plots',
                 X_Array = x1,
                 Y_Array = sumy
             )
-            d_plot_data_out = alligatorFLI_1_1.plot_plugin_data(
+            d_plot_data_out = alligator_def.plot_plugin_data(
                 Plot_Name = 'Scaled Difference of Plots',
                 X_Array = x1,
                 Y_Array = diffy
@@ -168,10 +172,10 @@ def Plot_Scaled_Sum_and_Difference__Selected_Plots__(
     
         # packages the data into a Python Plugin graph data structure
         
-        graph_data_out = alligatorFLI_1_1.graph_plugin_data(
+        graph_data_out = alligator_def.graph_plugin_data(
             Graph_Name = graph_name,
             Plots = plots_out,
-            Reference_Decay = alligatorFLI_1_1.empty_plot)
+            Reference_Decay = alligator_def.empty_plot)
             
         # print('graph_name = '+graph_name)
         # print('graph_data_out filled')
@@ -179,11 +183,11 @@ def Plot_Scaled_Sum_and_Difference__Selected_Plots__(
   
     # packages the data into a Python Plugin data structure
     
-    plugin_data_out = alligatorFLI_1_1.plugin_data(
-        Image_Plugin_Data = alligatorFLI_1_1.empty_image,
+    plugin_data_out = alligator_def.plugin_data(
+        Image_Plugin_Data = alligator_def.empty_image,
         Graph_Plugin_Data = graph_data_out,
-        Parameter_Map_Plugin_Data = alligatorFLI_1_1.empty_parameter_map,
-        FLI_Dataset_Plugin_Data = alligatorFLI_1_1.empty_fli_dataset)
+        Parameter_Map_Plugin_Data = alligator_def.empty_parameter_map,
+        FLI_Dataset_Plugin_Data = alligator_def.empty_fli_dataset)
         
     # print('plugin_data_out filled')
     # print(str(plugin_data_out))

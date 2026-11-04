@@ -211,23 +211,37 @@ Analysis Menu
 
 + ``Source Image``
 
+  * ``Lock ROI with Maps``: toggle this menu item to lock the *Decay Fit Parameter 
+    Map* and *Parameter Map* ROIs to that of the the *Source Image* ROI. When 
+    locked, moving or modifying the *Source Image* ROI is also changing the ROI 
+    drawn on the *Decay Fit Parameter Map* and *Parameter Map* (the reverse is 
+    not true: changing the ROI in either map will not modify the *Source Image* 
+    ROI).
+
   * ``Source Image Plugin Example``
 
-    - ``Intensity Above Threshold Mask``: python plugin example
+    - ``Intensity Above Threshold Mask``: python plugin example. Press ``H`` on 
+      the keyboard while selecting this menu item to send its description to the 
+      Notebook.
 
 + ``Decay Graph``
 
   * ``Decay Graph Plugin Example``
 
-    - ``Plot Scaled Sum and Difference (Selected Plots) test``
+    - ``Plot Scaled Sum and Difference (Selected Plots) test``: python plugin 
+      example. Press ``H`` on the keyboard while selecting this menu item to 
+      send its description to the Notebook.
 
   * ``Process Multiple Plots``
 
-    - ``Linear Combination (Selected Plots)``
+    - ``Linear Combination (Selected Plots)``: python plugin example. Press 
+      ``H`` on the keyboard while selecting this menu item to send its description 
+      to the Notebook.
 
   * ``Process Plot``
 
-    - ``Plot Mean SDV``
+    - ``Plot Mean SDV``: python plugin example. Press ``H`` on the keyboard 
+      while selecting this menu item to send its description to the Notebook.
 
 + ``Phasor Plot``: no default item
 + ``Phasor Graph``: no default item

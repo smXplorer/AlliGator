@@ -13,6 +13,12 @@ the *Phasor Graph*, including those related to:
 - Phasor Calibration
 - Phasor Ratio Analysis & Derived Quantities
 
+.. Note: Starting with version 1.09, the panel is detachable, which has required 
+   the introduction of subdivisions within the panel, which make it "squeezed" 
+   horizontally, rendering it unusable unless it is detached. Once detached, 
+   expanding the panel horizontally will make the *Phasor Graph* fully visible 
+   again.
+
 The **Phasor Graph** panel represents decay data corresponding to ROIs selected 
 in the *Source Image*. This representation is complementary to the mere decay 
 plots displayed in the *Decay Graph* of the **Fluorescence Decay** panel. 

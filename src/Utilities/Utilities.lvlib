@@ -27,6 +27,7 @@
 	<Item Name="All Running Vis.vi" Type="VI" URL="../All Running Vis.vi"/>
 	<Item Name="ArrayToEnum__A2E.vi" Type="VI" URL="../ArrayToEnum/ArrayToEnum__A2E.vi"/>
 	<Item Name="Close &amp; Abort VIs.vi" Type="VI" URL="../Close &amp; Abort VIs.vi"/>
+	<Item Name="Close Front Panel.vi" Type="VI" URL="../../GUI/Close Front Panel.vi"/>
 	<Item Name="Compare Version Descriptors.vi" Type="VI" URL="../Compare Version Descriptors.vi"/>
 	<Item Name="For Loop Iteration Type.ctl" Type="VI" URL="../For Loop Iteration Type.ctl"/>
 	<Item Name="For Loop Iteration.vi" Type="VI" URL="../For Loop Iteration.vi"/>
@@ -45,6 +46,7 @@
 	<Item Name="GetCurrentProcessID.vi" Type="VI" URL="../GetCurrentProcessID.vi"/>
 	<Item Name="Is Runtime Application.vi" Type="VI" URL="../Is Runtime Application.vi"/>
 	<Item Name="Logical Processors Used.vi" Type="VI" URL="../Logical Processors Used.vi"/>
+	<Item Name="Open VI Front Panel Hidden.vi" Type="VI" URL="../../GUI/Open VI Front Panel Hidden.vi"/>
 	<Item Name="Run Vi.vi" Type="VI" URL="../Run Vi.vi"/>
 	<Item Name="Save Control__A2E.vi" Type="VI" URL="../ArrayToEnum/Save Control__A2E.vi"/>
 	<Item Name="Set All Controls Description.vi" Type="VI" URL="../Set All Controls Description.vi"/>

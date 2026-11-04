@@ -24,6 +24,7 @@
 			<Item Name="AlliGator Batch File Conversion Item.ctl" Type="VI" URL="../AlliGator Batch File Conversion Item.ctl"/>
 			<Item Name="AlliGator TIFF Series Options.ctl" Type="VI" URL="../AlliGator TIFF Series Options.ctl"/>
 		</Item>
+		<Item Name="AlliGator Batch Dataset Export Window.rtm" Type="Document" URL="../AlliGator Batch Dataset Export Window.rtm"/>
 		<Item Name="AlliGator Batch Dataset Export Window.vi" Type="VI" URL="../AlliGator Batch Dataset Export Window.vi"/>
 		<Item Name="AlliGator Batch Export Status.vi" Type="VI" URL="../AlliGator Batch Export Status.vi"/>
 		<Item Name="AlliGator Export Dataset Script Core.vi" Type="VI" URL="../AlliGator Export Dataset Script Core.vi"/>
@@ -147,6 +148,7 @@
 		<Item Name="AlliGator Load Single Gate Image from PTU File.vi" Type="VI" URL="../AlliGator Load Single Gate Image from PTU File.vi"/>
 	</Item>
 	<Item Name="Save" Type="Folder">
+		<Property Name="NI.SortType" Type="Int">0</Property>
 		<Item Name="Ctrls" Type="Folder">
 			<Item Name="AlliGator Export Dataset Options.ctl" Type="VI" URL="../AlliGator Export Dataset Options.ctl"/>
 			<Item Name="AlliGator FLI Dataset HDF5 File Sections.ctl" Type="VI" URL="../AlliGator FLI Dataset HDF5 File Sections.ctl"/>

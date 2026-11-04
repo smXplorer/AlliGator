@@ -1,13 +1,13 @@
 # Process_Plot.py
 # Basic Plot Operations Python Plugin
-# Tested with AlliGator version 1.07
+# Tested with AlliGator version 1.09
 # Author: X. Michalet
-# Last modified: 2026-07-22
+# Last modified: 2026-10-21
 
 # The following (triple) comment is needed to specify the AlliGator Python 
 # Plugin API version number to use
 
-### AlliGator Python Plugin API Version = 1.1 ###
+### AlliGator Python Plugin API Version = 1.1.1 ###
 
 ### AlliGatorTarget = AlliGator/Object/Decay Graph ###
 
@@ -16,8 +16,11 @@
 # by the mouse right-click coordinates
 
 import json
-import alligatorFLI_1_1
 import statistics
+
+import os
+os.environ["ALLIGATOR_DEFINITIONS_VERSION"] = "1.1.1"
+import alligator_def
 
 def Plot_Mean_and_SDV(
         plugin_data_in, params_in_json, addtl_params_out_json_list):

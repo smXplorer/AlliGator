@@ -10,14 +10,12 @@
 
 </Property>
 	<Item Name="Ctrls" Type="Folder">
-		<Item Name="AlliGator Refnums List.ctl" Type="VI" URL="../AlliGator Refnums List.ctl"/>
 		<Item Name="AlliGator Variables List.ctl" Type="VI" URL="../AlliGator Variables List.ctl"/>
 	</Item>
 	<Item Name="AlliGator Abort.vi" Type="VI" URL="../AlliGator Abort.vi"/>
 	<Item Name="AlliGator Clear Variables.vi" Type="VI" URL="../AlliGator Clear Variables.vi"/>
 	<Item Name="AlliGator Exported Internal Variable Names.vi" Type="VI" URL="../AlliGator Exported Internal Variable Names.vi"/>
 	<Item Name="AlliGator Globals.vi" Type="VI" URL="../AlliGator Globals.vi"/>
-	<Item Name="AlliGator Refnums Storage.vi" Type="VI" URL="../AlliGator Refnums Storage.vi"/>
 	<Item Name="Alligator Variables Storage.vi" Type="VI" URL="../Alligator Variables Storage.vi"/>
 	<Item Name="AlliGator Visible Tab Label.vi" Type="VI" URL="../AlliGator Visible Tab Label.vi"/>
 </Library>

@@ -1,13 +1,13 @@
 # Sliced_Decay_Variation_Analysis.py
 # Analysis of multiple ROI IRFs by intensity slice
-# Tested with AlliGator version 1.07
+# Tested with AlliGator version 1.09
 # Author: X. Michalet
-# Last modified: 2026-09-16
+# Last modified: 2026-10-21
 
 # The following (triple) comment is needed to specify the AlliGator Python 
 # Plugin API version number to use
 
-### AlliGator Python Plugin API Version = 1.1 ###
+### AlliGator Python Plugin API Version = 1.1.1 ###
 
 # The following (triple) comment is needed to tell AlliGator where to
 # insert the plugin function(s) as menu item(s)
@@ -23,7 +23,10 @@
 # The following modules are needed to interpret incoming data and send outputs
 
 import json
-import alligatorFLI_1_1
+
+import os
+os.environ["ALLIGATOR_DEFINITIONS_VERSION"] = "1.1.1"
+import alligator_def
 
 # the following modules are used in this plugin
 
@@ -174,7 +177,7 @@ def Sliced_Decay_Variation_Analysis(
         n_slices = math.ceil(len(sorted_intensity_array)/n_elts)
         
     else:   # unsupported case: returns an empty structure
-        plugin_data_out = alligatorFLI_1_1.empty_plugin_data
+        plugin_data_out = alligator_def.empty_plugin_data
         # set the output message to explain the error
         info_out_dict = {
         "Notebook Message" : "Sliced IRF Variation Analysis",
@@ -287,11 +290,11 @@ def Sliced_Decay_Variation_Analysis(
             # use this number as part of the output plot labels
             mean_I_string = f"{average_intensity[slice_index]:.0f}"
             # builds plot outputs
-            plots_out.append(alligatorFLI_1_1.plot_plugin_data(Plot_Name = \
+            plots_out.append(alligator_def.plot_plugin_data(Plot_Name = \
                 'Slice '+str(slice_index+1)+' (<I> = '+mean_I_string + \
                 ') Average Decay', X_Array = time_axis, \
                 Y_Array = decay_averages[slice_index].tolist()))
-            plots_out.append(alligatorFLI_1_1.plot_plugin_data(Plot_Name = \
+            plots_out.append(alligator_def.plot_plugin_data(Plot_Name = \
                 'Slice '+str(slice_index+1)+' (<I> = '+mean_I_string + \
                 ') Decay SDV', X_Array = time_axis,\
                 Y_Array = decay_SDVs[slice_index].tolist()))
@@ -300,16 +303,16 @@ def Sliced_Decay_Variation_Analysis(
 
 #    print('valid pixels: '+str(valid_pixels))
     
-    graph_data_out = alligatorFLI_1_1.graph_plugin_data(
+    graph_data_out = alligator_def.graph_plugin_data(
         Graph_Name = 'Lifetime & Other Parameters Graph',
         Plots = plots_out,
-        Reference_Decay = alligatorFLI_1_1.empty_plot)
+        Reference_Decay = alligator_def.empty_plot)
     
-    plugin_data_out = alligatorFLI_1_1.plugin_data(
-        Image_Plugin_Data =alligatorFLI_1_1.empty_image,
+    plugin_data_out = alligator_def.plugin_data(
+        Image_Plugin_Data =alligator_def.empty_image,
         Graph_Plugin_Data = graph_data_out,
-        Parameter_Map_Plugin_Data = alligatorFLI_1_1.empty_parameter_map,
-        FLI_Dataset_Plugin_Data = alligatorFLI_1_1.empty_fli_dataset)
+        Parameter_Map_Plugin_Data = alligator_def.empty_parameter_map,
+        FLI_Dataset_Plugin_Data = alligator_def.empty_fli_dataset)
 
 
     # We can send back information on the function outcome

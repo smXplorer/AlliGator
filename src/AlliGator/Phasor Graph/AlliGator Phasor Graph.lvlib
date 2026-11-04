@@ -29,6 +29,7 @@
 		<Item Name="AlliGator Raw Phasor Plot Data v4.ctl" Type="VI" URL="../AlliGator Raw Phasor Plot Data v4.ctl"/>
 		<Item Name="AlliGator Raw Phasor Plot Data v5.ctl" Type="VI" URL="../AlliGator Raw Phasor Plot Data v5.ctl"/>
 		<Item Name="AlliGator Phasor Plot Statistics.ctl" Type="VI" URL="../AlliGator Phasor Plot Statistics.ctl"/>
+		<Item Name="AlliGator Phasor Graph Ctrl Refnums.ctl" Type="VI" URL="../AlliGator Phasor Graph Ctrl Refnums.ctl"/>
 	</Item>
 	<Item Name="AlliGator Add Phasor Value to Plot v2.vi" Type="VI" URL="../AlliGator Add Phasor Value to Plot v2.vi"/>
 	<Item Name="AlliGator All ROIs Phasor Analysis Script.vi" Type="VI" URL="../AlliGator All ROIs Phasor Analysis Script.vi"/>
@@ -54,6 +55,7 @@
 	<Item Name="AlliGator Create Phasor Plot Additional Data String.vi" Type="VI" URL="../AlliGator Create Phasor Plot Additional Data String.vi"/>
 	<Item Name="AlliGator Current Phasor (g, s) Custom Menu Actions.vi" Type="VI" URL="../AlliGator Current Phasor (g, s) Custom Menu Actions.vi"/>
 	<Item Name="AlliGator Draw Cursor Connecting Line.vi" Type="VI" URL="../AlliGator Draw Cursor Connecting Line.vi"/>
+	<Item Name="AlliGator Draw UC in Phasor Graph.vi" Type="VI" URL="../AlliGator Draw UC in Phasor Graph.vi"/>
 	<Item Name="AlliGator Enter Reference Lifetime Dialog.vi" Type="VI" URL="../AlliGator Enter Reference Lifetime Dialog.vi"/>
 	<Item Name="AlliGator Enter User-defined Phasor Dialog.vi" Type="VI" URL="../AlliGator Enter User-defined Phasor Dialog.vi"/>
 	<Item Name="AlliGator Export Single Phasor Plot Phase Lifetimes.vi" Type="VI" URL="../AlliGator Export Single Phasor Plot Phase Lifetimes.vi"/>
@@ -69,6 +71,9 @@
 	<Item Name="AlliGator New Phasor Plot.vi" Type="VI" URL="../AlliGator New Phasor Plot.vi"/>
 	<Item Name="AlliGator Phasor Algebra Calculator.vi" Type="VI" URL="../AlliGator Phasor Algebra Calculator.vi"/>
 	<Item Name="AlliGator Phasor Graph Context Menu Handler.vi" Type="VI" URL="../AlliGator Phasor Graph Context Menu Handler.vi"/>
+	<Item Name="AlliGator Phasor Graph Ctrl Refnums.vi" Type="VI" URL="../AlliGator Phasor Graph Ctrl Refnums.vi"/>
+	<Item Name="AlliGator Phasor Graph Panel.vi" Type="VI" URL="../AlliGator Phasor Graph Panel.vi"/>
+	<Item Name="AlliGator Phasor Graph Update Phasor Frequency.vi" Type="VI" URL="../AlliGator Phasor Graph Update Phasor Frequency.vi"/>
 	<Item Name="AlliGator Phasor Plot Multiplication Window.vi" Type="VI" URL="../AlliGator Phasor Plot Multiplication Window.vi"/>
 	<Item Name="AlliGator Phasor Plot Parameters Scatter Plot.vi" Type="VI" URL="../AlliGator Phasor Plot Parameters Scatter Plot.vi"/>
 	<Item Name="AlliGator Remove Phasor Plot.vi" Type="VI" URL="../AlliGator Remove Phasor Plot.vi"/>
@@ -79,10 +84,16 @@
 	<Item Name="AlliGator Select Parameter Scatter Plot Type.vi" Type="VI" URL="../AlliGator Select Parameter Scatter Plot Type.vi"/>
 	<Item Name="AlliGator Select Phasor Plot Data to Export Dialog.vi" Type="VI" URL="../AlliGator Select Phasor Plot Data to Export Dialog.vi"/>
 	<Item Name="AlliGator Set Phasor Harmonic.vi" Type="VI" URL="../AlliGator Set Phasor Harmonic.vi"/>
+	<Item Name="AlliGator Set Special Phasor Frequency.vi" Type="VI" URL="../AlliGator Set Special Phasor Frequency.vi"/>
 	<Item Name="AlliGator skippable_New Phasor Plot Dialog Window.vi" Type="VI" URL="../AlliGator skippable_New Phasor Plot Dialog Window.vi"/>
 	<Item Name="AlliGator Toggle Phasor Plot(s) Locking to Reference n.vi" Type="VI" URL="../AlliGator Toggle Phasor Plot(s) Locking to Reference n.vi"/>
 	<Item Name="AlliGator Update Phasor Graph Information at Cursor.vi" Type="VI" URL="../AlliGator Update Phasor Graph Information at Cursor.vi"/>
 	<Item Name="AlliGator Update Phasor Ratio Reference.vi" Type="VI" URL="../AlliGator Update Phasor Ratio Reference.vi"/>
 	<Item Name="AlliGator Update Phasor References v2.vi" Type="VI" URL="../AlliGator Update Phasor References v2.vi"/>
 	<Item Name="AlliGator Use Phasor Graph Selected Phasor Plots Principal Axis - UC Intersections as References.vi" Type="VI" URL="../AlliGator Use Phasor Graph Selected Phasor Plots Principal Axis - UC Intersections as References.vi"/>
+	<Item Name="Calibration Lifetime.rtm" Type="Document" URL="../Calibration Lifetime.rtm"/>
+	<Item Name="Current Phasor (g,s).rtm" Type="Document" URL="../Current Phasor (g,s).rtm"/>
+	<Item Name="Current Phasor (m,phi).rtm" Type="Document" URL="../Current Phasor (m,phi).rtm"/>
+	<Item Name="Current Phasor.rtm" Type="Document" URL="../Current Phasor.rtm"/>
+	<Item Name="Phasor Frequency Control.rtm" Type="Document" URL="../Phasor Frequency Control.rtm"/>
 </Library>

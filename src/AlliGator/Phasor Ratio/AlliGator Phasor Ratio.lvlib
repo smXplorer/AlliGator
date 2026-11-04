@@ -26,7 +26,7 @@
 	<Item Name="AlliGator Build Reference Lifetime String.vi" Type="VI" URL="../AlliGator Build Reference Lifetime String.vi"/>
 	<Item Name="AlliGator Compute Basic Quantities.vi" Type="VI" URL="../AlliGator Compute Basic Quantities.vi"/>
 	<Item Name="AlliGator Compute Phasor Plot Phasor Ratio Histogram.vi" Type="VI" URL="../AlliGator Compute Phasor Plot Phasor Ratio Histogram.vi"/>
-	<Item Name="AlliGator Compute Phasor Plot&apos;s Phasor Ratio.vi" Type="VI" URL="../AlliGator Compute Phasor Plot&apos;s Phasor Ratio.vi"/>
+	<Item Name="AlliGator Compute Phasor Plot Phasor Ratio.vi" Type="VI" URL="../AlliGator Compute Phasor Plot Phasor Ratio.vi"/>
 	<Item Name="AlliGator Compute Phasor Ratio at Mouse Location.vi" Type="VI" URL="../AlliGator Compute Phasor Ratio at Mouse Location.vi"/>
 	<Item Name="AlliGator Define Phasor References.vi" Type="VI" URL="../AlliGator Define Phasor References.vi"/>
 	<Item Name="AlliGator Fit Phasor Ratio Plot v2.vi" Type="VI" URL="../AlliGator Fit Phasor Ratio Plot v2.vi"/>
@@ -36,6 +36,10 @@
 	<Item Name="AlliGator Get Updated Phasor Ratio References.vi" Type="VI" URL="../AlliGator Get Updated Phasor Ratio References.vi"/>
 	<Item Name="AlliGator Get-Set Phasor Ratio References.vi" Type="VI" URL="../AlliGator Get-Set Phasor Ratio References.vi"/>
 	<Item Name="AlliGator Load Phasor Ratio References.vi" Type="VI" URL="../AlliGator Load Phasor Ratio References.vi"/>
+	<Item Name="AlliGator Phasor Ratio Graph Ctrl Refnums.ctl" Type="VI" URL="../AlliGator Phasor Ratio Graph Ctrl Refnums.ctl"/>
+	<Item Name="AlliGator Phasor Ratio Graph Ctrl Refnums.vi" Type="VI" URL="../AlliGator Phasor Ratio Graph Ctrl Refnums.vi"/>
+	<Item Name="AlliGator Phasor Ratio Graph Panel.vi" Type="VI" URL="../AlliGator Phasor Ratio Graph Panel.vi"/>
+	<Item Name="AlliGator Phasor Ratio Graph.rtm" Type="Document" URL="../AlliGator Phasor Ratio Graph.rtm"/>
 	<Item Name="AlliGator Phasor Ratio Reference String.vi" Type="VI" URL="../AlliGator Phasor Ratio Reference String.vi"/>
 	<Item Name="AlliGator Phasor Ratio Step.vi" Type="VI" URL="../AlliGator Phasor Ratio Step.vi"/>
 	<Item Name="AlliGator Phasor References Defined.vi" Type="VI" URL="../AlliGator Phasor References Defined.vi"/>

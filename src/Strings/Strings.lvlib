@@ -25,6 +25,7 @@
 	<Item Name="Find Largest Common Substring.vi" Type="VI" URL="../Find Largest Common Substring.vi"/>
 	<Item Name="Find String Dialog.vi" Type="VI" URL="../../GUI/Find String Dialog.vi"/>
 	<Item Name="Find Strings Common Root.vi" Type="VI" URL="../Find Strings Common Root.vi"/>
+	<Item Name="First Token Index.vi" Type="VI" URL="../First Token Index.vi"/>
 	<Item Name="Format Index List.vi" Type="VI" URL="../../Arrays/Format Index List.vi"/>
 	<Item Name="Keep String in Array.vi" Type="VI" URL="../Keep String in Array.vi"/>
 	<Item Name="List of Folder Number of Elements - Indices.vi" Type="VI" URL="../List of Folder Number of Elements - Indices.vi"/>
@@ -53,4 +54,5 @@
 	<Item Name="String Match Format.vi" Type="VI" URL="../String Match Format.vi"/>
 	<Item Name="String to V16__A2E.vi" Type="VI" URL="../../Utilities/ArrayToEnum/String to V16__A2E.vi"/>
 	<Item Name="Truly Empty Almost Empty String Array.vi" Type="VI" URL="../Truly Empty Almost Empty String Array.vi"/>
+	<Item Name="Truncate String Core.vi" Type="VI" URL="../Truncate String Core.vi"/>
 </Library>

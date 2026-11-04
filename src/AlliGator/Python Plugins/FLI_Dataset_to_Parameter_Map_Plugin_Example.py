@@ -1,13 +1,13 @@
 # FLI_Dataset_to_Parameter_Map_Plugin_Example.py
 # Example AlliGator FLI Dataset Menu Python Plugin
-# Tested with AlliGator version 1.07
+# Tested with AlliGator version 1.09
 # Author: X. Michalet
-# Last modified: 2026-07-29
+# Last modified: 2026-10-21
 
 # The following (triple) comment is needed to specify the AlliGator Python 
 # Plugin API version number to use
 
-### AlliGator Python Plugin API Version = 1.1 ###
+### AlliGator Python Plugin API Version = 1.1.1 ###
 
 # The following (triple) comment is needed to tell AlliGator where to
 # insert the plugin function(s) as menu item(s)
@@ -23,7 +23,10 @@
 # The following modules are needed to interpret incoming data and send outputs
 
 import json
-import alligatorFLI_1_1
+
+import os
+os.environ["ALLIGATOR_DEFINITIONS_VERSION"] = "1.1.1"
+import alligator_def
 
 # the following module is used in this plugin
 
@@ -151,14 +154,14 @@ def Very_Simple_Average_Lifetime_Map(
     parameter_map = []              # will be filled with parameter values
     for i in range(size_x):
         for j in range (size_y):
-            irf_locations.append(alligatorFLI_1_1.location(X = i, Y = j))
+            irf_locations.append(alligator_def.location(X = i, Y = j))
             parameter_map.append([i, j, sum[j, i],mean_t[j, i]])
     
     # print(str(parameter_map[:1000]))
     
     # packaging everything in the output format
     
-    simple_map_data = alligatorFLI_1_1.parameter_map_plugin_data(
+    simple_map_data = alligator_def.parameter_map_plugin_data(
         Parameter_Names = parameter_names,
         Parameter_Flattened_Map = parameter_map,
         Locations = irf_locations,
@@ -168,11 +171,11 @@ def Very_Simple_Average_Lifetime_Map(
         Y_Resolution = size_y
     )
     
-    plugin_data_out = alligatorFLI_1_1.plugin_data(
-        Image_Plugin_Data =alligatorFLI_1_1.empty_image,
-        Graph_Plugin_Data = alligatorFLI_1_1.empty_graph,
+    plugin_data_out = alligator_def.plugin_data(
+        Image_Plugin_Data =alligator_def.empty_image,
+        Graph_Plugin_Data = alligator_def.empty_graph,
         Parameter_Map_Plugin_Data = simple_map_data,
-        FLI_Dataset_Plugin_Data = alligatorFLI_1_1.empty_fli_dataset)
+        FLI_Dataset_Plugin_Data = alligator_def.empty_fli_dataset)
     
     # We can send back information on the function outcome
     # and can also set AlliGator Parameters

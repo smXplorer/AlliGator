@@ -24,6 +24,7 @@
 	<Item Name="AlliGator Check for Abort.vi" Type="VI" URL="../AlliGator Check for Abort.vi"/>
 	<Item Name="AlliGator Current Event.vi" Type="VI" URL="../AlliGator Current Event.vi"/>
 	<Item Name="AlliGator Decay Analysis Actions.vi" Type="VI" URL="../AlliGator Decay Analysis Actions.vi"/>
+	<Item Name="AlliGator Decay Fit Parameter Map Actions.vi" Type="VI" URL="../AlliGator Decay Fit Parameter Map Actions.vi"/>
 	<Item Name="AlliGator Display Current Decay Fit Parameter Map (X,Y, I).vi" Type="VI" URL="../../Decay Fit Parameter Map/AlliGator Display Current Decay Fit Parameter Map (X,Y, I).vi"/>
 	<Item Name="AlliGator Display Current Parameter Map (X,Y, I).vi" Type="VI" URL="../../Parameter Map/AlliGator Display Current Parameter Map (X,Y, I).vi"/>
 	<Item Name="AlliGator Event to Event Category.vi" Type="VI" URL="../AlliGator Event to Event Category.vi"/>

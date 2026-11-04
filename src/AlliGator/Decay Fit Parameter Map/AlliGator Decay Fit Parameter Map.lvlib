@@ -10,9 +10,9 @@
 
 </Property>
 	<Item Name="Ctrls" Type="Folder">
-		<Item Name="AlliGator Decay Fit Map Control Refnums.ctl" Type="VI" URL="../AlliGator Decay Fit Map Control Refnums.ctl"/>
 		<Item Name="AlliGator Decay Fit Options &amp; Parameters v2.ctl" Type="VI" URL="../AlliGator Decay Fit Options &amp; Parameters v2.ctl"/>
 		<Item Name="AlliGator Decay Fit Options &amp; Parameters v3.ctl" Type="VI" URL="../AlliGator Decay Fit Options &amp; Parameters v3.ctl"/>
+		<Item Name="AlliGator Decay Fit Parameter Map Control Refnums.ctl" Type="VI" URL="../AlliGator Decay Fit Parameter Map Control Refnums.ctl"/>
 		<Item Name="AlliGator Decay Parameter Map Update Event Data.ctl" Type="VI" URL="../AlliGator Decay Parameter Map Update Event Data.ctl"/>
 		<Item Name="AlliGator Function Parameters.ctl" Type="VI" URL="../AlliGator Function Parameters.ctl"/>
 		<Item Name="AlliGator IRFs &amp; Fit Data v1.ctl" Type="VI" URL="../AlliGator IRFs &amp; Fit Data v1.ctl"/>
@@ -36,12 +36,15 @@
 	<Item Name="AlliGator Check ROIs.vi" Type="VI" URL="../AlliGator Check ROIs.vi"/>
 	<Item Name="AlliGator Convert Decay Fit Options v3 to v4.vi" Type="VI" URL="../AlliGator Convert Decay Fit Options v3 to v4.vi"/>
 	<Item Name="AlliGator Convert Decay Range Options.vi" Type="VI" URL="../AlliGator Convert Decay Range Options.vi"/>
-	<Item Name="AlliGator Creat X &amp; Y Coordinate Arrays.vi" Type="VI" URL="../AlliGator Creat X &amp; Y Coordinate Arrays.vi"/>
+	<Item Name="AlliGator Create X &amp; Y Coordinate Arrays.vi" Type="VI" URL="../AlliGator Create X &amp; Y Coordinate Arrays.vi"/>
 	<Item Name="AlliGator Decay Fit Options &amp; Parameters v4.ctl" Type="VI" URL="../AlliGator Decay Fit Options &amp; Parameters v4.ctl"/>
-	<Item Name="AlliGator Decay Fit Parameter Map Actions.vi" Type="VI" URL="../../../Action Engine/AlliGator Decay Fit Parameter Map Actions.vi"/>
 	<Item Name="AlliGator Decay Fit Parameter Map Context Menu Handler.vi" Type="VI" URL="../AlliGator Decay Fit Parameter Map Context Menu Handler.vi"/>
-	<Item Name="AlliGator Decay Parameter Range Mouse Move Event.vi" Type="VI" URL="../AlliGator Decay Parameter Range Mouse Move Event.vi"/>
-	<Item Name="AlliGator Decay Parameters Map Mouse Up Event.vi" Type="VI" URL="../AlliGator Decay Parameters Map Mouse Up Event.vi"/>
+	<Item Name="AlliGator Decay Fit Parameter Map Ctrl Refnums.vi" Type="VI" URL="../AlliGator Decay Fit Parameter Map Ctrl Refnums.vi"/>
+	<Item Name="AlliGator Decay Fit Parameter Map Event Registration Refnums.vi" Type="VI" URL="../AlliGator Decay Fit Parameter Map Event Registration Refnums.vi"/>
+	<Item Name="AlliGator Decay Fit Parameter Map Image.rtm" Type="Document" URL="../AlliGator Decay Fit Parameter Map Image.rtm"/>
+	<Item Name="AlliGator Decay Fit Parameter Map Mouse Up Event.vi" Type="VI" URL="../AlliGator Decay Fit Parameter Map Mouse Up Event.vi"/>
+	<Item Name="AlliGator Decay Fit Parameter Map Panel.vi" Type="VI" URL="../AlliGator Decay Fit Parameter Map Panel.vi"/>
+	<Item Name="AlliGator Decay Fit Parameter Map Range Mouse Move Event.vi" Type="VI" URL="../AlliGator Decay Fit Parameter Map Range Mouse Move Event.vi"/>
 	<Item Name="AlliGator Export ROI(s) NLSF Parameters as ASCII File.vi" Type="VI" URL="../AlliGator Export ROI(s) NLSF Parameters as ASCII File.vi"/>
 	<Item Name="AlliGator Fit Results Constraints Window.vi" Type="VI" URL="../AlliGator Fit Results Constraints Window.vi"/>
 	<Item Name="AlliGator Get Decay Fit Parameter Map Data Wrapper.vi" Type="VI" URL="../AlliGator Get Decay Fit Parameter Map Data Wrapper.vi"/>

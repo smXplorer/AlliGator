@@ -7,12 +7,16 @@
 	<Item Name="Ctrls" Type="Folder">
 		<Item Name="AlliGator CV(tau) Model Function.ctl" Type="VI" URL="../../Decay Fit Parameter Map/AlliGator CV(tau) Model Function.ctl"/>
 		<Item Name="AlliGator Intensity Slice Definition.ctl" Type="VI" URL="../AlliGator Intensity Slice Definition.ctl"/>
+		<Item Name="AlliGator Lifetime &amp; Other Parameters Ctrl Refnums.ctl" Type="VI" URL="../AlliGator Lifetime &amp; Other Parameters Ctrl Refnums.ctl"/>
 		<Item Name="AlliGator Lifetime &amp; Other Parameters Plot Metadata.ctl" Type="VI" URL="../AlliGator Lifetime &amp; Other Parameters Plot Metadata.ctl"/>
 	</Item>
 	<Item Name="AlliGator Compute CV Mean &amp; SDV.vi" Type="VI" URL="../AlliGator Compute CV Mean &amp; SDV.vi"/>
 	<Item Name="AlliGator Compute Sliced Mean, SDV &amp; CV Plots.vi" Type="VI" URL="../AlliGator Compute Sliced Mean, SDV &amp; CV Plots.vi"/>
 	<Item Name="AlliGator Format Slice Analysis Plots.vi" Type="VI" URL="../../Decay Fit Parameter Map/AlliGator Format Slice Analysis Plots.vi"/>
 	<Item Name="AlliGator Histogram Bin Size Definition Dialog.vi" Type="VI" URL="../AlliGator Histogram Bin Size Definition Dialog.vi"/>
+	<Item Name="AlliGator Lifetime &amp; Other Parameters Graph Ctrl Refnums.vi" Type="VI" URL="../AlliGator Lifetime &amp; Other Parameters Graph Ctrl Refnums.vi"/>
+	<Item Name="AlliGator Lifetime &amp; Other Parameters Graph.rtm" Type="Document" URL="../AlliGator Lifetime &amp; Other Parameters Graph.rtm"/>
+	<Item Name="AlliGator Lifetime &amp; Other Parameters Panel.vi" Type="VI" URL="../AlliGator Lifetime &amp; Other Parameters Panel.vi"/>
 	<Item Name="AlliGator Plot Histogram Event.vi" Type="VI" URL="../AlliGator Plot Histogram Event.vi"/>
 	<Item Name="AlliGator Sliced Analysis Initialization.vi" Type="VI" URL="../AlliGator Sliced Analysis Initialization.vi"/>
 	<Item Name="AlliGator Sliced Mean, SDV &amp; CV Enter Data Dialog.vi" Type="VI" URL="../AlliGator Sliced Mean, SDV &amp; CV Enter Data Dialog.vi"/>

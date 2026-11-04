@@ -92,7 +92,6 @@
 		<Item Name="Extract IRF (Direct).vi" Type="VI" URL="../IRF(X)PSED/Extract IRF (Direct).vi"/>
 		<Item Name="Extract IRF (Toeplitz).vi" Type="VI" URL="../IRF(X)PSED/Extract IRF (Toeplitz).vi"/>
 		<Item Name="Extract IRF (Topless).vi" Type="VI" URL="../IRF(X)PSED/Extract IRF (Topless).vi"/>
-		<Item Name="Extract IRF from PSED v2.vi" Type="VI" URL="../IRF(X)PSED/Extract IRF from PSED v2.vi"/>
 		<Item Name="Find Optimal IRF Tail Slope.vi" Type="VI" URL="../IRF(X)PSED/Find Optimal IRF Tail Slope.vi"/>
 		<Item Name="Fit Regularized IRF.vi" Type="VI" URL="../IRF(X)PSED/Fit Regularized IRF.vi"/>
 		<Item Name="IRF Options.vi" Type="VI" URL="../IRF(X)PSED/IRF Options.vi"/>

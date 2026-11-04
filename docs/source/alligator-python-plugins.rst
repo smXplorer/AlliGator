@@ -7,7 +7,7 @@ AlliGator supports user-provided Python functions which appear as right-click
 menu items for the corresponding object or main AlliGator Analysis menu.
 
 Currently, only two types of objects support plugins: the *graphs* (*Decay 
-Graph*, *Decay Statistics Graph*, etc.) except for the *Phasor Graph* and the 
+Graph*, *Decay Statistics Graph*, etc., except for the *Phasor Graph*) and the 
 *Source Image*. In addition, *FLI Dataset* plugins are supported as sub-menus of
 the ``Analysis:FLI Dataset`` menu. Future versions will support plugins for all 
 objects, as needs arise.
@@ -43,7 +43,7 @@ which case this is displayed in the **Notebook** window.
 .. note::
    Python needs to be installed, together with all required modules, on the PC 
    on which AlliGator is installed. The path to the *Python Version* selected in 
-   the **Settings:Plugins* panel can be either the default installation path 
+   the **Settings:Plugins** panel can be either the default installation path 
    (*Use PATH definition* checked) or a custom path (for instance to a local 
    environment). If a module is missing when running a plugin (as is normally 
    indicated by the returned Python error message - which requires the *Verbose 
@@ -192,18 +192,27 @@ These syntactic elements are as follows:
 A plugin function may require special modules to perform its operations. These 
 are typically imported at the beginning of the script. In addition to any 
 plugin-specific module import statement, any AlliGator Python Plugin script 
-requires the following additional two import statements:
+requires the following additional import statements (for plugins using an API 
+version 1.1.1 or later):
 
 .. code-block::
 
     import json
-    import alligatorFLI_n_m
+    import os
+    os.environ["ALLIGATOR_DEFINITIONS_VERSION"] = "1.1.1"
+    import alligator_def
 
-The first is used to convert the input parameters string from JSON to a 
-dictionary, and the output parameters dictionary to a JSON string, while the 
-second refers to the ``alligatorFLI_n_m.py`` script provided in the Python 
-Plugins folder [1]_, and contains type definitions that are useful to format 
+The first module (*json*) is used to convert the input parameters string from 
+JSON to a dictionary, and the output parameters dictionary to a JSON string.
+
+The second (*os*) and third module (*alligator_def*), together with the
+environment variable definition statement, refer to the ``Python Plugins\alligator_def`` 
+folder [1]_ containing API version-dependent type definitions needed to format 
 input and output data for a plugin.
+
+.. Note: The version referred to in quotation mark on the environment variable 
+   definition above should be **identical** to that used in the API version 
+   statement discussed in the next section.
 
 In addition to these two import statements, the other 5 elements to include are 
 briefly reviewed next.
@@ -243,12 +252,12 @@ The syntax of these different elements is discussed in the following sections.
 API Version
 -----------
 
-The API version *n.m*, where n and m are integers, is specified by the following 
-triple-commented statement:
+The API version *n.m.p*, where n, m and p are integers, is specified by the 
+following triple-commented statement:
 
 .. code-block::
 
-    ### AlliGator Python Plugin API Version = n.m ###
+    ### AlliGator Python Plugin API Version = n.m.p ###
 
 Destination
 -----------
@@ -425,14 +434,21 @@ a context menu item of the *Decay Graph*.
 
 .. rubric:: Footnotes
 
-.. [1] The ``import alligator`` statement of the first API version could have 
-   resulted in ambiguities if the PyPI *alligator* package is installed in the 
-   Python instance (this is a different module altogether, dedicated to managing 
-   simple offline task queues in Python). Renaming the file as 
-   *alligatorFLI_n_m.py*, where *n.m* is the API version starting with version 
-   1.1, removes this ambiguity. Note that, in order to support plugins developed 
-   using older API versions, it is necessary to include the corresponding 
-   alligatorFLI_n.m.py files in the Python Plugins folder (and not modify them!).
+.. [1] The ``import alligator`` statement of the first API version (version 1) 
+   could have resulted in ambiguities if the PyPI *alligator* package is 
+   installed in the Python instance (this is a different module altogether, 
+   unrelated to AlliGator, dedicated to managing simple offline task queues in 
+   Python). Renaming the file as *alligatorFLI_1_1.py*, in API version 1.1, 
+   removed this ambiguity, but required to clutter the Python Plugin folder with 
+   as many *alligatorFLI_n_m.py* files as API versions. The switch to using a 
+   dynamic routing to a definition file specified by an environment variable 
+   starting with version 1.1.1 (which does not change the internal data 
+   definitions, but only the way to access them), hides this complexity in the 
+   *alligator_def* folder.
+   
+   Note that, in order to support plugins developed using older API versions (1 
+   & 1.1), it is necessary to include the corresponding alligatorFLI_n.m.py 
+   files in the Python Plugins folder. None of these files should be modified.
 
 .. _python-plugin-internal-data-passing:
 
@@ -478,12 +494,12 @@ by default as *Decay_Graph_Plugin_Example.py*.
     # Example AlliGator Decay Graph Python Plugin
     # Tested with AlliGator version 1.07
     # Author: X. Michalet
-    # Last modified: 2026-07-21
+    # Last modified: 2026-10-21
 
     # The following (triple) comment is needed to specify the AlliGator Python 
     # Plugin API version number to use
 
-    ### AlliGator Python Plugin API Version = 1.1 ###
+    ### AlliGator Python Plugin API Version = 1.1.1 ###
 
     # The following (triple) comment is needed to tell AlliGator where to
     # insert the plugin function(s) as menu item(s)
@@ -502,7 +518,9 @@ by default as *Decay_Graph_Plugin_Example.py*.
     # outputs
 
     import json
-    import alligatorFLI_1_1
+    import os
+    os.environ["ALLIGATOR_DEFINITIONS_VERSION"] = "1.1.1"
+    import alligator_def
 
     # The double underscores in the function name below will be replaced
     # by alternating parentheses in the AlliGator menu (with end spaces trimmed).
@@ -572,10 +590,10 @@ by default as *Decay_Graph_Plugin_Example.py*.
         if nplots < 2:
             exception_type = "Error"
             exception_message = "Not enough selected plots!"
-            graph_data_out = alligatorFLI_1_1.graph_plugin_data(
+            graph_data_out = alligator_def.graph_plugin_data(
                 Graph_Name = graph_name,
                 Plots = [],
-                Reference_Decay = alligatorFLI_1_1.empty_plot)
+                Reference_Decay = alligator_def.empty_plot)
         else:
             plot_data1 = plots[0]
             name1 = plot_data1.Plot_Name
@@ -617,12 +635,12 @@ by default as *Decay_Graph_Plugin_Example.py*.
                 # we need to repackage those plots into a list of named tuples
                 # (same structure as the input)
 
-                s_plot_data_out = alligatorFLI_1_1.plot_plugin_data(
+                s_plot_data_out = alligator_def.plot_plugin_data(
                     Plot_Name = 'Scaled Sum of Plots',
                     X_Array = x1,
                     Y_Array = sumy
                 )
-                d_plot_data_out = alligatorFLI_1_1.plot_plugin_data(
+                d_plot_data_out = alligator_def.plot_plugin_data(
                     Plot_Name = 'Scaled Difference of Plots',
                     X_Array = x1,
                     Y_Array = diffy
@@ -634,18 +652,18 @@ by default as *Decay_Graph_Plugin_Example.py*.
 
             # packages the data into a Python Plugin graph data structure
             
-            graph_data_out = alligatorFLI_1_1.graph_plugin_data(
+            graph_data_out = alligator_def.graph_plugin_data(
                 Graph_Name = graph_name,
                 Plots = plots_out,
-                Reference_Decay = alligatorFLI_1_1.empty_plot)
+                Reference_Decay = alligator_def.empty_plot)
             
         # packages the data into a Python Plugin data structure
 
-        plugin_data_out = alligatorFLI_1_1.plugin_data(
-            Image_Plugin_Data = alligatorFLI_1_1.empty_image,
+        plugin_data_out = alligator_def.plugin_data(
+            Image_Plugin_Data = alligator_def.empty_image,
             Graph_Plugin_Data = graph_data_out,
-            Parameter_Map_Plugin_Data = alligatorFLI_1_1.empty_parameter_map,
-            FLI_Dataset_Plugin_Data = alligatorFLI_1_1.empty_fli_dataset)
+            Parameter_Map_Plugin_Data = alligator_def.empty_parameter_map,
+            FLI_Dataset_Plugin_Data = alligator_def.empty_fli_dataset)
                             
         # Finally, we can send back information on the function outcome
         # and can also set AlliGator Parameters
@@ -675,4 +693,4 @@ by default as *Decay_Graph_Plugin_Example.py*.
         # Note: it is possible to send debug messages to the Python Console
         # using the standard print() statement
         
-(last modified: 2026-09-15)
+(last modified: 2026-10-21)

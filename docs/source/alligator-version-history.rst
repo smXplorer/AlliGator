@@ -13,6 +13,13 @@ AlliGator Version History
 Note: version numbers followed by an asterisk have not been released.
 
 -----------------
+1.10 (2026-11-14)
+-----------------
+
+    - Bug fix
+        + Added support to LZ4-compressed Becker & Hickl .sdt files
+
+-----------------
 1.09 (2026-10-27)
 -----------------
 

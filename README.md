@@ -75,7 +75,7 @@ Alternatively, open the *AlliGator VIs Collection.vi*'s diagram (see image below
 and locate*AlliGator Launcher.vi* (indicated by the **Run this VI to start 
 AlliGator** label).
 
-![AlliGator VIs Collection.vi Diagram](AlliGator VIs Collection Diagram.png)
+![AlliGator VIs Collection.vi Diagram](/docs/source/images/AlliGator-VIs-Collection-Diagram.png)
 
 ## Source code documentation
 

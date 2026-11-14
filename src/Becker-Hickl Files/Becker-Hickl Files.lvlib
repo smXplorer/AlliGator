@@ -11,6 +11,7 @@
 	<Item Name="Private" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		<Item Name="Extract Becker-Hickl Format String.vi" Type="VI" URL="../Extract Becker-Hickl Format String.vi"/>
+		<Item Name="Becker-Hickl Decompress LZ4 Data.vi" Type="VI" URL="../Becker-Hickl Decompress LZ4 Data.vi"/>
 	</Item>
 	<Item Name="Public" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
